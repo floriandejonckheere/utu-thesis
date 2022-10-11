@@ -1,0 +1,67 @@
+\documentclass[12pt]{report}
+
+%%% Page setup %%%
+\usepackage[top=1in, bottom=1in, left=1.2in, right=1in]{geometry}
+\pagestyle{plain}
+\linespread{1.5}
+
+%%% Packages %%%
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{wallpaper}
+\usepackage{wrapfig}
+
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage[numbered, depth=3]{bookmark}
+
+\usetikzlibrary{matrix}
+
+
+%%% Variables %%%
+\newcommand{\faculty}{Faculty of Technology}
+\newcommand{\course}{Course Name}
+\newcommand{\academicyear}{2022-2024}
+\newcommand{\documenttitle}{Document Title}
+\newcommand{\authorname}{Firstname Lastname}
+\newcommand{\authoremail}{firstname.lastname@utu.fi}
+
+%%% Document %%%
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\textsc{Turun Yliopisto \textemdash \hspace{1mm} University of Turku} \\
+			\textsc{\faculty}
+		\end{center}
+		\begin{figure}[h]
+			\vspace{10mm}
+			
+			\centering\includegraphics[width=0.8\textwidth]{logo-fi.png}
+
+			\vspace{20mm}
+		\end{figure}
+		\begin{center}
+			\fontsize{10mm}{7mm}\selectfont
+			\textup{\documenttitle} \\
+			\textnormal{ \Large{\course}} \\
+
+			\vspace{30mm}
+
+			\large{\textbf{\authorname}} \\
+			\large{\href{mailto:\authoremail}{\authoremail}} \\
+			
+			\vspace{35mm}
+			
+			\large{Academic Year \academicyear} \\
+			\today
+		\end{center}
+	\end{titlepage}
+\end{document}
