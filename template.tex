@@ -24,6 +24,9 @@
 \usepackage[hypertexnames=false]{hyperref}
 \usepackage[numbered, depth=3]{bookmark}
 
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{bibliography.bib}
+
 \usetikzlibrary{matrix}
 
 
@@ -70,11 +73,16 @@
 
 	\tableofcontents
 
-	\clearpage
+	\cleardoublepage
 
 	\section{First section}
 
 	\subsection{First subsection}
 
-	Lorem ipsum dolor sit amet.
+	Logos and illustrations provided by \citeauthor{UniversityOfTurku2022}.
+
+	\clearpage
+
+	\printbibliography[heading=bibintoc]
+
 \end{document}
