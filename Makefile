@@ -4,12 +4,14 @@ all: compile
 
 .PHONY: clean
 
-compile:
-	sed -e 's/\s*$$//' -i $(DOCNAME).tex
+compile: tidy
 	pdflatex $(DOCNAME).tex
 	biber $(DOCNAME).bcf
 	pdflatex $(DOCNAME).tex
 	pdflatex $(DOCNAME).tex
+
+tidy:
+	sed -e 's/\s*$$//' -i $(DOCNAME).tex
 
 view: compile
 	open $(DOCNAME).pdf
