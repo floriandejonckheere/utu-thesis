@@ -7,8 +7,11 @@ Please make sure you have a working installation of XeLaTeX and Biber.
 # Usage
 
 ```
-# Build the final PDF
+# Build all PDFs
 make
+
+# Build a specific PDF
+make template.pdf
 
 # Remove intermediary generated files
 make clean

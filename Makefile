@@ -1,20 +1,19 @@
-DOCNAME=template
+SOURCES := $(wildcard *.tex)
+DOCUMENTS := $(patsubst %.tex,%.pdf,$(SOURCES))
 
-all: compile
+all: tidy $(DOCUMENTS)
 
-.PHONY: clean
+.PHONY:
 
-compile: tidy
-	pdflatex $(DOCNAME).tex
-	biber $(DOCNAME).bcf
-	pdflatex $(DOCNAME).tex
-	pdflatex $(DOCNAME).tex
+%.pdf: .PHONY
+	sed -e 's/\s*$$//' -i $*.tex
+	pdflatex $*.tex
+	biber $*.bcf
+	pdflatex $*.tex
+	pdflatex $*.tex
 
 tidy:
-	sed -e 's/\s*$$//' -i $(DOCNAME).tex
-
-view: compile
-	open $(DOCNAME).pdf
+	sed -e 's/\s*$$//' -i *.tex
 
 clean:
 	rm *.blg *.bbl *.aux *.log *.ps *.bcf *.dvi *.xml *.toc
