@@ -15,6 +15,9 @@ make template.pdf
 
 # Remove intermediary generated files
 make clean
+
+# Print number of words per file
+make words
 ```
 
 # License
