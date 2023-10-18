@@ -2,7 +2,7 @@
 
 This repository contains my research thesis in order to obtain a Master's degree in Software Engineering at the University of Turku.
 
-Please make sure you have a working installation of XeLaTeX and Biber.
+Please make sure you have a working installation of LaTeX and Biber.
 
 # Usage
 
