@@ -1,22 +1,15 @@
-SOURCES := $(wildcard *.tex)
-DOCUMENTS := $(patsubst %.tex,%.pdf,$(SOURCES))
+SOURCES := proposal
+DOCUMENTS := $(patsubst %,%.pdf,$(SOURCES))
 
 all: tidy $(DOCUMENTS)
 
 .PHONY:
 
 %.pdf: .PHONY
-	sed -e 's/\s*$$//' -i $*.tex
-	pdflatex $*.tex
-	biber $*.bcf
-	pdflatex $*.tex
-	pdflatex $*.tex
+	cd $* && make $*.pdf
 
-tidy:
-	sed -e 's/\s*$$//' -i *.tex
+tidy: .PHONY
+	for DIR in $(SOURCES); do cd $$DIR && make tidy; done
 
 clean:
-	rm *.blg *.bbl *.aux *.log *.ps *.bcf *.dvi *.xml *.toc *.gz
-
-words:
-	for FILE in *.pdf; do echo "$${FILE}: `ps2ascii $${FILE} | wc -w` words"; done
+	for DIR in $(SOURCES); do cd $$DIR && make clean; done
