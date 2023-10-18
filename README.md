@@ -10,8 +10,8 @@ Please make sure you have a working installation of LaTeX and Biber.
 # Build all PDFs
 make
 
-# Build a specific PDF
-make proposal.pdf
+# Build the PDFs in a specific directory
+make proposal
 
 # Remove intermediary generated files
 make clean

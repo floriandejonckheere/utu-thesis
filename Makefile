@@ -13,3 +13,6 @@ tidy: .PHONY
 
 clean:
 	for DIR in $(SOURCES); do cd $$DIR && make clean; done
+
+words:
+	for DIR in $(SOURCES); do cd $$DIR && make words; done
