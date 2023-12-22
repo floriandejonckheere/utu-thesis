@@ -16,7 +16,7 @@ tidy:
 	sed -e 's/\s*$$//' -i *.tex
 
 clean:
-	rm *.blg *.bbl *.aux *.log *.ps *.bcf *.dvi *.xml *.toc *.gz || true
+	rm *.blg *.bbl *.aux *.log *.ps *.bcf *.dvi *.xml *.toc *.gz
 
 words:
 	for FILE in *.pdf; do echo "$${FILE}: `ps2ascii $${FILE} | wc -w` words"; done
