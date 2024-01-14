@@ -79,6 +79,16 @@
 
 	\section{Abstract}
 
+	Modern applications designed to run in the cloud are often programmed as a set of microservices: a decomposition of the application based on logical boundaries in the domain logic.
+	This separation of concerns brings along a number of advantages such as scalability, fault isolation and independent deployment.
+	However, it also introduces a number of challenges, and generally increases the complexity of the codebase.
+	In this thesis, we investigate and design a software architecture for deploying and managing monolithic microservices for dynamic languages.
+	The architecture transparently decomposes the application into separate microservices based on logical boundaries, and deploys them in a distributed fashion.
+	The deployed application is scaled up and down based on the current load, and the microservices are migrated between nodes to optimize resource usage.
+	This approach allows developers to focus on the domain logic of the application, while allowing flexible deployment and scaling.
+	The solution is designed to be language-agnostic, but we focus on the implementation for the Ruby programming language.
+	We evaluate the architecture by implementing a proof-of-concept and comparing it to existing solutions.
+
 	\clearpage
 
 	\section{Aims and goals}
