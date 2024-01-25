@@ -1,6 +1,6 @@
 # Research thesis
 
-This repository contains my research thesis in order to obtain a Master's degree in Software Engineering at the University of Turku.
+This repository contains my research thesis for the Master of Science (Technology) in Information and Communication Technology: Software Engineering at the University of Turku.
 
 Please make sure you have a working installation of LaTeX and Biber.
 
@@ -24,4 +24,4 @@ make words
 
 Logo: Copyright (C) University of Turku
 
-Copyright (C) 2023 Florian Dejonckheere
+Copyright (C) 2024 Florian Dejonckheere
