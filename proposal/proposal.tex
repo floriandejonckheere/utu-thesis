@@ -28,6 +28,9 @@
 
 \usetikzlibrary{matrix}
 
+% Nested enumerations
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
 %%% Variables %%%
 \newcommand{\faculty}{Faculty of Technology}
@@ -110,6 +113,28 @@
 	\clearpage
 
 	\section{Contents}\label{sec:contents}
+
+	\begin{enumerate}
+		\item \textbf{Abstract}
+		\item \textbf{Introduction}: general introduction to the topic, and identification of challenges and obstacles related to the topic.
+		Explanation about why and for whom the topic is relevant, and what the expected outcome of the research is.
+		Scope of the research thesis.
+		\item \textbf{Background}: historical background of the topic, and theoretical background needed to understand the thesis.
+		\item \textbf{Related work}: relevant work and research related to the topic.
+		\item \textbf{Methodology}: explanation of the research methodology used in the thesis.
+		\item \textbf{Analysis}: analysis of the problem, and the proposed solution to the research questions.
+		Details design decisions and implementation details.
+		\item \textbf{Case study}: application of the proposed solution to a real-world use case.
+			\begin{enumerate}
+				\item \textbf{Background}: background information about the use case.
+				\item \textbf{Evaluation}: evaluation of the proposed solution in the context of the use case.
+				\item \textbf{Results}: results of the evaluation.
+				\item \textbf{Discussion}: analysis and discussion of the results.
+			\end{enumerate}
+		\item \textbf{Conclusion}: summary of the thesis, and answers to the research questions.
+		\item \textbf{Future work}: possible future work related to the topic.
+		\item \textbf{Bibliography}
+	\end{enumerate}
 
 	\clearpage
 
