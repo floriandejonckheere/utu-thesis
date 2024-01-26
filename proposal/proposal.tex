@@ -84,19 +84,20 @@
 
 	\textbf{Working title}: \textit{A Framework for Writing Distributed Applications using the Modular Monolith Software Architecture}
 
-	Modern applications designed to run in the cloud are often programmed as a set of microservices: a decomposition of the application based on logical boundaries in the domain logic.
+	The advent of cloud computing has fundamentally changed the way software is deployed and managed.
+	Nowadays, developers define the software architecture in function of the underlying infrastructure, and often decompose the application into a set of smaller applications based on logical boundaries in the domain logic, which are deployed independently of each other.
+
 	This separation of concerns brings along a number of advantages such as scalability, fault isolation and independent deployment, over more traditional software development practices such as monolithic codebases.
 	The adoption of a microservice-based architecture also introduces a number of challenges for the developers.
-	It requires a more thorough understand of the domain logic, and increases the complexity of the codebase.
+	Developers need to be aware of the distributed nature of the application, and need to take into account the additional complexity that comes with it.
+	This affects in turn the development velocity and efficiency.
+	The resulting software also increases in complexity, complicating maintenance and debugging.
 
-	In this thesis, we investigate and design a software architecture for deploying and managing monolithic codebases in dynamic languages as a set of microservices.
-	The architecture transparently decomposes the application into separate microservices based on logical boundaries, and deploys them in a distributed fashion.
-	Communication between the microservices is handled entirely by the architecture, so that the developers can concentrate on the domain logic of the application.
-	The deployed application is scaled up and down based on the current load, and the microservices are migrated between nodes to optimize resource usage.
-	This approach takes away the overhead of developing a microservice-based architecture, while retaining the advantages of such an architecture.
-
-	The solution is designed to be language-agnostic, but we focus on the implementation for the Ruby programming language.
-	We evaluate the architecture by implementing a proof-of-concept and comparing it to existing solutions.
+	In this thesis, we investigate the modular monolith software architecture, a hybrid model between monolithic and microservice-based architectures that aims to combine the best of both worlds.
+	We analyze the pattern and its advantages and disadvantages, and compare it to its architectural predecessors.
+	We identify the challenges and opportunities that arise when adopting the modular monolith architecture for dynamic languages compared to statically-typed languages.
+	Finally, the architecture is implemented as a proof-of-concept, and evaluated in the context of a real-world use case.
+	We discuss the results and draw conclusions about the effectiveness of the architecture.
 
 	\clearpage
 
