@@ -5,11 +5,11 @@ all: tidy $(DOCUMENTS)
 
 .PHONY:
 
-%.pdf: %.typ
+%.pdf: %.typ template.typ
 	typst compile $<
 
 tidy:
-	typstfmt $(SOURCES)
+	typstfmt $(SOURCES) template.typ
 
 clean:
 	rm -f $(DOCUMENTS)
