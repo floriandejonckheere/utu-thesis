@@ -13,8 +13,11 @@
   // Date of publication
   date: datetime.today().display("[month repr:long] [day], [year]"),
 
+  // Bibliography
+  bibliography-file: "proposal.yml",
+
   // Institution logo (SVG)
-  logo: "logo-fi.svg",
+  logo-file: "logo-fi.svg",
 
   // Abstract
   abstract: [
@@ -81,5 +84,3 @@ In order to evaluate the effectiveness of the modular monolith architecture, I w
 + *Bibliography*
 
 #pagebreak()
-
-#bibliography("proposal.yml", full: true)

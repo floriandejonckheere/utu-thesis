@@ -12,7 +12,10 @@
   date: none,
 
   // Institution logo (SVG)
-  logo: none,
+  logo-file: none,
+
+  // Bibliography
+  bibliography-file: none,
 
   // Abstract
   abstract: [],
@@ -21,14 +24,34 @@
   body,
 ) = {
   // Basic properties
-  set document(author: authors.map(a => a.name), title: title)
-  set page(numbering: "1", number-align: center)
-  set text(font: "Linux Libertine", lang: "en")
+  set document(
+    author: authors.map(a => a.name),
+    title: title,
+  )
+
+  set page(
+    numbering: "1",
+    number-align: center,
+    margin: (
+      top: 117pt,
+      left: 118pt,
+      right: 119pt,
+      bottom: 96pt,
+    )
+  )
+
+  set text(
+    font: "New Computer Modern Mono",
+    lang: "en",
+  )
+
+  set bibliography(full: true, style: "apa",  title: [References])
+
 
   // Title page
   v(0.6fr)
-  if logo != none {
-    align(right, image(logo, width: 40%))
+  if logo-file != none {
+    align(right, image(logo-file, width: 40%))
   }
   v(9.6fr)
 
@@ -67,4 +90,8 @@
   set par(justify: true)
 
   body
+
+  // Bibliography
+  show bibliography: pad.with(x: 0.5pt)
+  bibliography(bibliography-file)
 }
