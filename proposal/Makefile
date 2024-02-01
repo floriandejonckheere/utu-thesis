@@ -1,15 +1,12 @@
 SOURCES   := proposal.typ
 DOCUMENTS := $(patsubst %.typ,%.pdf,$(SOURCES))
 
-all: tidy $(DOCUMENTS)
+all: $(DOCUMENTS)
 
 .PHONY:
 
 %.pdf: %.typ template.typ
 	typst compile $<
-
-tidy:
-	typstfmt $(SOURCES) template.typ
 
 clean:
 	rm -f $(DOCUMENTS)

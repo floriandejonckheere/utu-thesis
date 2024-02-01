@@ -1,9 +1,3 @@
-#let script-size = 7.97224pt
-#let footnote-size = 8.50012pt
-#let small-size = 9.24994pt
-#let normal-size = 10.00002pt
-#let large-size = 11.74988pt
-
 #let template(
   // Document title
   title: "",
