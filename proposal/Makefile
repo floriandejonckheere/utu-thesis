@@ -1,22 +1,15 @@
-SOURCES := $(wildcard *.tex)
-DOCUMENTS := $(patsubst %.tex,%.pdf,$(SOURCES))
+SOURCES   := proposal.typ
+DOCUMENTS := $(patsubst %.typ,%.pdf,$(SOURCES))
 
 all: tidy $(DOCUMENTS)
 
 .PHONY:
 
-%.pdf: .PHONY
-	sed -e 's/\s*$$//' -i $*.tex
-	pdflatex $*.tex
-	biber $*.bcf
-	pdflatex $*.tex
-	pdflatex $*.tex
+%.pdf: %.typ
+	typst compile $<
 
 tidy:
-	sed -e 's/\s*$$//' -i *.tex
-
-clean:
-	rm -f *.blg *.bbl *.aux *.log *.ps *.bcf *.dvi *.xml *.toc *.gz
+	typstfmt $(SOURCES)
 
 words:
 	for FILE in *.pdf; do echo "$${FILE}: `ps2ascii $${FILE} | wc -w` words"; done
