@@ -11,5 +11,8 @@ all: tidy $(DOCUMENTS)
 tidy:
 	typstfmt $(SOURCES)
 
+clean:
+	rm -f $(DOCUMENTS)
+
 words:
 	for FILE in *.pdf; do echo "$${FILE}: `ps2ascii $${FILE} | wc -w` words"; done
