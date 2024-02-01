@@ -66,4 +66,4 @@ In order to evaluate the effectiveness of the modular monolith architecture, I w
 
 #pagebreak()
 
-#bibliography("proposal.bib")
+#bibliography("proposal.yml")

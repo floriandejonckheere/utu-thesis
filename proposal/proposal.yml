@@ -1,0 +1,171 @@
+---
+service_weaver:
+  author:
+    - Ghemawat, Sanjay
+    - Grandl, Robert
+    - Petrovic, Srdjan
+    - Whittaker, Michael
+    - Patel, Parveen
+    - Posva, Ivan
+    - Vahdat, Amin
+  title: Towards Modern Development of Cloud Applications
+  year: 2023
+  isbn: 9798400701955
+  publisher: Association for Computing Machinery
+  series: HOTOS '23
+  pages: 110–117
+  doi: 10.1145/3593856.3595909
+  type: proceedings
+distributed_computing:
+  author:
+    - Kendall, Samuel C.
+    - Waldo, Jim
+    - Wollrath, Ann
+    - Wyant, Geoff
+  title: A Note on Distributed Computing
+  year: 1994
+  publisher: Sun Microsystems, Inc.
+  doi: 10.5555/974938
+  type: article
+modular_monolith_fintech:
+  author:
+    - Barde, Kalpesh
+  title: 'Modular Monoliths: Revolutionizing Software Architecture for Efficient Payment Systems in Fintech'
+  year: 2023
+  month: 9
+  journal: International Journal of Computer Trends and Technology
+  volume: 71
+  pages: 20-27
+  doi: 10.14445/22312803/IJCTT-V71I10P103
+  type: article
+modular_monolith_trend:
+  author:
+    - Ruoyu Su
+    - Xiaozhou Li
+  title: 'Modular Monolith: Is This the Trend in Software Architecture?'
+  year: 2024
+  doi: 10.48550/arXiv.2401.11867
+  type: misc
+dynamic_deployment_orchestration:
+  author:
+    - Bacchiani, Lorenzo
+    - Bravetti, Mario
+    - Giallorenzo, Saverio
+    - Mauro Jacopo
+    - Talevi, Iacopo
+    - Zavattaro, Gianluigi
+  title: Microservice Dynamic Architecture-Level Deployment Orchestration
+  year: 2021
+  month: 6
+  publisher: Springer International Publishing
+  series: Coordination Models and Languages
+  volume: LNCS-12717
+  pages: 257-275
+  doi: 10.1007/978-3-030-78142-2_16
+  type: proceedings
+monolith_decomposition:
+  author:
+    - Abgaz, Yalemisew
+    - Mccarren, Andrew
+    - Elger, Peter
+    - Solan, David
+    - Lapuz, Neil
+    - Bivol, Marin
+    - Jackson, Glenn
+    - Yilmaz, Murat
+    - Buckley Jim
+    - Clarke, Paul
+  title: 'Decomposition of Monolith Applications Into Microservices Architectures: A Systematic Review'
+  year: 2023
+  month: 8
+  journal: IEEE Transactions on Software Engineering
+  volume: PP
+  pages: 1-32
+  doi: 10.1109/TSE.2023.3287297
+  type: article
+monolith_modularization:
+  author:
+    - Gonçalves, Nuno
+    - Faustino, Diogo
+    - Silva, António Rito
+    - Portela Manuel
+  title: 'Monolith Modularization Towards Microservices: Refactoring and Performance Trade-offs'
+  booktitle: 2021 IEEE 18th International Conference on Software Architecture Companion (ICSA-C)
+  year: 2021
+  pages: 1-8
+  doi: 10.1109/ICSA-C52384.2021.00015
+  type: proceedings
+monolithic_microservice_web_applications:
+  author:
+    - Villamizar, Mario
+    - Garcés, Oscar
+    - Castro, Harold
+    - Verano, Mauricio
+    - Salamanca, Lorena
+    - Casallas, Rubby
+    - Gil, Santiago
+  title: Evaluating the monolithic and the microservice architecture pattern to deploy web applications in the cloud
+  booktitle: 2015 10th Computing Colombian Conference (10CCC)
+  year: 2015
+  pages: 583-590
+  doi: 10.1109/ColumbianCC.2015.7333476
+  type: proceedings
+static_dynamic_analysis:
+  author:
+    - Andrade, Bernardo
+    - Santos, Samuel
+    - Silva, António Rito
+  title: 'From Monolith to Microservices: Static and Dynamic Analysis Comparison'
+  year: 2022
+  doi: 10.48550/arXiv.2204.11844
+  type: misc
+monolith_migration:
+  author:
+    - Almeida, João
+    - Silva, António Rito
+  title: Monolith Migration Complexity Tuning Through the Application of Microservices Patterns
+  year: 2020
+  month: 9
+  pages: 39-54
+  doi: 10.1007/978-3-030-58923-3_3
+  type: book
+modernizing_legacy:
+  author:
+    - Wolfart, Daniele
+    - Assunção, Wesley K. G.
+    - da Silva, Ivonei F.
+    - Domingos, Diogo C. P.
+    - Schmeing, Ederson
+    - Villaca, Guilherme L. Donin
+    - Paza, Diogo do N.
+  title: 'Modernizing Legacy Systems with Microservices: A Roadmap'
+  year: 2021
+  booktitle: Proceedings of the 25th International Conference on Evaluation and Assessment in Software Engineering
+  pages: 149–159
+  publisher: Association for Computing Machinery
+  doi: 10.1145/3463274.3463334
+  type: proceedings
+systematic_mapping_microservices:
+  author:
+    - Alshuqayran, Nuha
+    - Ali, Nour
+    - Evans, Roger
+  title: A Systematic Mapping Study in Microservice Architecture
+  booktitle: 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA)
+  year: 2016
+  pages: 44-51
+  doi: 10.1109/SOCA.2016.15
+  type: proceedings
+blueprint:
+  author:
+    - Anand, Vaastav
+    - Garg, Deepak
+    - Kaufmann, Antoine
+    - Mace, Jonathan
+  title: 'Blueprint: A Toolchain for Highly-Reconfigurable Microservice Applications'
+  booktitle: Proceedings of the 29th Symposium on Operating Systems Principles
+  year: 2023
+  pages: 482–497
+  publisher: Association for Computing Machinery
+  doi: 10.1145/3600006.3613138
+  type: proceedings
