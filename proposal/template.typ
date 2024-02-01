@@ -1,15 +1,37 @@
-// The project function defines how your document looks.
-// It takes your content and some metadata and formats it.
-// Go ahead and customize it to your liking!
-#let project(
-  title: "", subtitle: "", abstract: [], authors: (), date: none, logo: none, body,
+#let script-size = 7.97224pt
+#let footnote-size = 8.50012pt
+#let small-size = 9.24994pt
+#let normal-size = 10.00002pt
+#let large-size = 11.74988pt
+
+#let template(
+  // Document title
+  title: "",
+
+  // Document subtitle
+  subtitle: "",
+
+  // List of authors
+  authors: (),
+
+  // Date of publication
+  date: none,
+
+  // Institution logo (SVG)
+  logo: none,
+
+  // Abstract
+  abstract: [],
+
+  // Document contents
+  body,
 ) = {
-  // Set the document's basic properties.
+  // Basic properties
   set document(author: authors.map(a => a.name), title: title)
   set page(numbering: "1", number-align: center)
   set text(font: "Linux Libertine", lang: "en")
 
-  // Title page.
+  // Title page
   v(0.6fr)
   if logo != none {
     align(right, image(logo, width: 40%))
@@ -22,7 +44,7 @@
   linebreak()
   text(1em, subtitle)
 
-  // Author information.
+  // Author
   pad(
     top: 0.7em, right: 20%, grid(
       columns: (1fr,) * calc.min(3, authors.len()), gutter: 1em, ..authors.map(author => align(start)[
@@ -35,7 +57,7 @@
   v(2.4fr)
   pagebreak()
 
-  // Abstract page.
+  // Abstract
   v(1fr)
   align(
     left,
@@ -47,7 +69,7 @@
   v(1.618fr)
   pagebreak()
 
-  // Main body.
+  // Main document
   set par(justify: true)
 
   body

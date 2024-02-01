@@ -1,7 +1,23 @@
 #import "template.typ": *
 
-#show: project.with(
-  title: "Research Proposal", authors: ((name: "Florian Dejonckheere", email: "fwdejo@utu.fi"),), subtitle: "Master's Thesis in Technology (DTEK1002)", logo: "logo-fi.svg", date: datetime.today().display("[month repr:long] [day], [year]"), abstract: [
+#show: template.with(
+  // Document title
+  title: "Research Proposal",
+
+  // Document subtitle
+  subtitle: "Master's Thesis in Technology (DTEK1002)",
+
+  // List of authors
+  authors: ((name: "Florian Dejonckheere", email: "fwdejo@utu.fi"),),
+
+  // Date of publication
+  date: datetime.today().display("[month repr:long] [day], [year]"),
+
+  // Institution logo (SVG)
+  logo: "logo-fi.svg",
+
+  // Abstract
+  abstract: [
     *Working title*: _A Framework for Writing Distributed Applications using the Modular Monolith
     Software Architecture_
 
