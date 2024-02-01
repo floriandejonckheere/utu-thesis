@@ -35,16 +35,17 @@
 = Aims and goals
 
 The thesis can be divided into two parts: a literary part and a more practical part. First, I analyze the origins and characteristics of the modular monolith software architecture, and compare it to similar software architectures. Second, I investigate the applicability of the architecture specifically for dynamic languages, based on existing literature for statically-typed languages. Finally, I design and implement a proof-of-concept for the architecture, and evaluate it in the context of a real-world use case.
-
 The use case I intend to use for the proof-of-concept is called NephroFlow Link, part of the #link(
   "https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite",
-)[NephroFlowProductSuite].
+)[NephroFlow Product Suite].
 
 NephroFlow Link is a middleware application written in Ruby that acts as a data broker between connected dialysis machines and the NephroFlow cloud platform. It is currently designed as a monolithic application, and is deployed as a single process on a single server. However, the application is becoming increasingly complex, and the requirements in regard to scalability are increasing rapidly, which leads me to believe that the application would benefit from a modular monolithic architecture (written as a monolith, deployed as a microservice).
 
 #pagebreak()
 
-== Research question
+== Research questions
+
+#set par(first-line-indent: 0em)
 
 *Research Question 1*: What defines the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
 
@@ -57,6 +58,8 @@ NephroFlow Link is a middleware application written in Ruby that acts as a data 
 *Research Question 3*: How effective is the modular monolith architecture in dynamic languages, and what is its impact on overall system performance and scalability?
 
 *Motivation*: Evaluate the effectiveness of the modular monolith architecture for a real product.
+
+#set par(first-line-indent: 1.8em)
 
 #pagebreak()
 

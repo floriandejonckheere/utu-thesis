@@ -24,29 +24,14 @@
   body,
 ) = {
   // Basic properties
-  set document(
-    author: authors.map(a => a.name),
-    title: title,
-  )
+  set document(author: authors.map(a => a.name), title: title)
+  set page(numbering: "1", number-align: center, margin: 7em)
+  set par(leading: 1.1em, justify: true)
+  set text(font: "New Computer Modern", size: 11pt)
+  set bibliography(full: true, style: "apa", title: [References])
 
-  set page(
-    numbering: "1",
-    number-align: center,
-    margin: (
-      top: 117pt,
-      left: 118pt,
-      right: 119pt,
-      bottom: 96pt,
-    )
-  )
-
-  set text(
-    font: "New Computer Modern Mono",
-    lang: "en",
-  )
-
-  set bibliography(full: true, style: "apa",  title: [References])
-
+  show par: set block(spacing: 2em)
+  show heading: set block(above: 1.4em, below: 1.5em)
 
   // Title page
   v(0.6fr)
@@ -88,10 +73,14 @@
 
   // Main document
   set par(justify: true)
+  show raw: set text(font: "New Computer Modern Mono")
+  show par: set block(spacing: 0.55em)
+  show heading: set block(above: 1.4em, below: 1em)
 
   body
 
   // Bibliography
   show bibliography: pad.with(x: 0.5pt)
+  set par(first-line-indent: 0em)
   bibliography(bibliography-file)
 }
