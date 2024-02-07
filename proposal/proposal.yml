@@ -13,7 +13,7 @@ service_weaver:
   isbn: 9798400701955
   publisher: Association for Computing Machinery
   series: HOTOS '23
-  pages: 110–117
+  pages: '110–117'
   doi: 10.1145/3593856.3595909
   type: proceedings
 distributed_computing:
@@ -35,7 +35,7 @@ modular_monolith_fintech:
   month: 9
   journal: International Journal of Computer Trends and Technology
   volume: 71
-  pages: 20-27
+  pages: '20-27'
   doi: 10.14445/22312803/IJCTT-V71I10P103
   type: article
 modular_monolith_trend:
@@ -60,7 +60,7 @@ dynamic_deployment_orchestration:
   publisher: Springer International Publishing
   series: Coordination Models and Languages
   volume: LNCS-12717
-  pages: 257-275
+  pages: '257-275'
   doi: 10.1007/978-3-030-78142-2_16
   type: proceedings
 monolith_decomposition:
@@ -80,7 +80,7 @@ monolith_decomposition:
   month: 8
   journal: IEEE Transactions on Software Engineering
   volume: PP
-  pages: 1-32
+  pages: '1-32'
   doi: 10.1109/TSE.2023.3287297
   type: article
 monolith_modularization:
@@ -92,7 +92,7 @@ monolith_modularization:
   title: 'Monolith Modularization Towards Microservices: Refactoring and Performance Trade-offs'
   booktitle: 2021 IEEE 18th International Conference on Software Architecture Companion (ICSA-C)
   year: 2021
-  pages: 1-8
+  pages: '1-8'
   doi: 10.1109/ICSA-C52384.2021.00015
   type: proceedings
 monolithic_microservice_web_applications:
@@ -126,7 +126,7 @@ monolith_migration:
   title: Monolith Migration Complexity Tuning Through the Application of Microservices Patterns
   year: 2020
   month: 9
-  pages: 39-54
+  pages: '39-54'
   doi: 10.1007/978-3-030-58923-3_3
   type: book
 modernizing_legacy:
@@ -141,7 +141,7 @@ modernizing_legacy:
   title: 'Modernizing Legacy Systems with Microservices: A Roadmap'
   year: 2021
   booktitle: Proceedings of the 25th International Conference on Evaluation and Assessment in Software Engineering
-  pages: 149–159
+  pages: '149–159'
   publisher: Association for Computing Machinery
   doi: 10.1145/3463274.3463334
   type: proceedings
@@ -153,7 +153,7 @@ systematic_mapping_microservices:
   title: A Systematic Mapping Study in Microservice Architecture
   booktitle: 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA)
   year: 2016
-  pages: 44-51
+  pages: '44-51'
   doi: 10.1109/SOCA.2016.15
   type: proceedings
 blueprint:
@@ -165,7 +165,23 @@ blueprint:
   title: 'Blueprint: A Toolchain for Highly-Reconfigurable Microservice Applications'
   booktitle: Proceedings of the 29th Symposium on Operating Systems Principles
   year: 2023
-  pages: 482–497
+  pages: '482–497'
   publisher: Association for Computing Machinery
   doi: 10.1145/3600006.3613138
   type: proceedings
+execution_traces:
+  author:
+    - Jin, Wuxia
+    - Liu, Ting
+    - Cai, Yuanfang
+    - Kazman, Rick
+    - Mo, Ran
+    - Zheng, Qinghua
+  title: 'Service Candidate Identification from Monolithic Systems Based on Execution Traces'
+  journal: IEEE Transactions on Software Engineering
+  year: 2021
+  volume: 47
+  number: 5
+  pages: '987-1007'
+  doi: 10.1109/TSE.2019.2910531
+  type: article
