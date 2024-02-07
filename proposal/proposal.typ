@@ -31,13 +31,13 @@
 
 = Aims and goals
 
-The thesis can be divided into two parts: a literary part and a more practical part. For the literary part, I first analyze the origins and characteristics of the modular monolith software architecture, and compare it to similar software architectures. Then, I investigate how the identification of module boundaries could be improved through using automated technologies. Finally, I design a solution in the form of a tool for developers that automatically identifies optimal module boundaries in a monolithic codebase.
+The thesis can be divided into two parts: a literary part and a more practical part. For the literary part, I first analyze the origins and characteristics of the modular monolith software architecture, and compare it to similar software architectures. Then, I investigate how the identification of module boundaries is typically done, and how it could be improved through using automated technologies.
 
-For the practical part, I apply the proposed solution to a real-world use case, and evaluate how accurate and efficient it is, and how it impacts the development process. The use case I intend to use for the proof-of-concept is called NephroFlow Link, part of the #link(
+For the practical part, I design a solution in the form of a tool for developers that automatically identifies optimal module boundaries in a monolithic codebase. Then, I apply the proposed solution to a real-world use case, and evaluate how effective it is.
+
+The use case I intend to use for the proof-of-concept is called NephroFlow Link, part of the #link(
   "https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite",
-)[NephroFlow Product Suite].
-
-NephroFlow Link is a middleware application written in Ruby that acts as a data broker between connected dialysis machines and the NephroFlow cloud platform. It is currently designed as a monolithic application, and is deployed as a single process on a single server. However, the application is becoming increasingly complex which slows down the development velocity and increases the maintenance burden on the developers. Furthermore, the requirements in regard to scalability and extensibility are increasing rapidly, which leads me to believe the application would benefit from a modular monolith architecture. I intend to develop the proposed solution using NephroFlow Link as a case study.
+)[NephroFlow Product Suite]. NephroFlow Link is a middleware application written in Ruby that acts as a data broker between connected dialysis machines and the NephroFlow cloud platform. It is currently designed as a monolithic application, and is deployed as a single process on a single server. However, the application is becoming increasingly complex which slows down the development velocity and increases the maintenance burden on the developers. Furthermore, the requirements in regard to scalability and extensibility are increasing rapidly, which leads me to believe the application would benefit from a modular monolith architecture. I intend to develop the proposed solution using NephroFlow Link as a case study.
 
 #pagebreak()
 
