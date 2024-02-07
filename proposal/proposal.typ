@@ -63,7 +63,17 @@ NephroFlow Link is a middleware application written in Ruby that acts as a data 
 
 == Methodology
 
-In order to evaluate the effectiveness of the modular monolith architecture, I will design and implement a proof-of-concept runtime for Ruby. The runtime will be used to implement a version of NephroFlow Link structured as a modular monolith. Based on existing performance tests, I will compare this version with the current version of NephroFlow Link, and evaluate the results. Non-functional requirements such as fault tolerance and flexibility will also be evaluated.
+Based on the principles of the modular monolith architecture, module boundaries are manually identified within the application. This is done by experienced developers that have an intimate knowledge of both the codebase and the application domain.
+Next, using the proposed solution, module boundaries are automatically identified within the application.
+
+To evaluate the effectiveness of the proposed solution, key criteria are identified:
+
++ *Accuracy*: how close do the module boundaries of the automated techniques align with the manually identified ones? The degree of alignment is measured using metrics such as Jaccard similarity.
++ *Modularity*: how modular are the boundaries identified by the automated techniques? The degree of modularity is measured using metrics such as the modularity $Q$, the clustering coefficient, and the Fenton and Melton metric.
++ *Efficiency*: how much effort is required to implement the automatically identified module boundaries compared to manual modularization? Feedback from experienced developers is gathered using surveys and interviews.
++ *Adaptibility*: how well do the modules react to changes in the codebase and evolving requirements? The impact is measured empirically by introducing changes in the environment or requirements, and observing how well the boundaries adapt to the change using metrics such as code churn and defect density.
+
+By measuring these key criteria quantitatively and qualitatively for the module boundaries of the automated and the manual modularization, I can assess the effectiveness of the automated techniques in a thorough and objective manner.
 
 #pagebreak()
 
