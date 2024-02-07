@@ -71,10 +71,17 @@ In order to evaluate the effectiveness of the modular monolith architecture, I w
 + *Introduction*: general introduction to the topic, and identification of challenges and obstacles related to the topic. Explanation about why and for whom the topic is relevant, and what the expected outcome of the research is. Scope of the research thesis.
 + *Background*: historical background of the topic, and theoretical background needed to understand the thesis.
 + *Related work*: relevant work and research related to the topic.
-+ *Methodology*: explanation of the research methodology used in the thesis.
-+ *Analysis*: analysis of the problem, and the proposed solution to the research questions. Details design decisions and implementation details.
+  + *Monolithic architecture*: definition and explanation of monolithic architecture.
+  + *Microservices architecture*: definition and explanation of monolithic architecture.
++ *Modular monolith*: definition and explanation of modular monolith architecture.
+  + *Architecture*: definition and explanation of modular monolith architecture. Answer to Research Question 1.
+  + *Challenges and opportunities*: answer to Research Question 2.
+  + *Modularization*: problem statement regarding identification of optimal module boundaries.
++ *Proposed solution*: investigation and design of a proposed solution for identification of optimal boundary identification. Answer to Research Question 3.
 + *Case study*: application of the proposed solution to a real-world use case.
   + *Background*: background information about the use case.
+  + *Analysis*: analysis and proposed solution to the problem, design and implementation choices.
+  + *Methodology*: explanation of the research methodology used.
   + *Evaluation*: evaluation of the proposed solution in the context of the use case.
   + *Results*: results of the evaluation.
   + *Discussion*: analysis and discussion of the results.
