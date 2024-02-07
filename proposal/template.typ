@@ -27,7 +27,6 @@
   set document(author: authors.map(a => a.name), title: title)
   set page(numbering: "1", number-align: center, margin: 7em)
   set par(leading: 1.1em, justify: true)
-  set text(font: "New Computer Modern", size: 11pt)
   set bibliography(full: true, style: "apa", title: [References])
 
   show par: set block(spacing: 2em)

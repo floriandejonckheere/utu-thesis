@@ -45,8 +45,6 @@ NephroFlow Link is a middleware application written in Ruby that acts as a data 
 
 == Research questions
 
-#set par(first-line-indent: 0em)
-
 *Research Question 1*: What defines the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
 
 *Motivation*: Explore why the modular monolith architecture is becoming increasingly popular, and why it is considered a viable alternative to monolithic and microservices architectures.
@@ -58,8 +56,6 @@ NephroFlow Link is a middleware application written in Ruby that acts as a data 
 *Research Question 3*: How effective is the modular monolith architecture in dynamic languages, and what is its impact on overall system performance and scalability?
 
 *Motivation*: Evaluate the effectiveness of the modular monolith architecture for a real product.
-
-#set par(first-line-indent: 1.8em)
 
 #pagebreak()
 
