@@ -24,6 +24,7 @@
     *Working title*: _A Framework for Writing Distributed Applications using the Modular Monolith
     Software Architecture_
 
+
     The advent of cloud computing has fundamentally changed the way software is deployed and managed. Nowadays, developers define the software architecture in function of the underlying infrastructure, and often decompose the application into a set of smaller applications based on logical boundaries in the domain logic, which are deployed independently of each other.
 
     This separation of concerns brings along a number of advantages such as scalability, fault isolation and independent deployment, over more traditional software development practices such as monolithic codebases. The adoption of a microservice-based architecture also introduces a number of challenges for the developers. Developers need to be aware of the distributed nature of the application, and need to take into account the additional complexity that comes with it. This affects in turn the development velocity and efficiency. The resulting software also increases in complexity, complicating maintenance and debugging.
@@ -34,12 +35,13 @@
 
 = Aims and goals
 
-The thesis can be divided into two parts: a literary part and a more practical part. First, I analyze the origins and characteristics of the modular monolith software architecture, and compare it to similar software architectures. Second, I investigate the applicability of the architecture specifically for dynamic languages, based on existing literature for statically-typed languages. Finally, I design and implement a proof-of-concept for the architecture, and evaluate it in the context of a real-world use case.
-The use case I intend to use for the proof-of-concept is called NephroFlow Link, part of the #link(
+The thesis can be divided into two parts: a literary part and a more practical part. For the literary part, I first analyze the origins and characteristics of the modular monolith software architecture, and compare it to similar software architectures. Then, I investigate how the identification of module boundaries could be improved through using automated technologies. Finally, I design a solution in the form of a tool for developers that automatically identifies optimal module boundaries in a monolithic codebase.
+
+For the practical part, I apply the proposed solution to a real-world use case, and evaluate how accurate and efficient it is, and how it impacts the development process. The use case I intend to use for the proof-of-concept is called NephroFlow Link, part of the #link(
   "https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite",
 )[NephroFlow Product Suite].
 
-NephroFlow Link is a middleware application written in Ruby that acts as a data broker between connected dialysis machines and the NephroFlow cloud platform. It is currently designed as a monolithic application, and is deployed as a single process on a single server. However, the application is becoming increasingly complex, and the requirements in regard to scalability are increasing rapidly, which leads me to believe that the application would benefit from a modular monolithic architecture (written as a monolith, deployed as a microservice).
+NephroFlow Link is a middleware application written in Ruby that acts as a data broker between connected dialysis machines and the NephroFlow cloud platform. It is currently designed as a monolithic application, and is deployed as a single process on a single server. However, the application is becoming increasingly complex which slows down the development velocity and increases the maintenance burden on the developers. Furthermore, the requirements in regard to scalability and extensibility are increasing rapidly, which leads me to believe the application would benefit from a modular monolith architecture. I intend to develop the proposed solution using NephroFlow Link as a case study.
 
 #pagebreak()
 
