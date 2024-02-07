@@ -185,3 +185,25 @@ execution_traces:
   pages: '987-1007'
   doi: 10.1109/TSE.2019.2910531
   type: article
+topic_modelling:
+  author:
+    - Brito, Miguel
+    - Cunha, Jácome
+    - Saraiva, João
+  title: Identification of microservices from monolithic applications through topic modelling
+  year: 2021
+  publisher: Association for Computing Machinery
+  doi: 10.1145/3412841.3442016
+  booktitle: Proceedings of the 36th Annual ACM Symposium on Applied Computing
+  pages: '1409–1418'
+  type: proceedings
+monolithic_mobile:
+  author:
+    - Fan, Chen-Yuan
+    - Ma, Shang-Pin
+  title: 'Migrating Monolithic Mobile Application to Microservice Architecture: An Experiment Report'
+  booktitle: 2017 IEEE International Conference on AI & Mobile Services (AIMS)
+  year: 2017
+  pages: 109-112
+  doi: 10.1109/AIMS.2017.23
+  type: proceedings
