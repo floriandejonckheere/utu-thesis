@@ -45,17 +45,17 @@ NephroFlow Link is a middleware application written in Ruby that acts as a data 
 
 == Research questions
 
-*Research Question 1*: What defines the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
+*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
 
 *Motivation*: Explore why the modular monolith architecture is becoming increasingly popular, and why it is considered a viable alternative to monolithic and microservices architectures.
 
-*Research Question 2*: Which challenges and opportunities arise when considering adoption of the modular monolith architecture for dynamic languages compared to statically-typed languages?
+*Research Question 2*: Which challenges and opportunities arise when considering adoption of the modular monolith architecture for an existing codebase?
 
-*Motivation*: Investigate how modular monoliths could be used in the context of dynamic languages and which implications this has on the development process and resulting product.
+*Motivation*: Investigate how restructuring an existing codebase as a modular monolith would impact the development process and resulting product.
 
-*Research Question 3*: How effective is the modular monolith architecture in dynamic languages, and what is its impact on overall system performance and scalability?
+*Research Question 3*: How can automated techniques effectively identify optimal module boundaries in a modular monolith architecture?
 
-*Motivation*: Evaluate the effectiveness of the modular monolith architecture for a real product.
+*Motivation*: Investigate technologies based on dependency analysis and semantic clustering to automatically determine optimal module boundaries in a modular monolith architecture. Compare to manual modularization efforts in terms of accuracy, efficiency, development velocity.
 
 #pagebreak()
 
