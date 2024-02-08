@@ -121,6 +121,8 @@
 
   body
 
+  pagebreak()
+
   // Bibliography
   show bibliography: pad.with(x: 0.5pt)
   set par(first-line-indent: 0em)
