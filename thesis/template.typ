@@ -174,7 +174,9 @@
   pagebreak()
 
   // Bibliography
-  show bibliography: pad.with(x: 0.5pt)
+  set page(numbering: none)
   set par(first-line-indent: 0em)
+  show bibliography: pad.with(x: 0.5pt)
+
   bibliography(bibliography-file)
 }
