@@ -26,6 +26,9 @@
   // Abstract
   abstract: [],
 
+  // Keywords
+  keywords: (),
+
   // Document contents
   body,
 ) = {
@@ -37,6 +40,10 @@
 
   show par: set block(spacing: 2em)
   show heading: set block(above: 1.4em, below: 1.5em)
+
+  // TODO: count total number of pages and appendix pages
+  let pages = 4
+  let appendix_pages = 4
 
   // Title page
   v(0.6fr)
@@ -73,15 +80,34 @@
   pagebreak()
 
   // Abstract
-  v(1fr)
-  align(
-    left,
+  par(
+    leading: 0.5em,
   )[
-    #set par(justify: true)
-    #heading(outlined: false, numbering: none, text(0.85em, smallcaps[Abstract]))
-    #abstract
+    #upper(institution) \
+    #department
   ]
-  v(1.618fr)
+
+  smallcaps(author)
+  ": "
+  title
+
+  par(
+    leading: 0.6em,
+  )[
+    #subtitle, #pages p., #appendix_pages app. p. \
+    #department \
+    #date
+  ]
+
+  line(length: 100%)
+  abstract
+
+  linebreak()
+
+  v(1.5em)
+  "Keywords: "
+  keywords.join(", ")
+
   pagebreak()
 
   // Main document

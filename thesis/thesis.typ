@@ -33,6 +33,13 @@
 
     In this thesis, we investigate the modular monolith software architecture, and how modules are typically determined as part of the modularization efforts. We propose an automated solution based on dependency analysis and machine learning algorithms to aid in the identification of module boundaries, and evaluate its effectiveness using a case study. We discuss the results and draw conclusions about the propsed solution.
   ],
+
+  // Keywords
+  keywords: (
+    "software architecture",
+    "monolith",
+    "microservices",
+  )
 )
 
 = Aims and goals
