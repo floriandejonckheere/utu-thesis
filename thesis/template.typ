@@ -45,6 +45,12 @@
   let pages = 4
   let appendix_pages = 4
 
+  // TODO: automatically extract acronyms
+  let acronyms = (
+    API: "Application Programming Interface",
+    UI: "User Interface",
+  )
+
   // Title page
   v(0.6fr)
   if logo-file != none {
@@ -136,6 +142,17 @@
   outline(
     title: [List of Tables],
     target: figure.where(kind: table),
+  )
+
+  pagebreak()
+
+  // List of acronyms
+  heading(outlined: false, numbering: none)[List of Acronyms]
+
+  grid(
+    columns: (1fr, 9fr),
+    gutter: 1em,
+    ..acronyms.keys().map(key => (strong(key), acronyms.at(key))).flatten()
   )
 
   pagebreak()
