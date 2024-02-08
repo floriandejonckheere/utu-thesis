@@ -63,10 +63,13 @@ The use case I intend to use for the proof-of-concept is called NephroFlow Link,
 
 == Methodology
 
+To find an answer for the first three research questions, a thorough literature study is done, and relevant work is mentioned and summarized.
+The fourth research question is answered using an empirical study on the use case.
+
 Based on the principles of the modular monolith architecture, module boundaries are manually identified within the application. This is done by experienced developers that have an intimate knowledge of both the codebase and the application domain.
 Next, using the proposed solution, module boundaries are automatically identified within the application.
 
-To evaluate the effectiveness of the proposed solution, key criteria are identified:
+To evaluate the effectiveness of the proposed solution, key criteria are identified. Certain key criteria are selected and the selection is justified.
 
 + *Accuracy*: how close do the module boundaries of the automated technologies align with the manually identified ones? The degree of alignment is measured using metrics such as Jaccard similarity.
 + *Modularity*: how modular are the boundaries identified by the automated technologies? The degree of modularity is measured using metrics such as the modularity $Q$, the clustering coefficient, and the Fenton and Melton metric.
@@ -85,6 +88,7 @@ By measuring these key criteria quantitatively and qualitatively for the module 
 + *Related work*: relevant work and research related to the topic.
   + *Monolithic architecture*: definition and explanation of monolithic architecture.
   + *Microservices architecture*: definition and explanation of monolithic architecture.
++ *Methodology*: explanation of the research methodology used.
 + *Modular monolith*: definition and explanation of modular monolith architecture.
   + *Architecture*: definition and explanation of modular monolith architecture. Answer to Research Question 1.
   + *Challenges and opportunities*: answer to Research Question 2.
@@ -93,7 +97,6 @@ By measuring these key criteria quantitatively and qualitatively for the module 
 + *Case study*: application of the proposed solution to a real-world use case.
   + *Background*: background information about the use case.
   + *Analysis*: analysis and proposed solution to the problem, design and implementation choices.
-  + *Methodology*: explanation of the research methodology used.
   + *Evaluation*: evaluation of the proposed solution in the context of the use case.
   + *Results*: results of the evaluation.
   + *Discussion*: analysis and discussion of the results.
