@@ -90,16 +90,16 @@ By measuring these key criteria quantitatively and qualitatively for the module 
   + *Microservices architecture*: definition and explanation of monolithic architecture.
 + *Methodology*: explanation of the research methodology used.
 + *Modular monolith*: definition and explanation of modular monolith architecture.
-  + *Architecture*: definition and explanation of modular monolith architecture. Answer to Research Question 1.
+  + *Architecture*: definition and explanation of modular monolith architecture. Answer to Research Question 1. Justification for choice of modular monolith in this thesis.
   + *Challenges and opportunities*: answer to Research Question 2.
   + *Modularization*: problem statement regarding identification of optimal module boundaries.
-+ *Proposed solution*: investigation and design of a proposed solution for identification of optimal boundary identification. Answer to Research Question 3.
++ *Proposed solution*: investigation and design of a proposed solution for identification of optimal boundary identification. Answer to Research Questions 3 and 4.
 + *Case study*: application of the proposed solution to a real-world use case.
   + *Background*: background information about the use case.
   + *Analysis*: analysis and proposed solution to the problem, design and implementation choices.
   + *Evaluation*: evaluation of the proposed solution in the context of the use case.
   + *Results*: results of the evaluation.
-  + *Discussion*: analysis and discussion of the results.
+  + *Discussion*: analysis and discussion of the results. Ability of the proposal solution to generalize. Justify the reason for existence of the modular monolith paradigm.
 + *Conclusion and future work*: summary of the thesis, and possible future work related to the topic
 + *Bibliography*
 
