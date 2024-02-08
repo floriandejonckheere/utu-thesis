@@ -1,6 +1,15 @@
-all:
-	latexmk -pdf -shell-escape thesis.tex
+SOURCES   := thesis.typ
+DOCUMENTS := $(patsubst %.typ,%.pdf,$(SOURCES))
+
+all: $(DOCUMENTS)
+
+.PHONY:
+
+%.pdf: %.typ template.typ
+	typst compile $<
 
 clean:
-	latexmk -CA thesis.tex
-	rm -f *.aux *.fls *.log *.nls *.nlo *.bbl *.blg *.fdb_latexmk *.run.xml *.lof *.lot *.glo *.bcf *.out *.toc
+	rm -f $(DOCUMENTS)
+
+words:
+	for FILE in *.pdf; do echo "$${FILE}: `ps2ascii $${FILE} | wc -w` words"; done

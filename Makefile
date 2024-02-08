@@ -1,4 +1,4 @@
-SOURCES := proposal
+SOURCES := proposal thesis
 DOCUMENTS := $(patsubst %,%.pdf,$(SOURCES))
 
 all: $(DOCUMENTS)
