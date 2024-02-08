@@ -2,15 +2,15 @@
 
 This repository contains my research thesis for the Master of Science (Technology) in Information and Communication Technology: Software Engineering at the University of Turku.
 
-Please make sure you have a working installation of LaTeX and Biber.
+The documents are typeset using the (Typst)[https://typst.app/home] typesetting language.
 
 # Usage
 
 ```
-# Build all PDFs
+# Build all documents
 make
 
-# Build the PDFs in a specific directory
+# Build the documents in a specific directory
 make proposal
 
 # Remove intermediary generated files
