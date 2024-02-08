@@ -119,6 +119,9 @@
   // Table of contents
   set heading(numbering: "1.")
 
+  set page(numbering: "i")
+  counter(page).update(1)
+
   show outline.entry.where(
     level: 1
   ): it => {
@@ -159,7 +162,7 @@
 
   // Main document
   set par(justify: true)
-  set page(numbering: "1", number-align: center)
+  set page(numbering: "1")
   counter(page).update(1)
 
   show raw: set text(font: "New Computer Modern Mono")
