@@ -124,6 +124,22 @@
 
   pagebreak()
 
+  // List of figures
+  outline(
+    title: [List of Figures],
+    target: figure.where(kind: image),
+  )
+
+  pagebreak()
+
+  // List of tables
+  outline(
+    title: [List of Tables],
+    target: figure.where(kind: table),
+  )
+
+  pagebreak()
+
   // Main document
   set par(justify: true)
   set page(numbering: "1", number-align: center)
