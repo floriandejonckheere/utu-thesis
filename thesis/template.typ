@@ -29,6 +29,9 @@
   // Keywords
   keywords: (),
 
+  // Acronyms
+  acronyms: (),
+
   // Document contents
   body,
 ) = {
@@ -44,12 +47,6 @@
   // TODO: count total number of pages and appendix pages
   let pages = 4
   let appendix_pages = 4
-
-  // TODO: automatically extract acronyms
-  let acronyms = (
-    API: "Application Programming Interface",
-    UI: "User Interface",
-  )
 
   // Title page
   v(0.6fr)

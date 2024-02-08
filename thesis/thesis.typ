@@ -39,6 +39,12 @@
     "software architecture",
     "monolith",
     "microservices",
+  ),
+
+  // Acronyms
+  acronyms: (
+    API: "Application Programming Interface",
+    UI: "User Interface",
   )
 )
 
