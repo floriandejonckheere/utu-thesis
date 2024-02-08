@@ -110,6 +110,20 @@
 
   pagebreak()
 
+  // Table of contents
+  set heading(numbering: "1.")
+
+  show outline.entry.where(
+    level: 1
+  ): it => {
+    v(0.5em)
+    strong(it)
+  }
+
+  outline(indent: auto)
+
+  pagebreak()
+
   // Main document
   set par(justify: true)
   set page(numbering: "1", number-align: center)
