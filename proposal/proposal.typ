@@ -100,8 +100,7 @@ By measuring these key criteria quantitatively and qualitatively for the module 
   + *Evaluation*: evaluation of the proposed solution in the context of the use case.
   + *Results*: results of the evaluation.
   + *Discussion*: analysis and discussion of the results.
-+ *Conclusion*: summary of the thesis, and answers to the research questions.
-+ *Future work*: possible future work related to the topic.
++ *Conclusion and future work*: summary of the thesis, and possible future work related to the topic
 + *Bibliography*
 
 #pagebreak()
