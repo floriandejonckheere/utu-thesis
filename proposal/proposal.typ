@@ -21,7 +21,7 @@
 
   // Abstract
   abstract: [
-    *Working title*: _Identification of Module Boundaries in a Modular Monolith Architecture using Automated Techniques_
+    *Working title*: _Identification of Module Boundaries in a Modular Monolith Architecture using Automated technologies_
 
     The modular monolith architecture emerged in recent years as the harmonization of the monolithic and microservices architectures. The paradigm offers a compromise between modularity, flexibility, and scalability. Many monolithic applications are being migrated to modular monoliths or microservices entirely, to satisfy increasingly complex and volatile business requirements. This process is labour-intensive, slow, and may take months to years for larger codebases. Modularization of a codebase typically requires the developer to have an intimate knowledge of both the application code and domain.
 
@@ -51,9 +51,13 @@ The use case I intend to use for the proof-of-concept is called NephroFlow Link,
 
 *Motivation*: Investigate how restructuring an existing codebase as a modular monolith would impact the development process and resulting product.
 
-*Research Question 3*: How can automated techniques effectively identify optimal module boundaries in a modular monolith architecture?
+*Research Question 3* (optional): Which automated technologies exist to help modularize a monolithic architecture?
 
-*Motivation*: Investigate technologies based on dependency analysis and semantic clustering to automatically determine optimal module boundaries in a modular monolith architecture. Compare to manual modularization efforts in terms of accuracy, efficiency, development velocity.
+*Motivation*: Investigate technologies based on dependency analysis and semantic clustering to automatically determine optimal module boundaries in a modular monolith architecture. Choose one technology to focus on, and justify the choice.
+
+*Research Question 4*: How can _(automated technology)_ effectively identify optimal module boundaries in a modular monolith architecture?
+
+*Motivation*: Implement _(automated technology)_ for the given use case and compare to manual modularization efforts in terms of accuracy, efficiency, development velocity.
 
 #pagebreak()
 
@@ -64,12 +68,12 @@ Next, using the proposed solution, module boundaries are automatically identifie
 
 To evaluate the effectiveness of the proposed solution, key criteria are identified:
 
-+ *Accuracy*: how close do the module boundaries of the automated techniques align with the manually identified ones? The degree of alignment is measured using metrics such as Jaccard similarity.
-+ *Modularity*: how modular are the boundaries identified by the automated techniques? The degree of modularity is measured using metrics such as the modularity $Q$, the clustering coefficient, and the Fenton and Melton metric.
++ *Accuracy*: how close do the module boundaries of the automated technologies align with the manually identified ones? The degree of alignment is measured using metrics such as Jaccard similarity.
++ *Modularity*: how modular are the boundaries identified by the automated technologies? The degree of modularity is measured using metrics such as the modularity $Q$, the clustering coefficient, and the Fenton and Melton metric.
 + *Efficiency*: how much effort is required to implement the automatically identified module boundaries compared to manual modularization? Feedback from experienced developers is gathered using surveys and interviews.
 + *Adaptibility*: how well do the modules react to changes in the codebase and evolving requirements? The impact is measured empirically by introducing changes in the environment or requirements, and observing how well the boundaries adapt to the change using metrics such as code churn and defect density.
 
-By measuring these key criteria quantitatively and qualitatively for the module boundaries of the automated and the manual modularization, I can assess the effectiveness of the automated techniques in a thorough and objective manner.
+By measuring these key criteria quantitatively and qualitatively for the module boundaries of the automated and the manual modularization, I can assess the effectiveness of the automated technologies in a thorough and objective manner.
 
 #pagebreak()
 
