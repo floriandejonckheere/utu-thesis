@@ -204,6 +204,18 @@ monolithic_mobile:
   title: 'Migrating Monolithic Mobile Application to Microservice Architecture: An Experiment Report'
   booktitle: 2017 IEEE International Conference on AI & Mobile Services (AIMS)
   year: 2017
-  pages: 109-112
+  pages: '109-112'
   doi: 10.1109/AIMS.2017.23
   type: proceedings
+dynamic_microservices:
+  author:
+    - Baboi, Mihai
+    - Iftene, Adrian
+    - Gîfu, Daniela
+  title: 'Dynamic Microservices to Create Scalable and Fault Tolerance Architecture'
+  journal: Procedia Computer Science
+  year: 2019
+  volume: 159
+  pages: '1035-1044'
+  doi: 10.1016/j.procs.2019.09.271
+  type: article
