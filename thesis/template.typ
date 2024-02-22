@@ -76,8 +76,9 @@
   align(
     center,
     text(
-      0.75em,
-      "The originality of this thesis has been checked in accordance with the University of Turku quality assurance\ system using the Turnitin OriginalityCheck service.",
+      "The originality of this thesis has been checked in accordance with the University of Turku quality assurance system using the Turnitin OriginalityCheck service.",
+      size: 0.75em,
+      hyphenate: false
     )
   )
   pagebreak()
