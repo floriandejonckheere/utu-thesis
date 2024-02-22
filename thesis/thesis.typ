@@ -37,6 +37,7 @@
     "software architecture",
     "monolith",
     "microservices",
+    "modular monolith",
   ),
 
   // Acronyms
@@ -46,12 +47,6 @@
   )
 )
 
-= First chapter
-
-== First section
-
-= Second chapter
-
-== First section
-
-== Second section
+#include "chapters/01-introduction.typ"
+#include "chapters/02-background.typ"
+#include "chapters/03-related-work.typ"
