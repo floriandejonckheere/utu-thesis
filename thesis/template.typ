@@ -85,7 +85,7 @@
 
   // Abstract
   par(
-    leading: 0.5em,
+    leading: 0.6em,
   )[
     #upper(institution) \
     #department
