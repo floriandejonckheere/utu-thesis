@@ -53,6 +53,7 @@
   "03-related-work",
   "04-methodology",
   "05-modular-monolith",
+  "06-proposed-solution",
 ) {
   include "chapters/" + file + ".typ"
 
