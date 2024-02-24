@@ -12,6 +12,6 @@
 
 // Answer to Research Question 2
 
-== Modularization of monolith architecture
+== Modularization
 
 // Problem statement regarding identification of optimal module boundaries
