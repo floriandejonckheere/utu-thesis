@@ -1,6 +1,3 @@
-SOURCES   := thesis.typ
-DOCUMENTS := $(patsubst %.typ,%.pdf,$(SOURCES))
-
 all: thesis.pdf
 
 .PHONY:
