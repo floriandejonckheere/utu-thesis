@@ -55,6 +55,7 @@
   "05-modular-monolith",
   "06-proposed-solution",
   "07-case-study",
+  "08-conclusion",
 ) {
   include "chapters/" + file + ".typ"
 
