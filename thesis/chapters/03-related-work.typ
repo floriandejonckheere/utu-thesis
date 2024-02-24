@@ -2,10 +2,10 @@
 
 // Relevant work and research related to the topic
 
-== Monolithic software architecture
+== Monolith architecture
 
-// Definition and explanation of  monolithic software architecture
+// Definition and explanation of monolith software architecture
 
-== Microservices software architecture
+== Microservice architecture
 
-// Definition and explanation of microservices software architecture
+// Definition and explanation of microservice software architecture
