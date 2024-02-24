@@ -51,6 +51,7 @@
   "01-introduction",
   "02-background",
   "03-related-work",
+  "04-methodology",
 ) {
   include "chapters/" + file + ".typ"
 
