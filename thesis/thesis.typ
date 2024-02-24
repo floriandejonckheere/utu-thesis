@@ -47,6 +47,12 @@
   )
 )
 
-#include "chapters/01-introduction.typ"
-#include "chapters/02-background.typ"
-#include "chapters/03-related-work.typ"
+#for file in (
+  "01-introduction",
+  "02-background",
+  "03-related-work",
+) {
+  include "chapters/" + file + ".typ"
+
+  pagebreak()
+}
