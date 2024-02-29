@@ -6,7 +6,7 @@ thesis.pdf: thesis.typ chapters/*.typ
 	typst compile thesis.typ
 
 clean:
-	rm -f thesis.pdf
+	rm -f *.pdf chapters/*.pdf
 
 %.pdf: %.typ template.typ
 	typst compile $<
