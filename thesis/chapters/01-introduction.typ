@@ -36,6 +36,16 @@ The proposed solution will add value to the field of software engineering, and w
 
 // Explanation of the research methodology used
 
+To answer the first and second research question, a literature study is conducted.
+The literature study lists relevant literature, and reviews the history and evolution of modular monolith architectures, and summarizes the state of the art in automated modularization technologies.
+
+Subsequently, the most appropriate automated technology is chosen, and a proposed solution is implemented for a given use case.
+Based on certain key criteria, the proposed solution is compared to manual modularization efforts.
+
+// TODO: list the key criteria
+
+Finally, the findings are summarized, and an outlook on future work is given.
+
 == Outline
 
 // General outline of the sections
