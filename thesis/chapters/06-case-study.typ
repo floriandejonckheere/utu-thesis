@@ -1,6 +1,7 @@
 = Case study <casestudy>
 
 // Application of the proposed solution to a real-world use case
+// Answer to Research Question 3
 
 == Background
 
