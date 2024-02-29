@@ -23,6 +23,8 @@ The goal of this research can be summarized as follows:
 + Investigate the merits and drawbacks of the modular monolith architecture in an existing codebase
 + Investigate the use of automated technologies to modularize a monolithic architecture
 
+The proposed solution adds value to the field of software engineering, and can be used as a base for future improvements regarding automated modularization of monolith codebases.
+
 == Motivation
 
 // Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
