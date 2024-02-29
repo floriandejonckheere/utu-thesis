@@ -2,10 +2,6 @@
 
 // General introduction to the topic
 
-== Problem statement
-
-// Identification of challenges and obstacles related to the topic
-
 == Scope and goal
 
 // Scope of the research thesis
