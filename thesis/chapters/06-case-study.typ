@@ -10,13 +10,9 @@
 
 // Analysis and proposed solution to the problem, design and implementation choices
 
-== Evaluation
+== Evaluation and results
 
-// Evaluation of the proposed solution in the context of the use case
-
-== Results
-
-// Results of the evaluation
+// Evaluation and results of the proposed solution in the context of the use case
 
 == Discussion
 

@@ -51,11 +51,10 @@
   "01-introduction",
   "02-background",
   "03-related-work",
-  "04-methodology",
-  "05-modular-monolith",
-  "06-proposed-solution",
-  "07-case-study",
-  "08-conclusion",
+  "04-modular-monolith",
+  "05-proposed-solution",
+  "06-case-study",
+  "07-conclusion",
 ) {
   include "chapters/" + file + ".typ"
 
