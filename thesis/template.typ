@@ -109,7 +109,7 @@
   linebreak()
 
   v(1.5em)
-  "Keywords: "
+  strong("Keywords: ")
   keywords.join(", ")
 
   pagebreak()
