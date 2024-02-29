@@ -115,7 +115,7 @@
   pagebreak()
 
   // Table of contents
-  set heading(numbering: "1.")
+  set heading(numbering: "1.", supplement: "Chapter")
 
   set page(numbering: "i")
   counter(page).update(1)
