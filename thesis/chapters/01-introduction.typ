@@ -43,9 +43,24 @@ For the second research question, the state of the art in automated modularizati
 The third research question is answered by choosing the most appropriate automated technology, and implementing it for a given use case.
 The implementation is then evaluated based on quantitative and qualitative metrics, and compared to manual modularization efforts.
 
-// TODO: list the metrics
-
 Finally, the findings are summarized, and an outlook on future work is given.
+
+For the case study, a design science research methodology (DSRM) is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
+In particular, the research and design of the proposed solution follows the six-step process model presented by #cite(<design_science_research_methodology>, form: "author").
+Their Design Science Research Process (DSRP) is based on prior research and is designed to guide researchers through the process of analysis, creation, and evaluation of artifacts.
+
+The six steps of the process are:
+
++ *Problem identification and motivation*: Research problem statement and justification for existence of a solution.
++ *Objectives for a solution*: Definition of the objectives, derived from the problem statement.
++ *Design and development*: Creation of the artifact.
++ *Demonstration*: Usage of the artifact to demonstrate its effectiveness in solving the problem.
++ *Evaluation*: Observation and measurement of how well the artifact supports a solution to the problem.
++ *Communication*: Transfer of knowledge about the artifact and the problem solution to the relevant audience.
+
+The process is structured sequentially, however the authors suggests that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
+
+In this thesis specifically, the DSRP is used to guide the design and development of the automated modularization technology, with a particular focus on the design and development, demonstration, and evaluation steps.
 
 == Outline
 
