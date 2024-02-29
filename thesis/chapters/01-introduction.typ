@@ -52,11 +52,16 @@ Their Design Science Research Process (DSRP) is based on prior research and is d
 The six steps of the process are:
 
 + *Problem identification and motivation*: Research problem statement and justification for existence of a solution.
-+ *Objectives for a solution*: Definition of the objectives, derived from the problem statement.
++ *Objectives of a solution*: Definition of the objectives, derived from the problem statement.
 + *Design and development*: Creation of the artifact.
 + *Demonstration*: Usage of the artifact to demonstrate its effectiveness in solving the problem.
 + *Evaluation*: Observation and measurement of how well the artifact supports a solution to the problem.
 + *Communication*: Transfer of knowledge about the artifact and the problem solution to the relevant audience.
+
+#figure(
+  include("../figures/dsrp.typ"),
+  caption: [Design Science Research Process (DSRP)],
+) <dsrp>
 
 The process is structured sequentially, however the authors suggests that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
 
