@@ -1,4 +1,4 @@
-= Conclusion
+= Conclusion <conclusion>
 
 // Summary of the thesis
 

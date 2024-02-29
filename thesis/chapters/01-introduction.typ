@@ -1,4 +1,4 @@
-= Introduction
+= Introduction <introduction>
 
 // General introduction to the topic
 
@@ -35,4 +35,20 @@ The proposed solution adds value to the field of software engineering, and can b
 
 == Outline
 
-// General outline of the chapters
+// General outline of the sections
+The thesis is divided into three parts.
+
+The first part comprises the background and related work.
+In @introduction, the scope and goal of the research is defined, and the research questions are formulated.
+The stakeholders are identified, and the methodology is explained.
+@background introduces the reader to the research background and necessary concepts.
+In @relatedwork, the existing literature is reviewed, and the state of the art is presented.
+
+The second part of the thesis, starting with @modularmonolith, is dedicated to the first research question.
+The modular monolith architecture is defined, and its merits and drawbacks are discussed.
+
+The third part aims to solve the second research question.
+@modularization gives an introduction into the automated modularization of monolith codebases, focusing on one technology in particular.
+@casestudy applies the automated technology on a given case study, and compares it to manual modularization efforts.
+
+Finally, @conclusion summarizes the findings, and gives an outlook on future work.

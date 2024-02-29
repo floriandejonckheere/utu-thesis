@@ -1,4 +1,4 @@
-= Case study
+= Case study <casestudy>
 
 // Application of the proposed solution to a real-world use case
 

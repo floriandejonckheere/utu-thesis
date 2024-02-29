@@ -1,4 +1,4 @@
-= Modular monolith architecture
+= Modular monolith architecture <modularmonolith>
 
 // Definition and explanation of modular monolith software architecture
 
