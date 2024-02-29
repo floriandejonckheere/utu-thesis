@@ -42,8 +42,8 @@
 
   // Acronyms
   acronyms: (
-    API: "Application Programming Interface",
-    UI: "User Interface",
+    DSRM: "Design Science Research Methodology",
+    DSRP: "Design Science Research Process",
   )
 )
 
