@@ -36,7 +36,7 @@ The proposed solution will add value to the field of software engineering, and w
 
 // Explanation of the research methodology used
 
-A literature study is conducted to answer the first and second research question.
+A literature review is conducted to answer the first and second research question.
 For the first research question, the study aims to find a definition of the modular monolith architecture, and to list the advantages and disadvantages of the architecture based on existing literature.
 For the second research question, the state of the art in automated modularization technologies is reviewed and summarized.
 
