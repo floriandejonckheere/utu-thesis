@@ -82,7 +82,7 @@ The second part of the thesis, starting with @modularmonolith, is dedicated to t
 The modular monolith architecture is defined, and its merits and drawbacks are discussed.
 
 The third part aims to solve the second and third research question.
-@modularization gives an introduction into the automated modularization of monolith codebases, listing the existing technologies.
+@automatedmodularization gives an introduction into the automated modularization of monolith codebases, listing the existing technologies.
 It then continues to focus on one automated technology, _(automated technology)_, and explains its implementation.
 @casestudy applies _(automated technology)_ on a given case study, and compares it to manual modularization efforts.
 
