@@ -58,10 +58,14 @@ The six steps of the process are:
 + *Evaluation*: Observation and measurement of how well the artifact supports a solution to the problem.
 + *Communication*: Transfer of knowledge about the artifact and the problem solution to the relevant audience.
 
+#v(2em)
+
 #figure(
   include("../figures/dsrp.typ"),
-  caption: [Design Science Research Process (DSRP)],
+  caption: [Design Science Research Process (DSRP)]
 ) <dsrp>
+
+#v(2em)
 
 The process is structured sequentially, however the authors suggests that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
 

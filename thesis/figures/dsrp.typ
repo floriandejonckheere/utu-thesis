@@ -5,7 +5,7 @@
 #let blob(pos, label, tint: yellow, ..args) = node(
   pos,
   align(center, label),
-  width: 55mm,
+  width: 40mm,
   fill: tint.lighten(60%),
   stroke: 1pt + tint.darken(20%),
   corner-radius: 2pt,
@@ -13,21 +13,21 @@
 )
 
 #fletcher.diagram(
-  spacing: 10pt,
-  cell-size: (10mm, 15mm),
+  spacing: 20pt,
+  cell-size: (20mm, 10mm),
   edge-stroke: 1pt,
   edge-corner-radius: 5pt,
-  mark-scale: 70%,
+  mark-scale: 80%,
 
   blob((0,1), [Problem identification #linebreak() and motivation]),
   edge("-|>"),
-  blob((0,2), [Objectives of a solution]),
+  blob((1,1), [Objectives of a solution]),
   edge("-|>"),
-  blob((0,3), [Design and development]),
+  blob((2,1), [Design and development]),
   edge("-|>"),
-  blob((0,4), [Demonstration]),
+  blob((2,2), [Demonstration]),
   edge("-|>"),
-  blob((0,5), [Evaluation]),
+  blob((1,2), [Evaluation]),
   edge("-|>"),
-  blob((0,6), [Communication]),
+  blob((0,2), [Communication]),
 )
