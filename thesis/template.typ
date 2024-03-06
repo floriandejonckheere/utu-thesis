@@ -176,5 +176,5 @@
   set par(first-line-indent: 0em)
   show bibliography: pad.with(x: 0.5pt)
 
-  bibliography(bibliography-file)
+  bibliography(bibliography-file, style: "ieee")
 }
