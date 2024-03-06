@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 #let template(
   // Document title
   title: "",
@@ -47,6 +49,9 @@
   // TODO: count total number of pages and appendix pages
   let pages = 4
   let appendix_pages = 4
+
+  // Initialize acronyms
+  init-acronyms(acronyms)
 
   // Title page
   v(0.6fr)

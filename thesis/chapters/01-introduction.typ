@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 = Introduction <introduction>
 
 // General introduction to the topic
@@ -45,8 +47,8 @@ The implementation is then evaluated based on quantitative and qualitative metri
 
 Finally, the findings are summarized, and an outlook on future work is given.
 
-For the case study, a design science research methodology (DSRM) is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
-In particular, the research and design of the proposed solution follows the six-step Design Science Research Process (DSRP) model @design_science_research_methodology.
+For the case study, a #acr("DSRM") is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
+In particular, the research and design of the proposed solution follows the six-step #acr("DSRP") model @design_science_research_methodology.
 Their model is based on prior research and is designed to guide researchers through the process of analysis, creation, and evaluation of artifacts.
 
 The six steps of the process are:

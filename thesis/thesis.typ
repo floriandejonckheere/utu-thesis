@@ -42,8 +42,8 @@
 
   // Acronyms
   acronyms: (
-    DSRM: "Design Science Research Methodology",
-    DSRP: "Design Science Research Process",
+    DSRM: ("Design Science Research Methodology"),
+    DSRP: ("Design Science Research Process"),
   )
 )
 
