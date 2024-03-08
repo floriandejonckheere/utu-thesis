@@ -12,7 +12,7 @@ This research is centered around three research questions:
 
 *Research Question 1*: Which challenges and opportunities arise when considering adoption of the modular monolith architecture in an existing codebase?
 
-*Research Question 2*: Which automated technologies exist to aid modularization of monolithic codebases?
+*Research Question 2*: What are the existing approaches and tools for automated modularization of monolith codebases?
 
 *Research Question 3*: How can _(automated technology)_ effectively identify optimal module boundaries in a modular monolith architecture?
 

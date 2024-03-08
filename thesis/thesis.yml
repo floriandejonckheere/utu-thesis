@@ -13,3 +13,10 @@ design_science_research_methodology:
   volume: 24
   pages: 45–77
   doi: 10.2753/MIS0742-1222240302
+systematic_literature_review_guidelines:
+  type: article
+  title: Guidelines for performing Systematic Literature Reviews in Software Engineering
+  author:
+    - Kitchenham, Barbara
+    - Charters, Stuart
+  year: 2007
