@@ -53,8 +53,9 @@
   "03-related-work",
   "04-modular-monolith",
   "05-automated-modularization",
-  "06-case-study",
-  "07-conclusion",
+  "06-proposed-solution",
+  "07-case-study",
+  "08-conclusion",
 ) {
   include "chapters/" + file + ".typ"
 
