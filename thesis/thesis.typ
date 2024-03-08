@@ -2,7 +2,7 @@
 
 #show: template.with(
   // Document title
-  title: "Identification of Module Boundaries in a Modular Monolith Architecture using Automated technologies",
+  title: "Automated Microservice Identification: an Approach to Decomposition into a Modular Monolith Architecture",
 
   // Document subtitle
   subtitle: "Master of Science (Tech) Thesis",
