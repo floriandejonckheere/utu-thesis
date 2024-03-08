@@ -52,7 +52,7 @@
   "02-background",
   "03-related-work",
   "04-modular-monolith",
-  "05-modularization",
+  "05-automated-modularization",
   "06-case-study",
   "07-conclusion",
 ) {
