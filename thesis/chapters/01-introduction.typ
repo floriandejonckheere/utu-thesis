@@ -25,7 +25,7 @@ This comparison will help us to answer the third research question.
 
 The goal of this research can be summarized as follows:
 
-+ Investigate the merits and drawbacks of the modular monolith architecture in an existing codebase
++ Investigate the merits and drawbacks of the modular monolith architecture
 + Investigate the use of automated technologies to modularize a monolithic architecture
 
 The proposed solution will add value to the field of software engineering, and will be able to be used as a base for future improvements regarding automated modularization of monolith codebases.
