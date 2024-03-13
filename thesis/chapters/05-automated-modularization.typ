@@ -36,8 +36,9 @@ Using the systematic literature review, we answered the following research quest
 
 The motivation for the research question is discussed in @introduction.
 
-Although systematic mapping studies related to microservices @systematic_mapping_study_1 @systematic_mapping_study_2 and related to microservice decomposition /* TODO: systematic literature reviews */ exist, we are not aware of any systematic literature review specifically focusing on automated decomposition or modularization of monolith codebases.
-Therefore, we believe that there is a need for a systematic literature review to identify and categorize existing literature regarding automated modularization of monolith codebases.
+In current literature, several systematic mapping studies related to microservices architecture have been conducted @systematic_mapping_study_1 @systematic_mapping_study_2, as well as systematic literature reviews related to microservice decomposition /* TODO: systematic literature reviews */.
+However, in these studies the techniques described are mainly used as an aid for the software architect when identifying microservice candidates.
+Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding fully automated techniques for modularization of monolith codebases.
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore
