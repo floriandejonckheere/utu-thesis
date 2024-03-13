@@ -99,15 +99,7 @@ The quality of the publication was assessed based on the following criteria:
 This step is necessary to ensure that the selected publications are relevant to the research question and that the results are not biased by low-quality publications.
 In the end, /* TODO: amount */ publications were selected for inclusion in the systematic literature review.
 
-Once a final selection of publications was made, the resulting publications were reviewed and categorized based on the type of approach or technique they describe.
-The categories are as follows:
-
-// TODO: classification of categories is a result of the review, and doesn't belong in the planning phase?
-+ Static analysis
-+ Dynamic analysis
-+ Hybrid analysis
-+ Machine learning
-+ Other
+Once a final selection of publications was made, the resulting publications were qualitatively reviewed and categorized based on the type of approach or technique they describe.
 
 == Conduct
 
@@ -141,3 +133,15 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
   ),
   caption: [Selected publications]
 ) <slr_publications>
+
+== Report
+
+The publications in the systematic literature review were categorized based on the type of approach or technique they describe.
+The identified categories are as follows:
+
++ Static analysis
++ Dynamic analysis
++ Hybrid analysis
++ Machine learning
++ Other
+
