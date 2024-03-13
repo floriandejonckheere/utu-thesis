@@ -72,7 +72,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
     [
       - Title, abstract or keywords include the search terms
       - Conference papers, research articles, blog posts, or other publications
-      - Publications addressing automated technologies, algorithms, or methods
+      - Publications addressing (semi-)automated technologies, algorithms, or methods
     ],
     "Exclusion",
     [
@@ -82,6 +82,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
       - Publications aimed at greenfield development of microservice-based systems
       - Publications published before 2014, as the definition of "microservices" as an architectural style is inconsistent before @systematic_mapping_study_2
       - Publications addressing manual technologies, algorithms, or methods
+      - Surveys, opinion pieces, or other non-technical publications
     ]
   ),
   caption: [Inclusion and exclusion criteria]
