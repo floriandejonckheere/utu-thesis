@@ -132,12 +132,12 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
 
 #figure(
   table(
-    columns: (auto, auto),
+    columns: (auto, auto, auto),
     inset: 10pt,
-    align: (right, left),
-    [], [*Publication*],
-    "1", cite(<comparison_static_dynamic_analysis>, form: "full"),
-    "2", cite(<extraction_of_microservices>, form: "full"),
+    align: (right, left, left),
+    [], [*Type*], [*Publication*],
+    "1", "Proceedings", cite(<comparison_static_dynamic_analysis>, form: "full"),
+    "2", "Proceedings", cite(<extraction_of_microservices>, form: "full"),
   ),
   caption: [Selected publications]
 ) <slr_publications>
