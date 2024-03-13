@@ -32,7 +32,7 @@ The literature review was conducted using a three-step protocol as defined by #c
 
 Using the systematic literature review, we answered the following research question:
 
-*Research Question 2*: What are the existing approaches and tools for automated modularization of monolith codebases?
+*Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 
 The motivation for the research question is discussed in @introduction.
 

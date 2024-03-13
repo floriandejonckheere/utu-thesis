@@ -10,11 +10,11 @@
 
 This research is centered around three research questions:
 
-*Research Question 1*: Which challenges and opportunities arise when considering adoption of the modular monolith architecture in an existing codebase?
+*Research Question 1*: What are the challenges and opportunities of the modular monolith architecture compared to traditional monolithic and microservices architectures?
 
-*Research Question 2*: What are the existing approaches and tools for automated modularization of monolith codebases?
+*Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 
-*Research Question 3*: How can _(automated technology)_ effectively identify optimal module boundaries in a modular monolith architecture?
+*Research Question 3*: How can static analysis of source code effectively identify optimal module boundaries in a modular monolith architecture?
 
 To answer the first research question, we will first define the modular monolith architecture, and examine what sets it apart from monolithic and microservices architectures.
 Then, we will proceed to investigate the merits and drawbacks of the software architecture when applied to an existing codebase.
