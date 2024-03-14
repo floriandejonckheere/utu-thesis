@@ -212,6 +212,10 @@ The identified classes of microservice candidate identification algorithms are d
     "Genetic algorithms",
     "",
     [],
+
+    "Machine learning/optimization",
+    "Neural networks, Support Vector Machines",
+    [],
   ),
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
