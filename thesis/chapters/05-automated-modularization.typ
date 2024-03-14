@@ -224,6 +224,8 @@ Finally, data can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
 
 An example of an approach using execution traces as input is described by #cite(<execution_trace_identification>, form: "prose").
+Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
+Additionally, various metrics such as processor time and memory usage are collected.
 
 === Algorithm
 
