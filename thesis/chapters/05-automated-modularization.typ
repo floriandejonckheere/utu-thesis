@@ -152,7 +152,7 @@ Second, we categorized the publications based on the algorithm, and the type of 
 === #acr("SDLC") artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
-The categories are based on #cite(<prescriptive_model_migration>, form: "author") @prescriptive_model_migration.
+The categories are based on #cite(<prescriptive_model_migration>).
 
 #figure(
   table(
@@ -184,3 +184,26 @@ The categories are based on #cite(<prescriptive_model_migration>, form: "author"
 ) <slr_artifacts>
 
 // TODO: explanation about each type of artifact
+
+=== Algorithm
+
+The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    align: (left, left, left),
+    [*Type*], [*Algorithms*], [*Publications*],
+    "Clustering",
+    "K-Means, DBSCAN, OPTICS, BIRCH, Agglomerative",
+    [],
+
+    "Genetic algorithms",
+    "",
+    [],
+  ),
+  caption: [Microservice identification algorithm]
+) <slr_algorithms>
+
+// TODO: explanation about each type of algorithm

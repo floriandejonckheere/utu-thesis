@@ -41,7 +41,7 @@
   set document(author: author, title: title)
   set page(margin: 7em)
   set par(leading: 1.1em, justify: true)
-  set bibliography(full: true, style: "apa", title: [References])
+  set bibliography(full: true, style: "ieee", title: [References])
 
   show par: set block(spacing: 2em)
   show heading: set block(above: 1.4em, below: 1.5em)
