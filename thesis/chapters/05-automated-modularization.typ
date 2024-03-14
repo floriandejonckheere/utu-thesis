@@ -160,11 +160,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
     inset: 10pt,
     align: (left, left, left),
     [*Artifact*], [*Type*], [*Publications*],
-    "Requirements documents", // e.g., functional and non-functional requirements, use cases
-    "Static",
-    [],
-
-    "Requirements models", // e.g., BPMN
+    "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
     "Static",
     [],
 
