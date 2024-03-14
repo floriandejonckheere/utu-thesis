@@ -124,3 +124,14 @@ problem_frames_approach:
   date: 2022
   pages: 155–159
   doi: 10.1109/SEAI55746.2022.9832106
+
+migrating_legacy_software:
+  type: proceedings
+  title: Migrating Legacy Software to Microservices Architecture
+  author:
+    - Kazanavičius, Justas
+    - Mažeika, Dalius
+  date: 2019
+  journal: 2019 Open Conference of Electrical, Electronic and Information Sciences (eStream)
+  pages: 1-5
+  doi: 10.1109/eStream.2019.8732170

@@ -166,17 +166,22 @@ The categories are based on #cite(<prescriptive_model_migration>).
     [
       @ddd_approach_automatic
       @problem_frames_approach
+      @migrating_legacy_software
     ],
 
     "Design documents", // e.g., API specifications, UML, ERD
     "Static",
-    [],
+    [
+      @migrating_legacy_software
+    ],
 
     "Codebase", // e.g., source code, revision history
     "Static",
-    [],
+    [
+      @migrating_legacy_software
+    ],
 
-    "Log data", // e.g., log files, execution traces
+    "Execution data", // e.g., log files, execution traces
     "Dynamic",
     [],
   ),
@@ -191,7 +196,14 @@ Approaches discussed in /* TODO: cite */ use requirements documents and models a
 #cite(<ddd_approach_automatic>, form: "prose") use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
 
-// TODO: explain design documents
+Design documents created by software architects are machine-readable representations of the software system.
+They are deliverables produced during the design phase of the software development life cycle. /* TODO: find reference */
+Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
+Techniques using design documents either use a domain-driven approach, or a data-driven approach.
+Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
+
+#cite(<migrating_legacy_software>, form: "prose") suggest three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
+
 // TODO: explain codebase
 // TODO: log data
 
