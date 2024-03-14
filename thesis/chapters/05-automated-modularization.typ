@@ -152,6 +152,7 @@ Second, we categorized the publications based on the algorithm, and the type of 
 === #acr("SDLC") artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
+The categories are based on #cite(<prescriptive_model_migration>, form: "author") @prescriptive_model_migration.
 
 #figure(
   table(
@@ -159,39 +160,23 @@ The identified #acr("SDLC") artifact categories used as input for the microservi
     inset: 10pt,
     align: (left, left, left),
     [*Artifact*], [*Type*], [*Publications*],
-    "Business process models",
+    "Requirements documents", // e.g., functional and non-functional requirements, use cases
     "Static",
     [],
 
-    "Functional and non-functional requirements",
+    "Requirements models", // e.g., BPMN
     "Static",
     [],
 
-    "Domain models (e.g., UML, ERD)",
+    "Design documents", // e.g., API specifications, UML, ERD
     "Static",
     [],
 
-    "Use cases",
+    "Codebase", // e.g., source code, revision history
     "Static",
     [],
 
-    "API documentation",
-    "Static",
-    [],
-
-    "Source code",
-    "Static",
-    [],
-
-    "Revision history",
-    "Static",
-    [],
-
-    "Log files",
-    "Dynamic",
-    [],
-
-    "Execution traces",
+    "Log data", // e.g., log files, execution traces
     "Dynamic",
     [],
   ),
