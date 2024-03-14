@@ -1,2 +1,5 @@
 # IDE files
 .idea
+
+# Vale files
+.vale-styles
