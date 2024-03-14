@@ -70,3 +70,17 @@ extraction_of_microservices:
   date: 2017
   pages: 524–531
   doi: 10.1109/ICWS.2017.61
+
+prescriptive_model_migration:
+  type: article
+  title: A Prescriptive Model for Migration to Microservices Based on SDLC Artifacts
+  author:
+    - Bajaj, Deepali
+    - Bharti, Urmil
+    - Goel, Anita
+    - Gupta, S. C.
+  journal: Journal of Web Engineering
+  date: 2021
+  pages: 817-852
+  doi: 10.13052/jwe1540-9589.20312
+

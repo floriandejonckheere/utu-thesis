@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 = Automated modularization <automatedmodularization>
 
 // Enumeration of existing automated technologies for modularization of monolith codebases
@@ -138,12 +140,61 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
 
 == Report
 
-The publications in the systematic literature review were categorized based on the type of approach or technique they describe.
-The identified categories are as follows:
+The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized two-fold.
+First, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
+Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
+Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
+Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid.
 
-+ Static analysis
-+ Dynamic analysis
-+ Hybrid analysis
-+ Machine learning
-+ Other
+Second, we categorized the publications based on the class of the microservice candidate identification algorithm they describe.
 
+=== #acr("SDLC") artifact
+
+The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    align: (left, left, left),
+    [*Artifact*], [*Type*], [*Publications*],
+    "Business process models",
+    "Static",
+    [],
+
+    "Functional and non-functional requirements",
+    "Static",
+    [],
+
+    "Domain models (e.g., UML, ERD)",
+    "Static",
+    [],
+
+    "Use cases",
+    "Static",
+    [],
+
+    "API documentation",
+    "Static",
+    [],
+
+    "Source code",
+    "Static",
+    [],
+
+    "Revision history",
+    "Static",
+    [],
+
+    "Log files",
+    "Dynamic",
+    [],
+
+    "Execution traces",
+    "Dynamic",
+    [],
+  ),
+  caption: [#acr("SDLC") artifact categories]
+) <slr_artifacts>
+
+// TODO: explanation about each type of artifact
