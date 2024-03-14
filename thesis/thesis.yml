@@ -131,7 +131,18 @@ migrating_legacy_software:
   author:
     - Kazanavičius, Justas
     - Mažeika, Dalius
-  date: 2019
   journal: 2019 Open Conference of Electrical, Electronic and Information Sciences (eStream)
+  date: 2019
   pages: 1-5
   doi: 10.1109/eStream.2019.8732170
+
+multiobjective_optimization_decomposition:
+  type: proceedings
+  title: Automated Microservice Decomposition Method as Multi-Objective Optimization
+  author:
+    - Kinoshita, Takahiro
+    - Kanuka, Hideyuki
+  journal: 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C)
+  date: 2022
+  pages: 112–115
+  doi: 10.1109/ICSA-C54293.2022.00028

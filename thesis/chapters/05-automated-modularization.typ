@@ -179,6 +179,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
     "Static",
     [
       @migrating_legacy_software
+      @multiobjective_optimization_decomposition
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -202,9 +203,15 @@ Design documents include API specifications, UML diagrams (such as class diagram
 Techniques using design documents either use a domain-driven approach, or a data-driven approach.
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
 
-#cite(<migrating_legacy_software>, form: "prose") suggest three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
+#cite(<migrating_legacy_software>, form: "prose") enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
+The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
 
-// TODO: explain codebase
+A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
+(Static) analysis on the source code of the application can be used to identify microservice candidates.
+Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
+
+For example, #cite(<multiobjective_optimization_decomposition>, form: "prose") consider object-oriented classes as units of business capability.
+
 // TODO: log data
 
 === Algorithm
@@ -222,14 +229,22 @@ The identified classes of microservice candidate identification algorithms are d
     [],
 
     "Genetic algorithms",
-    "",
+    "NSGA-II",
     [],
 
     "Machine learning/optimization",
     "Neural networks, Support Vector Machines",
-    [],
+    [
+      @multiobjective_optimization_decomposition
+    ],
   ),
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
 
-// TODO: explanation about each type of algorithm
+// TODO: explanation about clustering
+
+// TODO: explanation about genetic algorithms
+
+// TODO: explanation about machine learning/optimization
+#cite(<multiobjective_optimization_decomposition>, form: "prose") use a multi-objective optimization algorithm to identify microservice candidates.
+
