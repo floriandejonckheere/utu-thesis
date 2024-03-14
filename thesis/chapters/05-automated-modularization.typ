@@ -173,6 +173,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
     "Static",
     [
       @migrating_legacy_software
+      @design_model_identification
     ],
 
     "Codebase", // e.g., source code, revision history
@@ -196,6 +197,7 @@ Approaches discussed in /* TODO: cite */ use requirements documents and models a
 
 #cite(<ddd_approach_automatic>, form: "prose") use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
+#cite(<design_model_identification>, form: "prose") use schematic design documents in XML format as input for the algorithm.
 
 Design documents created by software architects are machine-readable representations of the software system.
 They are deliverables produced during the design phase of the software development life cycle. /* TODO: find reference */
@@ -230,13 +232,14 @@ The identified classes of microservice candidate identification algorithms are d
 
     "Genetic algorithms",
     "NSGA-II",
-    [],
+    [
+      @multiobjective_optimization_decomposition
+      @design_model_identification
+    ],
 
     "Machine learning/optimization",
     "Neural networks, Support Vector Machines",
-    [
-      @multiobjective_optimization_decomposition
-    ],
+    [],
   ),
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
@@ -246,5 +249,5 @@ The identified classes of microservice candidate identification algorithms are d
 // TODO: explanation about genetic algorithms
 
 // TODO: explanation about machine learning/optimization
-#cite(<multiobjective_optimization_decomposition>, form: "prose") use a multi-objective optimization algorithm to identify microservice candidates.
+#cite(<design_model_identification>, form: "prose") and #cite(<multiobjective_optimization_decomposition>, form: "prose") use Non-Dominated Sorting Algorithm II (NSGA-II) as multi-objective optimization algorithm to identify microservice candidates.
 

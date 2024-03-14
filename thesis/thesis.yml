@@ -146,3 +146,11 @@ multiobjective_optimization_decomposition:
   date: 2022
   pages: 112–115
   doi: 10.1109/ICSA-C54293.2022.00028
+
+design_model_identification:
+  type: article
+  title: Automated Microservice Identification from Design Model
+  author:
+    - Zhou, Xiaolong
+    - Xiong, Jingliu
+  date: 2022
