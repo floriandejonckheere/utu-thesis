@@ -168,3 +168,17 @@ execution_trace_identification:
   date: 2020
   pages: 135–145
   doi: 10.1109/ICSA47634.2020.00021
+
+cromlech_semiautomated_monolith:
+  type: article
+  title: 'Cromlech: Semi-Automated Monolith Decomposition Into Microservices'
+  author:
+    - Quattrocchi, Giovanni
+    - Cocco, Davide
+    - Staffa, Simone
+    - Margara, Alessandro
+    - Cugola, Gianpaolo
+  journal: IEEE Transactions on Services Computing
+  date: 2024
+  pages: 1–16
+  doi: 10.1109/TSC.2024.3354457

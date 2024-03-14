@@ -174,6 +174,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
     [
       @migrating_legacy_software
       @design_model_identification
+      @cromlech_semiautomated_monolith
     ],
 
     "Codebase", // e.g., source code, revision history
@@ -212,6 +213,10 @@ Similar to requirements documents and models, design documents are often not ava
 
 #cite(<migrating_legacy_software>, form: "prose") enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
 The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
+
+#cite(<cromlech_semiautomated_monolith>, form: "prose") takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
+Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
+The tool can be persuaded to generate different, more efficient decompositions when given domain-driven requirements.
 
 // Codebase
 A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
@@ -252,7 +257,9 @@ The identified classes of microservice candidate identification algorithms are d
 
     "Machine learning/optimization",
     "Neural networks, Support Vector Machines",
-    [],
+    [
+      @cromlech_semiautomated_monolith
+    ],
   ),
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
@@ -263,5 +270,6 @@ The identified classes of microservice candidate identification algorithms are d
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite(<design_model_identification>, form: "prose"), #cite(<multiobjective_optimization_decomposition>, form: "prose"), and #cite(<execution_trace_identification>, form: "prose")
 
 // TODO: explanation about machine learning/optimization
+The authors of #cite(<cromlech_semiautomated_monolith>, form: "prose") incorporated a linear optimization solver in their tool to identify microservice candidates.
 
 // TODO: summary/conclusion
