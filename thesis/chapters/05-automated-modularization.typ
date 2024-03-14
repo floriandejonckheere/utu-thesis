@@ -141,6 +141,7 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
 == Report
 
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized two-fold.
+// TODO: should be three-fold? (artifact, algorithm, metric)
 
 First, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
 Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
@@ -162,7 +163,10 @@ The categories are based on #cite(<prescriptive_model_migration>).
     [*Artifact*], [*Type*], [*Publications*],
     "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
     "Static",
-    [],
+    [
+      @ddd_approach_automatic
+      @problem_frames_approach
+    ],
 
     "Design documents", // e.g., API specifications, UML, ERD
     "Static",
@@ -179,7 +183,17 @@ The categories are based on #cite(<prescriptive_model_migration>).
   caption: [#acr("SDLC") artifact categories]
 ) <slr_artifacts>
 
-// TODO: explanation about each type of artifact
+In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
+They include functional and non-functional requirements, use cases, user stories, and business process models.
+Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
+Approaches discussed in /* TODO: cite */ use requirements documents and models as input for the microservice candidate identification algorithm.
+
+#cite(<ddd_approach_automatic>, form: "prose") use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+#cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
+
+// TODO: explain design documents
+// TODO: explain codebase
+// TODO: log data
 
 === Algorithm
 

@@ -55,6 +55,14 @@ project_management:
   publisher: Prentice-Hall of India Pvt.Limited
   isbn: 978-81-203-4425-9
 
+software_requirements_specification:
+  type: article
+  title: IEEE Guide for Software Requirements Specifications
+  journal: IEEE Std 830-1984
+  date: 1984
+  pages: 1-26
+  doi: 10.1109/IEEESTD.1984.119205
+
 ## Literature review references
 comparison_static_dynamic_analysis:
   type: proceedings
@@ -63,7 +71,7 @@ comparison_static_dynamic_analysis:
     - Andrade, Bernardo
     - Santos, Samuel
     - Silva, António Rito
-  booktitle: Software Architecture
+  journal: Software Architecture
   date: 2023
   pages: 354–361
   doi: 10.1007/978-3-031-42592-9_25
@@ -93,3 +101,26 @@ prescriptive_model_migration:
   pages: 817-852
   doi: 10.13052/jwe1540-9589.20312
 
+ddd_approach_automatic:
+  type: proceedings
+  title: A DDD Approach Towards Automatic Migration To Microservices
+  author:
+    - Saidi, Malak
+    - Tissaoui, Anis
+    - Faiz, Sami
+  journal: 2023 IEEE International Conference on Advanced Systems and Emergent Technologies (IC_ASET)
+  date: 2023
+  pages: 1-6
+  doi: 10.1109/IC_ASET58101.2023.10150522
+
+problem_frames_approach:
+  type: proceedings
+  title: A Microservices Identification Approach Based on Problem Frames
+  author:
+    - Yang, Zhumei
+    - Wu, Sijie
+    - Zhang, Cheng
+  journal: 2022 IEEE 2nd International Conference on Software Engineering and Artificial Intelligence (SEAI)
+  date: 2022
+  pages: 155–159
+  doi: 10.1109/SEAI55746.2022.9832106
