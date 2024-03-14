@@ -154,3 +154,17 @@ design_model_identification:
     - Zhou, Xiaolong
     - Xiong, Jingliu
   date: 2022
+
+execution_trace_identification:
+  type: proceedings
+  title: Automated Microservice Identification in Legacy Systems with Functional and Non-Functional Metrics
+  author:
+    - Zhang, Yukun
+    - Liu, Bo
+    - Dai, Liyun
+    - Chen, Kang
+    - Cao, Xuelian
+  journal: 2020 IEEE International Conference on Software Architecture (ICSA)
+  date: 2020
+  pages: 135–145
+  doi: 10.1109/ICSA47634.2020.00021

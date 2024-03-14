@@ -185,11 +185,14 @@ The categories are based on #cite(<prescriptive_model_migration>).
 
     "Execution data", // e.g., log files, execution traces
     "Dynamic",
-    [],
+    [
+      @execution_trace_identification
+    ],
   ),
   caption: [#acr("SDLC") artifact categories]
 ) <slr_artifacts>
 
+// Requirements documents and models
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
@@ -199,6 +202,7 @@ Approaches discussed in /* TODO: cite */ use requirements documents and models a
 #cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
 #cite(<design_model_identification>, form: "prose") use schematic design documents in XML format as input for the algorithm.
 
+// Design documents
 Design documents created by software architects are machine-readable representations of the software system.
 They are deliverables produced during the design phase of the software development life cycle. /* TODO: find reference */
 Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
@@ -208,13 +212,18 @@ Domain-driven approaches use domain-specific knowledge to identify microservice 
 #cite(<migrating_legacy_software>, form: "prose") enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
 The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
 
+// Codebase
 A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
 (Static) analysis on the source code of the application can be used to identify microservice candidates.
 Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
 
 For example, #cite(<multiobjective_optimization_decomposition>, form: "prose") consider object-oriented classes as units of business capability.
 
-// TODO: log data
+// Execution
+Finally, data can also be collected during the runtime of the software system.
+Execution data includes log files, execution traces, and performance metrics.
+
+An example of an approach using execution traces as input is described by #cite(<execution_trace_identification>, form: "prose").
 
 === Algorithm
 
@@ -235,6 +244,7 @@ The identified classes of microservice candidate identification algorithms are d
     [
       @multiobjective_optimization_decomposition
       @design_model_identification
+      @execution_trace_identification
     ],
 
     "Machine learning/optimization",
@@ -247,7 +257,8 @@ The identified classes of microservice candidate identification algorithms are d
 // TODO: explanation about clustering
 
 // TODO: explanation about genetic algorithms
+Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite(<design_model_identification>, form: "prose"), #cite(<multiobjective_optimization_decomposition>, form: "prose"), and #cite(<execution_trace_identification>, form: "prose")
 
 // TODO: explanation about machine learning/optimization
-#cite(<design_model_identification>, form: "prose") and #cite(<multiobjective_optimization_decomposition>, form: "prose") use Non-Dominated Sorting Algorithm II (NSGA-II) as multi-objective optimization algorithm to identify microservice candidates.
 
+// TODO: summary/conclusion
