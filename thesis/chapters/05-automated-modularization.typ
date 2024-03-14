@@ -196,7 +196,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
-Approaches discussed in /* TODO: cite */ use requirements documents and models as input for the microservice candidate identification algorithm.
+In many cases, requirements documents and models are no longer available for legacy systems, which makes this approach less suitable for automated microservice identification.
 
 #cite(<ddd_approach_automatic>, form: "prose") use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
@@ -208,6 +208,7 @@ They are deliverables produced during the design phase of the software developme
 Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
 Techniques using design documents either use a domain-driven approach, or a data-driven approach.
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
+Similar to requirements documents and models, design documents are often not available for legacy systems, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
 
 #cite(<migrating_legacy_software>, form: "prose") enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
 The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
