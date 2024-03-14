@@ -46,6 +46,15 @@ systematic_mapping_study_2:
   pages: 137–146
   doi: 10.5220/0005785501370146
 
+project_management:
+  type: book
+  title: Project Management
+  author:
+    - Gupta, Rajeev M.
+  date: 2011
+  publisher: Prentice-Hall of India Pvt.Limited
+  isbn: 978-81-203-4425-9
+
 ## Literature review references
 comparison_static_dynamic_analysis:
   type: proceedings

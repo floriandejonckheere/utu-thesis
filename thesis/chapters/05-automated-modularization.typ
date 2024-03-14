@@ -82,7 +82,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
       - Publications in languages other than English
       - Publications not available in full text
       - Publications using the term "microservice", but not referring to the architectural style
-      - Publications aimed at greenfield development of microservice-based systems
+      - Publications aimed at greenfield #footnote[Development of new software systems lacking constraints imposed by prior work @project_management] or brownfield #footnote[Development of new software systems in the presence of legacy software systems @project_management] development of microservice-based systems
       - Publications published before 2014, as the definition of "microservices" as an architectural style is inconsistent before @systematic_mapping_study_2
       - Publications addressing manual technologies, algorithms, or methods
       - Surveys, opinion pieces, or other non-technical publications
@@ -116,8 +116,8 @@ Using the search strategy outlined in the previous section, we queried the selec
     align: (left, center, center),
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
-    [IEEE Xplore], "337", "2",
-    [*Total*], "337", "2",
+    [IEEE Xplore], "337", "" /* TODO: amount */,
+    [*Total*], "" /* TODO: amount */, "" /* TODO: amount */,
   ),
   caption: "Summary of search results"
 ) <slr_search_results>
@@ -141,12 +141,13 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
 == Report
 
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized two-fold.
+
 First, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
 Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
 Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
 Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid.
 
-Second, we categorized the publications based on the class of the microservice candidate identification algorithm they describe.
+Second, we categorized the publications based on the algorithm, and the type of algorithm used for microservice candidate identification.
 
 === #acr("SDLC") artifact
 
