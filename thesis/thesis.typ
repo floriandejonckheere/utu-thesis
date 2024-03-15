@@ -46,19 +46,21 @@
     DSRP: ("Design Science Research Process"),
     SDLC: ("Software Development Life Cycle"),
   ),
+
+  // Chapters
+  chapters: (
+    "01-introduction",
+    "02-background",
+    "03-related-work",
+    "04-modular-monolith",
+    "05-automated-modularization",
+    "06-proposed-solution",
+    "07-case-study",
+    "08-conclusion",
+  ),
+
+  // Appendix
+  appendix: (
+    "a-examples",
+  ),
 )
-
-#for file in (
-  "01-introduction",
-  "02-background",
-  "03-related-work",
-  "04-modular-monolith",
-  "05-automated-modularization",
-  "06-proposed-solution",
-  "07-case-study",
-  "08-conclusion",
-) {
-  include "chapters/" + file + ".typ"
-
-  pagebreak()
-}

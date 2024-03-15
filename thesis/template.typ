@@ -34,6 +34,12 @@
   // Acronyms
   acronyms: (),
 
+  // Chapters
+  chapters: (),
+
+  // Appendix
+  appendix: (),
+
   // Document contents
   body,
 ) = {
@@ -178,7 +184,12 @@
   show par: set block(spacing: 0.55em)
   show heading: set block(above: 1.4em, below: 1em)
 
-  body
+  // Main document
+  for chapter in chapters {
+    include "chapters/" + chapter + ".typ"
+
+    pagebreak()
+  }
 
   pagebreak()
 
@@ -189,4 +200,24 @@
   set page(footer: [])
 
   bibliography(bibliography-file, style: "ieee")
+
+  // Appendix
+  set heading(numbering: "A", supplement: "Appendix")
+  counter(heading).update(0)
+
+  // Show page number
+  set page(footer: [
+    #align(center,
+      counter(heading).display() + "-" + counter("appendix").display()
+    )
+  ])
+
+  for app in appendix {
+    pagebreak()
+
+    // Reset appendix counter
+    counter("appendix").update(1)
+
+    include "appendices/" + app + ".typ"
+  }
 }
