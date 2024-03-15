@@ -130,8 +130,13 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
     inset: 10pt,
     align: (right, left, left),
     [], [*Type*], [*Publication*],
-    "1", "Proceedings", cite(<comparison_static_dynamic_analysis>, form: "full"),
-    "2", "Proceedings", cite(<extraction_of_microservices>, form: "full"),
+    "1", "Proceedings", cite(<ddd_approach_automatic>, form: "full"),
+    "2", "Proceedings", cite(<problem_frames_approach>, form: "full"),
+    "3", "Proceedings", cite(<migrating_legacy_software>, form: "full"),
+    "4", "Proceedings", cite(<multiobjective_optimization_decomposition>, form: "full"),
+    "5", "Article", cite(<design_model_identification>, form: "full"),
+    "6", "Proceedings", cite(<execution_trace_identification>, form: "full"),
+    "7", "Article", cite(<cromlech_semiautomated_monolith>, form: "full"),
   ),
   caption: [Selected publications]
 ) <slr_publications>
