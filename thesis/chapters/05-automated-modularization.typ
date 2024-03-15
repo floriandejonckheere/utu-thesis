@@ -1,5 +1,7 @@
 #import "@preview/acrostiche:0.3.1": *
 
+#import "/cite.typ": citeauthor
+
 = Automated modularization <automatedmodularization>
 
 // Enumeration of existing automated technologies for modularization of monolith codebases
@@ -15,7 +17,7 @@ The systematic nature of systematic literature reviews reduces bias through a we
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
 
-The literature review was conducted using a three-step protocol as defined by #cite(<systematic_literature_review_guidelines>, form: "author") @systematic_literature_review_guidelines:
+The literature review was conducted using a three-step protocol as defined by #citeauthor(<systematic_literature_review_guidelines>) @systematic_literature_review_guidelines:
 
 #figure(
   table(
@@ -157,7 +159,7 @@ Second, we categorized the publications based on the algorithm, and the type of 
 === #acr("SDLC") artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
-The categories are based on #cite(<prescriptive_model_migration>).
+The categories are based on #citeauthor(<prescriptive_model_migration>).
 
 #figure(
   table(
@@ -204,9 +206,9 @@ They include functional and non-functional requirements, use cases, user stories
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models are no longer available for legacy systems, which makes this approach less suitable for automated microservice identification.
 
-#cite(<ddd_approach_automatic>, form: "prose") use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
-#cite(<problem_frames_approach>, form: "prose") tackle requirements engineering using problem frames.
-#cite(<design_model_identification>, form: "prose") use schematic design documents in XML format as input for the algorithm.
+#citeauthor(<ddd_approach_automatic>) use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+#citeauthor(<problem_frames_approach>) tackle requirements engineering using problem frames.
+#citeauthor(<design_model_identification>) use schematic design documents in XML format as input for the algorithm.
 
 // Design documents
 Design documents created by software architects are machine-readable representations of the software system.
@@ -216,10 +218,10 @@ Techniques using design documents either use a domain-driven approach, or a data
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
 Similar to requirements documents and models, design documents are often not available for legacy systems, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
 
-#cite(<migrating_legacy_software>, form: "prose") enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
+#citeauthor(<migrating_legacy_software>) enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
 The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
 
-#cite(<cromlech_semiautomated_monolith>, form: "prose") takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
+#citeauthor(<cromlech_semiautomated_monolith>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be persuaded to generate different, more efficient decompositions when given domain-driven requirements.
 
@@ -228,16 +230,16 @@ A third category of #acr("SDLC") artifacts is the executable codebase of the sof
 (Static) analysis on the source code of the application can be used to identify microservice candidates.
 Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
 
-For example, #cite(<multiobjective_optimization_decomposition>, form: "prose") consider object-oriented classes as units of business capability, as do #cite(<extraction_of_microservices>, form: "prose").
+For example, #citeauthor(<multiobjective_optimization_decomposition>) consider object-oriented classes as units of business capability, as do #citeauthor(<extraction_of_microservices>).
 The authors of the latter paper remark that increasing the granularity from classes to methods and functions has the potential to improve the quality of the decomposition.
 
-The decomposition process described by #cite(<extraction_of_microservices>, form: "prose") also uses the revision history of the software system to identify suitable microservice candidates.
+The decomposition process described by #citeauthor(<extraction_of_microservices>) also uses the revision history of the software system to identify suitable microservice candidates.
 
 // Execution
 Finally, data can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
 
-An example of an approach using execution traces as input is described by #cite(<execution_trace_identification>, form: "prose").
+An example of an approach using execution traces as input is described by #citeauthor(<execution_trace_identification>).
 Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
 Additionally, various metrics such as processor time and memory usage are collected.
 
@@ -279,12 +281,12 @@ Publications using a clustering approach to identify microservice candidates typ
 The graph in question is then divided into several clusters, each representing a microservice candidate.
 Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm, and agglomerative clustering.
 
-#cite(<extraction_of_microservices>, form: "prose") use Kruskal's algorithm to isolate microservice candidates.
+#citeauthor(<extraction_of_microservices>) use Kruskal's algorithm to isolate microservice candidates.
 
 // TODO: explanation about genetic algorithms
-Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite(<design_model_identification>, form: "prose"), #cite(<multiobjective_optimization_decomposition>, form: "prose"), and #cite(<execution_trace_identification>, form: "prose")
+Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<design_model_identification>), #citeauthor(<multiobjective_optimization_decomposition>), and #citeauthor(<execution_trace_identification>)
 
 // TODO: explanation about machine learning/optimization
-The authors of #cite(<cromlech_semiautomated_monolith>, form: "prose") incorporated a linear optimization solver in their tool to identify microservice candidates.
+The authors of #citeauthor(<cromlech_semiautomated_monolith>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
 // TODO: summary/conclusion
