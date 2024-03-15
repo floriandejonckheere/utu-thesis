@@ -55,9 +55,21 @@
   show par: set block(spacing: 2em)
   show heading: set block(above: 1.4em, below: 1.5em)
 
-  // TODO: count total number of pages and appendix pages
-  let pages = 4
-  let appendix_pages = 4
+  // Count total pages
+  let total_pages = locate(loc => {
+    // Get the page counter at the first bibliography page, then subtract one
+    counter(page)
+      .at(query(bibliography, loc).first().location())
+      .first() - 1
+  })
+
+  // Count total appendix pages
+  let appendix_pages = locate(loc => {
+    // Get the sum of the page counters at the end of the appendix pages (where the <end_of_appendix> metadata is located)
+    query(<end_of_appendix>, loc)
+      .map(l => counter(page).at(l.location()).sum())
+      .sum()
+  })
 
   // Initialize acronyms
   init-acronyms(acronyms)
@@ -112,7 +124,7 @@
   par(
     leading: 0.6em,
   )[
-    #subtitle, #pages p., #appendix_pages app. p. \
+    #subtitle, #total_pages p., #appendix_pages app. p. \
     #department \
     #date
   ]
@@ -191,8 +203,6 @@
     pagebreak()
   }
 
-  pagebreak()
-
   // Bibliography
   set par(first-line-indent: 0em)
 
@@ -219,5 +229,7 @@
     counter(page).update(1)
 
     include "appendices/" + app + ".typ"
+
+    [#metadata <end_of_appendix>]
   }
 }
