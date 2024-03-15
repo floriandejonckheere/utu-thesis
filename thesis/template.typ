@@ -202,13 +202,13 @@
   bibliography(bibliography-file, style: "ieee")
 
   // Appendix
-  set heading(numbering: "A", supplement: "Appendix")
+  set heading(numbering: "A", supplement: "Appendix", outlined: false)
   counter(heading).update(0)
 
   // Show page number
-  set page(footer: [
+  set page(numbering: none, footer: [
     #align(center,
-      counter(heading).display() + "-" + counter("appendix").display()
+      counter(heading).display() + "-" + counter(page).display()
     )
   ])
 
@@ -216,7 +216,7 @@
     pagebreak()
 
     // Reset appendix counter
-    counter("appendix").update(1)
+    counter(page).update(1)
 
     include "appendices/" + app + ".typ"
   }

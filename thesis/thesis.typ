@@ -62,5 +62,6 @@
   // Appendix
   appendix: (
     "a-examples",
+    "b-figures",
   ),
 )
