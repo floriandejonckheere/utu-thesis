@@ -137,6 +137,7 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
     "5", "Article", cite(<design_model_identification>, form: "full"),
     "6", "Proceedings", cite(<execution_trace_identification>, form: "full"),
     "7", "Article", cite(<cromlech_semiautomated_monolith>, form: "full"),
+    "8", "Proceedings", cite(<extraction_of_microservices>, form: "full"),
   ),
   caption: [Selected publications]
 ) <slr_publications>
@@ -185,6 +186,7 @@ The categories are based on #cite(<prescriptive_model_migration>).
     [
       @migrating_legacy_software
       @multiobjective_optimization_decomposition
+      @extraction_of_microservices
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -226,7 +228,10 @@ A third category of #acr("SDLC") artifacts is the executable codebase of the sof
 (Static) analysis on the source code of the application can be used to identify microservice candidates.
 Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
 
-For example, #cite(<multiobjective_optimization_decomposition>, form: "prose") consider object-oriented classes as units of business capability.
+For example, #cite(<multiobjective_optimization_decomposition>, form: "prose") consider object-oriented classes as units of business capability, as do #cite(<extraction_of_microservices>, form: "prose").
+The authors of the latter paper remark that increasing the granularity from classes to methods and functions has the potential to improve the quality of the decomposition.
+
+The decomposition process described by #cite(<extraction_of_microservices>, form: "prose") also uses the revision history of the software system to identify suitable microservice candidates.
 
 // Execution
 Finally, data can also be collected during the runtime of the software system.
@@ -248,7 +253,9 @@ The identified classes of microservice candidate identification algorithms are d
     [*Type*], [*Algorithms*], [*Publications*],
     "Clustering",
     "K-Means, DBSCAN, OPTICS, BIRCH, Agglomerative",
-    [],
+    [
+      @extraction_of_microservices
+    ],
 
     "Genetic algorithms",
     "NSGA-II",
@@ -268,6 +275,11 @@ The identified classes of microservice candidate identification algorithms are d
 ) <slr_algorithms>
 
 // TODO: explanation about clustering
+Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a graph.
+The graph in question is then divided into several clusters, each representing a microservice candidate.
+Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm, and agglomerative clustering.
+
+#cite(<extraction_of_microservices>, form: "prose") use Kruskal's algorithm to isolate microservice candidates.
 
 // TODO: explanation about genetic algorithms
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite(<design_model_identification>, form: "prose"), #cite(<multiobjective_optimization_decomposition>, form: "prose"), and #cite(<execution_trace_identification>, form: "prose")

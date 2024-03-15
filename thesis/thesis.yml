@@ -76,18 +76,6 @@ comparison_static_dynamic_analysis:
   pages: 354–361
   doi: 10.1007/978-3-031-42592-9_25
 
-extraction_of_microservices:
-  type: proceedings
-  title: Extraction of Microservices from Monolithic Software Architectures
-  author:
-    - Mazlami, Genc
-    - Cito, Jürgen
-    - Leitner, Philipp
-  journal: 2017 IEEE International Conference on Web Services (ICWS)
-  date: 2017
-  pages: 524–531
-  doi: 10.1109/ICWS.2017.61
-
 prescriptive_model_migration:
   type: article
   title: A Prescriptive Model for Migration to Microservices Based on SDLC Artifacts
@@ -182,3 +170,15 @@ cromlech_semiautomated_monolith:
   date: 2024
   pages: 1–16
   doi: 10.1109/TSC.2024.3354457
+
+extraction_of_microservices:
+  type: proceedings
+  title: Extraction of Microservices from Monolithic Software Architectures
+  author:
+    - Mazlami, Genc
+    - Cito, Jürgen
+    - Leitner, Philipp
+  journal: 2017 IEEE International Conference on Web Services (ICWS)
+  date: 2017
+  pages: 524–531
+  doi: 10.1109/ICWS.2017.61
