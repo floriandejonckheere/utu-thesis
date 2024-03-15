@@ -44,9 +44,7 @@ Therefore, we believe that there is a need for a systematic literature review ai
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore
-+ ACM Digital Library
 + arXiv
-+ Google scholar
 
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
 The search query was adapted to the specific search syntax of the platform.
