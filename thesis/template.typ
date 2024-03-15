@@ -41,7 +41,7 @@
   set document(author: author, title: title)
   set page(margin: 7em)
   set par(leading: 1.1em, justify: true)
-  set bibliography(full: true, title: [References])
+  set bibliography(full: true, style: "ieee", title: [References])
 
   show par: set block(spacing: 2em)
   show heading: set block(above: 1.4em, below: 1.5em)
@@ -181,5 +181,5 @@
   set par(first-line-indent: 0em)
   show bibliography: pad.with(x: 0.5pt)
 
-  bibliography(bibliography-file, style: "bibliography.csl")
+  bibliography(bibliography-file, style: "ieee")
 }
