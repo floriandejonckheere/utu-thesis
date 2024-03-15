@@ -41,7 +41,10 @@
   set document(author: author, title: title)
   set page(margin: 7em)
   set par(leading: 1.1em, justify: true)
-  set bibliography(full: true, style: "ieee", title: [References])
+  set bibliography(full: true, title: [References])
+
+  // Set page numbering to letters (but hide in footer)
+  set page(numbering: "a", footer: [])
 
   show par: set block(spacing: 2em)
   show heading: set block(above: 1.4em, below: 1.5em)
@@ -122,7 +125,8 @@
   // Table of contents
   set heading(numbering: "1.", supplement: "Chapter")
 
-  set page(numbering: "i")
+  // Set page numbering to Roman numerals (and show in footer)
+  set page(numbering: "i", footer: none)
   counter(page).update(1)
 
   show outline.entry.where(
@@ -165,6 +169,8 @@
 
   // Main document
   set par(justify: true)
+
+  // Set page number to Arabic numerals
   set page(numbering: "1")
   counter(page).update(1)
 
@@ -177,9 +183,10 @@
   pagebreak()
 
   // Bibliography
-  set page(numbering: none)
   set par(first-line-indent: 0em)
-  show bibliography: pad.with(x: 0.5pt)
+
+  // Hide page number
+  set page(footer: [])
 
   bibliography(bibliography-file, style: "ieee")
 }
