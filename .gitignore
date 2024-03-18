@@ -3,3 +3,7 @@
 
 # Vale files
 .vale-styles
+
+# Ruby files
+.ruby-version
+.ruby-gemset
