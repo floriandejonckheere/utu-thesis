@@ -116,8 +116,8 @@ Using the search strategy outlined in the previous section, we queried the selec
     align: (left, center, center),
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
-    [IEEE Xplore], "337", "" /* TODO: amount */,
-    [*Total*], "" /* TODO: amount */, "" /* TODO: amount */,
+    [IEEE Xplore], "337", "48" /* TODO: amount */,
+    [*Total*], "337" /* TODO: amount */, "48" /* TODO: amount */,
   ),
   caption: "Summary of search results"
 ) <slr_search_results>
