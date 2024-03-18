@@ -7,9 +7,9 @@
 
 // Background information about the use case
 
-== Analysis
+== Experimental setup
 
-// Analysis and proposed solution to the problem, design and implementation choices
+// Description of the experimental setup
 
 == Evaluation and results
 
