@@ -101,7 +101,6 @@ The quality of the publication was assessed based on the following criteria:
 - The publication includes a validation phase or case study demonstrating the effectiveness of the approach or technique
 
 This step is necessary to ensure that the selected publications are relevant to the research question and that the results are not biased by low-quality publications.
-In the end, /* TODO: amount */ publications were selected for inclusion in the systematic literature review.
 
 Once a final selection of publications was made, the resulting publications were qualitatively reviewed and categorized based on the type of approach or technique they describe.
 
@@ -121,28 +120,39 @@ Using the search strategy outlined in the previous section, we queried the selec
   ),
   caption: "Summary of search results"
 ) <slr_search_results>
-    
 
 After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ publications for inclusion in the systematic literature review.
-@slr_publications provides a summary of the selected publications.
+Of these publications, /* TODO: amount */ are primary studies, and /* TODO: amount */ are secondary studies.
+The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in /* TODO: amount */ additional publications being included in the systematic literature review.
+@slr_primary_publications lists the selected primary publications, and @slr_secondary_publications the selected secondary publications.
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (auto, auto, auto),
     inset: 10pt,
-    align: (right, left, left, left),
-    [], [*Type*], [*Study*], [*Publication*],
-    "1", "Proceedings", "Primary", cite(<ddd_approach_automatic>, form: "full"),
-    "2", "Proceedings", "Primary", cite(<problem_frames_approach>, form: "full"),
-    "3", "Proceedings", "Primary", cite(<migrating_legacy_software>, form: "full"),
-    "4", "Proceedings", "Primary", cite(<multiobjective_optimization_decomposition>, form: "full"),
-    "5", "Article", "Primary", cite(<design_model_identification>, form: "full"),
-    "6", "Proceedings", "Primary", cite(<execution_trace_identification>, form: "full"),
-    "7", "Article", "Primary", cite(<cromlech_semiautomated_monolith>, form: "full"),
-    "8", "Proceedings", "Primary", cite(<extraction_of_microservices>, form: "full"),
+    align: (right, left, left),
+    [], [*Type*], [*Publication*],
+    "1", "Proceedings", cite(<ddd_approach_automatic>, form: "full"),
+    "2", "Proceedings", cite(<problem_frames_approach>, form: "full"),
+    "3", "Proceedings", cite(<migrating_legacy_software>, form: "full"),
+    "4", "Proceedings", cite(<multiobjective_optimization_decomposition>, form: "full"),
+    "5", "Article", cite(<design_model_identification>, form: "full"),
+    "6", "Proceedings", cite(<execution_trace_identification>, form: "full"),
+    "7", "Article", cite(<cromlech_semiautomated_monolith>, form: "full"),
+    "8", "Proceedings", cite(<extraction_of_microservices>, form: "full"),
   ),
-  caption: [Selected publications]
-) <slr_publications>
+  caption: [Selected publications (primary studies)]
+) <slr_primary_publications>
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    align: (right, left, left),
+    [], [*Type*], [*Publication*],
+  ),
+  caption: [Selected publications (secondary studies)]
+) <slr_secondary_publications>
 
 == Report
 
