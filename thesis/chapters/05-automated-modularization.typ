@@ -128,18 +128,18 @@ After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ 
 
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (auto, auto, auto, auto),
     inset: 10pt,
-    align: (right, left, left),
-    [], [*Type*], [*Publication*],
-    "1", "Proceedings", cite(<ddd_approach_automatic>, form: "full"),
-    "2", "Proceedings", cite(<problem_frames_approach>, form: "full"),
-    "3", "Proceedings", cite(<migrating_legacy_software>, form: "full"),
-    "4", "Proceedings", cite(<multiobjective_optimization_decomposition>, form: "full"),
-    "5", "Article", cite(<design_model_identification>, form: "full"),
-    "6", "Proceedings", cite(<execution_trace_identification>, form: "full"),
-    "7", "Article", cite(<cromlech_semiautomated_monolith>, form: "full"),
-    "8", "Proceedings", cite(<extraction_of_microservices>, form: "full"),
+    align: (right, left, left, left),
+    [], [*Type*], [*Study*], [*Publication*],
+    "1", "Proceedings", "Primary", cite(<ddd_approach_automatic>, form: "full"),
+    "2", "Proceedings", "Primary", cite(<problem_frames_approach>, form: "full"),
+    "3", "Proceedings", "Primary", cite(<migrating_legacy_software>, form: "full"),
+    "4", "Proceedings", "Primary", cite(<multiobjective_optimization_decomposition>, form: "full"),
+    "5", "Article", "Primary", cite(<design_model_identification>, form: "full"),
+    "6", "Proceedings", "Primary", cite(<execution_trace_identification>, form: "full"),
+    "7", "Article", "Primary", cite(<cromlech_semiautomated_monolith>, form: "full"),
+    "8", "Proceedings", "Primary", cite(<extraction_of_microservices>, form: "full"),
   ),
   caption: [Selected publications]
 ) <slr_publications>
