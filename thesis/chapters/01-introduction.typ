@@ -34,6 +34,8 @@ The proposed solution will add value to the field of software engineering, and w
 
 // Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
 
+/* TODO: read "Migrating Legacy Software to Microservices Architecture */
+
 == Methodology
 
 // Explanation of the research methodology used
