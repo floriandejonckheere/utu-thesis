@@ -317,7 +317,7 @@ The authors of #citeauthor(<cromlech_semiautomated_monolith>) incorporated a lin
 === Metrics
 
 The quality metrics used to determine the performance and efficacy of the algorithm are described in @slr_metrics.
-// TODO: some metrics used as objectives, some as quality indicators
+// TODO: focus on evaluation metrics instead of performance metrics used in the algorithms
 
 #figure(
   table(
