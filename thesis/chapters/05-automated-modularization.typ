@@ -254,7 +254,7 @@ The identified classes of microservice candidate identification algorithms are d
     align: (left, left, left),
     [*Type*], [*Algorithms*], [*Publications*],
     "Clustering",
-    "K-Means, DBSCAN, OPTICS, BIRCH, Agglomerative",
+    "K-Means, Kruskal",
     [
       @extraction_of_microservices
     ],
@@ -276,12 +276,15 @@ The identified classes of microservice candidate identification algorithms are d
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
 
-// TODO: explanation about clustering
-Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a graph.
-The graph in question is then divided into several clusters, each representing a microservice candidate.
-Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm, and agglomerative clustering.
+// TODO: explain graphs in mathematical terms
+Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a directed graph.
+The graph exposes the relationship between the classes, modules, or components.
+The nodes of the graph represent the classes, modules, or components, and the edges the function or method calls between them.
+Often the edges are weighted, representing the frequency or cost of the calls.
+Using this information, the graph is then divided into several clusters, each indicating a microservice candidate.
+Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm @algorithm_design, and agglomerative clustering.
 
-#citeauthor(<extraction_of_microservices>) use Kruskal's algorithm to isolate microservice candidates.
+#citeauthor(<extraction_of_microservices>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
 // TODO: explanation about genetic algorithms
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<design_model_identification>), #citeauthor(<multiobjective_optimization_decomposition>), and #citeauthor(<execution_trace_identification>)

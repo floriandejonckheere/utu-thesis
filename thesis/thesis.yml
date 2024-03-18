@@ -63,6 +63,17 @@ software_requirements_specification:
   pages: 1-26
   doi: 10.1109/IEEESTD.1984.119205
 
+algorithm_design:
+  type: book
+  title: Algorithm Design
+  author:
+    - Kleinberg, Jon
+    - Tardos, Éva
+  date: 2006
+  publisher: Pearson Education
+  pages: 142-151
+  isbn: 97-80-321-2953-54
+
 ## Literature review references
 comparison_static_dynamic_analysis:
   type: proceedings
