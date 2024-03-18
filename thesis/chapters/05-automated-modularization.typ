@@ -159,15 +159,17 @@ The secondary studies were used to categorize the selected primary studies (if a
 
 == Report
 
-The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized two-fold.
-// TODO: should be three-fold? (artifact, algorithm, metric)
+The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized in three dimensions.
 
-First, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
+To begin with, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
 Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
 Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
 Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid. /* TODO: is hybrid a separate category? */
 
-Second, we categorized the publications based on the algorithm, and the type of algorithm used for microservice candidate identification.
+Thereafter we categorized the publications based on the algorithm used for microservice candidate identification.
+The algorithms were subdivided into several classes based on the technique.
+
+Ultimately, the publications were also categorized by the quality metrics used to evaluate the performance and efficacy of the algorithm.
 
 === #acr("SDLC") artifact
 
@@ -280,8 +282,8 @@ The identified classes of microservice candidate identification algorithms are d
       @execution_trace_identification
     ],
 
-    "Machine learning/optimization",
-    "Neural networks, Support Vector Machines",
+    "Search-based",
+    "",
     [
       @cromlech_semiautomated_monolith
     ],
@@ -311,4 +313,26 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 // TODO: explanation about machine learning/optimization
 The authors of #citeauthor(<cromlech_semiautomated_monolith>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
+=== Quality metrics
+
+The quality metrics used to determine the performance and efficacy of the algorithm are described in @slr_quality_metrics.
+
+#figure(
+  table(
+    columns: (auto, auto),
+    inset: 10pt,
+    align: (left, left),
+    [*Metric*], [*Publications*],
+    "Cohesion",
+    [
+    ],
+
+    "Coupling",
+    [
+    ],
+  ),
+  caption: [Algorithm quality metrics]
+) <slr_quality_metrics>
+
 // TODO: summary/conclusion
+
