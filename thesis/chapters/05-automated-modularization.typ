@@ -268,25 +268,30 @@ The identified classes of microservice candidate identification algorithms are d
     columns: (auto, auto, auto),
     inset: 10pt,
     align: (left, left, left),
-    [*Type*], [*Algorithms*], [*Publications*],
-    "Clustering",
-    "K-Means, Kruskal",
+    [*Type*], [*Example algorithms*], [*Publications*],
+    "Machine Learning",
+    "K-Means",
     [
-      @extraction_of_microservices
+    ],
+
+    "Minimum Spanning Tree",
+    "Kruskal",
+    [
     ],
 
     "Evolutionary algorithms",
-    "NSGA-II",
+    "NSGA-II, NSGA-III",
     [
-      @multiobjective_optimization_decomposition
-      @design_model_identification
-      @execution_trace_identification
     ],
 
-    "Search-based",
-    "",
+    "Community detection",
+    "Hierarchical clustering, Louvain",
     [
-      @cromlech_semiautomated_monolith
+    ],
+
+    "",
+    "Linear optimization, Affinity Propagation",
+    [
     ],
   ),
   caption: [Microservice identification algorithm]
