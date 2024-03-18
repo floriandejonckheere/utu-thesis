@@ -1,0 +1,74 @@
+---
+design_science_research_methodology:
+  type: article
+  title: A Design Science Research Methodology for Information Systems Research
+  author:
+    - Peffers, Ken
+    - Rothenberger, Marcus
+    - Tuunanen, Tuure
+    - Chatterjee, Samir
+  journal: Journal of Management Information Systems
+  date: 2007
+  issue: 3
+  volume: 24
+  pages: 45–77
+  doi: 10.2753/MIS0742-1222240302
+
+systematic_literature_review_guidelines:
+  type: article
+  title: Guidelines for performing Systematic Literature Reviews in Software Engineering
+  author:
+    - Kitchenham, Barbara
+    - Charters, Stuart
+  date: 2007
+
+project_management:
+  type: book
+  title: Project Management
+  author:
+    - Gupta, Rajeev M.
+  date: 2011
+  publisher: Prentice-Hall of India Pvt.Limited
+  isbn: 978-81-203-4425-9
+
+software_requirements_specification:
+  type: article
+  title: IEEE Guide for Software Requirements Specifications
+  journal: IEEE Std 830-1984
+  date: 1984
+  pages: 1-26
+  doi: 10.1109/IEEESTD.1984.119205
+
+algorithm_design:
+  type: book
+  title: Algorithm Design
+  author:
+    - Kleinberg, Jon
+    - Tardos, Éva
+  date: 2006
+  publisher: Pearson Education
+  pages: 142-151
+  isbn: 97-80-321-2953-54
+
+systematic_mapping_study_1:
+  type: proceedings
+  title: A Systematic Mapping Study in Microservice Architecture
+  author:
+    - Alshuqayran, Nuha
+    - Ali, Nour
+    - Evans, Roger
+  journal: 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA)
+  date: 2016
+  pages: 44–51
+  doi: 10.1109/SOCA.2016.15
+
+systematic_mapping_study_2:
+  type: proceedings
+  title: 'Microservices: A Systematic Mapping Study'
+  author:
+    - Pahl, Claus
+    - Jamshidi, Pooyan
+  journal: Proceedings of the 6th International Conference on Cloud Computing and Services Science
+  date: 2016
+  pages: 137–146
+  doi: 10.5220/0005785501370146

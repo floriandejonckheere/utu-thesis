@@ -23,7 +23,7 @@
   logo-file: none,
 
   // Bibliography
-  bibliography-file: none,
+  bibliographies: none,
 
   // Abstract
   abstract: [],
@@ -209,7 +209,7 @@
   // Hide page number
   set page(footer: [])
 
-  bibliography(bibliography-file, style: "ieee")
+  bibliography(bibliographies.map(b => "bibliography/" + b + ".yml"), style: "ieee")
 
   // Appendix
   set heading(numbering: "A", supplement: "Appendix", outlined: false)

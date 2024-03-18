@@ -20,7 +20,10 @@
   date: datetime.today().display("[month repr:long] [year]"),
 
   // Bibliography
-  bibliography-file: "thesis.yml",
+  bibliographies: (
+    "miscellaneous",
+    "literature-review",
+  ),
 
   // Institution logo (SVG)
   logo-file: "logo-fi.svg",
