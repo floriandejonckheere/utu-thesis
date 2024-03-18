@@ -152,7 +152,7 @@ The publications selected for inclusion in the systematic literature review were
 First, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
 Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
 Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
-Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid.
+Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid. /* TODO: is hybrid a separate category? */
 
 Second, we categorized the publications based on the algorithm, and the type of algorithm used for microservice candidate identification.
 
