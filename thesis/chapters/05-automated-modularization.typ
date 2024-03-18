@@ -11,7 +11,6 @@ In this chapter, we investigate the state of the art in automated technologies f
 Using a systematic literature review, we identified and categorized existing literature regarding automated modularization of monolith codebases.
 We also provided a brief overview of the most relevant approaches and tools.
 
-// TODO: snowballing
 A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @systematic_literature_review_guidelines.
 The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered.
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
@@ -62,6 +61,9 @@ The topics relevant for the search query are:
 - _Technology_: the technologies, algorithms, or methods for modularization.
   #linebreak()
   Keywords: automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis
+
+In addition to search queries on the selected platforms, we used snowballing to identify additional relevant publications.
+Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications.
 
 Based the inclusion/exclusion criteria in @slr_criteria, the results were filtered, and the relevant studies were selected for inclusion in the systematic literature review.
 
@@ -116,6 +118,7 @@ Using the search strategy outlined in the previous section, we queried the selec
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
     [IEEE Xplore], "337", "48" /* TODO: amount */,
+    [Snowballing], "" /* TODO: amount */, "" /* TODO: amount */,
     [*Total*], "337" /* TODO: amount */, "48" /* TODO: amount */,
   ),
   caption: "Summary of search results"
