@@ -17,7 +17,7 @@ The systematic nature of systematic literature reviews reduces bias through a we
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
 
-The literature review was conducted using a three-step protocol as defined by #citeauthor(<systematic_literature_review_guidelines>) @systematic_literature_review_guidelines:
+The literature review was conducted using a three-step protocol as defined by #citeauthor(<systematic_literature_review_guidelines>):
 
 #figure(
   table(
