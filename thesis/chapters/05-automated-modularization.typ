@@ -276,6 +276,7 @@ The identified classes of microservice candidate identification algorithms are d
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
 
+// Clustering
 // TODO: explain graphs in mathematical terms
 Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a directed graph.
 The graph exposes the relationship between the classes, modules, or components.
@@ -286,7 +287,12 @@ Typical clustering algorithms used for this purpose are K-Means, Kruskal's algor
 
 #citeauthor(<extraction_of_microservices>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
-// TODO: explanation about genetic algorithms
+// Genetic algorithms
+The second class of algorithms identified in the literature is genetic algorithms.
+Genetic algorithms, a subset of evolutionary algorithms, are algorithms aimed at solving optimization problems by borrowing techniques from natural selection and genetics.
+Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
+The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
+
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<design_model_identification>), #citeauthor(<multiobjective_optimization_decomposition>), and #citeauthor(<execution_trace_identification>)
 
 // TODO: explanation about machine learning/optimization
