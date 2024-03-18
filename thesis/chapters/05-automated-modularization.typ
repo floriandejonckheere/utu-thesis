@@ -169,7 +169,7 @@ Some publications describe algorithms or techniques that use a combination of #a
 Thereafter we categorized the publications based on the algorithm used for microservice candidate identification.
 The algorithms were subdivided into several classes based on the technique.
 
-Ultimately, the publications were also categorized by the quality metrics used to evaluate the performance and efficacy of the algorithm.
+Ultimately, the publications were also categorized by the metrics discussed.
 
 === #acr("SDLC") artifact
 
@@ -261,6 +261,7 @@ Additionally, various metrics such as processor time and memory usage are collec
 === Algorithm
 
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
+// TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
 #figure(
   table(
@@ -274,7 +275,7 @@ The identified classes of microservice candidate identification algorithms are d
       @extraction_of_microservices
     ],
 
-    "Genetic algorithms",
+    "Evolutionary algorithms",
     "NSGA-II",
     [
       @multiobjective_optimization_decomposition
@@ -302,9 +303,9 @@ Typical clustering algorithms used for this purpose are K-Means, Kruskal's algor
 
 #citeauthor(<extraction_of_microservices>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
-// Genetic algorithms
-The second class of algorithms identified in the literature is genetic algorithms.
-Genetic algorithms, a subset of evolutionary algorithms, are algorithms aimed at solving optimization problems by borrowing techniques from natural selection and genetics.
+// Evolutionary algorithms
+The second class of algorithms identified in the literature is evolutionary algorithms.
+Evolutionary algorithms, and in particular genetic algorithms, are algorithms aimed at solving optimization problems by borrowing techniques from natural selection and genetics.
 Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
@@ -313,9 +314,10 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 // TODO: explanation about machine learning/optimization
 The authors of #citeauthor(<cromlech_semiautomated_monolith>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
-=== Quality metrics
+=== Metrics
 
 The quality metrics used to determine the performance and efficacy of the algorithm are described in @slr_quality_metrics.
+// TODO: some metrics used as objectives, some as quality indicators
 
 #figure(
   table(
@@ -331,8 +333,8 @@ The quality metrics used to determine the performance and efficacy of the algori
     [
     ],
   ),
-  caption: [Algorithm quality metrics]
-) <slr_quality_metrics>
+  caption: [Algorithm metrics]
+) <slr_metrics>
 
 // TODO: summary/conclusion
 
