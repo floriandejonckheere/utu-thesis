@@ -4,3 +4,5 @@
 
 /* TODO: reference ServiceWeaver */
 /* TODO: reference ServiceCutter */
+
+/* TODO: read "Monolith Microservices Identification: Towards An Extensible Multiple Strategy Tool" */
