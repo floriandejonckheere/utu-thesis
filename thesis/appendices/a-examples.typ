@@ -8,7 +8,7 @@ Examples First page
   code(
     lang: "Ruby",
     raw(
-      read("../sources/example.rb").trim("\n"),
+      read("/sources/example.rb").trim("\n"),
       lang: "ruby",
     )
   ),
