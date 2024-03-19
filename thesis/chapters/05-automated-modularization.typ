@@ -243,7 +243,6 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @amiri_2018
       @daoud_etal_2020
       @yang_etal_2022
-      @zhou_xiong_2022
       @saidi_etal_2023
       @li_etal_2023
     ],
@@ -297,26 +296,32 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
-In many cases, requirements documents and models are no longer available for legacy systems or outdated, which makes this approach less suitable for automated microservice identification.
+In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
 
 #citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
 #citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames. /* TODO: find reference */
 
-Some approaches use schematic UML documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
+Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
  The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #citeauthor(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
 // Design documents
 Design documents created by software architects are machine-readable representations of the software system.
-They are deliverables produced during the design phase of the software development life cycle. /* TODO: find reference */
+They describe the software functionalities in detail and are used to guide the implementation of the software system.
 Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
+
 Techniques using design documents either use a domain-driven approach, or a data-driven approach.
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
-Similar to requirements documents and models, design documents are often not available for legacy systems, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
+Similar to requirements documents and models, design documents for legacy systems are often not available or outdated, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
+
+For example, #citeauthor(<al_debagy_martinek_2020>) propose a data-driven method based on the analysis of the software system's external API, specified in the OpenAPI format.
+The method extracts the information from the specification and converts it into vector representation for further processing.
+
+#citeauthor(<zhou_xiong_2022>) use readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
 
 #citeauthor(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
-The tool can be persuaded to generate different, more efficient decompositions when given domain-driven requirements.
+The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
 
 // Codebase
 A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
