@@ -46,14 +46,15 @@
   // Basic properties
   set document(author: author, title: title)
   set page(margin: 7em)
-  set par(leading: 1.1em, justify: true)
+  set par(leading: 1em, justify: true)
   set bibliography(full: true, title: [References])
 
   // Set page numbering to letters (but hide in footer)
   set page(numbering: "a", footer: [])
 
-  show par: set block(spacing: 2em)
-  show heading: set block(above: 1.4em, below: 1.5em)
+  show raw: set text(font: "New Computer Modern Mono")
+  show par: set block(spacing: 1.5em)
+  show heading: set block(above: 2em, below: 1.5em)
 
   // Count total pages
   let total_pages = locate(loc => {
@@ -191,10 +192,6 @@
   // Set page number to Arabic numerals
   set page(numbering: "1")
   counter(page).update(1)
-
-  show raw: set text(font: "New Computer Modern Mono")
-  show par: set block(spacing: 0.55em)
-  show heading: set block(above: 1.4em, below: 1em)
 
   // Main document
   for chapter in chapters {
