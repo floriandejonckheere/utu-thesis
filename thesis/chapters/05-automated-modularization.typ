@@ -70,17 +70,20 @@ The topics relevant for the search query are:
 
 The resulting search query can be expressed as follows:
 
-#code(
-  ```sql
-    (('microservices' IN title OR abstract) OR
-     ('monolith' IN title OR abstract))
-  AND
-    (('decomposition' IN title OR abstract) OR
-     ('identification' IN title OR abstract))
-  AND
-    ('automated' IN title OR abstract)
-  ```
-)
+#figure(
+  code(
+    ```sql
+      (('microservices' IN title OR abstract) OR
+       ('monolith' IN title OR abstract))
+    AND
+      (('decomposition' IN title OR abstract) OR
+       ('identification' IN title OR abstract))
+    AND
+      ('automated' IN title OR abstract)
+    ```
+  ),
+  caption: [Search query]
+) <slr_search_query>
 
 The search query was adapted to the specific search syntax of the platform.
 
