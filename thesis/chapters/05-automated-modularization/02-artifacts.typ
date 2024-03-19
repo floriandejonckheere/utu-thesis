@@ -112,20 +112,29 @@ The source code can be analyzed using static analysis (i.e., without executing t
 Dynamic analysis has the advantage that it can be used if the source code is not available.
 
 Additionally, the revision history of the source code can also be used as source for valuable information about the behaviour of the software system.
-For example, #citeauthor(<mazlami_etal_2017>) use both the structure of the source code, as well as the revision history to drive the identification algorithm.
+For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<lourenco_silva_2023>) use both the structure of the source code, as well as the revision history to drive the identification algorithm.
 /* TODO: reference "CVS release history data for detecting logical couplings" */
 
 #citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
-Several publications @selmadji_etal_2020 @agarwal_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
 #citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
 
 #citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
-A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API specification as entrypoints, and then drilling down into the source code by separating the logic and presentation layer.
+A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API endpoints as entrypoints, and then ascending into the source code by separating the presentation and logic layer.
+Likewise, #citeauthor(<zaragoza_etal_2022>) make a distinction between presentation, business, and data layer.
 
-Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remarks, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
+Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
 #citeauthor(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
+On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but relies on a software architect to decompose the software system on the basis of business capability.
+
+#citeauthor(<romani_etal_2022>) propose a data-centric microservice candidate identification method based on knowledge gathered from the database schema.
+The authors extract table and column methods from the database schema, and use the semantically enriched information as input for the identification algorithm.
+#citeauthor(<hao_etal_2023>) construct access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
+
+Some publications suggest a hybrid approach using both static and dynamic analysis. For instance, #citeauthor(<wu_zhang_2022>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
+The approach proposed by #citeauthor(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
 
 ==== Execution
 
