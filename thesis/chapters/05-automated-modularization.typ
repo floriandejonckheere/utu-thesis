@@ -1,4 +1,5 @@
 #import "@preview/acrostiche:0.3.1": *
+#import "@preview/sourcerer:0.2.1": code
 
 #import "/cite.typ": citeauthor
 
@@ -12,7 +13,7 @@ Using a systematic literature review, we identified and categorized existing lit
 We also provided a brief overview of the most relevant approaches and tools.
 
 A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @systematic_literature_review_guidelines.
-The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered.
+The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered /* TODO: reference */.
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
 
@@ -45,10 +46,8 @@ Therefore, we believe that there is a need for a systematic literature review ai
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore
-+ arXiv
 
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
-The search query was adapted to the specific search syntax of the platform.
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
 The topics relevant for the search query are:
 
@@ -62,8 +61,24 @@ The topics relevant for the search query are:
   #linebreak()
   Keywords: automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis
 
+The resulting search query can be expressed as follows:
+
+#code(
+  ```sql
+    (('microservices' IN title OR abstract) OR
+     ('monolith' IN title OR abstract))
+  AND
+    (('decomposition' IN title OR abstract) OR
+     ('identification' IN title OR abstract))
+  AND
+    ('automated' IN title OR abstract)
+  ```
+)
+
+The search query was adapted to the specific search syntax of the platform.
+
 In addition to search queries on the selected platforms, we used snowballing to identify additional relevant publications.
-Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications.
+Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications /* TODO: reference */.
 
 Based the inclusion/exclusion criteria in @slr_criteria, the results were filtered, and the relevant studies were selected for inclusion in the systematic literature review.
 
