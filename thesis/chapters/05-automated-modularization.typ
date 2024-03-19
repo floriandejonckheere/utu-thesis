@@ -329,6 +329,7 @@ The tool can be prompted to generate different, more efficient decompositions wh
 
 A third category of #acr("SDLC") artifacts is the executable code of the software system.
 This can be the source code of the software system, or a binary distribution (e.g. a JAR file).
+For example, the implementation in @agarwal_etal_2021 accepts either source code or compiled binary code for analysis.
 
 As the source code of the software system is the most detailed representation of how the software system works, it is most often used as input for the microservice candidate identification algorithm.
 The source code can be analyzed using static analysis (i.e., without executing the software system), dynamic analysis (i.e., during the execution of the software system or test suite), or a combination of both.
@@ -341,12 +342,14 @@ For example, #citeauthor(<mazlami_etal_2017>) use both the structure of the sour
 #citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
-Several publications @selmadji_etal_2020 /* TODO */ construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Several publications @selmadji_etal_2020 @agarwal_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+#citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
 
-@bandara_perera_2020 map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
+#citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
+A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API specification as entrypoints, and then drilling down into the source code by separating the logic and presentation layer.
 
 Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remarks, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
-@carvalho_etal_2020 use a more granular approach, identifying dependencies between methods in the source code.
+#citeauthor(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
 
 ==== Execution
 
