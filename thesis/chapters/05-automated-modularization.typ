@@ -174,7 +174,6 @@ Ultimately, the publications were also categorized by the metrics discussed.
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
 The categories are based on #citeauthor(<bajaj_etal_2021>).
 
-#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -311,7 +310,6 @@ Additionally, various metrics such as processor time and memory usage are collec
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
 // TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
-#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -422,7 +420,6 @@ The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimi
 The quality metrics used to determine the performance and efficacy of the algorithm are described in @slr_metrics.
 // TODO: focus on evaluation metrics instead of performance metrics used in the algorithms
 
-#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto),
