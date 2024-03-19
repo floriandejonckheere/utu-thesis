@@ -222,7 +222,8 @@ The algorithms were subdivided into several classes based on the technique.
 
 Ultimately, the publications were also categorized by the metrics discussed.
 
-=== #acr("SDLC") artifact
+// FIXME: #acr does not render in the PDF index
+=== SDLC artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
 The categories are based on #citeauthor(<bajaj_etal_2021>).
@@ -286,7 +287,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @hao_etal_2023
     ],
   ),
-  caption: [#acr("SDLC") artifact categories]
+  caption: [SDLC artifact categories]
 ) <slr_artifacts>
 
 // Requirements documents and models
