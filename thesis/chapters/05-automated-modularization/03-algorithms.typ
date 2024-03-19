@@ -109,5 +109,3 @@ The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimi
 ==== Other algorithms
 
 // TODO
-
-#pagebreak()

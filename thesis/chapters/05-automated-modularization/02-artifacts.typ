@@ -154,5 +154,3 @@ For instance, #citeauthor(<wu_zhang_2022>) and #citeauthor(<carvalho_etal_2020>)
 The approach proposed by #citeauthor(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
 
 #citeauthor(<hao_etal_2023>) use both static and dynamic analysis, albeit aimed at the database schema and database calls, respectively.
-
-#pagebreak()
