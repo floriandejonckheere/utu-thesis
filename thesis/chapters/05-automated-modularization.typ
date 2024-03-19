@@ -332,8 +332,44 @@ The quality metrics used to determine the performance and efficacy of the algori
     "Coupling",
     [
     ],
+
+    "Complexity",
+    [
+    ],
+
+    "CPU usage",
+    [
+    ],
+
+    "Memory usage",
+    [
+    ],
+
+    "Network overhead",
+    [
+    ],
+
+    "Modularity",
+    [
+    ],
+
+    "Instability",
+    [
+    ],
+
+    "Similarity",
+    [
+    ],
+
+    "Precision/recall",
+    [
+    ],
+
+    "Other metrics", // Team size Reduction, Average Domain Redundancy, Dedication Score, Matching Degree, Autonomy
+    [
+    ],
   ),
-  caption: [Algorithm metrics]
+  caption: [Evaluation metrics]
 ) <slr_metrics>
 
 // TODO: summary/conclusion
