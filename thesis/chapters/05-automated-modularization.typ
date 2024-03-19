@@ -165,7 +165,7 @@ The secondary studies were used to categorize the selected primary studies (if a
     "3", "Proceedings", cite(<kamimura_etal_2018>, form: "full"),
     "4", "Proceedings", cite(<amiri_2018>, form: "full"),
     "5", "Proceedings", cite(<zhang_etal_2020>, form: "full"),
-    "6", "Proceedings", cite(<al-debagy_martinek_2020>, form: "full"),
+    "6", "Proceedings", cite(<al_debagy_martinek_2020>, form: "full"),
     "7", "Proceedings", cite(<selmadji_etal_2020>, form: "full"),
     "8", "Proceedings", cite(<carvalho_etal_2020>, form: "full"),
     "9", "Proceedings", cite(<eyitemi_reiff-marganiec_2020>, form: "full"),
@@ -236,31 +236,54 @@ The categories are based on #citeauthor(<prescriptive_model_migration>).
     "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
     "Static",
     [
-      @ddd_approach_automatic
-      @problem_frames_approach
-      @migrating_legacy_software
+      @amiri_2018
+      @daoud_etal_2020
+      @yang_etal_2022
+      @zhou_xiong_2022
+      @saidi_etal_2023
+      @li_etal_2023
     ],
 
     "Design documents", // e.g., API specifications, UML, ERD
     "Static",
     [
-      @migrating_legacy_software
-      @design_model_identification
-      @cromlech_semiautomated_monolith
+      @al_debagy_martinek_2020
+      @zhou_xiong_2022
+      @quattrocchi_etal_2024
     ],
 
     "Codebase", // e.g., source code, revision history
     "Static",
     [
-      @migrating_legacy_software
-      @multiobjective_optimization_decomposition
-      @extraction_of_microservices
+      @escobar_etal_2016
+      @mazlami_etal_2017
+      @kamimura_etal_2018
+      @selmadji_etal_2020
+      @carvalho_etal_2020
+      @bandara_perera_2020
+      @filippone_etal_2021
+      @agarwal_etal_2021
+      @kinoshita_kanuka_2022
+      @wu_zhang_2022
+      @zaragoza_etal_2022
+      @santos_silva_2022
+      @romani_etal_2022
+      @filippone_etal_2023
+      @lourenco_silva_2023
+      @hao_etal_2023
     ],
 
     "Execution data", // e.g., log files, execution traces
     "Dynamic",
     [
-      @execution_trace_identification
+      @zhang_etal_2020
+      @carvalho_etal_2020
+      @eyitemi_reiff-marganiec_2020
+      @jin_etal_2021
+      @wu_zhang_2022
+      @ma_etal_2022
+      @lourenco_silva_2023
+      @hao_etal_2023
     ],
   ),
   caption: [#acr("SDLC") artifact categories]
