@@ -329,6 +329,8 @@ An example of an approach using execution traces as input is described by #citea
 Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
 Additionally, various metrics such as processor time and memory usage are collected.
 
+#pagebreak()
+
 === Algorithm
 
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
@@ -341,23 +343,76 @@ The identified classes of microservice candidate identification algorithms are d
     align: (left, left, left),
     [*Type*], [*Example algorithms*], [*Publications*],
     "Machine Learning",
-    "K-Means, Hierarchical Agglomerative Clustering, Affinity Propagation, SArF",
+    "K-Means, Hierarchical Agglomerative Clustering, Affinity Propagation",
     [
+      // K-means
+      @romani_etal_2022
+      @wu_zhang_2022
+      @hao_etal_2023
+      @saidi_etal_2023
+
+      // Hierarchical Agglomerative clustering
+      @bandara_perera_2020
+      @daoud_etal_2020
+
+      // Affinity Propagation
+      @al_debagy_martinek_2020
+
+      // Hierarchical clustering
+      @santos_silva_2022
+      @zaragoza_etal_2022
+      @lourenco_silva_2023
+      @ma_etal_2022
     ],
 
     "Graph algorithms",
     "Kruskal, Louvain method",
     [
+      // Kruskal
+      @yang_etal_2022
+      @mazlami_etal_2017
+
+      // Louvain method
+      @filippone_etal_2023
     ],
 
     "Evolutionary algorithms",
     "NSGA-II, NSGA-III",
     [
+      // NSGA-II
+      @zhang_etal_2020
+      @jin_etal_2021
+      @zhou_xiong_2022
+      @li_etal_2023
+      @kinoshita_kanuka_2022
+
+      // NSGA-III
+      @carvalho_etal_2020
+
+      // Other
+      @amiri_2018
     ],
 
-    "Optimization algorithms",
-    "Linear optimization",
+    "Other",
+    "Linear optimization, custom algorithms",
     [
+      // Linear
+      @selmadji_etal_2020
+      @filippone_etal_2021
+      @quattrocchi_etal_2024
+
+      // Custom
+      @kamimura_etal_2018
+      @escobar_etal_2016
+
+      // Seed expension
+      @agarwal_etal_2021
+
+      // Rule-based
+      @eyitemi_reiff-marganiec_2020
+
+      // Customizable
+      @lopes_silva_2023
     ],
   ),
   caption: [Microservice identification algorithm]
@@ -384,6 +439,8 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 
 // TODO: explanation about machine learning/optimization
 The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
+
+#pagebreak()
 
 === Metrics
 
