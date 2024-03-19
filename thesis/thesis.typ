@@ -50,6 +50,7 @@
     DSRM: ("Design Science Research Methodology"),
     DSRP: ("Design Science Research Process"),
     SDLC: ("Software Development Life Cycle"),
+    SLR: ("Systematic Literature Review"),
   ),
 
   // Chapters
@@ -66,7 +67,7 @@
 
   // Appendix
   appendix: (
-    "a-examples",
-    "b-figures",
+    "a-literature-review",
+    "b-examples",
   ),
 )
