@@ -154,7 +154,7 @@
     strong(it)
   }
 
-  outline(indent: auto)
+  outline(indent: auto, depth: 3)
 
   pagebreak()
 
