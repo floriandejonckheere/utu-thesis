@@ -48,7 +48,7 @@
   set page(margin: 7em)
   set block(spacing: 1.5em)
   set par(leading: 1em, justify: true)
-  set text(font: "New Computer Modern Mono")
+  set text(font: "New Computer Modern Mono", lang: "en", region: "FI", hyphenate: false)
 
   set bibliography(full: true, title: [References])
 
