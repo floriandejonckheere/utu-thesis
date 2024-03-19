@@ -46,14 +46,16 @@
   // Basic properties
   set document(author: author, title: title)
   set page(margin: 7em)
+  set block(spacing: 1.5em)
   set par(leading: 1em, justify: true)
+  set text(font: "New Computer Modern Mono")
+
   set bibliography(full: true, title: [References])
 
   // Set page numbering to letters (but hide in footer)
   set page(numbering: "a", footer: [])
 
-  show raw: set text(font: "New Computer Modern Mono")
-  show par: set block(spacing: 1.5em)
+  // Add some space above and below headings
   show heading: set block(above: 2em, below: 1.5em)
 
   // Count total pages
@@ -119,7 +121,7 @@
   ]
 
   smallcaps(author)
-  ": "
+  [: ]
   title
 
   par(
@@ -201,7 +203,6 @@
   }
 
   // Bibliography
-  set par(first-line-indent: 0em)
 
   // Hide page number
   set page(footer: [])
