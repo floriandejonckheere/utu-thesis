@@ -522,13 +522,7 @@ The quality metrics used to determine the performance and efficacy of the algori
       @lourenco_silva_2023
     ],
 
-    "CPU usage",
-    [
-      @zhang_etal_2020
-      @quattrocchi_etal_2024
-    ],
-
-    "Memory usage",
+    "CPU and memory usage",
     [
       @zhang_etal_2020
       @quattrocchi_etal_2024
