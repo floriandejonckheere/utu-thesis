@@ -213,7 +213,7 @@ The secondary studies were used to categorize the selected primary studies (if a
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized in three dimensions.
 
 To begin with, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
-Each artifact category has an associated collection type, either static, dynamic, or hybrid. @prescriptive_model_migration.
+Each artifact category has an associated collection type, either static, dynamic, or hybrid. @bajaj_etal_2021.
 Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
 Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid. /* TODO: is hybrid a separate category? */
 
@@ -225,7 +225,7 @@ Ultimately, the publications were also categorized by the metrics discussed.
 === #acr("SDLC") artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
-The categories are based on #citeauthor(<prescriptive_model_migration>).
+The categories are based on #citeauthor(<bajaj_etal_2021>).
 
 #figure(
   table(
@@ -295,9 +295,9 @@ They include functional and non-functional requirements, use cases, user stories
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models are no longer available for legacy systems, which makes this approach less suitable for automated microservice identification.
 
-#citeauthor(<ddd_approach_automatic>) use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
-#citeauthor(<problem_frames_approach>) tackle requirements engineering using problem frames.
-#citeauthor(<design_model_identification>) use schematic design documents in XML format as input for the algorithm.
+#citeauthor(<saidi_etal_2023>) use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames.
+#citeauthor(<zhou_xiong_2022>) use schematic design documents in XML format as input for the algorithm.
 
 // Design documents
 Design documents created by software architects are machine-readable representations of the software system.
@@ -307,10 +307,7 @@ Techniques using design documents either use a domain-driven approach, or a data
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
 Similar to requirements documents and models, design documents are often not available for legacy systems, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
 
-#citeauthor(<migrating_legacy_software>) enumerate three decomposition methods depending on the requirements of the business: (1) code based, (2) business domain based, and (3) data storage based.
-The authors suggest a code based approach as suitable for automatic decomposition of monoliths.
-
-#citeauthor(<cromlech_semiautomated_monolith>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
+#citeauthor(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be persuaded to generate different, more efficient decompositions when given domain-driven requirements.
 
@@ -319,16 +316,16 @@ A third category of #acr("SDLC") artifacts is the executable codebase of the sof
 (Static) analysis on the source code of the application can be used to identify microservice candidates.
 Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
 
-For example, #citeauthor(<multiobjective_optimization_decomposition>) consider object-oriented classes as units of business capability, as do #citeauthor(<extraction_of_microservices>).
+For example, #citeauthor(<kinoshita_kanuka_2022>) consider object-oriented classes as units of business capability, as do #citeauthor(<mazlami_etal_2017>).
 The authors of the latter paper remark that increasing the granularity from classes to methods and functions has the potential to improve the quality of the decomposition.
 
-The decomposition process described by #citeauthor(<extraction_of_microservices>) also uses the revision history of the software system to identify suitable microservice candidates.
+The decomposition process described by #citeauthor(<mazlami_etal_2017>) also uses the revision history of the software system to identify suitable microservice candidates.
 
 // Execution
 Finally, data can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
 
-An example of an approach using execution traces as input is described by #citeauthor(<execution_trace_identification>).
+An example of an approach using execution traces as input is described by #citeauthor(<jin_etal_2021>).
 Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
 Additionally, various metrics such as processor time and memory usage are collected.
 
@@ -375,7 +372,7 @@ Often the edges are weighted, representing the frequency or cost of the calls.
 Using this information, the graph is then divided into several clusters, each indicating a microservice candidate.
 Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm @algorithm_design, and agglomerative clustering.
 
-#citeauthor(<extraction_of_microservices>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
+#citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
 // Evolutionary algorithms
 The second class of algorithms identified in the literature is evolutionary algorithms.
@@ -383,10 +380,10 @@ Evolutionary algorithms, and in particular genetic algorithms, are algorithms ai
 Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
-Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<design_model_identification>), #citeauthor(<multiobjective_optimization_decomposition>), and #citeauthor(<execution_trace_identification>)
+Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), and #citeauthor(<zhang_etal_2020>)
 
 // TODO: explanation about machine learning/optimization
-The authors of #citeauthor(<cromlech_semiautomated_monolith>) incorporated a linear optimization solver in their tool to identify microservice candidates.
+The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
 === Metrics
 
