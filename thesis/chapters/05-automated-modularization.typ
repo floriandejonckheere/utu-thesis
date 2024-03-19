@@ -168,7 +168,7 @@ The secondary studies were used to categorize the selected primary studies (if a
     "6", "Proceedings", cite(<al_debagy_martinek_2020>, form: "full"),
     "7", "Proceedings", cite(<selmadji_etal_2020>, form: "full"),
     "8", "Proceedings", cite(<carvalho_etal_2020>, form: "full"),
-    "9", "Proceedings", cite(<eyitemi_reiff-marganiec_2020>, form: "full"),
+    "9", "Proceedings", cite(<eyitemi_reiff_marganiec_2020>, form: "full"),
     "10", "Proceedings", cite(<daoud_etal_2020>, form: "full"),
     "11", "Proceedings", cite(<bandara_perera_2020>, form: "full"),
     "12", "Proceedings", cite(<filippone_etal_2021>, form: "full"),
@@ -278,7 +278,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
     [
       @zhang_etal_2020
       @carvalho_etal_2020
-      @eyitemi_reiff-marganiec_2020
+      @eyitemi_reiff_marganiec_2020
       @jin_etal_2021
       @wu_zhang_2022
       @ma_etal_2022
@@ -400,7 +400,7 @@ The identified classes of microservice candidate identification algorithms are d
       // Seed expension
       @agarwal_etal_2021
       // Rule-based
-      @eyitemi_reiff-marganiec_2020
+      @eyitemi_reiff_marganiec_2020
       // Customizable
       @lopes_silva_2023
     ],
@@ -445,46 +445,114 @@ The quality metrics used to determine the performance and efficacy of the algori
     [*Metric*], [*Publications*],
     "Cohesion",
     [
+      @amiri_2018
+      @zhang_etal_2020
+      @al_debagy_martinek_2020
+      @selmadji_etal_2020
+      @carvalho_etal_2020
+      @daoud_etal_2020
+      @bandara_perera_2020
+      @filippone_etal_2021
+      @jin_etal_2021
+      @zhou_xiong_2022
+      @zaragoza_etal_2022
+      @santos_silva_2022
+      @filippone_etal_2023
+      @lourenco_silva_2023
+      @li_etal_2023
+      @quattrocchi_etal_2024
     ],
 
     "Coupling",
     [
-    ],
-
-    "Complexity",
-    [
-    ],
-
-    "CPU usage",
-    [
-    ],
-
-    "Memory usage",
-    [
+      @amiri_2018
+      @zhang_etal_2020
+      @selmadji_etal_2020
+      @carvalho_etal_2020
+      @daoud_etal_2020
+      @bandara_perera_2020
+      @filippone_etal_2021
+      @agarwal_etal_2021
+      @jin_etal_2021
+      @zhou_xiong_2022
+      @santos_silva_2022
+      @filippone_etal_2023
+      @li_etal_2023
     ],
 
     "Network overhead",
     [
+      @carvalho_etal_2020
+      @filippone_etal_2021
+      @zhou_xiong_2022
+      @quattrocchi_etal_2024
+    ],
+
+    "Complexity",
+    [
+      @al_debagy_martinek_2020
+      @santos_silva_2022
+      @lourenco_silva_2023
+    ],
+
+    "CPU usage",
+    [
+      @zhang_etal_2020
+      @quattrocchi_etal_2024
+    ],
+
+    "Memory usage",
+    [
+      @zhang_etal_2020
+      @quattrocchi_etal_2024
     ],
 
     "Modularity",
     [
-    ],
-
-    "Instability",
-    [
+      @bandara_perera_2020
+      @li_etal_2023
     ],
 
     "Similarity",
     [
+      @ma_etal_2022
+      @lourenco_silva_2023
     ],
 
-    "Precision/recall",
+    "Other metrics",
     [
+      // Instability
+      @li_etal_2023
+      // Precision/recall
+      @filippone_etal_2023
+      // Team Size Reduction
+      @mazlami_etal_2017
+      @lourenco_silva_2023
+      // Average Domain Redundancy
+      @mazlami_etal_2017
+      // Dedication Score
+      @kamimura_etal_2018
+      // Matching Degree
+      @hao_etal_2023
+      // Data Autonomy
+      @selmadji_etal_2020
+      // Functional Autonomy
+      @filippone_etal_2023
+      // Correlation
+      @yang_etal_2022
+      @wu_zhang_2022
+      // Dependency
+      @saidi_etal_2023
+      // Manual
+      @kinoshita_kanuka_2022
+      // Customizable
+      @lopes_silva_2023
     ],
 
-    "Other metrics", // Team size Reduction, Average Domain Redundancy, Dedication Score, Matching Degree, Autonomy
+    "No metrics",
     [
+      @eyitemi_reiff_marganiec_2020
+      @romani_etal_2022
     ],
   ),
   caption: [Evaluation metrics]
