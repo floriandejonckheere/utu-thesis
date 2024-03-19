@@ -1,0 +1,139 @@
+#import "@preview/acrostiche:0.3.1": *
+
+#import "/cite.typ": citeauthor
+
+=== SDLC artifact
+
+The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
+The categories are based on #citeauthor(<bajaj_etal_2021>).
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    align: (left, left, left),
+    [*Artifact*], [*Type*], [*Publications*],
+    "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
+    "Static",
+    [
+      @amiri_2018
+      @daoud_etal_2020
+      @yang_etal_2022
+      @saidi_etal_2023
+      @li_etal_2023
+    ],
+
+    "Design documents", // e.g., API specifications, UML, ERD
+    "Static",
+    [
+      @al_debagy_martinek_2020
+      @zhou_xiong_2022
+      @quattrocchi_etal_2024
+    ],
+
+    "Code", // e.g., source code, revision history
+    "Static",
+    [
+      @escobar_etal_2016
+      @mazlami_etal_2017
+      @kamimura_etal_2018
+      @selmadji_etal_2020
+      @carvalho_etal_2020
+      @bandara_perera_2020
+      @filippone_etal_2021
+      @agarwal_etal_2021
+      @kinoshita_kanuka_2022
+      @wu_zhang_2022
+      @zaragoza_etal_2022
+      @santos_silva_2022
+      @romani_etal_2022
+      @filippone_etal_2023
+      @lourenco_silva_2023
+      @hao_etal_2023
+    ],
+
+    "Execution data", // e.g., log files, execution traces
+    "Dynamic",
+    [
+      @zhang_etal_2020
+      @carvalho_etal_2020
+      @eyitemi_reiff_marganiec_2020
+      @jin_etal_2021
+      @wu_zhang_2022
+      @ma_etal_2022
+      @lourenco_silva_2023
+      @hao_etal_2023
+    ],
+  ),
+  caption: [SDLC artifact categories]
+) <slr_artifacts>
+
+==== Requirements documents and models
+
+In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
+They include functional and non-functional requirements, use cases, user stories, and business process models.
+Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
+In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
+
+#citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
+#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames. /* TODO: find reference */
+
+Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
+ The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+#citeauthor(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
+
+==== Design documents
+
+Design documents created by software architects are machine-readable representations of the software system.
+They describe the software functionalities in detail and are used to guide the implementation of the software system.
+Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
+
+Techniques using design documents either use a domain-driven approach, or a data-driven approach.
+Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
+Similar to requirements documents and models, design documents for legacy systems are often not available or outdated, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
+
+For example, #citeauthor(<al_debagy_martinek_2020>) propose a data-driven method based on the analysis of the software system's external API, specified in the OpenAPI format.
+The method extracts the information from the specification and converts it into vector representation for further processing.
+
+#citeauthor(<zhou_xiong_2022>) use readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
+
+#citeauthor(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
+Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
+The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
+
+==== Code
+
+A third category of #acr("SDLC") artifacts is the executable code of the software system.
+This can be the source code of the software system, or a binary distribution (e.g. a JAR file).
+For example, the implementation in @agarwal_etal_2021 accepts either source code or compiled binary code for analysis.
+
+As the source code of the software system is the most detailed representation of how the software system works, it is most often used as input for the microservice candidate identification algorithm.
+The source code can be analyzed using static analysis (i.e., without executing the software system), dynamic analysis (i.e., during the execution of the software system or test suite), or a combination of both.
+Dynamic analysis has the advantage that it can be used if the source code is not available.
+
+Additionally, the revision history of the source code can also be used as source for valuable information about the behaviour of the software system.
+For example, #citeauthor(<mazlami_etal_2017>) use both the structure of the source code, as well as the revision history to drive the identification algorithm.
+/* TODO: reference "CVS release history data for detecting logical couplings" */
+
+#citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
+#citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
+
+Several publications @selmadji_etal_2020 @agarwal_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+#citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
+
+#citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
+A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API specification as entrypoints, and then drilling down into the source code by separating the logic and presentation layer.
+
+Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remarks, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
+#citeauthor(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
+
+==== Execution
+
+Finally, data can also be collected during the runtime of the software system.
+Execution data includes log files, execution traces, and performance metrics.
+
+An example of an approach using execution traces as input is described by #citeauthor(<jin_etal_2021>).
+Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
+Additionally, various metrics such as processor time and memory usage are collected.
+
+#pagebreak()
