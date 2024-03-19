@@ -3,6 +3,14 @@
 
 #import "/cite.typ": citeauthor
 
+#let publications = (
+  platforms: (
+    ieee: (total: 337, selected: 34, primary: 29, secondary: 5),
+    arxiv: (total: none, selected: none, primary: none, secondary: none),
+  ),
+  snowballing: none,
+)
+
 = Automated modularization <automatedmodularization>
 
 // Enumeration of existing automated technologies for modularization of monolith codebases
@@ -46,6 +54,7 @@ Therefore, we believe that there is a need for a systematic literature review ai
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore
++ arXiv
 
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
@@ -123,7 +132,7 @@ Once a final selection of publications was made, the resulting publications were
 
 == Conduct
 
-Using the search strategy outlined in the previous section, we queried the selected platforms and found a total of /* TODO: amount */ publications.
+Using the search strategy outlined in the previous section, we queried the selected platforms and found a total of #publications.platforms.values().map(p => p.total).sum() publications.
 
 #figure(
   table(
@@ -132,16 +141,17 @@ Using the search strategy outlined in the previous section, we queried the selec
     align: (left, center, center),
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
-    [IEEE Xplore], "337", "34",
-    [Snowballing], "" /* TODO: amount */, "" /* TODO: amount */,
-    [*Total*], "337" /* TODO: amount */, "34" /* TODO: amount */,
+    [IEEE Xplore], [#publications.platforms.ieee.total], [#publications.platforms.ieee.selected],
+    [arXiv], [#publications.platforms.arxiv.total], [#publications.platforms.arxiv.selected],
+    [Snowballing], none, [#publications.snowballing],
+    [*Total*], [#publications.platforms.values().map(p => p.total).sum()], [#(publications.platforms.values().map(p => p.selected).sum() + publications.snowballing)],
   ),
   caption: "Summary of search results"
 ) <slr_search_results>
 
-After applying the inclusion/exclusion criteria, we selected /* TODO: amount */ publications for inclusion in the systematic literature review.
-Of these publications, /* TODO: amount */ are primary studies, and /* TODO: amount */ are secondary studies.
-The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in /* TODO: amount */ additional publications being included in the systematic literature review.
+After applying the inclusion/exclusion criteria, we selected #publications.platforms.values().map(p => p.selected).sum() publications for inclusion in the systematic literature review.
+Of these publications, #publications.platforms.values().map(p => p.primary).sum() are primary studies, and #publications.platforms.values().map(p => p.secondary).sum() are secondary studies.
+The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
 @slr_primary_publications lists the selected primary publications, and @slr_secondary_publications the selected secondary publications.
 
 #figure(
