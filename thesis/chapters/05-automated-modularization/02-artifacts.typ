@@ -133,16 +133,26 @@ On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically ext
 The authors extract table and column methods from the database schema, and use the semantically enriched information as input for the identification algorithm.
 #citeauthor(<hao_etal_2023>) construct access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
 
-Some publications suggest a hybrid approach using both static and dynamic analysis. For instance, #citeauthor(<wu_zhang_2022>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
-The approach proposed by #citeauthor(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
-
 ==== Execution
 
-Finally, data can also be collected during the runtime of the software system.
+As a last category, information about the behaviour of the system can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
+This category is often combined with static analysis on source code, as the execution data can provide additional information to the identification algorithm.
+In dynamic languages such as Java, dynamic analysis can trace access patterns that static analysis cannot (e.g., due to late binding and polymorphism).
+Additionally, execution data can be collected when the source code of the software system is not available.
 
-An example of an approach using execution traces as input is described by #citeauthor(<jin_etal_2021>).
-Using software probes inserted into the bytecode of software systems, the authors are able to monitor execution paths.
-Additionally, various metrics such as processor time and memory usage are collected.
+Examples of approaches using execution traces are #citeauthor(<jin_etal_2021>) and #citeauthor(<eyitemi_reiff_marganiec_2020>).
+Using software probes inserted into the bytecode of respectively Java and .NET applications, the authors are able to monitor execution paths.
+Other publications relying solely on execution traces are #citeauthor(<jin_etal_2021>).
+
+#citeauthor(<ma_etal_2022>) use a data-centric approach based on the analysis of database access requests.
+
+==== Hybrid approach
+
+Some publications suggest a hybrid approach using both static and dynamic analysis.
+For instance, #citeauthor(<wu_zhang_2022>) and #citeauthor(<carvalho_etal_2020>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
+The approach proposed by #citeauthor(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
+
+#citeauthor(<hao_etal_2023>) use both static and dynamic analysis, albeit aimed at the database schema and database calls, respectively.
 
 #pagebreak()
