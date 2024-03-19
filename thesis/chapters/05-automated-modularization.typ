@@ -6,7 +6,6 @@
 #let publications = (
   platforms: (
     ieee: (total: 337, selected: 34, primary: 29, secondary: 5),
-    arxiv: (total: none, selected: none, primary: none, secondary: none),
   ),
   snowballing: none,
 )
@@ -53,8 +52,7 @@ However, in these studies the techniques described are mainly used as an aid for
 Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding fully automated techniques for modularization of monolith codebases.
 
 As a search strategy, the following platforms were queried for relevant publications:
-+ IEEE Xplore
-+ arXiv
++ IEEE Xplore#footnote[https://ieeexplore.ieee.org/]
 
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
@@ -142,7 +140,6 @@ Using the search strategy outlined in the previous section, we queried the selec
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
     [IEEE Xplore], [#publications.platforms.ieee.total], [#publications.platforms.ieee.selected],
-    [arXiv], [#publications.platforms.arxiv.total], [#publications.platforms.arxiv.selected],
     [Snowballing], none, [#publications.snowballing],
     [*Total*], [#publications.platforms.values().map(p => p.total).sum()], [#(publications.platforms.values().map(p => p.selected).sum() + publications.snowballing)],
   ),
