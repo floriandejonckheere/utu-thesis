@@ -296,12 +296,15 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
 // Requirements documents and models
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
-Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the data to extract the relevant information, as the documents are not intended to be directly read by a machine. /* TODO: find reference */
-In many cases, requirements documents and models are no longer available for legacy systems, which makes this approach less suitable for automated microservice identification.
+Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
+In many cases, requirements documents and models are no longer available for legacy systems or outdated, which makes this approach less suitable for automated microservice identification.
 
-#citeauthor(<saidi_etal_2023>) use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
-#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames.
-#citeauthor(<zhou_xiong_2022>) use schematic design documents in XML format as input for the algorithm.
+#citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
+#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames. /* TODO: find reference */
+
+Some approaches use schematic UML documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
+ The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+#citeauthor(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
 // Design documents
 Design documents created by software architects are machine-readable representations of the software system.

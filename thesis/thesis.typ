@@ -45,6 +45,7 @@
 
   // Acronyms
   acronyms: (
+    BPMN: ("Business Process Model and Notation"),
     DSRM: ("Design Science Research Methodology"),
     DSRP: ("Design Science Research Process"),
     SDLC: ("Software Development Life Cycle"),
