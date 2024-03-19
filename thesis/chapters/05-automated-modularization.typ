@@ -255,7 +255,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @quattrocchi_etal_2024
     ],
 
-    "Codebase", // e.g., source code, revision history
+    "Code", // e.g., source code, revision history
     "Static",
     [
       @escobar_etal_2016
@@ -325,16 +325,28 @@ The method extracts the information from the specification and converts it into 
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
 
-==== Codebase
+==== Code
 
-A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
-(Static) analysis on the source code of the application can be used to identify microservice candidates.
-Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
+A third category of #acr("SDLC") artifacts is the executable code of the software system.
+This can be the source code of the software system, or a binary distribution (e.g. a JAR file).
 
-For example, #citeauthor(<kinoshita_kanuka_2022>) consider object-oriented classes as units of business capability, as do #citeauthor(<mazlami_etal_2017>).
-The authors of the latter paper remark that increasing the granularity from classes to methods and functions has the potential to improve the quality of the decomposition.
+As the source code of the software system is the most detailed representation of how the software system works, it is most often used as input for the microservice candidate identification algorithm.
+The source code can be analyzed using static analysis (i.e., without executing the software system), dynamic analysis (i.e., during the execution of the software system or test suite), or a combination of both.
+Dynamic analysis has the advantage that it can be used if the source code is not available.
 
-The decomposition process described by #citeauthor(<mazlami_etal_2017>) also uses the revision history of the software system to identify suitable microservice candidates.
+Additionally, the revision history of the source code can also be used as source for valuable information about the behaviour of the software system.
+For example, #citeauthor(<mazlami_etal_2017>) use both the structure of the source code, as well as the revision history to drive the identification algorithm.
+/* TODO: reference "CVS release history data for detecting logical couplings" */
+
+#citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
+#citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
+
+Several publications @selmadji_etal_2020 /* TODO */ construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+
+@bandara_perera_2020 map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
+
+Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remarks, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
+@carvalho_etal_2020 use a more granular approach, identifying dependencies between methods in the source code.
 
 ==== Execution
 
