@@ -270,12 +270,12 @@ The identified classes of microservice candidate identification algorithms are d
     align: (left, left, left),
     [*Type*], [*Example algorithms*], [*Publications*],
     "Machine Learning",
-    "K-Means",
+    "K-Means, Hierarchical Agglomerative Clustering, Affinity Propagation, SArF",
     [
     ],
 
-    "Minimum Spanning Tree",
-    "Kruskal",
+    "Graph algorithms",
+    "Kruskal, Louvain method",
     [
     ],
 
@@ -284,13 +284,8 @@ The identified classes of microservice candidate identification algorithms are d
     [
     ],
 
-    "Community detection",
-    "Hierarchical clustering, Louvain",
-    [
-    ],
-
-    "",
-    "Linear optimization, Affinity Propagation",
+    "Optimization algorithms",
+    "Linear optimization",
     [
     ],
   ),
