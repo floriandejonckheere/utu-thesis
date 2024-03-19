@@ -65,7 +65,7 @@ The six steps of the process are:
 #v(2em)
 
 #figure(
-  include("../figures/dsrp.typ"),
+  include("/figures/dsrp.typ"),
   caption: [Design Science Research Process (DSRP)]
 ) <dsrp>
 
