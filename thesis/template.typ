@@ -227,6 +227,6 @@
 
     include "appendices/" + app + ".typ"
 
-    [#metadata <end_of_appendix>]
+    [#metadata("") <end_of_appendix>]
   }
 }
