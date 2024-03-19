@@ -404,7 +404,7 @@ The identified classes of microservice candidate identification algorithms are d
       @filippone_etal_2023
     ],
 
-    "Other",
+    "Other algorithms",
     "Linear optimization, custom algorithms",
     [
       // Linear
@@ -425,7 +425,8 @@ The identified classes of microservice candidate identification algorithms are d
   caption: [Microservice identification algorithm]
 ) <slr_algorithms>
 
-// Clustering
+==== Machine Learning
+
 // TODO: explain graphs in mathematical terms
 Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a directed graph.
 The graph exposes the relationship between the classes, modules, or components.
@@ -436,7 +437,8 @@ Typical clustering algorithms used for this purpose are K-Means, Kruskal's algor
 
 #citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
-// Evolutionary algorithms
+==== Evolutionary algorithms
+
 The second class of algorithms identified in the literature is evolutionary algorithms.
 Evolutionary algorithms, and in particular genetic algorithms, are algorithms aimed at solving optimization problems by borrowing techniques from natural selection and genetics.
 Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
@@ -444,8 +446,15 @@ The process is then repeated until certain criteria are met, for example a maxim
 
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), and #citeauthor(<zhang_etal_2020>)
 
-// TODO: explanation about machine learning/optimization
 The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
+
+==== Graph algorithms
+
+// TODO
+
+==== Other algorithms
+
+// TODO
 
 #pagebreak()
 
