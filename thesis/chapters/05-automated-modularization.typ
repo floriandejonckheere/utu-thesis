@@ -292,7 +292,8 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
   caption: [SDLC artifact categories]
 ) <slr_artifacts>
 
-// Requirements documents and models
+==== Requirements documents and models
+
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
@@ -305,7 +306,8 @@ Some approaches use schematic requirements documents in XML format as input for 
  The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #citeauthor(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
-// Design documents
+==== Design documents
+
 Design documents created by software architects are machine-readable representations of the software system.
 They describe the software functionalities in detail and are used to guide the implementation of the software system.
 Design documents include API specifications, UML diagrams (such as class diagrams and sequence diagrams), and entity-relationship diagrams.
@@ -323,7 +325,8 @@ The method extracts the information from the specification and converts it into 
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
 
-// Codebase
+==== Codebase
+
 A third category of #acr("SDLC") artifacts is the executable codebase of the software system.
 (Static) analysis on the source code of the application can be used to identify microservice candidates.
 Furthermore, also indirect information, such as revision history, can be used to complement the decomposition approach.
@@ -333,7 +336,8 @@ The authors of the latter paper remark that increasing the granularity from clas
 
 The decomposition process described by #citeauthor(<mazlami_etal_2017>) also uses the revision history of the software system to identify suitable microservice candidates.
 
-// Execution
+==== Execution
+
 Finally, data can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
 
