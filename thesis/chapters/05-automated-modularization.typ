@@ -154,6 +154,7 @@ Of these publications, #publications.platforms.values().map(p => p.primary).sum(
 The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
 @slr_primary_publications lists the selected primary publications, and @slr_secondary_publications the selected secondary publications.
 
+#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -193,6 +194,7 @@ The secondary studies were used to categorize the selected primary studies (if a
   caption: [Selected publications (primary studies)]
 ) <slr_primary_publications>
 
+#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -228,6 +230,7 @@ Ultimately, the publications were also categorized by the metrics discussed.
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
 The categories are based on #citeauthor(<bajaj_etal_2021>).
 
+#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -337,6 +340,7 @@ Additionally, various metrics such as processor time and memory usage are collec
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
 // TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
+#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -438,6 +442,7 @@ The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimi
 The quality metrics used to determine the performance and efficacy of the algorithm are described in @slr_metrics.
 // TODO: focus on evaluation metrics instead of performance metrics used in the algorithms
 
+#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (auto, auto),
@@ -556,7 +561,7 @@ The quality metrics used to determine the performance and efficacy of the algori
       @romani_etal_2022
     ],
   ),
-  caption: [Evaluation metrics]
+  caption: [Quality metrics]
 ) <slr_metrics>
 
 // TODO: summary/conclusion
