@@ -585,5 +585,35 @@ The quality metrics used to determine the performance and efficacy of the algori
   caption: [Quality metrics]
 ) <slr_metrics>
 
+==== Cohesion and coupling
+
+// TODO
+
+==== Network overhead
+
+// TODO
+
+==== Complexity
+
+// TODO
+
+==== CPU and memory usage
+
+// TODO
+
+==== Modularity
+
+// TODO
+
+==== Similarity
+
+// TODO
+
+==== Other metrics
+
+// TODO
+
+=== Conclusion
+
 // TODO: summary/conclusion
 
