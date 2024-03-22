@@ -24,6 +24,12 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 == Decomposition
 
-== Analysis
+// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
+
+// Decide on top-down or bottom-up approach and motivate choice
+// Top-down: start with one big package, then progressively split up into smaller packages
+// Bottom-up: start with small packages (every class is a package), then progressively merge into bigger packages
 
 // Application is not stateful (or negligible), so no database dependencies
+
+== Analysis
