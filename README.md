@@ -10,8 +10,11 @@ The documents are typeset using the [Typst](https://typst.app/home) typesetting 
 # Enter the directory
 cd thesis
 
-# Build document
+# Build document once
 make
+
+# Or, build document and watch for changes
+make watch
 
 # Remove intermediary generated files
 make clean
