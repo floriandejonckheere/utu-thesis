@@ -54,6 +54,9 @@ Therefore, we believe that there is a need for a systematic literature review ai
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore#footnote[https://ieeexplore.ieee.org/]
 
+The platforms were selected based on their academic relevance, as they contain a large number of publications in the field of software engineering.
+Furthermore, the platforms also contain only peer-reviewed publications, which ensures a certain level of quality in the publications.
+
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
 The topics relevant for the search query are:
