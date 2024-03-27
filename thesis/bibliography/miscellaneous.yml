@@ -88,3 +88,68 @@ abdellatif_etal_2021:
   date: 2021
   pages: 110868
   doi: 10.1016/j.jss.2020.110868
+
+briand_etal_1996:
+  type: article
+  title: Property-Based Software Engineering Measurement
+  author:
+    - Briand, L.C.
+    - Morasca, S.
+    - Basili, V.R.
+  date: 1996
+  pages: 68–86
+  url:
+    value: http://ieeexplore.ieee.org/document/481535/
+    date: 2024-03-27
+  serial-number:
+    doi: 10.1109/32.481535
+    issn: '00985589'
+  parent:
+    type: periodical
+    title: IEEE Transactions on Software Engineering
+    issue: 1
+    volume: 22
+
+parnas_1972:
+  type: article
+  title: On the Criteria To Be Used in Decomposing Systems into Modules
+  author: Parnas, D L
+  date: 1972
+  parent:
+    type: periodical
+    issue: 12
+    volume: 15
+
+mitchell_etal_2001:
+  type: article
+  title: An Architecture for Distributing the Computation of Software Clustering Algorithms
+  author:
+    - Mitchell, B.
+    - Traverso, M.
+    - Mancoridis, S.
+  date: 2001
+  page-range: 181–190
+  url:
+    value: http://ieeexplore.ieee.org/document/948427/
+    date: 2024-03-27
+  serial-number:
+    doi: 10.1109/WICSA.2001.948427
+    isbn: 978-0-7695-1360-7
+  parent:
+    - type: proceedings
+      title: Proceedings {Working IEEE}/{IFIP Conference} on {Software Architecture}
+      publisher: IEEE Comput. Soc
+      location: Amsterdam, Netherlands
+    - type: conference
+      title: Working {IEEE}/{IFIP Conference} on {Software Architecture}
+
+eder_etal_1995:
+  type: article
+  title: Coupling and Cohesion in Object-Oriented Systems
+  author:
+    - Eder, Johann
+    - Kappel, Gerti
+    - Schre, Michael
+  date: 1995
+  parent:
+    type: periodical

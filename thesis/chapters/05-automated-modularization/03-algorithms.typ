@@ -98,14 +98,17 @@ Evolutionary algorithms, and in particular genetic algorithms, are algorithms ai
 Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
-Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), and #citeauthor(<zhang_etal_2020>)
+Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), and #citeauthor(<zhang_etal_2020>).
+#citeauthor(<carvalho_etal_2020>) use the next generation of NSGA, NSGA-III, in order to find a solution for the problem.
 
-The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
+#citeauthor(<amiri_2018>) relies on a genetic algorithm using Turbo-MQ @mitchell_etal_2001 as fitness function.
 
 ==== Graph algorithms
 
 // TODO
 
 ==== Other algorithms
+
+The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
 // TODO
