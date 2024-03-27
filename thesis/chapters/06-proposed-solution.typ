@@ -21,7 +21,7 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // Collection strategies
 // - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
 // - Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests (@carvalho_etal_2020)
-// - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor
+// - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor (@lourenco_silva_2023)
 //      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
 == Decomposition

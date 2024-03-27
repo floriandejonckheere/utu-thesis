@@ -89,6 +89,10 @@ Often the edges are weighted, representing the frequency or cost of the calls.
 Using this information, the graph is then divided into several clusters, each indicating a microservice candidate.
 Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm @algorithm_design, and agglomerative clustering.
 
+#citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
+
+A hierarchical clustering approach is used by #citeauthor(<lourenco_silva_2023>) based on similarity between domain entities accesses and development history of source code files.
+
 #citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
 ==== Evolutionary algorithms

@@ -139,6 +139,14 @@ The authors then define internal coupling as the number of direct method calls b
 Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 
+Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
+If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
+Coupling is defined as the percentage of the entities exposed by a microservice candidate that are accessed by other microservice candidates.
+
+#citeauthor(<al_debagy_martinek_2020>) use the inverse of cohesion as a metric, named lack of cohesion (LCOM).
+It is calculated by the number of times a microservice uses a method from another microservice, divided by the number of operations multiplied by the number of unique parameters.
+This metric quantifies how the operations in a service are related to each other in terms of functionality.
+
 // TODO: more examples
 
 ==== Network overhead
@@ -149,11 +157,15 @@ The network overhead is the extra cost of this communication, and many authors c
 #citeauthor(<filippone_etal_2021>) and others @carvalho_etal_2020 @zhou_xiong_2022 calculate the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
 #citeauthor(<carvalho_etal_2020>) also includes the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between services (for example, TCP headers, HTTP headers, etc.).
 
-// TODO: more examples
-
 ==== Complexity
 
-// TODO
+The complexity of a microservice candidate is another metric that can impact the quality of the microservice decomposition.
+#citeauthor(<al_debagy_martinek_2020>) defines complexity based on Number of Operations, a metric that uses Weighted Methods per Class (WMC), summing the number of methods in a class.
+
+#citeauthor(<santos_silva_2022>) define the complexity metric in terms of the functionality redesign effort, rather than the complexity of the microservice candidates.
+The metric is associated with the cognitive load of the software architect when considering a migration from monolith to microservice.
+
+In another publication by the same co-author, #citeauthor(<lourenco_silva_2023>) define complexity as the effort required to perform the decomposition, and expand the concept to uniform complexity, which is calculated by dividing the complexity of a decomposition by the maximum possible complexity.
 
 ==== CPU and memory usage
 
@@ -169,7 +181,8 @@ The network overhead is the extra cost of this communication, and many authors c
 
 ==== Other metrics
 
-// TODO
+#citeauthor(<lourenco_silva_2023>) introduce the concept of Team Size Reduction (TSR) which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.
+A Team Size Reduction value of 1 indicates that the microservices architecture has the same number of authors as the monolith, while a value less than 1 indicates a reduction in the number of authors.
 
 #citeauthor(<carvalho_etal_2020>) propose a metric called reuse, which measures the reusability of a microservice.
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.

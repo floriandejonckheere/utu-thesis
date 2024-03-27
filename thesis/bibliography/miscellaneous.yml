@@ -153,3 +153,20 @@ eder_etal_1995:
   date: 1995
   parent:
     type: periodical
+
+frey_dueck_2007:
+  type: article
+  title: Clustering by Passing Messages Between Data Points
+  author:
+    - Frey, Brendan J.
+    - Dueck, Delbert
+  date: 2007
+  pages: 972–976
+  url: https://www.science.org/doi/abs/10.1126/science.1136800
+  serial-number:
+    doi: 10.1126/science.1136800
+  parent:
+    type: periodical
+    title: Science
+    issue: 5814
+    volume: 315
