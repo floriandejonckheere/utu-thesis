@@ -18,9 +18,11 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 == Collection
 
-// Static analysis of code base (because no requirements or design documents)
-// Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests
-// Version history (because strong culture of code ownership), but only from specific commits (because Link v5 refactor)
+// Collection strategies
+// - Static analysis of code base (because no requirements or design documents)
+// - Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests
+// - Version history (because strong culture of code ownership), but only from specific commits (because Link v5 refactor)
+//      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
 == Decomposition
 
@@ -31,5 +33,10 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // Bottom-up: start with small packages (every class is a package), then progressively merge into bigger packages
 
 // Application is not stateful (or negligible), so no database dependencies
+
+// Strategies:
+// - Logical coupling: classes that are often changed together are likely to be part of the same microservice
+// - Semantic coupling: classes that are often mentioned together in documentation are likely to be part of the same microservice
+// - Contributor coupling: classes that are often changed by the same developer are likely to be part of the same microservice
 
 == Analysis
