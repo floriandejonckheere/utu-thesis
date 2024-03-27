@@ -14,14 +14,6 @@ design_science_research_methodology:
   pages: 45–77
   doi: 10.2753/MIS0742-1222240302
 
-systematic_literature_review_guidelines:
-  type: article
-  title: Guidelines for performing Systematic Literature Reviews in Software Engineering
-  author:
-    - Kitchenham, Barbara
-    - Charters, Stuart
-  date: 2007
-
 project_management:
   type: book
   title: Project Management
@@ -72,6 +64,14 @@ systematic_mapping_study_2:
   date: 2016
   pages: 137–146
   doi: 10.5220/0005785501370146
+
+kitchenham_charters_2007:
+  type: article
+  title: Guidelines for performing Systematic Literature Reviews in Software Engineering
+  author:
+    - Kitchenham, Barbara
+    - Charters, Stuart
+  date: 2007
 
 abdellatif_etal_2021:
   type: article
