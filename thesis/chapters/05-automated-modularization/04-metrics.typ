@@ -133,14 +133,25 @@ Throughout the years, many definitions of cohesion and coupling have been propos
 For example, #citeauthor(<briand_etal_1996>) define cohesion as the tightness with which related program features are grouped together, and coupling as the amount of relationships between the elements belonging to different modules of a system.
 
 The publications in this review use different definitions for cohesion and coupling, and different methods of calculating them.
-For example, #citeauthor(<selmadji_etal_2020>) define internal cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
+For example, #citeauthor(<selmadji_etal_2020>) define (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
 The authors then define internal coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-==== Complexity
+Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
+The total coupling of the solution is the sum of the coupling of all microservices.
 
-// TODO
+// TODO: more examples
 
 ==== Network overhead
+
+Microservices are distributed systems, and communication between services is done over a network.
+The network overhead is the extra cost of this communication, and many authors consider it an important metric to consider when designing a microservice architecture.
+
+#citeauthor(<filippone_etal_2021>) and others @carvalho_etal_2020 @zhou_xiong_2022 calculate the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
+#citeauthor(<carvalho_etal_2020>) also includes the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between services (for example, TCP headers, HTTP headers, etc.).
+
+// TODO: more examples
+
+==== Complexity
 
 // TODO
 
@@ -157,6 +168,13 @@ The authors then define internal coupling as the number of direct method calls b
 // TODO
 
 ==== Other metrics
+
+// TODO
+
+#citeauthor(<carvalho_etal_2020>) propose a metric called reuse, which measures the reusability of a microservice.
+Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
+
+==== No metrics
 
 Finally, some of the publications publications, do not mention any quality metrics.
 This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>) and #citeauthor(<romani_etal_2022>).

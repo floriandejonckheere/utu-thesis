@@ -49,4 +49,5 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 // Cohesion: number of static calls between methods within microservice boundary over all possible existing static calls (@carvalho_etal_2020)
 // Coupling: sum of static calls from within microservice boundary to methods outside (@carvalho_etal_2020)
+// Network overhead: size of primitive types in method calls over microservice boundaries (@carvalho_etal_2020, @filippone_etal_2021)
 // Modularization: user provides set of labels (features), algorithm labels vertices (@carvalho_etal_2020)
