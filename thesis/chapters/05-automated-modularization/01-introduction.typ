@@ -104,7 +104,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
     "Inclusion",
     [
       - Title, abstract or keywords include the search terms
-      - Conference papers, research articles, blog posts, or other publications
+      - Conference papers, research articles, blog posts, or other peer-reviewed publications
       - Publications addressing (semi-)automated technologies, algorithms, or methods
     ],
     "Exclusion",
