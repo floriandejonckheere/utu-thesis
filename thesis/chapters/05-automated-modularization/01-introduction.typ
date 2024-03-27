@@ -157,6 +157,9 @@ Of these publications, #publications.platforms.values().map(p => p.primary).sum(
 The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
+From the selected publications, we extracted relevant information, such as the type of approach or technique described, the algorithms used, and the metrics discussed.
+As #citeauthor(<kitchenham_charters_2007>) suggest for systematic literature reviews done by single researchers, the data extraction was validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
+
 == Report
 
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized in three dimensions.
