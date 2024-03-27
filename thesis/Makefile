@@ -2,14 +2,14 @@ all: thesis.pdf
 
 .PHONY:
 
-thesis.pdf: thesis.typ chapters/*.typ
+thesis.pdf: thesis.typ template.typ chapters/*.typ appendices.typ bibliography/*.yml
 	typst compile thesis.typ
 
 watch:
 	typst watch thesis.typ
 
 clean:
-	rm -f *.pdf chapters/*.pdf
+	rm -f **/*.pdf
 
 %.pdf: %.typ template.typ
 	typst compile $<
