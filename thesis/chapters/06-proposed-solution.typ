@@ -19,9 +19,9 @@ Then, we propose a microservice decomposition approach using the three-step proc
 == Collection
 
 // Collection strategies
-// - Static analysis of code base (because no requirements or design documents)
-// - Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests
-// - Version history (because strong culture of code ownership), but only from specific commits (because Link v5 refactor)
+// - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
+// - Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests (@carvalho_etal_2020)
+// - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor
 //      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
 == Decomposition
@@ -39,4 +39,14 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - Semantic coupling: classes that are often mentioned together in documentation are likely to be part of the same microservice
 // - Contributor coupling: classes that are often changed by the same developer are likely to be part of the same microservice
 
+// Algorithms:
+// - NSGA-II
+// - NSGA-III (@carvalho_etal_2020)
+
 == Analysis
+
+// Metrics: cohesion, coupling
+
+// Cohesion: number of static calls between methods within microservice boundary over all possible existing static calls (@carvalho_etal_2020)
+// Coupling: sum of static calls from within microservice boundary to methods outside (@carvalho_etal_2020)
+// Modularization: user provides set of labels (features), algorithm labels vertices (@carvalho_etal_2020)
