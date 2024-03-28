@@ -181,8 +181,10 @@ In another publication by the same co-author, #citeauthor(<lourenco_silva_2023>)
 
 ==== Other metrics
 
-#citeauthor(<lourenco_silva_2023>) introduce the concept of Team Size Reduction (TSR) which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.
+#citeauthor(<lourenco_silva_2023>) introduce the concept of Team Size Reduction (TSR), which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.
 A Team Size Reduction value of 1 indicates that the microservices architecture has the same number of authors as the monolith, while a value less than 1 indicates a reduction in the number of authors.
+#citeauthor(<mazlami_etal_2017>) make use of the TSR metric, as well as the Average Domain Redundancy (ADR) metric, which represents the amount of domain-specific duplication or redundancy between the microservices.
+The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 indicates that all microservices are redundant.
 
 #citeauthor(<carvalho_etal_2020>) propose a metric called reuse, which measures the reusability of a microservice.
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.

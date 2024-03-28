@@ -108,13 +108,19 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 
 ==== Graph algorithms
 
-// TODO
+Another common approach to identify microservice candidates is to use classical algorithms from graph theory.
 
-#citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
+For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<yang_etal_2022>) use Kruskal's algorithm @algorithm_design to partition the graph into connected clusters.
+Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
+
+#citeauthor(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
+The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
 
 ==== Other algorithms
-// TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
+// TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
+
+#citeauthor(<filippone_etal_2023>) use a combinatorial optimization algorithm on the results of the Louvain community detection algorithm to find the optimal combination of microservices.
 
 // TODO

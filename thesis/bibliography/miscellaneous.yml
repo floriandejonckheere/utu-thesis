@@ -170,3 +170,23 @@ frey_dueck_2007:
     title: Science
     issue: 5814
     volume: 315
+
+blondel_etal_2008:
+  type: article
+  title: Fast unfolding of communities in large networks
+  author:
+    - Blondel, Vincent D
+    - Guillaume, Jean-Loup
+    - Lambiotte, Renaud
+    - Lefebvre, Etienne
+  date: 2008
+  pages: P10008
+  url: https://dx.doi.org/10.1088/1742-5468/2008/10/P10008
+  serial-number:
+    doi: 10.1088/1742-5468/2008/10/P10008
+  parent:
+    type: periodical
+    title: 'Journal of Statistical Mechanics: Theory and Experiment'
+    publisher: ''
+    issue: 10
+    volume: 2008
