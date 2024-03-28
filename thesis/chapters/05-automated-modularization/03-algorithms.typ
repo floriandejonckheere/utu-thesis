@@ -91,6 +91,8 @@ The first class of algorithms identified in the literature is clustering algorit
 Clustering algorithms are unsupervised machine learning algorithms that aim to find an optimal partitioning of the graph.
 Typical clustering algorithms used for this purpose are K-Means clustering and agglomerative clustering.
 
+Examples of publications using K-Means clustering to identify microservice candidates are #citeauthor(<saidi_etal_2023>).
+
 #citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
 A hierarchical clustering approach is used by #citeauthor(<lourenco_silva_2023>) based on similarity between domain entities accesses and development history of source code files.
 

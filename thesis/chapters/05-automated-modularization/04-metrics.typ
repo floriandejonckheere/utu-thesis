@@ -108,8 +108,6 @@ Some of the algorithms require the use of a specific metric to guide the process
       @wu_zhang_2022
       // Dependency
       @saidi_etal_2023
-      // Manual
-      @kinoshita_kanuka_2022
       // Customizable
       @lopes_silva_2023
     ],
@@ -118,6 +116,8 @@ Some of the algorithms require the use of a specific metric to guide the process
     [
       @eyitemi_reiff_marganiec_2020
       @romani_etal_2022
+      // Manual
+      @kinoshita_kanuka_2022
     ],
   ),
   caption: [Quality metrics]
@@ -189,7 +189,14 @@ The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 i
 #citeauthor(<carvalho_etal_2020>) propose a metric called reuse, which measures the reusability of a microservice.
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
 
+#citeauthor(<saidi_etal_2023>) use the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
+
+The correlation metric is used by #citeauthor(<yang_etal_2022>) and indicates the degree of correlation between the microservices.
+The authors calculate the correlation in two ways: the number of co-occurrence of the problem domain, and the adjacency relationship between problem domains.
+
 ==== No metrics
 
 Finally, some of the publications publications, do not mention any quality metrics.
 This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>) and #citeauthor(<romani_etal_2022>).
+
+The evaluation method by #citeauthor(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the software architect's judgement to choose a qualitative decomposition.

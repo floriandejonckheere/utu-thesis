@@ -190,3 +190,14 @@ blondel_etal_2008:
     publisher: ''
     issue: 10
     volume: 2008
+
+jackson_2000:
+  type: book
+  title: 'Problem frames: analyzing and structuring software development problems'
+  author: Jackson, Michael
+  date: 2000
+  publisher: Addison-Wesley Longman Publishing Co., Inc.
+  location: USA
+  serial-number:
+    isbn: 020159627X
+

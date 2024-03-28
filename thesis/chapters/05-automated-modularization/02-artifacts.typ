@@ -76,7 +76,8 @@ Approaches using requirements documents and models as input for the microservice
 In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
 
 #citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
-#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames. /* TODO: find reference */
+#citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
+Problem frames are a requirements engineering method, which emphasizes the integration of real-world elements into the software system @yang_etal_2022.
 
 Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
  The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
@@ -127,7 +128,7 @@ Likewise, #citeauthor(<zaragoza_etal_2022>) make a distinction between presentat
 
 Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
 #citeauthor(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
-On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but relies on a software architect to decompose the software system on the basis of business capability.
+On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but rely on a software architect to decompose the software system on the basis of business capability.
 
 #citeauthor(<romani_etal_2022>) propose a data-centric microservice candidate identification method based on knowledge gathered from the database schema.
 The authors extract table and column methods from the database schema, and use the semantically enriched information as input for the identification algorithm.
