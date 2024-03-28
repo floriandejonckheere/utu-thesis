@@ -120,9 +120,13 @@ The Louvain method is a greedy optimization algorithm that aims to extract non-o
 
 ==== Other algorithms
 
+Other publications using algorithms that do not fit into one of the previous categories are grouped under the "Other algorithms" category.
+
 // TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
-The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 
-#citeauthor(<filippone_etal_2023>) use a combinatorial optimization algorithm on the results of the Louvain community detection algorithm to find the optimal combination of microservices.
+For example, the authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a Mixed Integer Linear Programming (MILP) solver in their solution.
+The MILP solver is used to find a solution for an optimization problem that decomposes the software system into microservices, based on the placement of operations and data entities according to the users' needs.
 
-// TODO
+The approach taken by #citeauthor(<kamimura_etal_2018>) is to use a custom clustering algorithm named SArF, that aims at identifying software subsystems without the need for human intervention.
+
+//#citeauthor(<lopes_silva_2023>) propose a customizable approach to microservice identification, where the user can define the criteria for the identification process.

@@ -147,8 +147,6 @@ Coupling is defined as the percentage of the entities exposed by a microservice 
 It is calculated by the number of times a microservice uses a method from another microservice, divided by the number of operations multiplied by the number of unique parameters.
 This metric quantifies how the operations in a service are related to each other in terms of functionality.
 
-// TODO: more examples
-
 ==== Network overhead
 
 Microservices are distributed systems, and communication between services is done over a network.
@@ -156,6 +154,9 @@ The network overhead is the extra cost of this communication, and many authors c
 
 #citeauthor(<filippone_etal_2021>) and others @carvalho_etal_2020 @zhou_xiong_2022 calculate the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
 #citeauthor(<carvalho_etal_2020>) also includes the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between services (for example, TCP headers, HTTP headers, etc.).
+
+#citeauthor(<quattrocchi_etal_2024>) measure network overhead as part of their operational cost metric.
+The metric also includes data management costs (CPU and memory).
 
 ==== Complexity
 
@@ -172,6 +173,8 @@ In another publication by the same co-author, #citeauthor(<lourenco_silva_2023>)
 A non-functional metric that is considered by some authors is the CPU and/or memory usage of the microservices.
 #citeauthor(<zhang_etal_2020>) use this metric to evaluate the quality of the microservice decomposition, by predicting the average CPU and memory usage of the microservices.
 The prediction is made based on performance logs collected by executing the monolith application.
+
+#citeauthor(<quattrocchi_etal_2024>) define operational costs as metric to minimize, which includes communication (network) and data management (CPU and memory) costs.
 
 ==== Modularity
 
@@ -192,6 +195,9 @@ The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 i
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
 
 #citeauthor(<saidi_etal_2023>) use the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
+
+#citeauthor(<kamimura_etal_2018>) introduce a metric called dedication score, which measures the relationships between services as a function of access frequency.
+Along with a modularity metric, the dedication score is used in their custom SArF dependency-based clustering algorithm.
 
 The correlation metric is used by #citeauthor(<yang_etal_2022>) and indicates the degree of correlation between the microservices.
 The authors calculate the correlation in two ways: the number of co-occurrence of the problem domain, and the adjacency relationship between problem domains.
