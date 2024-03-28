@@ -218,3 +218,43 @@ kobayashi_etal_2012:
     type: proceedings
     title: 2012 28th IEEE International Conference on Software Maintenance (ICSM)
     publisher: IEEE
+
+candela_etal_2016:
+  type: article
+  title: 'Using Cohesion and Coupling for Software Remodularization: Is It Enough?'
+  author:
+    - Candela, Ivan
+    - Bavota, Gabriele
+    - Russo, Barbara
+    - Oliveto, Rocco
+  date: 2016
+  url: https://doi.org/10.1145/2928268
+  serial-number:
+    doi: 10.1145/2928268
+    issn: 1049-331X
+  parent:
+    type: periodical
+    title: ACM Trans. Softw. Eng. Methodol.
+    publisher: Association for Computing Machinery
+    location: New York, NY, USA
+    issue: 3
+    volume: 25
+
+mancoridis_etal_1998:
+  type: article
+  title: Using automatic clustering to produce high-level system organizations of source code
+  author:
+    - Mancoridis, S.
+    - Mitchell, B.S.
+    - Rorres, C.
+    - Chen, Y.
+    - Gansner, E.R.
+  date: 1998
+  pages: 45–52
+  serial-number:
+    doi: 10.1109/WPC.1998.693283
+  parent:
+    type: proceedings
+    title: Proceedings. 6th International Workshop on Program Comprehension. IWPC'98 (Cat. No.98TB100242)
+    issue: ''
+    volume: 0

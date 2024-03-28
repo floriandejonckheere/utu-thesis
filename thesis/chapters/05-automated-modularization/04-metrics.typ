@@ -27,6 +27,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @filippone_etal_2023
       @jin_etal_2021
       @zhou_xiong_2022
+      @wu_zhang_2022
       @zaragoza_etal_2022
       @santos_silva_2022
       @lourenco_silva_2023
@@ -46,6 +47,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @filippone_etal_2021
       @agarwal_etal_2021
       @jin_etal_2021
+      @wu_zhang_2022
       @zhou_xiong_2022
       @santos_silva_2022
       @li_etal_2023
@@ -76,6 +78,7 @@ Some of the algorithms require the use of a specific metric to guide the process
     [
       @bandara_perera_2020
       @li_etal_2023
+      @wu_zhang_2022
     ],
 
     "Similarity",
@@ -103,7 +106,6 @@ Some of the algorithms require the use of a specific metric to guide the process
       @selmadji_etal_2020
       // Correlation
       @yang_etal_2022
-      @wu_zhang_2022
       // Dependency
       @saidi_etal_2023
       // Customizable
@@ -137,6 +139,8 @@ The authors then define internal coupling as the number of direct method calls b
 Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #citeauthor(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
+
+#citeauthor(<wu_zhang_2022>) use the inter-service cohesion metric and the inter-call percentage (ICP) as coupling metric as defined by #citeauthor(<jin_etal_2021>).
 
 Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
@@ -177,7 +181,10 @@ The prediction is made based on performance logs collected by executing the mono
 
 ==== Modularity
 
-// TODO
+Modularity is a measure of independence of services, and can be divided into many dimensions, such as structure, concept, history, and dynamism @candela_etal_2016.
+
+#citeauthor(<jin_etal_2021>) use modularity as a metric to evaluate potential decompositions.
+The authors use Modularity Quality @mancoridis_etal_1998 and extend the concept with structural and conceptual dependencies to assess the modularity of microservice candidates.
 
 ==== Similarity
 
