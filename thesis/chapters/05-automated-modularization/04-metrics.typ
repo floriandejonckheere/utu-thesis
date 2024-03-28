@@ -197,7 +197,7 @@ Reuse is calculated as the number of times a microservice is called by the user,
 #citeauthor(<saidi_etal_2023>) use the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
 
 #citeauthor(<kamimura_etal_2018>) introduce a metric called dedication score, which measures the relationships between services as a function of access frequency.
-Along with a modularity metric, the dedication score is used in their custom SArF dependency-based clustering algorithm.
+Along with a modularity metric, the dedication score is used in their custom SArF dependency-based clustering algorithm @kobayashi_etal_2012.
 
 The correlation metric is used by #citeauthor(<yang_etal_2022>) and indicates the degree of correlation between the microservices.
 The authors calculate the correlation in two ways: the number of co-occurrence of the problem domain, and the adjacency relationship between problem domains.

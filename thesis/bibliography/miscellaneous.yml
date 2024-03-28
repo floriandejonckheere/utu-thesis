@@ -201,3 +201,20 @@ jackson_2000:
   serial-number:
     isbn: 020159627X
 
+kobayashi_etal_2012:
+  type: article
+  title: Feature-gathering dependency-based software clustering using Dedication and Modularity
+  author:
+    - Kobayashi, Kenichi
+    - Kamimura, Manabu
+    - Kato, Koki
+    - Yano, Keisuke
+    - Matsuo, Akihiko
+  date: 2012
+  url: http://dx.doi.org/10.1109/ICSM.2012.6405308
+  serial-number:
+    doi: 10.1109/icsm.2012.6405308
+  parent:
+    type: proceedings
+    title: 2012 28th IEEE International Conference on Software Maintenance (ICSM)
+    publisher: IEEE
