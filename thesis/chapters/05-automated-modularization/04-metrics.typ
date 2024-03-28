@@ -136,7 +136,7 @@ The publications in this review use different definitions for cohesion and coupl
 For example, #citeauthor(<selmadji_etal_2020>) define (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
 The authors then define internal coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
+Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 
 Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
@@ -169,7 +169,9 @@ In another publication by the same co-author, #citeauthor(<lourenco_silva_2023>)
 
 ==== CPU and memory usage
 
-// TODO
+A non-functional metric that is considered by some authors is the CPU and/or memory usage of the microservices.
+#citeauthor(<zhang_etal_2020>) use this metric to evaluate the quality of the microservice decomposition, by predicting the average CPU and memory usage of the microservices.
+The prediction is made based on performance logs collected by executing the monolith application.
 
 ==== Modularity
 

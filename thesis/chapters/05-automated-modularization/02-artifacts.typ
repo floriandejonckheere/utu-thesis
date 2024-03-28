@@ -79,7 +79,7 @@ In many cases, requirements documents and models for legacy systems are no longe
 #citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
 Problem frames are a requirements engineering method, which emphasizes the integration of real-world elements into the software system @yang_etal_2022.
 
-Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #citeauthor(<zhang_etal_2020>) and #citeauthor(<saidi_etal_2023>).
+Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #citeauthor(<saidi_etal_2023>).
  The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
 #citeauthor(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
@@ -144,7 +144,7 @@ Additionally, execution data can be collected when the source code of the softwa
 
 Examples of approaches using execution traces are #citeauthor(<jin_etal_2021>) and #citeauthor(<eyitemi_reiff_marganiec_2020>).
 Using software probes inserted into the bytecode of respectively Java and .NET applications, the authors are able to monitor execution paths.
-Other publications relying solely on execution traces are #citeauthor(<jin_etal_2021>).
+#citeauthor(<zhang_etal_2020>) collect the execution traces of the software system, in combination with performance logs.
 
 #citeauthor(<ma_etal_2022>) use a data-centric approach based on the analysis of database access requests.
 

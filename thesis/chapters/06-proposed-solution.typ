@@ -45,7 +45,7 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 == Analysis
 
-// Metrics: cohesion, coupling
+// Metrics: functional (cohesion, coupling) and non-functional (network overhead, CPU, memory)
 
 // Cohesion: number of static calls between methods within microservice boundary over all possible existing static calls (@carvalho_etal_2020)
 // Coupling: sum of static calls from within microservice boundary to methods outside (@carvalho_etal_2020)
