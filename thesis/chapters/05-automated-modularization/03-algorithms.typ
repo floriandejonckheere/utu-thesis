@@ -98,7 +98,8 @@ Examples of publications using K-Means clustering to identify microservice candi
 #citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
 Affinity Propagation is a clustering algorithm that identifies exemplars in the data, which are used to represent the clusters.
 
-A hierarchical clustering approach is used by #citeauthor(<lourenco_silva_2023>) based on similarity between domain entities accesses and development history of source code files.
+Hierarchical clustering approaches are used by #citeauthor(<selmadji_etal_2020>), #citeauthor(<santos_silva_2022>), #citeauthor(<lourenco_silva_2023>), #citeauthor(<ma_etal_2022>) and #citeauthor(<zaragoza_etal_2022>).
+#citeauthor(<lourenco_silva_2023>) uses similarity between domain entities accesses and development history of source code files as a guiding measure for the clustering algorithm, while #citeauthor(<zaragoza_etal_2022>) uses structural and data cohesion of microservices.
 
 #citeauthor(<selmadji_etal_2020>) propose two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
 

@@ -108,6 +108,8 @@ Some of the algorithms require the use of a specific metric to guide the process
       @yang_etal_2022
       // Dependency
       @saidi_etal_2023
+      // Adjusted Rand Index
+      @ma_etal_2022
       // Customizable
       @lopes_silva_2023
     ],
@@ -208,6 +210,9 @@ Along with a modularity metric, the dedication score is used in their custom SAr
 
 The correlation metric is used by #citeauthor(<yang_etal_2022>) and indicates the degree of correlation between the microservices.
 The authors calculate the correlation in two ways: the number of co-occurrence of the problem domain, and the adjacency relationship between problem domains.
+
+#citeauthor(<ma_etal_2022>) use the Adjusted Rand Index (ARI) as clustering evaluation criterion.
+The metric measures the similarity between two clusters in a decomposition, and ranges from -1 to 1, with 0 being the optimal value.
 
 ==== No metrics
 
