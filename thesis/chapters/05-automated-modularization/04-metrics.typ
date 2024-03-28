@@ -51,6 +51,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @zhou_xiong_2022
       @santos_silva_2022
       @li_etal_2023
+      @lourenco_silva_2023
     ],
 
     "Network overhead",
@@ -79,12 +80,6 @@ Some of the algorithms require the use of a specific metric to guide the process
       @bandara_perera_2020
       @li_etal_2023
       @wu_zhang_2022
-    ],
-
-    "Similarity",
-    [
-      @ma_etal_2022
-      @lourenco_silva_2023
     ],
 
     "Other metrics",
@@ -187,10 +182,6 @@ Modularity is a measure of independence of services, and can be divided into man
 
 #citeauthor(<jin_etal_2021>) use modularity as a metric to evaluate potential decompositions.
 The authors use Modularity Quality @mancoridis_etal_1998 and extend the concept with structural and conceptual dependencies to assess the modularity of microservice candidates.
-
-==== Similarity
-
-// TODO
 
 ==== Other metrics
 
