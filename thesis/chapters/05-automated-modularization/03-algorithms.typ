@@ -33,6 +33,7 @@ The identified classes of microservice candidate identification algorithms are d
       // Affinity Propagation
       @al_debagy_martinek_2020
       // Hierarchical clustering
+      @selmadji_etal_2020
       @santos_silva_2022
       @zaragoza_etal_2022
       @lourenco_silva_2023
@@ -68,7 +69,6 @@ The identified classes of microservice candidate identification algorithms are d
     "Linear optimization, custom algorithms",
     [
       // Linear
-      @selmadji_etal_2020
       @filippone_etal_2021
       @quattrocchi_etal_2024
       // Custom
@@ -78,6 +78,8 @@ The identified classes of microservice candidate identification algorithms are d
       @agarwal_etal_2021
       // Rule-based
       @eyitemi_reiff_marganiec_2020
+      // Gravity centers
+      @selmadji_etal_2020
       // Customizable
       @lopes_silva_2023
     ],
@@ -94,7 +96,11 @@ Typical clustering algorithms used for this purpose are K-Means clustering and a
 Examples of publications using K-Means clustering to identify microservice candidates are #citeauthor(<saidi_etal_2023>).
 
 #citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
+Affinity Propagation is a clustering algorithm that identifies exemplars in the data, which are used to represent the clusters.
+
 A hierarchical clustering approach is used by #citeauthor(<lourenco_silva_2023>) based on similarity between domain entities accesses and development history of source code files.
+
+#citeauthor(<selmadji_etal_2020>) propose two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
 
 ==== Evolutionary algorithms
 
@@ -126,6 +132,7 @@ Other publications using algorithms that do not fit into one of the previous cat
 
 For example, the authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a Mixed Integer Linear Programming (MILP) solver in their solution.
 The MILP solver is used to find a solution for an optimization problem that decomposes the software system into microservices, based on the placement of operations and data entities according to the users' needs.
+#citeauthor(<filippone_etal_2021>) use a linear optimization algorithm to solve a combinatorial optimization problem.
 
 The approach taken by #citeauthor(<kamimura_etal_2018>) is to use a custom clustering algorithm named SArF @kobayashi_etal_2012, that aims at identifying software subsystems without the need for human intervention.
 

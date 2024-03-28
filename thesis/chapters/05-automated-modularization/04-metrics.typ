@@ -24,11 +24,11 @@ Some of the algorithms require the use of a specific metric to guide the process
       @daoud_etal_2020
       @bandara_perera_2020
       @filippone_etal_2021
+      @filippone_etal_2023
       @jin_etal_2021
       @zhou_xiong_2022
       @zaragoza_etal_2022
       @santos_silva_2022
-      @filippone_etal_2023
       @lourenco_silva_2023
       @li_etal_2023
       @quattrocchi_etal_2024
@@ -42,12 +42,12 @@ Some of the algorithms require the use of a specific metric to guide the process
       @carvalho_etal_2020
       @daoud_etal_2020
       @bandara_perera_2020
+      @filippone_etal_2023
       @filippone_etal_2021
       @agarwal_etal_2021
       @jin_etal_2021
       @zhou_xiong_2022
       @santos_silva_2022
-      @filippone_etal_2023
       @li_etal_2023
     ],
 
@@ -101,8 +101,6 @@ Some of the algorithms require the use of a specific metric to guide the process
       @hao_etal_2023
       // Data Autonomy
       @selmadji_etal_2020
-      // Functional Autonomy
-      @filippone_etal_2023
       // Correlation
       @yang_etal_2022
       @wu_zhang_2022
@@ -138,6 +136,7 @@ The authors then define internal coupling as the number of direct method calls b
 
 Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
+Similarly, #citeauthor(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
 Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
@@ -195,6 +194,7 @@ The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 i
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
 
 #citeauthor(<saidi_etal_2023>) use the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
+In a similar fashion, #citeauthor(<selmadji_etal_2020>) talk about data autonomy determined by the internal and external data access of a microservice candidate.
 
 #citeauthor(<kamimura_etal_2018>) introduce a metric called dedication score, which measures the relationships between services as a function of access frequency.
 Along with a modularity metric, the dedication score is used in their custom SArF dependency-based clustering algorithm @kobayashi_etal_2012.

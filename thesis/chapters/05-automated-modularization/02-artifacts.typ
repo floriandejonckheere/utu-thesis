@@ -41,13 +41,13 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @carvalho_etal_2020
       @bandara_perera_2020
       @filippone_etal_2021
+      @filippone_etal_2023
       @agarwal_etal_2021
       @kinoshita_kanuka_2022
       @wu_zhang_2022
       @zaragoza_etal_2022
       @santos_silva_2022
       @romani_etal_2022
-      @filippone_etal_2023
       @lourenco_silva_2023
       @hao_etal_2023
     ],
@@ -126,7 +126,8 @@ Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zara
 A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API endpoints as entrypoints, and then ascending into the source code by separating the presentation and logic layer.
 Likewise, #citeauthor(<zaragoza_etal_2022>) make a distinction between presentation, business, and data layer.
 
-Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules). As #citeauthor(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
+Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules).
+As #citeauthor(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
 #citeauthor(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
 On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but rely on a software architect to decompose the software system on the basis of business capability.
 

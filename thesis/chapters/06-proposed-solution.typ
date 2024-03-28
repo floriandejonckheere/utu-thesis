@@ -24,7 +24,17 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor (@lourenco_silva_2023)
 //      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
+// Graph representation of the software system @filippone_etal_2021
+// - Node for each method
+// - Edge for each static call between methods, weighted (method-to-method edge)
+// - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
+// - Edge for association between two entities (entity-to-entity edge)
+
 == Decomposition
+
+// 1. more automated means less work for the architect
+// 2. use knowledge of experts when available
+// 3. recommendations should be specified without knowledge of source code or intensive intervention of the architect
 
 // Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
 
@@ -42,6 +52,8 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // Algorithms:
 // - NSGA-II
 // - NSGA-III (@carvalho_etal_2020)
+// - Affinity Propagation (@al_debagy_martinek_2020)
+//    - Advantages: no need to define amount of clusters before
 
 == Analysis
 
