@@ -11,15 +11,18 @@
 
 // Answer to Research Question 1
 
-/* TODO: discuss testing strategies, security concerns, external dependencies, transactional context, Conway's law */
+// TODO: discuss testing strategies, security concerns, external dependencies, transactional context, Conway's law
 
 == Modularization
 
 // Problem statement regarding identification of optimal module boundaries
 
-/* TODO: discuss difference between modularization to microservices and modular monolith */
+// Explain the process of modularization, including the identification of modules
+// TODO: explain graphs in mathematical terms
 
-/* TODO: read Migrating to a microservice architecture: benefits and challenges */
+
+// TODO: discuss difference between modularization to microservices and modular monolith
+// TODO: read Migrating to a microservice architecture: benefits and challenges
 
 /*
   TODO: discuss three strategies (A Taxonomy of Service Identification Approaches for Legacy Software)
@@ -28,7 +31,7 @@
     3. Hybrid/reuse approach
 */
 
-/* TODO: reference https://martinfowler.com/bliki/MonolithFirst.html */
+// TODO: reference https://martinfowler.com/bliki/MonolithFirst.html
 
 /*
   TODO: discuss three steps (A Taxonomy of Service Identification Approaches for Legacy Software)
