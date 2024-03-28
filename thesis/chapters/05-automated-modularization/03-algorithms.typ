@@ -4,8 +4,14 @@
 
 === Algorithms
 
+Microservice candidate identification is a problem that is often solved by representing the architecture as a directed graph.
+The graph exposes the relationship between the elements of the software architectures.
+The nodes of the graph represent the classes, modules, or components, and the edges the function or method calls between them.
+Often the edges are weighted, representing the frequency or cost of the calls.
+Based on the information contained within, the graph is then divided into several clusters, each encapsulating a microservice candidate.
+The goal is to find a partitioning of the graph that minimizes the number of edges between clusters and maximizes the number of edges within clusters.
+
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
-// TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
 #figure(
   table(
@@ -13,7 +19,7 @@ The identified classes of microservice candidate identification algorithms are d
     inset: 10pt,
     align: (left, left, left),
     [*Type*], [*Example algorithms*], [*Publications*],
-    "Machine Learning",
+    "Clustering algorithms",
     "K-Means, Hierarchical Agglomerative Clustering, Affinity Propagation",
     [
       // K-means
@@ -76,30 +82,23 @@ The identified classes of microservice candidate identification algorithms are d
       @lopes_silva_2023
     ],
   ),
-  caption: [Microservice identification algorithm]
+  caption: [Microservice candidate identification algorithm]
 ) <slr_algorithms>
 
-==== Machine Learning
+==== Clustering algorithms
 
-// TODO: explain graphs in mathematical terms
-Publications using a clustering approach to identify microservice candidates typically collect static information from the software system, and represent it as a directed graph.
-The graph exposes the relationship between the classes, modules, or components.
-The nodes of the graph represent the classes, modules, or components, and the edges the function or method calls between them.
-Often the edges are weighted, representing the frequency or cost of the calls.
-Using this information, the graph is then divided into several clusters, each indicating a microservice candidate.
-Typical clustering algorithms used for this purpose are K-Means, Kruskal's algorithm @algorithm_design, and agglomerative clustering.
+The first class of algorithms identified in the literature is clustering algorithms.
+Clustering algorithms are unsupervised machine learning algorithms that aim to find an optimal partitioning of the graph.
+Typical clustering algorithms used for this purpose are K-Means clustering and agglomerative clustering.
 
 #citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
-
 A hierarchical clustering approach is used by #citeauthor(<lourenco_silva_2023>) based on similarity between domain entities accesses and development history of source code files.
-
-#citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
 
 ==== Evolutionary algorithms
 
-The second class of algorithms identified in the literature is evolutionary algorithms.
+Evolutionary algorithms are the second class of algorithms present in the literature.
 Evolutionary algorithms, and in particular genetic algorithms, are algorithms aimed at solving optimization problems by borrowing techniques from natural selection and genetics.
-Such algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
+These algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
 Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), and #citeauthor(<zhang_etal_2020>).
@@ -111,7 +110,10 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 
 // TODO
 
+#citeauthor(<mazlami_etal_2017>) use Kruskal's algorithm @algorithm_design to isolate microservice candidates.
+
 ==== Other algorithms
+// TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
 The authors of #citeauthor(<quattrocchi_etal_2024>) incorporated a linear optimization solver in their tool to identify microservice candidates.
 

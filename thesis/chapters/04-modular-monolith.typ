@@ -19,7 +19,7 @@
 
 // Explain the process of modularization, including the identification of modules
 // TODO: explain graphs in mathematical terms
-
+// TODO: explain difference between top-down approach and bottom-up approach
 
 // TODO: discuss difference between modularization to microservices and modular monolith
 // TODO: read Migrating to a microservice architecture: benefits and challenges
