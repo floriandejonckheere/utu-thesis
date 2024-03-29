@@ -208,7 +208,8 @@ The metric measures the similarity between two clusters in a decomposition, and 
 
 ==== No metrics
 
-Finally, some of the publications publications, do not mention any quality metrics to evaluate the microservice decomposition.
+Finally, some of the publications publications, do not mention any quality metrics used in the evaluation of the proposed decomposition.
+These methods typically rely on the selection or approval of a software architect to choose the best decomposition, based on their experience and knowledge of the system.
 This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>), #citeauthor(<romani_etal_2022>), #citeauthor(<amiri_2018>), and #citeauthor(<escobar_etal_2016>).
 
 The evaluation method by #citeauthor(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the software architect's judgement to choose a qualitative decomposition.
