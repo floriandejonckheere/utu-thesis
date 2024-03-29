@@ -80,8 +80,6 @@ The identified classes of microservice candidate identification algorithms are d
       @eyitemi_reiff_marganiec_2020
       // Gravity centers
       @selmadji_etal_2020
-      // Customizable
-      @lopes_silva_2023
     ],
   ),
   caption: [Microservice candidate identification algorithm]
@@ -136,5 +134,3 @@ The MILP solver is used to find a solution for an optimization problem that deco
 #citeauthor(<filippone_etal_2021>) use a linear optimization algorithm to solve a combinatorial optimization problem.
 
 The approach taken by #citeauthor(<kamimura_etal_2018>) is to use a custom clustering algorithm named SArF @kobayashi_etal_2012, that aims at identifying software subsystems without the need for human intervention.
-
-//#citeauthor(<lopes_silva_2023>) propose a customizable approach to microservice identification, where the user can define the criteria for the identification process.

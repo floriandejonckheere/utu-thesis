@@ -105,8 +105,6 @@ Some of the algorithms require the use of a specific metric to guide the process
       @saidi_etal_2023
       // Adjusted Rand Index
       @ma_etal_2022
-      // Customizable
-      @lopes_silva_2023
     ],
 
     "No metrics",

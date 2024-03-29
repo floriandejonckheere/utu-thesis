@@ -5,7 +5,7 @@
 
 #let publications = (
   platforms: (
-    ieee: (total: 337, selected: 34, primary: 29, secondary: 5),
+    ieee: (total: 337, selected: 33, primary: 28, secondary: 5),
   ),
   snowballing: none,
 )
