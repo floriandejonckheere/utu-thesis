@@ -140,3 +140,6 @@ The approach taken by #citeauthor(<kamimura_etal_2018>) is to use a custom clust
 #citeauthor(<agarwal_etal_2021>) propose an algorithm based on seed expansion.
 The seed classes are detected by using formal concept analysis.
 Then, using a seed expansion algorithm, clusters are created around the seeds by pulling in related code artefacts based on implementation structure of the software system @agarwal_etal_2021.
+
+#citeauthor(<eyitemi_reiff_marganiec_2020>) use a rule-based approach to microservice candidate identification.
+The 6 proposed rules are based on the principles of high cohesion and low coupling, and using a step-based protocol can be used to manually decompose a monolithic system into microservices.
