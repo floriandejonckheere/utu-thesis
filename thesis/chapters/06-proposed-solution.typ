@@ -11,6 +11,9 @@ Then, we propose a microservice decomposition approach using the three-step proc
 - *Decomposition*: using the collected data, a decomposition of the application into microservices is proposed.
 - *Analysis*: the proposed decomposition is analyzed to evaluate the effectiveness of the chosen approach.
 
+// TODO: design software according to @lopes_silva_2023' 5-step pipeline process
+// Collection, representation, decomposition, quality assessment and comparison, measures, visualization, graphs
+
 == Requirements
 
 // Functional: visualization, user-imposed priorities, gradual migration, technology
