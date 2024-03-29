@@ -91,7 +91,7 @@ The first class of algorithms identified in the literature is clustering algorit
 Clustering algorithms are unsupervised machine learning algorithms that aim to find an optimal partitioning of the graph.
 Typical clustering algorithms used for this purpose are K-Means clustering and agglomerative clustering.
 
-Examples of publications using K-Means clustering to identify microservice candidates are #citeauthor(<saidi_etal_2023>), #citeauthor(<wu_zhang_2022>), and #citeauthor(<romani_etal_2022>).
+Examples of publications using K-Means clustering to identify microservice candidates are #citeauthor(<saidi_etal_2023>), #citeauthor(<wu_zhang_2022>), #citeauthor(<romani_etal_2022>), and #citeauthor(<hao_etal_2023>).
 
 #citeauthor(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
 Affinity Propagation is a clustering algorithm that identifies exemplars in the data, which are used to represent the clusters.
@@ -109,7 +109,7 @@ Evolutionary algorithms, and in particular genetic algorithms, are algorithms ai
 These algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
-Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), #citeauthor(<zhang_etal_2020>) and #citeauthor(<jin_etal_2021>).
+Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #citeauthor(<zhou_xiong_2022>), #citeauthor(<kinoshita_kanuka_2022>), #citeauthor(<zhang_etal_2020>), #citeauthor(<jin_etal_2021>), and #citeauthor(<li_etal_2023>).
 #citeauthor(<carvalho_etal_2020>) use the next generation of NSGA, NSGA-III, in order to find a solution for the problem.
 
 #citeauthor(<amiri_2018>) rely on a genetic algorithm using Turbo-MQ @mitchell_etal_2001 as fitness function.

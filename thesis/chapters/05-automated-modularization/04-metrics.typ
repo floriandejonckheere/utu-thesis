@@ -206,6 +206,9 @@ The authors calculate the correlation in two ways: the number of co-occurrence o
 #citeauthor(<ma_etal_2022>) use the Adjusted Rand Index (ARI) as clustering evaluation criterion.
 The metric measures the similarity between two clusters in a decomposition, and ranges from -1 to 1, with 0 being the optimal value.
 
+#citeauthor(<hao_etal_2023>) use the Matching Degree metric as quality indicator.
+The metric is calculated by dividing the number of intersections of database tables in a given microservice and a given cluster by the total number of tables used in the microservice.
+
 ==== No metrics
 
 Finally, some of the publications publications, do not mention any quality metrics used in the evaluation of the proposed decomposition.
