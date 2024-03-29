@@ -128,7 +128,7 @@ The Louvain method is a greedy optimization algorithm that aims to extract non-o
 
 ==== Other algorithms
 
-Other publications using algorithms that do not fit into one of the previous categories are grouped under the "Other algorithms" category.
+Other publications using algorithms that do not fit into one of the previous categories are grouped in a single category.
 
 // TODO: note about how most algorithms are single- or multi-objective optimization algorithms for graph clustering to find a Pareto-optimal solution
 
@@ -137,3 +137,7 @@ The MILP solver is used to find a solution for an optimization problem that deco
 #citeauthor(<filippone_etal_2021>) use a linear optimization algorithm to solve a combinatorial optimization problem.
 
 The approach taken by #citeauthor(<kamimura_etal_2018>) is to use a custom clustering algorithm named SArF @kobayashi_etal_2012, that aims at identifying software subsystems without the need for human intervention.
+
+#citeauthor(<agarwal_etal_2021>) propose an algorithm based on seed expansion.
+First, the seed classes are detected by using formal concept analysis.
+Then, using a seed expansion algorithm, clusters are created around the seeds by pulling in related code artefacts based on implementation structure of the software system @agarwal_etal_2021.
