@@ -30,6 +30,8 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
 // - Edge for association between two entities (entity-to-entity edge)
 
+// Version history (@mazlami_etal_2017)
+
 == Decomposition
 
 // 1. more automated means less work for the architect
