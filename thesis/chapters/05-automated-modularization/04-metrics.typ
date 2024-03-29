@@ -16,7 +16,6 @@ Some of the algorithms require the use of a specific metric to guide the process
     [*Metric*], [*Publications*],
     "Cohesion",
     [
-      @amiri_2018
       @zhang_etal_2020
       @al_debagy_martinek_2020
       @selmadji_etal_2020
@@ -37,7 +36,6 @@ Some of the algorithms require the use of a specific metric to guide the process
 
     "Coupling",
     [
-      @amiri_2018
       @zhang_etal_2020
       @selmadji_etal_2020
       @carvalho_etal_2020
@@ -207,7 +205,7 @@ The metric measures the similarity between two clusters in a decomposition, and 
 
 ==== No metrics
 
-Finally, some of the publications publications, do not mention any quality metrics.
-This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>) and #citeauthor(<romani_etal_2022>).
+Finally, some of the publications publications, do not mention any quality metrics to evaluate the microservice decomposition.
+This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>), #citeauthor(<romani_etal_2022>), and #citeauthor(<amiri_2018>).
 
 The evaluation method by #citeauthor(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the software architect's judgement to choose a qualitative decomposition.
