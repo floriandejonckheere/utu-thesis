@@ -20,3 +20,9 @@
 // Definition and explanation of microservice software architecture
 
 // TODO: reference https://martinfowler.com/articles/microservices.html
+
+== Modularization
+
+// Definition and explanation of modularization
+
+// TODO: reference @mancoridis_etal_1998
