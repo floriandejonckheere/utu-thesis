@@ -120,7 +120,7 @@ For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<lourenco_silva_20
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
 Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
-#citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, although the list of microservices has to be specified beforehand.
+#citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, but require a list of microservices to be specified before the decomposition is performed.
 
 #citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
 A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API endpoints as entrypoints, and then ascending into the source code by separating the presentation and logic layer.

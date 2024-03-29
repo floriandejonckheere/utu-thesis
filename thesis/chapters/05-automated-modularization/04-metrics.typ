@@ -129,7 +129,7 @@ The publications in this review use different definitions for cohesion and coupl
 For example, #citeauthor(<selmadji_etal_2020>) define (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
 The authors then define internal coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 @agarwal_etal_2021 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
+Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 @agarwal_etal_2021 @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #citeauthor(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
@@ -190,6 +190,8 @@ The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 i
 
 #citeauthor(<carvalho_etal_2020>) propose a metric called reuse, which measures the reusability of a microservice.
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
+
+The usage metric of an object-oriented software system, defined as the sum of the inheritance factor (is-a) and the composition factor (has-a) is used by #citeauthor(<bandara_perera_2020>) as a part of the fitness function for the clustering algorithm.
 
 #citeauthor(<saidi_etal_2023>) use the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
 In a similar fashion, #citeauthor(<selmadji_etal_2020>) talk about data autonomy determined by the internal and external data access of a microservice candidate.
