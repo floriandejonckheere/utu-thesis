@@ -181,6 +181,8 @@ Modularity is a measure of independence of services, and can be divided into man
 #citeauthor(<jin_etal_2021>) use modularity as a metric to evaluate potential decompositions.
 The authors use Modularity Quality @mancoridis_etal_1998 and extend the concept with structural and conceptual dependencies to assess the modularity of microservice candidates.
 
+#citeauthor(<carvalho_etal_2020>) introduce a metric named feature modularization, which maps a list of features supplied by the software architect onto classes and methods, determining the set of predominant features per microservice.
+
 ==== Other metrics
 
 #citeauthor(<lourenco_silva_2023>) introduce the concept of Team Size Reduction (TSR), which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.

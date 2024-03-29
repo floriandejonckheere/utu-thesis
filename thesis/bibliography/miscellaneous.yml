@@ -258,3 +258,22 @@ mancoridis_etal_1998:
     title: Proceedings. 6th International Workshop on Program Comprehension. IWPC'98 (Cat. No.98TB100242)
     issue: ''
     volume: 0
+
+murtagh_legendre_2014:
+  type: article
+  title: "Ward's Hierarchical Agglomerative Clustering Method: Which Algorithms Implement Ward's Criterion?"
+  author:
+    - Murtagh, Fionn
+    - Legendre, Pierre
+  date: 2014
+  pages: 274
+  url: http://dx.doi.org/10.1007/s00357-014-9161-z
+  serial-number:
+    doi: 10.1007/s00357-014-9161-z
+    issn: 1432-1343
+  parent:
+    type: periodical
+    title: Journal of Classification
+    publisher: Springer Science, Business Media LLC
+    issue: 3
+    volume: 31

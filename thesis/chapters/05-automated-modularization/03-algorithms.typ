@@ -99,6 +99,9 @@ Affinity Propagation is a clustering algorithm that identifies exemplars in the 
 Hierarchical clustering approaches are used by #citeauthor(<selmadji_etal_2020>), #citeauthor(<santos_silva_2022>), #citeauthor(<lourenco_silva_2023>), #citeauthor(<ma_etal_2022>) and #citeauthor(<zaragoza_etal_2022>).
 #citeauthor(<lourenco_silva_2023>) uses similarity between domain entities accesses and development history of source code files as a guiding measure for the clustering algorithm, while #citeauthor(<zaragoza_etal_2022>) uses structural and data cohesion of microservices.
 
+#citeauthor(<daoud_etal_2020>) extend the hierarchical agglomerative clustering (HAC) algorithm @murtaugh_legendre_2014 with a collaborative approach, where the clustering is performed by multiple homogenous clustering nodes, each responsible for a subset of the data.
+#citeauthor(<bandara_perera_2020>)
+
 #citeauthor(<selmadji_etal_2020>) propose two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
 
 ==== Evolutionary algorithms
