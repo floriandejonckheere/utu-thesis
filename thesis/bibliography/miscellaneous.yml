@@ -11,7 +11,7 @@ design_science_research_methodology:
   date: 2007
   issue: 3
   volume: 24
-  pages: 45–77
+  page-range: 45–77
   doi: 10.2753/MIS0742-1222240302
 
 project_management:
@@ -28,7 +28,7 @@ software_requirements_specification:
   title: IEEE Guide for Software Requirements Specifications
   journal: IEEE Std 830-1984
   date: 1984
-  pages: 1-26
+  page-range: 1-26
   doi: 10.1109/IEEESTD.1984.119205
 
 algorithm_design:
@@ -39,7 +39,7 @@ algorithm_design:
     - Tardos, Éva
   date: 2006
   publisher: Pearson Education
-  pages: 142-151
+  page-range: 142-151
   isbn: 97-80-321-2953-54
 
 systematic_mapping_study_1:
@@ -51,7 +51,7 @@ systematic_mapping_study_1:
     - Evans, Roger
   journal: 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA)
   date: 2016
-  pages: 44–51
+  page-range: 44–51
   doi: 10.1109/SOCA.2016.15
 
 systematic_mapping_study_2:
@@ -62,7 +62,7 @@ systematic_mapping_study_2:
     - Jamshidi, Pooyan
   journal: Proceedings of the 6th International Conference on Cloud Computing and Services Science
   date: 2016
-  pages: 137–146
+  page-range: 137–146
   doi: 10.5220/0005785501370146
 
 kitchenham_charters_2007:
@@ -86,7 +86,7 @@ abdellatif_etal_2021:
   - Privat, Jean
   - Guéhéneuc, Yann-Gaël
   date: 2021
-  pages: 110868
+  page-range: 110868
   doi: 10.1016/j.jss.2020.110868
 
 briand_etal_1996:
@@ -97,7 +97,7 @@ briand_etal_1996:
     - Morasca, S.
     - Basili, V.R.
   date: 1996
-  pages: 68–86
+  page-range: 68–86
   url:
     value: http://ieeexplore.ieee.org/document/481535/
     date: 2024-03-27
@@ -161,7 +161,7 @@ frey_dueck_2007:
     - Frey, Brendan J.
     - Dueck, Delbert
   date: 2007
-  pages: 972–976
+  page-range: 972–976
   url: https://www.science.org/doi/abs/10.1126/science.1136800
   serial-number:
     doi: 10.1126/science.1136800
@@ -180,7 +180,7 @@ blondel_etal_2008:
     - Lambiotte, Renaud
     - Lefebvre, Etienne
   date: 2008
-  pages: P10008
+  page-range: P10008
   url: https://dx.doi.org/10.1088/1742-5468/2008/10/P10008
   serial-number:
     doi: 10.1088/1742-5468/2008/10/P10008
@@ -250,7 +250,7 @@ mancoridis_etal_1998:
     - Chen, Y.
     - Gansner, E.R.
   date: 1998
-  pages: 45–52
+  page-range: 45–52
   serial-number:
     doi: 10.1109/WPC.1998.693283
   parent:
@@ -266,7 +266,7 @@ murtagh_legendre_2014:
     - Murtagh, Fionn
     - Legendre, Pierre
   date: 2014
-  pages: 274
+  page-range: 274
   url: http://dx.doi.org/10.1007/s00357-014-9161-z
   serial-number:
     doi: 10.1007/s00357-014-9161-z

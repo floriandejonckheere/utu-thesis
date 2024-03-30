@@ -13,7 +13,7 @@ abgaz_etal_2023:
   - Buckley, Jim
   - Clarke, Paul
   date: 2023
-  pages: 4213–4242
+  page-range: 4213–4242
   doi: 10.1109/TSE.2023.3287297
 
 agarwal_etal_2021:
@@ -29,7 +29,7 @@ agarwal_etal_2021:
   - Singhee, Amith
   - Nakamuro, Hiroaki
   date: 2021
-  pages: 758–763
+  page-range: 758–763
   doi: 10.1109/ICWS53863.2021.00104
 
 al_debagy_martinek_2020:
@@ -39,7 +39,7 @@ al_debagy_martinek_2020:
   - Al-Debagy, Omar
   - Martinek, Peter
   date: 2020
-  pages: 289–294
+  page-range: 289–294
   url:
     value: https://ieeexplore.ieee.org/document/9130466/
     date: 2024
@@ -59,7 +59,7 @@ amiri_2018:
   title: Object-Aware Identification of Microservices
   author: Amiri, Mohammad Javad
   date: 2018
-  pages: 253–256
+  page-range: 253–256
   url:
     value: https://ieeexplore.ieee.org/document/8456428/
     date: 2024
@@ -100,7 +100,7 @@ bandara_perera_2020:
   - Bandara, Chamika
   - Perera, Indika
   date: 2020
-  pages: 95–100
+  page-range: 95–100
   url:
     value: https://ieeexplore.ieee.org/document/9325443/
     date: 2024
@@ -129,7 +129,7 @@ carvalho_etal_2020:
   - De Lima, Maria Julia
   - Lucena, Carlos
   date: 2020
-  pages: 569–580
+  page-range: 569–580
   url:
     value: https://ieeexplore.ieee.org/document/9240621/
     date: 2024
@@ -155,7 +155,7 @@ daoud_etal_2020:
   - Maamar, Zakaria
   - El Fazziki, Aziz
   date: 2020
-  pages: 42–47
+  page-range: 42–47
   url:
     value: https://ieeexplore.ieee.org/document/9338533/
     date: 2024
@@ -182,7 +182,7 @@ escobar_etal_2016:
   - Parra, Carlos
   - Casallas, Rubby
   date: 2016
-  pages: 1–11
+  page-range: 1–11
   url:
     value: http://ieeexplore.ieee.org/document/7833410/
     date: 2024
@@ -204,7 +204,7 @@ eyitemi_reiff_marganiec_2020:
   - Eyitemi, Fola-Dami
   - Reiff-Marganiec, Stephan
   date: 2020
-  pages: 65–71
+  page-range: 65–71
   url:
     value: https://ieeexplore.ieee.org/document/9183560/
     date: 2024
@@ -228,7 +228,7 @@ filippone_etal_2021:
   - Rossi, Fabrizio
   - Tivoli, Massimo
   date: 2021
-  pages: 144–147
+  page-range: 144–147
   url:
     value: https://ieeexplore.ieee.org/document/9700354/
     date: 2024
@@ -253,7 +253,7 @@ filippone_etal_2023:
   - Rossi, Fabrizio
   - Tivoli, Massimo
   date: 2023
-  pages: 47–57
+  page-range: 47–57
   url:
     value: https://ieeexplore.ieee.org/document/10092594/
     date: 2024
@@ -290,7 +290,7 @@ jin_etal_2021:
   - Mo, Ran
   - Zheng, Qinghua
   date: 2021
-  pages: 987–1007
+  page-range: 987–1007
   url:
     value: https://ieeexplore.ieee.org/document/8686152/
     date: 2024
@@ -312,7 +312,7 @@ kamimura_etal_2018:
   - Hatano, Tomomi
   - Matsuo, Akihiko
   date: 2018
-  pages: 571–580
+  page-range: 571–580
   url:
     value: https://ieeexplore.ieee.org/document/8719439/
     date: 2024
@@ -334,7 +334,7 @@ kazanavicius_mazeika_2019:
   - Kazanavicius, Justas
   - Mazeika, Dalius
   date: 2019
-  pages: 1–5
+  page-range: 1–5
   url:
     value: https://ieeexplore.ieee.org/document/8732170/
     date: 2024
@@ -356,7 +356,7 @@ kinoshita_kanuka_2022:
   - Kinoshita, Takahiro
   - Kanuka, Hideyuki
   date: 2022
-  pages: 112–115
+  page-range: 112–115
   url:
     value: https://ieeexplore.ieee.org/document/9779847/
     date: 2024
@@ -381,7 +381,7 @@ li_etal_2023:
   - Wang, Weiru
   - Yin, Yongfeng
   date: 2023
-  pages: 50–54
+  page-range: 50–54
   url:
     value: https://ieeexplore.ieee.org/document/10350596/
     date: 2024
@@ -403,7 +403,7 @@ lopes_silva_2023:
   - Lopes, Telmo
   - Silva, António Rito
   date: 2023
-  pages: 111–115
+  page-range: 111–115
   url:
     value: https://ieeexplore.ieee.org/document/10092693/
     date: 2024
@@ -425,7 +425,7 @@ lourenco_silva_2023:
   - Lourenço, João
   - Silva, António Rito
   date: 2023
-  pages: 50–56
+  page-range: 50–56
   url:
     value: https://ieeexplore.ieee.org/document/10248311/
     date: 2024
@@ -448,7 +448,7 @@ ma_etal_2022:
   - Lu, Tsung-Wen
   - Li, Chung-Chieh
   date: 2022
-  pages: 11–18
+  page-range: 11–18
   url:
     value: https://ieeexplore.ieee.org/document/9912637/
     date: 2024
@@ -471,7 +471,7 @@ mazlami_etal_2017:
   - Cito, Jurgen
   - Leitner, Philipp
   date: 2017
-  pages: 524–531
+  page-range: 524–531
   url:
     value: http://ieeexplore.ieee.org/document/8029803/
     date: 2024
@@ -507,7 +507,7 @@ quattrocchi_etal_2024:
   - Margara, Alessandro
   - Cugola, Gianpaolo
   date: 2024
-  pages: 1–16
+  page-range: 1–16
   url:
     value: https://ieeexplore.ieee.org/document/10400904/
     date: 2024
@@ -526,7 +526,7 @@ romani_etal_2022:
   - Tibermacine, Okba
   - Tibermacine, Chouki
   date: 2022
-  pages: 15–19
+  page-range: 15–19
   url:
     value: https://ieeexplore.ieee.org/document/9779850/
     date: 2024
@@ -549,7 +549,7 @@ saidi_etal_2023:
   - Tissaoui, Anis
   - Faiz, Sami
   date: 2023
-  pages: 1–6
+  page-range: 1–6
   url:
     value: https://ieeexplore.ieee.org/document/10150522/
     date: 2024
@@ -587,7 +587,7 @@ schmidt_thiry_2020:
   - Schmidt, Roger Anderson
   - Thiry, Marcello
   date: 2020
-  pages: 1–6
+  page-range: 1–6
   url:
     value: https://ieeexplore.ieee.org/document/9141150/
     date: 2024
@@ -613,7 +613,7 @@ selmadji_etal_2020:
   - Zaragoza, Pascal
   - Dony, Christophe
   date: 2020
-  pages: 157–168
+  page-range: 157–168
   url:
     value: https://ieeexplore.ieee.org/document/9101266/
     date: 2024
@@ -635,7 +635,7 @@ wu_zhang_2022:
   - Wu, Sijie
   - Zhang, Cheng
   date: 2022
-  pages: 304–308
+  page-range: 304–308
   url:
     value: https://ieeexplore.ieee.org/document/10143897/
     date: 2024
@@ -658,7 +658,7 @@ yang_etal_2022:
   - Wu, Sijie
   - Zhang, Cheng
   date: 2022
-  pages: 155–159
+  page-range: 155–159
   url:
     value: https://ieeexplore.ieee.org/document/9832106/
     date: 2024
@@ -683,7 +683,7 @@ zaragoza_etal_2022:
   - Shatnawi, Anas
   - Derras, Mustapha
   date: 2022
-  pages: 135–145
+  page-range: 135–145
   url:
     value: https://ieeexplore.ieee.org/document/9779690/
     date: 2024
@@ -708,7 +708,7 @@ zhang_etal_2020:
   - Chen, Kang
   - Cao, Xuelian
   date: 2020
-  pages: 135–145
+  page-range: 135–145
   url:
     value: https://ieeexplore.ieee.org/document/9101217/
     date: 2024
