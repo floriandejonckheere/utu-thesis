@@ -1,5 +1,12 @@
 ---
-snowballing: 0
+snowballing:
+  total: 4
+  primary:
+    - eski_buzluca_2018
+    - wu_etal_2005
+    - baresi_etal_2017
+  secondary:
+    - fritzsch_etal_2019
 platforms:
   ieee:
     total: 339

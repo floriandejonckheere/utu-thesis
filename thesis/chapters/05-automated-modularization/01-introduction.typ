@@ -144,15 +144,15 @@ Using the search strategy outlined in the previous section, we queried the selec
     [IEEE Xplore], [#publications.platforms.ieee.total], [#publications.platforms.ieee.selected],
     // Title:(microservice) AND AllField:(microservice OR monolith) AND AllField:(decomposition OR identification OR refactor) AND AllField:(automated)
     [ACM Digital Library], [#publications.platforms.acm.total], [#publications.platforms.acm.selected],
-    [Snowballing], none, [#publications.snowballing],
-    [*Total*], [#publications.platforms.values().map(p => p.total).sum()], [#(publications.platforms.values().map(p => p.selected).sum() + publications.snowballing)],
+    [Snowballing], none, [#publications.snowballing.total],
+    [*Total*], [#publications.platforms.values().map(p => p.total).sum()], [#(publications.platforms.values().map(p => p.selected).sum() + publications.snowballing.total)],
   ),
   caption: "Summary of search results"
 ) <slr_search_results>
 
 After applying the inclusion/exclusion criteria, we selected #publications.platforms.values().map(p => p.selected).sum() publications for inclusion in the systematic literature review.
 Of these publications, #publications.platforms.values().map(p => p.primary.len()).sum() are primary studies, and #publications.platforms.values().map(p => p.secondary.len()).sum() are secondary studies.
-The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
+The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing.total additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
 // TODO: add "data extraction" section, and specifically list (with bullet points) the types of data extracted

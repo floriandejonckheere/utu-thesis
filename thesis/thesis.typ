@@ -24,6 +24,7 @@
     "miscellaneous",
     "literature-review/ieee",
     "literature-review/acm",
+    "literature-review/snowballing",
   ),
 
   // Institution logo (SVG)

@@ -1,0 +1,95 @@
+baresi_etal_2017:
+  type: anthos
+  title: Microservices {Identification Through Interface Analysis}
+  author:
+  - Baresi, Luciano
+  - Garriga, Martin
+  - De Renzis, Alan
+  date: 2017
+  editor:
+  - De Paoli, Flavio
+  - Schulte, Stefan
+  - Broch Johnsen, Einar
+  page-range: 19–33
+  url:
+    value: https://link.springer.com/10.1007/978-3-319-67262-5_2
+    date: 2024-03-29
+  serial-number:
+    doi: 10.1007/978-3-319-67262-5_2
+    isbn: 978-3-319-67261-8 978-3-319-67262-5
+  parent:
+    type: anthology
+    title: Service-{Oriented} and {Cloud Computing}
+    publisher: Springer International Publishing
+    location: Cham
+    volume: 10465
+eski_buzluca_2018:
+  type: article
+  title: 'An Automatic Extraction Approach: Transition to Microservices Architecture from Monolithic Application'
+  author:
+  - Eski, Sinan
+  - Buzluca, Feza
+  date: 2018-05-21
+  page-range: 1–6
+  url:
+    value: https://dl.acm.org/doi/10.1145/3234152.3234195
+    date: 2024-03-29
+  serial-number:
+    doi: 10.1145/3234152.3234195
+    isbn: 978-1-4503-6422-5
+  parent:
+  - type: proceedings
+    title: 'Proceedings of the 19th {International Conference} on {Agile Software Development}: {Companion}'
+    publisher: ACM
+    location: Porto Portugal
+  - type: conference
+    title: '{XP} ''18 {Companion}: 19th {International Conference} on {Agile Software Development}'
+fritzsch_etal_2019:
+  type: anthos
+  title: 'From {Monolith} to {Microservices}: {A Classification} of {Refactoring Approaches}'
+  author:
+  - Fritzsch, Jonas
+  - Bogner, Justus
+  - Zimmermann, Alfred
+  - Wagner, Stefan
+  date: 2019
+  editor:
+  - Bruel, Jean-Michel
+  - Mazzara, Manuel
+  - Meyer, Bertrand
+  page-range: 128–141
+  url:
+    value: http://link.springer.com/10.1007/978-3-030-06019-0_10
+    date: 2024-03-29
+  serial-number:
+    doi: 10.1007/978-3-030-06019-0_10
+    isbn: 978-3-030-06018-3 978-3-030-06019-0
+  parent:
+    type: anthology
+    title: Software {Engineering Aspects} of {Continuous Development} and {New Paradigms} of {Software Production} and {Deployment}
+    publisher: Springer International Publishing
+    location: Cham
+    volume: 11350
+wu_etal_2005:
+  type: article
+  title: Comparison of Clustering Algorithms in the Context of Software Evolution
+  author:
+  - Wu, J.
+  - Hassan, A.E.
+  - Holt, R.C.
+  date: 2005
+  page-range: 525–535
+  url:
+    value: http://ieeexplore.ieee.org/document/1510147/
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1109/ICSM.2005.31
+    isbn: 978-0-7695-2368-2
+  parent:
+  - type: proceedings
+    title: 21st {IEEE International Conference} on {Software Maintenance} ({ICSM}'05)
+    publisher: IEEE
+    location: Budapest, Hungary
+  - type: conference
+    title: 21st {IEEE International Conference} on {Software Maintenance} ({ICSM}'05)
+
