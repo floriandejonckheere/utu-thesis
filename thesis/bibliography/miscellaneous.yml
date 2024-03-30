@@ -317,3 +317,14 @@ traag_etal_2019:
     publisher: Springer Science, Business Media LLC
     issue: 1
     volume: 9
+
+zhu_ghahramani_2003:
+  type: article
+  title: Learning from Labeled and Unlabeled Data with Label Propagation
+  author:
+    - Zhu, Xiaojin
+    - Ghahramani, Zoubin
+  date: 2003
+  page-range: ''
+  parent:
+    type: periodical

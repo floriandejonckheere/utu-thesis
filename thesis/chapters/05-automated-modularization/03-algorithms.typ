@@ -50,12 +50,14 @@ The identified classes of microservice candidate identification algorithms are d
     ],
 
     "Graph algorithms",
-    "Kruskal, Louvain method",
+    "Kruskal, Louvain method, Label Propagation",
     [
       @yang_etal_2022 // Kruskal
       @mazlami_etal_2017 // Kruskal
       @filippone_etal_2023 // Louvain method
       @brito_etal_2021 // Louvain method
+      @hasan_etal_2023 // Leiden algorithm
+      @nitin_etal_2022 // Label propagation
     ],
 
     "Other algorithms",
@@ -115,6 +117,9 @@ Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest
 #citeauthor(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
 The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
 #citeauthor(<hasan_etal_2023>) use the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
+
+#citeauthor(<nitin_etal_2022>) use Context sensitive Label Propagation (CARGO), an algorithm built on the principles of the Label Propagation algorithm @zhu_ghahramani_2003.
+CARGO is a community detection algorithm that is able to leverage the context embedded in the dependency graph to increase the cohesiveness of the communities.
 
 ==== Other algorithms
 

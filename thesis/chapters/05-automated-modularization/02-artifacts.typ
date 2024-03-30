@@ -55,6 +55,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @brito_etal_2021
       @sellami_etal_2022
       @hasan_etal_2023
+      @nitin_etal_2022
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -141,6 +142,9 @@ On the other hand, #citeauthor(<kinoshita_kanuka_2022>) do not automatically ext
 #citeauthor(<romani_etal_2022>) propose a data-centric microservice candidate identification method based on knowledge gathered from the database schema.
 The authors extract table and column methods from the database schema, and use the semantically enriched information as input for the identification algorithm.
 #citeauthor(<hao_etal_2023>) construct access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
+
+A unique approach to constructing a call graph is proposed by #citeauthor(<nitin_etal_2022>), who make a distinction between context-insensitive and context-sensitive dependency graphs.
+While the former captures the dependencies between classes using simple method calls, the latter also includes the context (i.e., the arguments) of the method call in the dependency graph.
 
 ==== Execution
 

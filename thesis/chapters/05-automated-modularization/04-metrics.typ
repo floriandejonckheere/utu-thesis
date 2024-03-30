@@ -36,6 +36,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @wei_etal_2020
       @sellami_etal_2022
       @hasan_etal_2023
+      @nitin_etal_2022
     ],
 
     "Coupling",
@@ -58,6 +59,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @wei_etal_2020
       @sellami_etal_2022
       @hasan_etal_2023
+      @nitin_etal_2022
     ],
 
     "Network overhead",
@@ -80,6 +82,7 @@ Some of the algorithms require the use of a specific metric to guide the process
     [
       @quattrocchi_etal_2024
       @zhang_etal_2020
+      @nitin_etal_2022
     ],
 
     "Modularity",
@@ -107,6 +110,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @wei_etal_2020 // Instability
       @sellami_etal_2022 // Non-Extreme Distribution
       @hasan_etal_2023 // Size
+      @nitin_etal_2022 // Business Context Purity
     ],
 
     "No metrics",
@@ -138,7 +142,7 @@ The total coupling of the solution is the sum of the coupling of all microservic
 Similarly, #citeauthor(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
 #citeauthor(<jin_etal_2021>) introduce the concept of inter-service cohesion and inter-call percentage (ICP) as coupling metrics.
-Several other publications use the metrics introduced by #cite(<jin_etal_2021>, form: "author") in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022.
+Several other publications use the metrics introduced by #cite(<jin_etal_2021>, form: "author") in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
 
 Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
@@ -170,12 +174,15 @@ The metric is associated with the cognitive load of the software architect when 
 In another publication by the same co-author, #citeauthor(<lourenco_silva_2023>) define complexity as the effort required to perform the decomposition, and expand the concept to uniform complexity, which is calculated by dividing the complexity of a decomposition by the maximum possible complexity.
 
 ==== CPU and memory usage
+// TODO: should be "performance" instead?
 
 A non-functional metric that is considered by some authors is the CPU and/or memory usage of the microservices.
 #citeauthor(<zhang_etal_2020>) use this metric to evaluate the quality of the microservice decomposition, by predicting the average CPU and memory usage of the microservices.
 The prediction is made based on performance logs collected by executing the monolith application.
 
 #citeauthor(<quattrocchi_etal_2024>) define operational costs as metric to minimize, which includes communication (network) and data management (CPU and memory) costs.
+
+#citeauthor(<nitin_etal_2022>) don't utilize the CPU and memory usage directly as a metric, but instead assume the latency and throughput as indicators of performance.
 
 ==== Modularity
 
