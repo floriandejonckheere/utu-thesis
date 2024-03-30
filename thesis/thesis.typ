@@ -23,6 +23,7 @@
   bibliographies: (
     "miscellaneous",
     "literature-review/ieee",
+    "literature-review/acm",
   ),
 
   // Institution logo (SVG)
