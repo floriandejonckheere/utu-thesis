@@ -1,6 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/cite.typ": citeauthor
+#import "/helpers.typ": citeauthor
 
 === Metrics
 

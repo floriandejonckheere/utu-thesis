@@ -1,4 +1,4 @@
-#import "/cite.typ": citeauthor
+#import "/helpers.typ": citeauthor
 
 = Proposed solution <proposedsolution>
 
