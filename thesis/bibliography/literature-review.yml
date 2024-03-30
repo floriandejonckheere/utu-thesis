@@ -42,5 +42,14 @@ platforms:
   acm:
     total: 168
     selected: 10
-    primary: []
-    secondary: []
+    primary:
+      - wei_etal_2020
+      - sellami_etal_2022a
+      - hasan_etal_2023
+      - nitin_etal_2022
+      - cao_zhang_2022
+      - santos_paula_2021
+      - kalia_etal_2021
+      - freitas_etal_2021
+    secondary:
+      - mparmpoutis_kakarontzas_2022
