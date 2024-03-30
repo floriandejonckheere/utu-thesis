@@ -1,0 +1,46 @@
+---
+snowballing: 0
+platforms:
+  ieee:
+    total: 339
+    selected: 33
+    primary:
+      - saidi_etal_2023
+      - yang_etal_2022
+      - kinoshita_kanuka_2022
+      - zhou_xiong_2022
+      - zhang_etal_2020
+      - quattrocchi_etal_2024
+      - kamimura_etal_2018
+      - al_debagy_martinek_2020
+      - mazlami_etal_2017
+      - selmadji_etal_2020
+      - filippone_etal_2023
+      - wu_zhang_2022
+      - zaragoza_etal_2022
+      - santos_silva_2022
+      - ma_etal_2022
+      - filippone_etal_2021
+      - lourenco_silva_2023
+      - agarwal_etal_2021
+      - amiri_2018
+      - carvalho_etal_2020
+      - hao_etal_2023
+      - li_etal_2023
+      - jin_etal_2021
+      - eyitemi_reiff_marganiec_2020
+      - daoud_etal_2020
+      - romani_etal_2022
+      - escobar_etal_2016
+      - bandara_perera_2020
+    secondary:
+      - bajaj_etal_2021
+      - abgaz_etal_2023
+      - oumoussa_saidi_2024
+      - schmidt_thiry_2020
+      - kazanavicius_mazeika_2019
+  acm:
+    total: 168
+    selected: 10
+    primary: []
+    secondary: []

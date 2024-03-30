@@ -3,13 +3,7 @@
 
 #import "/helpers.typ": citeauthor
 
-#let publications = (
-  platforms: (
-    ieee: (total: 337, selected: 33, primary: 28, secondary: 5),
-    acm: (total: 168, selected: 10, primary: 9, secondary: 1),
-  ),
-  snowballing: none,
-)
+#let publications = yaml("/bibliography/literature-review.yml")
 
 = Automated modularization <automatedmodularization>
 
@@ -157,7 +151,7 @@ Using the search strategy outlined in the previous section, we queried the selec
 ) <slr_search_results>
 
 After applying the inclusion/exclusion criteria, we selected #publications.platforms.values().map(p => p.selected).sum() publications for inclusion in the systematic literature review.
-Of these publications, #publications.platforms.values().map(p => p.primary).sum() are primary studies, and #publications.platforms.values().map(p => p.secondary).sum() are secondary studies.
+Of these publications, #publications.platforms.values().map(p => p.primary.len()).sum() are primary studies, and #publications.platforms.values().map(p => p.secondary.len()).sum() are secondary studies.
 The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
