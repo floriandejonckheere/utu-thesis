@@ -55,14 +55,14 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
     "Execution data", // e.g., log files, execution traces
     "Dynamic",
     [
-      @zhang_etal_2020
       @carvalho_etal_2020
-      @eyitemi_reiff_marganiec_2020
-      @jin_etal_2021
       @wu_zhang_2022
-      @ma_etal_2022
       @lourenco_silva_2023
       @hao_etal_2023
+      @jin_etal_2021
+      @zhang_etal_2020
+      @ma_etal_2022
+      @eyitemi_reiff_marganiec_2020
     ],
   ),
   caption: [SDLC artifact categories]

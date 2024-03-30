@@ -16,48 +16,48 @@ Some of the algorithms require the use of a specific metric to guide the process
     [*Metric*], [*Publications*],
     "Cohesion",
     [
-      @zhang_etal_2020
+      @daoud_etal_2020
+      @li_etal_2023
       @al_debagy_martinek_2020
+      @zhou_xiong_2022
+      @quattrocchi_etal_2024
       @selmadji_etal_2020
       @carvalho_etal_2020
-      @daoud_etal_2020
       @bandara_perera_2020
       @filippone_etal_2021
       @filippone_etal_2023
-      @jin_etal_2021
-      @zhou_xiong_2022
       @wu_zhang_2022
       @zaragoza_etal_2022
       @santos_silva_2022
       @lourenco_silva_2023
-      @li_etal_2023
-      @quattrocchi_etal_2024
+      @jin_etal_2021
+      @zhang_etal_2020
     ],
 
     "Coupling",
     [
-      @zhang_etal_2020
+      @daoud_etal_2020
+      @li_etal_2023
+      @zhou_xiong_2022
       @selmadji_etal_2020
       @carvalho_etal_2020
-      @daoud_etal_2020
       @bandara_perera_2020
-      @filippone_etal_2023
       @filippone_etal_2021
+      @filippone_etal_2023
       @agarwal_etal_2021
-      @jin_etal_2021
       @wu_zhang_2022
-      @zhou_xiong_2022
       @santos_silva_2022
-      @li_etal_2023
       @lourenco_silva_2023
+      @jin_etal_2021
+      @zhang_etal_2020
     ],
 
     "Network overhead",
     [
-      @carvalho_etal_2020
-      @filippone_etal_2021
       @zhou_xiong_2022
       @quattrocchi_etal_2024
+      @carvalho_etal_2020
+      @filippone_etal_2021
     ],
 
     "Complexity",
@@ -69,49 +69,37 @@ Some of the algorithms require the use of a specific metric to guide the process
 
     "CPU and memory usage",
     [
-      @zhang_etal_2020
       @quattrocchi_etal_2024
+      @zhang_etal_2020
     ],
 
     "Modularity",
     [
-      @bandara_perera_2020
       @li_etal_2023
+      @bandara_perera_2020
       @wu_zhang_2022
     ],
 
     "Other metrics",
     [
-      // Instability
-      @li_etal_2023
-      // Precision/recall
-      @filippone_etal_2023
-      // Team Size Reduction
-      @mazlami_etal_2017
-      @lourenco_silva_2023
-      // Average Domain Redundancy
-      @mazlami_etal_2017
-      // Dedication Score
-      @kamimura_etal_2018
-      // Matching Degree
-      @hao_etal_2023
-      // Data Autonomy
-      @selmadji_etal_2020
-      // Correlation
-      @yang_etal_2022
-      // Dependency
-      @saidi_etal_2023
-      // Adjusted Rand Index
-      @ma_etal_2022
+      @yang_etal_2022 // Correlation
+      @saidi_etal_2023 // Dependency
+      @li_etal_2023 // Instability
+      @mazlami_etal_2017 // Team Size Reduction, Average Domain Redundancy
+      @kamimura_etal_2018 // Dedication Score
+      @selmadji_etal_2020 // Data Autonomy
+      @filippone_etal_2023 // Precision/recall
+      @lourenco_silva_2023 // Team Size Reduction
+      @hao_etal_2023 // Matching Degree
+      @ma_etal_2022 // Adjusted Rand Index
     ],
 
     "No metrics",
     [
-      @eyitemi_reiff_marganiec_2020
+      @escobar_etal_2016 // Manual
+      @kinoshita_kanuka_2022 // Manual
       @romani_etal_2022
-      // Manual
-      @kinoshita_kanuka_2022
-      @escobar_etal_2016
+      @eyitemi_reiff_marganiec_2020
     ],
   ),
   caption: [Quality metrics]
