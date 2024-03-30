@@ -29,6 +29,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @al_debagy_martinek_2020
       @zhou_xiong_2022
       @quattrocchi_etal_2024
+      @wei_etal_2020
     ],
 
     "Code", // e.g., source code, revision history
@@ -102,6 +103,7 @@ The method extracts the information from the specification and converts it into 
 #citeauthor(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
+#citeauthor(<wei_etal_2020>) uses a similar approach, gathering a list of features from the software architect, and proposing a microservice decomposition based on pre-trained feature tables.
 
 ==== Code
 

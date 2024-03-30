@@ -67,6 +67,7 @@ The identified classes of microservice candidate identification algorithms are d
       @filippone_etal_2021 // Linear
       @agarwal_etal_2021 // Seed expansion
       @eyitemi_reiff_marganiec_2020 // Rule-based
+      @wei_etal_2020 // Mapping-based
     ],
   ),
   caption: [Microservice candidate identification algorithm]

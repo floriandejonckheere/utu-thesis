@@ -33,6 +33,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @jin_etal_2021
       @zhang_etal_2020
       @brito_etal_2021
+      @wei_etal_2020
     ],
 
     "Coupling",
@@ -52,6 +53,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @jin_etal_2021
       @zhang_etal_2020
       @brito_etal_2021
+      @wei_etal_2020
     ],
 
     "Network overhead",
@@ -96,6 +98,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @lourenco_silva_2023 // Team Size Reduction
       @hao_etal_2023 // Matching Degree
       @ma_etal_2022 // Adjusted Rand Index
+      @wei_etal_2020 // Instability
     ],
 
     "No metrics",
