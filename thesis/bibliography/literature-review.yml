@@ -48,7 +48,7 @@ platforms:
       - kazanavicius_mazeika_2019
   acm:
     total: 168
-    selected: 10
+    selected: 9
     primary:
       - wei_etal_2020
       - sellami_etal_2022
@@ -57,6 +57,5 @@ platforms:
       - cao_zhang_2022
       - santos_paula_2021
       - kalia_etal_2021
-      - freitas_etal_2021
     secondary:
       - mparmpoutis_kakarontzas_2022

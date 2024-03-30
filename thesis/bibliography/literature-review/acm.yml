@@ -41,28 +41,6 @@ cao_zhang_2022:
     location: Melaka Malaysia
   - type: conference
     title: '{ICSCA} 2022: 2022 11th {International Conference} on {Software} and {Computer Applications}'
-freitas_etal_2021:
-  type: article
-  title: Refactoring {Java Monoliths} into {Executable Microservice-Based Applications}
-  author:
-  - Freitas, Francisco
-  - Ferreira, André
-  - Cunha, Jácome
-  date: 2021-09-27
-  page-range: 100–107
-  url:
-    value: https://dl.acm.org/doi/10.1145/3475061.3475086
-    date: 2024-03-30
-  serial-number:
-    doi: 10.1145/3475061.3475086
-    isbn: 978-1-4503-9062-0
-  parent:
-  - type: proceedings
-    title: Proceedings of the 25th {Brazilian Symposium} on {Programming Languages}
-    publisher: ACM
-    location: Joinville Brazil
-  - type: conference
-    title: '{SBLP}''21: 25th {Brazilian Symposium} on {Programming Languages}'
 hasan_etal_2023:
   type: article
   title: '{AI-based Quality-driven Decomposition Tool} for {Monolith} to {Microservice Migration}'
