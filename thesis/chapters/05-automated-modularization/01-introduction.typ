@@ -6,6 +6,7 @@
 #let publications = (
   platforms: (
     ieee: (total: 337, selected: 33, primary: 28, secondary: 5),
+    acm: (total: 168, selected: 10, primary: 9, secondary: 1),
   ),
   snowballing: none,
 )
@@ -53,6 +54,7 @@ Therefore, we believe that there is a need for a systematic literature review ai
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore#footnote[https://ieeexplore.ieee.org/]
++ ACM Digital Library#footnote[https://dl.acm.org/]
 
 The platforms were selected based on their academic relevance, as they contain a large number of publications in the field of software engineering.
 Furthermore, the platforms also contain only peer-reviewed publications, which ensures a certain level of quality in the publications.
@@ -76,13 +78,13 @@ The resulting search query can be expressed as follows:
 #figure(
   code(
     ```sql
-      (('microservices' IN title OR abstract) OR
-       ('monolith' IN title OR abstract))
+      (('microservice*' IN title OR abstract) OR
+       ('monolith*' IN title OR abstract))
     AND
-      (('decomposition' IN title OR abstract) OR
-       ('identification' IN title OR abstract))
+      (('decompos*' IN title OR abstract) OR
+       ('identificat*' IN title OR abstract))
     AND
-      ('automated' IN title OR abstract)
+      ('automate*' IN title OR abstract)
     ```
   ),
   caption: [Search query]
@@ -146,6 +148,8 @@ Using the search strategy outlined in the previous section, we queried the selec
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))
     [IEEE Xplore], [#publications.platforms.ieee.total], [#publications.platforms.ieee.selected],
+    // Title:(microservice) AND AllField:(microservice OR monolith) AND AllField:(decomposition OR identification OR refactor) AND AllField:(automated)
+    [ACM Digital Library], [#publications.platforms.acm.total], [#publications.platforms.acm.selected],
     [Snowballing], none, [#publications.snowballing],
     [*Total*], [#publications.platforms.values().map(p => p.total).sum()], [#(publications.platforms.values().map(p => p.selected).sum() + publications.snowballing)],
   ),
@@ -157,6 +161,7 @@ Of these publications, #publications.platforms.values().map(p => p.primary).sum(
 The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
+// TODO: add "data extraction" section, and specifically list (with bullet points) the types of data extracted
 From the selected publications, we extracted relevant information, such as the type of approach or technique described, the algorithms used, and the metrics discussed.
 As #citeauthor(<kitchenham_charters_2007>) suggest for systematic literature reviews done by single researchers, the data extraction was validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
 

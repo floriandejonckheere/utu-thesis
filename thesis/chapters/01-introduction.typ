@@ -10,6 +10,8 @@
 
 This research is centered around three research questions:
 
+// TODO: for each research question, specify motivation and approach?
+
 *Research Question 1*: What are the challenges and opportunities of the modular monolith architecture compared to traditional monolithic and microservices architectures?
 
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
@@ -40,6 +42,8 @@ The proposed solution will add value to the field of software engineering, and w
 
 // Explanation of the research methodology used
 
+// TODO: first RQ solved by ad-hoc literature review (@ralph_baltes_2022)
+// TODO: determine if second RQ is solved by systematic literature review, or mapping study? (@ralph_baltes_2022)
 A literature review is conducted to answer the first and second research question.
 For the first research question, the study aims to find a definition of the modular monolith architecture, and to list the advantages and disadvantages of the architecture based on existing literature.
 For the second research question, the state of the art in automated modularization technologies is reviewed and summarized.

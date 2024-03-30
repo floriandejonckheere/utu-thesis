@@ -14,6 +14,8 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // TODO: design software according to @lopes_silva_2023' 5-step pipeline process
 // Collection, representation, decomposition, quality assessment and comparison, measures, visualization, graphs
 
+// TODO: follow general structure of @kalia_etal_2021
+
 == Requirements
 
 // Functional: visualization, user-imposed priorities, gradual migration, technology
@@ -23,7 +25,9 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 // Collection strategies
 // - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
-// - Dynamic analysis, because inherent polymorphism and late binding -> through execution and also integration tests (@carvalho_etal_2020)
+// - Dynamic analysis, because inherent polymorphism and late binding
+//        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
+//        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
 // - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor (@lourenco_silva_2023)
 //      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
@@ -63,6 +67,7 @@ Then, we propose a microservice decomposition approach using the three-step proc
 == Analysis
 
 // Metrics: functional (cohesion, coupling) and non-functional (network overhead, CPU, memory)
+// Lots of metrics were studied by @candela_etal_2016
 
 // Cohesion: number of static calls between methods within microservice boundary over all possible existing static calls (@carvalho_etal_2020)
 // Coupling: sum of static calls from within microservice boundary to methods outside (@carvalho_etal_2020)

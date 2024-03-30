@@ -18,5 +18,8 @@
 == Discussion
 
 // Analysis and discussion of the results
-// Ability of the proposal solution to generalize
 // Justify the reason for existence of the modular monolith paradigm
+
+== Threats to validity
+
+// Ability of the proposal solution to generalize
