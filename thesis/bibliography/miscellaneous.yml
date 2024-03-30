@@ -328,3 +328,18 @@ zhu_ghahramani_2003:
   page-range: ''
   parent:
     type: periodical
+
+rousseeuw_1987:
+  type: article
+  title: 'Silhouettes: A graphical aid to the interpretation and validation of cluster analysis'
+  author: Rousseeuw, Peter J.
+  date: 1987
+  page-range: 53–65
+  url: https://www.sciencedirect.com/science/article/pii/0377042787901257
+  serial-number:
+    doi: https://doi.org/10.1016/0377-0427(87)90125-7
+    issn: 0377-0427
+  parent:
+    type: periodical
+    title: Journal of Computational and Applied Mathematics
+    volume: 20

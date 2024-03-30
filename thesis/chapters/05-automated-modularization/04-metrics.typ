@@ -118,6 +118,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @nitin_etal_2022 // Business Context Purity
       @kalia_etal_2021 // Size
       @cao_zhang_2022 // Density
+      @santos_paula_2021 // Coefficient silhouette
     ],
 
     "No metrics",
@@ -230,6 +231,9 @@ The metric is calculated by dividing the number of intersections of database tab
 #citeauthor(<hasan_etal_2023>) and #citeauthor(<kalia_etal_2021>) use the Size metric to evaluate the quality of the microservice decomposition.
 The metric measures how evenly the size of the proposed microservices is.
 The size metric was originallly proposed by #citeauthor(<wu_etal_2005>).
+
+#citeauthor(<santos_paula_2021>) use the silhouette coefficient originally proposed by #citeauthor(<rousseeuw_1987>) as evaluation metric.
+The silhouette coefficient assesses clustering consistency by comparing the average dissimilarity within the cluster.
 
 ==== No metrics
 

@@ -58,6 +58,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @nitin_etal_2022
       @kalia_etal_2021
       @cao_zhang_2022
+      @santos_paula_2021
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -124,13 +125,15 @@ The source code can be analyzed using static analysis (i.e., without executing t
 Dynamic analysis has the advantage that it can be used if the source code is not available.
 
 Additionally, the revision history of the source code can also be used as source for valuable information about the behaviour of the software system.
-For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<lourenco_silva_2023>) use both the structure of the source code, as well as the revision history to drive the identification algorithm.
+#citeauthor(<mazlami_etal_2017>) originally proposed the use of the revision history of the source code to identify couplings between classes.
 /* TODO: reference "CVS release history data for detecting logical couplings" */
+The authors suggest multiple strategies that can be used to extract information from the revision history.
+Others have built upon this approach, using the revision history to identify the authors of the source code, and use this information to drive the identification algorithm @lourenco_silva_2023 @santos_paula_2021
 
 #citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
-Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 @cao_zhang_2022 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Many publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 @cao_zhang_2022 @santos_paula_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
 #citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, but require a list of microservices to be specified before the decomposition is performed.
 
 #citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.

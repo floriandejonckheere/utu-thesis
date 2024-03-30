@@ -48,7 +48,12 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - Edge for association between two entities (entity-to-entity edge)
 // Merge multiple information collectors @brito_etal_2021
 
-// Version history (@mazlami_etal_2017)
+// Version history: logical coupling, contributor coupling (@mazlami_etal_2017)
+
+// Git extraction algorithm (@santos_paula_2021)
+//    Extract all commits from a Git repository
+//    If commit not related to files changed, return
+//    For each file changed, increment co-change matrix
 
 == Decomposition
 
