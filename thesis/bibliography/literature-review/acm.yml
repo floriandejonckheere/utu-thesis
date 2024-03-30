@@ -1,0 +1,224 @@
+brito_etal_2021:
+  type: article
+  title: Identification of Microservices from Monolithic Applications through Topic Modelling
+  author:
+  - Brito, Miguel
+  - Cunha, Jácome
+  - Saraiva, João
+  date: 2021-03-22
+  page-range: 1409–1418
+  url:
+    value: https://dl.acm.org/doi/10.1145/3412841.3442016
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3412841.3442016
+    isbn: 978-1-4503-8104-8
+  parent:
+  - type: proceedings
+    title: Proceedings of the 36th {Annual ACM Symposium} on {Applied Computing}
+    publisher: ACM
+    location: Virtual Event Republic of Korea
+  - type: conference
+    title: '{SAC} ''21: {The} 36th {ACM}/{SIGAPP Symposium} on {Applied Computing}'
+cao_zhang_2022:
+  type: article
+  title: Implementation of {Domain-oriented Microservices Decomposition} Based on {Node-attributed Network}
+  author:
+  - Cao, Lingli
+  - Zhang, Cheng
+  date: 2022-02-24
+  page-range: 136–142
+  url:
+    value: https://dl.acm.org/doi/10.1145/3524304.3524325
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3524304.3524325
+    isbn: 978-1-4503-8577-0
+  parent:
+  - type: proceedings
+    title: 2022 11th {International Conference} on {Software} and {Computer Applications}
+    publisher: ACM
+    location: Melaka Malaysia
+  - type: conference
+    title: '{ICSCA} 2022: 2022 11th {International Conference} on {Software} and {Computer Applications}'
+freitas_etal_2021:
+  type: article
+  title: Refactoring {Java Monoliths} into {Executable Microservice-Based Applications}
+  author:
+  - Freitas, Francisco
+  - Ferreira, André
+  - Cunha, Jácome
+  date: 2021-09-27
+  page-range: 100–107
+  url:
+    value: https://dl.acm.org/doi/10.1145/3475061.3475086
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3475061.3475086
+    isbn: 978-1-4503-9062-0
+  parent:
+  - type: proceedings
+    title: Proceedings of the 25th {Brazilian Symposium} on {Programming Languages}
+    publisher: ACM
+    location: Joinville Brazil
+  - type: conference
+    title: '{SBLP}''21: 25th {Brazilian Symposium} on {Programming Languages}'
+hasan_etal_2023:
+  type: article
+  title: '{AI-based Quality-driven Decomposition Tool} for {Monolith} to {Microservice Migration}'
+  author:
+  - Hasan, Muhammad Hafiz
+  - Osman, Mohd Hafeez
+  - Admodisastro, Novia Indriaty
+  - Muhammad, Muhamad Sufri
+  date: 2023-10-27
+  page-range: 181–191
+  url:
+    value: https://dl.acm.org/doi/10.1145/3634814.3634839
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3634814.3634839
+    isbn: '9798400708534'
+  parent:
+  - type: proceedings
+    title: Proceedings of the 2023 4th {Asia Service Sciences} and {Software Engineering Conference}
+    publisher: ACM
+    location: Aizu-Wakamatsu City Japan
+  - type: conference
+    title: '{ASSE} 2023: 2023 4th {Asia Service Sciences} and {Software Engineering Conference}'
+kalia_etal_2021:
+  type: article
+  title: '{Mono2Micro}: A Practical and Effective Tool for Decomposing Monolithic {Java} Applications to Microservices'
+  author:
+  - Kalia, Anup K.
+  - Xiao, Jin
+  - Krishna, Rahul
+  - Sinha, Saurabh
+  - Vukovic, Maja
+  - Banerjee, Debasish
+  date: 2021-08-20
+  page-range: 1214–1224
+  url:
+    value: https://dl.acm.org/doi/10.1145/3468264.3473915
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3468264.3473915
+    isbn: 978-1-4503-8562-6
+  parent:
+  - type: proceedings
+    title: Proceedings of the 29th {ACM Joint Meeting} on {European Software Engineering Conference} and {Symposium} on the {Foundations} of {Software Engineering}
+    publisher: ACM
+    location: Athens Greece
+  - type: conference
+    title: '{ESEC}/{FSE} ''21: 29th {ACM Joint European Software Engineering Conference} and {Symposium} on the {Foundations} of {Software Engineering}'
+mparmpoutis_kakarontzas_2022:
+  type: article
+  title: 'Using {Database Schemas} of {Legacy Applications} for {Microservices Identification}: {A Mapping Study}'
+  author:
+  - Mparmpoutis, Antonios
+  - Kakarontzas, George
+  date: 2022-09-16
+  page-range: 1–7
+  url:
+    value: https://dl.acm.org/doi/10.1145/3564982.3564995
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3564982.3564995
+    isbn: 978-1-4503-9740-7
+  parent:
+  - type: proceedings
+    title: Proceedings of the 6th {International Conference} on {Algorithms}, {Computing} and {Systems}
+    publisher: ACM
+    location: Larissa Greece
+  - type: conference
+    title: '{ICACS} 2022: 2022 {The} 6th {International Conference} on {Algorithms}, {Computing} and {Systems}'
+nitin_etal_2022:
+  type: article
+  title: '{CARGO}: {AI-Guided Dependency Analysis} for {Migrating Monolithic Applications} to {Microservices Architecture}'
+  author:
+  - Nitin, Vikram
+  - Asthana, Shubhi
+  - Ray, Baishakhi
+  - Krishna, Rahul
+  date: 2022-10-10
+  page-range: 1–12
+  url:
+    value: https://dl.acm.org/doi/10.1145/3551349.3556960
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3551349.3556960
+    isbn: 978-1-4503-9475-8
+  parent:
+  - type: proceedings
+    title: Proceedings of the 37th {IEEE}/{ACM International Conference} on {Automated Software Engineering}
+    publisher: ACM
+    location: Rochester MI USA
+  - type: conference
+    title: '{ASE} ''22: 37th {IEEE}/{ACM International Conference} on {Automated Software Engineering}'
+santos_paula_2021:
+  type: article
+  title: Microservice Decomposition and Evaluation Using Dependency Graph and Silhouette Coefficient
+  author:
+  - Santos, Ana
+  - Paula, Hugo
+  date: 2021-09-27
+  page-range: 51–60
+  url:
+    value: https://dl.acm.org/doi/10.1145/3483899.3483908
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3483899.3483908
+    isbn: 978-1-4503-8419-3
+  parent:
+  - type: proceedings
+    title: 15th {Brazilian Symposium} on {Software Components}, {Architectures}, and {Reuse}
+    publisher: ACM
+    location: Joinville Brazil
+  - type: conference
+    title: '{SBCARS} ''21: {Brazilian Symposium} on {Software Components}, {Architectures}, and {Reuse}'
+sellami_etal_2022a:
+  type: article
+  title: A {Hierarchical DBSCAN Method} for {Extracting Microservices} from {Monolithic Applications}
+  author:
+  - Sellami, Khaled
+  - Saied, Mohamed Aymen
+  - Ouni, Ali
+  date: 2022-06-13
+  page-range: 201–210
+  url:
+    value: https://dl.acm.org/doi/10.1145/3530019.3530040
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3530019.3530040
+    isbn: 978-1-4503-9613-4
+  parent:
+  - type: proceedings
+    title: The {International Conference} on {Evaluation} and {Assessment} in {Software Engineering} 2022
+    publisher: ACM
+    location: Gothenburg Sweden
+  - type: conference
+    title: '{EASE} 2022: {The International Conference} on {Evaluation} and {Assessment} in {Software Engineering} 2022'
+wei_etal_2020:
+  type: article
+  title: A {Feature Table} Approach to Decomposing Monolithic Applications into Microservices
+  author:
+  - Wei, Yuyang
+  - Yu, Yijun
+  - Pan, Minxue
+  - Zhang, Tian
+  date: 2020-11
+  page-range: 21–30
+  url:
+    value: https://dl.acm.org/doi/10.1145/3457913.3457939
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3457913.3457939
+    isbn: 978-1-4503-8819-1
+  parent:
+  - type: proceedings
+    title: 12th {Asia-Pacific Symposium} on {Internetware}
+    publisher: ACM
+    location: Singapore Singapore
+  - type: conference
+    title: 'Internetware''20: 12th {Asia-Pacific Symposium} on {Internetware}'
+
