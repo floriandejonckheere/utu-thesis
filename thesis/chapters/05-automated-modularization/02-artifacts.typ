@@ -56,6 +56,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @sellami_etal_2022
       @hasan_etal_2023
       @nitin_etal_2022
+      @kalia_etal_2021
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -127,7 +128,7 @@ For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<lourenco_silva_20
 #citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
-Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
 #citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, but require a list of microservices to be specified before the decomposition is performed.
 
 #citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.

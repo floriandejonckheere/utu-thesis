@@ -37,6 +37,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @sellami_etal_2022
       @hasan_etal_2023
       @nitin_etal_2022
+      @kalia_etal_2021
     ],
 
     "Coupling",
@@ -60,6 +61,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @sellami_etal_2022
       @hasan_etal_2023
       @nitin_etal_2022
+      @kalia_etal_2021
     ],
 
     "Network overhead",
@@ -93,6 +95,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @wu_zhang_2022
       @brito_etal_2021
       @sellami_etal_2022
+      @kalia_etal_2021
     ],
 
     "Other metrics",
@@ -111,6 +114,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @sellami_etal_2022 // Non-Extreme Distribution
       @hasan_etal_2023 // Size
       @nitin_etal_2022 // Business Context Purity
+      @kalia_etal_2021 // Size
     ],
 
     "No metrics",
@@ -219,6 +223,10 @@ The metric measures the similarity between two clusters in a decomposition, and 
 
 #citeauthor(<hao_etal_2023>) use the Matching Degree metric as quality indicator.
 The metric is calculated by dividing the number of intersections of database tables in a given microservice and a given cluster by the total number of tables used in the microservice.
+
+#citeauthor(<hasan_etal_2023>) and #citeauthor(<kalia_etal_2021>) use the Size metric to evaluate the quality of the microservice decomposition.
+The metric measures how evenly the size of the proposed microservices is.
+The size metric was originallly proposed by #citeauthor(<wu_etal_2005>).
 
 ==== No metrics
 

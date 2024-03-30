@@ -36,6 +36,7 @@ The identified classes of microservice candidate identification algorithms are d
       @ma_etal_2022 // Hierarchical clustering
       @sellami_etal_2022 // DBSCAN
       @nitin_etal_2022 // Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
+      @kalia_etal_2021 // Hierarchical clustering
     ],
 
     "Evolutionary algorithms",
