@@ -4,6 +4,7 @@
 
 In this chapter, we analyze and design our solution for identification of microservice candidates.
 We start by identifying the functional and non-functional requirements for the solution.
+// TODO: start with problem formulation (@sellami_etal_2022)
 
 Then, we propose a microservice decomposition approach using the three-step process by #citeauthor(<abdellatif_etal_2021>).
 

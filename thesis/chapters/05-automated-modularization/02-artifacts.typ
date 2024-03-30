@@ -52,6 +52,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @lourenco_silva_2023
       @hao_etal_2023
       @brito_etal_2021
+      @sellami_etal_2022
     ],
 
     "Execution data", // e.g., log files, execution traces

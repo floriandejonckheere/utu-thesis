@@ -20,7 +20,7 @@ The identified classes of microservice candidate identification algorithms are d
     align: (left, left, left),
     [*Type*], [*Example algorithms*], [*Publications*],
     "Clustering algorithms",
-    "K-Means, Hierarchical Agglomerative Clustering, Affinity Propagation",
+    "K-Means, DBSCAN, Hierarchical Agglomerative Clustering, Affinity Propagation",
     [
       @daoud_etal_2020 // Hierarchical Agglomerative clustering
       @saidi_etal_2023 // K-means
@@ -34,6 +34,7 @@ The identified classes of microservice candidate identification algorithms are d
       @lourenco_silva_2023 // Hierarchical clustering
       @hao_etal_2023 // K-means
       @ma_etal_2022 // Hierarchical clustering
+      @sellami_etal_2022 // DBSCAN
     ],
 
     "Evolutionary algorithms",
@@ -89,6 +90,8 @@ Hierarchical clustering approaches are used in various publications @selmadji_et
 #citeauthor(<daoud_etal_2020>) extend the hierarchical agglomerative clustering (HAC) algorithm @murtagh_legendre_2014 with a collaborative approach, where the clustering is performed by multiple homogenous clustering nodes, each responsible for a subset of the data.
 
 #citeauthor(<selmadji_etal_2020>) propose two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
+
+#citeauthor(<sellami_etal_2022>) use the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm @ester_etal_1996 to identify microservices.
 
 ==== Evolutionary algorithms
 

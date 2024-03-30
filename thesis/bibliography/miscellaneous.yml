@@ -277,3 +277,22 @@ murtagh_legendre_2014:
     publisher: Springer Science, Business Media LLC
     issue: 3
     volume: 31
+
+ester_etal_1996:
+  type: article
+  title: A density-based algorithm for discovering clusters in large spatial databases with noise
+  author:
+    - Ester, Martin
+    - Kriegel, Hans-Peter
+    - Sander, Jörg
+    - Xu, Xiaowei
+  date: 1996
+  page-range: 226
+  parent:
+    type: proceedings
+    title: Proceedings of the Second International Conference on Knowledge Discovery and Data Mining
+    publisher: AAAI Press
+    location: Portland, Oregon
+    parent:
+      type: proceedings
+      title: KDD'96

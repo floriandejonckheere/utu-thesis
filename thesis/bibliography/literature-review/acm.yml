@@ -176,7 +176,7 @@ santos_paula_2021:
     location: Joinville Brazil
   - type: conference
     title: '{SBCARS} ''21: {Brazilian Symposium} on {Software Components}, {Architectures}, and {Reuse}'
-sellami_etal_2022a:
+sellami_etal_2022:
   type: article
   title: A {Hierarchical DBSCAN Method} for {Extracting Microservices} from {Monolithic Applications}
   author:
