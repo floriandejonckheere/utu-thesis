@@ -296,3 +296,24 @@ ester_etal_1996:
     parent:
       type: proceedings
       title: KDD'96
+
+traag_etal_2019:
+  type: article
+  title: 'From Louvain to Leiden: guaranteeing well-connected communities'
+  author:
+    - Traag, V. A.
+    - Waltman, L.
+    - name: Eck
+      given-name: N. J.
+      prefix: van
+  date: 2019-03
+  url: http://dx.doi.org/10.1038/s41598-019-41695-z
+  serial-number:
+    doi: 10.1038/s41598-019-41695-z
+    issn: 2045-2322
+  parent:
+    type: periodical
+    title: Scientific Reports
+    publisher: Springer Science, Business Media LLC
+    issue: 1
+    volume: 9

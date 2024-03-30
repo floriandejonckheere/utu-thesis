@@ -114,6 +114,7 @@ Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest
 
 #citeauthor(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
 The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
+#citeauthor(<hasan_etal_2023>) use the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
 
 ==== Other algorithms
 

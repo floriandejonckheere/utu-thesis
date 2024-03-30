@@ -30,6 +30,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @zhou_xiong_2022
       @quattrocchi_etal_2024
       @wei_etal_2020
+      @hasan_etal_2023
     ],
 
     "Code", // e.g., source code, revision history
@@ -53,6 +54,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @hao_etal_2023
       @brito_etal_2021
       @sellami_etal_2022
+      @hasan_etal_2023
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -100,6 +102,7 @@ For example, #citeauthor(<al_debagy_martinek_2020>) propose a data-driven method
 The method extracts the information from the specification and converts it into vector representation for further processing.
 
 #citeauthor(<zhou_xiong_2022>) use readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
+The decomposition tool proposed by #citeauthor(<hasan_etal_2023>) uses design documents as well, although the specifications are inferred from the source code of the software system, and do not require pre-existing design documents.
 
 #citeauthor(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.

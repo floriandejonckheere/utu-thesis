@@ -35,6 +35,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @brito_etal_2021
       @wei_etal_2020
       @sellami_etal_2022
+      @hasan_etal_2023
     ],
 
     "Coupling",
@@ -56,6 +57,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @brito_etal_2021
       @wei_etal_2020
       @sellami_etal_2022
+      @hasan_etal_2023
     ],
 
     "Network overhead",
@@ -71,6 +73,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @al_debagy_martinek_2020
       @santos_silva_2022
       @lourenco_silva_2023
+      @hasan_etal_2023
     ],
 
     "CPU and memory usage",
@@ -103,6 +106,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @ma_etal_2022 // Adjusted Rand Index
       @wei_etal_2020 // Instability
       @sellami_etal_2022 // Non-Extreme Distribution
+      @hasan_etal_2023 // Size
     ],
 
     "No metrics",
