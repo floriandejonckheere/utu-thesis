@@ -16,6 +16,15 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 // TODO: follow general structure of @kalia_etal_2021
 
+#v(2em)
+
+#figure(
+  image("/figures/architecture.svg"),
+  caption: [Overview of the architecture of the proposed solution]
+) <architecture>
+
+#v(2em)
+
 == Requirements
 
 // Functional: visualization, user-imposed priorities, gradual migration, technology
