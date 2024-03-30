@@ -35,6 +35,7 @@ The identified classes of microservice candidate identification algorithms are d
       @hao_etal_2023 // K-means
       @ma_etal_2022 // Hierarchical clustering
       @sellami_etal_2022 // DBSCAN
+      @nitin_etal_2022 // Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
     ],
 
     "Evolutionary algorithms",
@@ -56,7 +57,7 @@ The identified classes of microservice candidate identification algorithms are d
       @mazlami_etal_2017 // Kruskal
       @filippone_etal_2023 // Louvain method
       @brito_etal_2021 // Louvain method
-      @hasan_etal_2023 // Leiden algorithm
+      @hasan_etal_2023 // Leiden algorithm, Mean Shift
       @nitin_etal_2022 // Label propagation
     ],
 
@@ -71,6 +72,7 @@ The identified classes of microservice candidate identification algorithms are d
       @agarwal_etal_2021 // Seed expansion
       @eyitemi_reiff_marganiec_2020 // Rule-based
       @wei_etal_2020 // Mapping-based
+      @hasan_etal_2023 // Gaussian Mixture
     ],
   ),
   caption: [Microservice candidate identification algorithm]
