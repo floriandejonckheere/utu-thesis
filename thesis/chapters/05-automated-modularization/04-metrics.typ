@@ -32,6 +32,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @lourenco_silva_2023
       @jin_etal_2021
       @zhang_etal_2020
+      @brito_etal_2021
     ],
 
     "Coupling",
@@ -50,6 +51,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @lourenco_silva_2023
       @jin_etal_2021
       @zhang_etal_2020
+      @brito_etal_2021
     ],
 
     "Network overhead",
@@ -77,7 +79,9 @@ Some of the algorithms require the use of a specific metric to guide the process
     [
       @li_etal_2023
       @bandara_perera_2020
+      @jin_etal_2021
       @wu_zhang_2022
+      @brito_etal_2021
     ],
 
     "Other metrics",
@@ -122,7 +126,8 @@ Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_202
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #citeauthor(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
-#citeauthor(<wu_zhang_2022>) use the inter-service cohesion metric and the inter-call percentage (ICP) as coupling metric as defined by #citeauthor(<jin_etal_2021>).
+#citeauthor(<jin_etal_2021>) introduce the concept of inter-service cohesion and inter-call percentage (ICP) as coupling metrics.
+Several other publications use the metrics introduced by #cite(<jin_etal_2021>, form: "author") in their research @wu_zhang_2022 @brito_etal_2021.
 
 Another approach to cohesion and coupling is that of #citeauthor(<santos_silva_2022>) and #citeauthor(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.

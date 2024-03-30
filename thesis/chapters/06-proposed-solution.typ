@@ -45,6 +45,7 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - Edge for each static call between methods, weighted (method-to-method edge)
 // - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
 // - Edge for association between two entities (entity-to-entity edge)
+// Merge multiple information collectors @brito_etal_2021
 
 // Version history (@mazlami_etal_2017)
 
@@ -72,6 +73,7 @@ Then, we propose a microservice decomposition approach using the three-step proc
 // - NSGA-III (@carvalho_etal_2020)
 // - Affinity Propagation (@al_debagy_martinek_2020)
 //    - Advantages: no need to define amount of clusters before
+// Comparison of community detection algorithms: @rahiminejad_etal_2019
 
 == Analysis
 

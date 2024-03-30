@@ -54,6 +54,7 @@ The identified classes of microservice candidate identification algorithms are d
       @yang_etal_2022 // Kruskal
       @mazlami_etal_2017 // Kruskal
       @filippone_etal_2023 // Louvain method
+      @brito_etal_2021 // Louvain method
     ],
 
     "Other algorithms",
