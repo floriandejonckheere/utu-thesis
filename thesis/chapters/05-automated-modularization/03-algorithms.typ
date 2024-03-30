@@ -37,6 +37,7 @@ The identified classes of microservice candidate identification algorithms are d
       @sellami_etal_2022 // DBSCAN
       @nitin_etal_2022 // Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
       @kalia_etal_2021 // Hierarchical clustering
+      @cao_zhang_2022 // Hierarchical clustering
     ],
 
     "Evolutionary algorithms",
@@ -52,7 +53,7 @@ The identified classes of microservice candidate identification algorithms are d
     ],
 
     "Graph algorithms",
-    "Kruskal, Louvain method, Label Propagation",
+    "Kruskal, Louvain method, Leiden algorithm, Label Propagation",
     [
       @yang_etal_2022 // Kruskal
       @mazlami_etal_2017 // Kruskal
@@ -60,6 +61,7 @@ The identified classes of microservice candidate identification algorithms are d
       @brito_etal_2021 // Louvain method
       @hasan_etal_2023 // Leiden algorithm, Mean Shift
       @nitin_etal_2022 // Label propagation
+      @cao_zhang_2022 // Leiden algorithm
     ],
 
     "Other algorithms",
@@ -114,12 +116,17 @@ Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as m
 
 Another common approach to identify microservice candidates is to use classical algorithms from graph theory.
 
+// TODO: explain more about community detection algorithms
+
 For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<yang_etal_2022>) use Kruskal's algorithm @algorithm_design to partition the graph into connected clusters.
 Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
 
 #citeauthor(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
 The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
 #citeauthor(<hasan_etal_2023>) use the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
+
+#citeauthor(<cao_zhang_2022>) use both the Leiden algorithm and the hierarchical clustering algorithm to identify microservice candidates.
+First, the Leiden algorithm is used to detect cohesive communities in static and dynamic analysis data, and then the hierarchical clustering algorithm is used to merge the communities into microservice candidates based on a call relation matrix.
 
 #citeauthor(<nitin_etal_2022>) use Context sensitive Label Propagation (CARGO), an algorithm built on the principles of the Label Propagation algorithm @zhu_ghahramani_2003.
 CARGO is a community detection algorithm that is able to leverage the context embedded in the dependency graph to increase the cohesiveness of the communities.

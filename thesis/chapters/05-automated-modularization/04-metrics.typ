@@ -38,6 +38,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @hasan_etal_2023
       @nitin_etal_2022
       @kalia_etal_2021
+      @cao_zhang_2022
     ],
 
     "Coupling",
@@ -62,6 +63,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @hasan_etal_2023
       @nitin_etal_2022
       @kalia_etal_2021
+      @cao_zhang_2022
     ],
 
     "Network overhead",
@@ -115,6 +117,7 @@ Some of the algorithms require the use of a specific metric to guide the process
       @hasan_etal_2023 // Size
       @nitin_etal_2022 // Business Context Purity
       @kalia_etal_2021 // Size
+      @cao_zhang_2022 // Density
     ],
 
     "No metrics",

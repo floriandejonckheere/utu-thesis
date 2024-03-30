@@ -57,6 +57,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @hasan_etal_2023
       @nitin_etal_2022
       @kalia_etal_2021
+      @cao_zhang_2022
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -70,6 +71,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @zhang_etal_2020
       @ma_etal_2022
       @eyitemi_reiff_marganiec_2020
+      @cao_zhang_2022
     ],
   ),
   caption: [SDLC artifact categories]
@@ -128,7 +130,7 @@ For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<lourenco_silva_20
 #citeauthor(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
 #citeauthor(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
 
-Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Several publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 @cao_zhang_2022 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
 #citeauthor(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, but require a list of microservices to be specified before the decomposition is performed.
 
 #citeauthor(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
@@ -164,7 +166,7 @@ Using software probes inserted into the bytecode of respectively Java and .NET a
 ==== Hybrid approach
 
 Some publications suggest a hybrid approach using both static and dynamic analysis.
-For instance, #citeauthor(<wu_zhang_2022>) and #citeauthor(<carvalho_etal_2020>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
+For instance, #citeauthor(<wu_zhang_2022>), #citeauthor(<carvalho_etal_2020>) and #citeauthor(<cao_zhang_2022>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
 The approach proposed by #citeauthor(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
 
 #citeauthor(<hao_etal_2023>) use both static and dynamic analysis, albeit aimed at the database schema and database calls, respectively.
