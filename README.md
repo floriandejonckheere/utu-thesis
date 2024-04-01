@@ -23,6 +23,20 @@ make clean
 make words
 ```
 
+# Development
+
+## Bibliography
+
+To import a BibTeX file, use the following command:
+
+```
+# Convert to YAML
+hayagriva bibliography.bib > bibliography.yml
+
+# Remove curly braces
+sed -e 's/[\{\}]//g' -i bibliography.yml
+```
+
 # License
 
 Logo: Copyright (C) University of Turku
