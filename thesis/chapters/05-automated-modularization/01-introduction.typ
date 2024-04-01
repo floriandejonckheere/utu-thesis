@@ -182,10 +182,13 @@ To prevent bias and ensure the quality of the data extraction, the results were 
 == Report
 
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized in three dimensions.
+The categorization was only performed on the primary studies, as the secondary studies already aggregate and categorize primary studies.
+The secondary studies were used to perform the snowballing process, which resulted in additional primary studies being included in the systematic literature review.
 
 First, we categorized the publications based on the #acr("SDLC") artifact used as input for the microservice candidate identification algorithm.
 Each artifact category has an associated collection type: either static, dynamic, or hybrid. @bajaj_etal_2021.
 Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. execution logs). /* TODO: reference */
+/* TODO: elaborate more on the categories */
 Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
 
 Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.

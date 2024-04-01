@@ -238,7 +238,7 @@ The silhouette coefficient assesses clustering consistency by comparing the aver
 
 ==== No metrics
 
-Finally, some of the publications publications, do not mention any quality metrics used in the evaluation of the proposed decomposition.
+Some of the publications do not mention any quality metrics used in the evaluation of the proposed decomposition.
 These methods typically rely on the selection or approval of a software architect to choose the best decomposition, based on their experience and knowledge of the system.
 This is the case of #citeauthor(<eyitemi_reiff_marganiec_2020>), #citeauthor(<romani_etal_2022>), #citeauthor(<amiri_2018>), and #citeauthor(<escobar_etal_2016>).
 
