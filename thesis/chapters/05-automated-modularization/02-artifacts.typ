@@ -86,7 +86,7 @@ They include functional and non-functional requirements, use cases, user stories
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
 
-#include "02-artifacts-chart.typ"
+//#include "02-artifacts-chart.typ"
 
 #citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
 #citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
