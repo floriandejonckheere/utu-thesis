@@ -1,7 +1,5 @@
 #import "@preview/cetz:0.2.2"
 
-== Results and discussion
-
 #let data = (
   ([Requirements documents#linebreak()and models], 5),
   ([Design documents], 5),
