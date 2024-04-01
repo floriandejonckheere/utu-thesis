@@ -70,6 +70,59 @@ fritzsch_etal_2019:
     publisher: Springer International Publishing
     location: Cham
     volume: 11350
+kalia_etal_2020:
+  type: article
+  title: 'Mono2Micro: An AI-based Toolchain for Evolving Monolithic Enterprise Applications to a Microservice Architecture'
+  author:
+  - Kalia, Anup K.
+  - Xiao, Jin
+  - Lin, Chen
+  - Sinha, Saurabh
+  - Rofrano, John
+  - Vukovic, Maja
+  - Banerjee, Debasish
+  date: 2020-11-08
+  page-range: 1606–1610
+  url:
+    value: https://dl.acm.org/doi/10.1145/3368089.3417933
+    date: 2024-04-01
+  serial-number:
+    doi: 10.1145/3368089.3417933
+    isbn: 978-1-4503-7043-1
+  parent:
+  - type: proceedings
+    title: Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering
+    publisher: ACM
+    location: Virtual Event USA
+  - type: conference
+    title: 'ESEC/FSE ''20: 28th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'
+saidani_etal_2019:
+  type: anthos
+  title: Towards Automated Microservices Extraction Using Muti-objective Evolutionary Search
+  author:
+  - Saidani, Islem
+  - Ouni, Ali
+  - Mkaouer, Mohamed Wiem
+  - Saied, Aymen
+  date: 2019
+  editor:
+  - Yangui, Sami
+  - Bouassida Rodriguez, Ismael
+  - Drira, Khalil
+  - Tari, Zahir
+  page-range: 58–63
+  url:
+    value: https://link.springer.com/10.1007/978-3-030-33702-5_5
+    date: 2024-04-01
+  serial-number:
+    doi: 10.1007/978-3-030-33702-5_5
+    isbn: 978-3-030-33701-8 978-3-030-33702-5
+  parent:
+    type: anthology
+    title: Service-Oriented Computing
+    publisher: Springer International Publishing
+    location: Cham
+    volume: 11895
 wu_etal_2005:
   type: article
   title: Comparison of Clustering Algorithms in the Context of Software Evolution
