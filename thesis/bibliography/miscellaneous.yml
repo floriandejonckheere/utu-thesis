@@ -137,11 +137,11 @@ mitchell_etal_2001:
     isbn: 978-0-7695-1360-7
   parent:
     - type: proceedings
-      title: Proceedings {Working IEEE}/{IFIP Conference} on {Software Architecture}
+      title: Proceedings Working IEEE/IFIP Conference on Software Architecture
       publisher: IEEE Comput. Soc
       location: Amsterdam, Netherlands
     - type: conference
-      title: Working {IEEE}/{IFIP Conference} on {Software Architecture}
+      title: Working IEEE/IFIP Conference on Software Architecture
 
 eder_etal_1995:
   type: article
@@ -343,3 +343,26 @@ rousseeuw_1987:
     type: periodical
     title: Journal of Computational and Applied Mathematics
     volume: 20
+
+lopes_silva_2023:
+  type: article
+  title: 'Monolith Microservices Identification: Towards An Extensible Multiple Strategy Tool'
+  author:
+    - Lopes, Telmo
+    - Silva, António Rito
+  date: 2023-03
+  page-range: 111–115
+  url:
+    value: https://ieeexplore.ieee.org/document/10092693/
+    date: 2024-03-08
+  serial-number:
+    doi: 10.1109/ICSA-C57050.2023.00034
+    isbn: 978-1-66546-459-8
+  parent:
+    - type: proceedings
+      title: 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C)
+      publisher: IEEE
+      location: L'Aquila, Italy
+    - type: conference
+      title: 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C)
+

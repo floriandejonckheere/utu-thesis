@@ -2,20 +2,22 @@
 
 = Proposed solution <proposedsolution>
 
-In this chapter, we analyze and design our solution for identification of microservice candidates.
+In this chapter, we propose our solution for identification of microservice candidates in a monolithic application.
+
+// Problem statement
+The goal of this solution is to identify a set of microservices that can be extracted from the source code of the given monolithic application, in order to facilitate the migration to a microservices architecture.
+As such, the problem can be formulated as a graph partitioning problem, where the vertices correspond to the modules or classes in the monolithic application, and the eges represent the dependencies between them.
+The input to the algorithm is a representation $M$ of the monolithic application, which consists of a set of classes $M_C = { c_1, c_2, ..., c_n }$ where $n$ is the number of classes in the application.
+The output of the algorithm is a set of microservices $S = { s_1, s_2, ..., s_m }$ where $m$ is the number of microservices in the proposed decomposition.
+As each class belongs to exactly microservice, the output can be represented as a mapping $f: M_C -> S$, where $f(c_i) = s_j$ if class $c_i$ belongs to microservice $s_j$.
+
 We start by identifying the functional and non-functional requirements for the solution.
-// TODO: start with problem formulation (@sellami_etal_2022)
+Then, we propose a four-step approach to decomposition adapted from the microservice identification pipeline by #citeauthor(<lopes_silva_2023>).
 
-Then, we propose a microservice decomposition approach using the three-step process by #citeauthor(<abdellatif_etal_2021>).
-
-- *Collect*: the necessary data is collected from the application and its environment.
+- *Extraction*: the necessary information is extracted from the application and its environment.
 - *Decomposition*: using the collected data, a decomposition of the application into microservices is proposed.
-- *Analysis*: the proposed decomposition is analyzed to evaluate the effectiveness of the chosen approach.
-
-// TODO: design software according to @lopes_silva_2023' 5-step pipeline process
-// Collection, representation, decomposition, quality assessment and comparison, measures, visualization, graphs
-
-// TODO: follow general structure of @kalia_etal_2021
+- *Visualization*: the proposed decomposition is visualized to facilitate the understanding of the architecture.
+- *Quality assessment*: the proposed decomposition is evaluated according to a set of quality metrics.
 
 #v(2em)
 
@@ -26,12 +28,19 @@ Then, we propose a microservice decomposition approach using the three-step proc
 
 #v(2em)
 
+The next sections detail each of these steps, providing a comprehensive overview of the proposed solution.
+The process we describe is generic and not tied to any specific programming language or paradigm.
+We implemented a prototype of the proposed solution in Ruby, as the monolithic application we use for evaluation is written in Ruby.
+The implementation is available online#footnote[#link("https://github.com/floriandejonckheere/mosaik")[https://github.com/floriandejonckheere/mosaik]].
+
 == Requirements
 
 // Functional: visualization, user-imposed priorities, gradual migration, technology
 // Non-functional: usability, performance, maintainability, license
 
-== Collection
+// Quality requirements: @abdellatif_etal_2021
+
+== Extraction
 
 // Collection strategies
 // - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
@@ -83,7 +92,9 @@ Then, we propose a microservice decomposition approach using the three-step proc
 //    - Advantages: no need to define amount of clusters before
 // Comparison of community detection algorithms: @rahiminejad_etal_2019
 
-== Analysis
+== Visualization
+
+== Evaluation
 
 // Metrics: functional (cohesion, coupling) and non-functional (network overhead, CPU, memory)
 // Lots of metrics were studied by @candela_etal_2016

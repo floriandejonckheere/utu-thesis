@@ -19,7 +19,6 @@
   edge-corner-radius: 5pt,
   mark-scale: 80%,
 
-  rectangle((0,0), (3,1)),
   blob((0,0), [Source code], tint: green),
   edge("-|>"),
   blob((1,0), [Static analysis]),
