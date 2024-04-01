@@ -196,6 +196,9 @@
   set page(numbering: "1")
   counter(page).update(1)
 
+  // Hide numbering for deeply nested sections
+  show heading.where(level: 4): it => [#block(it.body)]
+
   // Main document
   for chapter in chapters {
     include "chapters/" + chapter + ".typ"
