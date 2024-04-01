@@ -34,7 +34,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
       @hasan_etal_2023
     ],
 
-    "Code", // e.g., source code, revision history
+    "Codebase", // e.g., source code, revision history
     "Static",
     [
       @escobar_etal_2016
@@ -117,9 +117,9 @@ Software architects describe the software system using a custom architecture des
 The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
 #citeauthor(<wei_etal_2020>) uses a similar approach, gathering a list of features from the software architect, and proposing a microservice decomposition based on pre-trained feature tables.
 
-==== Code
+==== Codebase
 
-A third category of #acr("SDLC") artifacts is the executable code of the software system.
+A third category of #acr("SDLC") artifacts is the codebase of the software system.
 This can be the source code of the software system, or a binary distribution (e.g. a JAR file).
 For example, the implementation in @agarwal_etal_2021 accepts either source code or compiled binary code for analysis.
 
