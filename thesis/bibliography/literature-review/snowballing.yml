@@ -1,6 +1,6 @@
 baresi_etal_2017:
   type: anthos
-  title: Microservices {Identification Through Interface Analysis}
+  title: Microservices Identification Through Interface Analysis
   author:
   - Baresi, Luciano
   - Garriga, Martin
@@ -19,7 +19,7 @@ baresi_etal_2017:
     isbn: 978-3-319-67261-8 978-3-319-67262-5
   parent:
     type: anthology
-    title: Service-{Oriented} and {Cloud Computing}
+    title: Service-Oriented and Cloud Computing
     publisher: Springer International Publishing
     location: Cham
     volume: 10465
@@ -39,14 +39,14 @@ eski_buzluca_2018:
     isbn: 978-1-4503-6422-5
   parent:
   - type: proceedings
-    title: 'Proceedings of the 19th {International Conference} on {Agile Software Development}: {Companion}'
+    title: 'Proceedings of the 19th International Conference on Agile Software Development: Companion'
     publisher: ACM
     location: Porto Portugal
   - type: conference
-    title: '{XP} ''18 {Companion}: 19th {International Conference} on {Agile Software Development}'
+    title: 'XP ''18 Companion: 19th International Conference on Agile Software Development'
 fritzsch_etal_2019:
   type: anthos
-  title: 'From {Monolith} to {Microservices}: {A Classification} of {Refactoring Approaches}'
+  title: 'From Monolith to Microservices: A Classification of Refactoring Approaches'
   author:
   - Fritzsch, Jonas
   - Bogner, Justus
@@ -66,7 +66,7 @@ fritzsch_etal_2019:
     isbn: 978-3-030-06018-3 978-3-030-06019-0
   parent:
     type: anthology
-    title: Software {Engineering Aspects} of {Continuous Development} and {New Paradigms} of {Software Production} and {Deployment}
+    title: Software Engineering Aspects of Continuous Development and New Paradigms of Software Production and Deployment
     publisher: Springer International Publishing
     location: Cham
     volume: 11350
@@ -87,9 +87,9 @@ wu_etal_2005:
     isbn: 978-0-7695-2368-2
   parent:
   - type: proceedings
-    title: 21st {IEEE International Conference} on {Software Maintenance} ({ICSM}'05)
+    title: 21st IEEE International Conference on Software Maintenance (ICSM'05)
     publisher: IEEE
     location: Budapest, Hungary
   - type: conference
-    title: 21st {IEEE International Conference} on {Software Maintenance} ({ICSM}'05)
+    title: 21st IEEE International Conference on Software Maintenance (ICSM'05)
 

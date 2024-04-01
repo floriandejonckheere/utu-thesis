@@ -1,5 +1,7 @@
 #import "@preview/acrostiche:0.3.1": *
 
+#import "/helpers.typ": citeauthor
+
 = #acr("SLR") publications <slr_publications>
 
 #set heading(numbering: none)
@@ -8,6 +10,8 @@
 
 == Primary studies
 
+#let index = 0
+
 #show figure: set block(breakable: true)
 #figure(
   table(
@@ -15,11 +19,20 @@
     inset: 10pt,
     align: (right, left),
     [], [*Publication*],
-    ..for (i, key) in publications.platforms.values().map((p) => p.primary).flatten().enumerate() {
-      (
-        [#(i + 1)],
-        cite(label(key), form: "full"),
-      )
+    ..for (platform) in publications.platforms.keys() {
+      let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
+
+      for (key) in publications.platforms.at(platform).primary {
+      index += 1
+
+        (
+          [#index],
+          [
+            #text(pubs.at(key).at("title"), style: "italic"),
+            #citeauthor(label(key))
+          ],
+        )
+      }
     }
   ),
   caption: [Selected publications (primary studies)]
@@ -29,6 +42,8 @@
 
 == Secondary studies
 
+#let index = 0
+
 #show figure: set block(breakable: true)
 #figure(
   table(
@@ -36,11 +51,20 @@
     inset: 10pt,
     align: (right, left),
     [], [*Publication*],
-    ..for (i, key) in publications.platforms.values().map((p) => p.secondary).flatten().enumerate() {
-      (
-        [#(i + 1)],
-        cite(label(key), form: "full"),
-      )
+    ..for (platform) in publications.platforms.keys() {
+      let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
+
+      for (key) in publications.platforms.at(platform).secondary {
+      index += 1
+
+        (
+          [#index],
+          [
+            #text(pubs.at(key).at("title"), style: "italic"),
+            #citeauthor(label(key))
+          ],
+        )
+      }
     }
   ),
   caption: [Selected publications (secondary studies)]

@@ -1,6 +1,6 @@
 abgaz_etal_2023:
   type: article
-  title: 'Decomposition of {Monolith Applications Into Microservices Architectures}: {A Systematic Review}'
+  title: 'Decomposition of Monolith Applications Into Microservices Architectures: A Systematic Review'
   author:
   - Abgaz, Yalemisew
   - McCarren, Andrew
@@ -27,7 +27,7 @@ abgaz_etal_2023:
     volume: 49
 agarwal_etal_2021:
   type: article
-  title: Monolith to {Microservice Candidates} Using {Business Functionality Inference}
+  title: Monolith to Microservice Candidates Using Business Functionality Inference
   author:
   - Agarwal, Shivali
   - Sinha, Raunak
@@ -47,14 +47,14 @@ agarwal_etal_2021:
     isbn: 978-1-66541-681-8
   parent:
   - type: proceedings
-    title: 2021 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2021 IEEE International Conference on Web Services (ICWS)
     publisher: IEEE
     location: Chicago, IL, USA
   - type: conference
-    title: 2021 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2021 IEEE International Conference on Web Services (ICWS)
 al_debagy_martinek_2020:
   type: article
-  title: 'Extracting {Microservices}’ {Candidates} from {Monolithic Applications}: {Interface Analysis} and {Evaluation Metrics Approach}'
+  title: 'Extracting Microservices’ Candidates from Monolithic Applications: Interface Analysis and Evaluation Metrics Approach'
   author:
   - Al-Debagy, Omar
   - Martinek, Peter
@@ -68,14 +68,14 @@ al_debagy_martinek_2020:
     isbn: 978-1-72818-050-2
   parent:
   - type: proceedings
-    title: 2020 {IEEE} 15th {International Conference} of {System} of {Systems Engineering} ({SoSE})
+    title: 2020 IEEE 15th International Conference of System of Systems Engineering (SoSE)
     publisher: IEEE
     location: Budapest, Hungary
   - type: conference
-    title: 2020 {IEEE} 15th {International Conference} of {System} of {Systems Engineering} ({SoSE})
+    title: 2020 IEEE 15th International Conference of System of Systems Engineering (SoSE)
 amiri_2018:
   type: article
-  title: Object-{Aware Identification} of {Microservices}
+  title: Object-Aware Identification of Microservices
   author: Amiri, Mohammad Javad
   date: 2018-07
   page-range: 253–256
@@ -87,14 +87,14 @@ amiri_2018:
     isbn: 978-1-5386-7250-1
   parent:
   - type: proceedings
-    title: 2018 {IEEE International Conference} on {Services Computing} ({SCC})
+    title: 2018 IEEE International Conference on Services Computing (SCC)
     publisher: IEEE
     location: San Francisco, CA, USA
   - type: conference
-    title: 2018 {IEEE International Conference} on {Services Computing} ({SCC})
+    title: 2018 IEEE International Conference on Services Computing (SCC)
 bajaj_etal_2021:
   type: article
-  title: A {Prescriptive Model} for {Migration} to {Microservices Based} on {SDLC Artifacts}
+  title: A Prescriptive Model for Migration to Microservices Based on SDLC Artifacts
   author:
   - Bajaj, Deepali
   - Bharti, Urmil
@@ -112,7 +112,7 @@ bajaj_etal_2021:
     title: Journal of Web Engineering
 bandara_perera_2020:
   type: article
-  title: Transforming {Monolithic Systems} to {Microservices} - {An Analysis Toolkit} for {Legacy Code Evaluation}
+  title: Transforming Monolithic Systems to Microservices - An Analysis Toolkit for Legacy Code Evaluation
   author:
   - Bandara, Chamika
   - Perera, Indika
@@ -126,14 +126,14 @@ bandara_perera_2020:
     isbn: 978-1-72818-655-9
   parent:
   - type: proceedings
-    title: 2020 20th {International Conference} on {Advances} in {ICT} for {Emerging Regions} ({ICTer})
+    title: 2020 20th International Conference on Advances in ICT for Emerging Regions (ICTer)
     publisher: IEEE
     location: Colombo, Sri Lanka
   - type: conference
-    title: 2020 20th {International Conference} on {Advances} in {ICT} for {Emerging Regions} ({ICTer})
+    title: 2020 20th International Conference on Advances in ICT for Emerging Regions (ICTer)
 carvalho_etal_2020:
   type: article
-  title: On the {Performance} and {Adoption} of {Search-Based Microservice Identification} with {toMicroservices}
+  title: On the Performance and Adoption of Search-Based Microservice Identification with toMicroservices
   author:
   - Carvalho, Luiz
   - Garcia, Alessandro
@@ -154,14 +154,14 @@ carvalho_etal_2020:
     isbn: 978-1-72815-619-4
   parent:
   - type: proceedings
-    title: 2020 {IEEE International Conference} on {Software Maintenance} and {Evolution} ({ICSME})
+    title: 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME)
     publisher: IEEE
     location: Adelaide, Australia
   - type: conference
-    title: 2020 {IEEE International Conference} on {Software Maintenance} and {Evolution} ({ICSME})
+    title: 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME)
 daoud_etal_2020:
   type: article
-  title: Towards an {Automatic Identification} of {Microservices} from {Business Processes}
+  title: Towards an Automatic Identification of Microservices from Business Processes
   author:
   - Daoud, Mohamed
   - El Mezouari, Asmae
@@ -179,11 +179,11 @@ daoud_etal_2020:
     isbn: 978-1-72816-975-0
   parent:
   - type: proceedings
-    title: '2020 {IEEE} 29th {International Conference} on {Enabling Technologies}: {Infrastructure} for {Collaborative Enterprises} ({WETICE})'
+    title: '2020 IEEE 29th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)'
     publisher: IEEE
     location: Bayonne, France
   - type: conference
-    title: '2020 {IEEE} 29th {International Conference} on {Enabling Technologies}: {Infrastructure} for {Collaborative Enterprises} ({WETICE})'
+    title: '2020 IEEE 29th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)'
 escobar_etal_2016:
   type: article
   title: Towards the Understanding and Evolution of Monolithic Applications as Microservices
@@ -205,14 +205,14 @@ escobar_etal_2016:
     isbn: 978-1-5090-1633-4
   parent:
   - type: proceedings
-    title: 2016 {XLII Latin American Computing Conference} ({CLEI})
+    title: 2016 XLII Latin American Computing Conference (CLEI)
     publisher: IEEE
     location: Valparaíso, Chile
   - type: conference
-    title: 2016 {XLII Latin American Computing Conference} ({CLEI})
+    title: 2016 XLII Latin American Computing Conference (CLEI)
 eyitemi_reiff_marganiec_2020:
   type: article
-  title: System {Decomposition} to {Optimize Functionality Distribution} in {Microservices} with {Rule Based Approach}
+  title: System Decomposition to Optimize Functionality Distribution in Microservices with Rule Based Approach
   author:
   - Eyitemi, Fola-Dami
   - Reiff-Marganiec, Stephan
@@ -226,14 +226,14 @@ eyitemi_reiff_marganiec_2020:
     isbn: 978-1-72816-972-9
   parent:
   - type: proceedings
-    title: 2020 {IEEE International Conference} on {Service Oriented Systems Engineering} ({SOSE})
+    title: 2020 IEEE International Conference on Service Oriented Systems Engineering (SOSE)
     publisher: IEEE
     location: Oxford, United Kingdom
   - type: conference
-    title: 2020 {IEEE International Conference} on {Service-Oriented System Engineering} ({SOSE})
+    title: 2020 IEEE International Conference on Service-Oriented System Engineering (SOSE)
 filippone_etal_2021:
   type: article
-  title: Migration of {Monoliths} through the {Synthesis} of {Microservices} Using {Combinatorial Optimization}
+  title: Migration of Monoliths through the Synthesis of Microservices Using Combinatorial Optimization
   author:
   - Filippone, Gianluca
   - Autili, Marco
@@ -249,11 +249,11 @@ filippone_etal_2021:
     isbn: 978-1-66542-603-9
   parent:
   - type: proceedings
-    title: 2021 {IEEE International Symposium} on {Software Reliability Engineering Workshops} ({ISSREW})
+    title: 2021 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)
     publisher: IEEE
     location: Wuhan, China
   - type: conference
-    title: 2021 {IEEE International Symposium} on {Software Reliability Engineering Workshops} ({ISSREW})
+    title: 2021 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)
 filippone_etal_2023:
   type: article
   title: 'From Monolithic to Microservice Architecture: An Automated Approach Based on Graph Clustering and Combinatorial Optimization'
@@ -273,14 +273,14 @@ filippone_etal_2023:
     isbn: '9798350397499'
   parent:
   - type: proceedings
-    title: 2023 {IEEE} 20th {International Conference} on {Software Architecture} ({ICSA})
+    title: 2023 IEEE 20th International Conference on Software Architecture (ICSA)
     publisher: IEEE
     location: L'Aquila, Italy
   - type: conference
-    title: 2023 {IEEE} 20th {International Conference} on {Software Architecture} ({ICSA})
+    title: 2023 IEEE 20th International Conference on Software Architecture (ICSA)
 hao_etal_2023:
   type: article
-  title: Research on {Decompostion Method} of {Relational Database Oriented} to {Microservice Refactoring}
+  title: Research on Decompostion Method of Relational Database Oriented to Microservice Refactoring
   author:
   - Hao, Jiaqi
   - Zhao, Junfeng
@@ -290,7 +290,7 @@ hao_etal_2023:
     type: periodical
 jin_etal_2021:
   type: article
-  title: Service {Candidate Identification} from {Monolithic Systems Based} on {Execution Traces}
+  title: Service Candidate Identification from Monolithic Systems Based on Execution Traces
   author:
   - Jin, Wuxia
   - Liu, Ting
@@ -313,7 +313,7 @@ jin_etal_2021:
     volume: 47
 kamimura_etal_2018:
   type: article
-  title: Extracting {Candidates} of {Microservices} from {Monolithic Application Code}
+  title: Extracting Candidates of Microservices from Monolithic Application Code
   author:
   - Kamimura, Manabu
   - Yano, Keisuke
@@ -329,14 +329,14 @@ kamimura_etal_2018:
     isbn: 978-1-72811-970-0
   parent:
   - type: proceedings
-    title: 2018 25th {Asia-Pacific Software Engineering Conference} ({APSEC})
+    title: 2018 25th Asia-Pacific Software Engineering Conference (APSEC)
     publisher: IEEE
     location: Nara, Japan
   - type: conference
-    title: 2018 25th {Asia-Pacific Software Engineering Conference} ({APSEC})
+    title: 2018 25th Asia-Pacific Software Engineering Conference (APSEC)
 kazanavicius_mazeika_2019:
   type: article
-  title: Migrating {Legacy Software} to {Microservices Architecture}
+  title: Migrating Legacy Software to Microservices Architecture
   author:
   - Kazanavicius, Justas
   - Mazeika, Dalius
@@ -350,14 +350,14 @@ kazanavicius_mazeika_2019:
     isbn: 978-1-72812-499-5
   parent:
   - type: proceedings
-    title: 2019 {Open Conference} of {Electrical}, {Electronic} and {Information Sciences} ({eStream})
+    title: 2019 Open Conference of Electrical, Electronic and Information Sciences (eStream)
     publisher: IEEE
     location: Vilnius, Lithuania
   - type: conference
-    title: 2019 {Open Conference} of {Electrical}, {Electronic} and {Information Sciences} ({eStream})
+    title: 2019 Open Conference of Electrical, Electronic and Information Sciences (eStream)
 kinoshita_kanuka_2022:
   type: article
-  title: Automated {Microservice Decomposition Method} as {Multi-Objective Optimization}
+  title: Automated Microservice Decomposition Method as Multi-Objective Optimization
   author:
   - Kinoshita, Takahiro
   - Kanuka, Hideyuki
@@ -371,14 +371,14 @@ kinoshita_kanuka_2022:
     isbn: 978-1-66549-493-9
   parent:
   - type: proceedings
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture Companion} ({ICSA-C})
+    title: 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C)
     publisher: IEEE
     location: Honolulu, HI, USA
   - type: conference
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture Companion} ({ICSA-C})
+    title: 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C)
 li_etal_2023:
   type: article
-  title: '{RM2MS}: {A Tool} for {Automatic Identification} of {Microservices} from {Requirements Models}'
+  title: 'RM2MS: A Tool for Automatic Identification of Microservices from Requirements Models'
   author:
   - Li, Yang
   - Zhang, Yang
@@ -395,14 +395,14 @@ li_etal_2023:
     isbn: '9798350324983'
   parent:
   - type: proceedings
-    title: 2023 {ACM}/{IEEE International Conference} on {Model Driven Engineering Languages} and {Systems Companion} ({MODELS-C})
+    title: 2023 ACM/IEEE International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)
     publisher: IEEE
     location: Västerås, Sweden
   - type: conference
-    title: 2023 {ACM}/{IEEE International Conference} on {Model Driven Engineering Languages} and {Systems Companion} ({MODELS-C})
+    title: 2023 ACM/IEEE International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)
 lourenco_silva_2023:
   type: article
-  title: 'Monolith {Development History} for {Microservices Identification}: A {Comparative Analysis}'
+  title: 'Monolith Development History for Microservices Identification: A Comparative Analysis'
   author:
   - Lourenço, João
   - Silva, António Rito
@@ -416,14 +416,14 @@ lourenco_silva_2023:
     isbn: '9798350304855'
   parent:
   - type: proceedings
-    title: 2023 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2023 IEEE International Conference on Web Services (ICWS)
     publisher: IEEE
     location: Chicago, IL, USA
   - type: conference
-    title: 2023 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2023 IEEE International Conference on Web Services (ICWS)
 ma_etal_2022:
   type: article
-  title: Migrating {Monoliths} to {Microservices} Based on the {Analysis} of {Database Access Requests}
+  title: Migrating Monoliths to Microservices Based on the Analysis of Database Access Requests
   author:
   - Ma, Shang-Pin
   - Lu, Tsung-Wen
@@ -438,14 +438,14 @@ ma_etal_2022:
     isbn: 978-1-66547-534-1
   parent:
   - type: proceedings
-    title: 2022 {IEEE International Conference} on {Service-Oriented System Engineering} ({SOSE})
+    title: 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)
     publisher: IEEE
     location: Newark, CA, USA
   - type: conference
-    title: 2022 {IEEE International Conference} on {Service-Oriented System Engineering} ({SOSE})
+    title: 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)
 mazlami_etal_2017:
   type: article
-  title: Extraction of {Microservices} from {Monolithic Software Architectures}
+  title: Extraction of Microservices from Monolithic Software Architectures
   author:
   - Mazlami, Genc
   - Cito, Jurgen
@@ -460,14 +460,14 @@ mazlami_etal_2017:
     isbn: 978-1-5386-0752-7
   parent:
   - type: proceedings
-    title: 2017 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2017 IEEE International Conference on Web Services (ICWS)
     publisher: IEEE
     location: Honolulu, HI, USA
   - type: conference
-    title: 2017 {IEEE International Conference} on {Web Services} ({ICWS})
+    title: 2017 IEEE International Conference on Web Services (ICWS)
 oumoussa_saidi_2024:
   type: article
-  title: 'Evolution of {Microservices Identification} in {Monolith Decomposition}: {A Systematic Review}'
+  title: 'Evolution of Microservices Identification in Monolith Decomposition: A Systematic Review'
   author:
   - Oumoussa, Idris
   - Saidi, Rajaa
@@ -477,7 +477,7 @@ oumoussa_saidi_2024:
     volume: 12
 quattrocchi_etal_2024:
   type: article
-  title: 'Cromlech: {Semi-Automated Monolith Decomposition Into Microservices}'
+  title: 'Cromlech: Semi-Automated Monolith Decomposition Into Microservices'
   author:
   - Quattrocchi, Giovanni
   - Cocco, Davide
@@ -497,7 +497,7 @@ quattrocchi_etal_2024:
     title: IEEE Transactions on Services Computing
 romani_etal_2022:
   type: article
-  title: 'Towards {Migrating Legacy Software Systems} to {Microservice-based Architectures}: A {Data-Centric Process} for {Microservice Identification}'
+  title: 'Towards Migrating Legacy Software Systems to Microservice-based Architectures: A Data-Centric Process for Microservice Identification'
   author:
   - Romani, Yamina
   - Tibermacine, Okba
@@ -512,14 +512,14 @@ romani_etal_2022:
     isbn: 978-1-66549-493-9
   parent:
   - type: proceedings
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture Companion} ({ICSA-C})
+    title: 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C)
     publisher: IEEE
     location: Honolulu, HI, USA
   - type: conference
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture Companion} ({ICSA-C})
+    title: 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C)
 saidi_etal_2023:
   type: article
-  title: A {DDD Approach Towards Automatic Migration To Microservices}
+  title: A DDD Approach Towards Automatic Migration To Microservices
   author:
   - Saidi, Malak
   - Tissaoui, Anis
@@ -534,14 +534,14 @@ saidi_etal_2023:
     isbn: '9798350321029'
   parent:
   - type: proceedings
-    title: 2023 {IEEE International Conference} on {Advanced Systems} and {Emergent Technologies} ({IC}_{ASET})
+    title: 2023 IEEE International Conference on Advanced Systems and Emergent Technologies (IC_ASET)
     publisher: IEEE
     location: Hammamet, Tunisia
   - type: conference
-    title: 2023 {IEEE International Conference} on {Advanced Systems} and {Emergent Technologies} ({IC}_{ASET})
+    title: 2023 IEEE International Conference on Advanced Systems and Emergent Technologies (IC_ASET)
 santos_silva_2022:
   type: article
-  title: 'Microservices {Identification} in {Monolith Systems}: {Functionality Redesign Complexity} and {Evaluation} of {Similarity Measures}'
+  title: 'Microservices Identification in Monolith Systems: Functionality Redesign Complexity and Evaluation of Similarity Measures'
   author:
   - Santos, Samuel
   - Silva, António Rito
@@ -557,7 +557,7 @@ santos_silva_2022:
     title: Journal of Web Engineering
 schmidt_thiry_2020:
   type: article
-  title: 'Microservices Identification Strategies : {A} Review Focused on {Model-Driven Engineering} and {Domain Driven Design} Approaches'
+  title: 'Microservices Identification Strategies : A Review Focused on Model-Driven Engineering and Domain Driven Design Approaches'
   author:
   - Schmidt, Roger Anderson
   - Thiry, Marcello
@@ -571,14 +571,14 @@ schmidt_thiry_2020:
     isbn: 978-989-54-6590-3
   parent:
   - type: proceedings
-    title: 2020 15th {Iberian Conference} on {Information Systems} and {Technologies} ({CISTI})
+    title: 2020 15th Iberian Conference on Information Systems and Technologies (CISTI)
     publisher: IEEE
     location: Sevilla, Spain
   - type: conference
-    title: 2020 15th {Iberian Conference} on {Information Systems} and {Technologies} ({CISTI})
+    title: 2020 15th Iberian Conference on Information Systems and Technologies (CISTI)
 selmadji_etal_2020:
   type: article
-  title: From {Monolithic Architecture Style} to {Microservice} One {Based} on a {Semi-Automatic Approach}
+  title: From Monolithic Architecture Style to Microservice One Based on a Semi-Automatic Approach
   author:
   - Selmadji, Anfel
   - Seriai, Abdelhak-Djamel
@@ -596,14 +596,14 @@ selmadji_etal_2020:
     isbn: 978-1-72814-659-1
   parent:
   - type: proceedings
-    title: 2020 {IEEE International Conference} on {Software Architecture} ({ICSA})
+    title: 2020 IEEE International Conference on Software Architecture (ICSA)
     publisher: IEEE
     location: Salvador, Brazil
   - type: conference
-    title: 2020 {IEEE International Conference} on {Software Architecture} ({ICSA})
+    title: 2020 IEEE International Conference on Software Architecture (ICSA)
 wu_zhang_2022:
   type: article
-  title: Identification of {Microservices} through {Processed Dynamic Traces} and {Static Calls}
+  title: Identification of Microservices through Processed Dynamic Traces and Static Calls
   author:
   - Wu, Sijie
   - Zhang, Cheng
@@ -617,14 +617,14 @@ wu_zhang_2022:
     isbn: '9798350320404'
   parent:
   - type: proceedings
-    title: 2022 3rd {International Conference} on {Computer Science} and {Management Technology} ({ICCSMT})
+    title: 2022 3rd International Conference on Computer Science and Management Technology (ICCSMT)
     publisher: IEEE
     location: Shanghai, China
   - type: conference
-    title: 2022 3rd {International Conference} on {Computer Science} and {Management Technology} ({ICCSMT})
+    title: 2022 3rd International Conference on Computer Science and Management Technology (ICCSMT)
 yang_etal_2022:
   type: article
-  title: A {Microservices Identification Approach} Based on {Problem Frames}
+  title: A Microservices Identification Approach Based on Problem Frames
   author:
   - Yang, Zhumei
   - Wu, Sijie
@@ -639,14 +639,14 @@ yang_etal_2022:
     isbn: 978-1-66548-223-3
   parent:
   - type: proceedings
-    title: 2022 {IEEE} 2nd {International Conference} on {Software Engineering} and {Artificial Intelligence} ({SEAI})
+    title: 2022 IEEE 2nd International Conference on Software Engineering and Artificial Intelligence (SEAI)
     publisher: IEEE
     location: Xiamen, China
   - type: conference
-    title: 2022 {IEEE} 2nd {International Conference} on {Software Engineering} and {Artificial Intelligence} ({SEAI})
+    title: 2022 IEEE 2nd International Conference on Software Engineering and Artificial Intelligence (SEAI)
 zaragoza_etal_2022:
   type: article
-  title: Leveraging the {Layered Architecture} for {Microservice Recovery}
+  title: Leveraging the Layered Architecture for Microservice Recovery
   author:
   - Zaragoza, Pascal
   - Seriai, Abdelhak-Djamel
@@ -663,14 +663,14 @@ zaragoza_etal_2022:
     isbn: 978-1-66541-728-0
   parent:
   - type: proceedings
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture} ({ICSA})
+    title: 2022 IEEE 19th International Conference on Software Architecture (ICSA)
     publisher: IEEE
     location: Honolulu, HI, USA
   - type: conference
-    title: 2022 {IEEE} 19th {International Conference} on {Software Architecture} ({ICSA})
+    title: 2022 IEEE 19th International Conference on Software Architecture (ICSA)
 zhang_etal_2020:
   type: article
-  title: Automated {Microservice Identification} in {Legacy Systems} with {Functional} and {Non-Functional Metrics}
+  title: Automated Microservice Identification in Legacy Systems with Functional and Non-Functional Metrics
   author:
   - Zhang, Yukun
   - Liu, Bo
@@ -687,14 +687,14 @@ zhang_etal_2020:
     isbn: 978-1-72814-659-1
   parent:
   - type: proceedings
-    title: 2020 {IEEE International Conference} on {Software Architecture} ({ICSA})
+    title: 2020 IEEE International Conference on Software Architecture (ICSA)
     publisher: IEEE
     location: Salvador, Brazil
   - type: conference
-    title: 2020 {IEEE International Conference} on {Software Architecture} ({ICSA})
+    title: 2020 IEEE International Conference on Software Architecture (ICSA)
 zhou_xiong_2022:
   type: article
-  title: Automated {Microservice Identification} from {Design Model}
+  title: Automated Microservice Identification from Design Model
   author:
   - Zhou, Xiaolong
   - Xiong, Jingliu

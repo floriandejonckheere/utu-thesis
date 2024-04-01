@@ -15,14 +15,14 @@ brito_etal_2021:
     isbn: 978-1-4503-8104-8
   parent:
   - type: proceedings
-    title: Proceedings of the 36th {Annual ACM Symposium} on {Applied Computing}
+    title: Proceedings of the 36th Annual ACM Symposium on Applied Computing
     publisher: ACM
     location: Virtual Event Republic of Korea
   - type: conference
-    title: '{SAC} ''21: {The} 36th {ACM}/{SIGAPP Symposium} on {Applied Computing}'
+    title: 'SAC ''21: The 36th ACM/SIGAPP Symposium on Applied Computing'
 cao_zhang_2022:
   type: article
-  title: Implementation of {Domain-oriented Microservices Decomposition} Based on {Node-attributed Network}
+  title: Implementation of Domain-oriented Microservices Decomposition Based on Node-attributed Network
   author:
   - Cao, Lingli
   - Zhang, Cheng
@@ -36,14 +36,14 @@ cao_zhang_2022:
     isbn: 978-1-4503-8577-0
   parent:
   - type: proceedings
-    title: 2022 11th {International Conference} on {Software} and {Computer Applications}
+    title: 2022 11th International Conference on Software and Computer Applications
     publisher: ACM
     location: Melaka Malaysia
   - type: conference
-    title: '{ICSCA} 2022: 2022 11th {International Conference} on {Software} and {Computer Applications}'
+    title: 'ICSCA 2022: 2022 11th International Conference on Software and Computer Applications'
 hasan_etal_2023:
   type: article
-  title: '{AI-based Quality-driven Decomposition Tool} for {Monolith} to {Microservice Migration}'
+  title: 'AI-based Quality-driven Decomposition Tool for Monolith to Microservice Migration'
   author:
   - Hasan, Muhammad Hafiz
   - Osman, Mohd Hafeez
@@ -59,14 +59,14 @@ hasan_etal_2023:
     isbn: '9798400708534'
   parent:
   - type: proceedings
-    title: Proceedings of the 2023 4th {Asia Service Sciences} and {Software Engineering Conference}
+    title: Proceedings of the 2023 4th Asia Service Sciences and Software Engineering Conference
     publisher: ACM
     location: Aizu-Wakamatsu City Japan
   - type: conference
-    title: '{ASSE} 2023: 2023 4th {Asia Service Sciences} and {Software Engineering Conference}'
+    title: 'ASSE 2023: 2023 4th Asia Service Sciences and Software Engineering Conference'
 kalia_etal_2021:
   type: article
-  title: '{Mono2Micro}: A Practical and Effective Tool for Decomposing Monolithic {Java} Applications to Microservices'
+  title: 'Mono2Micro: A Practical and Effective Tool for Decomposing Monolithic Java Applications to Microservices'
   author:
   - Kalia, Anup K.
   - Xiao, Jin
@@ -84,14 +84,14 @@ kalia_etal_2021:
     isbn: 978-1-4503-8562-6
   parent:
   - type: proceedings
-    title: Proceedings of the 29th {ACM Joint Meeting} on {European Software Engineering Conference} and {Symposium} on the {Foundations} of {Software Engineering}
+    title: Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering
     publisher: ACM
     location: Athens Greece
   - type: conference
-    title: '{ESEC}/{FSE} ''21: 29th {ACM Joint European Software Engineering Conference} and {Symposium} on the {Foundations} of {Software Engineering}'
+    title: 'ESEC/FSE ''21: 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'
 mparmpoutis_kakarontzas_2022:
   type: article
-  title: 'Using {Database Schemas} of {Legacy Applications} for {Microservices Identification}: {A Mapping Study}'
+  title: 'Using Database Schemas of Legacy Applications for Microservices Identification: A Mapping Study'
   author:
   - Mparmpoutis, Antonios
   - Kakarontzas, George
@@ -105,14 +105,14 @@ mparmpoutis_kakarontzas_2022:
     isbn: 978-1-4503-9740-7
   parent:
   - type: proceedings
-    title: Proceedings of the 6th {International Conference} on {Algorithms}, {Computing} and {Systems}
+    title: Proceedings of the 6th International Conference on Algorithms, Computing and Systems
     publisher: ACM
     location: Larissa Greece
   - type: conference
-    title: '{ICACS} 2022: 2022 {The} 6th {International Conference} on {Algorithms}, {Computing} and {Systems}'
+    title: 'ICACS 2022: 2022 The 6th International Conference on Algorithms, Computing and Systems'
 nitin_etal_2022:
   type: article
-  title: '{CARGO}: {AI-Guided Dependency Analysis} for {Migrating Monolithic Applications} to {Microservices Architecture}'
+  title: 'CARGO: AI-Guided Dependency Analysis for Migrating Monolithic Applications to Microservices Architecture'
   author:
   - Nitin, Vikram
   - Asthana, Shubhi
@@ -128,11 +128,11 @@ nitin_etal_2022:
     isbn: 978-1-4503-9475-8
   parent:
   - type: proceedings
-    title: Proceedings of the 37th {IEEE}/{ACM International Conference} on {Automated Software Engineering}
+    title: Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering
     publisher: ACM
     location: Rochester MI USA
   - type: conference
-    title: '{ASE} ''22: 37th {IEEE}/{ACM International Conference} on {Automated Software Engineering}'
+    title: 'ASE ''22: 37th IEEE/ACM International Conference on Automated Software Engineering'
 santos_paula_2021:
   type: article
   title: Microservice Decomposition and Evaluation Using Dependency Graph and Silhouette Coefficient
@@ -149,14 +149,14 @@ santos_paula_2021:
     isbn: 978-1-4503-8419-3
   parent:
   - type: proceedings
-    title: 15th {Brazilian Symposium} on {Software Components}, {Architectures}, and {Reuse}
+    title: 15th Brazilian Symposium on Software Components, Architectures, and Reuse
     publisher: ACM
     location: Joinville Brazil
   - type: conference
-    title: '{SBCARS} ''21: {Brazilian Symposium} on {Software Components}, {Architectures}, and {Reuse}'
+    title: 'SBCARS ''21: Brazilian Symposium on Software Components, Architectures, and Reuse'
 sellami_etal_2022:
   type: article
-  title: A {Hierarchical DBSCAN Method} for {Extracting Microservices} from {Monolithic Applications}
+  title: A Hierarchical DBSCAN Method for Extracting Microservices from Monolithic Applications
   author:
   - Sellami, Khaled
   - Saied, Mohamed Aymen
@@ -171,14 +171,14 @@ sellami_etal_2022:
     isbn: 978-1-4503-9613-4
   parent:
   - type: proceedings
-    title: The {International Conference} on {Evaluation} and {Assessment} in {Software Engineering} 2022
+    title: The International Conference on Evaluation and Assessment in Software Engineering 2022
     publisher: ACM
     location: Gothenburg Sweden
   - type: conference
-    title: '{EASE} 2022: {The International Conference} on {Evaluation} and {Assessment} in {Software Engineering} 2022'
+    title: 'EASE 2022: The International Conference on Evaluation and Assessment in Software Engineering 2022'
 wei_etal_2020:
   type: article
-  title: A {Feature Table} Approach to Decomposing Monolithic Applications into Microservices
+  title: A Feature Table Approach to Decomposing Monolithic Applications into Microservices
   author:
   - Wei, Yuyang
   - Yu, Yijun
@@ -194,9 +194,9 @@ wei_etal_2020:
     isbn: 978-1-4503-8819-1
   parent:
   - type: proceedings
-    title: 12th {Asia-Pacific Symposium} on {Internetware}
+    title: 12th Asia-Pacific Symposium on Internetware
     publisher: ACM
     location: Singapore Singapore
   - type: conference
-    title: 'Internetware''20: 12th {Asia-Pacific Symposium} on {Internetware}'
+    title: 'Internetware''20: 12th Asia-Pacific Symposium on Internetware'
 
