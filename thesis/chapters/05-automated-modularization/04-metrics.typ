@@ -12,6 +12,7 @@ Some of the algorithms require the use of a specific metric to guide the process
   table(
     columns: (auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (left, left),
     [*Metric*], [*Publications*],
     "Cohesion",

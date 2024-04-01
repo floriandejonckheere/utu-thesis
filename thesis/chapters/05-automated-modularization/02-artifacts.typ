@@ -11,6 +11,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
   table(
     columns: (auto, auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (left, left, left),
     [*Artifact*], [*Type*], [*Publications*],
     "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN

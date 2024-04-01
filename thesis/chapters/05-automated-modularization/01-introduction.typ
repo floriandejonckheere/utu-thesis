@@ -25,6 +25,7 @@ The literature review was conducted using a three-step protocol as defined by #c
   table(
     columns: (auto, auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (center, center, left),
     [], [*Step*], [*Activity*],
     "1", "Plan", "Identify the need for the review, specifying the research questions, and developing a review protocol",
@@ -95,6 +96,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
   table(
     columns: (auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (center, left),
     [], [*Criteria*],
     "Inclusion",
@@ -138,6 +140,7 @@ Using the search strategy outlined in the previous section, we queried the selec
   table(
     columns: (auto, auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (left, center, center),
     [*Platform*], [*Search results*], [*Selected publications*],
     // (("All Metadata":"microservices" OR "All Metadata":"monolith") AND ("All Metadata":"decomposition" OR "All Metadata":"identification"))

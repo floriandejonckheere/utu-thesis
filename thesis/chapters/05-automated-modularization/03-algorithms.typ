@@ -17,6 +17,7 @@ The identified classes of microservice candidate identification algorithms are d
   table(
     columns: (auto, auto, auto),
     inset: 10pt,
+    stroke: (x: none),
     align: (left, left, left),
     [*Type*], [*Example algorithms*], [*Publications*],
     "Clustering algorithms",
