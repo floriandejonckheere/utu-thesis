@@ -13,12 +13,14 @@
 #let index = 0
 
 #show figure: set block(breakable: true)
+#show figure: set text(size: 9pt)
 #figure(
   table(
-    columns: (auto, auto),
-    inset: 10pt,
-    align: (right, left),
-    [], [*Publication*],
+    columns: (auto, auto, auto),
+    inset: 5pt,
+    stroke: (x: none),
+    align: (right, left, left),
+    [], [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
@@ -26,10 +28,11 @@
       index += 1
 
         (
-          [#index],
+          [*P#index*],
+          [#cite(label(key))],
           [
             #text(pubs.at(key).at("title"), style: "italic"),
-            #citeauthor(label(key))
+            #cite(label(key), form: "author")
           ],
         )
       }
@@ -45,12 +48,14 @@
 #let index = 0
 
 #show figure: set block(breakable: true)
+#show figure: set text(size: 9pt)
 #figure(
   table(
-    columns: (auto, auto),
-    inset: 10pt,
-    align: (right, left),
-    [], [*Publication*],
+    columns: (auto, auto, auto),
+    inset: 5pt,
+    stroke: (x: none),
+    align: (right, left, left),
+    [], [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
@@ -58,10 +63,11 @@
       index += 1
 
         (
-          [#index],
+          [*P#index*],
+          [#cite(label(key))],
           [
             #text(pubs.at(key).at("title"), style: "italic"),
-            #citeauthor(label(key))
+            #cite(label(key), form: "author")
           ],
         )
       }
