@@ -42,7 +42,7 @@ algorithm_design:
   page-range: 142-151
   isbn: 97-80-321-2953-54
 
-systematic_mapping_study_1:
+alshuqayran_etal_2016:
   type: proceedings
   title: A Systematic Mapping Study in Microservice Architecture
   author:
@@ -54,7 +54,7 @@ systematic_mapping_study_1:
   page-range: 44–51
   doi: 10.1109/SOCA.2016.15
 
-systematic_mapping_study_2:
+pahl_jamshidi_2016:
   type: proceedings
   title: 'Microservices: A Systematic Mapping Study'
   author:

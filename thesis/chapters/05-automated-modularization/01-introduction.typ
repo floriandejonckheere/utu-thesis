@@ -11,7 +11,7 @@
 // Answer to Research Question 2.
 
 In this chapter, we investigate the state of the art in automated technologies for modularization of monolith codebases.
-Using a systematic literature review, we identified and categorized existing literature regarding automated modularization of monolith codebases.
+Using a systematic literature review, we identified and categorized existing literature on automated modularization of monolith codebases.
 We also provided a brief overview of the most relevant approaches and tools.
 
 A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @kitchenham_charters_2007.
@@ -19,14 +19,14 @@ The systematic nature of systematic literature reviews reduces bias through a we
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
 
-The literature review was conducted using a three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
+The systematic literature review was conducted using the three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
 
 #figure(
   table(
     columns: (auto, auto, auto),
     inset: 10pt,
     stroke: (x: none),
-    align: (center, center, left),
+    align: (center, left, left),
     [], [*Step*], [*Activity*],
     "1", "Plan", "Identify the need for the review, specifying the research questions, and developing a review protocol",
     "2", "Conduct", "Identification and selection of literature, data extraction and synthesis",
@@ -43,9 +43,15 @@ Using the systematic literature review, we answered the following research quest
 
 The motivation for the research question is discussed in @introduction.
 
-In current literature, several systematic mapping studies related to microservices architecture have been conducted @systematic_mapping_study_1 @systematic_mapping_study_2, as well as systematic literature reviews related to microservice decomposition /* TODO: systematic literature reviews */.
-However, in these studies the techniques described are mainly used as an aid for the software architect when identifying microservice candidates.
-Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding fully automated techniques for modularization of monolith codebases.
+In current literature, several systematic mapping studies related to microservices architecture have been conducted @alshuqayran_etal_2016 @pahl_jamshidi_2016, as well as systematic literature reviews related to microservice decomposition /* TODO: systematic literature reviews */.
+However, in these studies the methods described are mainly used as an aid for the software architect when identifying microservice candidates.
+Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding automated and semi-automated methods for modularization of monolith codebases.
+
+Automated methods for modularization are techniques that autonomously perform the entire decomposition process, without requiring intervention of a software architect.
+The resulting architecture is then presented to the software architect for validation and implementation.
+Semi-automated methods for modularization are techniques that assist the software architect in the decomposition process, but do not perform the entire process autonomously.
+The software architect is required to make decisions during the process, and is left with several final proposals to choose from.
+Automated methods are of particular interest, as they take away the manual effort required from the software architect to analyze and decompose the monolith codebase.
 
 As a search strategy, the following platforms were queried for relevant publications:
 + IEEE Xplore#footnote[https://ieeexplore.ieee.org/]
@@ -58,15 +64,15 @@ Based on a list of relevant topics, we used a combination of related keywords to
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
 The topics relevant for the search query are:
 
-- _Architecture_: the architectural styles being discussed in the publications.
+- *Architecture*: the architectural styles being discussed in the publications.
   #linebreak()
-  Keywords: microservice, monolith, modular monolith
-- _Modularization_: the process of identifying and decomposing modules in a monolith architecture.
+  Keywords: _microservice, monolith, modular monolith_
+- *Modularization*: the process of identifying and decomposing modules in a monolith architecture.
   #linebreak()
-  Keywords: service identification, microservice decomposition, monolith modularization
-- _Technology_: the technologies, algorithms, or methods for modularization.
+  Keywords: _service identification, microservice decomposition, monolith modularization_
+- *Technology*: the technologies, algorithms, or methods for modularization.
   #linebreak()
-  Keywords: automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis
+  Keywords: _automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis_
 
 The resulting search query can be expressed as follows:
 
@@ -102,17 +108,17 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
     "Inclusion",
     [
       - Title, abstract or keywords include the search terms
-      - Conference papers, research articles, blog posts, or other peer-reviewed publications
-      - Publications addressing (semi-)automated technologies, algorithms, or methods
+      - Conference papers, research articles, blog posts, or other publications
+      - Publications addressing (semi-)automated methods or technologies
     ],
     "Exclusion",
     [
       - Publications in languages other than English
       - Publications not available in full text
       - Publications using the term "microservice", but not referring to the architectural style
-      - Publications aimed at greenfield #footnote[Development of new software systems lacking constraints imposed by prior work @project_management] or brownfield #footnote[Development of new software systems in the presence of legacy software systems @project_management] development of microservice-based systems
-      - Publications published before 2014, as the definition of "microservices" as an architectural style is inconsistent before @systematic_mapping_study_2
-      - Publications addressing manual technologies, algorithms, or methods
+      - Publications aimed at greenfield #footnote[Development of new software systems lacking constraints imposed by prior work @project_management] or brownfield #footnote[Development of new software systems in the presence of legacy software systems @project_management] development of systems using microservices architecture
+      - Publications published before 2014, as the definition of "microservices" as an architectural style is inconsistent before 2014 @pahl_jamshidi_2016
+      - Publications addressing manual methods or technologies
       - Surveys, opinion pieces, or other non-technical publications
     ]
   ),
@@ -120,17 +126,19 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
 ) <slr_criteria>
 
 As a final step, the publications were subjected to a validation scan to ensure relevance and quality.
-To assess the quality, we mainly focused on the technical soundness of the approach or technique described in the publication.
+To assess the quality, we mainly focused on the technical soundness of the method or approach described in the publication.
 
 The quality of the publication was assessed based on the following criteria:
 
 - The publication is peer-reviewed or published in a respectable journal
-- The publication thoroughly describes the technical aspects of the approach or technique
-- The publication includes a validation phase or case study demonstrating the effectiveness of the approach or technique
+- The publication thoroughly describes the technical aspects of the method or approach
+- The publication includes a validation phase or case study demonstrating the effectiveness of the method or approach
 
 This step is necessary to ensure that the selected publications are relevant to the research question and that the results are not biased by low-quality publications.
 
-Once a final selection of publications was made, the resulting publications were qualitatively reviewed and categorized based on the type of approach or technique they describe.
+Once a final selection of publications was made, the resulting publications were qualitatively reviewed and categorized based on the method or approach described.
+
+#pagebreak()
 
 == Conduct
 
@@ -155,23 +163,32 @@ Using the search strategy outlined in the previous section, we queried the selec
 
 After applying the inclusion/exclusion criteria, we selected #publications.platforms.values().map(p => p.selected).sum() publications for inclusion in the systematic literature review.
 Of these publications, #publications.platforms.values().map(p => p.primary.len()).sum() are primary studies, and #publications.platforms.values().map(p => p.secondary.len()).sum() are secondary studies.
-The secondary studies were used to categorize the selected primary studies (if any), and as a starting point for the snowballing process, which resulted in #publications.snowballing.total additional publications being included in the systematic literature review.
+The secondary studies were used as a starting point for the snowballing process, which resulted in #publications.snowballing.total additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
-// TODO: add "data extraction" section, and specifically list (with bullet points) the types of data extracted
-From the selected publications, we extracted relevant information, such as the type of approach or technique described, the algorithms used, and the metrics discussed.
-As #citeauthor(<kitchenham_charters_2007>) suggest for systematic literature reviews done by single researchers, the data extraction was validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
+From the selected publications, we extracted relevant information, such as:
+
+- The type of approach or technique described (automated, semi-automated)
+- The input data used for the microservice candidate identification process
+- The algorithms used in the microservices candidate identification process
+- The quality metrics used in the evaluation of the decomposition
+
+#citeauthor(<kitchenham_charters_2007>) suggest that the data extraction process should be performed by at least two researchers to ensure the quality and consistency of the extracted data.
+However, due to resource constraints, the data extraction was performed by a single researcher.
+To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data @kitchenham_charters_2007.
+
+#pagebreak()
 
 == Report
 
 The publications selected for inclusion in the systematic literature review were qualitatively reviewed and categorized in three dimensions.
 
-To begin with, we categorized the publications based on the #acr("SDLC") artifact they use as input for the microservice candidate identification algorithm.
-Each artifact category has an associated collection type, either static, dynamic, or hybrid. @bajaj_etal_2021.
-Static collection describes a #acr("SDLC") artifact that was collected without executing the software, while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software. /* TODO: elaborate more and link sources */
-Some publications describe algorithms or techniques that use a combination of #acr("SDLC") artifacts, which we categorized as hybrid. /* TODO: is hybrid a separate category? */
+First, we categorized the publications based on the #acr("SDLC") artifact used as input for the microservice candidate identification algorithm.
+Each artifact category has an associated collection type: either static, dynamic, or hybrid. @bajaj_etal_2021.
+Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. execution logs). /* TODO: reference */
+Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
 
-Thereafter we categorized the publications based on the algorithm used for microservice candidate identification.
-The algorithms were subdivided into several classes based on the technique.
+Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.
+We based the classification of the algorithms on #citeauthor(<abdellatif_etal_2021>), who identified six types of service identification algorithms.
 
-Ultimately, the publications were also categorized by the metrics discussed.
+Third, the publications were also categorized by the quality metrics used for evaluation the proposed decompositions.
