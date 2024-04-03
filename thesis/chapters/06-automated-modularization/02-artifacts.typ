@@ -157,7 +157,7 @@ While the former captures the dependencies between classes using simple method c
 
 ==== Execution
 
-As a last category, information about the behaviour of the system can also be collected during the runtime of the software system.
+As the last category, information about the behaviour of the system can also be collected during the runtime of the software system.
 Execution data includes log files, execution traces, and performance metrics.
 This category is often combined with static analysis on source code, as the execution data can provide additional information to the identification algorithm.
 In dynamic languages such as Java, dynamic analysis can trace access patterns that static analysis cannot (e.g., due to late binding and polymorphism).
