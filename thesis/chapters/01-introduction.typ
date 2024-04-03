@@ -4,6 +4,12 @@
 
 // General introduction to the topic
 
+== Motivation
+
+// Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
+
+/* TODO: read "Migrating Legacy Software to Microservices Architecture */
+
 == Scope and goal
 
 // Scope of the research thesis
@@ -31,12 +37,6 @@ The goal of this research can be summarized as follows:
 + Investigate the use of automated technologies to modularize a monolithic architecture
 
 The proposed solution will add value to the field of software engineering, and will be able to be used as a base for future improvements regarding automated modularization of monolith codebases.
-
-== Motivation
-
-// Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
-
-/* TODO: read "Migrating Legacy Software to Microservices Architecture */
 
 == Methodology
 
