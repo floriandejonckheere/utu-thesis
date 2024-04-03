@@ -66,7 +66,6 @@
     "06-automated-modularization/02-artifacts",
     "06-automated-modularization/03-algorithms",
     "06-automated-modularization/04-metrics",
-    "06-automated-modularization/05-conclusion",
     "07-proposed-solution",
     "08-case-study",
     "09-conclusion",
