@@ -14,27 +14,6 @@ In this chapter, we investigate the state of the art in automated technologies f
 Using a systematic literature review, we identified and categorized existing literature on automated modularization of monolith codebases.
 We also provided a brief overview of the most relevant approaches and tools.
 
-A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @kitchenham_charters_2007.
-The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered /* TODO: reference */.
-Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
-_Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
-
-The systematic literature review was conducted using the three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
-
-#figure(
-  table(
-    columns: (auto, auto, auto),
-    inset: 10pt,
-    stroke: (x: none),
-    align: (center, left, left),
-    [], [*Step*], [*Activity*],
-    "1", "Plan", "Identify the need for the review, specifying the research questions, and developing a review protocol",
-    "2", "Conduct", "Identification and selection of literature, data extraction and synthesis",
-    "3", "Report", "Evaluation and reporting of the results",
-  ),
-  caption: [Systematic literature review process]
-) <slr_process>
-
 == Plan
 
 Using the systematic literature review, we answered the following research question:

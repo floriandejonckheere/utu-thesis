@@ -1,5 +1,7 @@
 #import "@preview/acrostiche:0.3.1": *
 
+#import "/helpers.typ": citeauthor
+
 = Methodology <methodology>
 
 // Explanation of the research methodology used
@@ -14,6 +16,32 @@ The third research question is answered by choosing the most appropriate automat
 The implementation is then evaluated based on quantitative and qualitative metrics, and compared to manual modularization efforts.
 
 Finally, the findings are summarized, and an outlook on future work is given.
+
+==== Systematic literature review
+
+// TODO: explain a bit more in detail
+A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @kitchenham_charters_2007.
+The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered /* TODO: reference */.
+Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
+_Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
+
+The systematic literature review was conducted using the three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    stroke: (x: none),
+    align: (center, left, left),
+    [], [*Step*], [*Activity*],
+    "1", "Plan", "Identify the need for the review, specifying the research questions, and developing a review protocol",
+    "2", "Conduct", "Identification and selection of literature, data extraction and synthesis",
+    "3", "Report", "Evaluation and reporting of the results",
+  ),
+  caption: [Systematic literature review process]
+) <slr_process>
+
+==== Case study
 
 For the case study, a #acr("DSRM") is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
 In particular, the research and design of the proposed solution follows the six-step #acr("DSRP") model @design_science_research_methodology.
