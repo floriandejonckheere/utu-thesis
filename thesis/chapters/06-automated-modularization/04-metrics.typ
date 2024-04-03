@@ -191,7 +191,7 @@ The prediction is made based on performance logs collected by executing the mono
 
 #citeauthor(<quattrocchi_etal_2024>) define operational costs as metric to minimize, which includes communication (network) and data management (CPU and memory) costs.
 
-#citeauthor(<nitin_etal_2022>) don't utilize the CPU and memory usage directly as a metric, but instead assume the latency and throughput as indicators of performance.
+#citeauthor(<nitin_etal_2022>) do not utilize the CPU and memory usage directly as a metric, but instead assume the latency and throughput as indicators of performance.
 
 ==== Modularity
 
