@@ -16,7 +16,7 @@ This research is centered around three research questions:
 
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 
-*Research Question 3*: How can static analysis of source code effectively identify optimal module boundaries in a modular monolith architecture?
+*Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
 To answer the first research question, we will first define the modular monolith architecture, and examine what sets it apart from monolithic and microservices architectures.
 Then, we will proceed to investigate the merits and drawbacks of the software architecture when applied to an existing codebase.
