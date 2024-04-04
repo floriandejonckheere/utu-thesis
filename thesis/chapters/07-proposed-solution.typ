@@ -73,6 +73,7 @@ The implementation is available online#footnote[#link("https://github.com/floria
 // 3. recommendations should be specified without knowledge of source code or intensive intervention of the architect
 
 // Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
+// => Class-level, because method-level is too fine-grained and leads to too many clusters
 
 // Decide on top-down or bottom-up approach and motivate choice
 // Top-down: start with one big package, then progressively split up into smaller packages
@@ -92,6 +93,24 @@ The implementation is available online#footnote[#link("https://github.com/floria
 //    - Advantages: no need to define amount of clusters before
 // Comparison of community detection algorithms: @rahiminejad_etal_2019
 
+// Algorithms:
+// - Clustering: cannot use algorithms that require specifying the number of clusters up-front, because not automated enough (e.g. Spectral Clustering, K-Means, Agglomerative Clustering)
+//   Affinity Propagation: no need to define amount of clusters before
+// - Genetic algorithms: need to define a fitness function, but can be used to optimize multiple objectives
+//   Require a lot of resources (slow), and proper fine-tuning of parameters (population size, mutation rate, crossover rate)
+// - Graph algorithms: Kruskal is MST (not adjustable, does not optimize for quality metrics), Label Propagation may not always work on this type of graph
+//   Louvain/Leiden: designed for optimizing modularity, multiple objectives
+
+// Summary:
+// Louvain/Leiden, because designed for this kind of clustering application
+// Iterative and hierarchical, so they are fast
+// Good balance between efficiency and effectiveness
+
+// LOUVAIN/LEIDEN ALGORITHM
+// Explain algorithm, define modularity
+// Difference between Louvain and Leiden (@hairol_anuar_etal_2021)
+// Drawbacks: generation of small communities (@fortunato_barthelemy_2007), only non-overlapping communities
+
 == Visualization
 
 == Evaluation
@@ -102,4 +121,5 @@ The implementation is available online#footnote[#link("https://github.com/floria
 // Cohesion: number of static calls between methods within microservice boundary over all possible existing static calls (@carvalho_etal_2020)
 // Coupling: sum of static calls from within microservice boundary to methods outside (@carvalho_etal_2020)
 // Network overhead: size of primitive types in method calls over microservice boundaries (@carvalho_etal_2020, @filippone_etal_2021)
+// => Not really probable due to dynamic nature of Ruby, and no dynamic analysis
 // Modularization: user provides set of labels (features), algorithm labels vertices (@carvalho_etal_2020)
