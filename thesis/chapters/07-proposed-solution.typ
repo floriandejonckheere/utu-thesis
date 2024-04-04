@@ -84,8 +84,27 @@ The non-functional requirements identified in our solution are:
 
 == Extraction
 
-// Collection strategies
 // - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
+Software development is typically done in multiple steps, either using the waterfall model /* TODO: reference */, or using an iterative approach.
+Analysis and design are two steps of early software development which often yield software development lifecycle artifacts in the form of use cases, process models, and diagrams.
+However, after the (partial) completion of the development, these documents are often not kept up to date, and even lost to history.
+Therefor, it is not always possible to use design documents for the information extraction phase.
+A software development artifact that is usually available in one form or another, is the source code repository of the application.
+Hence, we chose the source code repository as the starting point of the information extraction.
+// TODO: formulas for repository (@mazlami_etal_2017)
+
+#citeauthor(<mazlami_etal_2017>) propose a microservice extraction model that includes three possible extraction strategies: _logical coupling_ strategy, _semantic coupling_ strategy, and _contributor coupling_ strategy.
+
+The _logical coupling_ strategy is based on the Single Responsibility Principle /* TODO: reference */, which states that a software component should only have one reason to change.
+Therefor, software design that follows the Single Responsibility Principle groups together software components that change together.
+Hence, it is possible to identify appropriate microservice candidates by analyzing the history of modifications of the classes in the source code repository.
+Classes that change together, should belong in the same microservice.
+// TODO: formulas for changes (@gall_etal)
+
+The _semantic coupling_ strategy is based on lexical analysis of the application classes @mazlami_etal_2017.
+The names of classes, methods, and variables is often related to each other, and information can be acquired by analyzing the similarity of the classes.
+
+
 // - Dynamic analysis, because inherent polymorphism and late binding
 //        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
 //        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
