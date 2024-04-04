@@ -50,6 +50,7 @@
   set par(leading: 1em, justify: true)
   set text(font: "New Computer Modern Mono", lang: "en", region: "FI", hyphenate: false)
   show table: set par(justify: false)
+  set math.equation(numbering: "(1)")
 
   set bibliography(full: true, title: [References])
 

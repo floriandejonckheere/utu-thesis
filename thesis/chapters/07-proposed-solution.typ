@@ -3,13 +3,39 @@
 = Proposed solution <proposedsolution>
 
 In this chapter, we propose our solution for identification of microservice candidates in a monolithic application.
+The approach is based on the analysis of a dependency graph, that aggregates information from the static and evolutionary analysis of the source code.
+
+*Problem statement*
 
 // Problem statement
-The goal of this solution is to identify a set of microservices that can be extracted from the source code of the given monolithic application, in order to facilitate the migration to a microservices architecture.
-As such, the problem can be formulated as a graph partitioning problem, where the vertices correspond to the modules or classes in the monolithic application, and the eges represent the dependencies between them.
-The input to the algorithm is a representation $M$ of the monolithic application, which consists of a set of classes $M_C = { c_1, c_2, ..., c_n }$ where $n$ is the number of classes in the application.
-The output of the algorithm is a set of microservices $S = { s_1, s_2, ..., s_m }$ where $m$ is the number of microservices in the proposed decomposition.
-As each class belongs to exactly microservice, the output can be represented as a mapping $f: M_C -> S$, where $f(c_i) = s_j$ if class $c_i$ belongs to microservice $s_j$.
+The goal of this solution is to identify a set of microservice candidates that can be extracted from the source code of the given monolithic application, in order to automate the migration to a microservices architecture.
+The problem can be formulated as a graph partitioning problem, where the vertices correspond to the modules or classes in the monolithic application, and the edges represent the dependencies between them.
+The input of the algorithm is a representation $M$ of the monolithic application, which exposes a set of functionalities $M_F$ through a set of classes $M_C$, and history of modifications $M_H$.
+The triplet is described by @monolith_triplet_formulas.
+
+$ M_i = { M_F_i, M_C_i, M_H_i } $ <monolith_triplet_formulas>
+
+The set of functionalities $M_F_i$, the set of classes $M_C_i$, and the set of historical modifications $M_H_i$ are described by @monolith_formulas.
+
+$
+  M_F_i = { f_1, f_2, ..., f_j }
+#linebreak()
+  M_C_i = { c_1, c_2, ..., c_k }
+#linebreak()
+  M_H_i = { h_1, h_2, ..., h_l }
+$ <monolith_formulas>
+
+The output of the algorithm is a set of microservices $S$, according to @decomposition_formula, where $m$ is the number of microservices in the proposed decomposition.
+
+$ S_i = { s_1, s_2, ..., s_m } $ <decomposition_formula>
+
+// TODO: at most one microservice?
+// TODO: is this really an bijection?
+As each class belongs to exactly one microservice, the proposed decomposition $S$ can be written as an bijective function $f$ of $M_C_i$ onto $S_i$ as in @microservice_formula, where $f(c_i) = s_j$ if class $c_i$ belongs to microservice $s_j$.
+
+$ f: M_C_i -> S_i  $ <microservice_formula>
+
+#pagebreak()
 
 We start by identifying the functional and non-functional requirements for the solution.
 Then, we propose a four-step approach to decomposition adapted from the microservice identification pipeline by #citeauthor(<lopes_silva_2023>).
@@ -59,21 +85,25 @@ The implementation is available online#footnote[#link("https://github.com/floria
 // Merge multiple information collectors @brito_etal_2021
 // Limitations: meta-programming, reflection, dynamic class loading
 
+// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
+// => Class-level, because method-level is too fine-grained and leads to too many clusters
+
 // Version history: logical coupling, contributor coupling (@mazlami_etal_2017)
 
-// Git extraction algorithm (@santos_paula_2021)
+// Git extraction algorithm (see @santos_paula_2021 algorithm listing)
 //    Extract all commits from a Git repository
 //    If commit not related to files changed, return
 //    For each file changed, increment co-change matrix
+
+// Output of extraction: edge-weighted dependency-graph G = (V, E), where V is the set of classes and E is the set of dependencies between classes (@brito_etal_2021)
+// Consists of aggregation of call graph (structural coupling), co-change matrix (logical coupling), and co-authorship matrix (contributor coupling)
+// Add figure of weighted graph (@brito_etal_2021)
 
 == Decomposition
 
 // 1. more automated means less work for the architect
 // 2. use knowledge of experts when available
 // 3. recommendations should be specified without knowledge of source code or intensive intervention of the architect
-
-// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
-// => Class-level, because method-level is too fine-grained and leads to too many clusters
 
 // Decide on top-down or bottom-up approach and motivate choice
 // Top-down: start with one big package, then progressively split up into smaller packages
@@ -105,6 +135,7 @@ The implementation is available online#footnote[#link("https://github.com/floria
 // Louvain/Leiden, because designed for this kind of clustering application
 // Iterative and hierarchical, so they are fast
 // Good balance between efficiency and effectiveness
+// Also proposed as best algorithm by @rahiminejad_etal_2019 and @brito_etal_2021
 
 // LOUVAIN/LEIDEN ALGORITHM
 // Explain algorithm, define modularity
@@ -123,3 +154,6 @@ The implementation is available online#footnote[#link("https://github.com/floria
 // Network overhead: size of primitive types in method calls over microservice boundaries (@carvalho_etal_2020, @filippone_etal_2021)
 // => Not really probable due to dynamic nature of Ruby, and no dynamic analysis
 // Modularization: user provides set of labels (features), algorithm labels vertices (@carvalho_etal_2020)
+
+// Evaluation for different scenarios
+// Different weights for structural, logical, and contributor coupling (@santos_paula_2021)w
