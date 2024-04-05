@@ -179,6 +179,14 @@
 
   pagebreak()
 
+  // List of algorithms
+  outline(
+    title: [List of Algorithms],
+    target: figure.where(kind: "algorithm"),
+  )
+
+  pagebreak()
+
   // List of acronyms
   heading(outlined: false, numbering: none)[List of Acronyms]
 
