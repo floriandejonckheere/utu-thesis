@@ -100,11 +100,11 @@ Hence, we chose the source code repository as the starting point of the informat
 In this thesis, we concentrate on the logical coupling strategy, and the contributor coupling strategy.
 The next sections describe in detail how these strategies are used for extracting information from the source code repository.
 
-*Structural coupling*
+=== Structural coupling
 
 // TODO
 
-*Logical coupling*
+=== Logical coupling
 
 The logical coupling strategy is based on the Single Responsibility Principle @martin_2003, which states that a software component should only have one reason to change.
 Software design that follows the Single Responsibility Principle groups together software components that change together.
@@ -126,9 +126,11 @@ $ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <l
 
 @aggregated_logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event, and stored in a co-change matrix $N_c$.
 
-*Contributor coupling*
+=== Contributor coupling
 
 // TODO
+
+=== Dependency graph
 
 Finally, A graph $G_h = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the extraction strategies.
 The weight for the edge is calculated as the weighted sum of the structure matrix $N_s$, the co-change matrix $N_c$, and the co-authorship matrix $N_d$.
