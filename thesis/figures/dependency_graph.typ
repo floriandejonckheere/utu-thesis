@@ -7,6 +7,8 @@
 
   set-style(content: (padding: .2), stroke: black)
 
+  content((0, 2.5), [$G = (V, E)$])
+
   circle((0, 0), radius: .45, stroke: black, name: "v_1")
   content((0, 0), [$v_1$])
 
