@@ -30,8 +30,7 @@ The output of the algorithm is a set of microservices $S$, according to @decompo
 $ S_i = { s_1, s_2, ..., s_m } $ <decomposition_formula>
 
 // TODO: at most one microservice?
-// TODO: is this really an bijection?
-As each class belongs to exactly one microservice, the proposed decomposition $S$ can be written as an bijective function $f$ of $M_C_i$ onto $S_i$ as in @microservice_formula, where $f(c_i) = s_j$ if class $c_i$ belongs to microservice $s_j$.
+As each class belongs to exactly one microservice, the proposed decomposition $S$ can be written as a surjective function $f$ of $M_C_i$ onto $S_i$ as in @microservice_formula, where $f(c_i) = s_j$ if class $c_i$ belongs to microservice $s_j$.
 
 $ f: M_C_i -> S_i  $ <microservice_formula>
 
