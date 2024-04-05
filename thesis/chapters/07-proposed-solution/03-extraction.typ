@@ -31,6 +31,7 @@ The next sections describe in detail how these strategies are used for extractin
 
 // Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
 // => Class-level, because method-level is too fine-grained and leads to too many clusters
+// => Method-level (@carvalho_etal_2020)
 
 === Logical coupling
 
@@ -53,6 +54,34 @@ Where $delta$ is the change function.
 $ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <logical_coupling_formula>
 
 @aggregated_logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event, and stored in a co-change matrix $N_c$.
+Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
+
+#figure(
+    table(
+      columns: (auto),
+      inset: 5pt,
+      stroke: (x: none),
+      align: (left),
+      [*Algorithm 1*: Logical coupling extraction algorithm],
+      [
+        _cochanges_ = $arrow.l$ _array_[][]; \
+        *for each* ( _commit_ : _git.log()_ ) { \
+          #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
+          #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
+          \
+          #h(1em) *for each* ( _file_one_ : _parentDiff_.getFiles() ) { \
+            #h(2em) *for each* ( _file_two_ : _parentDiff_.getFiles() ) { \
+              #h(3em) _cochanges_[_file_one_][_file_two_] $arrow.l$ 1 \
+            #h(2em) } \
+          #h(1em) } \
+        } \
+        *return* _cochanges_;
+      ]
+  ),
+  kind: "algorithm",
+  supplement: "Algorithm",
+  caption: [Logical coupling extraction algorithm],
+) <logical_coupling_algorithm>
 
 // TODO: Git extraction algorithm (see @santos_paula_2021 algorithm listing)
 
