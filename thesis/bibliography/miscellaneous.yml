@@ -366,3 +366,13 @@ lopes_silva_2023:
     - type: conference
       title: 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C)
 
+martin_2003:
+  type: book
+  title: 'Agile Software Development: Principles, Patterns, and Practices'
+  author:
+    - Martin, Robert Cecil
+  date: 2003
+  publisher: Prentice Hall PTR
+  location: USA
+  serial-number:
+    isbn: '0135974445'
