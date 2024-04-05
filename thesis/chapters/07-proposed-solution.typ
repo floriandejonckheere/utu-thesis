@@ -154,15 +154,18 @@ $ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <l
 
 === Dependency graph
 
-// Output of extraction: edge-weighted dependency-graph G = (V, E), where V is the set of classes and E is the set of dependencies between classes (@brito_etal_2021)
-// Consists of aggregation of call graph (structural coupling), co-change matrix (logical coupling), and co-authorship matrix (contributor coupling)
-// Add figure of weighted graph (@brito_etal_2021)
-
-Finally, an edge-weighted graph $G_h = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
-The weight for the edge is calculated as the weighted sum of the call graph $N_s$, the co-change matrix $N_c$, and the co-authorship matrix $N_d$.
+Finally, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
+The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
 The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as in @weighted_edge_formula.
 
-$ w(c_1, c_2) = alpha N_s(c_1, c_2) + beta N_c(c_1, c_2) + gamma N_d(c_1, c_2) $ <weighted_edge_formula>
+$ w(e_i) = w(c_j, c_k) = alpha N_s(c_j, c_k) + beta N_c(c_j, c_k) + gamma N_d(c_j, c_k) $ <weighted_edge_formula>
+
+An illustration of the graph $G$ is presented in @dependency_graph.
+
+#figure(
+  include("/figures/dependency_graph.typ"),
+  caption: [Dependency graph]
+) <dependency_graph>
 
 == Decomposition
 
