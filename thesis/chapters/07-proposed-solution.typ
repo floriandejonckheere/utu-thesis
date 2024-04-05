@@ -104,6 +104,16 @@ The next sections describe in detail how these strategies are used for extractin
 
 // TODO
 
+// Graph representation of the software system @filippone_etal_2021
+// - Node for each method
+// - Edge for each static call between methods, weighted (method-to-method edge)
+// - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
+// - Edge for association between two entities (entity-to-entity edge)
+// Limitations: meta-programming, reflection, dynamic class loading
+
+// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
+// => Class-level, because method-level is too fine-grained and leads to too many clusters
+
 === Logical coupling
 
 The logical coupling strategy is based on the Single Responsibility Principle @martin_2003, which states that a software component should only have one reason to change.
@@ -126,48 +136,33 @@ $ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <l
 
 @aggregated_logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event, and stored in a co-change matrix $N_c$.
 
-=== Contributor coupling
+// TODO: Git extraction algorithm (see @santos_paula_2021 algorithm listing)
 
-// TODO
-
-=== Dependency graph
-
-Finally, A graph $G_h = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the extraction strategies.
-The weight for the edge is calculated as the weighted sum of the structure matrix $N_s$, the co-change matrix $N_c$, and the co-authorship matrix $N_d$.
-The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as in @weighted_edge_formula.
-
-$ w(c_1, c_2) = alpha N_s(c_1, c_2) + beta N_c(c_1, c_2) + gamma N_d(c_1, c_2) $ <weighted_edge_formula>
-
-
-
-// - Dynamic analysis, because inherent polymorphism and late binding
+// TODO: Dynamic analysis, because inherent polymorphism and late binding
 //        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
 //        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
 //        -> measure performance overhead
-// - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor (@lourenco_silva_2023)
-//      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
 
-// Graph representation of the software system @filippone_etal_2021
-// - Node for each method
-// - Edge for each static call between methods, weighted (method-to-method edge)
-// - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
-// - Edge for association between two entities (entity-to-entity edge)
-// Merge multiple information collectors @brito_etal_2021
-// Limitations: meta-programming, reflection, dynamic class loading
-
-// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
-// => Class-level, because method-level is too fine-grained and leads to too many clusters
-
-// Version history: logical coupling, contributor coupling (@mazlami_etal_2017)
+=== Contributor coupling
 
 // Git extraction algorithm (see @santos_paula_2021 algorithm listing)
 //    Extract all commits from a Git repository
 //    If commit not related to files changed, return
 //    For each file changed, increment co-change matrix
 
+// TODO
+
+=== Dependency graph
+
 // Output of extraction: edge-weighted dependency-graph G = (V, E), where V is the set of classes and E is the set of dependencies between classes (@brito_etal_2021)
 // Consists of aggregation of call graph (structural coupling), co-change matrix (logical coupling), and co-authorship matrix (contributor coupling)
 // Add figure of weighted graph (@brito_etal_2021)
+
+Finally, an edge-weighted graph $G_h = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
+The weight for the edge is calculated as the weighted sum of the call graph $N_s$, the co-change matrix $N_c$, and the co-authorship matrix $N_d$.
+The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as in @weighted_edge_formula.
+
+$ w(c_1, c_2) = alpha N_s(c_1, c_2) + beta N_c(c_1, c_2) + gamma N_d(c_1, c_2) $ <weighted_edge_formula>
 
 == Decomposition
 
@@ -191,7 +186,7 @@ $ w(c_1, c_2) = alpha N_s(c_1, c_2) + beta N_c(c_1, c_2) + gamma N_d(c_1, c_2) $
 // - NSGA-III (@carvalho_etal_2020)
 // - Affinity Propagation (@al_debagy_martinek_2020)
 //    - Advantages: no need to define amount of clusters before
-// Comparison of community detection algorithms: @rahiminejad_etal_2019
+// Comparison of community detection algorithms: @rahiminejad_etal_2019 @brito_etal_2021
 
 // Algorithms:
 // - Clustering: cannot use algorithms that require specifying the number of clusters up-front, because not automated enough (e.g. Spectral Clustering, K-Means, Agglomerative Clustering)
