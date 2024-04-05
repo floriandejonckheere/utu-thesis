@@ -62,9 +62,9 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
       inset: 5pt,
       stroke: (x: none),
       align: (left),
-      [*Algorithm 1*: Logical coupling extraction algorithm],
+      [*@logical_coupling_algorithm*: Logical coupling extraction algorithm],
       [
-        _cochanges_ = $arrow.l$ _array_[][]; \
+        _cochanges_ = $arrow.l$ _array_[][] \
         *for each* ( _commit_ : _git.log()_ ) { \
           #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
           #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
@@ -98,6 +98,31 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
 //    For each file changed, increment co-change matrix
 
 // TODO
+
+#figure(
+    table(
+      columns: (auto),
+      inset: 5pt,
+      stroke: (x: none),
+      align: (left),
+      [*@contributor_coupling_algorithm*: Contributor coupling extraction algorithm],
+      [
+        _coauthors_ = $arrow.l$ _array_[][] \
+        *for each* ( _commit_ : _git.log()_ ) { \
+          #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
+          #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
+          \
+          #h(1em) *for each* ( _file_ : _parentDiff_.getFiles() ) { \
+            #h(2em) _coauthors_[_file_] $arrow.l$ _commit_._getAuthors()_ \
+          #h(1em) } \
+        } \
+        *return* _coauthors_;
+      ]
+  ),
+  kind: "algorithm",
+  supplement: "Algorithm",
+  caption: [Contributor coupling extraction algorithm],
+) <contributor_coupling_algorithm>
 
 === Dependency graph
 
