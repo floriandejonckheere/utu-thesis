@@ -19,13 +19,18 @@
   edge-corner-radius: 5pt,
   mark-scale: 80%,
 
-  blob((0,0), [Source code], tint: green),
+  blob((0,0), [Source code#linebreak()repository], tint: green),
   edge("-|>"),
-  blob((1,0), [Static analysis]),
-  edge((1,0), (2,0), "-|>"),
-  blob((1,1), [Evolutionary analysis], tint: yellow),
-  edge((1,1), (2,1), (2,0), "-|>"),
-  blob((2,0), [Weighted graph]),
+  blob((0,1.5), [Static analysis]),
+  blob((0,2), [Evolutionary analysis], tint: yellow),
+  edge((0,2), (0,3), "-|>"),
   edge("-|>"),
-  blob((3,0), [Proposed #linebreak() microservices], tint: green),
+  blob((1.5, 2), [Dependency graph]),
+  blob((0,3), [Clustering algorithm], tint: yellow),
+  edge("-|>"),
+  blob((0,4), [Quality metrics], tint: yellow),
+  edge("-|>"),
+  blob((0,5.5), [Proposed #linebreak() microservices], tint: green),
 )
+
+#v(2em)
