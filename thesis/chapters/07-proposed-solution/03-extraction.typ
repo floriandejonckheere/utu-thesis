@@ -6,14 +6,15 @@
 Software development is typically done in multiple steps, either using the waterfall model /* TODO: reference */, or using an iterative approach.
 Analysis and design are two steps of early software development which often yield software development lifecycle artifacts in the form of use cases, process models, and diagrams.
 However, after the completion of the development and the subsequent deployment, these documents are often not kept up to date, and sometimes even lost.
-Therefor, it is not always possible to use design documents for the information extraction phase.
+Hence, it is not always possible to use design documents for the information extraction phase.
 A software development artifact that is usually available is the source code repository of the application.
 Hence, we chose the source code repository as the starting point of the information extraction.
 
 // TODO: explain why we chose static analysis + evolutionary analysis
 
-// Evolutionary analysis
 // TODO: structural coupling + reference
+
+// Evolutionary analysis
 #citeauthor(<mazlami_etal_2017>) propose a microservice extraction model that includes three possible extraction strategies: _logical coupling_ strategy, _semantic coupling_ strategy, and _contributor coupling_ strategy.
 In this thesis, we concentrate on the logical coupling strategy, and the contributor coupling strategy.
 The next sections describe in detail how these strategies are used for extracting information from the source code repository.
@@ -64,7 +65,7 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
       align: (left),
       [*@logical_coupling_algorithm*: Logical coupling extraction algorithm],
       [
-        _cochanges_ = $arrow.l$ _array_[][] \
+        _cochanges_ $arrow.l$ _array_[][] \
         *for each* ( _commit_ : _git.log()_ ) { \
           #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
           #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
@@ -107,7 +108,7 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
       align: (left),
       [*@contributor_coupling_algorithm*: Contributor coupling extraction algorithm],
       [
-        _coauthors_ = $arrow.l$ _array_[][] \
+        _coauthors_ $arrow.l$ _array_[][] \
         *for each* ( _commit_ : _git.log()_ ) { \
           #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
           #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
@@ -128,7 +129,7 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
 
 As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
 The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
-The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as in @weighted_edge_formula.
+The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
 
 $ w(e_i) = w(c_j, c_k) = alpha N_s(c_j, c_k) + beta N_c(c_j, c_k) + gamma N_d(c_j, c_k) $ <weighted_edge_formula>
 
