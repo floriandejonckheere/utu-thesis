@@ -17,6 +17,8 @@
 
 // Problem statement regarding identification of optimal module boundaries
 
+// Microservice is architectural style or just SOA-approach? @carrasco_etal_2018
+
 // Explain the process of modularization, including the identification of modules
 // TODO: explain graphs in mathematical terms
 // TODO: explain difference between top-down approach and bottom-up approach

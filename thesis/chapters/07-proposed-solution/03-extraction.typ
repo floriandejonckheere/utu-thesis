@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 #import "/helpers.typ": citeauthor
 
 == Extraction
@@ -21,18 +23,41 @@ The next sections describe in detail how these strategies are used for extractin
 
 === Structural coupling
 
-// TODO
+Structural coupling is a measure of the dependencies between software components.
+The dependencies can take the form of control dependencies, or data dependencies /* TODO: reference */.
+Control dependencies are dependencies between software components that are related to the flow of control of the software system (e.g. interleaving method calls).
+Data dependencies relate to the flow of data between software components (e.g. passing parameters).
+In our proposed solution we extract structural coupling information using static analysis of the source code /* TODO: reference */.
+As the solution is intended to collect information from monolithic applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
+Ruby is a dynamic language, which means that only incomplete type information can be extracted using static analysis.
+In particular, some techniques like meta-programming and dynamic class loading may affect the accuracy of the extracted information.
 
-// Graph representation of the software system @filippone_etal_2021
-// - Node for each method
-// - Edge for each static call between methods, weighted (method-to-method edge)
-// - Edge for each dynamic call from method to object of class, weighted (method-to-entity edge)
-// - Edge for association between two entities (entity-to-entity edge)
-// Limitations: meta-programming, reflection, dynamic class loading
+Our solution analyzes the source code of the monolithic application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
+The library is written in Ruby and can be used to parse Ruby source code files and extract the #acr("AST") of the source code.
+Iterating over the #acr("AST") of the monolithic application, our solution extracts the references between classes.
+Using this information, a call graph $N_s$ is constructed that represents the structural coupling of the monolithic application.
 
-// Decide on granularity: coarse-grained (class-level) or fine-grained (method-level) and motivate choice
-// => Class-level, because method-level is too fine-grained and leads to too many clusters
-// => Method-level (@carvalho_etal_2020)
+For each class $c_i$ in the monolithic application, a vertex is created in the call graph $N_s$.
+References between classes are represented as directed edges between the vertices.
+
+A directed edge is created for each reference between two classes $c_i, c_j$.
+This edge describes three types of references: (i) static method calls between two methods $m_i$ and $m_j$ of the classes $c_i, c_j$ _(method-to-method)_, (ii) references from method $m_i$ to an object of class $c_j$ _(method-to-entity)_, and (iii) associations between entities of class $c_i$ and $c_j$ _(entity-to-entity)_ @filippone_etal_2021.
+
+The weight of the edge between two classes $c_i, c_j$ is the sum of the number of references between the classes, as described in @call_graph_weight_formula.
+
+$
+  w(c_i, c_j) =
+    sum_(m_i in c_i, m_j in c_j) italic("ref")(m_i, m_j) + italic("ref")(m_i, c_j) + italic("ref")(c_i, c_j)
+$ <call_graph_weight_formula>
+
+The $italic("ref")$ function returns the number of references between two methods $m_i, m_j$.
+
+As #citeauthor(<carvalho_etal_2020>) note, the choice of granularity is an important decision in the extraction of microservices.
+Existing approaches tend to use a more coarse-grained granularity (e.g. on the level of files or classes) rather than a fined-grained granularity (e.g. on the level of methods).
+Using a coarse-grained granularity can lead to a smaller number of microservices that are responsible for a larger number of functionalities.
+A fine-grained granularity can lead to a much larger number of microservices, which can decrease the maintainability of the system.
+Hence, a trade-off between the two granularities must be made.
+Our proposed solution uses a coarse-grained granular approach, using the classes of the monolithic application as the starting point for the extraction of microservices.
 
 === Logical coupling
 
