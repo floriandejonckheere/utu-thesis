@@ -50,7 +50,7 @@ $
     sum_(m_i in c_i, m_j in c_j) italic("ref")(m_i, m_j) + italic("ref")(m_i, c_j) + italic("ref")(c_i, c_j)
 $ <call_graph_weight_formula>
 
-The $italic("ref")$ function returns the number of references between two methods $m_i, m_j$.
+The $italic("ref")$ function returns the number of references between the two methods $m_i, m_j$, method $m_i$ and class $m_j$, or classes $c_i$ and $c_j$.
 
 As #citeauthor(<carvalho_etal_2020>) note, the choice of granularity is an important decision in the extraction of microservices.
 Existing approaches tend to use a more coarse-grained granularity (e.g. on the level of files or classes) rather than a fined-grained granularity (e.g. on the level of methods).
