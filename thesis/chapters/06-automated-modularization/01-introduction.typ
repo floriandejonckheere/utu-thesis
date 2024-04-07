@@ -33,8 +33,8 @@ The software architect is required to make decisions during the process, and is 
 Automated methods are of particular interest, as they take away the manual effort required from the software architect to analyze and decompose the monolith codebase.
 
 As a search strategy, the following platforms were queried for relevant publications:
-+ IEEE Xplore#footnote[https://ieeexplore.ieee.org/]
-+ ACM Digital Library#footnote[https://dl.acm.org/]
++ IEEE Xplore#footnote[#link("https://ieeexplore.ieee.org/")[https://ieeexplore.ieee.org/]]
++ ACM Digital Library#footnote[#link("https://dl.acm.org/")[https://dl.acm.org/]]
 
 The platforms were selected based on their academic relevance, as they contain a large number of publications in the field of software engineering.
 Furthermore, the platforms also contain only peer-reviewed publications, which ensures a certain level of quality in the publications.

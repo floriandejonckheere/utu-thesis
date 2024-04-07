@@ -106,7 +106,7 @@ Techniques using design documents either use a domain-driven approach, or a data
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
 Similar to requirements documents and models, design documents for legacy systems are often not available or outdated, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
 
-For example, #citeauthor(<al_debagy_martinek_2020>) propose a data-driven method based on the analysis of the software system's external API, specified in the OpenAPI#footnote[https://www.openapis.org/] format.
+For example, #citeauthor(<al_debagy_martinek_2020>) propose a data-driven method based on the analysis of the software system's external API, specified in the OpenAPI#footnote[#link("https://www.openapis.org/")[https://www.openapis.org/]] format.
 The method extracts the information from the specification and converts it into vector representation for further processing.
 
 #citeauthor(<zhou_xiong_2022>) use readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
