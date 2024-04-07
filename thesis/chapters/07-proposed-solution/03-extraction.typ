@@ -35,22 +35,26 @@ In particular, some techniques like meta-programming and dynamic class loading m
 Our solution analyzes the source code of the monolithic application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
 The library is written in Ruby and can be used to parse Ruby source code files and extract the #acr("AST") of the source code.
 Iterating over the #acr("AST") of the monolithic application, our solution extracts the references between classes.
-Using this information, a call graph $N_s$ is constructed that represents the structural coupling of the monolithic application.
 
-For each class $c_i$ in the monolithic application, a vertex is created in the call graph $N_s$.
+Using this information, a call graph is constructed that represents the structural coupling of the monolithic application.
+
+For each class in the monolithic application $c_i in M_C$, a vertex is created in the call graph.
 References between classes are represented as directed edges between the vertices.
 
 A directed edge is created for each reference between two classes $c_i, c_j$.
 This edge describes three types of references: (i) static method calls between two methods $m_i$ and $m_j$ of the classes $c_i, c_j$ _(method-to-method)_, (ii) references from method $m_i$ to an object of class $c_j$ _(method-to-entity)_, and (iii) associations between entities of class $c_i$ and $c_j$ _(entity-to-entity)_ @filippone_etal_2021.
 
-The weight of the edge between two classes $c_i, c_j$ is the sum of the number of references between the classes, as described in @call_graph_weight_formula.
+Hence, the structural coupling $N_s$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the number of references between the classes, as described in @aggregated_structural_coupling_formula.
 
 $
-  w(c_i, c_j) =
-    sum_(m_i in c_i, m_j in c_j) italic("ref")(m_i, m_j) + italic("ref")(m_i, c_j) + italic("ref")(c_i, c_j)
-$ <call_graph_weight_formula>
+  N_s (c_i, c_j) =
+    sum_(m_i in c_i, m_j in c_j)
+      italic("ref")_italic("mm") (m_i, m_j) +
+      italic("ref")_italic("mc") (m_i, c_j) +
+      italic("ref")_italic("cc") (c_i, c_j)
+$ <aggregated_structural_coupling_formula>
 
-The $italic("ref")$ function returns the number of references between the two methods $m_i, m_j$, method $m_i$ and class $m_j$, or classes $c_i$ and $c_j$.
+The $italic("ref")_italic("mm")$, $italic("ref")_italic("mc")$, and $italic("ref")_italic("cc")$ functions return the number of references between the two methods $m_i$ and $m_j$, method $m_i$ and class $m_j$, and classes $c_i$ and $c_j$ respectively.
 
 As #citeauthor(<carvalho_etal_2020>) note, the choice of granularity is an important decision in the extraction of microservices.
 Existing approaches tend to use a more coarse-grained granularity (e.g. on the level of files or classes) rather than a fined-grained granularity (e.g. on the level of methods).
@@ -74,12 +78,13 @@ Consider the extraction algorithm in pseudocode in @structural_coupling_algorith
       align: (left),
       [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
       [
-        _calls_ $arrow.l$ _array_[][] \
+        _calls_ $arrow.l$ _array_[][][] \
         *for each* ( _class_ : _classes_ ) { \
           #h(1em) *for each* ( _method_ : _class_._getMethods()_ ) { \
             #h(2em) *for each* ( _reference_ : _method_._getReferences()_ ) { \
               #h(3em) _receiver_ $arrow.l$ _reference_._getReceiver()_ \
-              #h(3em) _calls_[_class_][_receiver_] $arrow.l$ 1 \
+              #h(3em) _type_ $arrow.l$ _reference_._getType()_ \
+              #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
             #h(2em) } \
           #h(1em) } \
         } \
