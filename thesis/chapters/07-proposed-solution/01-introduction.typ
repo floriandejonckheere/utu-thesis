@@ -33,6 +33,10 @@ As each class belongs to exactly one microservice, the proposed decomposition $S
 
 $ f: M_C_i -> S_i  $ <microservice_formula>
 
+A microservice that contains only one class is called a _singleton microservice_.
+Singleton microservices typically contain classes that are not used by any other class in the monolithic application.
+As an optimization of the microservice decomposition, these classes can be omitted from the final decomposition, as they do not have any functional contribution.
+
 #pagebreak()
 
 We start by identifying the functional and non-functional requirements for the solution.
