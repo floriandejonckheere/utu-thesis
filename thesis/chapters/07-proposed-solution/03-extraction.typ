@@ -59,6 +59,11 @@ A fine-grained granularity can lead to a much larger number of microservices, wh
 Hence, a trade-off between the two granularities must be made.
 Our proposed solution uses a coarse-grained granular approach, using the classes of the monolithic application as the starting point for the extraction of microservices.
 
+// TODO: Dynamic analysis, because inherent polymorphism and late binding
+//        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
+//        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
+//        -> measure performance overhead
+
 === Logical coupling
 
 The logical coupling strategy is based on the Single Responsibility Principle @martin_2003, which states that a software component should only have one reason to change.
@@ -66,20 +71,23 @@ Software design that follows the Single Responsibility Principle groups together
 Hence, it is possible to identify appropriate microservice candidates by analyzing the history of modifications of the classes in the source code repository.
 Classes that change together, should belong in the same microservice.
 Let $M_H$ be the history of modifications of the source code files of the monolithic application $M$.
-Each change event $h_i$ is associated with a set of associated classes $c_i$ that were changed during the modification event at timestamp $t_i$.
-The change event $h_i$ is also associated with a set of developers $d_i$, as described by @modification_formula @mazlami_etal_2017.
+Each change event $h_i$ is associated with a set of associated classes $c_i$ that were changed during the modification event at timestamp $t_i$, as described by @logical_history_formula @mazlami_etal_2017.
 
-$ h_i = { c_i, t_i, d_i } $ <modification_formula>
+$ h_i = { c_i, t_i } $ <logical_history_formula>
 
-If $c_1, c_2$ are two classes belonging to the same change event $h_i$, then the logical coupling is computed as follows in @aggregated_logical_coupling_formula @mazlami_etal_2017.
+If $c_1, c_2$ are two classes belonging to the same change event $h_i$, then the logical coupling is computed as follows in @logical_coupling_formula @mazlami_etal_2017.
 
-$ Delta(c_1, c_2) = sum_(h in M_H) delta_h(c_1, c_2) $ <aggregated_logical_coupling_formula>
+$ Delta(c_1, c_2) = sum_(h in M_H) delta_h(c_1, c_2) $ <logical_coupling_formula>
 
 Where $delta$ is the change function.
 
-$ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <logical_coupling_formula>
+$ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <change_function_formula>
 
-@aggregated_logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event, and stored in a co-change matrix $N_c$.
+Then, @logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event.
+Thus, the aggregated logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
+
+$ N_c (c_1, c_2) = Delta(c_1, c_2) $ <aggregated_logical_coupling_formula>
+
 Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
 
 #figure(
@@ -109,21 +117,33 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
   caption: [Logical coupling extraction algorithm],
 ) <logical_coupling_algorithm>
 
-// TODO: Git extraction algorithm (see @santos_paula_2021 algorithm listing)
-
-// TODO: Dynamic analysis, because inherent polymorphism and late binding
-//        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
-//        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
-//        -> measure performance overhead
-
 === Contributor coupling
 
-// Git extraction algorithm (see @santos_paula_2021 algorithm listing)
-//    Extract all commits from a Git repository
-//    If commit not related to files changed, return
-//    For each file changed, increment co-change matrix
+Conway's law states that the structure of a software system is a reflection of the communication structure of the organization that built it @conway_1968.
+The contributor coupling strategy is based on the notion that the communication structure can be recovered from analyzing the source code repository @mazlami_etal_2017.
+Grouping together software components that are developed in teams that have a strong communication paradigm internally can lead to less communication overhead when developing and maintaining the software system.
+Hence, identifying microservice candidates based on the communication structure of the organization can lead to more maintainable software systems.
 
-// TODO
+Let $M_H$ be the history of modifications of the source code files of the monolithic application $M$.
+Each change event $h_i$ is associated with a set of associated classes $c_i$ that were changed during the modification event at timestamp $t_i$.
+The change event $h_i$ is also associated with a set of developers $d_i in M_D$, as stated in @contributor_history_formula @mazlami_etal_2017.
+$M_D$ is the set of developers that have contributed to the source code repository of the monolithic application.
+
+$ h_i = { c_i, t_i, d_i } $ <contributor_history_formula>
+
+$H(c_i)$ is a function that returns the set of change events that have affected the class $c_i$, and $D(c_i)$ returns the set of developers that have worked on the class $c_i$.
+
+$ H(c_i) = { h_i in M_H | c_i in h_i } $ <contributions_formula>
+
+$ D(c_i) = { d_i in M_D | forall h_i in H(c_i) : d_i in h_i } $ <contributors_formula>
+
+Then, @contributors_formula is calculated for each class $c_i in M_C$ in the monolithic application.
+
+Finally, the aggregated contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_C$ is defined as the cardinality of the intersection of the sets of developers that have contributed to the classes $c_i, c_j$ @mazlami_etal_2017.
+
+$ N_d (c_1, c_2) = |D(c_i) sect D(c_j)| $ <aggregated_contributor_coupling_formula>
+
+Consider the extraction algorithm in pseudocode in @contributor_coupling_algorithm.
 
 #figure(
     table(
@@ -156,7 +176,7 @@ As a final step in the information extraction phase, an edge-weighted graph $G =
 The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
 The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
 
-$ w(e_i) = w(c_j, c_k) = alpha N_s(c_j, c_k) + beta N_c(c_j, c_k) + gamma N_d(c_j, c_k) $ <weighted_edge_formula>
+$ w(e_i) = w(c_j, c_k) = alpha N_s (c_j, c_k) + beta N_c (c_j, c_k) + gamma N_d (c_j, c_k) $ <weighted_edge_formula>
 
 An illustration of the graph $G$ is presented in @dependency_graph.
 
