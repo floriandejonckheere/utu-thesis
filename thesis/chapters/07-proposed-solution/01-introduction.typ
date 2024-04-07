@@ -39,6 +39,8 @@ As an optimization of the microservice decomposition, these classes can be omitt
 
 #pagebreak()
 
+== Design
+
 We start by identifying the functional and non-functional requirements for the solution.
 Then, we propose a four-step approach to decomposition adapted from the microservice identification pipeline by #citeauthor(<lopes_silva_2023>).
 
@@ -46,8 +48,6 @@ Then, we propose a four-step approach to decomposition adapted from the microser
 - *Decomposition*: using the collected data, a decomposition of the application into microservices is proposed.
 - *Visualization*: the proposed decomposition is visualized to facilitate the understanding of the architecture.
 - *Quality assessment*: the proposed decomposition is evaluated according to a set of quality metrics.
-
-#v(2em)
 
 #figure(
   include("/figures/architecture.typ"),
