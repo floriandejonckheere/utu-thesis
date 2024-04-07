@@ -145,6 +145,14 @@ Of these publications, #publications.platforms.values().map(p => p.primary.len()
 The secondary studies were used as a starting point for the snowballing process, which resulted in #publications.snowballing.total additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
+#figure(
+  include("/figures/slr_by_year.typ"),
+  caption: "Distribution of selected publications by year"
+) <slr_by_year>
+
+The selected publications range in publication date from 2014 to 2024, with a peak in 2022.
+Few publications were selected in the first part of the interval, picking up in the later years with a steady increase in the number of publications.
+
 From the selected publications, we extracted relevant information, such as:
 
 - The type of approach or technique described (automated, semi-automated)
@@ -154,7 +162,7 @@ From the selected publications, we extracted relevant information, such as:
 
 #citeauthor(<kitchenham_charters_2007>) suggest that the data extraction process should be performed by at least two researchers to ensure the quality and consistency of the extracted data.
 However, due to resource constraints, the data extraction was performed by a single researcher.
-To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data @kitchenham_charters_2007.
+To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
 
 #pagebreak()
 
