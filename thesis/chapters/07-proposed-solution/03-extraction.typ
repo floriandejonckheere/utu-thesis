@@ -64,6 +64,33 @@ Our proposed solution uses a coarse-grained granular approach, using the classes
 //        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
 //        -> measure performance overhead
 
+Consider the extraction algorithm in pseudocode in @structural_coupling_algorithm.
+
+#figure(
+    table(
+      columns: (auto),
+      inset: 5pt,
+      stroke: (x: none),
+      align: (left),
+      [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
+      [
+        _calls_ $arrow.l$ _array_[][] \
+        *for each* ( _class_ : _classes_ ) { \
+          #h(1em) *for each* ( _method_ : _class_._getMethods()_ ) { \
+            #h(2em) *for each* ( _reference_ : _method_._getReferences()_ ) { \
+              #h(3em) _receiver_ $arrow.l$ _reference_._getReceiver()_ \
+              #h(3em) _calls_[_class_][_receiver_] $arrow.l$ 1 \
+            #h(2em) } \
+          #h(1em) } \
+        } \
+        *return* _calls_;
+      ]
+  ),
+  kind: "algorithm",
+  supplement: "Algorithm",
+  caption: [Structural coupling extraction algorithm],
+) <structural_coupling_algorithm>
+
 === Logical coupling
 
 The logical coupling strategy is based on the Single Responsibility Principle @martin_2003, which states that a software component should only have one reason to change.
@@ -84,7 +111,7 @@ Where $delta$ is the change function.
 $ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <change_function_formula>
 
 Then, @logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event.
-Thus, the aggregated logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
+Thus, the logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
 
 $ N_c (c_1, c_2) = Delta(c_1, c_2) $ <aggregated_logical_coupling_formula>
 
@@ -139,7 +166,7 @@ $ D(c_i) = { d_i in M_D | forall h_i in H(c_i) : d_i in h_i } $ <contributors_fo
 
 Then, @contributors_formula is calculated for each class $c_i in M_C$ in the monolithic application.
 
-Finally, the aggregated contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_C$ is defined as the cardinality of the intersection of the sets of developers that have contributed to the classes $c_i, c_j$ @mazlami_etal_2017.
+Finally, the contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_C$ is defined as the cardinality of the intersection of the sets of developers that have contributed to the classes $c_i, c_j$ @mazlami_etal_2017.
 
 $ N_d (c_1, c_2) = |D(c_i) sect D(c_j)| $ <aggregated_contributor_coupling_formula>
 
