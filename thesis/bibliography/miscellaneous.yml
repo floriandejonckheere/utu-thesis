@@ -297,6 +297,25 @@ ester_etal_1996:
       type: proceedings
       title: KDD'96
 
+traag_2011:
+  type: article
+  title: Narrow scope for resolution-limit-free community detection
+  author:
+    - Traag, V. A.
+    - Van Dooren, P.
+    - Nesterov, Y.
+  date: 2011-07
+  url: http://dx.doi.org/10.1103/PhysRevE.84.016114
+  serial-number:
+    doi: 10.1103/physreve.84.016114
+    issn: 1550-2376
+  parent:
+    type: periodical
+    title: Physical Review E
+    publisher: American Physical Society (APS)
+    issue: 1
+    volume: 84
+
 traag_etal_2019:
   type: article
   title: 'From Louvain to Leiden: guaranteeing well-connected communities'
@@ -406,4 +425,51 @@ rahiminejad_etal_2019:
     title: BMC Bioinformatics
     issue: 1
     volume: 20
+
+fortunato_barthelemy_2007:
+  type: article
+  title: Resolution Limit in Community Detection
+  author:
+    - Fortunato, Santo
+    - Barthélemy, Marc
+  date: 2007-01-02
+  page-range: 36–41
+  url:
+    value: https://pnas.org/doi/full/10.1073/pnas.0605965104
+    date: 2024-04-04
+  serial-number:
+    doi: 10.1073/pnas.0605965104
+    issn: 0027-8424, 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    issue: 1
+    volume: 104
+
+hairol_anuar_etal_2021:
+  type: article
+  title: 'Comparison between Louvain and Leiden Algorithm for Network Structure: A Review'
+  author:
+    - Hairol Anuar, Siti Haryanti
+    - Abas, Zuraida Abal
+    - Yunos, Norhazwani Mohd
+    - Mohd Zaki, Nurul Hafizah
+    - Hashim, Nurul Akmal
+    - Mokhtar, Mohd Fariddudin
+    - Asmai, Siti Azirah
+    - Abidin, Zaheera Zainal
+    - Nizam, Ahmad Fadzli
+  date: 2021-12-01
+  page-range: 12028
+  url:
+    value: https://iopscience.iop.org/article/10.1088/1742-6596/2129/1/012028
+    date: 2024-04-04
+  serial-number:
+    doi: 10.1088/1742-6596/2129/1/012028
+    issn: 1742-6588, 1742-6596
+  parent:
+    type: periodical
+    title: 'Journal of Physics: Conference Series'
+    issue: 1
+    volume: 2129
 

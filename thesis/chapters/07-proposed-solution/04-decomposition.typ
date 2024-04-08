@@ -18,7 +18,9 @@ This way, the software architect can decide which coupling strategies are most r
 Clustering algorithms group similar elements together based on one or multiple criteria.
 Generally these algorithms work iteratively either top-down or bottom-up.
 Top-down algorithms start by assigning all elements to one big cluster, and then progressively split it into smaller clusters until a stopping criterion is met.
+// TODO: examples? Girvan-Newman
 Bottom-up algorithms on the other hand, start by assigning each element to its own cluster, then merge suitable clusters together in succession, until a stopping criterion is met.
+// TODO: examples? Louvain/Leiden, Hierarchical Agglomerative Clustering
 
 ==== Selection of algorithm
 
@@ -34,16 +36,53 @@ However, they require a lot of computing resources, and proper fine-tuning of pa
 // TODO: Affinity Propagation: no need to specify number of clusters
 Similarly, graph algorithms such as Kruskal's algorithm /* TODO: reference */ and Label Propagation /* TODO: reference */ were considered, but they may not always work on this type of graph due to the nature of the algorithm.
 
-We found that the Louvain and Leiden algorithms @blondel_etal_2008 /* TODO: reference */ are the most suitable for this task, as they are designed for optimizing modularity in networks.
+We found that the Louvain @blondel_etal_2008 and Leiden @traag_etal_2019 methods are the most suitable for this task, as they are designed for optimizing modularity in networks.
 The algorithms are iterative and hierarchical, which makes them fast and efficient.
 
 Similarly, in #cite(<rahiminejad_etal_2019>, form: "year") #citeauthor(<rahiminejad_etal_2019>) performed a topological and functional comparison of community detection algorithms in biological networks.
 They analyzed six algorithms based on certain criteria such as appropriate community size (not too small or too large), and performance speed.
-The authors found that the Louvain algorithm @blondel_etal_2008 performed best in terms of quality and speed.
+The authors found that the Louvain method @blondel_etal_2008 performed best in terms of quality and speed.
 
-==== The Louvain/Leiden algorithm
+==== The Louvain/Leiden method
 
-// LOUVAIN/LEIDEN ALGORITHM
-// Explain algorithm, define modularity
-// Difference between Louvain and Leiden (@hairol_anuar_etal_2021)
-// Drawbacks: generation of small communities (@fortunato_barthelemy_2007), only non-overlapping communities
+The Louvain method, introduced by #citeauthor(<blondel_etal_2008>), is an algorithm for extracting non-overlapping communities in large networks.
+The method uses a greedy optimization technique to maximize the modularity of the network.
+
+Modularity is a measure of the strength of division of a network.
+Networks with high modularity have dense connections between the internal vertices of a community, and sparse connections between vertices of different communities.
+The domain of the metric is between -0.5 (non-modular clustering) and 1 (fully modular clustering).
+Optimizing the modularity theoretically results in the best possible clustering of the network, though for numerical computing reasons, the algorithm uses heuristics to approach the optimal solution.
+
+The modularity of a network is defined as follows @hairol_anuar_etal_2021:
+
+$ Q = 1/(2m) sum_(i=1)^N sum_(j=1)^N [ A_("ij") - (k_i k_j)/(2m) ] delta (c_i, c_j) $ <modularity>
+
+Where:
+
+- $A$ is the adjacency matrix
+- $k_i$ and $k_j$ are the degrees of the vertices $i$ and $j$ respectively
+- $m$ is the number of edges in the network
+- $N$ is the total number of vertices in the network
+- $c_i$ and $c_j$ are the communities to which vertices $i$ and $j$ belong
+- $delta (c_i, c_j)$ is 1 if $c_i$ and $c_j$ are in the same cluster, and 0 otherwise
+
+The Louvain method operates in two phases.
+In the first phase, the algorithm optimizes the modularity locally by moving each vertex into the community of their neighbour that yield the best modularity gain.
+This step is repeated for each vertex until a local maximum is reached.
+Then, the algorithm reduces each community to a single vertex, while preserving the network structure.
+The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
+
+The obvious disadvantage of the Louvain method is that it can only detect non-overlapping communities @blondel_etal_2008.
+This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
+An other disadvantage of the algorithm is that it may generate small communities, which are not desirable in the context of microservices @fortunato_barthelemy_2007.
+
+In #cite(<traag_etal_2019>, form: "year"), #citeauthor(<traag_etal_2019>) introduced the Leiden method, an improvement of the Louvain method that addresses the disconnected community problem.
+Similarly to the Louvain method, the Leiden method optimizes the quality of the network using the Constant Potts Model @traag_2011:
+
+$ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <constant_potts_model>
+
+The Leiden method operates in three phases.
+The first and last phases equal those of the Louvain method (i.e., local optimization and reduction of the network).
+In the second phase, the algorithm performs a refinement of partition on each small community.
+
+The Leiden method has been shown to outperform the Louvain method in terms of quality and speed @traag_etal_2019.
