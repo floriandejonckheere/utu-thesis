@@ -6,6 +6,7 @@
 == Background
 
 // Background information about the use case
+// Application is not stateful (or negligible), so no database dependencies
 
 == Experimental setup
 

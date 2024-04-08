@@ -386,3 +386,24 @@ conway_1968:
   parent:
     type: periodical
 
+rahiminejad_etal_2019:
+  type: article
+  title: Topological and Functional Comparison of Community Detection Algorithms in Biological Networks
+  author:
+    - Rahiminejad, Sara
+    - Maurya, Mano R.
+    - Subramaniam, Shankar
+  date: 2019-12
+  page-range: 212
+  url:
+    value: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2746-0
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1186/s12859-019-2746-0
+    issn: 1471-2105
+  parent:
+    type: periodical
+    title: BMC Bioinformatics
+    issue: 1
+    volume: 20
+

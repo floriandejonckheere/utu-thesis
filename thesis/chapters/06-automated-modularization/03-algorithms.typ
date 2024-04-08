@@ -2,7 +2,7 @@
 
 #import "/helpers.typ": citeauthor
 
-=== Algorithms
+=== Algorithms <slr_algorithms>
 
 Microservice candidate identification is a problem that is often solved by representing the architecture as a directed graph.
 The graph exposes the relationship between the elements of the software architectures.
@@ -11,7 +11,7 @@ Often the edges are weighted, representing the frequency or cost of the calls.
 Based on the information contained within, the graph is then divided into several clusters, each encapsulating a microservice candidate.
 The goal is to find a partitioning of the graph that minimizes the number of edges between clusters and maximizes the number of edges within clusters.
 
-The identified classes of microservice candidate identification algorithms are described in @slr_algorithms.
+The identified classes of microservice candidate identification algorithms are described in @slr_algorithms_table.
 
 #figure(
   table(
@@ -81,7 +81,7 @@ The identified classes of microservice candidate identification algorithms are d
     ],
   ),
   caption: [Microservice candidate identification algorithm]
-) <slr_algorithms>
+) <slr_algorithms_table>
 
 ==== Clustering algorithms
 
