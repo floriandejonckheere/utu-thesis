@@ -72,6 +72,8 @@ This step is repeated for each vertex until a local maximum is reached.
 Then, the algorithm reduces each community to a single vertex, while preserving the network structure.
 The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
 
+// TODO: figures or algorithms
+
 The obvious disadvantage of the Louvain method is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
 An other disadvantage of the algorithm is that it may generate small communities, which are not desirable in the context of microservices @fortunato_barthelemy_2007.
@@ -84,5 +86,7 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
 The Leiden method operates in three phases.
 The first and last phases equal those of the Louvain method (i.e., local optimization and reduction of the network).
 In the second phase, the algorithm performs a refinement of partition on each small community.
+
+// TODO: figures or algorithms
 
 The Leiden method has been shown to outperform the Louvain method in terms of quality and speed @traag_etal_2019.
