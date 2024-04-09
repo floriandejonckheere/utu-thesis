@@ -72,7 +72,20 @@ This step is repeated for each vertex until a local maximum is reached.
 Then, the algorithm reduces each community to a single vertex, while preserving the network structure.
 The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
 
-// TODO: figures or algorithms
+#figure(
+    grid(
+        columns: (auto, auto),
+        rows: (auto, auto),
+        gutter: 1em,
+        [#include("/figures/louvain-1.typ")],
+        [#include("/figures/louvain-2.typ")],
+        [#include("/figures/louvain-3.typ")],
+        [#include("/figures/louvain-4.typ")],
+    ),
+    caption: [Louvain method intermediate steps]
+) <louvain>
+
+// TODO: algorithm listing?
 
 The obvious disadvantage of the Louvain method is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
