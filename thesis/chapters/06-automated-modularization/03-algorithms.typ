@@ -13,6 +13,8 @@ The goal is to find a partitioning of the graph that minimizes the number of edg
 
 The identified classes of microservice candidate identification algorithms are described in @slr_algorithms_table.
 
+#let algorithms = yaml("/bibliography/literature-review.yml").at("categories").at("algorithms")
+
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -23,61 +25,25 @@ The identified classes of microservice candidate identification algorithms are d
     "Clustering algorithms",
     "K-Means, DBSCAN, Hierarchical Agglomerative Clustering, Affinity Propagation",
     [
-      @daoud_etal_2020 // Hierarchical Agglomerative clustering
-      @saidi_etal_2023 // K-means
-      @al_debagy_martinek_2020 // Affinity Propagation
-      @selmadji_etal_2020 // Hierarchical clustering
-      @bandara_perera_2020 // Hierarchical Agglomerative clustering
-      @wu_zhang_2022 // K-means
-      @zaragoza_etal_2022 // Hierarchical clustering
-      @santos_silva_2022 // Hierarchical clustering
-      @romani_etal_2022 // K-means
-      @lourenco_silva_2023 // Hierarchical clustering
-      @hao_etal_2023 // K-means
-      @ma_etal_2022 // Hierarchical clustering
-      @sellami_etal_2022 // DBSCAN
-      @nitin_etal_2022 // Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
-      @kalia_etal_2021 // Hierarchical clustering
-      @cao_zhang_2022 // Hierarchical clustering
+      #algorithms.at("clustering").map(p => cite(label(p))).join()
     ],
 
     "Evolutionary algorithms",
     "NSGA-II, NSGA-III",
     [
-      @amiri_2018 // NSGA-II
-      @li_etal_2023 // NSGA-II
-      @zhou_xiong_2022 // NSGA-II
-      @carvalho_etal_2020 // NSGA-II
-      @kinoshita_kanuka_2022 // NSGA-II
-      @jin_etal_2021 // NSGA-II
-      @zhang_etal_2020 // NSGA-II
+      #algorithms.at("evolutionary").map(p => cite(label(p))).join()
     ],
 
     "Graph algorithms",
     "Kruskal, Louvain method, Leiden algorithm, Label Propagation",
     [
-      @yang_etal_2022 // Kruskal
-      @mazlami_etal_2017 // Kruskal
-      @filippone_etal_2023 // Louvain method
-      @brito_etal_2021 // Louvain method
-      @hasan_etal_2023 // Leiden algorithm, Mean Shift
-      @nitin_etal_2022 // Label propagation
-      @cao_zhang_2022 // Leiden algorithm
+      #algorithms.at("graph").map(p => cite(label(p))).join()
     ],
 
     "Other algorithms",
     "Linear optimization, custom algorithms",
     [
-      @quattrocchi_etal_2024 // Linear
-      @escobar_etal_2016 // Custom
-      @kamimura_etal_2018 // Custom
-      @selmadji_etal_2020 // Gravity centers
-      @filippone_etal_2021 // Linear
-      @agarwal_etal_2021 // Seed expansion
-      @eyitemi_reiff_marganiec_2020 // Rule-based
-      @wei_etal_2020 // Mapping-based
-      @hasan_etal_2023 // Gaussian Mixture
-      @santos_paula_2021 // Custom
+      #algorithms.at("other").map(p => cite(label(p))).join()
     ],
   ),
   caption: [Microservice candidate identification algorithm]
