@@ -28,7 +28,7 @@ Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectiv
 
 The total coupling of a solution is the sum of the individual couplings of all microservice candidates $M_c$.
 
-$ italic("Coupling") = sum_(M_c in S) = italic("coup") (M_c) $ <total_coupling_formula>
+$ italic("Coupling") = sum_(M_c in S) italic("coup") (M_c) $ <total_coupling_formula>
 
 A lower total coupling indicates a better decomposition.
 
@@ -48,7 +48,7 @@ $ italic("coh") (M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref") ( v_i, v_j)
 
 The total cohesion of a solution is the sum of the individual cohesion of all microservice candidates $M_c$.
 
-$ italic("Cohesion") = sum_(M_c in S) = italic("coh") (M_c) $ <total_cohesion_formula>
+$ italic("Cohesion") = sum_(M_c in S) italic("coh") (M_c) $ <total_cohesion_formula>
 
 A higher total cohesion indicates a better decomposition.
 
