@@ -22,13 +22,13 @@ We distinguish between functional and non-functional metrics.
 Coupling is a measure of the degree of interdependence between modules in a software system @software_engineering_vocabulary_2017.
 In the context of microservices, individual coupling is defined as the sum of static calls from methods within a microservice candidate $M_c$ in a solution $S$ to another microservice candidate $M_c in S$ @carvalho_etal_2020.
 
-$ italic("coup") (M_c) = sum_(v_i in M_c, v_j in.not M_c) italic("calls") (v_i, v_j) $ <individual_coupling_formula>
+$ italic("coup")(M_c) = sum_(v_i in M_c, v_j in.not M_c) italic("calls")(v_i, v_j) $ <individual_coupling_formula>
 
 Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectively, and $italic("calls")$ returns the number of method calls present in the body of method $v_i$ made to method $v_j$.
 
 The total coupling of a solution is the sum of the individual couplings of all microservice candidates $M_c$.
 
-$ italic("Coupling") = sum_(M_c in S) italic("coup") (M_c) $ <total_coupling_formula>
+$ italic("Coupling") = sum_(M_c in S) italic("coup")(M_c) $ <total_coupling_formula>
 
 A lower total coupling indicates a better decomposition.
 
@@ -40,15 +40,15 @@ The metric indicates how strongly related the methods internal to a microservice
 
 To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one static call between methods $v_i$ and $v_j$ in $D$.
 
-$ italic("ref") (v_i, v_j) = cases(1 "if" italic("calls") (v_i, v_j) > 0, 0 "otherwise") $ <cohesion_formula>
+$ italic("ref")(v_i, v_j) = cases(1 "if" italic("calls")(v_i, v_j) > 0, 0 "otherwise") $ <cohesion_formula>
 
 The cohesion of a microservice candidate $M_c$ is then calculated as described in @individual_cohesion_formula.
 
-$ italic("coh") (M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref") ( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
+$ italic("coh")(M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref")( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
 
 The total cohesion of a solution is the sum of the individual cohesion of all microservice candidates $M_c$.
 
-$ italic("Cohesion") = sum_(M_c in S) italic("coh") (M_c) $ <total_cohesion_formula>
+$ italic("Cohesion") = sum_(M_c in S) italic("coh")(M_c) $ <total_cohesion_formula>
 
 A higher total cohesion indicates a better decomposition.
 
@@ -59,13 +59,13 @@ We use the number of operations to compute the individual complexity of a micros
 The metric is based on the Weighted Methods per Class (WMC) metric, which is the sum of the complexities of all methods in a class @chidamber_kemerer_1994.
 Classes and methods with lower complexity are associated with better maintainability and understandability.
 
-$ italic("numops") (M_c) = sum_(v_i in M_c) italic("ops") (v_i) $ <complexity_formula>
+$ italic("numops")(M_c) = sum_(v_i in M_c) italic("ops")(v_i) $ <complexity_formula>
 
 Where $italic("ops")$ returns the number of operations performed by method $v_i$.
 
 The total complexity of a solution is the sum of the individual complexities of all microservice candidates $M_c$.
 
-$ italic("Complexity") = sum_(M_c in S) italic("numops") (M_c) $ <total_complexity_formula>
+$ italic("Complexity") = sum_(M_c in S) italic("numops")(M_c) $ <total_complexity_formula>
 
 A lower total complexity indicates a better decomposition.
 
@@ -77,7 +77,25 @@ A lower total complexity indicates a better decomposition.
 
 ==== Network overhead
 
-// Network overhead: size of primitive types in method calls over microservice boundaries (@carvalho_etal_2020, @filippone_etal_2021)
+Microservices communicate over a network with one another, which introduces overhead in terms of latency and bandwidth.
+In order to keep this overhead low, it is important that method calls between microservices are kept to a minimum, and that the size of the data exchanged (e.g. parameters and return values) is kept small.
+Using the source code of the monolith application, we can estimate the network overhead of a method call by inspecting the primitive types of the parameters and return values of the methods involved in the call @filippone_etal_2021.
 
+The heuristic function $h(v_i, v_j)$ estimates the network overhead of a method call from a method $v_i$ to a method $v_j$, as described by @overhead_formula.
+The value for $h(v_i, v_j)$ is calculated by summing the size of the primitive types of the parameters and return values of the method call. The heuristic does not take into account the overhead of the communication protocol (e.g. HTTP headers) or data management overhead (e.g. (de-)serialization).
 
-// Modularization: user provides set of labels (features), algorithm labels vertices (@carvalho_etal_2020)
+$ h(v_i, v_j) = sum_(p in cal(P)(v_i)) italic("size")(p) + sum_(r in cal(R)(v_j)) italic("size")(r) $ <overhead_formula>
+
+$cal(P)(v_i)$ returns the set of parameters of method $v_i$, and $cal(R)(v_j)$ returns the return value(s) of method $v_j$.
+The $italic("size")$ function returns the size of the primitive type of the given parameter.
+
+The individual network overhead of a microservice candidate $M_c$ can be written as the sum of the network overheads of all method calls between methods in $M_c$ and methods not in $M_c$.
+
+$ italic("ovh")(M_c) = sum_(v_i in M_c, v_j in.not M_c) h(v_i, v_j) $ <individual_overhead_formula>
+
+The total network overhead of a solution is the sum of the individual network overheads of all method calls between microservice candidates $M_c$ and $M_c$ in solution $S$.
+
+$ italic("Overhead") = sum_(M_c in S) italic("ovh")(M_c) $ <total_overhead_formula>
+
+However, this method has severe limitations in a dynamic language such as Ruby, where the types of the parameters and return values are not explicitly declared and may vary at runtime.
+In some cases, the primitive types can be inferred from the method body, but in general, this is a difficult problem to solve.
