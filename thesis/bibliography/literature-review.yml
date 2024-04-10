@@ -59,3 +59,51 @@ platforms:
       - kalia_etal_2021
     secondary:
       - mparmpoutis_kakarontzas_2022
+categories:
+  artifacts:
+    requirements:
+      - amiri_2018
+      - daoud_etal_2020
+      - yang_etal_2022
+      - saidi_etal_2023
+      - li_etal_2023
+    design:
+      - al_debagy_martinek_2020
+      - zhou_xiong_2022
+      - quattrocchi_etal_2024
+      - wei_etal_2020
+      - hasan_etal_2023
+    code:
+      - escobar_etal_2016
+      - mazlami_etal_2017
+      - kamimura_etal_2018
+      - selmadji_etal_2020
+      - carvalho_etal_2020
+      - bandara_perera_2020
+      - filippone_etal_2021
+      - filippone_etal_2023
+      - agarwal_etal_2021
+      - kinoshita_kanuka_2022
+      - wu_zhang_2022
+      - zaragoza_etal_2022
+      - santos_silva_2022
+      - romani_etal_2022
+      - lourenco_silva_2023
+      - hao_etal_2023
+      - brito_etal_2021
+      - sellami_etal_2022
+      - hasan_etal_2023
+      - nitin_etal_2022
+      - kalia_etal_2021
+      - cao_zhang_2022
+      - santos_paula_2021
+    execution:
+      - carvalho_etal_2020
+      - wu_zhang_2022
+      - lourenco_silva_2023
+      - hao_etal_2023
+      - jin_etal_2021
+      - zhang_etal_2020
+      - ma_etal_2022
+      - eyitemi_reiff_marganiec_2020
+      - cao_zhang_2022

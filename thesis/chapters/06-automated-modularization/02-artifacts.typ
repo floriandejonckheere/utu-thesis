@@ -7,6 +7,8 @@
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
 The categories are based on #citeauthor(<bajaj_etal_2021>).
 
+#let artifacts = yaml("/bibliography/literature-review.yml").at("categories").at("artifacts")
+
 #figure(
   table(
     columns: (auto, auto, auto),
@@ -17,63 +19,25 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
     "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
     "Static",
     [
-      @amiri_2018
-      @daoud_etal_2020
-      @yang_etal_2022
-      @saidi_etal_2023
-      @li_etal_2023
+      #artifacts.at("requirements").map(p => cite(label(p))).join()
     ],
 
     "Design documents", // e.g., API specifications, UML, ERD
     "Static",
     [
-      @al_debagy_martinek_2020
-      @zhou_xiong_2022
-      @quattrocchi_etal_2024
-      @wei_etal_2020
-      @hasan_etal_2023
+      #artifacts.at("design").map(p => cite(label(p))).join()
     ],
 
     "Codebase", // e.g., source code, revision history
     "Static",
     [
-      @escobar_etal_2016
-      @mazlami_etal_2017
-      @kamimura_etal_2018
-      @selmadji_etal_2020
-      @carvalho_etal_2020
-      @bandara_perera_2020
-      @filippone_etal_2021
-      @filippone_etal_2023
-      @agarwal_etal_2021
-      @kinoshita_kanuka_2022
-      @wu_zhang_2022
-      @zaragoza_etal_2022
-      @santos_silva_2022
-      @romani_etal_2022
-      @lourenco_silva_2023
-      @hao_etal_2023
-      @brito_etal_2021
-      @sellami_etal_2022
-      @hasan_etal_2023
-      @nitin_etal_2022
-      @kalia_etal_2021
-      @cao_zhang_2022
-      @santos_paula_2021
+      #artifacts.at("code").map(p => cite(label(p))).join()
     ],
 
     "Execution data", // e.g., log files, execution traces
     "Dynamic",
     [
-      @carvalho_etal_2020
-      @wu_zhang_2022
-      @lourenco_silva_2023
-      @hao_etal_2023
-      @jin_etal_2021
-      @zhang_etal_2020
-      @ma_etal_2022
-      @eyitemi_reiff_marganiec_2020
-      @cao_zhang_2022
+      #artifacts.at("execution").map(p => cite(label(p))).join()
     ],
   ),
   caption: [SDLC artifact categories]
@@ -86,7 +50,7 @@ They include functional and non-functional requirements, use cases, user stories
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
 
-//#include "02-artifacts-chart.typ"
+#include("/figures/artifacts-chart.typ")
 
 #citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
 #citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
