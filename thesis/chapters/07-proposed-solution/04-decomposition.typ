@@ -66,12 +66,6 @@ Where:
 - $c_i$ and $c_j$ are the communities to which vertices $i$ and $j$ belong
 - $delta (c_i, c_j)$ is 1 if $c_i$ and $c_j$ are in the same cluster, and 0 otherwise
 
-The Louvain algorithm operates in two phases.
-In the first phase, the algorithm optimizes the modularity locally by moving each vertex into the community of their neighbour that yield the best modularity gain.
-This step is repeated for each vertex until a local maximum is reached.
-Then, the algorithm reduces each community to a single vertex, while preserving the network structure.
-The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
-
 #figure(
     grid(
         columns: (auto, auto),
@@ -85,7 +79,44 @@ The algorithm can then be applied iteratively to the new network, until the modu
     caption: [Louvain algorithm intermediate steps]
 ) <louvain>
 
-// TODO: algorithm listing?
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [#figure(
+      table(
+        columns: (auto),
+        inset: 5pt,
+        stroke: (x: none),
+        align: (left),
+        [*@louvain_algorithm*: Louvain algorithm],
+        [
+          _graph_ $arrow.l$ original network \
+          *loop* \
+            #h(1em) *for each* _vertex_ *in* _graph_ \
+            #h(2em) Put _vertex_ in its own community \
+            #h(1em) *for each* _neighbour_ *in* _vertex_._neighbours_ \
+            #h(2em) Move _vertex_ to community of _neighbour_ \
+            #h(2em) *if* modularity gain \
+            #h(3em) *break* \
+            #h(1em) *for each* ( _community_ : _graph_ ) \
+            #h(2em) Reduce _community_ to a single vertex \
+            #h(1em) *if* modularity increased \
+            #h(2em) *break* \
+        ]
+    ),
+    kind: "algorithm",
+    supplement: "Algorithm",
+    caption: [Louvain algorithm pseudocode],
+  ) <louvain_algorithm>],
+  [
+    The Louvain algorithm operates in two phases.
+    In the first phase, the algorithm optimizes the modularity locally by moving each vertex into the community of their neighbour that yield the best modularity gain.
+    This step is repeated for each vertex until a local maximum is reached.
+
+    Then, the algorithm aggregates each community in a single vertex, while preserving the network structure.
+    The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
+  ]
+)
 
 The obvious disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
@@ -97,7 +128,7 @@ Similarly to the Louvain algorithm, the Leiden algorithm optimizes the quality o
 $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <constant_potts_model>
 
 The Leiden algorithm operates in three phases.
-The first and last phases equal those of the Louvain algorithm (i.e., local optimization and reduction of the network).
+The first and last phases equal those of the Louvain algorithm (i.e., modularity optimization and community aggregation).
 In the second phase, the algorithm performs a refinement of partition on each small community.
 
 // TODO: figures or algorithms
