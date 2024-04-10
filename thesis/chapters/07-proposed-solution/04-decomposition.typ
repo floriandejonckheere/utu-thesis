@@ -91,6 +91,7 @@ Where:
         [*@louvain_algorithm*: Louvain algorithm],
         [
           _graph_ $arrow.l$ original network \
+          \
           *loop* \
             #h(1em) *for each* _vertex_ *in* _graph_ \
             #h(2em) Put _vertex_ in its own community \
