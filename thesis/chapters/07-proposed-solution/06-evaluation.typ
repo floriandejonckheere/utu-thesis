@@ -20,7 +20,7 @@ We distinguish between functional and non-functional metrics.
 ==== Coupling
 
 Coupling is a measure of the degree of interdependence between modules in a software system @software_engineering_vocabulary_2017.
-In the context of microservices, individual coupling is defined as the sum of static calls from methods within a microservice candidate $M_c$ in a microservice decomposition $D$ to another microservice candidate $M_c in D$ @carvalho_etal_2020.
+In the context of microservices, individual coupling is defined as the sum of static calls from methods within a microservice candidate $M_c$ in a solution $S$ to another microservice candidate $M_c in S$ @carvalho_etal_2020.
 
 $ italic("coup") (M_c) = sum_(v_i in M_c, v_j in.not M_c) italic("calls") (v_i, v_j) $ <individual_coupling_formula>
 
@@ -28,14 +28,14 @@ Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectiv
 
 The total coupling of a decomposition is the sum of the individual couplings of all microservice candidates $M_c$.
 
-$ italic("Coupling") = sum_(M_c in D) = italic("coup") (M_c) $ <total_coupling_formula>
+$ italic("Coupling") = sum_(M_c in S) = italic("coup") (M_c) $ <total_coupling_formula>
 
 A lower total coupling indicates a better decomposition.
 
 ==== Cohesion
 
 Cohesion is a measure of the degree to which internal elements of a module in a software system are related to each other @software_engineering_vocabulary_2017.
-Microservice candidates cohesion is defined as the number of static calls between methods within a microservice candidate $M_c$ in a microservice decomposition $D$, divided by all possible existing static calls in $D$ @carvalho_etal_2020.
+Microservice candidates cohesion is defined as the number of static calls between methods within a microservice candidate $M_c$ in a solution $S$, divided by all possible existing static calls in $S$ @carvalho_etal_2020.
 The metric indicates how strongly related the methods internal to a microservice candidate are.
 
 To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one static call between methods $v_i$ and $v_j$ in $D$.
@@ -48,7 +48,7 @@ $ italic("coh") (M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref") ( v_i, v_j)
 
 The total cohesion of a decomposition is the sum of the individual cohesion of all microservice candidates $M_c$.
 
-$ italic("Cohesion") = sum_(M_c in D) = italic("coh") (M_c) $ <total_cohesion_formula>
+$ italic("Cohesion") = sum_(M_c in S) = italic("coh") (M_c) $ <total_cohesion_formula>
 
 A higher total cohesion indicates a better decomposition.
 
