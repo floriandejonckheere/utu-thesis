@@ -20,6 +20,12 @@
 
 // Evaluation and results of the proposed solution in the context of the use case
 
+// Evaluation in different scenarios
+// Sets of weights for structural, logical, and contributor coupling (see @santos_paula_2021 scenario configurations)
+// {1, 0, 0}, {0, 1, 0}, {0, 0, 1}
+// {1, 1, 0}, {1, 0, 1}, {0, 1, 1}
+// {1, 1, 1}
+
 == Discussion
 
 // Analysis and discussion of the results

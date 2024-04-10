@@ -195,6 +195,8 @@ The prediction is made based on performance logs collected by executing the mono
 
 ==== Modularity
 
+// TODO: modularity is just a measure of coupling + cohesion?
+
 Modularity is a measure of independence of services, and can be divided into many dimensions, such as structure, concept, history, and dynamism @candela_etal_2016.
 
 #citeauthor(<jin_etal_2021>) use modularity as a metric to evaluate potential decompositions.

@@ -472,3 +472,41 @@ hairol_anuar_etal_2021:
     title: 'Journal of Physics: Conference Series'
     issue: 1
     volume: 2129
+
+carvalho_etal_2019:
+  type: article
+  title: Analysis of the Criteria Adopted in Industry to Extract Microservices
+  author:
+    - Carvalho, Luiz
+    - Garcia, Alessandro
+    - K. G. Assunção, Wesley
+    - De Mello, Rafael
+    - Julia De Lima, Maria
+  date: 2019-05
+  page-range: 22–29
+  url:
+    value: https://ieeexplore.ieee.org/document/8836155/
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1109/CESSER-IP.2019.00012
+    isbn: 978-1-72812-264-9
+  parent:
+    - type: proceedings
+      title: 2019 IEEE/ACM Joint 7th International Workshop on Conducting Empirical Studies in Industry (CESI) and 6th International Workshop on Software Engineering Research and Industrial Practice (SER&IP)
+      publisher: IEEE
+      location: Montreal, QC, Canada
+    - type: conference
+      title: 2019 IEEE/ACM Joint 7th International Workshop on Conducting Empirical Studies in Industry (CESI) and 6th International Workshop on Software Engineering Research and Industrial Practice (SER&IP)
+
+software_engineering_vocabulary_2017:
+  type: article
+  title: 'ISO/IEC/IEEE International Standard - Systems and software engineering: Vocabulary'
+  date: 2017
+  page-range: 1–541
+  serial-number:
+    doi: 10.1109/IEEESTD.2017.8016712
+  parent:
+    type: periodical
+    title: ISO/IEC/IEEE 24765:2017(E)
+    issue: ''
+    volume: 0
