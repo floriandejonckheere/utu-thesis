@@ -510,3 +510,23 @@ software_engineering_vocabulary_2017:
     title: ISO/IEC/IEEE 24765:2017(E)
     issue: ''
     volume: 0
+
+chidamber_kemerer_1994:
+  type: article
+  title: A Metrics Suite for Object Oriented Design
+  author:
+    - Chidamber, S.R.
+    - Kemerer, C.F.
+  date: 1994-06
+  page-range: 476–493
+  url:
+    value: http://ieeexplore.ieee.org/document/295895/
+    date: 2024-04-10
+  serial-number:
+    doi: 10.1109/32.295895
+    issn: '00985589'
+  parent:
+    type: periodical
+    title: IEEE Transactions on Software Engineering
+    issue: 6
+    volume: 20
