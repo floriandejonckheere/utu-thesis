@@ -94,13 +94,18 @@ Where:
           *loop* \
             #h(1em) *for each* _vertex_ *in* _graph_ \
             #h(2em) Put _vertex_ in its own community \
+            \
+            #h(1em) #text(green.darken(40%), "// Phase 1: local modularity optimization") \
             #h(1em) *for each* _neighbour_ *in* _vertex_._neighbours_ \
             #h(2em) Move _vertex_ to community of _neighbour_ \
             #h(2em) *if* modularity gain \
             #h(3em) *break* \
+            \
+            #h(1em) #text(green.darken(40%), "// Phase 2: community aggregation") \
             #h(1em) *for each* ( _community_ : _graph_ ) \
             #h(2em) Reduce _community_ to a single vertex \
-            #h(1em) *if* modularity increased \
+            \
+            #h(1em) *if* modularity no longer increases \
             #h(2em) *break* \
         ]
     ),
@@ -115,22 +120,52 @@ Where:
 
     Then, the algorithm aggregates each community in a single vertex, while preserving the network structure.
     The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
+
+    A visualization of the intermediate steps of the Louvain algorithm is shown in @louvain.
   ]
 )
 
-The obvious disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
+A major disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
-An other disadvantage of the algorithm is that it may generate small communities, which are not desirable in the context of microservices @fortunato_barthelemy_2007.
+The algorithm has also been proven to generate small and disconnected communities @traag_etal_2019, which is not desirable in the context of microservices @fortunato_barthelemy_2007.
 
 In #cite(<traag_etal_2019>, form: "year"), #citeauthor(<traag_etal_2019>) introduced the Leiden algorithm, an improvement of the Louvain algorithm that addresses the disconnected community problem.
 Similarly to the Louvain algorithm, the Leiden algorithm optimizes the quality of the network using the Constant Potts Model @traag_2011:
 
 $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <constant_potts_model>
 
-The Leiden algorithm operates in three phases.
-The first and last phases equal those of the Louvain algorithm (i.e., modularity optimization and community aggregation).
-In the second phase, the algorithm performs a refinement of partition on each small community.
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+    The Leiden algorithm operates in three phases.
+    The first and last phases equal those of the Louvain algorithm (i.e., local modularity optimization and community aggregation).
 
-// TODO: figures or algorithms
+    In the second phase, the algorithm performs a refinement of partition on each small community.
+    The refinement ensures that the algorithm does not get stuck in a local optimum using a probability distribution.
+    The Leiden algorithm has been shown to outperform the Louvain algorithm in terms of quality and speed @traag_etal_2019.
 
-The Leiden algorithm has been shown to outperform the Louvain algorithm in terms of quality and speed @traag_etal_2019.
+    Although the Leiden algorithm is more complex than the Louvain algorithm, it is more suitable for our task due to its ability to detect overlapping communities.
+  ],
+  [#figure(
+      table(
+        columns: (auto),
+        inset: 5pt,
+        stroke: (x: none),
+        align: (left),
+        [*@leiden_algorithm*: Leiden algorithm (refinement)],
+        [
+          #text(green.darken(40%), "// Phase 2: partition refinement") \
+          *for each* ( _community_ : _graph_ ) \
+          #h(1em) _partition_ $arrow.l$ _community_ \
+          #h(1em) *for each* ( well connected _vertex_ : _partition_ ) \
+          #h(2em) *if* _vertex_ is a singleton \
+          #h(3em) assign _vertex_ to new community \
+          #h(3em) using probability distribution _P_ \
+        ]
+    ),
+    kind: "algorithm",
+    supplement: "Algorithm",
+    caption: [Leiden algorithm (refinement)],
+  ) <leiden_algorithm>]
+)
