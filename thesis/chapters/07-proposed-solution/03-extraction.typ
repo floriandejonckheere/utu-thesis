@@ -204,9 +204,10 @@ Consider the extraction algorithm in pseudocode in @contributor_coupling_algorit
 
 As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
 The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
-The weights $alpha, beta, gamma in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
+The weights $omega_s, omega_c, omega_d in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
+This makes the strategy adaptive and flexible @santos_paula_2021.
 
-$ w(e_i) = w(c_j, c_k) = alpha N_s (c_j, c_k) + beta N_c (c_j, c_k) + gamma N_d (c_j, c_k) $ <weighted_edge_formula>
+$ w(e_i) = w(c_j, c_k) = omega_s N_s (c_j, c_k) + omega_c N_c (c_j, c_k) + omega_d N_d (c_j, c_k) $ <weighted_edge_formula>
 
 An illustration of the graph $G$ is presented in @dependency_graph.
 
