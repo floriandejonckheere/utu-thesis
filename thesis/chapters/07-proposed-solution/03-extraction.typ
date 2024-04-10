@@ -79,15 +79,14 @@ Consider the extraction algorithm in pseudocode in @structural_coupling_algorith
       [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
       [
         _calls_ $arrow.l$ _array_[][][] \
-        *for each* ( _class_ : _classes_ ) { \
-          #h(1em) *for each* ( _method_ : _class_._getMethods()_ ) { \
-            #h(2em) *for each* ( _reference_ : _method_._getReferences()_ ) { \
-              #h(3em) _receiver_ $arrow.l$ _reference_._getReceiver()_ \
-              #h(3em) _type_ $arrow.l$ _reference_._getType()_ \
+        \
+        *for each* ( _class_ : _classes_ ) \
+          #h(1em) *for each* ( _method_ : _class_._methods_ ) \
+            #h(2em) *for each* ( _reference_ : _method_._references_ ) \
+              #h(3em) _receiver_ $arrow.l$ _reference_._receiver_ \
+              #h(3em) _type_ $arrow.l$ _reference_._type_ \
               #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
-            #h(2em) } \
-          #h(1em) } \
-        } \
+        \
         *return* _calls_;
       ]
   ),
@@ -131,16 +130,15 @@ Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
       [*@logical_coupling_algorithm*: Logical coupling extraction algorithm],
       [
         _cochanges_ $arrow.l$ _array_[][] \
-        *for each* ( _commit_ : _git.log()_ ) { \
-          #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
-          #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
+        \
+        *for each* ( _commit_ : _git.log_ ) \
+          #h(1em) _parent_ $arrow.l$ _commit_._parent_ \
+          #h(1em) _parent_diff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
           \
-          #h(1em) *for each* ( _file_one_ : _parentDiff_.getFiles() ) { \
-            #h(2em) *for each* ( _file_two_ : _parentDiff_.getFiles() ) { \
+          #h(1em) *for each* ( _file_one_ : _parent_diff_._files_ ) \
+            #h(2em) *for each* ( _file_two_ : _parent_diff_._files_ ) \
               #h(3em) _cochanges_[_file_one_][_file_two_] $arrow.l$ 1 \
-            #h(2em) } \
-          #h(1em) } \
-        } \
+        \
         *return* _cochanges_;
       ]
   ),
@@ -186,14 +184,14 @@ Consider the extraction algorithm in pseudocode in @contributor_coupling_algorit
       [*@contributor_coupling_algorithm*: Contributor coupling extraction algorithm],
       [
         _coauthors_ $arrow.l$ _array_[][] \
-        *for each* ( _commit_ : _git.log()_ ) { \
-          #h(1em) _parent_ $arrow.l$ _commit_._getParent()_ \
-          #h(1em) _parentDiff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
+        \
+        *for each* ( _commit_ : _git_._log_ ) \
+          #h(1em) _parent_ $arrow.l$ _commit_._parent_ \
+          #h(1em) _parent_diff_ $arrow.l$ _diff_ ( _commit_, _parent_ ) \
           \
-          #h(1em) *for each* ( _file_ : _parentDiff_.getFiles() ) { \
-            #h(2em) _coauthors_[_file_] $arrow.l$ _commit_._getAuthors()_ \
-          #h(1em) } \
-        } \
+          #h(1em) *for each* ( _file_ : _parent_diff_._files_ ) \
+            #h(2em) _coauthors_[_file_] $arrow.l$ _commit_._authors_ \
+        \
         *return* _coauthors_;
       ]
   ),
