@@ -36,17 +36,17 @@ However, they require a lot of computing resources, and proper fine-tuning of pa
 // TODO: Affinity Propagation: no need to specify number of clusters
 Similarly, graph algorithms such as Kruskal's algorithm /* TODO: reference */ and Label Propagation /* TODO: reference */ were considered, but they may not always work on this type of graph due to the nature of the algorithm.
 
-We found that the Louvain @blondel_etal_2008 and Leiden @traag_etal_2019 methods are the most suitable for this task, as they are designed for optimizing modularity in networks.
+We found that the Louvain @blondel_etal_2008 and Leiden @traag_etal_2019 algorithms are the most suitable for this task, as they are designed for optimizing modularity in networks.
 The algorithms are iterative and hierarchical, which makes them fast and efficient.
 
 Similarly, in #cite(<rahiminejad_etal_2019>, form: "year") #citeauthor(<rahiminejad_etal_2019>) performed a topological and functional comparison of community detection algorithms in biological networks.
 They analyzed six algorithms based on certain criteria such as appropriate community size (not too small or too large), and performance speed.
-The authors found that the Louvain method @blondel_etal_2008 performed best in terms of quality and speed.
+The authors found that the Louvain algorithm @blondel_etal_2008 performed best in terms of quality and speed.
 
-==== The Louvain/Leiden method
+==== The Louvain/Leiden algorithm
 
-The Louvain method, introduced by #citeauthor(<blondel_etal_2008>), is an algorithm for extracting non-overlapping communities in large networks.
-The method uses a greedy optimization technique to maximize the modularity of the network.
+The Louvain algorithm, introduced by #citeauthor(<blondel_etal_2008>), is an algorithm for extracting non-overlapping communities in large networks.
+The algorithm uses a greedy optimization technique to maximize the modularity of the network.
 
 Modularity is a measure of the strength of division of a network.
 Networks with high modularity have dense connections between the internal vertices of a community, and sparse connections between vertices of different communities.
@@ -66,7 +66,7 @@ Where:
 - $c_i$ and $c_j$ are the communities to which vertices $i$ and $j$ belong
 - $delta (c_i, c_j)$ is 1 if $c_i$ and $c_j$ are in the same cluster, and 0 otherwise
 
-The Louvain method operates in two phases.
+The Louvain algorithm operates in two phases.
 In the first phase, the algorithm optimizes the modularity locally by moving each vertex into the community of their neighbour that yield the best modularity gain.
 This step is repeated for each vertex until a local maximum is reached.
 Then, the algorithm reduces each community to a single vertex, while preserving the network structure.
@@ -82,24 +82,24 @@ The algorithm can then be applied iteratively to the new network, until the modu
         [#include("/figures/louvain-3.typ")],
         [#include("/figures/louvain-4.typ")],
     ),
-    caption: [Louvain method intermediate steps]
+    caption: [Louvain algorithm intermediate steps]
 ) <louvain>
 
 // TODO: algorithm listing?
 
-The obvious disadvantage of the Louvain method is that it can only detect non-overlapping communities @blondel_etal_2008.
+The obvious disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
 An other disadvantage of the algorithm is that it may generate small communities, which are not desirable in the context of microservices @fortunato_barthelemy_2007.
 
-In #cite(<traag_etal_2019>, form: "year"), #citeauthor(<traag_etal_2019>) introduced the Leiden method, an improvement of the Louvain method that addresses the disconnected community problem.
-Similarly to the Louvain method, the Leiden method optimizes the quality of the network using the Constant Potts Model @traag_2011:
+In #cite(<traag_etal_2019>, form: "year"), #citeauthor(<traag_etal_2019>) introduced the Leiden algorithm, an improvement of the Louvain algorithm that addresses the disconnected community problem.
+Similarly to the Louvain algorithm, the Leiden algorithm optimizes the quality of the network using the Constant Potts Model @traag_2011:
 
 $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <constant_potts_model>
 
-The Leiden method operates in three phases.
-The first and last phases equal those of the Louvain method (i.e., local optimization and reduction of the network).
+The Leiden algorithm operates in three phases.
+The first and last phases equal those of the Louvain algorithm (i.e., local optimization and reduction of the network).
 In the second phase, the algorithm performs a refinement of partition on each small community.
 
 // TODO: figures or algorithms
 
-The Leiden method has been shown to outperform the Louvain method in terms of quality and speed @traag_etal_2019.
+The Leiden algorithm has been shown to outperform the Louvain algorithm in terms of quality and speed @traag_etal_2019.
