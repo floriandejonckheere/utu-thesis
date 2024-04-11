@@ -53,6 +53,7 @@
     DSRP: ("Design Science Research Process"),
     MOSAIK: ("Modular Optimization to Service-oriented Architecture Integration Kit"),
     SDLC: ("Software Development Life Cycle"),
+    SLOC: ("Source Lines of Code"),
     SLR: ("Systematic Literature Review"),
   ),
 
