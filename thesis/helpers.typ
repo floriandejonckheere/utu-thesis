@@ -21,7 +21,7 @@
 #let slr_categories = yaml("/bibliography/literature-review.yml").at("categories")
 #let artifacts = slr_categories.at("artifacts")
 #let algorithms = slr_categories.at("algorithms")
-#let metric = slr_categories.at("metrics")
+#let metrics = slr_categories.at("metrics")
 
 #let total = (category) => category.values().sum().len()
 #let count = (category, item) => category.at(item).len()

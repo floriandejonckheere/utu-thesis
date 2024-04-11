@@ -27,5 +27,5 @@
       inner-label: (content: (value, label) => [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
       outer-label: (content: (value, label) => [#label], radius: 120%))
   }),
-  caption: [SDLC artifact categories]
+  caption: [SDLC algorithm categories]
 ) <slr_algorithms_chart>

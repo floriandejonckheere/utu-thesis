@@ -1,14 +1,12 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers.typ": citeauthor
+#import "/helpers.typ": *
 
 === Metrics
 
 The quality metrics used in the publications are summarized in @slr_metrics.
 The metrics are used to quantitatively evaluate the quality of the generated microservice decomposition.
 Some of the algorithms require the use of a specific metric to guide the process, such as the fitness function in genetic algorithms.
-
-#let metrics = yaml("/bibliography/literature-review.yml").at("categories").at("metrics")
 
 #figure(
   table(
@@ -59,6 +57,14 @@ Some of the algorithms require the use of a specific metric to guide the process
   ),
   caption: [Quality metrics]
 ) <slr_metrics>
+
+We identified #total(metrics) metrics used in the publications, and categorized them in 6 categories.
+Publications using undisclosed quality metrics, and publications using no metrics at all, are categorized into separate categories.
+Coupling (#count(metrics, "coupling")\; #percentage(metrics, "coupling")) and cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) are the most frequently used metrics, followed by modularity (#count(metrics, "modularity")\; #percentage(metrics, "modularity")), network overhead and complexity (#count(metrics, "complexity")\; #percentage(metrics, "complexity") each), and CPU and memory usage (#count(metrics, "cpu_memory")\; #percentage(metrics, "cpu_memory")).
+Publications using other metrics (#count(metrics, "other")\; #percentage(metrics, "other")) are those that use metrics not included in the other categories.
+Finally, the #count(metrics, "none") publications that do not mention any quality metrics account for #percentage(metrics, "none") of the publications.
+
+#include("/figures/metrics-chart.typ")
 
 ==== Cohesion and coupling
 
