@@ -4,10 +4,10 @@
 #let total = artifacts.values().sum().len()
 
 #let data = (
-  ([Requirements documents and models], artifacts.at("requirements").len()),
-  ([#h(4em)Design documents], artifacts.at("design").len()),
-  ([#h(4em)Execution data], artifacts.at("execution").len()),
   ([Codebase#h(2em)], artifacts.at("codebase").len()),
+  ([#h(3em)Execution data], artifacts.at("execution").len()),
+  ([#h(14em)Requirements documents and models], artifacts.at("requirements").len()),
+  ([#v(1em)#h(4em)Design documents], artifacts.at("design").len()),
 )
 
 #figure(
@@ -19,6 +19,7 @@
 
     chart.piechart(
       data,
+      clockwise: false,
       value-key: 1,
       label-key: 0,
       radius: 3,

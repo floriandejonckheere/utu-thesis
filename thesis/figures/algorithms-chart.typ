@@ -4,10 +4,10 @@
 #let total = algorithms.values().sum().len()
 
 #let data = (
-  ([#h(6em)Evolutionary algorithms#v(2em)], algorithms.at("evolutionary").len()),
-  ([#h(6em)Graph algorithms], algorithms.at("graph").len()),
-  ([Other algorithms], algorithms.at("other").len()),
   ([Clustering#linebreak()algorithms#h(4em)], algorithms.at("clustering").len()),
+  ([Other algorithms], algorithms.at("other").len()),
+  ([#h(10em)Evolutionary algorithms#v(2em)], algorithms.at("evolutionary").len()),
+  ([#h(6em)Graph algorithms], algorithms.at("graph").len()),
 )
 
 #figure(
@@ -19,6 +19,7 @@
 
     chart.piechart(
       data,
+      clockwise: false,
       value-key: 1,
       label-key: 0,
       radius: 3,
