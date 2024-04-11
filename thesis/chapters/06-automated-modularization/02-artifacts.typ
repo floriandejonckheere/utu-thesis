@@ -43,14 +43,18 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
   caption: [SDLC artifact categories]
 ) <slr_artifacts>
 
+Of the four categories, requirements documents and models, design documents, and codebase are static artifacts, while execution data is dynamic.
+Hybrid approaches using both static and dynamic analysis are categorized according to the artifact used in the static and dynamic analysis.
+In the selected #artifacts.values().sum().len() publications, the majority of the approaches (54.8%) use the codebase as input for the algorithm, followed by execution data (21.4%), and design and requirements documents (11.9% each).
+
+#include("/figures/artifacts-chart.typ")
+
 ==== Requirements documents and models
 
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
-
-#include("/figures/artifacts-chart.typ")
 
 #citeauthor(<amiri_2018>) and #citeauthor(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
 #citeauthor(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
