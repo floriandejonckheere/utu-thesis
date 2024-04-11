@@ -1,3 +1,5 @@
+#import "/helpers.typ": *
+
 = Case study <casestudy>
 
 In this chapter, we present a case study to evaluate the proposed solution in the context of a real-word use case.
@@ -32,26 +34,43 @@ The codebase of the application is rapidly becoming increasingly complex, which 
 When it is deployed at bigger sites with up to 400 dialysis machines, the throughput and latency suffer and performance issues arise.
 For these reasons, the application would benefit from a software architectural overhaul.
 While microservices-based architecture would allow the application to scale efficiently, it also introduces a maintenance overhead for the software developers.
-Since the number of developers working on NephroFlow Link is rather limited (5 active developers in the past year), the extra burden on the software developers should be limited.
+Since the number of developers working on NephroFlow Link is limited (5 active developers in the past year), the extra burden on the software developers should be low.
 Hence, decomposing this application into a modular monolith architecture would prove beneficial.
 
 == Experimental setup
 
-// Description of the experimental setup
+#citeauthor(<lourenco_silva_2023>) analyzed multiple source code repository and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
+Approaches using contributor coupling achieve comparable results as approaching using a structural coupling on source code repositories with a large number of committers.
+Since the number of committers to NephroFlow Link is limited, we use multiple coupling strategies to decompose the application.
+7 test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
+The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
+Refer to @test_configurations for a list of the test configurations.
 
-// Information extraction
-// - Version history (because strong culture of code ownership), but only from specific commits, because Link v5 refactor (@lourenco_silva_2023)
-//      Justify why this strategy is applicable, and mention the parameters (how many commits, authors, timespan, etc.)
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    inset: 10pt,
+    stroke: (x: none),
+    align: (center, center, center, left),
+    // TODO: row span first three columns: Weights
+    [$omega_s$], [$omega_c$], [$omega_d$], [*Scenario*],
+    [1], [0], [0], [_structural_],
+    [0], [1], [0], [_logical_],
+    [0], [0], [1], [_contributor_],
+    [1], [1], [0], [_structural-logical_],
+    [1], [0], [1], [_structural-contributor_],
+    [0], [1], [1], [_logical-contributor_],
+    [1], [1], [1], [_structural-logical-contributor_],
+  ),
+  caption: [Test configurations]
+) <test_configurations>
+
+// Short analysis of source code repository: timespan, number of commits, number of contributors, SLOC
+// Omit commits from dependabot
 
 == Evaluation and results
 
 // Evaluation and results of the proposed solution in the context of the use case
-
-// Evaluation in different scenarios
-// Sets of weights for structural, logical, and contributor coupling (see @santos_paula_2021 scenario configurations)
-// {1, 0, 0}, {0, 1, 0}, {0, 0, 1}
-// {1, 1, 0}, {1, 0, 1}, {0, 1, 1}
-// {1, 1, 1}
 
 == Discussion
 
