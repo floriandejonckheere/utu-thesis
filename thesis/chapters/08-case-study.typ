@@ -1,12 +1,39 @@
 = Case study <casestudy>
 
-// Application of the proposed solution to a real-world use case
-// Answer to Research Question 3
+In this chapter, we present a case study to evaluate the proposed solution in the context of a real-word use case.
+We aim to answer the following research question:
+
+*Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
+
+We start by presenting the background information about the use case, followed by a description of the experimental setup.
+Next, we utilize our proposed solution on the use case application, evaluate the effectiveness, and present the results.
+Finally, we discuss the results and analyze the implications of the proposed solution in a broader context.
 
 == Background
 
-// Background information about the use case
-// Application is not stateful (or negligible), so no database dependencies
+The case study is based on an application written called NephroFlow Link.
+The application is developed by Nipro Digital Technologies Europe NV#footnote[#link("https://niprodigital.com")["https://niprodigital.com"]], a subsidiary of Nipro Europe Group Companies#footnote[#link("https://www.nipro-group.com")["https://www.nipro-group.com"]].
+Nipro Group is a leading global manufacturer of medical devices, specialized in renal care products.
+NephroFlow Link, part of the NephroFlow Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite]], is a monolithic application that allows the NephroFlow Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
+NephroFlow Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow Healthcare Platform for storage and visualization.
+
+Dialysis machines typically measure data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
+Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
+
+Nipro Group has deployed NephroFlow Link in several dialysis centers and hospitals across Europe, Central America, and India, collectively ensuring connection to hundreds of dialysis machines.
+To ensure the patient's information security, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
+
+// TODO: figure about link data flow
+
+The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
+In theory, it is not a stateful application, as it only stores transitional data (e.g. for rate-limiting purposes) using the Redis key-value datastore#footnote[#link("https://www.redis.com")["https://www.redis.com"]].
+
+The codebase of the application is rapidly becoming increasingly complex, which decreases the development velocity of new features and device integrations.
+When it is deployed at bigger sites with up to 400 dialysis machines, the throughput and latency suffer and performance issues arise.
+For these reasons, the application would benefit from a software architectural overhaul.
+While microservices-based architecture would allow the application to scale efficiently, it also introduces a maintenance overhead for the software developers.
+Since the number of developers working on NephroFlow Link is rather limited (5 active developers in the past year), the extra burden on the software developers should be limited.
+Hence, decomposing this application into a modular monolith architecture would prove beneficial.
 
 == Experimental setup
 
