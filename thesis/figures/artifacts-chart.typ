@@ -7,7 +7,7 @@
   ([Requirements documents and models], artifacts.at("requirements").len()),
   ([#h(4em)Design documents], artifacts.at("design").len()),
   ([#h(4em)Execution data], artifacts.at("execution").len()),
-  ([Codebase#h(2em)], artifacts.at("code").len()),
+  ([Codebase#h(2em)], artifacts.at("codebase").len()),
 )
 
 #figure(

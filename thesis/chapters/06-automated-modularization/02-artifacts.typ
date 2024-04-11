@@ -1,13 +1,11 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers.typ": citeauthor
+#import "/helpers.typ": *
 
 === SDLC artifact
 
 The identified #acr("SDLC") artifact categories used as input for the microservice candidate identification algorithm are described in @slr_artifacts.
 The categories are based on #citeauthor(<bajaj_etal_2021>).
-
-#let artifacts = yaml("/bibliography/literature-review.yml").at("categories").at("artifacts")
 
 #figure(
   table(
@@ -31,7 +29,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
     "Codebase", // e.g., source code, revision history
     "Static",
     [
-      #artifacts.at("code").map(p => cite(label(p))).join()
+      #artifacts.at("codebase").map(p => cite(label(p))).join()
     ],
 
     "Execution data", // e.g., log files, execution traces
@@ -45,7 +43,7 @@ The categories are based on #citeauthor(<bajaj_etal_2021>).
 
 Of the four categories, requirements documents and models, design documents, and codebase are static artifacts, while execution data is dynamic.
 Hybrid approaches using both static and dynamic analysis are categorized according to the artifact used in the static and dynamic analysis.
-In the selected #artifacts.values().sum().len() publications, the majority of the approaches (54.8%) use the codebase as input for the algorithm, followed by execution data (21.4%), and design and requirements documents (11.9% each).
+In the selected #total(artifacts) publications, the majority of the approaches use the codebase as input for the algorithm (#count(artifacts, "codebase"), #percentage(artifacts, "codebase")), followed by execution data (#count(artifacts, "execution"), #percentage(artifacts, "execution")), and design and requirements documents (#count(artifacts, "requirements"), #percentage(artifacts, "requirements") each).
 
 #include("/figures/artifacts-chart.typ")
 
