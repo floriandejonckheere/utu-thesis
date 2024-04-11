@@ -49,8 +49,15 @@
   set block(spacing: 1.5em)
   set par(leading: 1em, justify: true)
   set text(font: "New Computer Modern Mono", lang: "en", region: "FI", hyphenate: false)
-  show table: set par(justify: false)
   set math.equation(numbering: "(1)")
+
+  // Set gap between figure and caption
+  set figure(gap: 1em)
+  // Set space above and below figures and tables
+  show figure: set block(above: 3em, below: 3em)
+
+  // Don't justify table content
+  show table: set par(justify: false)
 
   set bibliography(full: true, title: [References])
 
