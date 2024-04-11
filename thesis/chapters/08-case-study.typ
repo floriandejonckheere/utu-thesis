@@ -65,7 +65,11 @@ Refer to @test_configurations for a list of the test configurations.
   caption: [Test configurations]
 ) <test_configurations>
 
-// Short analysis of source code repository: timespan, number of commits, number of contributors, SLOC
+// Structural
+// SLOC, number of classes, methods
+
+// Logical and contributor
+// Short analysis of source code repository: timespan, number of commits, number of contributors
 // Omit commits from dependabot
 
 == Evaluation and results
