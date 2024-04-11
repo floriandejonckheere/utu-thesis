@@ -5,9 +5,9 @@
 
 #let data = (
   ([Requirements documents and models], artifacts.at("requirements").len()),
-  ([Design documents], artifacts.at("design").len()),
-  ([Execution data], artifacts.at("execution").len()),
-  ([Codebase], artifacts.at("code").len()),
+  ([#h(4em)Design documents], artifacts.at("design").len()),
+  ([#h(4em)Execution data], artifacts.at("execution").len()),
+  ([Codebase#h(2em)], artifacts.at("code").len()),
 )
 
 #figure(
@@ -25,7 +25,7 @@
       slice-style: colors,
       inner-radius: 1,
       inner-label: (content: (value, label) => [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
-      outer-label: (content: (value, label) => [#label], radius: 150%))
+      outer-label: (content: (value, label) => [#label], radius: 130%))
   }),
   caption: [SDLC artifact categories]
 ) <slr_artifacts_chart>
