@@ -212,6 +212,6 @@ $ w(e_i) = w(c_j, c_k) = omega_s N_s (c_j, c_k) + omega_c N_c (c_j, c_k) + omega
 An illustration of the graph $G$ is presented in @dependency_graph.
 
 #figure(
-  include("/figures/dependency_graph.typ"),
+  include("/figures/dependency-graph.typ"),
   caption: [Dependency graph]
 ) <dependency_graph>
