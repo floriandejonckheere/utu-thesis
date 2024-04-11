@@ -11,7 +11,7 @@ However, the burden of manual decomposition can be alleviated by using automated
 The knowledge of software architects should be leveraged where possible to guide the decomposition process, without imposing the requirement of a deep understanding of the software architecture.
 For example, #citeauthor(<li_etal_2023>) propose a method that utilizes expert knowledge, however requires the recommendations to be written in a domain-specific language, increasing the burden on the architect.
 
-Our solution proposes an automatic way to identify microservice candidates in a monolithic application using clustering algorithms.
+#acr("MOSAIK") implements an automated identification of microservice candidates in a monolithic application using clustering algorithms.
 The decomposition process can be fine-tuned by assigning an importance to the different types of coupling strategies.
 This way, the software architect can decide which coupling strategies are most relevant to the decomposition process.
 

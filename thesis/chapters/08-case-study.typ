@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 #import "/helpers.typ": *
 
 = Case study <casestudy>
@@ -8,7 +10,7 @@ We aim to answer the following research question:
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
 We start by presenting the background information about the use case, followed by a description of the experimental setup.
-Next, we utilize our proposed solution on the use case application, evaluate the effectiveness, and present the results.
+Next, we utilize #acr("MOSAIK") on the use case application, evaluate the effectiveness, and present the results.
 Finally, we discuss the results and analyze the implications of the proposed solution in a broader context.
 
 == Background

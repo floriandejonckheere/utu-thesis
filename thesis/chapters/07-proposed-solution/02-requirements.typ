@@ -16,7 +16,7 @@ The functional requirements we pushed forward for our proposed solution are as f
 + *Technology*: the solution is written in a programming language that is compatible with the Ruby programming language#footnote[#link("https://www.ruby-lang.org/")[https://www.ruby-lang.org/]]
 + *Visual*: the solution can output the proposed decomposition in a visual manner, to aid understanding of the process
 
-The non-functional requirements identified in our solution are:
+The non-functional requirements identified for our solution are:
 
 + *Usability*: a software architect or senior software engineer can reasonably quickly get started with the solution
 + *Performance*: the solution performs the analysis, decomposition, and evaluation reasonably fast on the source code of a larger application /* TODO: define larger application */
