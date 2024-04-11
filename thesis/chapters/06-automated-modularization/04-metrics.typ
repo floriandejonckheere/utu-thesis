@@ -128,9 +128,8 @@ The prediction is made based on performance logs collected by executing the mono
 
 ==== Modularity
 
-// TODO: modularity is just a measure of coupling + cohesion?
-
 Modularity is a measure of independence of services, and can be divided into many dimensions, such as structure, concept, history, and dynamism @candela_etal_2016.
+Some definitions of modularity rely on the concepts of cohesion and coupling, and the balance between them.
 
 #citeauthor(<jin_etal_2021>) use modularity as a metric to evaluate potential decompositions.
 The authors use Modularity Quality @mancoridis_etal_1998 and extend the concept with structural and conceptual dependencies to assess the modularity of microservice candidates.
