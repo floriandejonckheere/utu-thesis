@@ -1,6 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers.typ": citeauthor
+#import "/helpers.typ": *
 
 === Algorithms <slr_algorithms>
 
@@ -48,6 +48,13 @@ The identified classes of microservice candidate identification algorithms are d
   ),
   caption: [Microservice candidate identification algorithm]
 ) <slr_algorithms_table>
+
+We categorized #total(algorithms) algorithms in the literature into three main classes: clustering algorithms, evolutionary algorithms, and graph algorithms.
+Publications proposing a custom algorithm that does not fit into one of these categories are grouped in a single category.
+The majority of the algorithms identified in the literature are clustering algorithms (#count(algorithms, "clustering"), #percentage(algorithms, "clustering")), followed by evolutionary algorithms (#count(algorithms, "evolutionary"), #percentage(algorithms, "evolutionary")) and graph algorithms (#count(algorithms, "graph"), #percentage(algorithms, "graph")).
+The remaining algorithms are grouped in the "Other algorithms" category (#count(algorithms, "other"), #percentage(algorithms, "other")).
+
+#include("/figures/algorithms-chart.typ")
 
 ==== Clustering algorithms
 
