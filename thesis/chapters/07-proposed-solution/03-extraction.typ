@@ -1,6 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers.typ": citeauthor
+#import "/helpers.typ": *
 
 == Extraction
 
