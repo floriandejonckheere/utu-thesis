@@ -2,6 +2,15 @@
 
 #import "/helpers.typ": *
 
+#let stats = (
+  sloc: 9288,
+  files: 208,
+  classes: 287,
+  methods: 820,
+  commits: 332,
+  contributors: 9
+)
+
 = Case study <casestudy>
 
 In this chapter, we present a case study to evaluate the proposed solution in the context of a real-word use case.
@@ -36,7 +45,7 @@ The codebase of the application is rapidly becoming increasingly complex, which 
 When it is deployed at bigger sites with up to 400 dialysis machines, the throughput and latency suffer and performance issues arise.
 For these reasons, the application would benefit from a software architectural overhaul.
 While microservices-based architecture would allow the application to scale efficiently, it also introduces a maintenance overhead for the software developers.
-Since the number of developers working on NephroFlow Link is limited (5 active developers in the past year), the extra burden on the software developers should be low.
+Since the number of developers working on NephroFlow Link is limited, the extra burden on the software developers should be low.
 Hence, decomposing this application into a modular monolith architecture would prove beneficial.
 
 == Experimental setup
@@ -44,7 +53,7 @@ Hence, decomposing this application into a modular monolith architecture would p
 #citeauthor(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
 Approaches using contributor coupling achieve comparable results as approaching using a structural coupling on source code repositories with a large number of committers.
 Since the number of committers to NephroFlow Link is limited, we use multiple coupling strategies to decompose the application.
-7 test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
+Seven test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
 The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
 Refer to @test_configurations for a list of the test configurations.
 
@@ -69,7 +78,7 @@ Refer to @test_configurations for a list of the test configurations.
 
 // Structural
 The source code repository of NephroFlow Link is hosted in a private Github#footnote[#link("https://github.com")[https://www.github.com]] organization.
-The application contains 209 Ruby source code files, with a total of 9288 #acr("SLOC"), as measured by the `cloc` tool#footnote[#link("https://github.com/AlDanial/cloc")[https://github.com/AlDanial/cloc]].
+The application contains #stats.at("files") Ruby source code files, with a total of #stats.at("sloc") #acr("SLOC"), as measured by the `cloc` tool#footnote[#link("https://github.com/AlDanial/cloc")[https://github.com/AlDanial/cloc]].
 Only the application code is considered, excluding the test code and configuration files.
 
 // Evolutionary
@@ -91,11 +100,11 @@ An overview of the source code repository is presented in @source_code_statistic
     inset: 10pt,
     stroke: (x: none),
     [*#acr("SLOC")*], [*Classes*], [*Methods*], [*Commits*], [*Contributors*],
-    [9288], // cloc . --exclude-dir spec
-    [/* TODO */],
-    [/* TODO */],
-    [332], // git rev-list v5.0.5...v5.2.0 --count --grep dependabot --invert-grep
-    [/* TODO */],
+    [#stats.at("sloc")], // cloc . --exclude-dir spec
+    [#stats.at("classes")],
+    [#stats.at("methods")],
+    [#stats.at("commits")], // git rev-list v5.0.5...v5.2.0 --count --grep dependabot --invert-grep
+    [#stats.at("contributors")],
   ),
   caption: [Source code statistics]
 ) <source_code_statistics>
