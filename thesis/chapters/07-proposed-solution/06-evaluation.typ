@@ -24,7 +24,7 @@ In the context of microservices, individual coupling is defined as the sum of st
 
 $ italic("coup")(M_c) = sum_(v_i in M_c, v_j in.not M_c) italic("calls")(v_i, v_j) $ <individual_coupling_formula>
 
-Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectively, and $italic("calls")$ returns the number of method calls present in the body of method $v_i$ made to method $v_j$.
+Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectively, and $italic("calls")(v_i, v_j)$ returns the number of method calls present in the body of method $v_i$ made to method $v_j$.
 
 The total coupling of a solution is the sum of the individual couplings of all microservice candidates $M_c$.
 
@@ -35,14 +35,14 @@ A lower total coupling indicates a better decomposition.
 ==== Cohesion
 
 Cohesion is a measure of the degree to which internal elements of a module in a software system are related to each other @software_engineering_vocabulary_2017.
-Microservice candidates cohesion is defined as the number of static calls between methods within a microservice candidate $M_c$ in a solution $S$, divided by all possible existing static calls in $S$ @carvalho_etal_2020.
+Cohesion of microservice candidates is defined as the number of static calls between methods within a microservice candidate $M_c$ in a solution $S$, divided by the number of all static method calls in $M_c$ @carvalho_etal_2020.
 The metric indicates how strongly related the methods internal to a microservice candidate are.
 
-To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one static call between methods $v_i$ and $v_j$ in $D$.
+To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one method call between methods $v_i$ and $v_j$ in $M_c$.
 
 $ italic("ref")(v_i, v_j) = cases(1 "if" italic("calls")(v_i, v_j) > 0, 0 "otherwise") $ <cohesion_formula>
 
-The cohesion of a microservice candidate $M_c$ is then calculated as described in @individual_cohesion_formula.
+The cohesion of a microservice candidate $M_c$ is then calculated as described in @individual_cohesion_formula, where $|M_c|$ is the cardinality of all method calls in $M_c$.
 
 $ italic("coh")(M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref")( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
 

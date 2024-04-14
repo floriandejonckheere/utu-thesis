@@ -62,3 +62,4 @@ The next sections detail each of these steps, providing a comprehensive overview
 The process we describe is generic and not tied to any specific programming language or paradigm.
 We implemented a prototype of the proposed solution in Ruby, as the monolithic application we use for evaluation is written in Ruby.
 The implementation is available online#footnote[#link("https://github.com/floriandejonckheere/mosaik")[https://github.com/floriandejonckheere/mosaik]].
+// TODO: something about type checking
