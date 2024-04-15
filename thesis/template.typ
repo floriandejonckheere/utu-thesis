@@ -96,6 +96,7 @@
   }
   v(3fr)
 
+  set par(justify: false)
   align(center, text(2.5em, title))
   v(5fr)
 
