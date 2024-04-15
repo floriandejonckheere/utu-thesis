@@ -4,6 +4,26 @@
 
 // General introduction to the topic
 
+In the past decade, software engineering has seen a radical shift in the way software is developed and deployed.
+The rise in popularity of cloud computing and containerization has led to the emergence of microservices a new software architecture paradigm.
+Microservices as an architectural style emphasize the development of small, distributed services that are deployed independently and communicate with each other over an internal network.
+This approach has several benefits, including scalability and fault tolerance.
+Many big and small organizations have adopted a microservices architecture to increase the flexibility of their software systems, and to enable faster development and deployment cycles.
+
+Migrating monolithic applications to a microservices architecture is not a trivial task.
+It involves deep understanding of software engineering principles, the existing codebase, and the business domain.
+Moreover, as larger and older applications typically have more technological debt, the process of migrating to microservices can be overly complex and error-prone.
+
+In recent years, a new software architecture paradigm has emerged that takes a hybrid approach to monolithic and microservices architectures.
+The modular monolith architecture aims to combine the advantages of using a microservices architecture with the simplicity of a monolithic codebase.
+The modular monolithic application consists of multiple independent modules encapsulating a specific set of functionality.
+The modules are developed in tandem, but deployed as single units.
+This approach allows developers to rapidly build and deploy new features, while maintaining the flexibility and scalability of a microservices architecture.
+As the code resides in the same codebase, developers can easily restructure and redefine the module boundaries.
+This makes the modular monolith architecture an attractive option for organizations that want to migrate their monolithic software systems to a more flexible and scalable architecture.
+
+In this thesis, we aim to investigate the potential benefits of a modular monolithic architecture, and how automated technologies can help software architects to migrate their monolithic codebases to a modular monolith architecture.
+
 == Motivation
 
 // Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
@@ -11,8 +31,6 @@
 /* TODO: read "Migrating Legacy Software to Microservices Architecture */
 
 == Scope and goal
-
-// Scope of the research thesis
 
 This research is centered around three research questions:
 
