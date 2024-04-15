@@ -35,9 +35,17 @@
 
   // Abstract
   abstract: [
-    The modular monolith architecture emerged in recent years as the harmonization of the monolithic and microservices architectures. The paradigm offers a compromise between modularity, flexibility, and scalability. Many monolithic applications are being migrated to modular monoliths or microservices entirely, to satisfy increasingly complex and volatile business requirements. This process is labour-intensive, slow, and may take months to years for larger codebases. Modularization of a codebase typically requires the developer to have an intimate knowledge of both the application code and domain.
+    The modular monolith architecture has recently emerged as a harmonization of monolithic and microservices architectures, offering a balanced approach to modularity, scalability, and flexibility for software design.
+    As simple software systems evolve into complex and hard-to-maintain monolithic applications, many actors are pivoting towards modular monoliths or full microservices architectures to meet the ever-increasing demands of modern business.
 
-    In this thesis, we investigate the modular monolith software architecture, and how modules are typically determined as part of the modularization efforts. We propose an automated solution based on dependency analysis and machine learning algorithms to aid in the identification of module boundaries, and evaluate its effectiveness using a case study. We discuss the results and draw conclusions about the proposed solution.
+    This thesis investigates the merits of adopting a modular monolith architecture for monolithic applications, and the challenges faced during the migration process.
+    Based on the findings, an automated approach is formulated to aid the modularization process, using dependency analysis and machine learning algorithms to identify module boundaries.
+    The proposed solution is implemented for a case study and evaluated using qualitative and quantitative metrics.
+    /* TODO: change if results are different */
+    The results indicate that the automated approach is effective in identifying module boundaries, and can be used to aid the modularization process of monolithic applications.
+    Based on the results of the evaluation, a number of optimizations are proposed to improve the effectiveness of the automated approach.
+    The study concludes that using automated technologies to reduce the manual effort required for modularization can significantly improve the efficiency and accuracy of the process.
+    /* TODO: expand conclusion based on results */
   ],
 
   // Keywords
@@ -46,6 +54,7 @@
     "monolith",
     "microservices",
     "modular monolith",
+    "modularization",
   ),
 
   // Acronyms
