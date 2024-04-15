@@ -11,7 +11,10 @@
   institution: "University of Turku",
 
   // Department
-  department: "Department of Computing",
+  department: "Department of Computing, Software Engineering",
+
+  // Unit
+  unit: "Software Engineering",
 
   // Author
   author: "Florian Dejonckheere",

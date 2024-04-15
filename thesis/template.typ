@@ -13,6 +13,9 @@
   // Department
   department: "",
 
+  // Unit
+  unit: "",
+
   // author
   author: "",
 
@@ -137,7 +140,7 @@
     leading: 0.6em,
   )[
     #subtitle, #total_pages p., #appendix_pages app. p. \
-    #department \
+    #unit \
     #date
   ]
 
