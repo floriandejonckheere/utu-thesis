@@ -34,8 +34,6 @@ In this thesis, we aim to investigate the potential benefits of a modular monoli
 
 This research is centered around three research questions:
 
-// TODO: for each research question, specify motivation and approach?
-
 *Research Question 1*: What are the challenges and opportunities of the modular monolith architecture compared to traditional monolithic and microservices architectures?
 
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
@@ -43,19 +41,23 @@ This research is centered around three research questions:
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 // Motivation: a lot of information is embedded in source code repository, and can be extracted with little prerequisite knowledge of the design
 
-To answer the first research question, we will first define the modular monolith architecture, and examine what sets it apart from monolithic and microservices architectures.
+The motivation behind the first research question is to investigate the potential benefits and drawbacks of the modular monolith architecture with a particular focus on its application to existing monolithic codebases.
+To answer this question, we will first define the modular monolith architecture using existing literature, and examine what sets it apart from monolithic and microservices architectures.
 Then, we will proceed to investigate the merits and drawbacks of the software architecture when applied to an existing codebase.
 
-For the second research question, we will enumerate the existing technologies to aid modularization of monolithic codebases, and choose one automated technology for further examination.
-_(Automated technology)_ will then be implemented for a given use case, and compared to manual modularization efforts in terms of accuracy, efficiency, development velocity.
-This comparison will help us to answer the third research question.
+The second research question is motivated by the need for reducing the complexity and error-proneness of manual modularization efforts.
+We will explore the existing automated technologies to aid modularization of monolithic codebases in the literature.
+This will then help us to answer the third research question.
+An approach to automated modularization will be chosen based on the review of existing technologies.
+A prototype of the proposed solution will be implemented, and applied to a case study.
+The results will be evaluated using a set of quality metrics, and its effectiveness will be discussed.
 
 The goal of this research can be summarized as follows:
 
 + Investigate the merits and drawbacks of the modular monolith architecture
 + Investigate the use of automated technologies to modularize a monolithic architecture
 
-The proposed solution will add value to the field of software engineering, and will be able to be used as a base for future improvements regarding automated modularization of monolith codebases.
+Although the proposed solution will be designed for a specific case study, the results can be generalized to other monolithic codebases.
 
 == Outline
 
