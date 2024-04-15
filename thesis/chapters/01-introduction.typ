@@ -61,22 +61,21 @@ Although the proposed solution will be designed for a specific case study, the r
 
 == Outline
 
-// General outline of the sections
 The thesis is divided into three parts.
 
 The first part comprises the background and related work.
 In @introduction, the scope and goal of the research is defined, and the research questions are formulated.
-The stakeholders are identified, and the methodology is explained.
 @methodology describes the research methodology used in this thesis.
-@background introduces the reader to the research background and necessary concepts.
-In @relatedwork, the existing literature is reviewed, and the state of the art is presented.
+Then, @background introduces the reader to the research background and necessary concepts.
+In @relatedwork, the existing literature on the modular monolith architecture and automated modularization is discussed.
 
 The second part of the thesis, starting with @modularmonolith, is dedicated to the first research question.
 The modular monolith architecture is defined, and its merits and drawbacks are discussed.
 
-The third part aims to solve the second and third research question.
-@automatedmodularization gives an introduction into the automated modularization of monolith codebases, listing the existing technologies.
-It then continues to focus on one automated technology, _(automated technology)_, and explains its implementation.
-@casestudy applies _(automated technology)_ on a given case study, and compares it to manual modularization efforts.
+The third part aims to solve the second and third research questions.
+@automatedmodularization takes a deep dive into the existing technologies for automated modularization.
+@proposedsolution then continues with a proposed solution for automated modularization.
+In @casestudy, a case study is presented along with a strategy for applying the proposed solution.
+The results are then evaluated and discussed.
 
 Finally, @conclusion summarizes the findings, and gives an outlook on future work.
