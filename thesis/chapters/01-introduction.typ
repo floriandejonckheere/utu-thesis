@@ -26,7 +26,9 @@ In this thesis, we aim to investigate the potential benefits of a modular monoli
 
 == Motivation
 
-// Explanation about why and for whom the topic is relevant, and what the expected outcome of the thesis is
+The case study conducted in this thesis relates to a software system developed at Nipro Digital Technologies Europe, a Belgian software company that specializes in developing software solutions for the healthcare industry.
+The application in question is a monolithic application that has accumulated a significant amount of technical debt over the years, and might benefit from a modular monolith architecture.
+It is the aim of this thesis to investigate the viability of applying automated modularization techniques to this software system, in order to pivot towards a modular monolith architecture.
 
 /* TODO: read "Migrating Legacy Software to Microservices Architecture */
 
