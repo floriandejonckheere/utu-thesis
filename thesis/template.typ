@@ -114,6 +114,7 @@
     #text(1.1em, author)
   ]
 
+  set par(justify: true)
   v(1.4fr)
   align(
     center,
