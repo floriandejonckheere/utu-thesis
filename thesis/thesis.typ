@@ -31,7 +31,7 @@
   ),
 
   // Institution logo (SVG)
-  logo-file: "logo-fi.svg",
+  logo-file: "logo-en.svg",
 
   // Abstract
   abstract: [

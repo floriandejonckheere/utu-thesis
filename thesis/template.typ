@@ -92,7 +92,7 @@
   // Title page
   v(0.6fr)
   if logo-file != none {
-    align(right, image(logo-file, width: 40%))
+    align(right, image(logo-file, width: 7cm))
   }
   v(3fr)
 
