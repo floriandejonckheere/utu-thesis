@@ -43,7 +43,7 @@ The systematic literature review was conducted using the three-step protocol as 
 ==== Case study
 
 For the case study, a #acr("DSRM") is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
-In particular, the research and design of the proposed solution follows the six-step #acr("DSRP") model @design_science_research_methodology.
+In particular, the research and design of the proposed solution follows the six-step #acr("DSRP") model @peffers_etal_2007.
 The model is inspired by prior research and is designed to guide researchers through the process of analysis, creation, and evaluation of artifacts in information science.
 
 The six steps of the process are:

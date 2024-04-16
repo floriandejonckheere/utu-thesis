@@ -90,7 +90,7 @@ Based the inclusion/exclusion criteria in @slr_criteria, the results were filter
       - Publications in languages other than English
       - Publications not available in full text
       - Publications using the term "microservice", but not referring to the architectural style
-      - Publications aimed at greenfield #footnote[Development of new software systems lacking constraints imposed by prior work @project_management] or brownfield #footnote[Development of new software systems in the presence of legacy software systems @project_management] development of systems using microservices architecture
+      - Publications aimed at greenfield #footnote[Development of new software systems lacking constraints imposed by prior work @gupta_2011] or brownfield #footnote[Development of new software systems in the presence of legacy software systems @gupta_2011] development of systems using microservices architecture
       - Publications published before 2014, as the definition of "microservices" as an architectural style is inconsistent before 2014 @pahl_jamshidi_2016
       - Publications addressing manual methods or technologies
       - Surveys, opinion pieces, or other non-technical publications

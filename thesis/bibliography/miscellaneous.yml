@@ -1,5 +1,5 @@
 ---
-design_science_research_methodology:
+peffers_etal_2007:
   type: article
   title: A Design Science Research Methodology for Information Systems Research
   author:
@@ -14,7 +14,7 @@ design_science_research_methodology:
   page-range: 45–77
   doi: 10.2753/MIS0742-1222240302
 
-project_management:
+gupta_2011:
   type: book
   title: Project Management
   author:
@@ -63,7 +63,7 @@ software_requirements_specification:
   page-range: 1-26
   doi: 10.1109/IEEESTD.1984.119205
 
-algorithm_design:
+kleinberg_tardos_2006:
   type: book
   title: Algorithm Design
   author:

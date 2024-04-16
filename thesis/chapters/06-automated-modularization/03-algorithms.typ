@@ -94,7 +94,7 @@ Another common approach to identify microservice candidates is to use classical 
 
 // TODO: explain more about community detection algorithms
 
-For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<yang_etal_2022>) use Kruskal's algorithm @algorithm_design to partition the graph into connected clusters.
+For example, #citeauthor(<mazlami_etal_2017>) and #citeauthor(<yang_etal_2022>) use Kruskal's algorithm @kleinberg_tardos_2006 to partition the graph into connected clusters.
 Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
 
 #citeauthor(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
