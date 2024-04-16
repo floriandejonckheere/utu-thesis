@@ -49,24 +49,24 @@
   // Basic properties
   set document(author: author, title: title)
   set page(margin: 35mm)
-  set block(spacing: 1.5em)
   set par(leading: 1.2em)
   set text(size: 12pt, font: "New Computer Modern", lang: "en", region: "FI", hyphenate: false)
   set math.equation(numbering: "(1)")
 
   // Add some space above and below headings
   show heading: set block(above: 2em, below: 1.5em)
+  show heading: set par(justify: false)
   show heading.where(
     level: 1
   ): it => {
       v(3em)
       text(1.5em)[
-      #if it.numbering != none [
-        #box(width: 1.5em)[
-          #counter(heading).display()
+        #if it.numbering != none [
+          #box(width: 1.5em)[
+            #counter(heading).display()
+          ]
         ]
-      ]
-      #it.body
+        #it.body
       ]
       v(2em)
   }
@@ -76,6 +76,9 @@
       v(1em)
       text(1.2em, it)
   }
+
+  // Hide numbering for deeply nested sections
+  show heading.where(level: 4): it => [#block(it.body)]
 
   // Set gap between figure and caption
   set figure(gap: 1em)
@@ -238,9 +241,6 @@
   // Set page number to Arabic numerals
   set page(numbering: "1")
   counter(page).update(1)
-
-  // Hide numbering for deeply nested sections
-  show heading.where(level: 4): it => [#block(it.body)]
 
   // Main document
   for chapter in chapters {
