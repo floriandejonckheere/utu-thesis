@@ -64,7 +64,10 @@ Cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) and co
 Publications using other metrics (#count(metrics, "other")\; #percentage(metrics, "other")) account for the remaining metrics.
 Finally, the #count(metrics, "none") publications that do not mention any quality metrics account for #percentage(metrics, "none").
 
-#include("/figures/metrics-chart.typ")
+#figure(
+  include("/figures/metrics-chart.typ"),
+  caption: [SDLC metric categories]
+) <slr_metrics_chart>
 
 ==== Cohesion and coupling
 

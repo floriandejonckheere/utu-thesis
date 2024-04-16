@@ -90,7 +90,10 @@ The commits from the `dependabot` contributor are omitted, as they are automatic
 We identified nine software developers that have contributed to the software in the analyzed timespan, although only five developers have more than ten commits attributed to them.
 The top two contributors are responsible for #(45+33)% of the commits, while the other seven contributors count for remaining 21%.
 
-#include("/figures/contributors-chart.typ")
+#figure(
+  include("/figures/contributors-chart.typ"),
+  caption: [Contributor statistics]
+) <contributor_statistics>
 
 An overview of the source code repository is presented in @source_code_statistics.
 

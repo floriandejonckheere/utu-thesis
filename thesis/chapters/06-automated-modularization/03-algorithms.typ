@@ -52,7 +52,10 @@ Publications proposing a custom algorithm that does not fit into one of these ca
 The majority of the algorithms identified in the literature are clustering algorithms (#count(algorithms, "clustering")\; #percentage(algorithms, "clustering")), followed by evolutionary algorithms (#count(algorithms, "evolutionary")\; #percentage(algorithms, "evolutionary")) and graph algorithms (#count(algorithms, "graph")\; #percentage(algorithms, "graph")).
 The remaining algorithms are grouped in the "Other algorithms" category (#count(algorithms, "other")\; #percentage(algorithms, "other")).
 
-#include("/figures/algorithms-chart.typ")
+#figure(
+  include("/figures/algorithms-chart.typ"),
+  caption: [SDLC algorithm categories]
+) <slr_algorithms_chart>
 
 ==== Clustering algorithms
 

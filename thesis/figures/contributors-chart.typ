@@ -14,23 +14,20 @@
 
 #let total = data.map(p => p.at(1)).sum()
 
-#figure(
-  cetz.canvas({
-    import cetz.chart
-    import cetz.draw: *
+#cetz.canvas({
+  import cetz.chart
+  import cetz.draw: *
 
-    let colors = gradient.linear(red, blue, green, yellow)
+  let colors = gradient.linear(red, blue, green, yellow)
 
-    chart.piechart(
-      data,
-      clockwise: false,
-      value-key: 1,
-      label-key: 0,
-      radius: 3,
-      slice-style: colors,
-      inner-radius: 1,
-      inner-label: (content: (value, label) => if value > 12 [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 110%),
-      outer-label: (content: (value, label) => if value <= 12 and value > 1 [#str(calc.round(100 * value / total, digits: 0))%] else [], radius: 120%))
-  }),
-  caption: [Contributor statistics]
-) <contributor_statistics>
+  chart.piechart(
+    data,
+    clockwise: false,
+    value-key: 1,
+    label-key: 0,
+    radius: 3,
+    slice-style: colors,
+    inner-radius: 1,
+    inner-label: (content: (value, label) => if value > 12 [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 110%),
+    outer-label: (content: (value, label) => if value <= 12 and value > 1 [#str(calc.round(100 * value / total, digits: 0))%] else [], radius: 120%))
+})
