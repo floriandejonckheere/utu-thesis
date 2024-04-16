@@ -552,3 +552,13 @@ chidamber_kemerer_1994:
     title: IEEE Transactions on Software Engineering
     issue: 6
     volume: 20
+
+dehghani_2018:
+  type: article
+  title: How to break a Monolith into Microservices
+  author:
+    - Dehghani, Zhamak
+  date: 2018-04-24
+  url:
+    value: https://martinfowler.com/articles/break-monolith-into-microservices.html
+    date: 2024-04-10
