@@ -1,6 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers.typ": *
+#import "/helpers/cite.typ": *
 
 == Decomposition
 

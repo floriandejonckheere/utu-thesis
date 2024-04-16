@@ -1,7 +1,8 @@
 #import "@preview/acrostiche:0.3.1": *
 #import "@preview/sourcerer:0.2.1": code
 
-#import "/helpers.typ": *
+#import "/helpers/cite.typ": *
+#import "/helpers/slr.typ": *
 
 #let publications = yaml("/bibliography/literature-review.yml")
 

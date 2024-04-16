@@ -1,4 +1,4 @@
-#import "/helpers.typ": *
+#import "/helpers/cite.typ": *
 
 == Design
 
