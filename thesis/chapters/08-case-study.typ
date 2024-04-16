@@ -39,8 +39,8 @@ To ensure the patient's information security, the application is usually deploye
 // TODO: figure about link data flow
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
-In theory, it is not a stateful application, as it only stores transitional data (e.g. for rate-limiting purposes) using the Redis key-value datastore#footnote[#link("https://www.redis.com")["https://www.redis.com"]].
-The source code of the application is hosted in a private Github repository, and is not publicly available.
+In theory, it is not a stateful application, as it only stores transitional data (e.g. for rate-limiting purposes) using the Redis key-value datastore#footnote[#link("https://www.redis.com")[https://www.redis.com]].
+The source code of the application is hosted in a private Github repository#footnote[#link("https://github.com")[https://github.com]], and is not publicly available.
 
 The codebase of the application is rapidly becoming increasingly complex, which decreases the development velocity of new features and device integrations.
 When it is deployed at bigger sites with up to 400 dialysis machines, the throughput and latency suffer and performance issues arise.
@@ -105,9 +105,9 @@ An overview of the source code repository is presented in @source_code_statistic
     stroke: (x: none),
     [*#acr("SLOC")*], [*Classes*], [*Methods*], [*Commits*], [*Contributors*],
     [#stats.at("sloc")], // cloc . --exclude-dir spec
-    [#stats.at("classes")],
-    [#stats.at("methods")],
-    [#stats.at("commits")], // git rev-list v5.0.5...v5.2.0 --count --grep dependabot --invert-grep
+    [#stats.at("classes")], // grep -hro 'class [A-Z][A-Za-z0-9]*' lib | wc -l
+    [#stats.at("methods")], // grep -hro 'def [a-z][A-Za-z0-9]*' lib | wc -l
+    [#stats.at("commits")], // git rev-list v5.0.0...v5.2.0 --count --grep dependabot --invert-grep
     [#stats.at("contributors")],
   ),
   caption: [Source code statistics]
