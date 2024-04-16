@@ -23,6 +23,28 @@ project_management:
   publisher: Prentice-Hall of India Pvt.Limited
   isbn: 978-81-203-4425-9
 
+ralph_baltes_2022:
+  type: article
+  title: 'Paving the Way for Mature Secondary Research: The Seven Types of Literature Review'
+  author:
+    - Ralph, Paul
+    - Baltes, Sebastian
+  date: 2022-11-07
+  page-range: 1632–1636
+  url:
+    value: https://dl.acm.org/doi/10.1145/3540250.3560877
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3540250.3560877
+    isbn: 978-1-4503-9413-0
+  parent:
+    - type: proceedings
+      title: Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering
+      publisher: ACM
+      location: Singapore Singapore
+    - type: conference
+      title: 'ESEC/FSE ''22: 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'
+
 software_requirements_specification:
   type: article
   title: IEEE Guide for Software Requirements Specifications

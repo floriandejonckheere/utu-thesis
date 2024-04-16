@@ -4,26 +4,25 @@
 
 = Methodology <methodology>
 
-// Explanation of the research methodology used
+This chapter describes the methodology used in this thesis in detail.
 
-// TODO: first RQ solved by ad-hoc literature review (@ralph_baltes_2022)
-// TODO: determine if second RQ is solved by systematic literature review, or mapping study? (@ralph_baltes_2022)
-A literature review is conducted to answer the first and second research question.
-For the first research question, the study aims to find a definition of the modular monolith architecture, and to list the advantages and disadvantages of the architecture based on existing literature.
-For the second research question, the state of the art in automated modularization technologies is reviewed and summarized.
+// Ad hoc review (@ralph_baltes_2022)
+To answer the first research question, an ad hoc review is conducted, picking a select number of papers that define and discuss the modular monolith architecture.
+An ad hoc review is a less formal review process, where the researcher discusses purposefully selected papers to gain an understanding of a specific topic @ralph_baltes_2022.
 
-The third research question is answered by choosing the most appropriate automated technology, and implementing it for a given use case.
-The implementation is then evaluated based on quantitative and qualitative metrics, and compared to manual modularization efforts.
+For the second research question, a systematic literature review is conducted to identify and summarize the state of the art in automated modularization technologies.
+Systematic literature reviews are more formal than ad hoc reviews, and follow a well-defined process to reduce bias and increase the reliability of the results.
 
-Finally, the findings are summarized, and an outlook on future work is given.
+The third research question is answered by designing an approach based on the results of the systematic literature review, and implementing it for a case study.
+The effectiveness of the approach is then evaluated based on quantitative and qualitative metrics.
 
 ==== Systematic literature review
 
-// TODO: explain a bit more in detail
 A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @kitchenham_charters_2007.
-The systematic nature of systematic literature reviews reduces bias through a well-defined sequence of steps to identify and categorize existing literature, although publication bias still has to be considered /* TODO: reference */.
+The systematic nature of systematic literature reviews reduces sampling bias through a well-defined sequence of steps to identify and categorize existing literature, and applies techniques such as forward and reverse snowballing to reduce publication bias @ralph_baltes_2022.
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
+Systematic literature reviews often only consider primary studies as they are considered the most reliable source of information, but may also include secondary studies if the primary studies are scarce, or as a means to identify primary studies.
 
 The systematic literature review was conducted using the three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
 
@@ -45,7 +44,7 @@ The systematic literature review was conducted using the three-step protocol as 
 
 For the case study, a #acr("DSRM") is adopted, which is a research paradigm for information systems research focused at creating and evaluating artifacts.
 In particular, the research and design of the proposed solution follows the six-step #acr("DSRP") model @design_science_research_methodology.
-Their model is based on prior research and is designed to guide researchers through the process of analysis, creation, and evaluation of artifacts.
+The model is inspired by prior research and is designed to guide researchers through the process of analysis, creation, and evaluation of artifacts in information science.
 
 The six steps of the process are:
 
@@ -67,4 +66,5 @@ The six steps of the process are:
 
 The process is structured sequentially, however the authors suggests that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
 
-In this thesis specifically, the DSRP is used to guide the design and development of the automated modularization technology, with a particular focus on the design and development, demonstration, and evaluation steps.
+In this thesis, we use the #acr("DSRP") as a guideline for the design, development, and evaluation of the automated modularization approach used in the case study.
+We focus in particular on the design and development, demonstration, and evaluation steps.
