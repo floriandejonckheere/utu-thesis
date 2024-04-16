@@ -121,6 +121,10 @@ An overview of the source code repository is presented in @source_code_statistic
 // Analysis and discussion of the results
 // Justify the reason for existence of the modular monolith paradigm
 
+// Refer back to the (non-)functional requirements
+// Functional requirements: quality, automation, technology, visual
+// Non-functional requirements: usability, performance, reuse
+
 == Threats to validity
 
 // Ability of the proposal solution to generalize

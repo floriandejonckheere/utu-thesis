@@ -11,11 +11,12 @@ Non-functional requirements are additional requirements imposed at design-time t
 
 The functional requirements we pushed forward for our proposed solution are as follows:
 
-+ *Efficiency*: the solution decomposes the monolithic application into a microservices application with adequate efficiency /* TODO: reference quality metrics */
++ *Quality*: the solution provides a high-quality decomposition of the monolithic application, based on a set of quality metrics
 + *Automation*: the solution automates the decomposition process as much as possible
-+ *Technology*: the solution is written in a programming language that is compatible with the Ruby programming language#footnote[#link("https://www.ruby-lang.org/")[https://www.ruby-lang.org/]]
++ *Technology*: the solution can analyze applications written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org/")[https://www.ruby-lang.org/]]
 + *Visual*: the solution can output the proposed decomposition in a visual manner, to aid understanding of the process
 
+#v(1em)
 The non-functional requirements identified for our solution are:
 
 + *Usability*: a software architect or senior software engineer can reasonably quickly get started with the solution
