@@ -11,7 +11,7 @@
   institution: "University of Turku",
 
   // Department
-  department: "Department of Computing, Software Engineering",
+  department: "Department of Computing",
 
   // Unit
   unit: "Software Engineering",

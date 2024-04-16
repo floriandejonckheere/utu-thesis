@@ -55,10 +55,19 @@
   set math.equation(numbering: "(1)")
 
   // Add some space above and below headings
-  show heading: it => {
-    v(3em)
-    text(1.2em, it)
-    v(1em)
+  show heading.where(
+    level: 1
+  ): it => {
+      v(5em)
+      text(1.5em, it)
+      v(3em)
+  }
+  show heading.where(
+    level: 2
+  ): it => {
+      v(3em)
+      text(1.2em, it)
+      v(1em)
   }
 
   // Set gap between figure and caption
@@ -133,31 +142,38 @@
   // Abstract
   par(
     leading: 0.6em,
+    first-line-indent: 0em,
+    justify: false,
   )[
     #upper(institution) \
     #department
-  ]
-
-  smallcaps(author)
-  [: ]
-  title
-
-  par(
-    leading: 0.6em,
-  )[
+    #v(0.6em)
+    #smallcaps(author): #title
+    #v(0.6em)
     #subtitle, #total_pages p., #appendix_pages app. p. \
     #unit \
     #date
   ]
 
   line(length: 100%)
-  abstract
+  par(
+    leading: 0.6em,
+    first-line-indent: 0em,
+    justify: true,
+  )[
+    #abstract
+  ]
 
   linebreak()
 
-  v(1.5em)
-  strong("Keywords: ")
-  keywords.join(", ")
+  par(
+    leading: 0.6em,
+    first-line-indent: 0em,
+    justify: false,
+  )[
+    #v(1.5em)
+    *Keywords*: #keywords.join(", ")
+  ]
 
   pagebreak()
 
