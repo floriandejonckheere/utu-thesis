@@ -99,6 +99,5 @@
   // Appendix
   appendix: (
     "a-literature-review",
-    "b-examples",
   ),
 )
