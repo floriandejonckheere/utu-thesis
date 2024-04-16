@@ -18,25 +18,25 @@ The categories are based on #slr_cite_full(<bajaj_etal_2021>).
     "Requirements documents and models", // e.g., functional and non-functional requirements, use cases, BPMN
     "Static",
     [
-      #artifacts.at("requirements").map(p => cite(label(p))).join()
+      #artifacts.at("requirements").map(p => ref(label(p))).join()
     ],
 
     "Design documents", // e.g., API specifications, UML, ERD
     "Static",
     [
-      #artifacts.at("design").map(p => cite(label(p))).join()
+      #artifacts.at("design").map(p => ref(label(p))).join()
     ],
 
     "Codebase", // e.g., source code, revision history
     "Static",
     [
-      #artifacts.at("codebase").map(p => cite(label(p))).join()
+      #artifacts.at("codebase").map(p => ref(label(p))).join()
     ],
 
     "Execution data", // e.g., log files, execution traces
     "Dynamic",
     [
-      #artifacts.at("execution").map(p => cite(label(p))).join()
+      #artifacts.at("execution").map(p => ref(label(p))).join()
     ],
   ),
   caption: [SDLC artifact categories]

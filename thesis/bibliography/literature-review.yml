@@ -5,6 +5,7 @@ snowballing:
     - eski_buzluca_2018
     - wu_etal_2005
     - baresi_etal_2017
+    - kalia_etal_2020
   secondary:
     - fritzsch_etal_2019
 platforms:
@@ -50,6 +51,7 @@ platforms:
     total: 168
     selected: 9
     primary:
+      - brito_etal_2021
       - wei_etal_2020
       - sellami_etal_2022
       - hasan_etal_2023
@@ -94,6 +96,7 @@ categories:
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
+      - kalia_etal_2020
       - kalia_etal_2021
       - cao_zhang_2022
       - santos_paula_2021
@@ -123,6 +126,7 @@ categories:
       - ma_etal_2022 # Hierarchical clustering
       - sellami_etal_2022 # DBSCAN
       - nitin_etal_2022 # Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
+      - kalia_etal_2020
       - kalia_etal_2021 # Hierarchical clustering
       - cao_zhang_2022 # Hierarchical clustering
     evolutionary:
@@ -175,6 +179,7 @@ categories:
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
+      - kalia_etal_2020
       - kalia_etal_2021
       - cao_zhang_2022
     coupling:
@@ -197,6 +202,7 @@ categories:
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
+      - kalia_etal_2020
       - kalia_etal_2021
       - cao_zhang_2022
     overhead:
@@ -220,6 +226,7 @@ categories:
       - wu_zhang_2022
       - brito_etal_2021
       - sellami_etal_2022
+      - kalia_etal_2020
       - kalia_etal_2021
     other:
       - yang_etal_2022 # Correlation
@@ -236,6 +243,7 @@ categories:
       - sellami_etal_2022 # Non-Extreme Distribution
       - hasan_etal_2023 # Size
       - nitin_etal_2022 # Business Context Purity
+      - kalia_etal_2020 # Size
       - kalia_etal_2021 # Size
       - cao_zhang_2022 # Density
       - santos_paula_2021 # Coefficient silhouette

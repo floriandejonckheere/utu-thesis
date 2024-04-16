@@ -24,9 +24,6 @@
 
   // Bibliography
   bibliographies: (
-    "literature-review/ieee",
-    "literature-review/acm",
-    "literature-review/snowballing",
     "01-introduction",
     "02-methodology",
     "03-background",

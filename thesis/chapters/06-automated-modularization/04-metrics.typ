@@ -18,42 +18,42 @@ Some of the algorithms require the use of a specific metric to guide the process
     [*Metric*], [*Publications*],
     "Cohesion",
     [
-      #metrics.at("cohesion").map(p => cite(label(p))).join()
+      #metrics.at("cohesion").map(p => ref(label(p))).join()
     ],
 
     "Coupling",
     [
-      #metrics.at("coupling").map(p => cite(label(p))).join()
+      #metrics.at("coupling").map(p => ref(label(p))).join()
     ],
 
     "Network overhead",
     [
-      #metrics.at("overhead").map(p => cite(label(p))).join()
+      #metrics.at("overhead").map(p => ref(label(p))).join()
     ],
 
     "Complexity",
     [
-      #metrics.at("complexity").map(p => cite(label(p))).join()
+      #metrics.at("complexity").map(p => ref(label(p))).join()
     ],
 
     "CPU and memory usage",
     [
-      #metrics.at("cpu_memory").map(p => cite(label(p))).join()
+      #metrics.at("cpu_memory").map(p => ref(label(p))).join()
     ],
 
     "Modularity",
     [
-      #metrics.at("modularity").map(p => cite(label(p))).join()
+      #metrics.at("modularity").map(p => ref(label(p))).join()
     ],
 
     "Other metrics",
     [
-      #metrics.at("other").map(p => cite(label(p))).join()
+      #metrics.at("other").map(p => ref(label(p))).join()
     ],
 
     "No metrics",
     [
-      #metrics.at("none").map(p => cite(label(p))).join()
+      #metrics.at("none").map(p => ref(label(p))).join()
     ],
   ),
   caption: [Quality metrics]
@@ -88,7 +88,7 @@ The total coupling of the solution is the sum of the coupling of all microservic
 Similarly, #slr_cite_full(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
 #slr_cite_full(<jin_etal_2021>) introduce the concept of inter-service cohesion and inter-call percentage (ICP) as coupling metrics.
-Several other publications use the metrics introduced by #cite(<jin_etal_2021>, form: "author") in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
+Several other publications use the metrics introduced by #slr_cite_authors(<jin_etal_2021>) in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
 
 Another approach to cohesion and coupling is that of #slr_cite_full(<santos_silva_2022>) and #slr_cite_full(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.

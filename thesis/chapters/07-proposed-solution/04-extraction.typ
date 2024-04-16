@@ -1,6 +1,7 @@
 #import "@preview/acrostiche:0.3.1": *
 
 #import "/helpers/cite.typ": *
+#import "/helpers/slr.typ": *
 
 == Extraction
 
@@ -17,7 +18,7 @@ Hence, we chose the source code repository as the starting point of the informat
 // TODO: structural coupling + reference
 
 // Evolutionary analysis
-#citeauthor(<mazlami_etal_2017>) propose a microservice extraction model that includes three possible extraction strategies: _logical coupling_ strategy, _semantic coupling_ strategy, and _contributor coupling_ strategy.
+#slr_cite_authors(<mazlami_etal_2017>) propose a microservice extraction model that includes three possible extraction strategies: _logical coupling_ strategy, _semantic coupling_ strategy, and _contributor coupling_ strategy.
 In this thesis, we concentrate on the logical coupling strategy, and the contributor coupling strategy.
 The next sections describe in detail how these strategies are used for extracting information from the source code repository.
 
@@ -54,7 +55,7 @@ $ <aggregated_structural_coupling_formula>
 
 The $italic("ref")_italic("mm")$, $italic("ref")_italic("mc")$, and $italic("ref")_italic("cc")$ functions return the number of references between the two methods $m_i$ and $m_j$, method $m_i$ and class $m_j$, and classes $c_i$ and $c_j$ respectively.
 
-As #citeauthor(<carvalho_etal_2020>) note, the choice of granularity is an important decision in the extraction of microservices.
+As #slr_cite_authors(<carvalho_etal_2020>) note, the choice of granularity is an important decision in the extraction of microservices.
 Existing approaches tend to use a more coarse-grained granularity (e.g. on the level of files or classes) rather than a fined-grained granularity (e.g. on the level of methods).
 Using a coarse-grained granularity can lead to a smaller number of microservices that are responsible for a larger number of functionalities.
 A fine-grained granularity can lead to a much larger number of microservices, which can decrease the maintainability of the system.

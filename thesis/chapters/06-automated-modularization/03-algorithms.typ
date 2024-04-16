@@ -24,25 +24,25 @@ The identified classes of microservice candidate identification algorithms are d
     "Clustering algorithms",
     "K-Means, DBSCAN, Hierarchical Agglomerative Clustering, Affinity Propagation",
     [
-      #algorithms.at("clustering").map(p => cite(label(p))).join()
+      #algorithms.at("clustering").map(p => ref(label(p))).join()
     ],
 
     "Evolutionary algorithms",
     "NSGA-II, NSGA-III",
     [
-      #algorithms.at("evolutionary").map(p => cite(label(p))).join()
+      #algorithms.at("evolutionary").map(p => ref(label(p))).join()
     ],
 
     "Graph algorithms",
     "Kruskal, Louvain method, Leiden algorithm, Label Propagation",
     [
-      #algorithms.at("graph").map(p => cite(label(p))).join()
+      #algorithms.at("graph").map(p => ref(label(p))).join()
     ],
 
     "Other algorithms",
     "Linear optimization, custom algorithms",
     [
-      #algorithms.at("other").map(p => cite(label(p))).join()
+      #algorithms.at("other").map(p => ref(label(p))).join()
     ],
   ),
   caption: [Microservice candidate identification algorithm]

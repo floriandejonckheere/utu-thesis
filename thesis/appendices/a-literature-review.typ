@@ -21,7 +21,7 @@
     ..for (platform) in publications.platforms.keys() {
       for (key) in publications.platforms.at(platform).primary {
         (
-          [*#ref(label("slr_" + key))*],
+          [*#ref(label(key))*],
           [
             #slr_reference(
               [
@@ -29,7 +29,7 @@
                 #text(slr_bibliography.at(key).at("title"), style: "italic"),
                 #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
-              "slr_" + key,
+              key,
             )
           ],
         )
@@ -37,7 +37,7 @@
     },
     ..for (key) in publications.snowballing.primary {
       (
-        [*#ref(label("slr_" + key))*],
+        [*#ref(label(key))*],
         [
           #slr_reference(
             [
@@ -45,7 +45,7 @@
               #text(slr_bibliography.at(key).at("title"), style: "italic"),
               #str(slr_bibliography.at(key).at("date")).split("-").first()
             ],
-            "slr_" + key,
+            key,
           )
         ],
       )
@@ -68,7 +68,7 @@
     ..for (platform) in publications.platforms.keys() {
       for (key) in publications.platforms.at(platform).secondary {
         (
-          [*#ref(label("slr_" + key))*],
+          [*#ref(label(key))*],
           [
             #slr_reference(
               [
@@ -76,7 +76,7 @@
                 #text(slr_bibliography.at(key).at("title"), style: "italic"),
                 #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
-              "slr_" + key,
+              key,
             )
           ],
         )
@@ -84,7 +84,7 @@
     },
     ..for (key) in publications.snowballing.secondary {
       (
-        [*#ref(label("slr_" + key))*],
+        [*#ref(label(key))*],
         [
           #slr_reference(
             [
@@ -92,7 +92,7 @@
               #text(slr_bibliography.at(key).at("title"), style: "italic"),
               #str(slr_bibliography.at(key).at("date")).split("-").first()
             ],
-            "slr_" + key,
+            key,
           )
         ],
       )
