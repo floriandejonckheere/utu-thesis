@@ -28,7 +28,7 @@
 
 #canvas({
   chart.columnchart(
-    size: (10, 4),
+    size: (14, 3),
     y-tick-step: 2,
     publications_by_year.pairs(),
   )
