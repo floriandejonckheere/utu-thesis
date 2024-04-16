@@ -15,11 +15,11 @@
 #show figure: set text(size: 9pt)
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (auto, auto),
     inset: 5pt,
     stroke: (x: none),
-    align: (right, left, left),
-    [], [*ID*], [*Publication*],
+    align: (right, left),
+    [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
@@ -27,11 +27,16 @@
         index += 1
 
         (
-          [*P#index*],
-          [#cite(label(key))],
+          [*#ref(label("slr_" + key))*],
           [
-            #text(pubs.at(key).at("title"), style: "italic"),
-            #slr_cite_full(pubs, key)
+            #slr_reference(
+              [
+                #slr_cite_authors(pubs, key),
+                #text(pubs.at(key).at("title"), style: "italic"),
+                #str(pubs.at(key).at("date")).split("-").first()
+              ],
+              "slr_" + key,
+            )
           ],
         )
       }
@@ -50,11 +55,11 @@
 #show figure: set text(size: 9pt)
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (auto, auto),
     inset: 5pt,
     stroke: (x: none),
-    align: (right, left, left),
-    [], [*ID*], [*Publication*],
+    align: (right, left),
+    [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
@@ -62,11 +67,16 @@
         index += 1
 
         (
-          [*P#index*],
-          [#cite(label(key))],
+          [*#ref(label("slr_" + key))*],
           [
-            #text(pubs.at(key).at("title"), style: "italic"),
-            #slr_cite_full(pubs, key)
+            #slr_reference(
+              [
+                #slr_cite_authors(pubs, key),
+                #text(pubs.at(key).at("title"), style: "italic"),
+                #str(pubs.at(key).at("date")).split("-").first()
+              ],
+              "slr_" + key,
+            )
           ],
         )
       }

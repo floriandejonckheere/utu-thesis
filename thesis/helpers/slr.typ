@@ -10,8 +10,19 @@
 
 #let publications = yaml("/bibliography/literature-review.yml")
 
-// Cite a paper
-#let slr_cite_full = (platform, key) => {
+// Create a reference to a paper
+#let slr_reference = ((t, l) => [
+  #figure(
+    box(width: 100%)[#align(left)[#t]],
+    kind: "paper",
+    supplement: none,
+    numbering: (..nums) => "[P" + nums.pos().map(str).join("") + "]",
+  )
+  #label(l)
+])
+
+// Cite a paper (author)
+#let slr_cite_authors = (platform, key) => {
   let names = platform.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
   if (names.len() == 1) {
