@@ -115,26 +115,26 @@
   align(
     right,
   )[
-    #text(1.2em, smallcaps(institution))
-    #linebreak()
-    #text(1.1em, department)
-    #linebreak()
-    #text(1.1em, subtitle)
-    #linebreak()
-    #text(1.1em, date)
-    #linebreak()
-    #text(1.1em, author)
+    #par(leading: 0.6em)[
+      #text(1em, smallcaps(institution)) \
+      #text(0.9em, department) \
+      #text(0.9em, subtitle) \
+      #text(0.9em, unit) \
+      #text(0.9em, date) \
+      #text(0.9em, author)
+    ]
   ]
 
-  set par(justify: true)
-  v(1.4fr)
+  v(2fr)
   align(
     center,
-    text(
-      "The originality of this thesis has been checked in accordance with the University of Turku quality assurance system using the Turnitin OriginalityCheck service.",
-      size: 0.75em,
-      hyphenate: false
-    )
+    par(leading: 0.6em, justify: true)[
+      #text(
+        "The originality of this thesis has been checked in accordance with the University of Turku quality assurance system using the Turnitin OriginalityCheck service.",
+        size: 0.7em,
+        hyphenate: false
+      )
+    ]
   )
   pagebreak()
 
