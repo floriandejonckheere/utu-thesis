@@ -31,7 +31,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(key),
+                #slr_cite_authors(label(key)),
                 #text(pubs.at(key).at("title"), style: "italic"),
                 #str(pubs.at(key).at("date")).split("-").first()
               ],
@@ -69,7 +69,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(key),
+                #slr_cite_authors(label(key)),
                 #text(pubs.at(key).at("title"), style: "italic"),
                 #str(pubs.at(key).at("date")).split("-").first()
               ],

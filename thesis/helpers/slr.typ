@@ -26,7 +26,7 @@
 
 // Cite a paper (author)
 #let slr_cite_authors = (key) => {
-  let names = slr_bibliography.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
+  let names = slr_bibliography.at(str(key)).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
   if (names.len() == 1) {
     names.at(0)
@@ -38,4 +38,21 @@
     names.at(0) + " et al."
   }
 
+}
+
+// Cite a paper (author and reference)
+#let slr_cite_full = (key) => {
+  let names = slr_bibliography.at(str(key)).at("author").map(a => a.split(", ").at(0))
+
+  let cite_key = label("slr_" + str(key))
+
+  if (names.len() == 1) {
+    names.at(0) + " " + ref(key)
+  } else if (names.len() == 2) {
+    names.at(0) + " and " + names.at(1) + " " + ref(key)
+  } else if (names.len() == 3) {
+    names.at(0) + ", " + names.at(1) + " and " + names.at(2) + " " + ref(key)
+  } else {
+    names.at(0) + " et al. " + ref(key)
+  }
 }
