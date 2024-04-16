@@ -50,8 +50,6 @@
     names.at(0) + " " + ref(cite_key)
   } else if (names.len() == 2) {
     names.at(0) + " and " + names.at(1) + " " + ref(cite_key)
-  } else if (names.len() == 3) {
-    names.at(0) + ", " + names.at(1) + " and " + names.at(2) + " " + ref(cite_key)
   } else {
     names.at(0) + " et al. " + ref(cite_key)
   }
