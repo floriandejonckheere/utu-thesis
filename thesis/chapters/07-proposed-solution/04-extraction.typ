@@ -36,9 +36,7 @@ Our solution analyzes the source code of the monolithic application using the `p
 The library is written in Ruby and can be used to parse Ruby source code files and extract the #acr("AST") of the source code.
 Iterating over the #acr("AST") of the monolithic application, MOSAIK extracts the references between classes.
 
-Using this information, a call graph is constructed that represents the structural coupling of the monolithic application.
-
-For each class in the monolithic application $c_i in M_C$, a vertex is created in the call graph.
+Using this information, a call graph is constructed that represents the structural coupling of the monolithic application. For each class in the monolithic application $c_i in M_C$, a vertex is created in the call graph.
 References between classes are represented as directed edges between the vertices.
 
 A directed edge is created for each reference between two classes $c_i, c_j$.
