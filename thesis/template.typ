@@ -50,7 +50,7 @@
   set document(author: author, title: title)
   set page(margin: 35mm)
   set block(spacing: 1.5em)
-  set par(leading: 1.1em, first-line-indent: 1.8em, justify: true)
+  set par(leading: 1.1em)
   set text(size: 12pt, font: "New Computer Modern", lang: "en", region: "FI", hyphenate: false)
   set math.equation(numbering: "(1)")
 
@@ -109,7 +109,6 @@
   }
   v(3fr)
 
-  set par(justify: false)
   align(center, text(2.5em, title))
   v(5fr)
 
@@ -142,8 +141,6 @@
   // Abstract
   par(
     leading: 0.6em,
-    first-line-indent: 0em,
-    justify: false,
   )[
     #upper(institution) \
     #department
@@ -158,7 +155,6 @@
   line(length: 100%)
   par(
     leading: 0.6em,
-    first-line-indent: 0em,
     justify: true,
   )[
     #abstract
@@ -168,7 +164,6 @@
 
   par(
     leading: 0.6em,
-    first-line-indent: 0em,
     justify: false,
   )[
     #v(1.5em)
@@ -231,7 +226,7 @@
   pagebreak()
 
   // Main document
-  set par(justify: true)
+  set par(first-line-indent: 1.8em, justify: true)
 
   // Set page number to Arabic numerals
   set page(numbering: "1")
