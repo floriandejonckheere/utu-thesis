@@ -1,0 +1,261 @@
+---
+abdellatif_etal_2021:
+  type: article
+  title: A Taxonomy of Service Identification Approaches for Legacy Software Systems Modernization
+  author:
+    - Abdellatif, Manel
+    - Shatnawi, Anas
+    - Mili, Hafedh
+    - Moha, Naouel
+    - Boussaidi, Ghizlane El
+    - Hecht, Geoffrey
+    - Privat, Jean
+    - Guéhéneuc, Yann-Gaël
+  date: 2021
+  page-range: 110868
+  doi: 10.1016/j.jss.2020.110868
+
+alshuqayran_etal_2016:
+  type: proceedings
+  title: A Systematic Mapping Study in Microservice Architecture
+  author:
+    - Alshuqayran, Nuha
+    - Ali, Nour
+    - Evans, Roger
+  journal: 2016 IEEE 9th International Conference on Service-Oriented Computing and Applications (SOCA)
+  date: 2016
+  page-range: 44–51
+  doi: 10.1109/SOCA.2016.15
+
+blondel_etal_2008:
+  type: article
+  title: Fast unfolding of communities in large networks
+  author:
+    - Blondel, Vincent D
+    - Guillaume, Jean-Loup
+    - Lambiotte, Renaud
+    - Lefebvre, Etienne
+  date: 2008
+  page-range: P10008
+  url: https://dx.doi.org/10.1088/1742-5468/2008/10/P10008
+  serial-number:
+    doi: 10.1088/1742-5468/2008/10/P10008
+  parent:
+    type: periodical
+    title: 'Journal of Statistical Mechanics: Theory and Experiment'
+    publisher: ''
+    issue: 10
+    volume: 2008
+
+candela_etal_2016:
+  type: article
+  title: 'Using Cohesion and Coupling for Software Remodularization: Is It Enough?'
+  author:
+    - Candela, Ivan
+    - Bavota, Gabriele
+    - Russo, Barbara
+    - Oliveto, Rocco
+  date: 2016
+  url: https://doi.org/10.1145/2928268
+  serial-number:
+    doi: 10.1145/2928268
+    issn: 1049-331X
+  parent:
+    type: periodical
+    title: ACM Trans. Softw. Eng. Methodol.
+    publisher: Association for Computing Machinery
+    location: New York, NY, USA
+    issue: 3
+    volume: 25
+
+eder_etal_1995:
+  type: article
+  title: Coupling and Cohesion in Object-Oriented Systems
+  author:
+    - Eder, Johann
+    - Kappel, Gerti
+    - Schre, Michael
+  date: 1995
+  parent:
+    type: periodical
+
+ester_etal_1996:
+  type: article
+  title: A density-based algorithm for discovering clusters in large spatial databases with noise
+  author:
+    - Ester, Martin
+    - Kriegel, Hans-Peter
+    - Sander, Jörg
+    - Xu, Xiaowei
+  date: 1996
+  page-range: 226
+  parent:
+    type: proceedings
+    title: Proceedings of the Second International Conference on Knowledge Discovery and Data Mining
+    publisher: AAAI Press
+    location: Portland, Oregon
+    parent:
+      type: proceedings
+      title: KDD'96
+
+frey_dueck_2007:
+  type: article
+  title: Clustering by Passing Messages Between Data Points
+  author:
+    - Frey, Brendan J.
+    - Dueck, Delbert
+  date: 2007
+  page-range: 972–976
+  url: https://www.science.org/doi/abs/10.1126/science.1136800
+  serial-number:
+    doi: 10.1126/science.1136800
+  parent:
+    type: periodical
+    title: Science
+    issue: 5814
+    volume: 315
+
+gupta_2011:
+  type: book
+  title: Project Management
+  author:
+    - Gupta, Rajeev M.
+  date: 2011
+  publisher: Prentice-Hall of India Pvt.Limited
+  isbn: 978-81-203-4425-9
+
+jackson_2000:
+  type: book
+  title: 'Problem frames: analyzing and structuring software development problems'
+  author: Jackson, Michael
+  date: 2000
+  publisher: Addison-Wesley Longman Publishing Co., Inc.
+  location: USA
+  serial-number:
+    isbn: 020159627X
+
+kleinberg_tardos_2006:
+  type: book
+  title: Algorithm Design
+  author:
+    - Kleinberg, Jon
+    - Tardos, Éva
+  date: 2006
+  publisher: Pearson Education
+  page-range: 142-151
+  isbn: 97-80-321-2953-54
+
+kobayashi_etal_2012:
+  type: article
+  title: Feature-gathering dependency-based software clustering using Dedication and Modularity
+  author:
+    - Kobayashi, Kenichi
+    - Kamimura, Manabu
+    - Kato, Koki
+    - Yano, Keisuke
+    - Matsuo, Akihiko
+  date: 2012
+  url: http://dx.doi.org/10.1109/ICSM.2012.6405308
+  serial-number:
+    doi: 10.1109/icsm.2012.6405308
+  parent:
+    type: proceedings
+    title: 2012 28th IEEE International Conference on Software Maintenance (ICSM)
+    publisher: IEEE
+
+mitchell_etal_2001:
+  type: article
+  title: An Architecture for Distributing the Computation of Software Clustering Algorithms
+  author:
+    - Mitchell, B.
+    - Traverso, M.
+    - Mancoridis, S.
+  date: 2001
+  page-range: 181–190
+  url:
+    value: http://ieeexplore.ieee.org/document/948427/
+    date: 2024-03-27
+  serial-number:
+    doi: 10.1109/WICSA.2001.948427
+    isbn: 978-0-7695-1360-7
+  parent:
+    - type: proceedings
+      title: Proceedings Working IEEE/IFIP Conference on Software Architecture
+      publisher: IEEE Comput. Soc
+      location: Amsterdam, Netherlands
+    - type: conference
+      title: Working IEEE/IFIP Conference on Software Architecture
+
+murtagh_legendre_2014:
+  type: article
+  title: "Ward's Hierarchical Agglomerative Clustering Method: Which Algorithms Implement Ward's Criterion?"
+  author:
+    - Murtagh, Fionn
+    - Legendre, Pierre
+  date: 2014
+  page-range: 274
+  url: http://dx.doi.org/10.1007/s00357-014-9161-z
+  serial-number:
+    doi: 10.1007/s00357-014-9161-z
+    issn: 1432-1343
+  parent:
+    type: periodical
+    title: Journal of Classification
+    publisher: Springer Science, Business Media LLC
+    issue: 3
+    volume: 31
+
+pahl_jamshidi_2016:
+  type: proceedings
+  title: 'Microservices: A Systematic Mapping Study'
+  author:
+    - Pahl, Claus
+    - Jamshidi, Pooyan
+  journal: Proceedings of the 6th International Conference on Cloud Computing and Services Science
+  date: 2016
+  page-range: 137–146
+  doi: 10.5220/0005785501370146
+
+parnas_1972:
+  type: article
+  title: On the Criteria To Be Used in Decomposing Systems into Modules
+  author: Parnas, D L
+  date: 1972
+  parent:
+    type: periodical
+    issue: 12
+    volume: 15
+
+rousseeuw_1987:
+  type: article
+  title: 'Silhouettes: A graphical aid to the interpretation and validation of cluster analysis'
+  author: Rousseeuw, Peter J.
+  date: 1987
+  page-range: 53–65
+  url: https://www.sciencedirect.com/science/article/pii/0377042787901257
+  serial-number:
+    doi: https://doi.org/10.1016/0377-0427(87)90125-7
+    issn: 0377-0427
+  parent:
+    type: periodical
+    title: Journal of Computational and Applied Mathematics
+    volume: 20
+
+software_requirements_specification:
+  type: article
+  title: IEEE Guide for Software Requirements Specifications
+  journal: IEEE Std 830-1984
+  date: 1984
+  page-range: 1-26
+  doi: 10.1109/IEEESTD.1984.119205
+
+zhu_ghahramani_2003:
+  type: article
+  title: Learning from Labeled and Unlabeled Data with Label Propagation
+  author:
+    - Zhu, Xiaojin
+    - Ghahramani, Zoubin
+  date: 2003
+  page-range: ''
+  parent:
+    type: periodical

@@ -1,0 +1,45 @@
+---
+kitchenham_charters_2007:
+  type: article
+  title: Guidelines for performing Systematic Literature Reviews in Software Engineering
+  author:
+    - Kitchenham, Barbara
+    - Charters, Stuart
+  date: 2007
+
+peffers_etal_2007:
+  type: article
+  title: A Design Science Research Methodology for Information Systems Research
+  author:
+    - Peffers, Ken
+    - Rothenberger, Marcus
+    - Tuunanen, Tuure
+    - Chatterjee, Samir
+  journal: Journal of Management Information Systems
+  date: 2007
+  issue: 3
+  volume: 24
+  page-range: 45–77
+  doi: 10.2753/MIS0742-1222240302
+
+ralph_baltes_2022:
+  type: article
+  title: 'Paving the Way for Mature Secondary Research: The Seven Types of Literature Review'
+  author:
+    - Ralph, Paul
+    - Baltes, Sebastian
+  date: 2022-11-07
+  page-range: 1632–1636
+  url:
+    value: https://dl.acm.org/doi/10.1145/3540250.3560877
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3540250.3560877
+    isbn: 978-1-4503-9413-0
+  parent:
+    - type: proceedings
+      title: Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering
+      publisher: ACM
+      location: Singapore Singapore
+    - type: conference
+      title: 'ESEC/FSE ''22: 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'

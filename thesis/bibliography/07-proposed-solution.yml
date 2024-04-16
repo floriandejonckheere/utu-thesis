@@ -1,0 +1,228 @@
+---
+briand_etal_1996:
+  type: article
+  title: Property-Based Software Engineering Measurement
+  author:
+    - Briand, L.C.
+    - Morasca, S.
+    - Basili, V.R.
+  date: 1996
+  page-range: 68–86
+  url:
+    value: http://ieeexplore.ieee.org/document/481535/
+    date: 2024-03-27
+  serial-number:
+    doi: 10.1109/32.481535
+    issn: '00985589'
+  parent:
+    type: periodical
+    title: IEEE Transactions on Software Engineering
+    issue: 1
+    volume: 22
+
+carvalho_etal_2019:
+  type: article
+  title: Analysis of the Criteria Adopted in Industry to Extract Microservices
+  author:
+    - Carvalho, Luiz
+    - Garcia, Alessandro
+    - K. G. Assunção, Wesley
+    - De Mello, Rafael
+    - Julia De Lima, Maria
+  date: 2019-05
+  page-range: 22–29
+  url:
+    value: https://ieeexplore.ieee.org/document/8836155/
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1109/CESSER-IP.2019.00012
+    isbn: 978-1-72812-264-9
+  parent:
+    - type: proceedings
+      title: 2019 IEEE/ACM Joint 7th International Workshop on Conducting Empirical Studies in Industry (CESI) and 6th International Workshop on Software Engineering Research and Industrial Practice (SER&IP)
+      publisher: IEEE
+      location: Montreal, QC, Canada
+    - type: conference
+      title: 2019 IEEE/ACM Joint 7th International Workshop on Conducting Empirical Studies in Industry (CESI) and 6th International Workshop on Software Engineering Research and Industrial Practice (SER&IP)
+
+chidamber_kemerer_1994:
+  type: article
+  title: A Metrics Suite for Object Oriented Design
+  author:
+    - Chidamber, S.R.
+    - Kemerer, C.F.
+  date: 1994-06
+  page-range: 476–493
+  url:
+    value: http://ieeexplore.ieee.org/document/295895/
+    date: 2024-04-10
+  serial-number:
+    doi: 10.1109/32.295895
+    issn: '00985589'
+  parent:
+    type: periodical
+    title: IEEE Transactions on Software Engineering
+    issue: 6
+    volume: 20
+
+conway_1968:
+  type: article
+  title: 'How do committees invent?'
+  author:
+    - Conway, Melvin E
+  date: 1968
+  parent:
+    type: periodical
+
+dehghani_2018:
+  type: article
+  title: How to break a Monolith into Microservices
+  author:
+    - Dehghani, Zhamak
+  date: 2018-04-24
+  url:
+    value: https://martinfowler.com/articles/break-monolith-into-microservices.html
+    date: 2024-04-10
+
+fortunato_barthelemy_2007:
+  type: article
+  title: Resolution Limit in Community Detection
+  author:
+    - Fortunato, Santo
+    - Barthélemy, Marc
+  date: 2007-01-02
+  page-range: 36–41
+  url:
+    value: https://pnas.org/doi/full/10.1073/pnas.0605965104
+    date: 2024-04-04
+  serial-number:
+    doi: 10.1073/pnas.0605965104
+    issn: 0027-8424, 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    issue: 1
+    volume: 104
+
+hairol_anuar_etal_2021:
+  type: article
+  title: 'Comparison between Louvain and Leiden Algorithm for Network Structure: A Review'
+  author:
+    - Hairol Anuar, Siti Haryanti
+    - Abas, Zuraida Abal
+    - Yunos, Norhazwani Mohd
+    - Mohd Zaki, Nurul Hafizah
+    - Hashim, Nurul Akmal
+    - Mokhtar, Mohd Fariddudin
+    - Asmai, Siti Azirah
+    - Abidin, Zaheera Zainal
+    - Nizam, Ahmad Fadzli
+  date: 2021-12-01
+  page-range: 12028
+  url:
+    value: https://iopscience.iop.org/article/10.1088/1742-6596/2129/1/012028
+    date: 2024-04-04
+  serial-number:
+    doi: 10.1088/1742-6596/2129/1/012028
+    issn: 1742-6588, 1742-6596
+  parent:
+    type: periodical
+    title: 'Journal of Physics: Conference Series'
+    issue: 1
+    volume: 2129
+
+martin_2003:
+  type: book
+  title: 'Agile Software Development: Principles, Patterns, and Practices'
+  author:
+    - Martin, Robert Cecil
+  date: 2003
+  publisher: Prentice Hall PTR
+  location: USA
+  serial-number:
+    isbn: '0135974445'
+
+rahiminejad_etal_2019:
+  type: article
+  title: Topological and Functional Comparison of Community Detection Algorithms in Biological Networks
+  author:
+    - Rahiminejad, Sara
+    - Maurya, Mano R.
+    - Subramaniam, Shankar
+  date: 2019-12
+  page-range: 212
+  url:
+    value: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2746-0
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1186/s12859-019-2746-0
+    issn: 1471-2105
+  parent:
+    type: periodical
+    title: BMC Bioinformatics
+    issue: 1
+    volume: 20
+
+royce_1970:
+  type: article
+  title: Managing the Development of Large Software Systems
+  author: Royce, Winston W.
+  date: 1970-08
+  page-range: 1–9
+  parent:
+    type: proceedings
+    title: Technical Papers of Western Electronic Show and Convention
+
+software_engineering_vocabulary_2017:
+  type: article
+  title: 'ISO/IEC/IEEE International Standard - Systems and software engineering: Vocabulary'
+  date: 2017
+  page-range: 1–541
+  serial-number:
+    doi: 10.1109/IEEESTD.2017.8016712
+  parent:
+    type: periodical
+    title: ISO/IEC/IEEE 24765:2017(E)
+    issue: ''
+    volume: 0
+
+traag_2011:
+  type: article
+  title: Narrow scope for resolution-limit-free community detection
+  author:
+    - Traag, V. A.
+    - Van Dooren, P.
+    - Nesterov, Y.
+  date: 2011-07
+  url: http://dx.doi.org/10.1103/PhysRevE.84.016114
+  serial-number:
+    doi: 10.1103/physreve.84.016114
+    issn: 1550-2376
+  parent:
+    type: periodical
+    title: Physical Review E
+    publisher: American Physical Society (APS)
+    issue: 1
+    volume: 84
+
+traag_etal_2019:
+  type: article
+  title: 'From Louvain to Leiden: guaranteeing well-connected communities'
+  author:
+    - Traag, V. A.
+    - Waltman, L.
+    - name: Eck
+      given-name: N. J.
+      prefix: van
+  date: 2019-03
+  url: http://dx.doi.org/10.1038/s41598-019-41695-z
+  serial-number:
+    doi: 10.1038/s41598-019-41695-z
+    issn: 2045-2322
+  parent:
+    type: periodical
+    title: Scientific Reports
+    publisher: Springer Science, Business Media LLC
+    issue: 1
+    volume: 9
+

@@ -24,10 +24,18 @@
 
   // Bibliography
   bibliographies: (
-    "miscellaneous",
     "literature-review/ieee",
     "literature-review/acm",
     "literature-review/snowballing",
+    "01-introduction",
+    "02-methodology",
+    "03-background",
+    "04-related-work",
+    "05-modular-monolith",
+    "06-automated-modularization",
+    "07-proposed-solution",
+    "08-case-study",
+    "09-conclusion",
   ),
 
   // Institution logo (SVG)
