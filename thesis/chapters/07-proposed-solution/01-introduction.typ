@@ -4,7 +4,7 @@
 
 = Proposed solution <proposedsolution>
 
-In this chapter, we propose *MOSAIK*, our solution for identification of microservice candidates in a monolithic application.
+In this chapter, we propose *Modular Optimization to Service-oriented Architecture Integration Kit (MOSAIK)*, our solution for identification of microservice candidates in a monolithic application.
 The approach is based on the analysis of a dependency graph, that aggregates information from the static and evolutionary analysis of the source code.
 
 == Problem statement
