@@ -7,23 +7,18 @@
 
 = Automated modularization <automatedmodularization>
 
-// Enumeration of existing automated technologies for modularization of monolith codebases
-// Answer to Research Question 2.
-
 In this chapter, we investigate the state of the art in automated technologies for modularization of monolith codebases.
 Using a systematic literature review, we identified and categorized existing literature on automated modularization of monolith codebases.
-We also provided a brief overview of the most relevant approaches and tools.
 
 == Plan
 
 Using the systematic literature review, we answered the following research question:
 
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
-
 The motivation for the research question is discussed in @introduction.
 
 In current literature, several systematic mapping studies related to microservices architecture have been conducted @alshuqayran_etal_2016 @pahl_jamshidi_2016, as well as systematic literature reviews related to microservice decomposition /* TODO: systematic literature reviews */.
-However, in these studies the methods described are mainly used as an aid for the software architect when identifying microservice candidates.
+However, the methods discussed in these studies are mostly aimed at aiding the software architect in identifying microservice candidates, rather than providing automated solutions.
 Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding automated and semi-automated methods for modularization of monolith codebases.
 
 Automated methods for modularization are techniques that autonomously perform the entire decomposition process, without requiring intervention of a software architect.
