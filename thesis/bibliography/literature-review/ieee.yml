@@ -76,7 +76,8 @@ al_debagy_martinek_2020:
 amiri_2018:
   type: article
   title: Object-Aware Identification of Microservices
-  author: Amiri, Mohammad Javad
+  author:
+  - Amiri, Mohammad Javad
   date: 2018-07
   page-range: 253–256
   url:

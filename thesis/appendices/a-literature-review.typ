@@ -25,14 +25,24 @@
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
       for (key) in publications.platforms.at(platform).primary {
-      index += 1
+        index += 1
+
+        let names = pubs.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
         (
           [*P#index*],
           [#cite(label(key))],
           [
             #text(pubs.at(key).at("title"), style: "italic"),
-            #cite(label(key), form: "author")
+            #if (names.len() == 1) {
+              names.at(0)
+            } else if (names.len() == 2) {
+              names.at(0) + " and " + names.at(1)
+            } else if (names.len() == 3) {
+              names.at(0) + ", " + names.at(1) + " and " + names.at(2)
+            } else {
+              names.at(0) + " et al."
+            }
           ],
         )
       }
@@ -60,14 +70,24 @@
       let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
       for (key) in publications.platforms.at(platform).secondary {
-      index += 1
+        index += 1
+
+        let names = pubs.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
         (
           [*P#index*],
           [#cite(label(key))],
           [
             #text(pubs.at(key).at("title"), style: "italic"),
-            #cite(label(key), form: "author")
+            #if (names.len() == 1) {
+              names.at(0)
+            } else if (names.len() == 2) {
+              names.at(0) + " and " + names.at(1)
+            } else if (names.len() == 3) {
+              names.at(0) + ", " + names.at(1) + " and " + names.at(2)
+            } else {
+              names.at(0) + " et al."
+            }
           ],
         )
       }
