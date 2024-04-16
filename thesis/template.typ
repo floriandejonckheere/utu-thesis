@@ -49,9 +49,13 @@
   // Basic properties
   set document(author: author, title: title)
   set page(margin: 35mm)
+  set block(spacing: 1.5em)
   set par(leading: 1.2em)
   set text(size: 12pt, font: "New Computer Modern", lang: "en", region: "FI", hyphenate: false)
   set math.equation(numbering: "(1)")
+
+  // Add some space above and below paragraphs
+  show par: set block(below: 2em)
 
   // Add some space above and below headings
   show heading: set block(above: 2em, below: 1.5em)
