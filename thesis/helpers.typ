@@ -8,6 +8,18 @@
 #let algorithms = slr.at("categories").at("algorithms")
 #let metrics = slr.at("categories").at("metrics")
 
+#let bibliography = (
+  "01-introduction",
+  "02-methodology",
+  "03-background",
+  "04-related-work",
+  "05-modular-monolith",
+  "06-automated-modularization",
+  "07-proposed-solution",
+  "08-case-study",
+  "09-conclusion",
+).map(c => yaml("/bibliography/" + c + ".yml")).fold({}, (a, b) => a + b)
+
 #let slr_bibliography = yaml("/bibliography/literature-review/acm.yml") + yaml("/bibliography/literature-review/ieee.yml") + yaml("/bibliography/literature-review/snowballing.yml")
 
 // Create a reference to a paper
@@ -22,9 +34,18 @@
   #label(l)
 ])
 
+// Find a reference in the bibliography
+#let entry = (key) => {
+  if (slr_bibliography.at(str(key), default: none) != none) {
+    slr_bibliography.at(str(key))
+  } else {
+    bibliography.at(str(key))
+  }
+}
+
 // Cite a paper (author)
-#let slr_cite_authors = (key) => {
-  let names = slr_bibliography.at(str(key)).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
+#let cite_author = (key) => {
+  let names = entry(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
   if (names.len() == 1) {
     names.at(0)
@@ -38,8 +59,8 @@
 }
 
 // Cite a paper (author and reference)
-#let slr_cite_full = (key) => {
-  let names = slr_bibliography.at(str(key)).at("author").map(a => a.split(", ").at(0))
+#let cite_full = (key) => {
+  let names = entry(key).at("author").map(a => a.split(", ").at(0))
 
   if (names.len() == 1) {
     names.at(0) + " " + ref(key)
@@ -48,15 +69,4 @@
   } else {
     names.at(0) + " et al. " + ref(key)
   }
-}
-
-// Cite first author and reference ("Author et al. [1]")
-#let citeauthor = (key) => {
-  // ASA: Abgaz et al.
-  let author = cite(key, form: "author", style: "american-sociological-association")
-
-  // IEEE: [1]
-  let reference = cite(key, form: "normal", style: "ieee")
-
-  return author + " " + reference
 }

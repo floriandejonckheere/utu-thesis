@@ -51,7 +51,7 @@ Hence, decomposing this application into a modular monolith architecture would p
 
 == Experimental setup
 
-#slr_cite_authors(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
+#cite_author(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
 Approaches using contributor coupling achieve comparable results as approaching using a structural coupling on source code repositories with a large number of committers.
 Since the number of committers to NephroFlow Link is limited, we use multiple coupling strategies to decompose the application.
 Seven test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.

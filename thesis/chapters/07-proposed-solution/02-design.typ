@@ -3,7 +3,7 @@
 == Design
 
 We start by identifying the functional and non-functional requirements for the solution.
-Then, we propose a four-step approach to decomposition adapted from the microservice identification pipeline by #citeauthor(<lopes_silva_2023>).
+Then, we propose a four-step approach to decomposition adapted from the microservice identification pipeline by #cite_author(<lopes_silva_2023>).
 
 - *Extraction*: the necessary information is extracted from the application and its environment.
 - *Decomposition*: using the collected data, a decomposition of the application into microservices is proposed.

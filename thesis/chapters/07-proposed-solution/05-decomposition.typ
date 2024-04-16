@@ -9,7 +9,7 @@ The goal of this process is to split the monolith into smaller, more manageable 
 Traditionally, monolith decomposition is a manual process that requires a deep understanding of the software architecture and business requirements.
 However, the burden of manual decomposition can be alleviated by using automated tools and algorithms.
 The knowledge of software architects should be leveraged where possible to guide the decomposition process, without imposing the requirement of a deep understanding of the software architecture.
-For example, #slr_cite_authors(<li_etal_2023>) propose a method that utilizes expert knowledge, however requires the recommendations to be written in a domain-specific language, increasing the burden on the architect.
+For example, #cite_author(<li_etal_2023>) propose a method that utilizes expert knowledge, however requires the recommendations to be written in a domain-specific language, increasing the burden on the architect.
 
 MOSAIK implements an automated identification of microservice candidates in a monolithic application using clustering algorithms.
 The decomposition process can be fine-tuned by assigning an importance to the different types of coupling strategies.
@@ -38,13 +38,13 @@ Affinity Propagation is an algorithm that doesn't require specifying the number 
 We found that the Louvain @blondel_etal_2008 and Leiden @traag_etal_2019 algorithms are the most suitable for this task, as they are designed for optimizing modularity in networks.
 The algorithms are iterative and hierarchical, which makes them fast and efficient.
 
-Similarly, in #cite(<rahiminejad_etal_2019>, form: "year") #citeauthor(<rahiminejad_etal_2019>) performed a topological and functional comparison of community detection algorithms in biological networks.
+Similarly, in #cite(<rahiminejad_etal_2019>, form: "year") #cite_author(<rahiminejad_etal_2019>) performed a topological and functional comparison of community detection algorithms in biological networks.
 They analyzed six algorithms based on certain criteria such as appropriate community size (not too small or too large), and performance speed.
 The authors found that the Louvain algorithm @blondel_etal_2008 performed best in terms of quality and speed.
 
 ==== The Louvain/Leiden algorithm
 
-The Louvain algorithm, introduced by #citeauthor(<blondel_etal_2008>), is an algorithm for extracting non-overlapping communities in large networks.
+The Louvain algorithm, introduced by #cite_author(<blondel_etal_2008>), is an algorithm for extracting non-overlapping communities in large networks.
 The algorithm uses a greedy optimization technique to maximize the modularity of the network.
 
 Modularity is a measure of the strength of division of a network.
@@ -129,7 +129,7 @@ A major disadvantage of the Louvain algorithm is that it can only detect non-ove
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
 The algorithm has also been proven to generate small and disconnected communities @traag_etal_2019, which is not desirable in the context of microservices @fortunato_barthelemy_2007.
 
-In #cite(<traag_etal_2019>, form: "year"), #citeauthor(<traag_etal_2019>) introduced the Leiden algorithm, an improvement of the Louvain algorithm that addresses the disconnected community problem.
+In #cite(<traag_etal_2019>, form: "year"), #cite_author(<traag_etal_2019>) introduced the Leiden algorithm, an improvement of the Louvain algorithm that addresses the disconnected community problem.
 Similarly to the Louvain algorithm, the Leiden algorithm optimizes the quality of the network using the Constant Potts Model @traag_2011:
 
 $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <constant_potts_model>

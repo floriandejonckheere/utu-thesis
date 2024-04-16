@@ -127,7 +127,8 @@ gupta_2011:
 jackson_2000:
   type: book
   title: 'Problem frames: analyzing and structuring software development problems'
-  author: Jackson, Michael
+  author:
+  - Jackson, Michael
   date: 2000
   publisher: Addison-Wesley Longman Publishing Co., Inc.
   location: USA
@@ -219,7 +220,8 @@ pahl_jamshidi_2016:
 parnas_1972:
   type: article
   title: On the Criteria To Be Used in Decomposing Systems into Modules
-  author: Parnas, D L
+  author:
+  - Parnas, D L
   date: 1972
   parent:
     type: periodical
@@ -229,7 +231,8 @@ parnas_1972:
 rousseeuw_1987:
   type: article
   title: 'Silhouettes: A graphical aid to the interpretation and validation of cluster analysis'
-  author: Rousseeuw, Peter J.
+  author:
+  - Rousseeuw, Peter J.
   date: 1987
   page-range: 53–65
   url: https://www.sciencedirect.com/science/article/pii/0377042787901257

@@ -24,7 +24,7 @@ Studies directly researching the topic area are called _primary_ studies, system
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
 Systematic literature reviews often only consider primary studies as they are considered the most reliable source of information, but may also include secondary studies if the primary studies are scarce, or as a means to identify primary studies.
 
-The systematic literature review was conducted using the three-step protocol as defined by #citeauthor(<kitchenham_charters_2007>):
+The systematic literature review was conducted using the three-step protocol as defined by #cite_author(<kitchenham_charters_2007>):
 
 #figure(
   table(

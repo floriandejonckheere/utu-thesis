@@ -24,7 +24,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(label(key)),
+                #cite_author(label(key)),
                 #text(slr_bibliography.at(key).at("title"), style: "italic"),
                 #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
@@ -40,7 +40,7 @@
         [
           #slr_reference(
             [
-              #slr_cite_authors(label(key)),
+              #cite_author(label(key)),
               #text(slr_bibliography.at(key).at("title"), style: "italic"),
               #str(slr_bibliography.at(key).at("date")).split("-").first()
             ],
@@ -71,7 +71,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(label(key)),
+                #cite_author(label(key)),
                 #text(slr_bibliography.at(key).at("title"), style: "italic"),
                 #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
@@ -87,7 +87,7 @@
         [
           #slr_reference(
             [
-              #slr_cite_authors(label(key)),
+              #cite_author(label(key)),
               #text(slr_bibliography.at(key).at("title"), style: "italic"),
               #str(slr_bibliography.at(key).at("date")).split("-").first()
             ],
