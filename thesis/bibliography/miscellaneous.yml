@@ -45,6 +45,16 @@ ralph_baltes_2022:
     - type: conference
       title: 'ESEC/FSE ''22: 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'
 
+royce_1970:
+  type: article
+  title: Managing the Development of Large Software Systems
+  author: Royce, Winston W.
+  date: 1970-08
+  page-range: 1–9
+  parent:
+    type: proceedings
+    title: Technical Papers of Western Electronic Show and Convention
+
 software_requirements_specification:
   type: article
   title: IEEE Guide for Software Requirements Specifications

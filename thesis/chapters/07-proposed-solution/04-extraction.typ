@@ -5,7 +5,7 @@
 == Extraction
 
 // - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
-Software development is typically done in multiple steps, either using the waterfall model /* TODO: reference */, or using an iterative approach.
+Software development is typically done in multiple steps, either using the waterfall model, or using an iterative approach @royce_1970.
 Analysis and design are two steps of early software development which often yield software development lifecycle artifacts in the form of use cases, process models, and diagrams.
 However, after the completion of the development and the subsequent deployment, these documents are often not kept up to date, and sometimes even lost.
 Hence, it is not always possible to use design documents for the information extraction phase.
