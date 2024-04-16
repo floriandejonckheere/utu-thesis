@@ -67,6 +67,9 @@ MOSAIK uses a coarse-grained granular approach, using the classes of the monolit
 //        -> measure performance overhead
 
 Consider the extraction algorithm in pseudocode in @structural_coupling_algorithm.
+The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolithic application.
+The algorithm iterates over all classes in the monolithic application, and for each method in the class, it parses the method body.
+All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
 
 #figure(
     table(
@@ -118,6 +121,9 @@ Thus, the logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is d
 $ N_c (c_1, c_2) = Delta(c_1, c_2) $ <aggregated_logical_coupling_formula>
 
 Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
+First, a co-change matrix is initialized, which stores the number of times two files have changed together in a two-dimensional matrix.
+The algorithm then iterates over all commits in the source code repository, and for each commit, retrieves the changes between the commit and its parent.
+Then, it iterates over each pair of files in the changelist, and increments the co-change matrix for the pair of files.
 
 #figure(
     table(
@@ -172,6 +178,9 @@ Finally, the contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_
 $ N_d (c_1, c_2) = |D(c_i) sect D(c_j)| $ <aggregated_contributor_coupling_formula>
 
 Consider the extraction algorithm in pseudocode in @contributor_coupling_algorithm.
+The algorithm first initializes the co-authorship matrix, which is a two-dimensional array that stores the (unique) authors of each file in the source code repository.
+Then, it iterates over all commits in the source code repository, and for each commit, retrieves the changes between the commit and its parent.
+Finally, iterating over each file in the changelist, the algorithm adds the author(s) of the commit to the file's entry in the co-authorship matrix.
 
 #figure(
     table(
