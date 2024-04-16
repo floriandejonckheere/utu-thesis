@@ -53,6 +53,8 @@
   caption: [Selected publications (primary studies)]
 ) <slr_primary_publications>
 
+#pagebreak()
+
 == Secondary studies
 
 #show figure: set block(breakable: true)
