@@ -27,14 +27,14 @@ Structural coupling is a measure of the dependencies between software components
 The dependencies can take the form of control dependencies, or data dependencies /* TODO: reference */.
 Control dependencies are dependencies between software components that are related to the flow of control of the software system (e.g. interleaving method calls).
 Data dependencies relate to the flow of data between software components (e.g. passing parameters).
-#acr("MOSAIK") extracts structural coupling information using static analysis of the source code /* TODO: reference */.
-As #acr("MOSAIK") is intended to collect information from monolithic applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
+MOSAIK extracts structural coupling information using static analysis of the source code /* TODO: reference */.
+As MOSAIK is intended to collect information from monolithic applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
 Ruby is a dynamic language, which means that only incomplete type information can be extracted using static analysis.
 In particular, some techniques like meta-programming and dynamic class loading may affect the accuracy of the extracted information.
 
 Our solution analyzes the source code of the monolithic application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
 The library is written in Ruby and can be used to parse Ruby source code files and extract the #acr("AST") of the source code.
-Iterating over the #acr("AST") of the monolithic application, #acr("MOSAIK") extracts the references between classes.
+Iterating over the #acr("AST") of the monolithic application, MOSAIK extracts the references between classes.
 
 Using this information, a call graph is constructed that represents the structural coupling of the monolithic application.
 
@@ -61,7 +61,7 @@ Existing approaches tend to use a more coarse-grained granularity (e.g. on the l
 Using a coarse-grained granularity can lead to a smaller number of microservices that are responsible for a larger number of functionalities.
 A fine-grained granularity can lead to a much larger number of microservices, which can decrease the maintainability of the system.
 Hence, a trade-off between the two granularities must be made.
-#acr("MOSAIK") uses a coarse-grained granular approach, using the classes of the monolithic application as the starting point for the extraction of microservices.
+MOSAIK uses a coarse-grained granular approach, using the classes of the monolithic application as the starting point for the extraction of microservices.
 
 // TODO: Dynamic analysis, because inherent polymorphism and late binding
 //        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)

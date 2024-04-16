@@ -2,7 +2,7 @@
 
 == Visualization
 
-#acr("MOSAIK") is able to generate visualizations of the microservice decomposition process.
+MOSAIK is able to generate visualizations of the microservice decomposition process.
 The information extraction step can be visualized as a dependency graph where the vertices represent the classes of the monolithic application, and the edges represent the dependencies between the classes.
 The edges are weighted according to the calculated coupling factor between the classes.
 Depending on the weights assigned to the structural, logical, and contributor coupling, the generated graph can visualize a different view of the monolithic application.
