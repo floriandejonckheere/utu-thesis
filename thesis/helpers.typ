@@ -9,14 +9,6 @@
   return author + " " + reference
 }
 
-// Titleize a string
-#let title(string) = {
-  return string.replace(
-    regex("[A-Za-z]+('[A-Za-z]+)?"),
-    word => upper(word.text.first()) + lower(word.text.slice(1)),
-  )
-}
-
 // Literature review
 #let slr_categories = yaml("/bibliography/literature-review.yml").at("categories")
 #let artifacts = slr_categories.at("artifacts")
