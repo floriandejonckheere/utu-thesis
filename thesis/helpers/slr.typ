@@ -12,6 +12,7 @@
 
 // Create a reference to a paper
 #let slr_reference = ((t, l) => [
+  #show figure.where(kind: "paper"): set block(breakable: false)
   #figure(
     box(width: 100%)[#align(left)[#t]],
     kind: "paper",
