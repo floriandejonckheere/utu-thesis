@@ -50,24 +50,31 @@
   set document(author: author, title: title)
   set page(margin: 35mm)
   set block(spacing: 1.5em)
-  set par(leading: 1.1em)
+  set par(leading: 1.2em)
   set text(size: 12pt, font: "New Computer Modern", lang: "en", region: "FI", hyphenate: false)
   set math.equation(numbering: "(1)")
 
   // Add some space above and below headings
+  show heading: set block(above: 2em, below: 1.5em)
   show heading.where(
     level: 1
   ): it => {
-      v(5em)
-      text(1.5em, it)
       v(3em)
+      text(1.5em)[
+      #if it.numbering != none [
+        #box(width: 1.5em)[
+          #counter(heading).display()
+        ]
+      ]
+      #it.body
+      ]
+      v(2em)
   }
   show heading.where(
     level: 2
   ): it => {
-      v(3em)
-      text(1.2em, it)
       v(1em)
+      text(1.2em, it)
   }
 
   // Set gap between figure and caption
