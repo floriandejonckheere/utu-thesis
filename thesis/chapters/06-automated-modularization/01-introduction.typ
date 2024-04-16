@@ -1,8 +1,7 @@
 #import "@preview/acrostiche:0.3.1": *
 #import "@preview/sourcerer:0.2.1": code
 
-#import "/helpers/cite.typ": *
-#import "/helpers/slr.typ": *
+#import "/helpers.typ": *
 
 = Automated modularization <automatedmodularization>
 

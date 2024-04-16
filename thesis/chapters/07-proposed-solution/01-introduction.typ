@@ -1,6 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers/cite.typ": *
+#import "/helpers.typ": *
 
 = Proposed solution <proposedsolution>
 

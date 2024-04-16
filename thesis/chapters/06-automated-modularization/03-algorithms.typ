@@ -1,7 +1,6 @@
 #import "@preview/acrostiche:0.3.1": *
 
-#import "/helpers/cite.typ": *
-#import "/helpers/slr.typ": *
+#import "/helpers.typ": *
 
 === Algorithms <slr_algorithms>
 
