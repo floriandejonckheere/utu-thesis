@@ -53,7 +53,7 @@ Then, we propose a four-step approach to decomposition adapted from the microser
 
 #figure(
   include("/figures/architecture.typ"),
-  caption: [Overview of the architecture of the proposed solution]
+  caption: [Architectural overview of the proposed solution]
 ) <architecture>
 
 #v(2em)
