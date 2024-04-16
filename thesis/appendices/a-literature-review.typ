@@ -31,7 +31,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(pubs, key),
+                #slr_cite_authors(key),
                 #text(pubs.at(key).at("title"), style: "italic"),
                 #str(pubs.at(key).at("date")).split("-").first()
               ],
@@ -44,8 +44,6 @@
   ),
   caption: [Selected publications (primary studies)]
 ) <slr_primary_publications>
-
-#pagebreak()
 
 == Secondary studies
 
@@ -71,7 +69,7 @@
           [
             #slr_reference(
               [
-                #slr_cite_authors(pubs, key),
+                #slr_cite_authors(key),
                 #text(pubs.at(key).at("title"), style: "italic"),
                 #str(pubs.at(key).at("date")).split("-").first()
               ],

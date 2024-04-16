@@ -10,6 +10,8 @@
 
 #let publications = yaml("/bibliography/literature-review.yml")
 
+#let slr_bibliography = yaml("/bibliography/literature-review/acm.yml") + yaml("/bibliography/literature-review/ieee.yml") + yaml("/bibliography/literature-review/snowballing.yml")
+
 // Create a reference to a paper
 #let slr_reference = ((t, l) => [
   #show figure.where(kind: "paper"): set block(breakable: false)
@@ -23,8 +25,8 @@
 ])
 
 // Cite a paper (author)
-#let slr_cite_authors = (platform, key) => {
-  let names = platform.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
+#let slr_cite_authors = (key) => {
+  let names = slr_bibliography.at(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
 
   if (names.len() == 1) {
     names.at(0)
