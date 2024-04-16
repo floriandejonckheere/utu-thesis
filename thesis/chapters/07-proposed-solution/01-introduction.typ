@@ -49,7 +49,7 @@ Then, we propose a four-step approach to decomposition adapted from the microser
 - *Extraction*: the necessary information is extracted from the application and its environment.
 - *Decomposition*: using the collected data, a decomposition of the application into microservices is proposed.
 - *Visualization*: the proposed decomposition is visualized to facilitate the understanding of the architecture.
-- *Quality assessment*: the proposed decomposition is evaluated according to a set of quality metrics.
+- *Evaluation*: the proposed decomposition is evaluated according to a set of quality metrics.
 
 An overview of the architecture of the proposed solution is shown in @architecture.
 The extraction step is comprised of two smaller steps: static analysis and evolutionary analysis.

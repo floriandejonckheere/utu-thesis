@@ -40,7 +40,7 @@
 
     This thesis investigates the merits of adopting a modular monolith architecture for monolithic applications, and the challenges faced during the migration process.
     Based on the findings, an automated approach is formulated to aid the modularization process, using dependency analysis and machine learning algorithms to identify module boundaries.
-    The proposed solution uses a four-step approach to monolith decomposition: extraction, decomposition, visualization, and quality assessment.
+    The proposed solution uses a four-step approach to monolith decomposition: extraction, decomposition, visualization, and evaluation.
     It is then implemented for a case study, and evaluated using a set of metrics to assess the effectiveness of the proposed decomposition.
     /* TODO: change if results are different */
     The results indicate that the automated approach is effective in identifying module boundaries, and can be used to aid the modularization process of monolithic applications.
