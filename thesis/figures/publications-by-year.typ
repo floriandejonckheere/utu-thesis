@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.2.2": canvas, chart, draw
 
-#let publications = yaml("/bibliography/literature-review.yml")
+#let slr = yaml("/bibliography/literature-review.yml")
 
 #let publications_by_year = (
   "2014": 0,
@@ -16,10 +16,10 @@
   "2024": 0,
 )
 
-#for (platform) in publications.platforms.keys() {
+#for (platform) in slr.platforms.keys() {
   let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
 
-  for (key) in publications.platforms.at(platform).primary {
+  for (key) in slr.platforms.at(platform).primary {
     let year = str(pubs.at(key).date).split("-").first()
 
     publications_by_year.insert(year, publications_by_year.at(year) + 1)

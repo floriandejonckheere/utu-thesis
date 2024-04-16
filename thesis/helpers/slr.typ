@@ -1,14 +1,12 @@
 // Helpers for systematic literature review
-#let slr_categories = yaml("/bibliography/literature-review.yml").at("categories")
-#let artifacts = slr_categories.at("artifacts")
-#let algorithms = slr_categories.at("algorithms")
-#let metrics = slr_categories.at("metrics")
-
 #let total = (category) => category.values().sum().len()
 #let count = (category, item) => category.at(item).len()
 #let percentage = (category, item) => [#calc.round((100 * count(category, item) / total(category)), digits: 1)%]
 
-#let publications = yaml("/bibliography/literature-review.yml")
+#let slr = yaml("/bibliography/literature-review.yml")
+#let artifacts = slr.at("categories").at("artifacts")
+#let algorithms = slr.at("categories").at("algorithms")
+#let metrics = slr.at("categories").at("metrics")
 
 #let slr_bibliography = yaml("/bibliography/literature-review/acm.yml") + yaml("/bibliography/literature-review/ieee.yml") + yaml("/bibliography/literature-review/snowballing.yml")
 

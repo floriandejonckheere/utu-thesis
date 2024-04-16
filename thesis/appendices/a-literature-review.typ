@@ -18,8 +18,8 @@
     stroke: (x: none),
     align: (right, left),
     [*ID*], [*Publication*],
-    ..for (platform) in publications.platforms.keys() {
-      for (key) in publications.platforms.at(platform).primary {
+    ..for (platform) in slr.platforms.keys() {
+      for (key) in slr.platforms.at(platform).primary {
         (
           [*#ref(label(key))*],
           [
@@ -35,7 +35,7 @@
         )
       }
     },
-    ..for (key) in publications.snowballing.primary {
+    ..for (key) in slr.snowballing.primary {
       (
         [*#ref(label(key))*],
         [
@@ -65,8 +65,8 @@
     stroke: (x: none),
     align: (right, left),
     [*ID*], [*Publication*],
-    ..for (platform) in publications.platforms.keys() {
-      for (key) in publications.platforms.at(platform).secondary {
+    ..for (platform) in slr.platforms.keys() {
+      for (key) in slr.platforms.at(platform).secondary {
         (
           [*#ref(label(key))*],
           [
@@ -82,7 +82,7 @@
         )
       }
     },
-    ..for (key) in publications.snowballing.secondary {
+    ..for (key) in slr.snowballing.secondary {
       (
         [*#ref(label(key))*],
         [
