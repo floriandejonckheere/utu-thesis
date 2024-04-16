@@ -9,8 +9,6 @@
 
 == Primary studies
 
-#let index = 0
-
 #show figure: set block(breakable: true)
 #show figure: set text(size: 9pt)
 #figure(
@@ -21,25 +19,36 @@
     align: (right, left),
     [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
-      let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
-
       for (key) in publications.platforms.at(platform).primary {
-        index += 1
-
         (
           [*#ref(label("slr_" + key))*],
           [
             #slr_reference(
               [
                 #slr_cite_authors(label(key)),
-                #text(pubs.at(key).at("title"), style: "italic"),
-                #str(pubs.at(key).at("date")).split("-").first()
+                #text(slr_bibliography.at(key).at("title"), style: "italic"),
+                #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
               "slr_" + key,
             )
           ],
         )
       }
+    },
+    ..for (key) in publications.snowballing.primary {
+      (
+        [*#ref(label("slr_" + key))*],
+        [
+          #slr_reference(
+            [
+              #slr_cite_authors(label(key)),
+              #text(slr_bibliography.at(key).at("title"), style: "italic"),
+              #str(slr_bibliography.at(key).at("date")).split("-").first()
+            ],
+            "slr_" + key,
+          )
+        ],
+      )
     }
   ),
   caption: [Selected publications (primary studies)]
@@ -47,8 +56,6 @@
 
 == Secondary studies
 
-#let index = 0
-
 #show figure: set block(breakable: true)
 #show figure: set text(size: 9pt)
 #figure(
@@ -59,25 +66,36 @@
     align: (right, left),
     [*ID*], [*Publication*],
     ..for (platform) in publications.platforms.keys() {
-      let pubs = yaml("/bibliography/literature-review/" + platform + ".yml")
-
       for (key) in publications.platforms.at(platform).secondary {
-        index += 1
-
         (
           [*#ref(label("slr_" + key))*],
           [
             #slr_reference(
               [
                 #slr_cite_authors(label(key)),
-                #text(pubs.at(key).at("title"), style: "italic"),
-                #str(pubs.at(key).at("date")).split("-").first()
+                #text(slr_bibliography.at(key).at("title"), style: "italic"),
+                #str(slr_bibliography.at(key).at("date")).split("-").first()
               ],
               "slr_" + key,
             )
           ],
         )
       }
+    },
+    ..for (key) in publications.snowballing.secondary {
+      (
+        [*#ref(label("slr_" + key))*],
+        [
+          #slr_reference(
+            [
+              #slr_cite_authors(label(key)),
+              #text(slr_bibliography.at(key).at("title"), style: "italic"),
+              #str(slr_bibliography.at(key).at("date")).split("-").first()
+            ],
+            "slr_" + key,
+          )
+        ],
+      )
     }
   ),
   caption: [Selected publications (secondary studies)]
