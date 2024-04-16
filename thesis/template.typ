@@ -233,7 +233,7 @@
   pagebreak()
 
   // Main document
-  set par(first-line-indent: 1.8em, justify: true)
+  set par(justify: true)
 
   // Set page number to Arabic numerals
   set page(numbering: "1")
