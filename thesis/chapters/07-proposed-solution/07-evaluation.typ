@@ -13,10 +13,6 @@ They affirmed the need for more than two metrics to ensure the quality of the de
 
 // TODO: justify choice of metrics
 
-We distinguish between functional and non-functional metrics.
-
-=== Functional metrics
-
 ==== Coupling
 
 Coupling is a measure of the degree of interdependence between modules in a software system @software_engineering_vocabulary_2017.
@@ -118,8 +114,6 @@ A solution with a lower total complexity is considered to be better, as it indic
 
 // TODO: Silhouette coefficient
 // TODO: Usage metric: sum of inheritance factor @bandara_perera_2020
-
-=== Non-functional metrics
 
 ==== Network overhead
 
