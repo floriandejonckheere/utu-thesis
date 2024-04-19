@@ -115,27 +115,27 @@ A solution with a lower total complexity is considered to be better, as it indic
 // TODO: Silhouette coefficient
 // TODO: Usage metric: sum of inheritance factor @bandara_perera_2020
 
-==== Network overhead
-
-Microservices communicate over a network with one another, which introduces overhead in terms of latency and bandwidth.
-In order to keep this overhead low, it is important that method calls between microservices are kept to a minimum, and that the size of the data exchanged (e.g. parameters and return values) is kept small.
-Using the source code of the monolith application, we can estimate the network overhead of a method call by inspecting the primitive types of the parameters and return values of the methods involved in the call @filippone_etal_2021.
-
-The heuristic function $h(v_i, v_j)$ estimates the network overhead of a method call from a method $v_i$ to a method $v_j$, as described by @overhead_formula.
-The value for $h(v_i, v_j)$ is calculated by summing the size of the primitive types of the parameters and return values of the method call. The heuristic does not take into account the overhead of the communication protocol (e.g. HTTP headers) or data management overhead (e.g. (de-)serialization).
-
-$ h(v_i, v_j) = sum_(p in cal(P)(v_i)) italic("size")(p) + sum_(r in cal(R)(v_j)) italic("size")(r) $ <overhead_formula>
-
-$cal(P)(v_i)$ returns the set of parameters of method $v_i$, and $cal(R)(v_j)$ returns the return value(s) of method $v_j$.
-The $italic("size")$ function returns the size of the primitive type of the given parameter.
-
-The individual network overhead of a microservice candidate $M_c$ can be written as the sum of the network overheads of all method calls between methods in $M_c$ and methods not in $M_c$.
-
-$ italic("ovh")(M_c) = sum_(v_i in M_c, v_j in.not M_c) h(v_i, v_j) $ <individual_overhead_formula>
-
-The total network overhead of a solution is the sum of the individual network overheads of all method calls between microservice candidates $M_c$ and $M_c$ in solution $S$.
-
-$ italic("Overhead") = sum_(M_c in S) italic("ovh")(M_c) $ <total_overhead_formula>
-
-However, this method has severe limitations in a dynamic language such as Ruby, where the types of the parameters and return values are not explicitly declared and may vary at runtime.
-In some cases, the primitive types can be inferred from the method body, but in general, this is a difficult problem to solve.
+//==== Network overhead
+//
+//Microservices communicate over a network with one another, which introduces overhead in terms of latency and bandwidth.
+//In order to keep this overhead low, it is important that method calls between microservices are kept to a minimum, and that the size of the data exchanged (e.g. parameters and return values) is kept small.
+//Using the source code of the monolith application, we can estimate the network overhead of a method call by inspecting the primitive types of the parameters and return values of the methods involved in the call @filippone_etal_2021.
+//
+//The heuristic function $h(v_i, v_j)$ estimates the network overhead of a method call from a method $v_i$ to a method $v_j$, as described by @overhead_formula.
+//The value for $h(v_i, v_j)$ is calculated by summing the size of the primitive types of the parameters and return values of the method call. The heuristic does not take into account the overhead of the communication protocol (e.g. HTTP headers) or data management overhead (e.g. (de-)serialization).
+//
+//$ h(v_i, v_j) = sum_(p in cal(P)(v_i)) italic("size")(p) + sum_(r in cal(R)(v_j)) italic("size")(r) $ <overhead_formula>
+//
+//$cal(P)(v_i)$ returns the set of parameters of method $v_i$, and $cal(R)(v_j)$ returns the return value(s) of method $v_j$.
+//The $italic("size")$ function returns the size of the primitive type of the given parameter.
+//
+//The individual network overhead of a microservice candidate $M_c$ can be written as the sum of the network overheads of all method calls between methods in $M_c$ and methods not in $M_c$.
+//
+//$ italic("ovh")(M_c) = sum_(v_i in M_c, v_j in.not M_c) h(v_i, v_j) $ <individual_overhead_formula>
+//
+//The total network overhead of a solution is the sum of the individual network overheads of all method calls between microservice candidates $M_c$ and $M_c$ in solution $S$.
+//
+//$ italic("Overhead") = sum_(M_c in S) italic("ovh")(M_c) $ <total_overhead_formula>
+//
+//However, this method has severe limitations in a dynamic language such as Ruby, where the types of the parameters and return values are not explicitly declared and may vary at runtime.
+//In some cases, the primitive types can be inferred from the method body, but in general, this is a difficult problem to solve.
