@@ -54,6 +54,7 @@ A higher total cohesion indicates a better decomposition.
 
 ==== Size
 
+// https://wiki.c2.com/?AbcMetric
 Size of a microservice candidate can be defined in several different ways.
 In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), who define size as the number of source code files or classes in a microservice candidate.
 Other definitions of size include the number of methods, or the number of lines of code.
@@ -97,6 +98,7 @@ However, a very low size may indicate that the microservice candidates are too s
 
 ==== Complexity
 
+// https://wiki.c2.com/?CyclomaticComplexityMetric
 Cyclomatic complexity is a metric that quantifies the number of linearly independent control paths through a program's source code @mccabe_1976.
 The measure is computed by constructing a control-flow graph of the program, and counting the number of possible paths through the graph.
 Each node in the graph represents a group of non-branching instructions, and each edge represents a possible transfer of control between the groups.
