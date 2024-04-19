@@ -88,7 +88,7 @@ To compute the individual size of a microservice candidate $M_c$, we sum the ABC
 
 $ italic("size")(M_c) = (sum_(v_i in M_c) italic("abc")(v_i))/(|v_i|) $ <individual_size_formula>
 
-The total complexity of a solution is the sum of the individual complexities of all microservice candidates $M_c$.
+The total size of a solution is the sum of the individual sizes of all microservice candidates $M_c$.
 
 $ italic("Size") = sum_(M_c in S) italic("size")(M_c) $ <total_size_formula>
 
