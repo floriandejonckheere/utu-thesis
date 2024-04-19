@@ -54,9 +54,46 @@ A higher total cohesion indicates a better decomposition.
 
 ==== Size
 
-// TODO: ABC Size (Assignments, Branches, Conditions) @fitzpatrick_1997
+Size of a microservice candidate can be defined in several different ways.
+In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), who define size as the number of source code files or classes in a microservice candidate.
+Other definitions of size include the number of methods, or the number of lines of code.
+However, these definitions have the disadvantage that they only describe the size of a microservice candidate superficially, without considering the structure of the code.
 
-// Often used in Ruby (Rubocop)
+#cite_full(<fitzpatrick_1997>) developed the ABC size metric, which takes into account the number of assignments, branches, and conditions in a method.
+Using not only the number of lines of code, but also the complexity of the code, the ABC size metric describes the size of a method more accurately.
+Methods with a high ABC size are harder to understand, and more prone to errors and bugs.
+
+The ABC size of a method consists of a vector $angle.l A, B, C angle.r$, where:
+- $A$ is the number of assignments (explicit transfer of data into a variable)
+- $B$ is the number of branches (explicit branch out of the current scope)
+- $C$ is the number of conditions in the method (logical test)
+
+ABC sizes are written as an ordered triplet of numbers, in the form $angle.l A, B, C angle.r$, for example $angle.l 7, 12, 3 angle.r$.
+To convert the ABC size vector into a scalar value, the magnitude of the vector is calculated using the Euclidean norm.
+
+$ |"ABC"| = sqrt(A^2 + B^2 + C^2) $ <abc_formula>
+
+The ABC size of a method can vary between programming languages due to semantic differences in the language constructs.
+As such, the interpretation of ABC size values is language-dependent.
+For example, in Ruby an ABC value of $<= 17$ is considered satisfactory, a value between $18$ and $30$ unsatisfactory, and $> 30$ is considered dangerous#footnote[#link("https://docs.rubocop.org/rubocop/cops_metrics.html")[https://docs.rubocop.org/rubocop/cops_metrics.html]].
+In this study we do not intend to evaluate the quality of individual methods, but rather the quality of the decomposition as a whole.
+As such, we use the average of the ABC sizes of all methods in a microservice candidate to calculate the size of the microservice candidate.
+
+Formalized, the ABC size metric can be defined as in @abc_size_formula.
+The functions $italic("asgn")(v_i)$, $italic("brch")(v_i)$, and $italic("cond")(v_i)$ return the number of assignments, branches, and conditions in method $v_i$ respectively.
+
+$ italic("abc")(v_i) = sqrt(italic("asgn")(v_i)^2 + italic("brch")(v_i)^2 + italic("cond")(v_i)^2) $ <abc_size_formula>
+
+To compute the individual size of a microservice candidate $M_c$, we sum the ABC sizes of all methods in $M_c$, and divide by the number of methods in $M_c$
+
+$ italic("size")(M_c) = (sum_(v_i in M_c) italic("abc")(v_i))/(|v_i|) $ <individual_size_formula>
+
+The total complexity of a solution is the sum of the individual complexities of all microservice candidates $M_c$.
+
+$ italic("Size") = sum_(M_c in S) italic("size")(M_c) $ <total_size_formula>
+
+A lower total size indicates a better decomposition, as smaller microservices are easier to understand and maintain.
+However, a very low size may indicate that the microservice candidates are too small, and that the decomposition is too fine-grained.
 
 ==== Complexity
 

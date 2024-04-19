@@ -84,6 +84,15 @@ dehghani_2018:
     value: https://martinfowler.com/articles/break-monolith-into-microservices.html
     date: 2024-04-10
 
+fitzpatrick_1997:
+  type: article
+  title: Applying the ABC Metric to C, C++, and Java
+  author:
+  - Fitzpatrick, Jerry
+  date: 1997
+  parent:
+    type: periodical
+
 fortunato_barthelemy_2007:
   type: article
   title: Resolution Limit in Community Detection
