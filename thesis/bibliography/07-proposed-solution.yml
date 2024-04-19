@@ -201,6 +201,19 @@ royce_1970:
     type: proceedings
     title: Technical Papers of Western Electronic Show and Convention
 
+software_engineering_body_of_knowledge_2001:
+  type: book
+  title: Guide to the Software Engineering Body of Knowledge - SWEBOK
+  author:
+    - Abran, Alain
+    - Bourque, Pierre
+    - Dupuis, Robert
+    - Moore, James W.
+  date: 2001
+  publisher: IEEE Press
+  serial-number:
+    isbn: '0769510000'
+
 software_engineering_vocabulary_2017:
   type: article
   title: 'ISO/IEC/IEEE International Standard - Systems and software engineering: Vocabulary'

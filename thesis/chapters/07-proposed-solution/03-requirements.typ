@@ -4,8 +4,8 @@
 
 Our approach needs to fulfill certain requirements.
 We make a distinction between functional and non-functional requirements.
-In software engineering, functional requirements describe requirements that impact the design of the application in a functional way /* TODO: reference */.
-Non-functional requirements are additional requirements imposed at design-time that do not directly impact the functionality of the application /* TODO: reference */.
+In software engineering, functional requirements describe requirements that impact the design of the application in a functional way @software_engineering_body_of_knowledge_2001.
+Non-functional requirements are additional requirements imposed at design-time that do not directly impact the functionality of the application software_engineering_body_of_knowledge_2001.
 
 // Quality requirements: @abdellatif_etal_2021
 
