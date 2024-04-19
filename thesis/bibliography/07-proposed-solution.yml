@@ -151,6 +151,24 @@ martin_2003:
   serial-number:
     isbn: '0135974445'
 
+mccabe_1976:
+  type: article
+  title: A Complexity Measure
+  author:
+    - McCabe, T.J.
+  date: 1976-12
+  page-range: 308–320
+  url:
+    value: http://ieeexplore.ieee.org/document/1702388/
+    date: 2024-04-19
+  serial-number:
+    doi: 10.1109/TSE.1976.233837
+    issn: 0098-5589
+  parent:
+    type: periodical
+    title: IEEE Transactions on Software Engineering
+    issue: 4
+
 rahiminejad_etal_2019:
   type: article
   title: Topological and Functional Comparison of Community Detection Algorithms in Biological Networks

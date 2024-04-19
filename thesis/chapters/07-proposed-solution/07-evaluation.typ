@@ -97,26 +97,25 @@ However, a very low size may indicate that the microservice candidates are too s
 
 ==== Complexity
 
-// TODO: Cyclomatic complexity @mccabe_1976
+Cyclomatic complexity is a metric that quantifies the number of linearly independent control paths through a program's source code @mccabe_1976.
+The measure is computed by constructing a control-flow graph of the program, and counting the number of possible paths through the graph.
+Each node in the graph represents a group of non-branching instructions, and each edge represents a possible transfer of control between the groups.
+If the program does not contain any branching instructions, the complexity is 1 (there is only one path).
 
-Complexity is a measure of the number of operations performed by a method in a class @al_debagy_martinek_2020.
-We use the number of operations to compute the individual complexity of a microservice candidate $M_c$ in a solution $S$.
-The metric is based on the Weighted Methods per Class (WMC) metric, which is the sum of the complexities of all methods in a class @chidamber_kemerer_1994.
-Classes and methods with lower complexity are associated with better maintainability and understandability.
+Like ABC size, cyclomatic complexity in the context of microservices can be defined as the averaged sum of the cyclomatic complexities of all methods in a microservice candidate $M_c in S$.
 
-$ italic("numops")(M_c) = sum_(v_i in M_c) italic("ops")(v_i) $ <complexity_formula>
+$ italic("complexity")(M_c) = (sum_(v_i in M_c) italic("brch")(v_i))/(|v_i|) $ <individual_complexity_formula>
 
-Where $italic("ops")$ returns the number of operations performed by method $v_i$.
+Where $italic("brch")(v_i)$ returns the number of branches in method $v_i$.
 
-The total complexity of a solution is the sum of the individual complexities of all microservice candidates $M_c$.
+The total complexity of a solution is then the sum of the individual complexities of all microservice candidates $M_c$.
 
-$ italic("Complexity") = sum_(M_c in S) italic("numops")(M_c) $ <total_complexity_formula>
+$ italic("Complexity") = sum_(M_c in S) italic("complexity")(M_c) $ <total_complexity_formula>
 
-A lower total complexity indicates a better decomposition.
+A solution with a lower total complexity is considered to be better, as it indicates microservice candidates that are easier to understand and maintain.
 
 // TODO: Silhouette coefficient
 // TODO: Usage metric: sum of inheritance factor @bandara_perera_2020
-// TODO: Size: @hasan_etal_2023 @kalia_etal_2021 @wu_etal_2005
 
 === Non-functional metrics
 
