@@ -52,7 +52,15 @@ $ italic("Cohesion") = sum_(M_c in S) italic("coh")(M_c) $ <total_cohesion_formu
 
 A higher total cohesion indicates a better decomposition.
 
+==== Size
+
+// TODO: ABC Size (Assignments, Branches, Conditions) @fitzpatrick_1997
+
+// Often used in Ruby (Rubocop)
+
 ==== Complexity
+
+// TODO: Cyclomatic complexity @mccabe_1976
 
 Complexity is a measure of the number of operations performed by a method in a class @al_debagy_martinek_2020.
 We use the number of operations to compute the individual complexity of a microservice candidate $M_c$ in a solution $S$.
