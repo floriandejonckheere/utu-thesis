@@ -127,7 +127,14 @@ An overview of the source code repository is presented in @source_code_statistic
 
 == Evaluation and results
 
-// Evaluation and results of the proposed solution in the context of the use case
+// For each metric (coupling and cohesion), a boxplot with the results of the seven scenarios (@lourenco_silva_2023)
+
+#figure(
+  include("/figures/case-study/coupling.typ"),
+  caption: [Coupling]
+) <coupling_results>
+
+// Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
 == Discussion
 
