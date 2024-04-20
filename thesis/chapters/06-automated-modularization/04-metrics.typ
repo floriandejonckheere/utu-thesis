@@ -76,7 +76,7 @@ The behaviour of information systems has been studied  with the help of these me
 As object-oriented programming became more popular, the concepts of cohesion and coupling were adapted to the new paradigm @eder_etal_1995.
 
 Throughout the years, many definitions of cohesion and coupling have been proposed both for procedural and object-oriented systems.
-For example, #cite_author(<briand_etal_1996>) define cohesion as the tightness with which related program features are grouped together, and coupling as the amount of relationships between the elements belonging to different modules of a system.
+For example, #cite_full(<briand_etal_1996>) define cohesion as the tightness with which related program features are grouped together, and coupling as the amount of relationships between the elements belonging to different modules of a system.
 
 The publications in this review use different definitions for cohesion and coupling, and different methods of calculating them.
 For example, #cite_full(<selmadji_etal_2020>) define (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
@@ -87,7 +87,7 @@ The total coupling of the solution is the sum of the coupling of all microservic
 Similarly, #cite_full(<filippone_etal_2023>) define average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
 #cite_full(<jin_etal_2021>) introduce the concept of inter-service cohesion and inter-call percentage (ICP) as coupling metrics.
-Several other publications use the metrics introduced by #cite_author(<jin_etal_2021>) in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
+Several other publications use the metrics introduced by #cite_full(<jin_etal_2021>) in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
 
 Another approach to cohesion and coupling is that of #cite_full(<santos_silva_2022>) and #cite_full(<lourenco_silva_2023>), who define cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
@@ -170,7 +170,7 @@ The metric is calculated by dividing the number of intersections of database tab
 The metric measures how evenly the size of the proposed microservices is.
 The size metric was originallly proposed by #cite_full(<wu_etal_2005>).
 
-#cite_full(<santos_paula_2021>) use the silhouette coefficient originally proposed by #cite_author(<rousseeuw_1987>) as evaluation metric.
+#cite_full(<santos_paula_2021>) use the silhouette coefficient originally proposed by #cite_full(<rousseeuw_1987>) as evaluation metric.
 The silhouette coefficient assesses clustering consistency by comparing the average dissimilarity within the cluster.
 
 ==== No metrics

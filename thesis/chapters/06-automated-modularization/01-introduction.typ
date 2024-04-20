@@ -153,7 +153,7 @@ From the selected publications, we extracted relevant information, such as:
 - The algorithms used in the microservices candidate identification process
 - The quality metrics used in the evaluation of the decomposition
 
-#cite_author(<kitchenham_charters_2007>) suggest that the data extraction process should be performed by at least two researchers to ensure the quality and consistency of the extracted data.
+#cite_full(<kitchenham_charters_2007>) suggest that the data extraction process should be performed by at least two researchers to ensure the quality and consistency of the extracted data.
 However, due to resource constraints, the data extraction was performed by a single researcher.
 To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
 
@@ -172,6 +172,6 @@ Static collection describes a #acr("SDLC") artifact that was collected without e
 Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
 
 Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.
-We based the classification of the algorithms on #cite_author(<abdellatif_etal_2021>), who identified six types of service identification algorithms.
+We based the classification of the algorithms on #cite_full(<abdellatif_etal_2021>), who identified six types of service identification algorithms.
 
 Third, the publications were also categorized by the quality metrics used for evaluation the proposed decompositions.
