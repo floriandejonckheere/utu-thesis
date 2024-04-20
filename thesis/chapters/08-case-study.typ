@@ -60,19 +60,19 @@ Refer to @test_configurations for a list of the test configurations.
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (auto, auto, auto, auto, auto),
     inset: 10pt,
     stroke: (x: none),
-    align: (center, center, center, left),
+    align: (right, center, center, center, left),
     // TODO: row span first three columns: Weights
-    [$omega_s$], [$omega_c$], [$omega_d$], [*Scenario*],
-    [1], [0], [0], [_structural_],
-    [0], [1], [0], [_logical_],
-    [0], [0], [1], [_contributor_],
-    [1], [1], [0], [_structural-logical_],
-    [1], [0], [1], [_structural-contributor_],
-    [0], [1], [1], [_logical-contributor_],
-    [1], [1], [1], [_structural-logical-contributor_],
+    [*ID*], [$omega_s$], [$omega_c$], [$omega_d$], [*Scenario*],
+    [[*S1*]], [1], [0], [0], [_structural_],
+    [[*S2*]], [0], [1], [0], [_logical_],
+    [[*S3*]], [0], [0], [1], [_contributor_],
+    [[*S4*]], [1], [1], [0], [_structural-logical_],
+    [[*S5*]], [1], [0], [1], [_structural-contributor_],
+    [[*S6*]], [0], [1], [1], [_logical-contributor_],
+    [[*S7*]], [1], [1], [1], [_structural-logical-contributor_],
   ),
   caption: [Test configurations]
 ) <test_configurations>
