@@ -4,6 +4,8 @@
 
 == Decomposition
 
+// TODO: mention graph reduction
+
 Monolith decomposition is the process of identifying microservice candidates in a monolithic application.
 The goal of this process is to split the monolith into smaller, more manageable software components which can be deployed independently @dehghani_2018.
 Traditionally, monolith decomposition is a manual process that requires a deep understanding of the software architecture and business requirements.
