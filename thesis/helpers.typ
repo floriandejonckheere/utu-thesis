@@ -70,3 +70,15 @@
     names.at(0) + " et al. " + ref(key)
   }
 }
+
+// Create a reference to a scenario
+#let scn_reference = ((t, l) => [
+  #show figure.where(kind: "scenario"): set block(breakable: false)
+  #figure(
+    box(width: 100%)[#align(left)[#text(weight: "thin", t)]],
+    kind: "scenario",
+    supplement: "Scenario",
+    numbering: (..nums) => "[S" + nums.pos().map(str).join("") + "]",
+  )
+  #label(l)
+])

@@ -58,6 +58,16 @@ Seven test scenario's were designed by combining configurations obtained through
 The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
 Refer to @test_configurations for a list of the test configurations.
 
+#let scenarios = (
+  "scn_structural": (0, 1, 0, [_structural_]),
+  "scn_logical": (0, 1, 0, [_logical_]),
+  "scn_contributor": (0, 0, 1, [_contributor_]),
+  "scn_structural_logical": (1, 1, 0, [_structural-logical_]),
+  "scn_structural_contributor": (1, 0, 1, [_structural-contributor_]),
+  "scn_logical_contributor": (0, 1, 1, [_logical-contributor_]),
+  "scn_structural_logical_contributor": (1, 1, 1, [_structural-logical-contributor_]),
+)
+
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -66,13 +76,15 @@ Refer to @test_configurations for a list of the test configurations.
     align: (right, center, center, center, left),
     // TODO: row span first three columns: Weights
     [*ID*], [$omega_s$], [$omega_c$], [$omega_d$], [*Scenario*],
-    [[*S1*]], [1], [0], [0], [_structural_],
-    [[*S2*]], [0], [1], [0], [_logical_],
-    [[*S3*]], [0], [0], [1], [_contributor_],
-    [[*S4*]], [1], [1], [0], [_structural-logical_],
-    [[*S5*]], [1], [0], [1], [_structural-contributor_],
-    [[*S6*]], [0], [1], [1], [_logical-contributor_],
-    [[*S7*]], [1], [1], [1], [_structural-logical-contributor_],
+    ..for (key, scenario) in scenarios.pairs() {
+      (
+        [*#ref(label(key), supplement: none)*],
+        [#scenario.at(0)],
+        [#scenario.at(1)],
+        [#scenario.at(2)],
+        scn_reference([*#scenario.at(3)*], key),
+      )
+    },
   ),
   caption: [Test configurations]
 ) <test_configurations>
