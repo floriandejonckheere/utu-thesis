@@ -15,7 +15,7 @@ The tool collects execution trace data from the monolith application, and uses s
 The software architect can specify the granularity of the microservices, which provides a level of customization.
 
 In 2019, #cite_author(<saidani_etal_2019>) introduced MSExtractor, an automated tool to extract microservices from legacy applications written in the Java programming language#footnote(link("https://www.java.com/")[https://www.java.com]) @saidani_etal_2019.
-Using a genetic algorithm, the authors demonstrate the tool's ability to outperform other state-of-the-art approaches in terms of the quality of the decomposition.
+Using a genetic algorithm, the authors demonstrate the ability of the tool to outperform other state-of-the-art approaches in terms of the quality of the decomposition.
 
 Mono2Micro is an AI-based toolchain for the decomposition of monolithic applications into microservices, developed by #cite_full(<kalia_etal_2020>).
 The toolchain uses a combination of static and dynamic analysis to identify microservice candidates, and uses machine learning to generate recommendations for the decomposition.
