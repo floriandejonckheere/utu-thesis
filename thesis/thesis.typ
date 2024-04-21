@@ -40,18 +40,16 @@
 
   // Abstract
   abstract: [
-    The modular monolith architecture has recently emerged as a harmonization of monolithic and microservices architectures, offering a balanced approach to modularity, scalability, and flexibility for software design.
-    As simple software systems evolve into complex and hard-to-maintain monolithic applications, many actors are pivoting towards modular monoliths or full microservices architectures to meet the ever-increasing demands of modern business.
+    The modular monolith architecture has recently emerged as a harmonization of the classical monolithic and more modern microservices architectures. It offers a balanced approach to modularity, scalability, and flexibility for software design.
+    As simple software systems evolve into complex and hard-to-maintain monoliths, many professionals are pivoting towards modular monoliths or full microservices architectures to meet the ever-increasing demands of modern business.
 
-    This thesis investigates the merits of adopting a modular monolith architecture for monolithic applications, and the challenges faced during the migration process.
-    Based on the findings, an automated approach is formulated to aid the modularization process, using dependency analysis and machine learning algorithms to identify module boundaries.
-    The proposed solution uses a four-step approach to monolith decomposition: extraction, decomposition, visualization, and evaluation.
-    It is then implemented for a case study, and evaluated using a set of metrics to assess the effectiveness of the proposed decomposition.
-    /* TODO: change if results are different */
-    The results indicate that the automated approach is effective in identifying module boundaries, and can be used to aid the modularization process of monolithic applications.
-    Based on the results of the evaluation, a number of optimizations are suggested to improve the effectiveness of the automated approach.
+    This thesis investigates the modular monolith architecture and its benefits for monolithic applications, as well as the challenges faced during the migration process.
+    It explores the concept of automated modularization, and the techniques for identification of module boundaries in software systems.
+    Based on a literature review, a four-step approach to automated modularization is designed, and a case study is conducted to evaluate its effectiveness using the coupling and cohesion quality metrics.
+    The results of the case study indicate that the automated approach is effective in identifying module boundaries, and can be used to modularize monolithic applications.
+    Reflecting upon the results of the evaluation, a number of optimizations are suggested to improve the effectiveness of the automated approach.
     The study concludes that using automated technologies to reduce the manual effort required for modularization can significantly improve the efficiency and accuracy of the process.
-    /* TODO: expand conclusion based on results */
+    /* TODO: concrete results */
   ],
 
   // Keywords

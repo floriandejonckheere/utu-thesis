@@ -179,7 +179,6 @@
     leading: 0.6em,
     justify: false,
   )[
-    #v(1.5em)
     *Keywords*: #keywords.join(", ")
   ]
 
