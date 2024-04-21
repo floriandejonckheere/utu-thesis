@@ -45,7 +45,7 @@
 
 // Cite a paper (author)
 #let cite_author = (key) => {
-  let names = entry(key).at("author").map(a => a.split(", ").at(1).first() + ". " + a.split(", ").at(0))
+  let names = entry(key).at("author").map(a => a.split(", ").at(0))
 
   if (names.len() == 1) {
     names.at(0)
