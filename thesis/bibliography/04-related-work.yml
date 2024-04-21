@@ -56,25 +56,6 @@ lopes_silva_2023:
     - type: conference
       title: 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C)
 
-mancoridis_etal_1998:
-  type: article
-  title: Using automatic clustering to produce high-level system organizations of source code
-  author:
-    - Mancoridis, S.
-    - Mitchell, B.S.
-    - Rorres, C.
-    - Chen, Y.
-    - Gansner, E.R.
-  date: 1998
-  page-range: 45–52
-  serial-number:
-    doi: 10.1109/WPC.1998.693283
-  parent:
-    type: proceedings
-    title: Proceedings. 6th International Workshop on Program Comprehension. IWPC'98 (Cat. No.98TB100242)
-    issue: ''
-    volume: 0
-
 service_weaver_2023:
   type: article
   title: 'Introducing Service Weaver: A Framework for Writing Distributed Applications'

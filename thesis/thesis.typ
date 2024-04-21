@@ -65,11 +65,13 @@
   acronyms: (
     AST: ("Abstract Syntax Tree"),
     BPMN: ("Business Process Model and Notation"),
+    DDD: ("Domain-Driven Design"),
     DSRM: ("Design Science Research Methodology"),
     DSRP: ("Design Science Research Process"),
     SDLC: ("Software Development Life Cycle"),
     SLOC: ("Source Lines of Code"),
     SLR: ("Systematic Literature Review"),
+    SOA: ("Service-Oriented Architecture"),
   ),
 
   // Chapters

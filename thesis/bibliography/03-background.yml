@@ -1,1 +1,70 @@
 ---
+dijkstra_1982:
+  type: book
+  title: 'Selected writings on computing: a personal perspective'
+  author:
+    - Dijkstra, Edsger W.
+  date: 1982
+  publisher: Springer-Verlag
+  location: Berlin, Heidelberg
+  serial-number:
+    isbn: '0387906525'
+
+evans_2015:
+  type: article
+  title: 'Domain-Driven Design Reference: Definitions and Pattern Summaries'
+  author:
+    - Evans, Eric
+  date: 2015
+
+mancoridis_etal_1998:
+  type: article
+  title: Using automatic clustering to produce high-level system organizations of source code
+  author:
+    - Mancoridis, S.
+    - Mitchell, B.S.
+    - Rorres, C.
+    - Chen, Y.
+    - Gansner, E.R.
+  date: 1998
+  page-range: 45–52
+  serial-number:
+    doi: 10.1109/WPC.1998.693283
+  parent:
+    type: proceedings
+    title: Proceedings. 6th International Workshop on Program Comprehension. IWPC'98 (Cat. No.98TB100242)
+    issue: ''
+    volume: 0
+
+opengroup_2024:
+  type: book
+  title: 'The Open Group Architecture Framework (TOGAF)'
+  date: 2024-03-08
+  url:
+      value: https://www.opengroup.org/togaf
+      date: 2024-03-08
+
+parikh_etal_2022:
+  type: article
+  title: Monolithic to Microservices Architecture - A Framework for Design and Implementation
+  author:
+    - Parikh, Aman
+    - Kumar, Pranav
+    - Gandhi, Parshav
+    - Sisodia, Jignesh
+  date: 2022-12-14
+  page-range: 90–96
+  url:
+    value: https://ieeexplore.ieee.org/document/10072238/
+    date: 2024-03-08
+  serial-number:
+    doi: 10.1109/ICCPC55978.2022.10072238
+    isbn: '9798350397840'
+  parent:
+    - type: proceedings
+      title: 2022 {International Conference} on {Computer}, {Power} and {Communications} ({ICCPC})
+      publisher: IEEE
+      location: Chennai, India
+    - type: conference
+      title: 2022 {International Conference} on {Computer}, {Power} and {Communications} ({ICCPC})
+

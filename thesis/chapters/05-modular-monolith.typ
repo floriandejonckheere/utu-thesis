@@ -15,6 +15,8 @@
 
 == Modularization
 
+// https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer
+
 // Problem statement regarding identification of optimal module boundaries
 
 // Microservice is architectural style or just SOA-approach? @carrasco_etal_2018
