@@ -59,11 +59,9 @@ Since the number of committers to NephroFlow Link is limited, we use multiple co
 Seven test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
 The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
 Refer to @test_configurations for a list of the test configurations.
+Strategies using a single coupling are not considered, as they are not expected to perform well in the context of NephroFlow Link.
 
 #let scenarios = (
-  "scn_structural": (0, 1, 0, [_structural_]),
-  "scn_logical": (0, 1, 0, [_logical_]),
-  "scn_contributor": (0, 0, 1, [_contributor_]),
   "scn_structural_logical": (1, 1, 0, [_structural-logical_]),
   "scn_structural_contributor": (1, 0, 1, [_structural-contributor_]),
   "scn_logical_contributor": (0, 1, 1, [_logical-contributor_]),
@@ -129,7 +127,7 @@ An overview of the source code repository is presented in @source_code_statistic
 
 == Evaluation and results
 
-// For each metric (coupling and cohesion), a boxplot with the results of the seven scenarios (@lourenco_silva_2023)
+// For each metric (coupling and cohesion), a boxplot with the results of the four scenarios (@lourenco_silva_2023)
 
 #grid(
   columns: (50%, 50%),

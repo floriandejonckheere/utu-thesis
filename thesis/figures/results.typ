@@ -2,9 +2,6 @@
 
 #let results_chart = (key) => [
   #let data = (
-    (<scn_structural>, yaml("/data/structural.yml")),
-    (<scn_logical>, yaml("/data/logical.yml")),
-    (<scn_contributor>, yaml("/data/contributor.yml")),
     (<scn_structural_logical>, yaml("/data/structural-logical.yml")),
     (<scn_structural_contributor>, yaml("/data/structural-contributor.yml")),
     (<scn_logical_contributor>, yaml("/data/logical-contributor.yml")),
