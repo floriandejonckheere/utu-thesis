@@ -41,8 +41,17 @@ Following the principles of #acr("SOA"), services can be implemented in the same
 
 ==== Microservice architecture
 
-// TODO: reference https://martinfowler.com/articles/microservices.html
-// SOA vs microservices @cerny_etal_2017
+Microservices are a more recent architectural style that builds on the principles of #acr("SOA") and modular programming.
+In a microservice architecture, a software system is decomposed into a set of small, independent deployment units that communicate with each other using lightweight protocols such as HTTP or messaging queues @fowler_lewis_2014.
+Microservices promote the separation of concerns and decentralized governance.
+Each microservice is a separate codebase, which makes it easier to develop and deploy the system incrementally.
+The architecture is designed to be resilient to failures, and allows for scaling individual services independently.
+In modern software engineering, microservices are a key concept in building flexible, scalable, and maintainable software systems.
+
+While #acr("SOA") and microservices share many similarities, there are some key differences between the two architectural styles.
+#acr("SOA") can still be developed as a monolith application, while microservices are inherently distributed @cerny_etal_2017.
+Microservices architecture puts more emphasis on the autonomy of development, allowing teams to make independent decisions about technology stack and implementation details.
+#acr("SOA") is heavily focused on the reuse of code and the abstraction of business functionality, while microservices are more focused on bounded contexts and not sharing code between services @richards_2015.
 
 ==== Modularization
 

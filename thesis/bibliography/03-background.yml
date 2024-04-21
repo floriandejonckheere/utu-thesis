@@ -1,4 +1,27 @@
 ---
+cerny_etal_2017:
+  type: article
+  title: Disambiguation and Comparison of SOA, Microservices and Self-Contained Systems
+  author:
+    - Cerny, Tomas
+    - Donahoo, Michael J.
+    - Pechanec, Jiri
+  date: 2017-09-20
+  page-range: 228–235
+  url:
+    value: https://dl.acm.org/doi/10.1145/3129676.3129682
+    date: 2024-03-30
+  serial-number:
+    doi: 10.1145/3129676.3129682
+    isbn: 978-1-4503-5027-3
+  parent:
+    - type: proceedings
+      title: Proceedings of the International Conference on Research in Adaptive and Convergent Systems
+      publisher: ACM
+      location: Krakow Poland
+    - type: conference
+      title: 'RACS ''17: International Conference on Research in Adaptive and Convergent Systems'
+
 dijkstra_1982:
   type: book
   title: 'Selected writings on computing: a personal perspective'
@@ -16,6 +39,17 @@ evans_2015:
   author:
     - Evans, Eric
   date: 2015
+
+fowler_lewis_2014:
+  type: article
+  title: 'Microservices: a definition of this new architectural term'
+  authors:
+    - Fowler, Martin
+    - Lewis, James
+  date: 2014
+  url:
+    value: https://martinfowler.com/articles/microservices.html
+    date: 2024-03-08
 
 mancoridis_etal_1998:
   type: article
@@ -62,9 +96,16 @@ parikh_etal_2022:
     isbn: '9798350397840'
   parent:
     - type: proceedings
-      title: 2022 {International Conference} on {Computer}, {Power} and {Communications} ({ICCPC})
+      title: 2022 International Conference on Computer, Power and Communications (ICCPC)
       publisher: IEEE
       location: Chennai, India
     - type: conference
-      title: 2022 {International Conference} on {Computer}, {Power} and {Communications} ({ICCPC})
+      title: 2022 International Conference on Computer, Power and Communications (ICCPC)
 
+richards_2015:
+  type: article
+  title: 'Microservices vs. Service-Oriented Architecture'
+  authors:
+    - Richards, Mark
+  date: 2015
+  publisher: O'Reilly Media
