@@ -1,4 +1,39 @@
 ---
+rocha_2018:
+  type: article
+  title: 'Monólise: Uma técnica para decomposição de aplicações monolíticas em microsserviços'
+  author:
+    - Pereira da Rocha, Diego
+  date: 2018
+
+gysel_etal_2016:
+  type: anthos
+  title: 'Service Cutter: A Systematic Approach to Service Decomposition'
+  author:
+    - Gysel, Michael
+    - Kölbener, Lukas
+    - Giersche, Wolfgang
+    - Zimmermann, Olaf
+  date: 2016
+  editor:
+    - Aiello, Marco
+    - Johnsen, Einar Broch
+    - Dustdar, Schahram
+    - Georgievski, Ilche
+  page-range: 185–200
+  url:
+    value: http://link.springer.com/10.1007/978-3-319-44482-6_12
+    date: 2024-03-06
+  serial-number:
+    doi: 10.1007/978-3-319-44482-6_12
+    isbn: 978-3-319-44481-9 978-3-319-44482-6
+  parent:
+    type: anthology
+    title: Service-{Oriented} and {Cloud Computing}
+    publisher: Springer International Publishing
+    location: Cham
+    volume: 9846
+
 lopes_silva_2023:
   type: article
   title: 'Monolith Microservices Identification: Towards An Extensible Multiple Strategy Tool'
@@ -39,3 +74,14 @@ mancoridis_etal_1998:
     title: Proceedings. 6th International Workshop on Program Comprehension. IWPC'98 (Cat. No.98TB100242)
     issue: ''
     volume: 0
+
+service_weaver_2023:
+  type: article
+  title: 'Introducing Service Weaver: A Framework for Writing Distributed Applications'
+  author:
+    - Petrovic, Srdjan
+    - Sawhney, Garv
+  date: 2023-03-01
+  url:
+    value: https://opensource.googleblog.com/2023/03/introducing-service-weaver-framework-for-writing-distributed-applications.html
+    date: 2023-03-01

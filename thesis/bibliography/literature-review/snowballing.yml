@@ -98,7 +98,7 @@ kalia_etal_2020:
     title: 'ESEC/FSE ''20: 28th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering'
 saidani_etal_2019:
   type: anthos
-  title: Towards Automated Microservices Extraction Using Muti-objective Evolutionary Search
+  title: Towards Automated Microservices Extraction Using Multi-objective Evolutionary Search
   author:
   - Saidani, Islem
   - Ouni, Ali
