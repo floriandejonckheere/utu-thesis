@@ -26,13 +26,17 @@
     )
   )
 
+  #let ymin = calc.min(..rows.map(x => x.min))
+  #let ymax = calc.max(..rows.map(x => x.max))
+  #let ytickstep = (ymax - ymin) / 5
+
   #canvas({
     chart.boxwhisker(
       size: (6, 3),
       label-key: "label",
-      y-min: 0,
-      y-max: 50,
-      y-tick-step: 10,
+      y-min: (ymin - ytickstep),
+      y-max: (ymax + ytickstep),
+      y-tick-step: ytickstep,
       (..rows),
     )
   })
