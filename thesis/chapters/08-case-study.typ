@@ -2,7 +2,7 @@
 
 #import "/helpers.typ": *
 
-#import "/figures/evaluation.typ": *
+#import "/figures/results.typ": *
 
 #let stats = (
   sloc: 9288,
@@ -136,15 +136,27 @@ An overview of the source code repository is presented in @source_code_statistic
   gutter: 1em,
   [
     #figure(
-      evaluation("coupling"),
+      results_chart("coupling"),
       caption: [Coupling]
     ) <coupling_results>,
   ],
   [
     #figure(
-      evaluation("cohesion"),
+      results_chart("cohesion"),
       caption: [Cohesion]
     ) <cohesion_results>,
+  ],
+  [
+    #figure(
+      results_chart("abc_size"),
+      caption: [ABC size]
+    ) <abc_size_results>,
+  ],
+  [
+    #figure(
+      results_chart("complexity"),
+      caption: [Complexity]
+    ) <complexity_results>,
   ],
 )
 

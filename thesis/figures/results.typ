@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.2.2": canvas, chart, draw
 
-#let evaluation = (key) => [
+#let results_chart = (key) => [
   #let data = (
     (<scn_structural>, yaml("/data/structural.yml")),
     (<scn_logical>, yaml("/data/logical.yml")),
