@@ -117,13 +117,12 @@
   init-acronyms(acronyms)
 
   // Title page
-  v(0.6fr)
   if logo-file != none {
-    align(right, image(logo-file, width: 7cm))
+    align(left, image(logo-file, width: 7cm))
   }
   v(3fr)
 
-  align(center, text(2.5em, title))
+  align(right, text(2em, title))
   v(5fr)
 
   align(
@@ -135,7 +134,7 @@
       #text(0.9em, subtitle) \
       #text(0.9em, unit) \
       #text(0.9em, date) \
-      #text(0.9em, author)
+      #text(0.9em, author) \
     ]
   ]
 
