@@ -122,7 +122,7 @@
   }
   v(3fr)
 
-  align(right, text(2em, title))
+  align(right, text(1.9em, title))
   v(5fr)
 
   align(
