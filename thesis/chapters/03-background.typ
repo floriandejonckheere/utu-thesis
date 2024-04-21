@@ -65,3 +65,10 @@ Modules are loosely coupled, which entails that they have minimal dependencies o
 Modularization typically requires a deep understanding of the existing system architecture, bundled with knowledge about the business domain and the requirements of the system.
 The process of modularization can be very time-consuming and error-prone @mancoridis_etal_1998.
 Automated tools and techniques for service identification and decomposition can help to accelerate the process, and allow software architects with limited knowledge about the software system to initiate the modularization process.
+
+==== Quality metrics
+
+Quality metrics are quantitative measures that provide insight into the quality of software systems.
+In the context of microservices, quality metrics can be used to evaluate how modular the system is, and identify areas for improvement.
+Many different types of quality metrics exist, including size, complexity, and coupling metrics @mancoridis_etal_1998.
+Microservices are typically evaluated based on the cohesion and coupling of the individual services.
