@@ -2,6 +2,8 @@
 
 #import "/helpers.typ": *
 
+#import "/figures/evaluation.typ": *
+
 #let stats = (
   sloc: 9288,
   files: 208,
@@ -130,7 +132,7 @@ An overview of the source code repository is presented in @source_code_statistic
 // For each metric (coupling and cohesion), a boxplot with the results of the seven scenarios (@lourenco_silva_2023)
 
 #figure(
-  include("/figures/case-study/coupling.typ"),
+  evaluation("coupling"),
   caption: [Coupling]
 ) <coupling_results>
 
