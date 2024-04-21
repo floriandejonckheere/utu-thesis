@@ -2,7 +2,7 @@
 
 #show: template.with(
   // Document title
-  title: "Automated Microservice Identification in Modular Monolith Architectures",
+  title: "Automated Microservice Identification in Monolithic Applications",
 
   // Document subtitle
   subtitle: "Master of Science (Tech) Thesis",
