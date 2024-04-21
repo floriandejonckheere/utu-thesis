@@ -55,5 +55,13 @@ Microservices architecture puts more emphasis on the autonomy of development, al
 
 ==== Modularization
 
-// service decomposition
-// TODO: reference @mancoridis_etal_1998
+Modularization, or microservice decomposition, is the process of dividing a monolithic application into smaller, loosely coupled modules or microservices.
+The goal of modularization is to decrease the complexity and maintenance burden of tightly coupled, interconnected software components.
+Modularization can be an objective in the design of new software systems, or as an objective in the migration of monolith applications to a distributed architecture.
+Cohesion and coupling are two key concepts in modularization @software_engineering_body_of_knowledge_2001.
+Modules in a modularized system are cohesive, meaning that they only encapsulate code that is related to a specific functionality or domain concept.
+Modules are loosely coupled, which entails that they have minimal dependencies on other modules, and only communicate through the defined interface contracts.
+
+Modularization typically requires a deep understanding of the existing system architecture, bundled with knowledge about the business domain and the requirements of the system.
+The process of modularization can be very time-consuming and error-prone @mancoridis_etal_1998.
+Automated tools and techniques for service identification and decomposition can help to accelerate the process, and allow software architects with limited knowledge about the software system to initiate the modularization process.
