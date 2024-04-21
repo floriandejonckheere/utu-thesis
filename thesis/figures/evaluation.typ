@@ -28,7 +28,7 @@
 
   #canvas({
     chart.boxwhisker(
-      size: (6, 5),
+      size: (6, 3),
       label-key: "label",
       y-min: 0,
       y-max: 50,

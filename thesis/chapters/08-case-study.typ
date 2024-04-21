@@ -131,10 +131,22 @@ An overview of the source code repository is presented in @source_code_statistic
 
 // For each metric (coupling and cohesion), a boxplot with the results of the seven scenarios (@lourenco_silva_2023)
 
-#figure(
-  evaluation("coupling"),
-  caption: [Coupling]
-) <coupling_results>
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+    #figure(
+      evaluation("coupling"),
+      caption: [Coupling]
+    ) <coupling_results>,
+  ],
+  [
+    #figure(
+      evaluation("cohesion"),
+      caption: [Cohesion]
+    ) <cohesion_results>,
+  ],
+)
 
 // Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
