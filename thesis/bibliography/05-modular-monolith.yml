@@ -77,3 +77,27 @@ su_li_2024:
   url:
     value: http://arxiv.org/abs/2401.11867
     date: 2024-03-01
+
+tsechelidis_etal_2023:
+  type: article
+  title: Modular Monoliths the Way to Standardization
+  author:
+    - Tsechelidis, Michail
+    - Nikolaidis, Nikolaos
+    - Maikantis, Theodore
+    - Ampatzoglou, Apostolos
+  date: 2023-10-17
+  page-range: 49–52
+  url:
+    value: https://dl.acm.org/doi/10.1145/3624486.3624506
+    date: 2024-04-22
+  serial-number:
+    doi: 10.1145/3624486.3624506
+    isbn: '9798400708350'
+  parent:
+    - type: proceedings
+      title: Proceedings of the 3rd Eclipse Security, AI, Architecture and Modelling Conference on Cloud to Edge Continuum
+      publisher: ACM
+      location: Ludwigsburg Germany
+    - type: conference
+      title: 'ESAAM 2023: 3rd Eclipse Security, AI, Architecture and Modelling Conference on Cloud to Edge Continuum'

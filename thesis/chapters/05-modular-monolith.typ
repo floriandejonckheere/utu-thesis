@@ -18,13 +18,13 @@ The three layers are present in each module, but they are not directly accessibl
 Instead, modules expose a well-defined interface that describes the capabilities and limitations of the module.
 Hence, the modules of a modular monolith are loosely coupled.
 
-#figure(
-  include("/figures/modular-monolith.typ"),
-  caption: [Modular monolith architecture @kucukoglu_2022]
-) <modular_monolith_architecture>
-
 The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
 Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
+
+#figure(
+  include("/figures/modular-monolith2.typ"),
+  caption: [Modular monolith architecture @tsechelidis_etal_2023]
+) <modular_monolith_architecture>
 
 While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
 Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand @foote_yoder_1997.
