@@ -32,13 +32,16 @@ Nipro Group is a leading global manufacturer of medical devices, specialized in 
 NephroFlow Link, part of the NephroFlow Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite]], is a monolithic application that allows the NephroFlow Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
 NephroFlow Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow Healthcare Platform for storage and visualization.
 
+#figure(
+  include("/figures/link.typ"),
+  caption: [NephroFlow Link architecture]
+) <link_architecture>
+
 Dialysis machines typically measure data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
 Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
 
 Nipro Group has deployed NephroFlow Link in several dialysis centers and hospitals across Europe, Central America, and India, collectively ensuring connection to hundreds of dialysis machines.
 To ensure the patient's information security, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
-
-// TODO: figure about link data flow
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
 In theory, it is not a stateful application, as it only stores transitional data (e.g. for rate-limiting purposes) using the Redis key-value datastore#footnote[#link("https://www.redis.com")[https://www.redis.com]].
@@ -126,8 +129,6 @@ An overview of the source code repository is presented in @source_code_statistic
 ) <source_code_statistics>
 
 == Evaluation and results
-
-// For each metric (coupling and cohesion), a boxplot with the results of the four scenarios (@lourenco_silva_2023)
 
 #grid(
   columns: (50%, 50%),
