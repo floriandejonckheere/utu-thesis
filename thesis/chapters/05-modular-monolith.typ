@@ -91,7 +91,7 @@ A star rating system is used to indicate the performance of each architecture wi
     [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
     [Productivity],           [#star(3)],   [#star(3)],           [#star(1)],
     [Performance],            [#star(1)],   [#star(2)],           [#star(3)],
-    [Fault tolerance],        [#star(1)],   [#star(1)],           [#star(1)],
+    [Fault tolerance],        [#star(1)],   [#star(3)],           [#star(3)],
   ),
   caption: "Comparison of modular monolith architecture"
 ) <modular_monolith_comparison>
@@ -140,15 +140,13 @@ Care must be taken when designing the distributed application to ensure that the
 Additionally, a microservices architecture is truly distributed in that every service is bundled with its own external dependencies, such as databases and caches.
 This allows for better performance, as the dependencies can be scaled alongside the services.
 
-// Security: modules are isolated from each other (fault-tolerance), but shared database can be a single point of failure
-//     External interfaces: authentication and authorization, transport security
+==== Fault tolerance
 
-// Dependencies: external databases are shared for all modules
-
-// CAP theorem
-//    Consistency: more difficult because one request may require multiple modules to work together
-//    Availability: entire application is more fault-tolerant
-//    Partition tolerance: shared database is a single point of failure
+The impact of a failure in a monolith application is greater than in modular architectures, as the entire application is affected.
+The risk of a system failure can be mitigated by replicating the application, but this comes with a significant cost.
+Distributed architectures are more tolerant to individual failures, as the failure of one module or service does not affect the entire application, and can be resolved quicker.
+Communication between modules or services is done over a network, where failures and delays are expected.
+Hence, distributed architectures are designed to be fault-tolerant, and can handle failures more gracefully than monolith applications.
 
 // Monolith facets: development velocity
 // Microservice facets: scalability, security, fault tolerance (@kucukoglu_2022)
