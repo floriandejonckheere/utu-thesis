@@ -127,7 +127,7 @@ To ensure that the application works as expected, integration tests can be perfo
 When designing a software system from scratch, a monolith architecture is often the most productive choice.
 Developers can focus on the business logic of the application, without having to worry about the underlying infrastructure or deployment model.
 Using microservices architecture incurs additional complexity, as developers must define the interfaces between the services, and manage the communication between them.
-Modular monolith architecture strikes a balance between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
+Modular monolith architecture compromises between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
 The "Monolith First" approach proposed by #cite_author(<fowler_2015>) suggests initiating new software systems with a monolith architecture, and only moving to a microservices approach when the monolith architecture shows its limitations @fowler_2015.
 
 ==== Performance
@@ -148,8 +148,10 @@ Distributed architectures are more tolerant to individual failures, as the failu
 Communication between modules or services is done over a network, where failures and delays are expected.
 Hence, distributed architectures are designed to be fault-tolerant, and can handle failures more gracefully than monolith applications.
 
-// Monolith facets: development velocity
-// Microservice facets: scalability, security, fault tolerance (@kucukoglu_2022)
+In summary, the modular monolith architecture strikes a balance between the monolith and microservices architectures.
+It offers the simplicity of a monolith architecture, while providing the flexibility and scalability of a distributed architecture.
+In particular, the modular monolith architecture is well-suited for smaller developments teams where the domain complexity of the application is manageable @kodja_2023.
+On the other hand, when the requirements for scaling become more stringent, or the use of multiple, heterogeneous technologies is required, a microservices architecture might be a better choice @kodja_2023.
 
 == Modularization
 
