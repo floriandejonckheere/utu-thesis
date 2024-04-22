@@ -1,1 +1,29 @@
 ---
+foote_yoder_1997:
+  type: article
+  title: Big Ball of Mud
+  author:
+    - Foote, Brian
+    - Yoder, Joseph
+  date: 1997-08-26
+
+kucukoglu_2022:
+  type: article
+  name: What is a modular monolith?
+  authors:
+    - Küçükoğlu, Ahmet
+  date: 2022-03-29
+  url:
+    value: https://www.ahmetkucukoglu.com/en/what-is-modular-monolith
+    date: 2024-04-22
+
+su_li_2024:
+  type: web
+  title: 'Modular Monolith: Is This the Trend in Software Architecture?'
+  author:
+    - Su, Ruoyu
+    - Li, Xiaozhou
+  date: 2024-01-22
+  url:
+    value: http://arxiv.org/abs/2401.11867
+    date: 2024-03-01

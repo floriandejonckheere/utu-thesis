@@ -1,10 +1,45 @@
+#import "/helpers.typ": *
+
 = Modular monolith architecture <modularmonolith>
 
-// Definition and explanation of modular monolith software architecture
+In this chapter, we will discuss the modular monolith architecture.
+We will start by defining the architectural style, and then continue by discussing the challenges and opportunities of this architecture.
 
-== Background
+== Definition
 
-// Definition and explanation of modular monolith architecture
+While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules or components based on their functionality @kucukoglu_2022.
+The three layers are present in each module, but they are not directly accessible from outside of the module.
+Instead, modules expose a well-defined interface that describes the capabilities and limitations of the module.
+Hence, the modules of a modular monolith are loosely coupled.
+
+// TODO: modular monolith architecture figure
+
+The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
+Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
+
+Contrary to microservices, modular monolith applications are built as a single deployable unit.
+The modules of the software system are separated logically (not physically), and are deployed together.
+Horizontal scaling of a modular monolith architecture is more difficult than in a microservices architecture.
+
+// TODO: distributedness graph (@kucukoglu_2022)
+
+While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
+Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand @foote_yoder_1997.
+A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture.
+The modular monolith architecture attempts to address these issues, and can be used as a stepping stone towards a microservices architecture.
+
+#cite_full(<su_li_2024>) identified six characteristics of modular monolith architecture in the literature:
+
++ *Segregation* of modules: each module is independent and includes all three application layers. Modules are autonomously developed, tested and deployed.
++ *Modularity*: modules are highly internally cohesive and loosely externally coupled. Communication between modules is done using well-defined interfaces, preferably asynchronously.
++ *Unified database*: the database schema is shared by all modules, in contrast with microservices where each service has its own database and schema.
++ *Monolithic deployment*: the application is deployed as a single unit, and although modules can be distributed across multiple hosts.
++ *Unified application process*: the application functions as a singular process, scaling uniformly depending on the requirements.
++ *Maintainability and scalability*: the architecture can efficiently manage increasing complexity, and facilitates growth.
+
+In summary, the modular monolith architecture aims to find a middle ground between the monolith and microservices architectures by reaping the benefits of both approaches.
+While opting for a modular monolith architecture already improves flexibility and comprehensibility, it can also be used as a step in the migration towards a microservices architecture.
+
 // Justification for choice of modular monolith in this thesis
 
 == Challenges and opportunities
@@ -13,7 +48,29 @@
 
 // TODO: discuss testing strategies, security concerns, external dependencies, transactional context, Conway's law
 
+// Monolith facets: development velocity
+// Microservice facets: scalability, security, fault tolerance (@kucukoglu_2022)
+
+
+// TODO: table comparing monolith, modular monolith and microservices
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    inset: 10pt,
+    stroke: (x: none),
+    align: (left, center, center),
+
+    [*Monolith*], [*Modular monolith*], [*Microservices*],
+  ),
+  caption: "Comparison of modular monolith architecture"
+) <modular_monolith_comparison>
+
 == Modularization
+
+Modularization of monolith applications is not a new concept.
+In #cite(<parnas_1972>, form: "year"), #cite_author(<parnas_1972>) stated that modularization is a mechanism that can improve the flexibility and comprehensibility of software systems @parnas_1972.
+The author argued that modularization separates the system into smaller and more manageable parts, which can be developed concurrently by different teams.
 
 // https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer
 
@@ -43,3 +100,8 @@
     2. Decomposition (clustering algorithms)
     3. Analysis (evaluation, metrics)
 */
+
+== Existing approaches
+
+// Tools: ServiceWeaver, Spring Modulith, Light-Hybrid-4j, Packwerk
+// Companies: Shopify, AppSmith, Gusto, PlayTech
