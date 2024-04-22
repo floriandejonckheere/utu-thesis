@@ -90,9 +90,7 @@ A star rating system is used to indicate the performance of each architecture wi
     [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
     [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
     [Productivity],           [#star(3)],   [#star(3)],           [#star(1)],
-    [Scalability],            [#star(1)],   [#star(1)],           [#star(1)],
-    [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
-    [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
+    [Performance],            [#star(1)],   [#star(2)],           [#star(3)],
     [Fault tolerance],        [#star(1)],   [#star(1)],           [#star(1)],
   ),
   caption: "Comparison of modular monolith architecture"
@@ -132,12 +130,20 @@ Using microservices architecture incurs additional complexity, as developers mus
 Modular monolith architecture strikes a balance between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
 The "Monolith First" approach proposed by #cite_author(<fowler_2015>) suggests initiating new software systems with a monolith architecture, and only moving to a microservices approach when the monolith architecture shows its limitations @fowler_2015.
 
+==== Performance
+
+Traditional monolith applications offer better performance than distributed architectures, due to the lower overhead incurred when processing requests.
+However, monolith applications can only handle a limited number of requests until the application becomes a bottleneck.
+Distributed architectures, such as microservices and modular monoliths, can offer a solution for this problem by allowing the application to scale horizontally with ease, at the cost of increased complexity and overhead.
+Care must be taken when designing the distributed application to ensure that the transactional context of a request is not spread across multiple modules or services, as this can lead to performance issues.
+
+Additionally, a microservices architecture is truly distributed in that every service is bundled with its own external dependencies, such as databases and caches.
+This allows for better performance, as the dependencies can be scaled alongside the services.
+
 // Security: modules are isolated from each other (fault-tolerance), but shared database can be a single point of failure
 //     External interfaces: authentication and authorization, transport security
 
 // Dependencies: external databases are shared for all modules
-
-// Performance: transactional context is smaller, but may
 
 // CAP theorem
 //    Consistency: more difficult because one request may require multiple modules to work together
