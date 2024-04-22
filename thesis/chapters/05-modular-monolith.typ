@@ -10,28 +10,41 @@ We will start by defining the architectural style, and then continue by discussi
 == Definition
 
 While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules or components based on their functionality @kucukoglu_2022.
+
 The three layers are present in each module, but they are not directly accessible from outside of the module.
 Instead, modules expose a well-defined interface that describes the capabilities and limitations of the module.
 Hence, the modules of a modular monolith are loosely coupled.
-
-The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
-Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
 
 #figure(
   include("/figures/modular-monolith.typ"),
   caption: [Modular monolith architecture (adapted from @kucukoglu_2022)]
 ) <modular_monolith_architecture>
 
-Contrary to microservices, modular monolith applications are built as a single deployable unit.
-The modules of the software system are separated logically (not physically), and are deployed together.
-Horizontal scaling of a modular monolith architecture is more difficult than in a microservices architecture.
-
-// TODO: distributedness graph (@kucukoglu_2022)
+The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
+Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
 
 While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
 Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand @foote_yoder_1997.
 A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture.
 The modular monolith architecture attempts to address these issues, and can be used as a stepping stone towards a microservices architecture.
+
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+    #figure(
+      include("/figures/distributedness.typ"),
+      caption: [Physical and logical architectures @kucukoglu_2022]
+    ) <distributedness>
+  ],
+  [
+    Contrary to microservices, modular monolith applications are built as a single deployable unit.
+    The modules of the software system are separated logically (not physically), and are deployed together.
+    Horizontal scaling of a modular monolith architecture is more difficult than in a microservices architecture.
+  ]
+)
+
+#v(2em)
 
 #cite_full(<su_li_2024>) identified six characteristics of modular monolith architecture in the literature:
 
