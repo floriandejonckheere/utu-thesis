@@ -17,7 +17,7 @@ Hence, the modules of a modular monolith are loosely coupled.
 
 #figure(
   include("/figures/modular-monolith.typ"),
-  caption: [Modular monolith architecture (adapted from @kucukoglu_2022)]
+  caption: [Modular monolith architecture @kucukoglu_2022]
 ) <modular_monolith_architecture>
 
 The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
