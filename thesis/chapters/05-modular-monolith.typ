@@ -86,12 +86,13 @@ A star rating system is used to indicate the performance of each architecture wi
     stroke: (x: none),
     align: (left, center, center, center),
     [*Architectural driver*], [*Monolith*], [*Modular monolith*], [*Microservices*],
-    [Complexity],             [#star(1)],   [#star(3)],           [#star(2)],
+    [Complexity],             [#star(3)],   [#star(2)],           [#star(1)],
     [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
     [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
-    [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
-    [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
+    [Productivity],           [#star(2)],   [#star(2)],           [#star(2)],
     [Scalability],            [#star(1)],   [#star(1)],           [#star(1)],
+    [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
+    [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
     [Fault tolerance],        [#star(1)],   [#star(1)],           [#star(1)],
   ),
   caption: "Comparison of modular monolith architecture"
@@ -100,14 +101,14 @@ A star rating system is used to indicate the performance of each architecture wi
 ==== Complexity
 
 The complexity of a software system is related to the number of modules and their interactions.
-In a monolith architecture, the complexity is high because there is no clear separation between the modules, which makes the architecture tightly coupled and difficult to change.
-Microservices architecture improves the coupling by separating modules into independent services, but introduces complexity due to the communication between the services.
+In a monolith architecture, there is only one module (the monolith application itself), and no interactions.
+This makes the architecture simple, and easy to deploy.
+Microservices architecture improves the coupling by separating modules into independent services, but introduces complexity due to the communication between the services, and the additional tools and infrastructure required to manage them.
 The modular monolith architecture uses the decoupled approach of microservices, but keeps the complexity down by bundling the modules together in a single deployable unit.
 Modules in a modular monolith architecture have two ways of communicating: externally through #acr("API") calls, and internally through abstracted interfaces @su_li_2024.
 The external #acr("API") calls can introduce additional complexity, although some tools (e.g. ServiceWeaver) hide this complexity behind abstractions of internal communication.
 
 ==== Structure
-
 
 The source code of monolith and modular monolith applications is stored in the same repository.
 This makes enacting changes to the codebase easier, as developers can modify multiple modules or layers at the same time.
