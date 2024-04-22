@@ -6,9 +6,8 @@
 
 This chapter describes the methodology used in this thesis in detail.
 
-// Ad hoc review (@ralph_baltes_2022)
-To answer the first research question, an ad hoc review is conducted, picking a select number of papers that define and discuss the modular monolith architecture.
-An ad hoc review is a less formal review process, where the researcher discusses purposefully selected papers to gain an understanding of a specific topic @ralph_baltes_2022.
+To answer the first research question, an ad hoc review of grey literature is conducted, picking a select number of publications that define and discuss the modular monolith architecture.
+An ad hoc review is a less formal review process, where the researcher discusses purposefully selected publications to gain an understanding of a specific topic @ralph_baltes_2022.
 
 For the second research question, a systematic literature review is conducted to identify and summarize the state of the art in automated modularization technologies.
 Systematic literature reviews are more formal than ad hoc reviews, and follow a well-defined process to reduce bias and increase the reliability of the results.
