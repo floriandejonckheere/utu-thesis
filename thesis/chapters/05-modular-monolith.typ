@@ -4,6 +4,9 @@
 
 In this chapter, we will discuss the modular monolith architecture.
 We will start by defining the architectural style, and then continue by discussing the challenges and opportunities of this architecture.
+We aim to answer the following research question:
+
+*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
 
 // TODO: Justification for choice of modular monolith in this thesis
 
