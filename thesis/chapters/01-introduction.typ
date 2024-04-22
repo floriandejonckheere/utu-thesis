@@ -22,7 +22,7 @@ This approach allows developers to rapidly build and deploy new features, while 
 As the code resides in the same codebase, developers can easily restructure and redefine the module boundaries.
 This makes the modular monolith architecture an attractive option for organizations that want to migrate their monolithic software systems to a more flexible and scalable architecture.
 
-In this thesis, we aim to investigate the potential benefits of a modular monolithic architecture, and how automated technologies can help software architects to migrate their monolithic codebases to a modular monolith architecture.
+In this thesis, we aim to investigate the potential benefits of a modular monolithic architecture, and how automated technologies can help software architects to migrate their monolithic codebases to a modular monolith or microservices architecture.
 
 == Motivation
 
