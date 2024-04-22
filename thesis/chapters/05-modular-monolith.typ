@@ -27,7 +27,11 @@ Focusing on business domains rather then technical capabilities improves the org
 While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
 Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand @foote_yoder_1997.
 A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture.
-The modular monolith architecture attempts to address these issues, and can be used as a stepping stone towards a microservices architecture.
+
+Modular monolith architecture can also be used as a stepping stone towards a microservices architecture.
+Once the application is modularized and the interfaces are well-defined and stable, individual modules can be extracted and turned into external services.
+If the agreed upon interface is respected, the external service can be swapped out entirely by another implementation without affecting the rest of the application.
+When all modules have been extracted from the monolith, the application has effectively been transformed into a microservices architecture.
 
 #grid(
   columns: (50%, 50%),
@@ -61,24 +65,35 @@ While opting for a modular monolith architecture already improves flexibility an
 
 == Challenges and opportunities
 
-// Answer to Research Question 1
+// Code structure: one repository with multiple modules
+//    Conway's law: organization structure reflects the architecture of the software system
+//    Interfaces: external (API) and internal (abstracted interface) @su_li_2024
 
-// TODO: discuss testing strategies, security concerns, external dependencies, transactional context, Conway's law
+// Testing: unit tests for each module to ensure it works in isolation, integration tests for entire application
+
+// Security: modules are isolated from each other (fault-tolerance), but shared database can be a single point of failure
+//     External interfaces: authentication and authorization, transport security
+
+// Dependencies: external databases are shared for all modules
+
+// Performance: transactional context is smaller, but may
+
+// CAP theorem
+//    Consistency: more difficult because one request may require multiple modules to work together
+//    Availability: entire application is more fault-tolerant
+//    Partition tolerance: shared database is a single point of failure
 
 // Monolith facets: development velocity
 // Microservice facets: scalability, security, fault tolerance (@kucukoglu_2022)
 
-
-// TODO: table comparing monolith, modular monolith and microservices
-
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (auto, auto, auto, auto),
     inset: 10pt,
     stroke: (x: none),
     align: (left, center, center),
 
-    [*Monolith*], [*Modular monolith*], [*Microservices*],
+    [*Facet*], [*Monolith*], [*Modular monolith*], [*Microservices*],
   ),
   caption: "Comparison of modular monolith architecture"
 ) <modular_monolith_comparison>
