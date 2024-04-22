@@ -5,6 +5,8 @@
 In this chapter, we will discuss the modular monolith architecture.
 We will start by defining the architectural style, and then continue by discussing the challenges and opportunities of this architecture.
 
+// TODO: Justification for choice of modular monolith in this thesis
+
 == Definition
 
 While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules or components based on their functionality @kucukoglu_2022.
@@ -12,10 +14,13 @@ The three layers are present in each module, but they are not directly accessibl
 Instead, modules expose a well-defined interface that describes the capabilities and limitations of the module.
 Hence, the modules of a modular monolith are loosely coupled.
 
-// TODO: modular monolith architecture figure
-
 The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
 Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
+
+#figure(
+  include("/figures/modular-monolith.typ"),
+  caption: [Modular monolith architecture (adapted from @kucukoglu_2022)]
+) <modular_monolith_architecture>
 
 Contrary to microservices, modular monolith applications are built as a single deployable unit.
 The modules of the software system are separated logically (not physically), and are deployed together.
@@ -39,8 +44,6 @@ The modular monolith architecture attempts to address these issues, and can be u
 
 In summary, the modular monolith architecture aims to find a middle ground between the monolith and microservices architectures by reaping the benefits of both approaches.
 While opting for a modular monolith architecture already improves flexibility and comprehensibility, it can also be used as a step in the migration towards a microservices architecture.
-
-// Justification for choice of modular monolith in this thesis
 
 == Challenges and opportunities
 

@@ -10,7 +10,7 @@ foote_yoder_1997:
 kucukoglu_2022:
   type: article
   name: What is a modular monolith?
-  authors:
+  author:
     - Küçükoğlu, Ahmet
   date: 2022-03-29
   url:
