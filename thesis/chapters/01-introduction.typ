@@ -36,7 +36,7 @@ It is the aim of this thesis to investigate the viability of applying automated 
 
 This research is centered around three research questions:
 
-*Research Question 1*: What are the challenges and opportunities of the modular monolith architecture compared to traditional monolithic and microservices architectures?
+*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
 
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 

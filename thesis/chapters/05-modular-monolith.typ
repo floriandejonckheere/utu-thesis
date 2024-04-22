@@ -5,7 +5,7 @@
 = Modular monolith architecture <modularmonolith>
 
 In this chapter, we will discuss the modular monolith architecture.
-We will start by defining the architectural style, and then continue by discussing the challenges and opportunities of this architecture.
+We will start by defining the architectural style, and then continue by discussing the advantages and drawbacks of this architecture.
 We aim to answer the following research question:
 
 *Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
@@ -65,7 +65,7 @@ When all modules have been extracted from the monolith, the application has effe
 In summary, the modular monolith architecture aims to find a middle ground between the monolith and microservices architectures by reaping the benefits of both approaches.
 While opting for a modular monolith architecture already improves flexibility and comprehensibility, it can also be used as a step in the migration towards a microservices architecture.
 
-== Challenges and opportunities
+== Advantages and drawbacks
 
 In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defines architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
 The author argues that architectural drivers are the most important requirements that shape the architecture of a software system.
@@ -73,7 +73,8 @@ Architectural drivers are often classified in four categories: functional requir
 Any realized software architecture is a trade-off between several architectural drivers.
 Hence, the choice of architecture depends on the context it is being designed in.
 
-In @modular_monolith_comparison, we qualitatively compare the most important architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
+In this section, we qualitatively compare the architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
+@modular_monolith_comparison provides an overview of the comparison.
 A star rating system is used to indicate the performance of each architecture with respect to the architectural driver, with more stars being indicative of better performance.
 
 #let star = (i) => range(1, (i + 1)).map(j => sym.star.filled).join()
@@ -87,7 +88,7 @@ A star rating system is used to indicate the performance of each architecture wi
     [*Architectural driver*], [*Monolith*], [*Modular monolith*], [*Microservices*],
     [Complexity],             [#star(1)],   [#star(3)],           [#star(2)],
     [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
-    [Productivity],           [#star(1)],   [#star(1)],           [#star(1)],
+    [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
     [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
     [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
     [Scalability],            [#star(1)],   [#star(1)],           [#star(1)],
@@ -115,7 +116,12 @@ In contract, microservices are usually stored in separate repositories, due to t
 In #cite(<conway_1968>, form: "year"), #cite_author(<conway_1968>) observed that the structure of a software system is often influenced by the communication structure of the organization that develops it @conway_1968.
 The modular nature of modular monolith and microservices architectures makes it easier to align the architecture with the organization structure, while the inherent structure of a monolith architecture does not provide this ability.
 
-// Testing: unit tests for each module to ensure it works in isolation, integration tests for entire application
+==== Testing
+
+Testing a monolith application can be difficult and tedious, as code is tightly coupled and changes in one module can affect other modules.
+Functionality cannot be tested independently, but must be tested in the context of the entire application.
+In modular monolith and microservices architectures, functionality is separated into modules or services, which can be tested in isolation.
+To ensure that the application works as expected, integration tests can be performed that test the integration between the modules or services.
 
 // Security: modules are isolated from each other (fault-tolerance), but shared database can be a single point of failure
 //     External interfaces: authentication and authorization, transport security
