@@ -41,16 +41,16 @@ This research is centered around three research questions:
 *Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
-// Motivation: a lot of information is embedded in source code repository, and can be extracted with little prerequisite knowledge of the design
 
-The motivation behind the first research question is to investigate the potential benefits and drawbacks of the modular monolith architecture with a particular focus on its application to existing monolithic codebases.
+The motivation behind the first research question is to investigate the potential benefits and drawbacks of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
 To answer this question, we will first define the modular monolith architecture using existing literature, and examine what sets it apart from monolithic and microservices architectures.
 Then, we will proceed to investigate the merits and drawbacks of the software architecture when applied to an existing codebase.
 
 The second research question is motivated by the need for reducing the complexity and error-proneness of manual modularization efforts.
 We will explore the existing automated technologies to aid modularization of monolithic codebases in the literature.
-This will then help us to answer the third research question.
-An approach to automated modularization will be chosen based on the review of existing technologies.
+
+Finally, the third research question is motivated by the fact that a lot of useful information is embedded in the source code repository of a software system, and how this information can be extracted to aid in the modularization process.
+An approach for microservice candidate identification will be designed based on the review of existing technologies.
 A prototype of the proposed solution will be implemented, and applied to a case study.
 The results will be evaluated using a set of quality metrics, and its effectiveness will be discussed.
 
