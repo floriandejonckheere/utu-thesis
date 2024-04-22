@@ -27,7 +27,7 @@ fowler_2015:
     value: https://martinfowler.com/bliki/MonolithFirst.html
     date: 2024-04-22
 
-grzybek_2019:
+grzybek_2019_primer:
   type: article
   title: 'Modular Monolith: A Primer'
   author:
@@ -35,6 +35,26 @@ grzybek_2019:
   date: 2019-12-02
   url:
     value: https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer
+    date: 2024-04-22
+
+grzybek_2019_architectural_drivers:
+  type: article
+  title: 'Modular Monolith: Architectural Drivers'
+  author:
+    - Grzybek, Kamil
+  date: 2019-12-26
+  url:
+    value: https://www.kamilgrzybek.com/blog/posts/modular-monolith-architectural-drivers
+    date: 2024-04-22
+
+kodja_2023:
+  type: article
+  title: 'Modular Monoliths vs. Microservices'
+  author:
+    - Kodja, Adrian
+  date: 2023-08-06
+  url:
+    value: https://adriankodja.com/modular-monoliths-vs-microservices
     date: 2024-04-22
 
 kucukoglu_2022:
