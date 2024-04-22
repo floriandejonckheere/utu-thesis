@@ -159,31 +159,29 @@ Modularization of monolith applications is not a new concept.
 In #cite(<parnas_1972>, form: "year"), #cite_author(<parnas_1972>) stated that modularization is a mechanism that can improve the flexibility and comprehensibility of software systems @parnas_1972.
 The author argued that modularization separates the system into smaller and more manageable parts, which can be developed concurrently by different teams.
 
-// https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer
+The process of modularization involves identifying the potential modules or services of the software system, defining the interfaces between them, and evaluating the impact of the modularization on the system.
 
-// Problem statement regarding identification of optimal module boundaries
+Modularization techniques can be classified into three categories @abdellatif_etal_2021:
 
-// Microservice is architectural style or just SOA-approach? @carrasco_etal_2018
+- *Top-down (forward) engineering*: starting from the domain artifacts of the application (e.g. requirements, use cases), and deriving the modules from them
+- *Bottom-up (reverse) engineering*: mining functionalities from the existing system (source code, documentation) and developing the modules based on this structure
+- *Hybrid/reuse approach*: mapping domain artifacts onto existing functionalities in the system, and identifying the modules based on this mapping
 
-// Explain the process of modularization, including the identification of modules
-// TODO: explain graphs in mathematical terms
-// TODO: explain difference between top-down approach and bottom-up approach
+Top-down approaches are more suitable for new projects, where the requirements are known in advance and little or no existing code is available.
+For migration of legacy applications to a modular architecture, bottom-up approaches are more suitable, as they can leverage the existing codebase and domain artifacts.
 
-// TODO: discuss difference between modularization to microservices and modular monolith
-// TODO: read Migrating to a microservice architecture: benefits and challenges
+#cite_full(<abdellatif_etal_2021>) identified three main steps in the process of modularization of monolith applications:
 
-/*
-  TODO: discuss three strategies (A Taxonomy of Service Identification Approaches for Legacy Software)
-    1. Top-down (forward) engineering
-    2. Bottom-up (reverse) engineering
-    3. Hybrid/reuse approach
-*/
++ *Collection*: extraction of useful information from the monolith application
++ *Decomposition*: partitioning the application into individual modules or services
++ *Analysis*: evaluating the impact of the modularization on the system
 
-// TODO: reference https://martinfowler.com/bliki/MonolithFirst.html
+These steps can be done manually by the software architect, or automatically using tools that collect information about the application, and decompose it into a modular application.
+Manual collection of data is feasible when the application is small, but becomes unrealistic as the application grows.
+Automated tools can also help to extract implicit information from the application, such as the relationship between contributors and file changes, or the frequency of changes to a file.
+Automated decomposition tools can help to identify the modules of the application, although for the most part they cannot rely on the knowledge that the software architect has about the application, rendering them less effective than manual decomposition.
 
-/*
-  TODO: discuss three steps (A Taxonomy of Service Identification Approaches for Legacy Software)
-    1. Collection (static, dynamic, lexical)
-    2. Decomposition (clustering algorithms)
-    3. Analysis (evaluation, metrics)
-*/
+The process of identifying modules or services for a modular monolith application is similar to the process of identifying them for a microservices architecture @tsechelidis_etal_2023.
+However, the criteria for identifying modules are different, as the modules of a modular monolith application are not deployed as separate services.
+
+In light of the above, we see a clear need for automated tools to aid the modularization of monolith applications, and a gap in the market for automated microservice candidate identification.
