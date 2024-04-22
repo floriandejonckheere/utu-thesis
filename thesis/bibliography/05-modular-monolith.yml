@@ -1,4 +1,14 @@
 ---
+brown_2013:
+  type: article
+  title: Software architecture for developers
+  author:
+    - Brown, Simon
+  date: 2013
+  parent:
+    type: periodical
+    title: Coding the Architecture
+
 foote_yoder_1997:
   type: article
   title: Big Ball of Mud
@@ -6,6 +16,16 @@ foote_yoder_1997:
     - Foote, Brian
     - Yoder, Joseph
   date: 1997-08-26
+
+grzybek_2019:
+  type: article
+  title: 'Modular Monolith: A Primer'
+  author:
+    - Grzybek, Kamil
+  date: 2019-12-02
+  url:
+    value: https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer
+    date: 2024-04-22
 
 kucukoglu_2022:
   type: article

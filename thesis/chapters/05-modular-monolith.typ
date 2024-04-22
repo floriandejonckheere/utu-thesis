@@ -1,3 +1,5 @@
+#import "@preview/acrostiche:0.3.1": *
+
 #import "/helpers.typ": *
 
 = Modular monolith architecture <modularmonolith>
@@ -65,9 +67,53 @@ While opting for a modular monolith architecture already improves flexibility an
 
 == Challenges and opportunities
 
-// Code structure: one repository with multiple modules
-//    Conway's law: organization structure reflects the architecture of the software system
-//    Interfaces: external (API) and internal (abstracted interface) @su_li_2024
+In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defines architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
+The author argues that architectural drivers are the most important requirements that shape the architecture of a software system.
+Architectural drivers are often classified in four categories: functional requirements, quality attributes, technical, and business constraints.
+Any realized software architecture is a trade-off between several architectural drivers.
+Hence, the choice of architecture depends on the context it is being designed in.
+
+In @modular_monolith_comparison, we qualitatively compare the most important architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
+A star rating system is used to indicate the performance of each architecture with respect to the architectural driver, with more stars being indicative of better performance.
+
+#let star = (i) => range(1, (i + 1)).map(j => sym.star.filled).join()
+
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    inset: 10pt,
+    stroke: (x: none),
+    align: (left, center, center, center),
+    [*Architectural driver*], [*Monolith*], [*Modular monolith*], [*Microservices*],
+    [Complexity],             [#star(1)],   [#star(3)],           [#star(2)],
+    [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
+    [Productivity],           [#star(1)],   [#star(1)],           [#star(1)],
+    [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
+    [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
+    [Scalability],            [#star(1)],   [#star(1)],           [#star(1)],
+    [Fault tolerance],        [#star(1)],   [#star(1)],           [#star(1)],
+  ),
+  caption: "Comparison of modular monolith architecture"
+) <modular_monolith_comparison>
+
+==== Complexity
+
+The complexity of a software system is related to the number of modules and their interactions.
+In a monolith architecture, the complexity is high because there is no clear separation between the modules, which makes the architecture tightly coupled and difficult to change.
+Microservices architecture improves the coupling by separating modules into independent services, but introduces complexity due to the communication between the services.
+The modular monolith architecture uses the decoupled approach of microservices, but keeps the complexity down by bundling the modules together in a single deployable unit.
+Modules in a modular monolith architecture have two ways of communicating: externally through #acr("API") calls, and internally through abstracted interfaces @su_li_2024.
+The external #acr("API") calls can introduce additional complexity, although some tools (e.g. ServiceWeaver) hide this complexity behind abstractions of internal communication.
+
+==== Structure
+
+
+The source code of monolith and modular monolith applications is stored in the same repository.
+This makes enacting changes to the codebase easier, as developers can modify multiple modules or layers at the same time.
+In contract, microservices are usually stored in separate repositories, due to the independent nature of the services.
+
+In #cite(<conway_1968>, form: "year"), #cite_author(<conway_1968>) observed that the structure of a software system is often influenced by the communication structure of the organization that develops it @conway_1968.
+The modular nature of modular monolith and microservices architectures makes it easier to align the architecture with the organization structure, while the inherent structure of a monolith architecture does not provide this ability.
 
 // Testing: unit tests for each module to ensure it works in isolation, integration tests for entire application
 
@@ -85,18 +131,6 @@ While opting for a modular monolith architecture already improves flexibility an
 
 // Monolith facets: development velocity
 // Microservice facets: scalability, security, fault tolerance (@kucukoglu_2022)
-
-#figure(
-  table(
-    columns: (auto, auto, auto, auto),
-    inset: 10pt,
-    stroke: (x: none),
-    align: (left, center, center),
-
-    [*Facet*], [*Monolith*], [*Modular monolith*], [*Microservices*],
-  ),
-  caption: "Comparison of modular monolith architecture"
-) <modular_monolith_comparison>
 
 == Modularization
 
@@ -132,8 +166,3 @@ The author argued that modularization separates the system into smaller and more
     2. Decomposition (clustering algorithms)
     3. Analysis (evaluation, metrics)
 */
-
-== Existing approaches
-
-// Tools: ServiceWeaver, Spring Modulith, Light-Hybrid-4j, Packwerk
-// Companies: Shopify, AppSmith, Gusto, PlayTech

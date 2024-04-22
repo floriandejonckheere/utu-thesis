@@ -63,6 +63,7 @@
 
   // Acronyms
   acronyms: (
+    API: ("Application Programming Interface"),
     AST: ("Abstract Syntax Tree"),
     BPMN: ("Business Process Model and Notation"),
     DDD: ("Domain-Driven Design"),
