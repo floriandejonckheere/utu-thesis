@@ -89,7 +89,7 @@ A star rating system is used to indicate the performance of each architecture wi
     [Complexity],             [#star(3)],   [#star(2)],           [#star(1)],
     [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
     [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
-    [Productivity],           [#star(2)],   [#star(2)],           [#star(2)],
+    [Productivity],           [#star(3)],   [#star(3)],           [#star(1)],
     [Scalability],            [#star(1)],   [#star(1)],           [#star(1)],
     [Performance],            [#star(1)],   [#star(1)],           [#star(1)],
     [Deployability],          [#star(1)],   [#star(1)],           [#star(1)],
@@ -123,6 +123,14 @@ Testing a monolith application can be difficult and tedious, as code is tightly 
 Functionality cannot be tested independently, but must be tested in the context of the entire application.
 In modular monolith and microservices architectures, functionality is separated into modules or services, which can be tested in isolation.
 To ensure that the application works as expected, integration tests can be performed that test the integration between the modules or services.
+
+==== Productivity
+
+When designing a software system from scratch, a monolith architecture is often the most productive choice.
+Developers can focus on the business logic of the application, without having to worry about the underlying infrastructure or deployment model.
+Using microservices architecture incurs additional complexity, as developers must define the interfaces between the services, and manage the communication between them.
+Modular monolith architecture strikes a balance between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
+The "Monolith First" approach proposed by #cite_author(<fowler_2015>) suggests initiating new software systems with a monolith architecture, and only moving to a microservices approach when the monolith architecture shows its limitations @fowler_2015.
 
 // Security: modules are isolated from each other (fault-tolerance), but shared database can be a single point of failure
 //     External interfaces: authentication and authorization, transport security

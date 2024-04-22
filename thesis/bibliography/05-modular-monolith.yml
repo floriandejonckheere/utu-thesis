@@ -17,6 +17,16 @@ foote_yoder_1997:
     - Yoder, Joseph
   date: 1997-08-26
 
+fowler_2015:
+  type: article
+  title: 'Monolith first'
+  author:
+    - Fowler, Martin
+  date: 2015-06-03
+  url:
+    value: https://martinfowler.com/bliki/MonolithFirst.html
+    date: 2024-04-22
+
 grzybek_2019:
   type: article
   title: 'Modular Monolith: A Primer'
