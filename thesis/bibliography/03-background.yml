@@ -70,6 +70,7 @@ mancoridis_etal_1998:
     issue: ''
     volume: 0
 
+
 opengroup_2024:
   type: book
   title: 'The Open Group Architecture Framework (TOGAF)'
@@ -109,3 +110,43 @@ richards_2015:
     - Richards, Mark
   date: 2015
   publisher: O'Reilly Media
+
+smith_etal_1998:
+  type: book
+  title: Professional Active Server Pages 2.0
+  author:
+    - Smith, Robert
+    - Harrison, Richard
+    - Wood, Stephen
+    - Sussman, David
+    - Fedorov, Alex
+    - Murphy, Shawn
+    - Home
+  date: 1998
+  publisher: Wrox Press Ltd.
+  location: GBR
+  edition: 2nd
+  serial-number:
+    isbn: '1861001266'
+
+tahir_macdonell_2012:
+  type: article
+  title: A Systematic Mapping Study on Dynamic Metrics and Software Quality
+  author:
+    - Tahir, Amjed
+    - MacDonell, Stephen G.
+  date: 2012-09
+  page-range: 326–335
+  url:
+    value: http://ieeexplore.ieee.org/document/6405289/
+    date: 2024-04-23
+  serial-number:
+    doi: 10.1109/ICSM.2012.6405289
+    isbn: 978-1-4673-2312-3 978-1-4673-2313-0
+  parent:
+    - type: proceedings
+      title: 2012 28th IEEE International Conference on Software Maintenance (ICSM)
+      publisher: IEEE
+      location: Trento, Italy
+    - type: conference
+      title: 2012 IEEE International Conference on Software Maintenance (ICSM)
