@@ -27,8 +27,8 @@ Focusing on business domains rather then technical capabilities improves the org
 ) <modular_monolith_architecture>
 
 While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
-Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand @foote_yoder_1997.
-A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture.
+Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand.
+A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture @foote_yoder_1997.
 
 Modular monolith architecture can also be used as a stepping stone towards a microservices architecture.
 Once the application is modularized and the interfaces are well-defined and stable, individual modules can be extracted and turned into external services.
