@@ -26,21 +26,21 @@ Finally, we discuss the results and analyze the implications of the proposed sol
 
 == Background
 
-The case study is based on an application written called NephroFlow Link.
-The application is developed by Nipro Digital Technologies Europe NV#footnote[#link("https://niprodigital.com")["https://niprodigital.com"]], a subsidiary of Nipro Europe Group Companies#footnote[#link("https://www.nipro-group.com")["https://www.nipro-group.com"]].
+The case study is based on an application written called NephroFlow™ Link.
+The application is developed by Nipro Digital Technologies Europe NV#footnote[#link("https://niprodigital.com")[https://niprodigital.com]], a subsidiary of Nipro Europe Group Companies#footnote[#link("https://www.nipro-group.com")[https://www.nipro-group.com]].
 Nipro Group is a leading global manufacturer of medical devices, specialized in renal care products.
-NephroFlow Link, part of the NephroFlow Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/nephroflowtm-product-suite]], is a monolithic application that allows the NephroFlow Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
-NephroFlow Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow Healthcare Platform for storage and visualization.
+NephroFlow™ Link, part of the NephroFlow™ Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite]], is a monolithic application that allows the NephroFlow™ Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
+NephroFlow™ Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow™ Platform for storage and visualization.
 
 #figure(
   include("/figures/link.typ"),
-  caption: [NephroFlow Link architecture]
+  caption: [NephroFlow™ Link architecture]
 ) <link_architecture>
 
 Dialysis machines typically measure data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
 Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
 
-Nipro Group has deployed NephroFlow Link in several dialysis centers and hospitals across Europe, Central America, and India, collectively ensuring connection to hundreds of dialysis machines.
+Nipro Group has deployed NephroFlow™ Link in several dialysis centers and hospitals across Europe, Central America, and India, collectively ensuring connection to hundreds of dialysis machines.
 To ensure the patient's information security, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
@@ -51,18 +51,18 @@ The codebase of the application is rapidly becoming increasingly complex, which 
 When it is deployed at bigger sites with up to 400 dialysis machines, the throughput and latency suffer and performance issues arise.
 For these reasons, the application would benefit from a software architectural overhaul.
 While microservices-based architecture would allow the application to scale efficiently, it also introduces a maintenance overhead for the software developers.
-Since the number of developers working on NephroFlow Link is limited, the extra burden on the software developers should be low.
+Since the number of developers working on NephroFlow™ Link is limited, the extra burden on the software developers should be low.
 Hence, decomposing this application into a modular monolith architecture would prove beneficial.
 
 == Experimental setup
 
 #cite_full(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
 Approaches using contributor coupling achieve comparable results as approaching using a structural coupling on source code repositories with a large number of committers.
-Since the number of committers to NephroFlow Link is limited, we use multiple coupling strategies to decompose the application.
+Since the number of committers to NephroFlow™ Link is limited, we use multiple coupling strategies to decompose the application.
 Seven test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
 The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
 Refer to @test_configurations for a list of the test configurations.
-Strategies using a single coupling are not considered, as they are not expected to perform well in the context of NephroFlow Link.
+Strategies using a single coupling are not considered, as they are not expected to perform well in the context of NephroFlow™ Link.
 
 #let scenarios = (
   "scn_structural_logical": (1, 1, 0, [_structural-logical_]),
@@ -93,13 +93,13 @@ Strategies using a single coupling are not considered, as they are not expected 
 ) <test_configurations>
 
 // Structural
-The source code repository of NephroFlow Link is hosted in a private Github#footnote[#link("https://github.com")[https://www.github.com]] organization.
+The source code repository of NephroFlow™ Link is hosted in a private Github#footnote[#link("https://github.com")[https://www.github.com]] organization.
 The application contains #stats.at("files") Ruby source code files, with a total of #stats.at("sloc") #acr("SLOC"), as measured by the `cloc` tool#footnote[#link("https://github.com/AlDanial/cloc")[https://github.com/AlDanial/cloc]].
 Only the application code is considered, excluding the test code and configuration files.
 
 // Evolutionary
 The repository contains a `main` branch with the latest code, and several branches for released and maintained versions.
-For the purpose of this study, we only consider the `main` branch, from the release of NephroFlow Link version 5.0 on /* TODO: release date */ up until the release of NephroFlow Link version 5.2 on /* TODO: release date */, which is the most recent release at the time of writing.
+For the purpose of this study, we only consider the `main` branch, from the release of NephroFlow™ Link version 5.0 on /* TODO: release date */ up until the release of NephroFlow™ Link version 5.2 on /* TODO: release date */, which is the most recent release at the time of writing.
 The static analysis is performed on the source code as it appears in the most recent commit.
 The commits from the `dependabot` contributor are omitted, as they are automatically generated by Github to update the dependencies of the application#footnote[#link("https://github.com/features/security")[https://github.com/features/security]].
 
