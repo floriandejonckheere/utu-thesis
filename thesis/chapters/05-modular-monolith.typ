@@ -75,7 +75,8 @@ Hence, the choice of architecture depends on the context it is being designed in
 
 In this section, we qualitatively compare the architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
 @modular_monolith_comparison provides an overview of the comparison.
-A star rating system is used to indicate the performance of each architecture with respect to the architectural driver, with more stars being indicative of better performance.
+A star rating system is used to indicate the performance of each architecture with respect to the architectural driver, with one star indicating the lowest performance, and three stars indicating the highest performance.
+The ratings are based on several sources, including #cite_full(<grzybek_2019_architectural_drivers>), #cite_full(<fowler_2015>), #cite_full(<kodja_2023>), #cite_full(<kucukoglu_2022>), and #cite_full(<su_li_2024>).
 
 #let star = (i) => range(1, (i + 1)).map(j => sym.star.filled).join()
 
