@@ -39,6 +39,7 @@ In summary, several tools and frameworks have already been developed to aid the 
 These tools use a variety of approaches, and usually only support a specific programming language or framework.
 The level of automation varies between the tools, with some only providing recommendations or visualizations of the microservice candidates, and others implementing fully automated solutions that can deploy the microservices.
 
+// TODO: reference literature review?
 // TODO: Spring Modulith, Light-hybrid-4j
 // TODO: several vendors with custom implementation (Shopyify, AppSmith, Gusto, PlayTech)
 
