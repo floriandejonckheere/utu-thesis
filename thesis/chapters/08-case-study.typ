@@ -55,6 +55,8 @@ While microservices-based architecture would allow the application to scale effi
 Since the number of developers working on NephroFlow™ Link is limited, the extra burden on the software developers should be low.
 Hence, decomposing this application into a modular monolith architecture would prove beneficial.
 
+// TODO: explain how security and patient safety are improved by the modular monolith architecture
+
 == Experimental setup
 
 #cite_full(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
