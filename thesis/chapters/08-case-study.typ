@@ -44,6 +44,7 @@ Nipro Group has deployed NephroFlow™ Link in several dialysis centers and hosp
 To ensure the patient's information security, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
+The choice of Ruby as programming language is influenced by the Ruby on Rails framework#footnote[#link("https://rubyonrails.org")[https://rubyonrails.org]], which is used for the NephroFlow™ Platform.
 In theory, it is not a stateful application, as it only stores transitional data (e.g. for rate-limiting purposes) using the Redis key-value datastore#footnote[#link("https://www.redis.com")[https://www.redis.com]].
 The source code of the application is hosted in a private Github repository#footnote[#link("https://github.com")[https://github.com]], and is not publicly available.
 
