@@ -99,7 +99,7 @@ The ratings are based on several sources, including #cite_full(<grzybek_2019_arc
 
 ==== Complexity
 
-The complexity of a software system is related to the number of modules and their interactions.
+The complexity of a software system is related to the number of modules and their interactions @grzybek_2019_architectural_drivers.
 In a monolith architecture, there is only one module (the monolith application itself), and no interactions.
 This makes the architecture simple, and easy to deploy.
 Microservices architecture improves the coupling by separating modules into independent services, but introduces complexity due to the communication between the services, and the additional tools and infrastructure required to manage them.
@@ -111,21 +111,21 @@ The external #acr("API") calls can introduce additional complexity, although som
 
 The source code of monolith and modular monolith applications is stored in the same repository.
 This makes enacting changes to the codebase easier, as developers can modify multiple modules or layers at the same time.
-In contract, microservices are usually stored in separate repositories, due to the independent nature of the services.
+In contract, microservices are usually stored in separate repositories, due to the independent nature of the services @kucukoglu_2022.
 
 In #cite(<conway_1968>, form: "year"), #cite_author(<conway_1968>) observed that the structure of a software system is often influenced by the communication structure of the organization that develops it @conway_1968.
 The modular nature of modular monolith and microservices architectures makes it easier to align the architecture with the organization structure, while the inherent structure of a monolith architecture does not provide this ability.
 
 ==== Testing
 
-Testing a monolith application can be difficult and tedious, as code is tightly coupled and changes in one module can affect other modules.
+Testing a monolith application can be difficult and tedious, as code is tightly coupled and changes in one module can affect other modules @su_li_2024.
 Functionality cannot be tested independently, but must be tested in the context of the entire application.
 In modular monolith and microservices architectures, functionality is separated into modules or services, which can be tested in isolation.
 To ensure that the application works as expected, integration tests can be performed that test the integration between the modules or services.
 
 ==== Productivity
 
-When designing a software system from scratch, a monolith architecture is often the most productive choice.
+When designing a software system from scratch, a monolith architecture is often the most productive choice @fowler_2015.
 Developers can focus on the business logic of the application, without having to worry about the underlying infrastructure or deployment model.
 Using microservices architecture incurs additional complexity, as developers must define the interfaces between the services, and manage the communication between them.
 Modular monolith architecture compromises between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
@@ -133,7 +133,7 @@ The "Monolith First" approach proposed by #cite_author(<fowler_2015>) suggests i
 
 ==== Performance
 
-Traditional monolith applications offer better performance than distributed architectures, due to the lower overhead incurred when processing requests.
+Traditional monolith applications offer better performance than distributed architectures, due to the lower overhead incurred when processing requests @grzybek_2019_architectural_drivers.
 However, monolith applications can only handle a limited number of requests until the application becomes a bottleneck.
 Distributed architectures, such as microservices and modular monoliths, can offer a solution for this problem by allowing the application to scale horizontally with ease, at the cost of increased complexity and overhead.
 Care must be taken when designing the distributed application to ensure that the transactional context of a request is not spread across multiple modules or services, as this can lead to performance issues.
@@ -143,7 +143,7 @@ This allows for better performance, as the dependencies can be scaled alongside 
 
 ==== Fault tolerance
 
-The impact of a failure in a monolith application is greater than in modular architectures, as the entire application is affected.
+The impact of a failure in a monolith application is greater than in modular architectures, as the entire application is affected @grzybek_2019_architectural_drivers.
 The risk of a system failure can be mitigated by replicating the application, but this comes with a significant cost.
 Distributed architectures are more tolerant to individual failures, as the failure of one module or service does not affect the entire application, and can be resolved quicker @grzybek_2019_primer.
 Communication between modules or services is done over a network, where failures and delays are expected.
