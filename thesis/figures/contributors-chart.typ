@@ -1,15 +1,16 @@
 #import "@preview/cetz:0.2.2"
 
 #let data = (
-  ([Developer A], 148),
-  ([Developer B], 109),
-  ([Developer C], 27),
-  ([Developer D], 15),
-  ([Developer E], 12),
-  ([Developer F], 8),
-  ([Developer G], 7),
+  ([Developer A], 139),
+  ([Developer B], 83),
+  ([Developer C], 15),
+  ([Developer D], 14),
+  ([Developer E], 8),
+  ([Developer F], 7),
+  ([Developer G], 6),
   ([Developer H], 5),
   ([Developer I], 1),
+  ([Developer J], 1),
 )
 
 #let total = data.map(p => p.at(1)).sum()
