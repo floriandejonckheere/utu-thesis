@@ -8,7 +8,7 @@ In this chapter, we will discuss the modular monolith architecture.
 We will start by defining the architectural style, and then continue by discussing the merits and demerits of this architecture.
 We aim to answer the following research question:
 
-*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
+*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
 
 == Definition
 
@@ -58,7 +58,7 @@ When all modules have been extracted from the monolith, the application has effe
 + *Segregation* of modules: each module is independent and includes all three application layers. Modules are autonomously developed, tested and deployed.
 + *Modularity*: modules are highly internally cohesive and loosely externally coupled. Communication between modules is done using well-defined interfaces, preferably asynchronously.
 + *Unified database*: the database schema is shared by all modules, in contrast with microservices where each service has its own database and schema.
-+ *Monolithic deployment*: the application is deployed as a single unit, and although modules can be distributed across multiple hosts.
++ *Monolith deployment*: the application is deployed as a single unit, and although modules can be distributed across multiple hosts.
 + *Unified application process*: the application functions as a singular process, scaling uniformly depending on the requirements.
 + *Maintainability and scalability*: the architecture can efficiently manage increasing complexity, and facilitates growth.
 

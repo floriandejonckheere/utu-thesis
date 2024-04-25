@@ -11,7 +11,7 @@ Non-functional requirements are additional requirements imposed at design-time t
 
 The functional requirements we pushed forward for our proposed solution are as follows:
 
-+ *Quality*: the solution provides a high-quality decomposition of the monolithic application, based on a set of quality metrics
++ *Quality*: the solution provides a high-quality decomposition of the monolith application, based on a set of quality metrics
 + *Automation*: the solution automates the decomposition process as much as possible
 + *Visual*: the solution can output the proposed decomposition in a visual manner, to aid understanding of the process and the results
 

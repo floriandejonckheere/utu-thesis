@@ -13,8 +13,8 @@ For example, a e-commerce application may have domain concepts such as "Shopping
 
 ==== Monolith architecture
 
-In software engineering, a monolithic application describes a software system that consists of a single, indivisible unit @smith_etal_1998.
-Monolithic applications encompass all the components of the system, including the presentation layer, the business logic layer, and the data access layer @parikh_etal_2022.
+In software engineering, a monolith application describes a software system that consists of a single, indivisible unit @smith_etal_1998.
+Monolith applications encompass all the components of the system, including the presentation layer, the business logic layer, and the data access layer @parikh_etal_2022.
 Software components within a monolith are interdependent and tightly coupled, which makes development and maintenance more challenging as the system grows in size and complexity.
 Changes and updates to the source code affect the entire system, and require redeployment of the entire application.
 Monolith architectures are typically more prone to failure, as they have a single point of failure, and are less scalable than distributed systems.
@@ -26,7 +26,7 @@ Monolith architectures are typically more prone to failure, as they have a singl
 Modular programming is a software engineering technique that emphasizes the separation of concerns by dividing a software system into smaller, independent modules @dijkstra_1982.
 Each module is responsible for a specific functionality of the system, and exposes a well-defined interface for communication with other modules.
 Changes to one module do not affect other modules, which makes the system more maintainable and allows multiple teams to work on different modules simultaneously.
-Modular programming does not make any assumptions about the underlying architecture of the system, and can be applied to both monolithic and distributed systems.
+Modular programming does not make any assumptions about the underlying architecture of the system, and can be applied to both monolith and distributed systems.
 
 ==== Service-oriented Architecture
 
@@ -55,7 +55,7 @@ Microservices architecture puts more emphasis on the autonomy of development, al
 
 ==== Modularization
 
-Modularization, or microservice decomposition, is the process of dividing a monolithic application into smaller, loosely coupled modules or microservices @parnas_1972.
+Modularization, or microservice decomposition, is the process of dividing a monolith application into smaller, loosely coupled modules or microservices @parnas_1972.
 The goal of modularization is to decrease the complexity and maintenance burden of tightly coupled, interconnected software components.
 Modularization can be an objective in the design of new software systems, or as an objective in the migration of monolith applications to a distributed architecture.
 Cohesion and coupling are two key concepts in modularization @software_engineering_body_of_knowledge_2001.

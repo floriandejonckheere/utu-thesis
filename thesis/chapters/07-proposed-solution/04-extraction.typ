@@ -28,15 +28,15 @@ The dependencies can take the form of control dependencies, or data dependencies
 Control dependencies are dependencies between software components that are related to the flow of control of the software system (e.g. interleaving method calls).
 Data dependencies relate to the flow of data between software components (e.g. passing parameters).
 MOSAIK extracts structural coupling information using static analysis of the source code /* TODO: reference */.
-As MOSAIK is intended to collect information from monolithic applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
+As MOSAIK is intended to collect information from monolith applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
 Ruby is a dynamic language, which means that only incomplete type information can be extracted using static analysis.
 In particular, some techniques like meta-programming and dynamic class loading may affect the accuracy of the extracted information.
 
-Our solution analyzes the source code of the monolithic application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
+Our solution analyzes the source code of the monolith application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
 The library is written in Ruby and can be used to parse Ruby source code files and extract the #acr("AST") of the source code.
-Iterating over the #acr("AST") of the monolithic application, MOSAIK extracts the references between classes.
+Iterating over the #acr("AST") of the monolith application, MOSAIK extracts the references between classes.
 
-Using this information, a call graph is constructed that represents the structural coupling of the monolithic application. For each class in the monolithic application $c_i in M_C$, a vertex is created in the call graph.
+Using this information, a call graph is constructed that represents the structural coupling of the monolith application. For each class in the monolith application $c_i in M_C$, a vertex is created in the call graph.
 References between classes are represented as directed edges between the vertices.
 
 A directed edge is created for each reference between two classes $c_i, c_j$.
@@ -59,7 +59,7 @@ Existing approaches tend to use a more coarse-grained granularity (e.g. on the l
 Using a coarse-grained granularity can lead to a smaller number of microservices that are responsible for a larger number of functionalities.
 A fine-grained granularity can lead to a much larger number of microservices, which can decrease the maintainability of the system.
 Hence, a trade-off between the two granularities must be made.
-MOSAIK uses a coarse-grained granular approach, using the classes of the monolithic application as the starting point for the extraction of microservices.
+MOSAIK uses a coarse-grained granular approach, using the classes of the monolith application as the starting point for the extraction of microservices.
 
 // TODO: Dynamic analysis, because inherent polymorphism and late binding
 //        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
@@ -67,8 +67,8 @@ MOSAIK uses a coarse-grained granular approach, using the classes of the monolit
 //        -> measure performance overhead
 
 Consider the extraction algorithm in pseudocode in @structural_coupling_algorithm.
-The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolithic application.
-The algorithm iterates over all classes in the monolithic application, and for each method in the class, it parses the method body.
+The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolith application.
+The algorithm iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
 All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
 
 #figure(
@@ -102,7 +102,7 @@ The logical coupling strategy is based on the Single Responsibility Principle @m
 Software design that follows the Single Responsibility Principle groups together software components that change together.
 Hence, it is possible to identify appropriate microservice candidates by analyzing the history of modifications of the classes in the source code repository.
 Classes that change together, should belong in the same microservice.
-Let $M_H$ be the history of modifications of the source code files of the monolithic application $M$.
+Let $M_H$ be the history of modifications of the source code files of the monolith application $M$.
 Each change event $h_i$ is associated with a set of associated classes $c_i$ that were changed during the modification event at timestamp $t_i$, as described by @logical_history_formula @mazlami_etal_2017.
 
 $ h_i = { c_i, t_i } $ <logical_history_formula>
@@ -158,10 +158,10 @@ The contributor coupling strategy is based on the notion that the communication 
 Grouping together software components that are developed in teams that have a strong communication paradigm internally can lead to less communication overhead when developing and maintaining the software system.
 Hence, identifying microservice candidates based on the communication structure of the organization can lead to more maintainable software systems.
 
-Let $M_H$ be the history of modifications of the source code files of the monolithic application $M$.
+Let $M_H$ be the history of modifications of the source code files of the monolith application $M$.
 Each change event $h_i$ is associated with a set of associated classes $c_i$ that were changed during the modification event at timestamp $t_i$.
 The change event $h_i$ is also associated with a set of developers $d_i in M_D$, as stated in @contributor_history_formula @mazlami_etal_2017.
-$M_D$ is the set of developers that have contributed to the source code repository of the monolithic application.
+$M_D$ is the set of developers that have contributed to the source code repository of the monolith application.
 
 $ h_i = { c_i, t_i, d_i } $ <contributor_history_formula>
 
@@ -171,7 +171,7 @@ $ H(c_i) = { h_i in M_H | c_i in h_i } $ <contributions_formula>
 
 $ D(c_i) = { d_i in M_D | forall h_i in H(c_i) : d_i in h_i } $ <contributors_formula>
 
-Then, @contributors_formula is calculated for each class $c_i in M_C$ in the monolithic application.
+Then, @contributors_formula is calculated for each class $c_i in M_C$ in the monolith application.
 
 Finally, the contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_C$ is defined as the cardinality of the intersection of the sets of developers that have contributed to the classes $c_i, c_j$ @mazlami_etal_2017.
 
@@ -209,7 +209,7 @@ Finally, iterating over each file in the changelist, the algorithm adds the auth
 
 === Dependency graph
 
-As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolithic application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
+As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolith application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
 The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
 The weights $omega_s, omega_c, omega_d in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
 This makes the strategy adaptive and flexible @santos_paula_2021.

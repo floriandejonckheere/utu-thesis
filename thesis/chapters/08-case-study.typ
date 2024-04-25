@@ -40,7 +40,7 @@ Finally, we discuss the results and analyze the implications of the proposed sol
 The case study is based on an application written called NephroFlow™ Link.
 The application is developed by Nipro Digital Technologies Europe NV#footnote[#link("https://niprodigital.com")[https://niprodigital.com]], a subsidiary of Nipro Europe Group Companies#footnote[#link("https://www.nipro-group.com")[https://www.nipro-group.com]].
 Nipro Group is a leading global manufacturer of medical devices, specialized in renal care products.
-NephroFlow™ Link, part of the NephroFlow™ Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite]], is a monolithic application that allows the NephroFlow™ Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
+NephroFlow™ Link, part of the NephroFlow™ Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/NephroFlow™tm-product-suite]], is a monolith application that allows the NephroFlow™ Healthcare Platform to communicate with the dialysis machines installed at dialysis centers, and vice versa.
 NephroFlow™ Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow™ Platform for storage and visualization.
 
 #figure(
