@@ -65,79 +65,79 @@ platforms:
 categories:
   artifacts:
     requirements:
-      - amiri_2018
-      - daoud_etal_2020
-      - yang_etal_2022
       - saidi_etal_2023
+      - yang_etal_2022
+      - amiri_2018
       - li_etal_2023
+      - daoud_etal_2020
     design:
-      - al_debagy_martinek_2020
       - zhou_xiong_2022
       - quattrocchi_etal_2024
+      - al_debagy_martinek_2020
       - wei_etal_2020
       - hasan_etal_2023
     codebase:
-      - escobar_etal_2016
-      - mazlami_etal_2017
-      - kamimura_etal_2018
-      - selmadji_etal_2020
-      - carvalho_etal_2020
-      - bandara_perera_2020
-      - filippone_etal_2021
-      - filippone_etal_2023
-      - agarwal_etal_2021
       - kinoshita_kanuka_2022
+      - kamimura_etal_2018
+      - mazlami_etal_2017
+      - selmadji_etal_2020
+      - filippone_etal_2023
       - wu_zhang_2022
       - zaragoza_etal_2022
       - santos_silva_2022
-      - romani_etal_2022
+      - filippone_etal_2021
       - lourenco_silva_2023
+      - agarwal_etal_2021
+      - carvalho_etal_2020
       - hao_etal_2023
+      - romani_etal_2022
+      - escobar_etal_2016
+      - bandara_perera_2020
       - brito_etal_2021
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
-      - kalia_etal_2020
-      - kalia_etal_2021
       - cao_zhang_2022
       - santos_paula_2021
+      - kalia_etal_2021
+      - kalia_etal_2020
     execution:
-      - carvalho_etal_2020
+      - zhang_etal_2020
       - wu_zhang_2022
+      - ma_etal_2022
       - lourenco_silva_2023
+      - carvalho_etal_2020
       - hao_etal_2023
       - jin_etal_2021
-      - zhang_etal_2020
-      - ma_etal_2022
       - eyitemi_reiff_marganiec_2020
       - cao_zhang_2022
   algorithms:
     clustering:
-      - daoud_etal_2020 # Hierarchical Agglomerative clustering
       - saidi_etal_2023 # K-means
       - al_debagy_martinek_2020 # Affinity Propagation
       - selmadji_etal_2020 # Hierarchical clustering
-      - bandara_perera_2020 # Hierarchical Agglomerative clustering
       - wu_zhang_2022 # K-means
       - zaragoza_etal_2022 # Hierarchical clustering
       - santos_silva_2022 # Hierarchical clustering
-      - romani_etal_2022 # K-means
+      - ma_etal_2022 # Hierarchical clustering
       - lourenco_silva_2023 # Hierarchical clustering
       - hao_etal_2023 # K-means
-      - ma_etal_2022 # Hierarchical clustering
+      - daoud_etal_2020 # Hierarchical Agglomerative clustering
+      - romani_etal_2022 # K-means
+      - bandara_perera_2020 # Hierarchical Agglomerative clustering
       - sellami_etal_2022 # DBSCAN
       - nitin_etal_2022 # Hierarchical Agglomerative clustering, K-Means, Girvan-Newman
-      - kalia_etal_2020
-      - kalia_etal_2021 # Hierarchical clustering
       - cao_zhang_2022 # Hierarchical clustering
+      - kalia_etal_2021 # Hierarchical clustering
+      - kalia_etal_2020
     evolutionary:
-      - amiri_2018 # NSGA-II
-      - li_etal_2023 # NSGA-II
-      - zhou_xiong_2022 # NSGA-II
-      - carvalho_etal_2020 # NSGA-II
       - kinoshita_kanuka_2022 # NSGA-II
-      - jin_etal_2021 # NSGA-II
+      - zhou_xiong_2022 # NSGA-II
       - zhang_etal_2020 # NSGA-II
+      - amiri_2018 # NSGA-II
+      - carvalho_etal_2020 # NSGA-II
+      - li_etal_2023 # NSGA-II
+      - jin_etal_2021 # NSGA-II
     graph:
       - yang_etal_2022 # Kruskal
       - mazlami_etal_2017 # Kruskal
@@ -148,108 +148,108 @@ categories:
       - cao_zhang_2022 # Leiden algorithm
     other:
       - quattrocchi_etal_2024 # Linear
-      - escobar_etal_2016 # Custom
       - kamimura_etal_2018 # Custom
       - selmadji_etal_2020 # Gravity centers
       - filippone_etal_2021 # Linear
       - agarwal_etal_2021 # Seed expansion
       - eyitemi_reiff_marganiec_2020 # Rule-based
+      - escobar_etal_2016 # Custom
       - wei_etal_2020 # Mapping-based
       - hasan_etal_2023 # Gaussian Mixture
       - santos_paula_2021 # Custom
   metrics:
     cohesion:
-      - daoud_etal_2020
-      - li_etal_2023
-      - al_debagy_martinek_2020
       - zhou_xiong_2022
+      - zhang_etal_2020
       - quattrocchi_etal_2024
+      - al_debagy_martinek_2020
       - selmadji_etal_2020
-      - carvalho_etal_2020
-      - bandara_perera_2020
-      - filippone_etal_2021
       - filippone_etal_2023
       - wu_zhang_2022
       - zaragoza_etal_2022
       - santos_silva_2022
+      - filippone_etal_2021
       - lourenco_silva_2023
+      - carvalho_etal_2020
+      - li_etal_2023
       - jin_etal_2021
-      - zhang_etal_2020
+      - daoud_etal_2020
+      - bandara_perera_2020
       - brito_etal_2021
       - wei_etal_2020
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
-      - kalia_etal_2020
-      - kalia_etal_2021
       - cao_zhang_2022
+      - kalia_etal_2021
+      - kalia_etal_2020
     coupling:
-      - daoud_etal_2020
-      - li_etal_2023
       - zhou_xiong_2022
+      - zhang_etal_2020
       - selmadji_etal_2020
-      - carvalho_etal_2020
-      - bandara_perera_2020
-      - filippone_etal_2021
       - filippone_etal_2023
-      - agarwal_etal_2021
       - wu_zhang_2022
       - santos_silva_2022
+      - filippone_etal_2021
       - lourenco_silva_2023
+      - agarwal_etal_2021
+      - carvalho_etal_2020
+      - li_etal_2023
       - jin_etal_2021
-      - zhang_etal_2020
+      - daoud_etal_2020
+      - bandara_perera_2020
       - brito_etal_2021
       - wei_etal_2020
       - sellami_etal_2022
       - hasan_etal_2023
       - nitin_etal_2022
-      - kalia_etal_2020
-      - kalia_etal_2021
       - cao_zhang_2022
+      - kalia_etal_2021
+      - kalia_etal_2020
     overhead:
       - zhou_xiong_2022
       - quattrocchi_etal_2024
-      - carvalho_etal_2020
       - filippone_etal_2021
+      - carvalho_etal_2020
     complexity:
       - al_debagy_martinek_2020
       - santos_silva_2022
       - lourenco_silva_2023
       - hasan_etal_2023
     cpu_memory:
-      - quattrocchi_etal_2024
       - zhang_etal_2020
+      - quattrocchi_etal_2024
       - nitin_etal_2022
     modularity:
-      - li_etal_2023
-      - bandara_perera_2020
-      - jin_etal_2021
       - wu_zhang_2022
+      - li_etal_2023
+      - jin_etal_2021
+      - bandara_perera_2020
       - brito_etal_2021
       - sellami_etal_2022
-      - kalia_etal_2020
       - kalia_etal_2021
+      - kalia_etal_2020
     other:
-      - yang_etal_2022 # Correlation
       - saidi_etal_2023 # Dependency
-      - li_etal_2023 # Instability
-      - mazlami_etal_2017 # Team Size Reduction, Average Domain Redundancy
+      - yang_etal_2022 # Correlation
       - kamimura_etal_2018 # Dedication Score
+      - mazlami_etal_2017 # Team Size Reduction, Average Domain Redundancy
       - selmadji_etal_2020 # Data Autonomy
       - filippone_etal_2023 # Precision/recall
+      - ma_etal_2022 # Adjusted Rand Index
       - lourenco_silva_2023 # Team Size Reduction
       - hao_etal_2023 # Matching Degree
-      - ma_etal_2022 # Adjusted Rand Index
+      - li_etal_2023 # Instability
       - wei_etal_2020 # Instability
       - sellami_etal_2022 # Non-Extreme Distribution
       - hasan_etal_2023 # Size
       - nitin_etal_2022 # Business Context Purity
-      - kalia_etal_2020 # Size
-      - kalia_etal_2021 # Size
       - cao_zhang_2022 # Density
       - santos_paula_2021 # Coefficient silhouette
+      - kalia_etal_2021 # Size
+      - kalia_etal_2020 # Size
     none:
-      - escobar_etal_2016 # Manual
       - kinoshita_kanuka_2022 # Manual
-      - romani_etal_2022
       - eyitemi_reiff_marganiec_2020
+      - romani_etal_2022
+      - escobar_etal_2016 # Manual

@@ -172,6 +172,6 @@ Static collection describes a #acr("SDLC") artifact that was collected without e
 Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
 
 Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.
-We based the classification of the algorithms on the work of @cite_full(<abdellatif_etal_2021>), who identified six types of service identification algorithms.
+We based the classification of the algorithms on the work of #cite_full(<abdellatif_etal_2021>), who identified six types of service identification algorithms.
 
 Third, the publications were also categorized by the quality metrics used for evaluation the proposed decompositions.
