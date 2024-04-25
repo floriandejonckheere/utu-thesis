@@ -6,7 +6,7 @@
 
 //In this chapter, we attempted to provide a comprehensive overview of the state of the art on (semi-)automated technologies for modularization of monolithic applications.
 //We have identified and described the most frequently used methods and approaches, and compared them against each other.
-//We have enumerated and described the most frequently used algorithms and quality metrics, and discussed their advantages and disadvantages. /* TODO: discuss advantages and disadvantages */
+//We have enumerated and described the most frequently used algorithms and quality metrics, and discussed their merits and demerits. /* TODO: discuss merits and demerits */
 //
 //Using the results of our systematic literature review, we were able to answer the research questions that motivated this review:
 //

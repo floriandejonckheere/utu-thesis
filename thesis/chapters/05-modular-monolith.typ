@@ -5,7 +5,7 @@
 = Modular monolith architecture <modularmonolith>
 
 In this chapter, we will discuss the modular monolith architecture.
-We will start by defining the architectural style, and then continue by discussing the advantages and drawbacks of this architecture.
+We will start by defining the architectural style, and then continue by discussing the merits and demerits of this architecture.
 We aim to answer the following research question:
 
 *Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolithic and microservices architectures?
@@ -65,7 +65,7 @@ When all modules have been extracted from the monolith, the application has effe
 In summary, the modular monolith architecture aims to find a middle ground between the monolith and microservices architectures by reaping the benefits of both approaches.
 While opting for a modular monolith architecture already improves flexibility and comprehensibility, it can also be used as a step in the migration towards a microservices architecture.
 
-== Advantages and drawbacks
+== Merits and demerits
 
 In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defines architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
 The author argues that architectural drivers are the most important requirements that shape the architecture of a software system.

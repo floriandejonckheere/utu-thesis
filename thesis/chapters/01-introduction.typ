@@ -15,7 +15,7 @@ It involves deep understanding of software engineering principles, the existing 
 Moreover, as larger and older applications typically have more technological debt, the process of migrating to microservices can be overly complex and error-prone.
 
 In recent years, a new software architecture paradigm has emerged that takes a hybrid approach to monolithic and microservices architectures.
-The modular monolith architecture aims to combine the advantages of using a microservices architecture with the simplicity of a monolithic codebase.
+The modular monolith architecture aims to combine the flexibility of using a microservices architecture with the simplicity of a monolithic codebase.
 The modular monolithic application consists of multiple independent modules encapsulating a specific set of functionality.
 The modules are developed in tandem, but deployed as single units.
 This approach allows developers to rapidly build and deploy new features, while maintaining the flexibility and scalability of a microservices architecture.
@@ -42,9 +42,9 @@ This research is centered around three research questions:
 
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
-The motivation behind the first research question is to investigate the potential benefits and drawbacks of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
+The motivation behind the first research question is to investigate the potential merits and demerits of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
 To answer this question, we will first define the modular monolith architecture using existing literature, and examine what sets it apart from monolithic and microservices architectures.
-Then, we will proceed to investigate the merits and drawbacks of the software architecture when applied to an existing codebase.
+Then, we will proceed to investigate the merits and demerits of the software architecture when applied to an existing codebase.
 
 The second research question is motivated by the need for reducing the complexity and error-proneness of manual modularization efforts.
 We will explore the existing automated technologies to aid modularization of monolithic codebases in the literature.
@@ -56,28 +56,29 @@ The results will be evaluated using a set of quality metrics, and its effectiven
 
 The goal of this research can be summarized as follows:
 
-+ Investigate the merits and drawbacks of the modular monolith architecture
++ Investigate the merits and demerits of the modular monolith architecture
 + Investigate the use of automated technologies to modularize a monolithic architecture
 
 Although the proposed solution will be designed for a specific case study, the results can be generalized to other monolithic codebases.
 
 == Outline
 
-The thesis is divided into three parts.
+The thesis is structured as follows.
 
-The first part comprises the background and related work.
-In @introduction, the scope and goal of the research is defined, and the research questions are formulated.
+In @introduction, the motivation behind the research is explained.
+The scope and goal are defined, and the research questions are formulated.
 @methodology describes the research methodology used in this thesis.
-Then, @background introduces the reader to the research background and necessary concepts.
-In @relatedwork, the existing literature on the modular monolith architecture and automated modularization is discussed.
+In @background the reader is introduced to the research background and necessary concepts.
+@relatedwork discusses the related work in the field of the research topic.
 
-The second part of the thesis, starting with @modularmonolith, is dedicated to the first research question.
-The modular monolith architecture is defined, and its merits and drawbacks are discussed.
+@modularmonolith is dedicated to answering the first research question.
+The modular monolith architecture is defined, and its merits and demerits are discussed.
+The chapter also touches the concept of modularization and its relevance in software architecture.
 
-The third part aims to solve the second and third research questions.
+The next chapters aim to solve the remaining research questions.
 @automatedmodularization takes a deep dive into the existing technologies for automated modularization.
-@proposedsolution then continues with a proposed solution for automated modularization.
-In @casestudy, a case study is presented along with a strategy for applying the proposed solution.
+Based on this study, @proposedsolution then continues with a proposed solution for automated modularization.
+In @casestudy, a case study is presented that applies the proposed solution to a real-world software system.
 The results are then evaluated and discussed.
 
-Finally, @conclusion summarizes the findings, and gives an outlook on future work.
+Finally, @conclusion summarizes the findings, discusses the validity of the research, and gives an outlook on future work.
