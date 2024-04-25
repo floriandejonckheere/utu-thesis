@@ -11,7 +11,7 @@ The goal of this process is to split the monolith into smaller, more manageable 
 Traditionally, monolith decomposition is a manual process that requires a deep understanding of the software architecture and business requirements.
 However, the burden of manual decomposition can be alleviated by using automated tools and algorithms.
 The knowledge of software architects should be leveraged where possible to guide the decomposition process, without imposing the requirement of a deep understanding of the software architecture.
-For example, #cite_full(<li_etal_2023>) propose a method that utilizes expert knowledge, however requires the recommendations to be written in a domain-specific language, increasing the burden on the architect.
+For example, #cite_full(<li_etal_2023>) proposed a method that utilizes expert knowledge, however requires the recommendations to be written in a domain-specific language, increasing the burden on the architect.
 
 MOSAIK implements an automated identification of microservice candidates in a monolith application using clustering algorithms.
 The decomposition process can be fine-tuned by assigning an importance to the different types of coupling strategies.

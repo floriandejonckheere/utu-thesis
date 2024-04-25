@@ -67,7 +67,7 @@ While opting for a modular monolith architecture already improves flexibility an
 
 == Merits and demerits
 
-In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defines architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
+In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defined architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
 The author argues that architectural drivers are the most important requirements that shape the architecture of a software system.
 Architectural drivers are often classified in four categories: functional requirements, quality attributes, technical, and business constraints @grzybek_2019_architectural_drivers.
 Any realized software architecture is a trade-off between several architectural drivers.

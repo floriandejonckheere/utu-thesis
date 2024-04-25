@@ -63,18 +63,18 @@ The first class of algorithms identified in the literature is clustering algorit
 Clustering algorithms are unsupervised machine learning algorithms that aim to find an optimal partitioning of the graph.
 Typical clustering algorithms used for this purpose are K-Means clustering and agglomerative clustering.
 
-Examples of publications using K-Means clustering to identify microservice candidates are #cite_full(<saidi_etal_2023>), #cite_full(<wu_zhang_2022>), #cite_full(<romani_etal_2022>), and #cite_full(<hao_etal_2023>).
+Examples of publications that used K-Means clustering to identify microservice candidates are #cite_full(<saidi_etal_2023>), #cite_full(<wu_zhang_2022>), #cite_full(<romani_etal_2022>), and #cite_full(<hao_etal_2023>).
 
-#cite_full(<al_debagy_martinek_2020>) use Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
+#cite_full(<al_debagy_martinek_2020>) used Affinity Propagation @frey_dueck_2007 to cluster vector representations of operation names in a software system.
 Affinity Propagation is a clustering algorithm that identifies exemplars in the data, which are used to represent the clusters.
 
 Hierarchical clustering approaches are used in various publications @selmadji_etal_2020 @santos_silva_2022 @lourenco_silva_2023 @ma_etal_2022 @zaragoza_etal_2022 @bandara_perera_2020.
-#cite_full(<lourenco_silva_2023>) uses similarity between domain entities accesses and development history of source code files as a guiding measure for the clustering algorithm, while #cite_full(<zaragoza_etal_2022>) uses structural and data cohesion of microservices.
-#cite_full(<daoud_etal_2020>) extend the hierarchical agglomerative clustering (HAC) algorithm @murtagh_legendre_2014 with a collaborative approach, where the clustering is performed by multiple homogenous clustering nodes, each responsible for a subset of the data.
+#cite_full(<lourenco_silva_2023>) used similarity between domain entities accesses and development history of source code files as a guiding measure for the clustering algorithm, while #cite_full(<zaragoza_etal_2022>) uses structural and data cohesion of microservices.
+#cite_full(<daoud_etal_2020>) extended the hierarchical agglomerative clustering (HAC) algorithm @murtagh_legendre_2014 with a collaborative approach, where the clustering is performed by multiple homogenous clustering nodes, each responsible for a subset of the data.
 
-#cite_full(<selmadji_etal_2020>) propose two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
+#cite_full(<selmadji_etal_2020>) proposed two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
 
-#cite_full(<sellami_etal_2022>) use the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm @ester_etal_1996 to identify microservices.
+#cite_full(<sellami_etal_2022>) used the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm @ester_etal_1996 to identify microservices.
 
 ==== Evolutionary algorithms
 
@@ -83,10 +83,10 @@ Evolutionary algorithms, and in particular genetic algorithms, are algorithms ai
 These algorithms typically operate iteratively, selecting the best solutions from a population at each iteration (called a generation), and then combining the selected solutions to create new combinations for the next generation.
 The process is then repeated until certain criteria are met, for example a maximum number of generations, convergence of the population, or a quality indicator.
 
-Examples of publications using Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite_full(<zhou_xiong_2022>), #cite_full(<kinoshita_kanuka_2022>), #cite_full(<zhang_etal_2020>), #cite_full(<jin_etal_2021>), and #cite_full(<li_etal_2023>).
-#cite_full(<carvalho_etal_2020>) use the next generation of NSGA, NSGA-III, in order to find a solution for the problem.
+Examples of publications that used Non-Dominated Sorting Algorithm II (NGSA-II) as multi-objective optimization algorithm to identify microservice candidates are #cite_full(<zhou_xiong_2022>), #cite_full(<kinoshita_kanuka_2022>), #cite_full(<zhang_etal_2020>), #cite_full(<jin_etal_2021>), and #cite_full(<li_etal_2023>).
+#cite_full(<carvalho_etal_2020>) used the next generation of NSGA, NSGA-III, in order to find a solution for the problem.
 
-#cite_full(<amiri_2018>) rely on a genetic algorithm using Turbo-MQ @mitchell_etal_2001 as fitness function.
+#cite_full(<amiri_2018>) relied on a genetic algorithm using Turbo-MQ @mitchell_etal_2001 as fitness function.
 
 ==== Graph algorithms
 
@@ -94,17 +94,17 @@ Another common approach to identify microservice candidates is to use classical 
 
 // TODO: explain more about community detection algorithms
 
-For example, #cite_full(<mazlami_etal_2017>) and #cite_full(<yang_etal_2022>) use Kruskal's algorithm @kleinberg_tardos_2006 to partition the graph into connected clusters.
+For example, #cite_full(<mazlami_etal_2017>) and #cite_full(<yang_etal_2022>) used Kruskal's algorithm @kleinberg_tardos_2006 to partition the graph into connected clusters.
 Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
 
-#cite_full(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of vertices.
+#cite_full(<filippone_etal_2023>) applied the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of vertices.
 The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
-#cite_full(<hasan_etal_2023>) use the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
+#cite_full(<hasan_etal_2023>) used the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
 
-#cite_full(<cao_zhang_2022>) use both the Leiden algorithm and the hierarchical clustering algorithm to identify microservice candidates.
+#cite_full(<cao_zhang_2022>) used both the Leiden algorithm and the hierarchical clustering algorithm to identify microservice candidates.
 First, the Leiden algorithm is used to detect cohesive communities in static and dynamic analysis data, and then the hierarchical clustering algorithm is used to merge the communities into microservice candidates based on a call relation matrix.
 
-#cite_full(<nitin_etal_2022>) use Context sensitive Label Propagation (CARGO), an algorithm built on the principles of the Label Propagation algorithm @zhu_ghahramani_2003.
+#cite_full(<nitin_etal_2022>) used Context sensitive Label Propagation (CARGO), an algorithm built on the principles of the Label Propagation algorithm @zhu_ghahramani_2003.
 CARGO is a community detection algorithm that is able to leverage the context embedded in the dependency graph to increase the cohesiveness of the communities.
 
 ==== Other algorithms
@@ -115,14 +115,14 @@ Other publications using algorithms that do not fit into one of the previous cat
 
 For example, the authors of #cite_full(<quattrocchi_etal_2024>) incorporated a Mixed Integer Linear Programming (MILP) solver in their solution.
 The MILP solver is used to find a solution for an optimization problem that decomposes the software system into microservices, based on the placement of operations and data entities according to the users' needs.
-#cite_full(<filippone_etal_2021>) use a linear optimization algorithm to solve a combinatorial optimization problem.
+#cite_full(<filippone_etal_2021>) used a linear optimization algorithm to solve a combinatorial optimization problem.
 
 The approach taken by #cite_full(<kamimura_etal_2018>) is to use a custom clustering algorithm named SArF @kobayashi_etal_2012, that aims at identifying software subsystems without the need for human intervention.
-#cite_full(<escobar_etal_2016>) also use a custom clustering algorithm, detecting optimal microservices based on a meta-model of the class hierarchy.
+#cite_full(<escobar_etal_2016>) also used a custom clustering algorithm, detecting optimal microservices based on a meta-model of the class hierarchy.
 
-#cite_full(<agarwal_etal_2021>) propose an algorithm based on seed expansion.
+#cite_full(<agarwal_etal_2021>) proposed an algorithm based on seed expansion.
 The seed classes are detected by using formal concept analysis.
 Then, using a seed expansion algorithm, clusters are created around the seeds by pulling in related code artefacts based on implementation structure of the software system @agarwal_etal_2021.
 
-#cite_full(<eyitemi_reiff_marganiec_2020>) use a rule-based approach to microservice candidate identification.
+#cite_full(<eyitemi_reiff_marganiec_2020>) used a rule-based approach to microservice candidate identification.
 The 6 proposed rules are based on the principles of high cohesion and low coupling, and using a step-based protocol can be used to manually decompose a monolith system into microservices.

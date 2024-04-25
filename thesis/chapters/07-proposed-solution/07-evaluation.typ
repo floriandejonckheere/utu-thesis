@@ -52,7 +52,7 @@ A higher total cohesion indicates a better decomposition.
 
 // https://wiki.c2.com/?AbcMetric
 Size of a microservice candidate can be defined in several different ways.
-In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), who define size as the number of source code files or classes in a microservice candidate.
+In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), who defined size as the number of source code files or classes in a microservice candidate.
 Other definitions of size include the number of methods, or the number of lines of code.
 However, these definitions have the disadvantage that they only describe the size of a microservice candidate superficially, without considering the structure of the code.
 

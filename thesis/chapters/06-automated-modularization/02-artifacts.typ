@@ -57,13 +57,13 @@ They include functional and non-functional requirements, use cases, user stories
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
 In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
 
-#cite_full(<amiri_2018>) and #cite_full(<daoud_etal_2020>) model a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
-#cite_full(<yang_etal_2022>) tackle requirements engineering using problem frames @jackson_2000.
+#cite_full(<amiri_2018>) and #cite_full(<daoud_etal_2020>) modeled a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
+#cite_full(<yang_etal_2022>) tackled requirements engineering using problem frames @jackson_2000.
 Problem frames are a requirements engineering method, which emphasizes the integration of real-world elements into the software system @yang_etal_2022.
 
 Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #cite_full(<saidi_etal_2023>).
  The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
-#cite_full(<li_etal_2023>) employ an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
+#cite_full(<li_etal_2023>) employed an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
 ==== Design documents
 
@@ -75,16 +75,16 @@ Techniques using design documents either use a domain-driven approach, or a data
 Domain-driven approaches use domain-specific knowledge to identify microservice candidates, while data-driven approaches use knowledge about data storage and data flow to identify microservice candidates.
 Similar to requirements documents and models, design documents for legacy systems are often not available or outdated, although some design documents can be reconstructed from the software system (e.g., reverse engineering entity-relationship diagrams from the database schema).
 
-For example, #cite_full(<al_debagy_martinek_2020>) propose a data-driven method based on the analysis of the external API exposed by the application, specified in the OpenAPI#footnote[#link("https://www.openapis.org/")[https://www.openapis.org/]] format.
+For example, #cite_full(<al_debagy_martinek_2020>) proposed a data-driven method based on the analysis of the external API exposed by the application, specified in the OpenAPI#footnote[#link("https://www.openapis.org/")[https://www.openapis.org/]] format.
 The method extracts the information from the specification and converts it into vector representation for further processing.
 
-#cite_full(<zhou_xiong_2022>) use readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
+#cite_full(<zhou_xiong_2022>) used readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
 The decomposition tool proposed by #cite_full(<hasan_etal_2023>) uses design documents as well, although the specifications are inferred from the source code of the software system, and do not require pre-existing design documents.
 
-#cite_full(<quattrocchi_etal_2024>) takes a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
+#cite_full(<quattrocchi_etal_2024>) took a different approach to the problem, using a data-driven approach combined with a domain-driven approach.
 Software architects describe the software system using a custom architecture description language, and the tool developed by the authors is able to identify microservice candidates.
 The tool can be prompted to generate different, more efficient decompositions when given additional domain-driven requirements.
-#cite_full(<wei_etal_2020>) uses a similar approach, gathering a list of features from the software architect, and proposing a microservice decomposition based on pre-trained feature tables.
+#cite_full(<wei_etal_2020>) used a similar approach, gathering a list of features from the software architect, and proposing a microservice decomposition based on pre-trained feature tables.
 
 ==== Codebase
 
@@ -102,26 +102,26 @@ Additionally, the revision history of the source code can also be used as source
 The authors suggest multiple strategies that can be used to extract information from the revision history.
 Others have built upon this approach, using the revision history to identify the authors of the source code, and use this information to drive the identification algorithm @lourenco_silva_2023 @santos_paula_2021
 
-#cite_full(<escobar_etal_2016>) use the source code of the software system to construct an #acr("AST"), and map the dependencies between the business and data layer.
-#cite_full(<kamimura_etal_2018>) use a more data-driven approach, and statically trace data access calls in the source code.
+#cite_full(<escobar_etal_2016>) used the source code of the software system to construct an #acr("AST"), and mapped the dependencies between the business and data layer.
+#cite_full(<kamimura_etal_2018>) used a more data-driven approach, and statically traced data access calls in the source code.
 
 Many publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoza_etal_2022 @santos_silva_2022 @kalia_etal_2021 @cao_zhang_2022 @santos_paula_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
-#cite_full(<bandara_perera_2020>) map object-oriented classes in the source code to specific microservices, but require a list of microservices to be specified before the decomposition is performed.
+#cite_full(<bandara_perera_2020>) mapped object-oriented classes in the source code to specific microservices, but required a list of microservices to be specified before the decomposition is performed.
 
-#cite_full(<filippone_etal_2021>) concentrate on the API controllers as entrypoints into the software system.
+#cite_full(<filippone_etal_2021>) concentrated on the API controllers as entrypoints into the software system.
 A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API endpoints as entrypoints, and then ascending into the source code by separating the presentation and logic layer.
-Likewise, #cite_full(<zaragoza_etal_2022>) make a distinction between presentation, business, and data layer.
+Likewise, #cite_full(<zaragoza_etal_2022>) made a distinction between presentation, business, and data layer.
 
 Most of the publications tracing dependencies between software components do this at the level of the component.
 As #cite_full(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
 #cite_full(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
-On the other hand, #cite_full(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but rely on a software architect to decompose the software system on the basis of business capability.
+On the other hand, #cite_full(<kinoshita_kanuka_2022>) did not automatically extract information from the source code, but relied on a software architect to decompose the software system on the basis of business capability.
 
-#cite_full(<romani_etal_2022>) propose a data-centric microservice candidate identification method based on knowledge gathered from the database schema.
+#cite_full(<romani_etal_2022>) proposed a data-centric microservice candidate identification method based on knowledge gathered from the database schema.
 The authors extract table and column methods from the database schema, and use the semantically enriched information as input for the identification algorithm.
-#cite_full(<hao_etal_2023>) construct access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
+#cite_full(<hao_etal_2023>) constructed access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
 
-A unique approach to constructing a call graph is proposed by #cite_full(<nitin_etal_2022>), who make a distinction between context-insensitive and context-sensitive dependency graphs.
+A unique approach to constructing a call graph is proposed by #cite_full(<nitin_etal_2022>), who made a distinction between context-insensitive and context-sensitive dependency graphs.
 While the former captures the dependencies between software components using simple method calls, the latter also includes the context (i.e., the arguments) of the method call in the dependency graph.
 
 ==== Execution
@@ -132,16 +132,16 @@ This category is often combined with static analysis on source code, as the exec
 In dynamic languages such as Java, dynamic analysis can trace access patterns that static analysis cannot (e.g., due to late binding and polymorphism).
 Additionally, execution data can be collected when the source code of the software system is not available.
 
-Examples of approaches using execution traces are #cite_full(<jin_etal_2021>) and #cite_full(<eyitemi_reiff_marganiec_2020>).
+Examples of approaches that used execution traces are #cite_full(<jin_etal_2021>) and #cite_full(<eyitemi_reiff_marganiec_2020>).
 Using software probes inserted into the bytecode of respectively Java and .NET applications, the authors are able to monitor execution paths.
-#cite_full(<zhang_etal_2020>) collect the execution traces of the software system, in combination with performance logs.
+#cite_full(<zhang_etal_2020>) collected the execution traces of the software system, in combination with performance logs.
 
-#cite_full(<ma_etal_2022>) use a data-centric approach based on the analysis of database access requests.
+#cite_full(<ma_etal_2022>) used a data-centric approach based on the analysis of database access requests.
 
 ==== Hybrid approach
 
 Some publications suggest a hybrid approach using both static and dynamic analysis.
-For instance, #cite_full(<wu_zhang_2022>), #cite_full(<carvalho_etal_2020>) and #cite_full(<cao_zhang_2022>) collect information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
+For instance, #cite_full(<wu_zhang_2022>), #cite_full(<carvalho_etal_2020>) and #cite_full(<cao_zhang_2022>) collected information statically from the source code (entity classes and databases), as well as dynamically from the execution of the software system (execution traces).
 The approach proposed by #cite_full(<lourenco_silva_2023>) uses either static of the source code or dynamic analysis of the system execution to gather access patterns.
 
-#cite_full(<hao_etal_2023>) use both static and dynamic analysis, albeit aimed at the database schema and database calls, respectively.
+#cite_full(<hao_etal_2023>) used both static and dynamic analysis, albeit aimed at the database schema and database calls, respectively.
