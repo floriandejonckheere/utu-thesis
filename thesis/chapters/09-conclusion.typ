@@ -24,4 +24,6 @@
 
 // Literature Review: lot of papers in recent years, so presumably we'll see a pickup in this topic
 
-// Proposed solution: use more information (e.g. dynamic analysis, semantic coupling)
+// Proposed solution:
+// Use more information (e.g. dynamic analysis, semantic coupling)
+// Static analysis can only detect limited references, dynamic analysis can detect more
