@@ -97,7 +97,7 @@ The source code can be analyzed using static analysis (i.e., without executing t
 Dynamic analysis has the advantage that it can be used if the source code is not available.
 
 Additionally, the revision history of the source code can also be used as source for valuable information about the behaviour of the software system.
-#cite_full(<mazlami_etal_2017>) originally proposed the use of the revision history of the source code to identify couplings between classes.
+#cite_full(<mazlami_etal_2017>) originally proposed the use of the revision history of the source code to identify couplings between software components.
 /* TODO: reference "CVS release history data for detecting logical couplings" */
 The authors suggest multiple strategies that can be used to extract information from the revision history.
 Others have built upon this approach, using the revision history to identify the authors of the source code, and use this information to drive the identification algorithm @lourenco_silva_2023 @santos_paula_2021
@@ -112,7 +112,7 @@ Many publications @selmadji_etal_2020 @agarwal_etal_2021 @wu_zhang_2022 @zaragoz
 A later paper by the same authors @filippone_etal_2023 builds on top of this approach by using the API endpoints as entrypoints, and then ascending into the source code by separating the presentation and logic layer.
 Likewise, #cite_full(<zaragoza_etal_2022>) make a distinction between presentation, business, and data layer.
 
-Most of the publications tracing dependencies between classes (or modules) do this at the level of the classes (or modules).
+Most of the publications tracing dependencies between software components do this at the level of the component.
 As #cite_full(<mazlami_etal_2017>) remark, using a more granular approach at the level of methods (or functions) and attributes has the potential to improve the quality of the decomposition.
 #cite_full(<carvalho_etal_2020>) use a more granular approach, identifying dependencies between methods in the source code.
 On the other hand, #cite_full(<kinoshita_kanuka_2022>) do not automatically extract information from the source code, but rely on a software architect to decompose the software system on the basis of business capability.
@@ -122,7 +122,7 @@ The authors extract table and column methods from the database schema, and use t
 #cite_full(<hao_etal_2023>) construct access patterns from both the database schema (static) and the database calls during execution of the software system (dynamic).
 
 A unique approach to constructing a call graph is proposed by #cite_full(<nitin_etal_2022>), who make a distinction between context-insensitive and context-sensitive dependency graphs.
-While the former captures the dependencies between classes using simple method calls, the latter also includes the context (i.e., the arguments) of the method call in the dependency graph.
+While the former captures the dependencies between software components using simple method calls, the latter also includes the context (i.e., the arguments) of the method call in the dependency graph.
 
 ==== Execution
 

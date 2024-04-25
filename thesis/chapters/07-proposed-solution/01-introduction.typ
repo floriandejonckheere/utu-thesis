@@ -10,7 +10,7 @@ The approach is based on the analysis of a dependency graph, that aggregates inf
 == Problem statement
 
 The goal of this solution is to identify a set of microservice candidates that can be extracted from the source code of the given monolith application, in order to automate the migration to a microservices architecture.
-The problem can be formulated as a graph partitioning problem, where the vertices correspond to the modules or classes in the monolith application, and the edges represent the dependencies between them.
+The problem can be formulated as a graph partitioning problem, where the vertices correspond to the software components in the monolith application, and the edges represent the dependencies between them.
 The input of the algorithm is a representation $M$ of the monolith application, which exposes a set of functionalities $M_F$ through a set of classes $M_C$, and history of modifications $M_H$.
 The triplet is described by @monolith_triplet_formulas.
 
