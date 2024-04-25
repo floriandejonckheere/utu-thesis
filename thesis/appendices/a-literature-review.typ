@@ -2,7 +2,7 @@
 
 #import "/helpers.typ": *
 
-= #acr("SLR") publications <slr_publications>
+= Systematic Literature Review publications <slr_publications>
 
 #set heading(numbering: none)
 
