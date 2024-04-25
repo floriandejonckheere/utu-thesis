@@ -35,7 +35,7 @@ We considered the following criteria when selecting the most suitable algorithm 
 The first criteria disqualifies algorithms that require specifying the number of clusters up-front, such as Spectral Clustering, K-Means, and Agglomerative Clustering.
 Search-based algorithms (e.g. genetic, linear optimization) were considered as well, due to their inherent ability to optimize multiple objectives @carvalho_etal_2020.
 However, they require a lot of computing resources, and proper fine-tuning of parameters such as population size, mutation rate, and crossover rate, which makes them less suitable.
-Affinity Propagation is an algorithm that doesn't require specifying the number of clusters up-front, but it is computationally expensive as well @frey_dueck_2007.
+Affinity Propagation is an algorithm that does not require specifying the number of clusters up-front, but it is computationally expensive as well @frey_dueck_2007.
 
 We found that the Louvain @blondel_etal_2008 and Leiden @traag_etal_2019 algorithms are the most suitable for this task, as they are designed for optimizing modularity in networks.
 The algorithms are iterative and hierarchical, which makes them fast and efficient.

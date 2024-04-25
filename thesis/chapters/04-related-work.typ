@@ -24,7 +24,7 @@ Mono2Micro has the ability to analyze monolith applications written in Java and 
 In #cite(<service_weaver_2023>, form: "year"), #cite_author(<service_weaver_2023>) introduced ServiceWeaver @service_weaver_2023, a framework for the Go programming language#footnote(link("https://go.dev/")[https://go.dev]) that aims to introduce the concept of a modular monolith architecture.
 Applications written in Go are compiled into a single, statically linked binary, which is then deployed as a single unit.
 ServiceWeaver maintains the same development process as a monolith application, but the application is deployed as a set of microservices that communicate with each other over the network.
-The framework leverages the Go runtime to modularize the application at runtime, by using information about the application's structure and dependencies.
+The framework leverages the Go runtime to modularize the application at runtime, by using information about the structure and dependencies of the application.
 It also provides integration with cloud providers, and a set of tools to monitor and manage the deployed microservices.
 
 The Structural Quality (S-Quality) framework, introduced by #cite_full(<hasan_etal_2023>), is a tool that uses static analysis to identify microservice candidates in monolith applications.

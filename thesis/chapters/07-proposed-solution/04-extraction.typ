@@ -180,7 +180,7 @@ $ N_d (c_1, c_2) = |D(c_i) sect D(c_j)| $ <aggregated_contributor_coupling_formu
 Consider the extraction algorithm in pseudocode in @contributor_coupling_algorithm.
 The algorithm first initializes the co-authorship matrix, which is a two-dimensional array that stores the (unique) authors of each file in the source code repository.
 Then, it iterates over all commits in the source code repository, and for each commit, retrieves the changes between the commit and its parent.
-Finally, iterating over each file in the changelist, the algorithm adds the author(s) of the commit to the file's entry in the co-authorship matrix.
+Finally, iterating over each file in the changelist, the algorithm adds the author(s) of the commit to the entry corresponding to the file in the co-authorship matrix.
 
 #figure(
     table(

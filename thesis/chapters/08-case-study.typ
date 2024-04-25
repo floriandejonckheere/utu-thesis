@@ -52,7 +52,7 @@ Dialysis machines typically measure data essential for the dialysis treatment, s
 Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
 
 Nipro Group has deployed NephroFlow™ Link in several dialysis centers and hospitals across Europe, Central America, and India, collectively ensuring connection to hundreds of dialysis machines.
-To ensure the patient's information security, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
+To ensure the information security of the patient, the application is usually deployed per dialysis center, and the data is stored in a secure cloud environment.
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
 The choice of Ruby as programming language is influenced by the Ruby on Rails framework#footnote[#link("https://rubyonrails.org")[https://rubyonrails.org]], which is used for the NephroFlow™ Platform.
@@ -70,13 +70,13 @@ Hence, decomposing this application into a modular monolith architecture would p
 
 == Experimental setup
 
-#cite_full(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenario's.
+#cite_full(<lourenco_silva_2023>) analyzed multiple source code repositories and concluded that repositories with a large number of committers perform better when considering the contributor coupling in various scenarios.
 Approaches using contributor coupling achieve comparable results as approaching using a structural coupling on source code repositories with a large number of committers.
 Since the number of committers to NephroFlow™ Link is limited, we use multiple coupling strategies to decompose the application.
-Seven test scenario's were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
+Four test scenarios were designed by combining configurations obtained through varying the weights of the coupling strategy @santos_paula_2021.
 The weights $omega_s$, $omega_c$, and $omega_d$ refer to the structural, logical, and contributor coupling respectively.
 Refer to @test_configurations for a list of the test configurations.
-Strategies using a single coupling are not considered, as they are not expected to perform well in the context of NephroFlow™ Link.
+Strategies using a single coupling are not considered, as they extract limited information by themselves, and are not expected to perform well in the context of NephroFlow™ Link.
 
 #let scenarios = (
   "scn_structural_logical": (1, 1, 0, [_structural-logical_]),

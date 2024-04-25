@@ -179,4 +179,4 @@ Some of the publications do not mention any quality metrics used in the evaluati
 These methods typically rely on the selection or approval of a software architect to choose the best decomposition, based on their experience and knowledge of the system.
 This is the case of #cite_full(<eyitemi_reiff_marganiec_2020>), #cite_full(<romani_etal_2022>), #cite_full(<amiri_2018>), and #cite_full(<escobar_etal_2016>).
 
-The evaluation method by #cite_full(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the software architect's judgement to choose a qualitative decomposition.
+The evaluation method by #cite_full(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the judgement of the software architect to choose a qualitative decomposition.

@@ -13,7 +13,7 @@
 //*Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
 //
 //Each monolith application is unique, and has its own requirements, constraints, and challenges.
-//When migrating a monolith application to a microservices architecture, there are many facets to take into consideration, such as the application's architecture, the organization's structure, the teams's capabilities, and the business requirements.
+//When migrating a monolith application to a microservices architecture, there are many facets to take into consideration, such as the architecture of the application, the structure of the organization, the capabilities of the team, and the business requirements.
 //As such, proposing a general migration framework that fits all applications is not feasible, and every software architect has a different and unique approach to the process.
 
 
@@ -22,7 +22,7 @@
 
 // Possible future work related to the topic
 
-// Literature Review: lot of papers in recent years, so presumably we'll see a pickup in this topic
+// Literature Review: lot of papers in recent years, so presumably we will see a pickup in this topic
 
 // Proposed solution:
 // Use more information (e.g. dynamic analysis, semantic coupling)

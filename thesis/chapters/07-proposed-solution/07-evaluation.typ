@@ -95,7 +95,7 @@ However, a very low size may indicate that the microservice candidates are too s
 ==== Complexity
 
 // https://wiki.c2.com/?CyclomaticComplexityMetric
-Cyclomatic complexity is a metric that quantifies the number of linearly independent control paths through a program's source code @mccabe_1976.
+Cyclomatic complexity is a metric that quantifies the number of linearly independent control paths through the source code of a program @mccabe_1976.
 The measure is computed by constructing a control-flow graph of the program, and counting the number of possible paths through the graph.
 Each vertex in the graph represents a group of non-branching instructions, and each edge represents a possible transfer of control between the groups.
 If the program does not contain any branching instructions, the complexity is 1 (there is only one path).
