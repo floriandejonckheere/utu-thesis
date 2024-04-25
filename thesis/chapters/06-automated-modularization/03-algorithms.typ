@@ -6,7 +6,7 @@
 
 Microservice candidate identification is a problem that is often solved by representing the architecture as a directed graph.
 The graph exposes the relationship between the elements of the software architectures.
-The nodes of the graph represent the classes, modules, or components, and the edges the function or method calls between them.
+The vertices of the graph represent the classes, modules, or components, and the edges the function or method calls between them.
 Often the edges are weighted, representing the frequency or cost of the calls.
 Based on the information contained within, the graph is then divided into several clusters, each encapsulating a microservice candidate.
 The goal is to find a partitioning of the graph that minimizes the number of edges between clusters and maximizes the number of edges within clusters.
@@ -97,7 +97,7 @@ Another common approach to identify microservice candidates is to use classical 
 For example, #cite_full(<mazlami_etal_2017>) and #cite_full(<yang_etal_2022>) use Kruskal's algorithm @kleinberg_tardos_2006 to partition the graph into connected clusters.
 Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
 
-#cite_full(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of nodes.
+#cite_full(<filippone_etal_2023>) apply the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of vertices.
 The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
 #cite_full(<hasan_etal_2023>) use the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
 
