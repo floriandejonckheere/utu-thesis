@@ -137,7 +137,7 @@ An overview of the source code repository is presented in @source_code_statistic
     [#stats.at("classes")],
     [#stats.at("methods")],
     [#stats.at("commits")],
-    [#stats.at("contributors")],
+    [#stats.at("contributors").len()],
   ),
   caption: [Source code statistics]
 ) <source_code_statistics>
