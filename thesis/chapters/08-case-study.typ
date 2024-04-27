@@ -239,10 +239,14 @@ Due to the restricted nature of the source code, precise information about the f
 // Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
 #grid(
-  columns: (50%, 50%),
+  columns: (60%, 40%),
   gutter: 1em,
   [
-     Text
+     @performance_statistics depicts the runtime of the analysis for each scenario.
+     Each execution is divided into three phases: extraction, decomposition, and evaluation.
+     The extraction step is equal for all scenarios, as it is based on the same input data.
+     The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the services.
+     Finally, the evaluation step executes in nearly the same time for all scenarios.
   ],
   [
     #figure(
@@ -251,6 +255,9 @@ Due to the restricted nature of the source code, precise information about the f
     ) <performance_statistics>
   ]
 )
+
+The scenarios #ref(<scn_structural_logical>, supplement: none), #ref(<scn_logical_contributor>, supplement: none), and #ref(<scn_structural_logical_contributor>, supplement: none) executed in similar timeframes (157, 148, and 128 seconds respectively), while the scenario #ref(<scn_structural_contributor>, supplement: none) executed in less than half the time: 72 seconds.
+The reason for the difference in execution time is the logical coupling, which contains a lot of information that needs to be processed.
 
 == Discussion
 

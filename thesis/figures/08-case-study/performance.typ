@@ -16,7 +16,7 @@
     bar-width: 0.2,
     label-key: 0,
     value-key: (1, 2, 3),
-    labels: ([Extract], [Identify], [Evaluate]),
-    legend: "legend.east",
+    labels: ([Extraction], [Decomposition], [Evaluation]),
+    legend: "legend.south",
   )
 })
