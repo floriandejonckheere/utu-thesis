@@ -119,7 +119,7 @@ We identified #stats.at("contributors").len() software developers that have cont
 The top two contributors are responsible for #(calc.round(100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits"), digits: 0))% of the commits, while the other eight contributors count for remaining #(calc.round(100 - (100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits")), digits: 0))%.
 
 #figure(
-  include("/figures/08-case-study/contributors-chart.typ"),
+  include("/figures/08-case-study/contributors.typ"),
   caption: [Contributor statistics]
 ) <contributor_statistics>
 

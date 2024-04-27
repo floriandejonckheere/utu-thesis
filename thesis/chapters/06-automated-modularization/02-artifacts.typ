@@ -46,7 +46,7 @@ Hybrid approaches using both static and dynamic analysis are categorized accordi
 In the selected #total(artifacts) publications, the majority of the approaches use the codebase as input for the algorithm (#count(artifacts, "codebase")\; #percentage(artifacts, "codebase")), followed by execution data (#count(artifacts, "execution")\; #percentage(artifacts, "execution")), and design and requirements documents (#count(artifacts, "requirements")\; #percentage(artifacts, "requirements") each).
 
 #figure(
-  include("/figures/06-automated-modularization/artifacts-chart.typ"),
+  include("/figures/06-automated-modularization/artifacts.typ"),
   caption: [SDLC artifact categories]
 ) <slr_artifacts_chart>
 
