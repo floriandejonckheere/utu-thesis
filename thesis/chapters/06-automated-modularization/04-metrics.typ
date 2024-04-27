@@ -65,7 +65,7 @@ Publications using other metrics (#count(metrics, "other")\; #percentage(metrics
 Finally, the #count(metrics, "none") publications that do not mention any quality metrics account for #percentage(metrics, "none").
 
 #figure(
-  include("/figures/metrics-chart.typ"),
+  include("/figures/06-automated-modularization/metrics-chart.typ"),
   caption: [SDLC metric categories]
 ) <slr_metrics_chart>
 

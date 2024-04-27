@@ -139,7 +139,7 @@ The secondary studies were used as a starting point for the snowballing process,
 For a list of the selected publications, see @slr_publications.
 
 #figure(
-  include("/figures/publications-by-year.typ"),
+  include("/figures/06-automated-modularization/publications-by-year.typ"),
   caption: "Distribution of selected publications by year"
 ) <slr_by_year>
 

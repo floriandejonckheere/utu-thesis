@@ -53,7 +53,7 @@ The majority of the algorithms identified in the literature are clustering algor
 The remaining algorithms are grouped in the "Other algorithms" category (#count(algorithms, "other")\; #percentage(algorithms, "other")).
 
 #figure(
-  include("/figures/algorithms-chart.typ"),
+  include("/figures/06-automated-modularization/algorithms-chart.typ"),
   caption: [SDLC algorithm categories]
 ) <slr_algorithms_chart>
 
