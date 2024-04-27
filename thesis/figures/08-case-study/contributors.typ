@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.2.2"
+#import "@preview/cetz:0.2.2": canvas, chart, draw
 
 #let data = (
   ([Developer A], 139),
@@ -15,10 +15,7 @@
 
 #let total = data.map(p => p.at(1)).sum()
 
-#cetz.canvas({
-  import cetz.chart
-  import cetz.draw: *
-
+#canvas({
   let colors = gradient.linear(red, blue, green, yellow)
 
   chart.piechart(

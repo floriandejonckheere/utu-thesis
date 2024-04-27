@@ -238,6 +238,20 @@ Due to the restricted nature of the source code, precise information about the f
 
 // Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+     Text
+  ],
+  [
+    #figure(
+      include("/figures/08-case-study/performance.typ"),
+      caption: [Runtime (in seconds)]
+    ) <performance_statistics>
+  ]
+)
+
 == Discussion
 
 // Analysis and discussion of the results
