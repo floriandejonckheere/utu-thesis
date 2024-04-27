@@ -203,7 +203,7 @@ An overview of the source code repository is presented in @source_code_statistic
 )
 
 #grid(
-  columns: (50%, 50%),
+  columns: (30%, 70%),
   gutter: 1em,
   [
     #figure(
@@ -212,11 +212,11 @@ An overview of the source code repository is presented in @source_code_statistic
         inset: 10pt,
         stroke: (x: none),
         align: (right, left),
-        [*ID*], [\#Services],
-        [@scn_structural_logical], [#yaml("/data/structural_logical.yml").at("clusters").at("count")],
-        [@scn_structural_contributor], [#yaml("/data/structural_contributor.yml").at("clusters").at("count")],
-        [@scn_logical_contributor], [#yaml("/data/logical_contributor.yml").at("clusters").at("count")],
-        [@scn_structural_logical_contributor], [#yaml("/data/structural_logical_contributor.yml").at("clusters").at("count")],
+        [*ID*], [$bold(\#M_c)$],
+        [#ref(<scn_structural_logical>, supplement: none)], [#yaml("/data/structural_logical.yml").at("clusters").at("count")],
+        [#ref(<scn_structural_contributor>, supplement: none)], [#yaml("/data/structural_contributor.yml").at("clusters").at("count")],
+        [#ref(<scn_logical_contributor>, supplement: none)], [#yaml("/data/logical_contributor.yml").at("clusters").at("count")],
+        [#ref(<scn_structural_logical_contributor>, supplement: none)], [#yaml("/data/structural_logical_contributor.yml").at("clusters").at("count")],
       ),
       caption: [Number of services per scenario]
     ) <services_per_scenario>
@@ -225,11 +225,16 @@ An overview of the source code repository is presented in @source_code_statistic
     @services_per_scenario lists the number of services identified by MOSAIK for each scenario.
     Aside from @scn_logical_contributor, the number of services identified by MOSAIK is consistent across the scenarios, ranging from 14-18 services.
     @scn_logical_contributor, which consists of a test setup using only evolutionary coupling, identified a significantly lower number, five services.
+    The lack of structural coupling information has a significant impact on the coupling of the services.
   ],
 )
 
-The lack of structural coupling information has a significant impact on the coupling of the services.
-Investigating further into the services identified in @scn_logical_contributor, we observe that the granularity of the services is significantly lower than in other scenario, with some services containing seemingly unrelated functionality.
+#v(1em)
+
+Investigating further into the services identified in @scn_logical_contributor, we observe that the granularity of the services is significantly lower than in other scenarios, with some services containing seemingly unrelated functionality.
+Some of the services include a mix of data processing code, utility functions, and data access code.
+The other scenarios, which do include structural coupling information, identified services that have more related functionality grouped together.
+Due to the restricted nature of the source code, precise information about the functionality for each service cannot be included in this report.
 
 // Maybe also for each scenario, a plot with the total cohesion/coupling/...
 

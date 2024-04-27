@@ -24,10 +24,10 @@
 
 // Literature Review: lot of papers in recent years, so presumably we will see a pickup in this topic
 
-// Proposed solution:
-// Use more information (e.g. dynamic analysis, semantic coupling)
-// Static analysis can only detect limited references, dynamic analysis can detect more
-
-// Proposed solution:
-// Performance: current tools are slow, need to be faster
-// Rewrite in Rust (https://github.com/lib-ruby-parser/lib-ruby-parser)
+// Improvements
+// Extraction: use more information
+// - Structural analysis: exploit inheritance, composition, and other OO relationships
+// - Structural analysis: dynamic collection (static analysis is limited)
+// - Semantic coupling
+// Identification: performance
+// - Rewrite in C++ or Rust (https://github.com/lib-ruby-parser/lib-ruby-parser)
