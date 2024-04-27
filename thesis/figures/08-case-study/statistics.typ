@@ -2,10 +2,10 @@
 
 #let statistics_chart = (key) => [
   #let data = (
-    (<scn_structural_logical>, yaml("/data/structural-logical.yml")),
-    (<scn_structural_contributor>, yaml("/data/structural-contributor.yml")),
-    (<scn_logical_contributor>, yaml("/data/logical-contributor.yml")),
-    (<scn_structural_logical_contributor>, yaml("/data/structural-logical-contributor.yml")),
+    (<scn_structural_logical>, yaml("/data/structural_logical.yml")),
+    (<scn_structural_contributor>, yaml("/data/structural_contributor.yml")),
+    (<scn_logical_contributor>, yaml("/data/logical_contributor.yml")),
+    (<scn_structural_logical_contributor>, yaml("/data/structural_logical_contributor.yml")),
   )
 
   #(

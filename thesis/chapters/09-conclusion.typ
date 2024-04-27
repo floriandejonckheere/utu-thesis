@@ -27,3 +27,7 @@
 // Proposed solution:
 // Use more information (e.g. dynamic analysis, semantic coupling)
 // Static analysis can only detect limited references, dynamic analysis can detect more
+
+// Proposed solution:
+// Performance: current tools are slow, need to be faster
+// Rewrite in Rust (https://github.com/lib-ruby-parser/lib-ruby-parser)

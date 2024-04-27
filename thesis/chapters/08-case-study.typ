@@ -83,8 +83,6 @@ Strategies using a single coupling are not considered, as they extract limited i
   "scn_structural_logical_contributor": (1, 1, 1, [_structural-logical-contributor_]),
 )
 
-#import "/figures/08-case-study/statistics.typ": *
-
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -144,6 +142,7 @@ An overview of the source code repository is presented in @source_code_statistic
 
 == Evaluation and results
 
+#import "/figures/08-case-study/statistics.typ": *
 #grid(
   columns: (50%, 50%),
   gutter: 1em,
@@ -173,9 +172,37 @@ An overview of the source code repository is presented in @source_code_statistic
   ],
 )
 
-// Maybe also for each scenario, a plot with the total cohesion/coupling/...
+#import "/figures/08-case-study/service-size.typ": *
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+    #figure(
+      service_size_chart("structural_logical"),
+      caption: [@scn_structural_logical]
+    ) <structural_logical_service_size>,
+  ],
+  [
+    #figure(
+      service_size_chart("structural_contributor"),
+      caption: [@scn_structural_contributor]
+    ) <structural_contributor_service_size>,
+  ],
+  [
+    #figure(
+      service_size_chart("logical_contributor"),
+      caption: [@scn_logical_contributor]
+    ) <logical_contributor_service_size>,
+  ],
+  [
+    #figure(
+      service_size_chart("structural_logical_contributor"),
+      caption: [@scn_structural_logical_contributor]
+    ) <structural_logical_contributor_service_size>,
+  ],
+)
 
-// TODO: pie chart with sizes (classes) of the modules
+// Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
 == Discussion
 
