@@ -42,7 +42,7 @@ NephroFlow™ Link, part of the NephroFlow™ Product Suite#footnote[#link("http
 NephroFlow™ Link is responsible for collecting data from the dialysis machines, processing it, and sending it to the NephroFlow™ Platform for storage and visualization.
 
 #figure(
-  include("/figures/link.typ"),
+  include("/figures/08-case-study/link.typ"),
   caption: [NephroFlow™ Link architecture]
 ) <link_architecture>
 
@@ -121,7 +121,7 @@ We identified #stats.at("contributors").len() software developers that have cont
 The top two contributors are responsible for #(calc.round(100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits"), digits: 0))% of the commits, while the other eight contributors count for remaining #(calc.round(100 - (100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits")), digits: 0))%.
 
 #figure(
-  include("/figures/contributors-chart.typ"),
+  include("/figures/08-case-study/contributors-chart.typ"),
   caption: [Contributor statistics]
 ) <contributor_statistics>
 
