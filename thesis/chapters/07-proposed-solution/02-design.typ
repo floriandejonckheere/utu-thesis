@@ -17,7 +17,7 @@ The decomposition step is based on the graph partitioning algorithm, which is us
 Finally, the proposed decomposition is evaluated using a set of quality metrics.
 
 #figure(
-  include("/figures/architecture.typ"),
+  include("/figures/07-proposed-solution/architecture.typ"),
   caption: [Architectural overview of the proposed solution]
 ) <architecture>
 

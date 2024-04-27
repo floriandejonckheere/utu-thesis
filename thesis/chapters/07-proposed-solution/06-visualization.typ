@@ -6,7 +6,7 @@ MOSAIK can generate visualizations of the steps in the microservice decompositio
 The information extraction step outputs a dependency graph, where the vertices represent the classes of the monolith application, and the edges represent the dependencies between the classes.
 
 #figure(
-  image("/figures/extraction.svg", width: 60%),
+  image("/figures/07-proposed-solution/extraction.svg", width: 60%),
   caption: [Visualization of information extraction step],
 ) <information_extraction_graph>
 

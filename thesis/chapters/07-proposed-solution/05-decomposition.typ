@@ -72,10 +72,10 @@ Where:
         columns: (auto, auto),
         rows: (auto, auto),
         gutter: 1em,
-        [#include("/figures/louvain-1.typ")],
-        [#include("/figures/louvain-2.typ")],
-        [#include("/figures/louvain-3.typ")],
-        [#include("/figures/louvain-4.typ")],
+        [#include("/figures/07-proposed-solution/louvain-1.typ")],
+        [#include("/figures/07-proposed-solution/louvain-2.typ")],
+        [#include("/figures/07-proposed-solution/louvain-3.typ")],
+        [#include("/figures/07-proposed-solution/louvain-4.typ")],
     ),
     caption: [Louvain algorithm intermediate steps]
 ) <louvain>

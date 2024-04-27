@@ -22,7 +22,7 @@ The architecture emphasizes interchangeability and potential reuse of modules, w
 Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
 
 #figure(
-  include("/figures/modular-monolith2.typ"),
+  include("/figures/05-modular-monolith/modular-monolith2.typ"),
   caption: [Modular monolith architecture @tsechelidis_etal_2023]
 ) <modular_monolith_architecture>
 
@@ -40,7 +40,7 @@ When all modules have been extracted from the monolith, the application has effe
   gutter: 1em,
   [
     #figure(
-      include("/figures/distributedness.typ"),
+      include("/figures/05-modular-monolith/distributedness.typ"),
       caption: [Physical and logical architectures @kucukoglu_2022]
     ) <distributedness>
   ],
