@@ -17,7 +17,7 @@
       slice-style: colors,
       inner-radius: 1,
       inner-label: (content: (value, label) => if value > 2 [#text(white, str(value))] else [], radius: 110%),
-      outer-label: (content: (value, label) => if value <= 2 [#text(size: 10pt, str(value))] else [], radius: 110%),
+      outer-label: (content: none),
     )
   })
 ]
