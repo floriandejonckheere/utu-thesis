@@ -2,8 +2,6 @@
 
 #import "/helpers.typ": *
 
-#import "/figures/results.typ": *
-
 #let stats = (
   sloc: 9288, // cloc . --exclude-dir spec
   files: 204, // find . -iname '*.rb' -not -path './spec/*' | wc -l
@@ -85,6 +83,8 @@ Strategies using a single coupling are not considered, as they extract limited i
   "scn_structural_logical_contributor": (1, 1, 1, [_structural-logical-contributor_]),
 )
 
+#import "/figures/08-case-study/statistics.typ": *
+
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -149,27 +149,27 @@ An overview of the source code repository is presented in @source_code_statistic
   gutter: 1em,
   [
     #figure(
-      results_chart("coupling"),
+      statistics_chart("coupling"),
       caption: [Coupling]
-    ) <coupling_results>,
+    ) <coupling_statistics>,
   ],
   [
     #figure(
-      results_chart("cohesion"),
+      statistics_chart("cohesion"),
       caption: [Cohesion]
-    ) <cohesion_results>,
+    ) <cohesion_statistics>,
   ],
   [
     #figure(
-      results_chart("abc_size"),
+      statistics_chart("abc_size"),
       caption: [ABC size]
-    ) <abc_size_results>,
+    ) <abc_size_statistics>,
   ],
   [
     #figure(
-      results_chart("complexity"),
+      statistics_chart("complexity"),
       caption: [Complexity]
-    ) <complexity_results>,
+    ) <complexity_statistics>,
   ],
 )
 
