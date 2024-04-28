@@ -156,7 +156,7 @@ In this section, we present the results of the decomposition of NephroFlow™ Li
 The results are based on the four test scenarios described in the previous section.
 
 @coupling_statistics, @cohesion_statistics, @abc_size_statistics, and @complexity_statistics display the coupling, cohesion, ABC size, and complexity metrics, respectively, for each scenario using a box plot.
-The plots indicate the distribution of the metrics for each scenario, calculated from the individual metrics of each service in the decomposition.
+The plots indicate the distribution of the metrics for each scenario, calculated from the individual metrics of each microservice in the decomposition.
 
 #import "/figures/08-case-study/statistics.typ": *
 #grid(
@@ -175,17 +175,17 @@ The plots indicate the distribution of the metrics for each scenario, calculated
   ],
 )
 
-The coupling metric measures how loosely coupled the services are to each other, with a lower value indicating a better modularization.
+The coupling metric measures how loosely coupled the microservices are to each other, with a lower value indicating a better modularization.
 @scn_logical_contributor and @scn_structural_logical_contributor have a similar mean coupling value at 227 and 222.5 respectively, with few outliers.
-@scn_structural_logical has a much lower mean coupling value at 72, indicating that the services are more loosely coupled, and the decomposition is more modular.
-On the other hand, @scn_structural_contributor has a mean coupling value of zero, which means that the services are not coupled at all.
-This can happen when the decomposition is too fine-grained, and the services are too small to be useful.
-Looking at the size of the services in @structural_contributor_service_size, we see that the services are indeed very small, with the exception of one service that is significantly larger than the others.
+@scn_structural_logical has a much lower mean coupling value at 72, indicating that the microservices are more loosely coupled, and the decomposition is more modular.
+On the other hand, @scn_structural_contributor has a mean coupling value of zero, which means that the microservices are not coupled at all.
+This can happen when the decomposition is too fine-grained, and the microservices are too small to be useful.
+Looking at the size of the microservices in @structural_contributor_microservice_size, we see that the microservices are indeed very small, with the exception of one microservice that is significantly larger than the others.
 
-The cohesion metric measures how well the services are internally cohesive and group related functionality together.
+The cohesion metric measures how well the microservices are internally cohesive and group related functionality together.
 A higher value indicates a better modularization.
 All scenarios have a similar mean cohesion value, ranging from 0.04 to 0.07 for scenario @scn_structural_contributor.
-The latter is likely caused by the significantly larger service, which raises the mean cohesion value.
+The latter is likely caused by the significantly larger microservice, which raises the mean cohesion value.
 
 #grid(
   columns: (50%, 50%),
@@ -203,14 +203,14 @@ The latter is likely caused by the significantly larger service, which raises th
   ],
 )
 
-ABC size measures the size of a service given the assignments, branches, and conditions in the code.
-A lower value indicates a smaller service, which is generally preferred.
-In @abc_size_statistics, we see that the extrema of the ABC size metric are quite high for all scenarios, indicating that some services are significantly larger than others.
-As the number of services in the decomposition of @scn_logical_contributor is quite small, it has the least variation in the ABC size metric, with a mean value of 153.
-The other scenarios have mean ABC size values ranging from 24 to 67, indicating that the services in these decompositions are on average smaller in size, but with more variation.
+ABC size measures the size of a microservice given the assignments, branches, and conditions in the code.
+A lower value indicates a smaller microservice, which is generally preferred.
+In @abc_size_statistics, we see that the extrema of the ABC size metric are quite high for all scenarios, indicating that some microservices are significantly larger than others.
+As the number of microservices in the decomposition of @scn_logical_contributor is quite small, it has the least variation in the ABC size metric, with a mean value of 153.
+The other scenarios have mean ABC size values ranging from 24 to 67, indicating that the microservices in these decompositions are on average smaller in size, but with more variation.
 
-@complexity_statistics shows the cyclomatic complexity of the services in the decomposition.
-A lower value indicates a simpler service, which is generally preferred.
+@complexity_statistics shows the cyclomatic complexity of the microservices in the decomposition.
+A lower value indicates a simpler microservice, which is generally preferred.
 The statistical values for the complexity metric are similar to the ABC size metric, with the mean complexity values ranging from 21 to 59, with @scn_logical_contributor being an outlier with a mean complexity value of 135.
 ABC size and complexity are closely related, as they both measure the perceived complexity of the code, but they do so in different ways.
 
@@ -219,7 +219,7 @@ ABC size and complexity are closely related, as they both measure the perceived 
   gutter: 1em,
   [
      @mean_metrics lists the mean values of the metrics for each scenario.
-    The mean value of each metric indicates the average value of the metric for all services in the decomposition, and can be used as a reference to compare the scenarios.
+    The mean value of each metric indicates the average value of the metric for all microservices in the decomposition, and can be used as a reference to compare the scenarios.
   ],
   [
     #figure(
@@ -257,42 +257,42 @@ ABC size and complexity are closely related, as they both measure the perceived 
 
 #v(2em)
 
-#import "/figures/08-case-study/service-size.typ": *
+#import "/figures/08-case-study/microservice-size.typ": *
 #grid(
   columns: (50%, 50%),
   gutter: 1em,
   [
     #figure(
-      service_size_chart("structural_logical"),
-      caption: [Service size distribution of @scn_structural_logical]
-    ) <structural_logical_service_size>
+      microservice_size_chart("structural_logical"),
+      caption: [Microservice size distribution of @scn_structural_logical]
+    ) <structural_logical_microservice_size>
   ],
   [
     #figure(
-      service_size_chart("structural_contributor"),
-      caption: [Service size distribution of @scn_structural_contributor]
-    ) <structural_contributor_service_size>
+      microservice_size_chart("structural_contributor"),
+      caption: [Microservice size distribution of @scn_structural_contributor]
+    ) <structural_contributor_microservice_size>
   ]
 )
 
-@scn_structural_logical and @scn_structural_contributor each have 18 services, with a mean size of 6.1 and 4.4 classes per service respectively.
-@scn_structural_logical_contributor has slightly fewer at 14 services, with a larger mean size of 9.2 classes per service.
-These decompositions consists of several larger services, and a fair amount of smaller services that contain only a few classes.
+@scn_structural_logical and @scn_structural_contributor each have 18 microservices, with a mean size of 6.1 and 4.4 classes per microservice respectively.
+@scn_structural_logical_contributor has slightly fewer at 14 microservices, with a larger mean size of 9.2 classes per microservice.
+These decompositions consists of several larger microservices, and a fair amount of smaller microservices that contain only a few classes.
 
 #grid(
   columns: (50%, 50%),
   gutter: 1em,
   [
     #figure(
-      service_size_chart("logical_contributor"),
-      caption: [Service size distribution of @scn_logical_contributor]
-    ) <logical_contributor_service_size>
+      microservice_size_chart("logical_contributor"),
+      caption: [Microservice size distribution of @scn_logical_contributor]
+    ) <logical_contributor_microservice_size>
   ],
   [
     #figure(
-      service_size_chart("structural_logical_contributor"),
-      caption: [Service size distribution of @scn_structural_logical_contributor]
-    ) <structural_logical_contributor_service_size>
+      microservice_size_chart("structural_logical_contributor"),
+      caption: [Microservice size distribution of @scn_structural_logical_contributor]
+    ) <structural_logical_contributor_microservice_size>
   ],
 )
 
@@ -314,23 +314,23 @@ These decompositions consists of several larger services, and a fair amount of s
         [#ref(<scn_logical_contributor>, supplement: none)], [#yaml("/data/logical_contributor.yml").at("clusters").at("count")], [#calc.round(yaml("/data/logical_contributor.yml").at("clusters").at("mean"), digits: 1)],
         [#ref(<scn_structural_logical_contributor>, supplement: none)], [#yaml("/data/structural_logical_contributor.yml").at("clusters").at("count")], [#calc.round(yaml("/data/structural_logical_contributor.yml").at("clusters").at("mean"), digits: 1)],
       ),
-      caption: [Number of services per scenario]
-    ) <services_per_scenario>
+      caption: [Number of microservices per scenario]
+    ) <microservices_per_scenario>
   ],
   [
-    @services_per_scenario lists the number of services identified by MOSAIK for each scenario.
-    Aside from @scn_logical_contributor, the number of services identified by MOSAIK is consistent across the scenarios.
-    @scn_logical_contributor, which consists of a test setup using only evolutionary coupling, identified a significantly lower number, five services.
-    The lack of structural coupling information has a significant impact on the coupling of the services.
+    @microservices_per_scenario lists the number of microservices identified by MOSAIK for each scenario.
+    Aside from @scn_logical_contributor, the number of microservices identified by MOSAIK is consistent across the scenarios.
+    @scn_logical_contributor, which consists of a test setup using only evolutionary coupling, identified a significantly lower number, five microservices.
+    The lack of structural coupling information has a significant impact on the coupling of the microservices.
   ],
 )
 
 #v(1em)
 
-Investigating further into the services identified in @scn_logical_contributor, we observe that the granularity of the services is significantly lower than in other scenarios, with some services containing seemingly unrelated functionality.
-Some of the services include a mix of data processing code, utility functions, and data access code.
-The other scenarios, which do include structural coupling information, identified services that have more related functionality grouped together.
-Due to the restricted nature of the source code, precise information about the functionality for each service cannot be included in this report.
+Investigating further into the microservices identified in @scn_logical_contributor, we observe that the granularity of the microservices is significantly lower than in other scenarios, with some microservices containing seemingly unrelated functionality.
+Some of the microservices include a mix of data processing code, utility functions, and data access code.
+The other scenarios, which do include structural coupling information, identified microservices that have more related functionality grouped together.
+Due to the restricted nature of the source code, precise information about the functionality for each microservice cannot be included in this report.
 
 #grid(
   columns: (60%, 40%),
@@ -339,7 +339,7 @@ Due to the restricted nature of the source code, precise information about the f
      @runtime_statistics depicts the runtime of the analysis for each scenario.
      Each execution is divided into three phases: extraction, decomposition, and evaluation.
      The extraction step is equal for all scenarios, as it is based on the same input data.
-     The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the services.
+     The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the microservices.
      Finally, the evaluation step executes in nearly the same time for all scenarios.
   ],
   [
@@ -360,8 +360,8 @@ The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none),
 The results of the case study show that the decomposition of NephroFlow™ Link into a modular monolith architecture using MOSAIK is feasible.
 The various test scenarios provide insights into how modularization behaves, with varying levels of success in terms of coupling, cohesion, and complexity.
 @scn_logical_contributor indicates that structural coupling is an integral part of the extracted information, and decomposition performs poorly when not considering it.
-Similarly, @scn_structural_contributor shows that the granularity of the decomposition can be too fine-grained, resulting in services that are too small to be useful.
-@scn_structural_logical_contributor, the scenario that considers all three types of coupling, performs well in terms of coupling, cohesion, and complexity, though the services end up with a tighter coupling than the scenario that only considers structural and logical coupling.
+Similarly, @scn_structural_contributor shows that the granularity of the decomposition can be too fine-grained, resulting in microservices that are too small to be useful.
+@scn_structural_logical_contributor, the scenario that considers all three types of coupling, performs well in terms of coupling, cohesion, and complexity, though the microservices end up with a tighter coupling than the scenario that only considers structural and logical coupling.
 Given the results, we can conclude that the quality requirement is met, as the proposed solution is able to identify module boundaries with sufficient quality.
 
 MOSAIK is able to automatically generate decompositions of the application's source code without intervention of the software architect, fulfilling the automation requirement.

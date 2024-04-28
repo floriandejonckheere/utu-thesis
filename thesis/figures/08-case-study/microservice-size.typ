@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.2.2": canvas, chart, draw
 
-#let service_size_chart = (key) => [
+#let microservice_size_chart = (key) => [
   #let data = yaml("/data/" + key + ".yml").at("clusters").at("size").sorted().rev().enumerate(start: 1).map(x => (str(x.at(0)), x.at(1)))
 
   #let total = data.map(p => p.at(1)).sum()
