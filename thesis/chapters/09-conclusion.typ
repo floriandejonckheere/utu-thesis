@@ -1,32 +1,31 @@
+#import "@preview/acrostiche:0.3.1": *
+
 = Conclusion <conclusion>
 
-// SLR conclusion
+This thesis discussed the problem of automated modularization of monolith applications, with a focus on the identification of microservice candidates.
+In the first part of the thesis, we investigated the modular monolith architecture, and discussed the merits and demerits of the software architecture.
+Then, we presented a comprehensive overview of the state of the art on (semi-)automated technologies for modularization of monolith applications.
+We identified and described the most frequenty used approaches in the literature, and set out to compare them against each other.
 
-//In this chapter, we attempted to provide a comprehensive overview of the state of the art on (semi-)automated technologies for modularization of monolith applications.
-//We have identified and described the most frequently used methods and approaches, and compared them against each other.
-//We have enumerated and described the most frequently used algorithms and quality metrics, and discussed their merits and demerits. /* TODO: discuss merits and demerits */
-//
-//Using the results of our systematic literature review, we were able to answer the research questions that motivated this review:
-//
-//*Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
-//
-//Each monolith application is unique, and has its own requirements, constraints, and challenges.
-//When migrating a monolith application to a microservices architecture, there are many facets to take into consideration, such as the architecture of the application, the structure of the organization, the capabilities of the team, and the business requirements.
-//As such, proposing a general migration framework that fits all applications is not feasible, and every software architect has a different and unique approach to the process.
+In the third part, we presented our solution for the automated identification of microservice candidates in monolith codebases, based on the findings of our systematic literature review.
+We comprehensively described the architecture of our tool, and discussed the implementation details.
 
+Finally, we evaluated the effectiveness of our solution using a case study on a real-world monolith application.
+We conclude that our solution is able to identify microservice candidates with an acceptable level of quality, and that it can be used as a basis for further research in this area.
 
+#pagebreak()
 
-== Future work
+== Future considerations
 
-// Possible future work related to the topic
+The research field of automated modularization of monolith applications is still developing, and there are many opportunities for future improvements.
+In recent years, there has been a pickup in the number of publications on this topic, and we expect to see more research papers published in the near future.
 
-// Literature Review: lot of papers in recent years, so presumably we will see a pickup in this topic
+On the side of our solution, there are several areas where we see potential for improvement.
+As many experts have already pointed out, the information extracted from the codebase can be improved by using additional techniques.
+For example, the structural coupling can be improved by dynamically collecting information during the runtime of the application, as static analysis is very limited in dynamic languages like Ruby and Python.
+Furthermore, enhancing the extracted information with additional object-oriented relationships, such as inheritance and composition, can improve the accuracy of the microservice identification algorithm.
+Alternatively, supplementary heuristics, such as semantic coupling, can be utilized as well.
 
-// Improvements
-// Extraction: use more information
-// - Structural analysis: exploit inheritance, composition, and other OO relationships
-// - Structural analysis: dynamic collection (static analysis is limited)
-// - Semantic coupling
-// Identification: performance
-// - Rewrite in C++ or Rust (https://github.com/lib-ruby-parser/lib-ruby-parser)
-// - Merge smaller services: perhaps a top-down approach yields better results
+Finally, the MOSAIK tool can be improved technically.
+For instance, rewriting critical parts of the identification algorithm in another, more performant language would yield large gains in runtime performance.
+Moreover, the tool can be extended to support more programming languages, as the current implementation only supports Ruby.

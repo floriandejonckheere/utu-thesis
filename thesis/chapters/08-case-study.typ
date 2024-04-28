@@ -376,3 +376,5 @@ The results indicate that the transformation of NephroFlow™ Link into a modula
 In order to validate the ability of MOSAIK to perform qualitative decompositions on other applications, more case studies should be conducted.
 In the industry there are many applications written in Ruby that are open-source, and could be used for this purpose.
 Furthermore, as only the parsing of the source code is language-specific, the extraction part of the tool could be rewritten to support other dynamic languages (e.g. Python) as well.
+
+// TODO: top-down yield less granular microservices than bottom-up?
