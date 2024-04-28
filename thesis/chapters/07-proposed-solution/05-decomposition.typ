@@ -147,7 +147,8 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
     The refinement ensures that the algorithm does not get stuck in a local optimum using a probability distribution.
     The Leiden algorithm has been shown to outperform the Louvain algorithm in terms of quality and speed @traag_etal_2019.
 
-    Although the Leiden algorithm is more complex than the Louvain algorithm, it is more suitable for our task due to its ability to detect overlapping communities.
+    Although the Leiden algorithm is more performant than the Louvain algorithm, it is more complex to implement due to the refinement phase.
+    Hence, the proposed solution uses the Louvain algorithm as the default clustering algorithm, but allows easy integration of additional algorithms such as the Leiden algorithm.
   ],
   [#figure(
       table(
