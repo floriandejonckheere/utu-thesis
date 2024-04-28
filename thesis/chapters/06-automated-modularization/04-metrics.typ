@@ -82,7 +82,7 @@ The publications in this review use different definitions for cohesion and coupl
 For example, #cite_full(<selmadji_etal_2020>) defined (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
 The authors then define internal coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 @agarwal_etal_2021 @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the service boundary.
+Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 @agarwal_etal_2021 @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the microservice boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #cite_full(<filippone_etal_2023>) defined average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
@@ -90,20 +90,20 @@ Similarly, #cite_full(<filippone_etal_2023>) defined average cohesion and averag
 Several other publications used the metrics introduced by #cite_full(<jin_etal_2021>) in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
 
 Another approach to cohesion and coupling is that of #cite_full(<santos_silva_2022>) and #cite_full(<lourenco_silva_2023>), who defined cohesion as the percentage of entities accessed by a functionality.
-If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the service is strongly cohesive.
+If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the microservice is strongly cohesive.
 Coupling is defined as the percentage of the entities exposed by a microservice candidate that are accessed by other microservice candidates.
 
 #cite_full(<al_debagy_martinek_2020>) used the inverse of cohesion as a metric, named lack of cohesion (LCOM).
 Lack of cohesion is calculated by the number of times a microservice uses a method from another microservice, divided by the number of operations multiplied by the number of unique parameters.
-This metric quantifies how the operations in a service are related to each other in terms of functionality.
+This metric quantifies how the operations in a microservice are related to each other in terms of functionality.
 
 ==== Network overhead
 
-Microservices are distributed systems, and communication between services is done over a network.
+Microservices are distributed systems, and communication between microservices is done over a network.
 The network overhead is the extra cost of this communication, and many authors consider it an important metric to consider when designing a microservice architecture.
 
 #cite_full(<filippone_etal_2021>) and others @carvalho_etal_2020 @zhou_xiong_2022 calculated the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
-#cite_full(<carvalho_etal_2020>) also included the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between services (for example, TCP headers, HTTP headers, etc.).
+#cite_full(<carvalho_etal_2020>) also included the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between microservices (for example, TCP headers, HTTP headers, etc.).
 
 #cite_full(<quattrocchi_etal_2024>) measured network overhead as part of their operational cost metric.
 The metric also includes data management costs (CPU and memory).
@@ -131,7 +131,7 @@ The prediction is made based on performance logs collected by executing the mono
 
 ==== Modularity
 
-Modularity is a measure of independence of services, and can be divided into many dimensions, such as structure, concept, history, and dynamism @candela_etal_2016.
+Modularity is a measure of independence of microservices, and can be divided into many dimensions, such as structure, concept, history, and dynamism @candela_etal_2016.
 Some definitions of modularity rely on the concepts of cohesion and coupling, and the balance between them.
 
 #cite_full(<jin_etal_2021>) used modularity as a metric to evaluate potential decompositions.
@@ -154,7 +154,7 @@ The usage metric of an object-oriented software system, defined as the sum of th
 #cite_full(<saidi_etal_2023>) used the intra-domain and inter-domain data dependency metrics to delineate microservice boundaries, based on the read and write access pattern of the operations.
 In a similar fashion, #cite_full(<selmadji_etal_2020>) talked about data autonomy determined by the internal and external data access of a microservice candidate.
 
-#cite_full(<kamimura_etal_2018>) introduced a metric called dedication score, which measures the relationships between services as a function of access frequency.
+#cite_full(<kamimura_etal_2018>) introduced a metric called dedication score, which measures the relationships between microservices as a function of access frequency.
 Along with a modularity metric, the dedication score is used in their custom SArF dependency-based clustering algorithm @kobayashi_etal_2012.
 
 The correlation metric is used by #cite_full(<yang_etal_2022>) and indicates the degree of correlation between the microservices.

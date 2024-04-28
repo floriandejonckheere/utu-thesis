@@ -45,7 +45,7 @@ Microservices are a more recent architectural style that builds on the principle
 In a microservice architecture, a software system is decomposed into a set of small, independent deployment units that communicate with each other using lightweight protocols such as HTTP or messaging queues.
 Microservices promote the separation of concerns and decentralized governance @fowler_lewis_2014.
 Each microservice is a separate codebase, which makes it easier to develop and deploy the system incrementally.
-The architecture is designed to be resilient to failures, and allows for scaling individual services independently.
+The architecture is designed to be resilient to failures, and allows for scaling individual microservices independently.
 In modern software engineering, microservices are a key concept in building flexible, scalable, and maintainable software systems.
 
 While #acr("SOA") and microservices share many similarities, there are some key differences between the two architectural styles.
@@ -64,7 +64,7 @@ Modules are loosely coupled, which entails that they have minimal dependencies o
 
 Modularization typically requires a deep understanding of the existing system architecture, bundled with knowledge about the business domain and the requirements of the system.
 The process of modularization can be very time-consuming and error-prone @mancoridis_etal_1998.
-Automated tools and techniques for service identification and decomposition can help to accelerate the process, and allow software architects with limited knowledge about the software system to initiate the modularization process.
+Automated tools and techniques for microservice identification and decomposition can help to accelerate the process, and allow software architects with limited knowledge about the software system to initiate the modularization process.
 
 ==== Quality metrics
 
