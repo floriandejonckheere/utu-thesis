@@ -172,6 +172,45 @@ An overview of the source code repository is presented in @source_code_statistic
   ],
 )
 
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
+  [
+     @mean_metrics lists the mean values of the metrics for each scenario.
+  ],
+  [
+    #figure(
+      table(
+        columns: (auto, auto, auto, auto, auto),
+        inset: 10pt,
+        stroke: (x: none),
+        align: (right, left),
+        [*ID*], [*Coup*], [*Coh*], [*Size*], [*Cplx*],
+        [#ref(<scn_structural_logical>, supplement: none)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("coupling").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("cohesion").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("abc_size").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("complexity").at("mean"), digits: 2)],
+        [#ref(<scn_structural_contributor>, supplement: none)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("coupling").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("cohesion").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("abc_size").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("complexity").at("mean"), digits: 2)],
+        [#ref(<scn_logical_contributor>, supplement: none)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("coupling").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("cohesion").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("abc_size").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("complexity").at("mean"), digits: 2)],
+        [#ref(<scn_structural_logical_contributor>, supplement: none)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("coupling").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("cohesion").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("abc_size").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("complexity").at("mean"), digits: 2)],
+      ),
+      caption: [Metric mean per scenario]
+    ) <mean_metrics>
+  ]
+)
 #import "/figures/08-case-study/service-size.typ": *
 #grid(
   columns: (50%, 50%),
