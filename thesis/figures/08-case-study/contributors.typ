@@ -15,7 +15,7 @@
 
 #let total = data.map(p => p.at(1)).sum()
 
-#canvas({
+#canvas(length: .75cm, {
   let colors = gradient.linear(red, blue, green, yellow)
 
   chart.piechart(
@@ -26,6 +26,6 @@
     radius: 3,
     slice-style: colors,
     inner-radius: 1,
-    inner-label: (content: (value, label) => if value > 12 [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 110%),
-    outer-label: (content: (value, label) => if value <= 12 and value > 1 [#text(size: 10pt, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 120%))
+    inner-label: (content: (value, label) => if value > 12 [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 100%),
+    outer-label: (content: (value, label) => if value <= 12 and value > 1 [#text(size: 9pt, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 120%))
 })
