@@ -255,6 +255,8 @@ ABC size and complexity are closely related, as they both measure the perceived 
   ]
 )
 
+#v(1em)
+
 #import "/figures/08-case-study/service-size.typ": *
 #grid(
   columns: (50%, 50%),
@@ -270,7 +272,14 @@ ABC size and complexity are closely related, as they both measure the perceived 
       service_size_chart("structural_contributor"),
       caption: [@scn_structural_contributor]
     ) <structural_contributor_service_size>
-  ],
+  ]
+)
+
+@scn_structural_logical and
+
+#grid(
+  columns: (50%, 50%),
+  gutter: 1em,
   [
     #figure(
       service_size_chart("logical_contributor"),
@@ -291,15 +300,15 @@ ABC size and complexity are closely related, as they both measure the perceived 
   [
     #figure(
       table(
-        columns: (auto, auto),
+        columns: (auto, auto, auto),
         inset: 10pt,
         stroke: (x: none),
-        align: (right, left),
-        [*ID*], [$bold(\#M_c)$],
-        [#ref(<scn_structural_logical>, supplement: none)], [#yaml("/data/structural_logical.yml").at("clusters").at("count")],
-        [#ref(<scn_structural_contributor>, supplement: none)], [#yaml("/data/structural_contributor.yml").at("clusters").at("count")],
-        [#ref(<scn_logical_contributor>, supplement: none)], [#yaml("/data/logical_contributor.yml").at("clusters").at("count")],
-        [#ref(<scn_structural_logical_contributor>, supplement: none)], [#yaml("/data/structural_logical_contributor.yml").at("clusters").at("count")],
+        align: (right, left, left),
+        [*ID*], [$bold(\#M_c)$], [$overline(bold(\#M_c))$],
+        [#ref(<scn_structural_logical>, supplement: none)], [#yaml("/data/structural_logical.yml").at("clusters").at("count")], [#calc.round(yaml("/data/structural_logical.yml").at("clusters").at("mean"), digits: 1)],
+        [#ref(<scn_structural_contributor>, supplement: none)], [#yaml("/data/structural_contributor.yml").at("clusters").at("count")], [#calc.round(yaml("/data/structural_contributor.yml").at("clusters").at("mean"), digits: 1)],
+        [#ref(<scn_logical_contributor>, supplement: none)], [#yaml("/data/logical_contributor.yml").at("clusters").at("count")], [#calc.round(yaml("/data/logical_contributor.yml").at("clusters").at("mean"), digits: 1)],
+        [#ref(<scn_structural_logical_contributor>, supplement: none)], [#yaml("/data/structural_logical_contributor.yml").at("clusters").at("count")], [#calc.round(yaml("/data/structural_logical_contributor.yml").at("clusters").at("mean"), digits: 1)],
       ),
       caption: [Number of services per scenario]
     ) <services_per_scenario>

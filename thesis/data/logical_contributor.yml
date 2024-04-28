@@ -38,9 +38,10 @@ clusters:
   count: 5
   min: 3
   max: 33
+  mean: 16.4
   size:
-  - 26
   - 3
-  - 33
   - 8
   - 12
+  - 26
+  - 33
