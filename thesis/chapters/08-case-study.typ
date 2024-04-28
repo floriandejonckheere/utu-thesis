@@ -357,10 +357,21 @@ The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none),
 
 == Discussion
 
-// Analysis and discussion of the results
+The results of the case study show that the decomposition of NephroFlow™ Link into a modular monolith architecture using MOSAIK is feasible.
+The various test scenarios provide insights into how modularization behaves, with varying levels of success in terms of coupling, cohesion, and complexity.
+@scn_logical_contributor indicates that structural coupling is an integral part of the extracted information, and decomposition performs poorly when not considering it.
+Similarly, @scn_structural_contributor shows that the granularity of the decomposition can be too fine-grained, resulting in services that are too small to be useful.
+@scn_structural_logical_contributor, the scenario that considers all three types of coupling, performs well in terms of coupling, cohesion, and complexity, though the services end up with a tighter coupling than the scenario that only considers structural and logical coupling.
+Given the results, we can conclude that the quality requirement is met, as the proposed solution is able to identify module boundaries with sufficient quality.
 
-// Refer back to the (non-)functional requirements
-// Functional requirements: quality, automation, technology, visual
-// Non-functional requirements: usability, performance, reuse
+MOSAIK is able to automatically generate decompositions of the application's source code without intervention of the software architect, fulfilling the automation requirement.
+The tool is able to generate visualizations of the decompositions, which can be used to gain insight into the structure of the application, fulfilling the visual requirement.
 
-// Ability of the proposal solution to generalize
+Finally, the runtime of the analysis is acceptable for the source code of NephroFlow™ Link, with the decomposition of the application taking less than three minutes to complete.
+However, the runtime of the analysis may increase significantly for larger applications, as the time complexity of the algorithm is $O(n "log"(n))$ @lancichinetti_fortunato_2009.
+
+The results indicate that the transformation of NephroFlow™ Link into a modular monolith architecture is feasible and can provide numerous benefits, such as improved development velocity, as well as increasing the overall performance of the application.
+
+In order to validate the ability of MOSAIK to perform qualitative decompositions on other applications, more case studies should be conducted.
+In the industry there are many applications written in Ruby that are open-source, and could be used for this purpose.
+Furthermore, as only the parsing of the source code is language-specific, the extraction part of the tool could be rewritten to support other dynamic languages (e.g. Python) as well.
