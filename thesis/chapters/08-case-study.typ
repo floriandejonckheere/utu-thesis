@@ -163,13 +163,13 @@ The plots indicate the distribution of the metrics for each scenario, calculated
   columns: (50%, 50%),
   [
     #figure(
-      statistics_chart("coupling"),
+      statistics_chart("coupling", 50),
       caption: [Coupling]
     ) <coupling_statistics>
   ],
   [
     #figure(
-      statistics_chart("cohesion"),
+      statistics_chart("cohesion", 0.05),
       caption: [Cohesion]
     ) <cohesion_statistics>
   ],
@@ -191,13 +191,13 @@ The latter is likely caused by the significantly larger service, which raises th
   columns: (50%, 50%),
   [
     #figure(
-      statistics_chart("abc_size"),
+      statistics_chart("abc_size", 50),
       caption: [ABC size]
     ) <abc_size_statistics>
   ],
   [
     #figure(
-      statistics_chart("complexity"),
+      statistics_chart("complexity", 50),
       caption: [Complexity]
     ) <complexity_statistics>
   ],

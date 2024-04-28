@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.2.2": canvas, chart, draw
 
-#let statistics_chart = (key) => [
+#let statistics_chart = (key, ytickstep) => [
   #let data = (
     (<scn_structural_logical>, yaml("/data/structural_logical.yml")),
     (<scn_structural_contributor>, yaml("/data/structural_contributor.yml")),
@@ -25,7 +25,6 @@
 
   #let ymin = calc.min(..rows.map(x => x.min))
   #let ymax = calc.max(..rows.map(x => x.max))
-  #let ytickstep = (ymax - ymin) / 10
 
   #canvas(length: .75cm, {
     chart.boxwhisker(
@@ -33,7 +32,7 @@
       label-key: "label",
       y-min: (ymin - (ytickstep / 2)),
       y-max: (ymax + (ytickstep / 2)),
-//      y-tick-step: ytickstep,
+      y-tick-step: ytickstep,
       (..rows),
     )
   })
