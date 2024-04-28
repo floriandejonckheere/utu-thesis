@@ -345,7 +345,7 @@ Due to the restricted nature of the source code, precise information about the f
   [
     #figure(
       include("/figures/08-case-study/runtime.typ"),
-      caption: [Runtime (in seconds)]
+      caption: [Total runtime\ (in seconds)]
     ) <runtime_statistics>
   ]
 )
@@ -353,10 +353,11 @@ Due to the restricted nature of the source code, precise information about the f
 The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none), #ref(<scn_logical_contributor>, supplement: none), and #ref(<scn_structural_logical_contributor>, supplement: none) had a similar runtime (157, 148, and 128 seconds respectively), while the scenario #ref(<scn_structural_contributor>, supplement: none) executed in less than half the time: 72 seconds.
 @scn_structural_contributor is the fastest scenario, as it does not consider the logical coupling, which contains a lot of information that needs to be processed.
 
+#pagebreak()
+
 == Discussion
 
 // Analysis and discussion of the results
-// Justify the reason for existence of the modular monolith paradigm
 
 // Refer back to the (non-)functional requirements
 // Functional requirements: quality, automation, technology, visual
