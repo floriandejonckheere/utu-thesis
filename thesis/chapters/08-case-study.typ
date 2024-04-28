@@ -360,6 +360,4 @@ The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none),
 // Functional requirements: quality, automation, technology, visual
 // Non-functional requirements: usability, performance, reuse
 
-== Threats to validity
-
 // Ability of the proposal solution to generalize
