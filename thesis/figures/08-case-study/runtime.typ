@@ -8,7 +8,6 @@
 )
 
 #canvas({
-  draw.set-style(legend: (fill: white))
   chart.columnchart(
     data,
     mode: "stacked",
@@ -17,6 +16,10 @@
     label-key: 0,
     value-key: (1, 2, 3),
     labels: ([Extraction], [Decomposition], [Evaluation]),
-    legend: "legend.south",
+    legend: "legend.north",
+    legend-style: (
+      padding: .4em,
+      offset: (0, .5),
+    ),
   )
 })

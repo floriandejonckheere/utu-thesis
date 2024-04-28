@@ -296,7 +296,7 @@ Due to the restricted nature of the source code, precise information about the f
   columns: (60%, 40%),
   gutter: 1em,
   [
-     @performance_statistics depicts the runtime of the analysis for each scenario.
+     @runtime_statistics depicts the runtime of the analysis for each scenario.
      Each execution is divided into three phases: extraction, decomposition, and evaluation.
      The extraction step is equal for all scenarios, as it is based on the same input data.
      The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the services.
@@ -304,9 +304,9 @@ Due to the restricted nature of the source code, precise information about the f
   ],
   [
     #figure(
-      include("/figures/08-case-study/performance.typ"),
+      include("/figures/08-case-study/runtime.typ"),
       caption: [Runtime (in seconds)]
-    ) <performance_statistics>
+    ) <runtime_statistics>
   ]
 )
 
