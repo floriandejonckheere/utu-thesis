@@ -153,7 +153,6 @@ An overview of the source code repository is presented in @source_code_statistic
 #import "/figures/08-case-study/statistics.typ": *
 #grid(
   columns: (50%, 50%),
-  gutter: 1em,
   [
     #figure(
       statistics_chart("coupling"),
