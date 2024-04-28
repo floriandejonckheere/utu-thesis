@@ -1,7 +1,5 @@
 = Conclusion <conclusion>
 
-// Summary of the thesis
-
 // SLR conclusion
 
 //In this chapter, we attempted to provide a comprehensive overview of the state of the art on (semi-)automated technologies for modularization of monolith applications.

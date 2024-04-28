@@ -369,6 +369,7 @@ The tool is able to generate visualizations of the decompositions, which can be 
 
 Finally, the runtime of the analysis is acceptable for the source code of NephroFlow™ Link, with the decomposition of the application taking less than three minutes to complete.
 However, the runtime of the analysis may increase significantly for larger applications, as the time complexity of the algorithm is $O(n "log"(n))$ @lancichinetti_fortunato_2009.
+Hence, we conclude that the performance requirement is only partially met, as the tool may not be performant enough for very large applications.
 
 The results indicate that the transformation of NephroFlow™ Link into a modular monolith architecture is feasible and can provide numerous benefits, such as improved development velocity, as well as increasing the overall performance of the application.
 
