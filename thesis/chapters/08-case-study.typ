@@ -203,7 +203,16 @@ The latter is likely caused by the significantly larger service, which raises th
   ],
 )
 
-// TODO: discuss statistics
+ABC size measures the size of a service given the assignments, branches, and conditions in the code.
+A lower value indicates a smaller service, which is generally preferred.
+In @abc_size_statistics, we see that the extrema of the ABC size metric are quite high for all scenarios, indicating that some services are significantly larger than others.
+As the number of services in the decomposition of @scn_logical_contributor is quite small, it has the least variation in the ABC size metric, with a mean value of 153.
+The other scenarios have mean ABC size values ranging from 24 to 67, indicating that the services in these decompositions are on average smaller in size, but with more variation.
+
+@complexity_statistics shows the cyclomatic complexity of the services in the decomposition.
+A lower value indicates a simpler service, which is generally preferred.
+The statistical values for the complexity metric are similar to the ABC size metric, with the mean complexity values ranging from 21 to 59, with @scn_logical_contributor being an outlier with a mean complexity value of 135.
+ABC size and complexity are closely related, as they both measure the perceived complexity of the code, but they do so in different ways.
 
 #grid(
   columns: (50%, 50%),
