@@ -148,7 +148,15 @@ An overview of the source code repository is presented in @source_code_statistic
   caption: [Source code statistics]
 ) <source_code_statistics>
 
+#pagebreak()
+
 == Evaluation and results
+
+In this section, we present the results of the decomposition of NephroFlow™ Link using MOSAIK.
+The results are based on the four test scenarios described in the previous section.
+
+@coupling_statistics, @cohesion_statistics, @abc_size_statistics, and @complexity_statistics display the coupling, cohesion, ABC size, and complexity metrics, respectively, for each scenario using a box plot.
+The plots indicate the distribution of the metrics for each scenario, calculated from the individual metrics of each service in the decomposition.
 
 #import "/figures/08-case-study/statistics.typ": *
 #grid(
@@ -167,7 +175,17 @@ An overview of the source code repository is presented in @source_code_statistic
   ],
 )
 
-// TODO: discuss statistics
+The coupling metric measures how loosely coupled the services are to each other, with a lower value indicating a better modularization.
+@scn_logical_contributor and @scn_structural_logical_contributor have a similar mean coupling value at 227 and 222.5 respectively, with few outliers.
+@scn_structural_logical has a much lower mean coupling value at 72, indicating that the services are more loosely coupled, and the decomposition is more modular.
+On the other hand, @scn_structural_contributor has a mean coupling value of zero, which means that the services are not coupled at all.
+This can happen when the decomposition is too fine-grained, and the services are too small to be useful.
+Looking at the size of the services in @structural_contributor_service_size, we see that the services are indeed very small, with the exception of one service that is significantly larger than the others.
+
+The cohesion metric measures how well the services are internally cohesive and group related functionality together.
+A higher value indicates a better modularization.
+All scenarios have a similar mean cohesion value, ranging from 0.04 to 0.07 for scenario @scn_structural_contributor.
+The latter is likely caused by the significantly larger service, which raises the mean cohesion value.
 
 #grid(
   columns: (50%, 50%),
@@ -192,6 +210,7 @@ An overview of the source code repository is presented in @source_code_statistic
   gutter: 1em,
   [
      @mean_metrics lists the mean values of the metrics for each scenario.
+    The mean value of each metric indicates the average value of the metric for all services in the decomposition, and can be used as a reference to compare the scenarios.
   ],
   [
     #figure(
@@ -204,28 +223,29 @@ An overview of the source code repository is presented in @source_code_statistic
         [#ref(<scn_structural_logical>, supplement: none)],
           [#calc.round(yaml("/data/structural_logical.yml").at("coupling").at("mean"), digits: 2)],
           [#calc.round(yaml("/data/structural_logical.yml").at("cohesion").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_logical.yml").at("abc_size").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_logical.yml").at("complexity").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("abc_size").at("mean"), digits: 0)],
+          [#calc.round(yaml("/data/structural_logical.yml").at("complexity").at("mean"), digits: 0)],
         [#ref(<scn_structural_contributor>, supplement: none)],
           [#calc.round(yaml("/data/structural_contributor.yml").at("coupling").at("mean"), digits: 2)],
           [#calc.round(yaml("/data/structural_contributor.yml").at("cohesion").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_contributor.yml").at("abc_size").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_contributor.yml").at("complexity").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("abc_size").at("mean"), digits: 0)],
+          [#calc.round(yaml("/data/structural_contributor.yml").at("complexity").at("mean"), digits: 0)],
         [#ref(<scn_logical_contributor>, supplement: none)],
           [#calc.round(yaml("/data/logical_contributor.yml").at("coupling").at("mean"), digits: 2)],
           [#calc.round(yaml("/data/logical_contributor.yml").at("cohesion").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/logical_contributor.yml").at("abc_size").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/logical_contributor.yml").at("complexity").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("abc_size").at("mean"), digits: 0)],
+          [#calc.round(yaml("/data/logical_contributor.yml").at("complexity").at("mean"), digits: 0)],
         [#ref(<scn_structural_logical_contributor>, supplement: none)],
           [#calc.round(yaml("/data/structural_logical_contributor.yml").at("coupling").at("mean"), digits: 2)],
           [#calc.round(yaml("/data/structural_logical_contributor.yml").at("cohesion").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("abc_size").at("mean"), digits: 2)],
-          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("complexity").at("mean"), digits: 2)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("abc_size").at("mean"), digits: 0)],
+          [#calc.round(yaml("/data/structural_logical_contributor.yml").at("complexity").at("mean"), digits: 0)],
       ),
-      caption: [Metric mean per scenario]
+      caption: [Mean of metric per scenario]
     ) <mean_metrics>
   ]
 )
+
 #import "/figures/08-case-study/service-size.typ": *
 #grid(
   columns: (50%, 50%),
@@ -310,8 +330,8 @@ Due to the restricted nature of the source code, precise information about the f
   ]
 )
 
-The scenarios #ref(<scn_structural_logical>, supplement: none), #ref(<scn_logical_contributor>, supplement: none), and #ref(<scn_structural_logical_contributor>, supplement: none) executed in similar timeframes (157, 148, and 128 seconds respectively), while the scenario #ref(<scn_structural_contributor>, supplement: none) executed in less than half the time: 72 seconds.
-The reason for the difference in execution time is the logical coupling, which contains a lot of information that needs to be processed.
+The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none), #ref(<scn_logical_contributor>, supplement: none), and #ref(<scn_structural_logical_contributor>, supplement: none) had a similar runtime (157, 148, and 128 seconds respectively), while the scenario #ref(<scn_structural_contributor>, supplement: none) executed in less than half the time: 72 seconds.
+@scn_structural_contributor is the fastest scenario, as it does not consider the logical coupling, which contains a lot of information that needs to be processed.
 
 == Discussion
 
