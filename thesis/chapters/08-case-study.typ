@@ -157,27 +157,35 @@ An overview of the source code repository is presented in @source_code_statistic
     #figure(
       statistics_chart("coupling"),
       caption: [Coupling]
-    ) <coupling_statistics>,
+    ) <coupling_statistics>
   ],
   [
     #figure(
       statistics_chart("cohesion"),
       caption: [Cohesion]
-    ) <cohesion_statistics>,
+    ) <cohesion_statistics>
   ],
+)
+
+// TODO: discuss statistics
+
+#grid(
+  columns: (50%, 50%),
   [
     #figure(
       statistics_chart("abc_size"),
       caption: [ABC size]
-    ) <abc_size_statistics>,
+    ) <abc_size_statistics>
   ],
   [
     #figure(
       statistics_chart("complexity"),
       caption: [Complexity]
-    ) <complexity_statistics>,
+    ) <complexity_statistics>
   ],
 )
+
+// TODO: discuss statistics
 
 #grid(
   columns: (50%, 50%),
@@ -226,25 +234,25 @@ An overview of the source code repository is presented in @source_code_statistic
     #figure(
       service_size_chart("structural_logical"),
       caption: [@scn_structural_logical]
-    ) <structural_logical_service_size>,
+    ) <structural_logical_service_size>
   ],
   [
     #figure(
       service_size_chart("structural_contributor"),
       caption: [@scn_structural_contributor]
-    ) <structural_contributor_service_size>,
+    ) <structural_contributor_service_size>
   ],
   [
     #figure(
       service_size_chart("logical_contributor"),
       caption: [@scn_logical_contributor]
-    ) <logical_contributor_service_size>,
+    ) <logical_contributor_service_size>
   ],
   [
     #figure(
       service_size_chart("structural_logical_contributor"),
       caption: [@scn_structural_logical_contributor]
-    ) <structural_logical_contributor_service_size>,
+    ) <structural_logical_contributor_service_size>
   ],
 )
 
