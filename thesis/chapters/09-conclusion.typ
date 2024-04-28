@@ -31,3 +31,4 @@
 // - Semantic coupling
 // Identification: performance
 // - Rewrite in C++ or Rust (https://github.com/lib-ruby-parser/lib-ruby-parser)
+// - Merge smaller services: perhaps a top-down approach yields better results

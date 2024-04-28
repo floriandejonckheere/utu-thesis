@@ -255,7 +255,7 @@ ABC size and complexity are closely related, as they both measure the perceived 
   ]
 )
 
-#v(1em)
+#v(2em)
 
 #import "/figures/08-case-study/service-size.typ": *
 #grid(
@@ -264,18 +264,20 @@ ABC size and complexity are closely related, as they both measure the perceived 
   [
     #figure(
       service_size_chart("structural_logical"),
-      caption: [@scn_structural_logical]
+      caption: [Service size distribution of @scn_structural_logical]
     ) <structural_logical_service_size>
   ],
   [
     #figure(
       service_size_chart("structural_contributor"),
-      caption: [@scn_structural_contributor]
+      caption: [Service size distribution of @scn_structural_contributor]
     ) <structural_contributor_service_size>
   ]
 )
 
-@scn_structural_logical and
+@scn_structural_logical and @scn_structural_contributor each have 18 services, with a mean size of 6.1 and 4.4 classes per service respectively.
+@scn_structural_logical_contributor has slightly fewer at 14 services, with a larger mean size of 9.2 classes per service.
+These decompositions consists of several larger services, and a fair amount of smaller services that contain only a few classes.
 
 #grid(
   columns: (50%, 50%),
@@ -283,16 +285,18 @@ ABC size and complexity are closely related, as they both measure the perceived 
   [
     #figure(
       service_size_chart("logical_contributor"),
-      caption: [@scn_logical_contributor]
+      caption: [Service size distribution of @scn_logical_contributor]
     ) <logical_contributor_service_size>
   ],
   [
     #figure(
       service_size_chart("structural_logical_contributor"),
-      caption: [@scn_structural_logical_contributor]
+      caption: [Service size distribution of @scn_structural_logical_contributor]
     ) <structural_logical_contributor_service_size>
   ],
 )
+
+#v(2em)
 
 #grid(
   columns: (30%, 70%),
@@ -315,7 +319,7 @@ ABC size and complexity are closely related, as they both measure the perceived 
   ],
   [
     @services_per_scenario lists the number of services identified by MOSAIK for each scenario.
-    Aside from @scn_logical_contributor, the number of services identified by MOSAIK is consistent across the scenarios, ranging from 14-18 services.
+    Aside from @scn_logical_contributor, the number of services identified by MOSAIK is consistent across the scenarios.
     @scn_logical_contributor, which consists of a test setup using only evolutionary coupling, identified a significantly lower number, five services.
     The lack of structural coupling information has a significant impact on the coupling of the services.
   ],
@@ -327,8 +331,6 @@ Investigating further into the services identified in @scn_logical_contributor, 
 Some of the services include a mix of data processing code, utility functions, and data access code.
 The other scenarios, which do include structural coupling information, identified services that have more related functionality grouped together.
 Due to the restricted nature of the source code, precise information about the functionality for each service cannot be included in this report.
-
-// Maybe also for each scenario, a plot with the total cohesion/coupling/...
 
 #grid(
   columns: (60%, 40%),
