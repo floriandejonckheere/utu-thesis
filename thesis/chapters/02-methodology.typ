@@ -4,26 +4,27 @@
 
 = Methodology <methodology>
 
-This chapter describes the methodology used in this thesis in detail.
+This chapter describes the methodology used in this thesis.
 
 To answer the first research question, an ad hoc review of grey literature is conducted, picking a select number of publications that define and discuss the modular monolith architecture.
 An ad hoc review is a less formal review process, where the researcher discusses purposefully selected publications to gain an understanding of a specific topic @ralph_baltes_2022.
 
-For the second research question, a systematic literature review is conducted to identify and summarize the state of the art in automated modularization technologies.
-Systematic literature reviews are more formal than ad hoc reviews, and follow a well-defined process to reduce bias and increase the reliability of the results.
+For the second research question, a systematic literature review is conducted to identify and summarize the state of the art in (semi-)automated modularization technologies.
+Systematic literature reviews are more formal than ad hoc reviews, and follow a well-defined process to reduce bias and increase the reliability of the results @ralph_baltes_2022.
 
-The third research question is answered by designing an approach based on the results of the systematic literature review, and implementing it for a case study.
-The effectiveness of the approach is then evaluated based on quantitative and qualitative metrics.
+The third research question is answered by designing an approach based on the results of the systematic literature review, and evaluating it in the context of a case study.
+The effectiveness of the approach is then assessed based on a select set of quality metrics.
 
 ==== Systematic literature review
 
 A systematic literature review is used to identify, evaluate and interpret research literature for a given topic area, or research question @kitchenham_charters_2007.
-The systematic nature of systematic literature reviews reduces sampling bias through a well-defined sequence of steps to identify and categorize existing literature, and applies techniques such as forward and reverse snowballing to reduce publication bias @ralph_baltes_2022.
+The methodological nature of systematic literature reviews reduces sampling bias through a well-defined sequence of steps to identify and categorize existing literature, and applies techniques such as forward and reverse snowballing to reduce publication bias @ralph_baltes_2022.
 Studies directly researching the topic area are called _primary_ studies, systematic studies aggregating and summarizing primary studies are called _secondary_ studies.
 _Tertiary_ studies are systematic studies aggregating and summarizing secondary studies.
-Systematic literature reviews often only consider primary studies as they are considered the most reliable source of information, but may also include secondary studies if the primary studies are scarce, or as a means to identify primary studies.
+Systematic literature reviews often only consider primary studies as they are considered the most reliable source of information @ralph_baltes_2022, but may also include secondary studies if the primary studies are scarce, or as a means to identify primary studies.
 
-The systematic literature review was conducted using the three-step protocol as defined by #cite_full(<kitchenham_charters_2007>):
+We conducted the systematic literature review in this thesis using the three-step protocol as defined by #cite_full(<kitchenham_charters_2007>).
+@slr_process enumerates and succinctly describes the three steps of the protocol.
 
 #figure(
   table(
@@ -47,23 +48,19 @@ The model is inspired by prior research and is designed to guide researchers thr
 
 The six steps of the process are:
 
-+ *Problem identification and motivation*: Research problem statement and justification for existence of a solution.
-+ *Objectives of a solution*: Definition of the objectives, derived from the problem statement.
-+ *Design and development*: Creation of the artifact.
-+ *Demonstration*: Usage of the artifact to demonstrate its effectiveness in solving the problem.
-+ *Evaluation*: Observation and measurement of how well the artifact supports a solution to the problem.
-+ *Communication*: Transfer of knowledge about the artifact and the problem solution to the relevant audience.
-
-#v(2em)
++ *Problem identification and motivation*: research problem statement and justification for existence of a solution.
++ *Objectives*: definition of the objectives following the problem statement
++ *Design and development*: creation of the artifact
++ *Demonstration*: usage of the artifact to demonstrate its effectiveness in solving the problem
++ *Evaluation*: observation and measurement of how well the artifact supports a solution to the problem
++ *Communication*: transfer of knowledge about the artifact and the problem solution to the relevant audience
 
 #figure(
   include("/figures/02-methodology/dsrp.typ"),
   caption: [Design Science Research Process @peffers_etal_2007]
 ) <dsrp>
 
-#v(2em)
-
-The process is structured sequentially, however the authors suggests that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
-
-In this thesis, we use the #acr("DSRP") as a guideline for the design, development, and evaluation of the automated modularization approach used in the case study.
+@dsrp gives a visual overview of the #acr("DSRP") model.
+The process is structured sequentially, however the authors suggest that researchers may proceed in a non-linear fashion, and start or stop at any step, depending on the context and requirements of the research.
+In this thesis, we use the #acr("DSRP") as a guideline for the design, development, and evaluation of the microservice candidate identification approach used in the case study.
 We focus in particular on the design and development, demonstration, and evaluation steps.
