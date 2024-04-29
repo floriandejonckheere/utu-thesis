@@ -171,9 +171,9 @@ The plots indicate the distribution of the metrics for each scenario, calculated
 )
 
 The coupling metric measures how loosely coupled the microservices are in relation to each other, with a lower value indicating a better modularization.
-@scn_logical_contributor and @scn_structural_logical_contributor have a similar mean coupling value at 227 and 222.5 respectively, with few outliers.
-@scn_structural_logical has a much lower mean coupling value at 72, indicating that the microservices are more loosely coupled, and the decomposition is more modular.
-On the other hand, @scn_structural_contributor has a mean coupling value of zero, which means that the microservices are not coupled at all.
+@scn_logical_contributor and @scn_structural_logical_contributor have a similar mean coupling value at 227.0 and 222.5 respectively, with few outliers.
+@scn_structural_logical has a much lower mean coupling value at 83.2, indicating that the microservices are more loosely coupled, and the decomposition is more modular.
+On the other hand, @scn_structural_contributor has a mean coupling value of 0.0, which means that the microservices are not coupled at all.
 This can happen when the decomposition is too fine-grained, and the microservices are too small to be useful.
 Looking at the size of the microservices in @structural_contributor_microservice_size, we see that the microservices are very small, with the exception of one microservice that is significantly larger than the others, which explains the low coupling value.
 
@@ -200,14 +200,14 @@ The latter is likely caused by the significantly larger microservice, which rais
 
 ABC size measures the size of a microservice given the assignments, branches, and conditions in the code.
 A lower value indicates a smaller microservice, which is generally preferred.
-In @abc_size_statistics, we see that the extrema of the ABC size metric are quite high for all scenarios, with values ranging from 262 to 330.
+In @abc_size_statistics, we see that the extrema of the ABC size metric are quite high for all scenarios, with values ranging from 262.4 to 329.6.
 This indicates that some microservices are significantly larger than others.
-As the number of microservices in the decomposition of @scn_logical_contributor is quite small, it has the least variation in the ABC size metric, with a mean value of 153 and a median value of 161.
-The other scenarios have mean ABC size values ranging from 24 to 67, indicating that the microservices in these decompositions are on average smaller in size, but with more variation.
+As the number of microservices in the decomposition of @scn_logical_contributor is quite small, it has the least variation in the ABC size metric, with a mean value of 152.8 and a median value of 161.8.
+The other scenarios have mean ABC size values ranging from 23.9 to 66.9, indicating that the microservices in these decompositions are on average smaller in size, but with more variation.
 
 @complexity_statistics shows the cyclomatic complexity of the microservices in the decomposition.
 A lower value indicates a simpler microservice, which is generally preferred.
-The statistical values for the complexity metric are similar to the ABC size metric, with the mean complexity values ranging from 21 to 59, with @scn_logical_contributor being an outlier with a mean complexity value of 135, and a median value of 142.
+The statistical values for the complexity metric are similar to the ABC size metric, with the mean complexity values ranging from 21.1 to 59.2, with @scn_logical_contributor being an outlier with a mean complexity value of 135.2, and a median value of 142.8.
 ABC size and complexity are closely related, as they both measure the perceived complexity of the code, but they do so in different ways.
 
 #grid(
