@@ -130,7 +130,7 @@ Using the search strategy outlined in the previous section, we queried the selec
     [Snowballing], none, [#slr.snowballing.total],
     [*Total*], [#slr.platforms.values().map(p => p.total).sum()], [#(slr.platforms.values().map(p => p.selected).sum() + slr.snowballing.total)],
   ),
-  caption: "Summary of search results"
+  caption: [Summary of search results]
 ) <slr_search_results>
 
 After applying the inclusion/exclusion criteria, we selected #slr.platforms.values().map(p => p.selected).sum() publications for inclusion in the systematic literature review.
@@ -140,7 +140,7 @@ For a list of the selected publications, see @slr_publications.
 
 #figure(
   include("/figures/06-automated-modularization/publications-by-year.typ"),
-  caption: "Distribution of selected publications by year"
+  caption: [Distribution of publications by year]
 ) <slr_by_year>
 
 The selected publications range in publication date from 2014 to 2024, with a peak in 2022.

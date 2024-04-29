@@ -16,7 +16,7 @@ The application offers multiple renderers to visualize the graph, using differen
 @information_extraction_graph illustrates the visualization of the information extraction step applied to the source code of the application itself.
 
 #figure(
-  image("/figures/decomposition.svg", width: 60%),
+  image("/figures/07-proposed-solution/decomposition.svg", width: 60%),
   caption: [Visualization of decomposition step],
 ) <decomposition_graph>
 

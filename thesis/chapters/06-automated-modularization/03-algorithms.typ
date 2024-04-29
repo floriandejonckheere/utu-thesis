@@ -98,8 +98,8 @@ For example, #cite_full(<mazlami_etal_2017>) and #cite_full(<yang_etal_2022>) us
 Kruskal's algorithm is a greedy algorithm that finds the minimum spanning forest for an undirected weighted graph.
 
 #cite_full(<filippone_etal_2023>) applied the Louvain community detection algorithm @blondel_etal_2008 to obtain the granularity of the microservices, and high-cohesive communities of vertices.
-The Louvain method is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
-#cite_full(<hasan_etal_2023>) used the Leiden algorithm @traag_etal_2019, an improvement of the Louvain method that uses a refinement step to improve the quality of the communities.
+The Louvain algorithm is a greedy optimization algorithm that aims to extract non-overlapping communities from a graph, using the modularity value as optimization target.
+#cite_full(<hasan_etal_2023>) used the Leiden algorithm @traag_etal_2019, an improvement of the Louvain algorithm that uses a refinement step to improve the quality of the communities.
 
 #cite_full(<cao_zhang_2022>) used both the Leiden algorithm and the hierarchical clustering algorithm to identify microservice candidates.
 First, the Leiden algorithm is used to detect cohesive communities in static and dynamic analysis data, and then the hierarchical clustering algorithm is used to merge the communities into microservice candidates based on a call relation matrix.

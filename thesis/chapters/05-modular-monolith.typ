@@ -94,7 +94,7 @@ The ratings are based on several sources, including #cite_full(<grzybek_2019_arc
     [Performance],            [#star(1)],   [#star(2)],           [#star(3)],
     [Fault tolerance],        [#star(1)],   [#star(3)],           [#star(3)],
   ),
-  caption: "Comparison of modular monolith architecture"
+  caption: [Comparison of modular monolith architecture]
 ) <modular_monolith_comparison>
 
 ==== Complexity

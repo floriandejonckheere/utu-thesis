@@ -18,7 +18,7 @@ Finally, the proposed decomposition is evaluated using a set of quality metrics.
 
 #figure(
   include("/figures/07-proposed-solution/architecture.typ"),
-  caption: [Architectural overview of the proposed solution]
+  caption: [MOSAIK architecture overview]
 ) <architecture>
 
 #v(2em)

@@ -77,7 +77,7 @@ Where:
         [#include("/figures/07-proposed-solution/louvain-3.typ")],
         [#include("/figures/07-proposed-solution/louvain-4.typ")],
     ),
-    caption: [Louvain algorithm intermediate steps]
+    caption: [Visualization of the Louvain algorithm]
 ) <louvain>
 
 #grid(

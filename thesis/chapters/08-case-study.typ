@@ -43,7 +43,7 @@ NephroFlow™ Link is responsible for collecting data from the dialysis machines
 
 #figure(
   include("/figures/08-case-study/link.typ"),
-  caption: [NephroFlow™ Link architecture]
+  caption: [NephroFlow™ Link architecture overview]
 ) <link_architecture>
 
 Dialysis machines measure and publish data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
@@ -159,7 +159,7 @@ The plots indicate the distribution of the metrics for each scenario, calculated
   [
     #figure(
       statistics_chart("coupling", 50),
-      caption: [Coupling]
+      caption: [Coupling statistics]
     ) <coupling_statistics>
   ],
   [
@@ -181,7 +181,7 @@ Looking at the size of the microservices in @structural_contributor_microservice
   [
     #figure(
       statistics_chart("cohesion", 0.05),
-      caption: [Cohesion]
+      caption: [Cohesion statistics]
     ) <cohesion_statistics>
   ]
 )
@@ -194,7 +194,7 @@ The latter is likely caused by the significantly larger microservice, which rais
   [
     #figure(
       statistics_chart("abc_size", 50),
-      caption: [ABC size]
+      caption: [ABC size statistics]
     ) <abc_size_statistics>
   ],
   [
@@ -218,7 +218,7 @@ The other scenarios have mean ABC size values ranging from 23.9 to 66.9, indicat
   [
     #figure(
       statistics_chart("complexity", 50),
-      caption: [Complexity]
+      caption: [Complexity statistics]
     ) <complexity_statistics>
   ]
 )
@@ -275,13 +275,13 @@ ABC size and complexity are closely related, as they both measure the perceived 
   [
     #figure(
       microservice_size_chart("structural_logical"),
-      caption: [Microservice size distribution of @scn_structural_logical]
+      caption: [Microservice size distribution (@scn_structural_logical)]
     ) <structural_logical_microservice_size>
   ],
   [
     #figure(
       microservice_size_chart("structural_contributor"),
-      caption: [Microservice size distribution of @scn_structural_contributor]
+      caption: [Microservice size distribution (@scn_structural_contributor)]
     ) <structural_contributor_microservice_size>
   ]
 )
@@ -296,13 +296,13 @@ These decompositions consists of several larger microservices, and a number of s
   [
     #figure(
       microservice_size_chart("logical_contributor"),
-      caption: [Microservice size distribution of @scn_logical_contributor]
+      caption: [Microservice size distribution (@scn_logical_contributor)]
     ) <logical_contributor_microservice_size>
   ],
   [
     #figure(
       microservice_size_chart("structural_logical_contributor"),
-      caption: [Microservice size distribution of @scn_structural_logical_contributor]
+      caption: [Microservice size distribution (@scn_structural_logical_contributor)]
     ) <structural_logical_contributor_microservice_size>
   ],
 )
@@ -357,7 +357,7 @@ Due to the restricted nature of the source code, precise information about the f
   [
     #figure(
       include("/figures/08-case-study/runtime.typ"),
-      caption: [Total runtime\ (in seconds)]
+      caption: [Total analysis runtime]
     ) <runtime_statistics>
   ]
 )
