@@ -27,8 +27,9 @@ ServiceWeaver maintains the same development process as a monolith application, 
 The framework leverages the Go runtime to modularize the application at runtime, by using information about the structure and dependencies of the application.
 It also provides integration with cloud providers, and a set of tools to monitor and manage the deployed microservices.
 
-_Spring Modulith_#footnote(link("https://spring.io/projects/spring-modulith")[https://spring.io/projects/spring-modulith]) is another example of a framework that promotes the modular monolith approach.
+_Spring Modulith_#h(.2em)#footnote(link("https://spring.io/projects/spring-modulith")[https://spring.io/projects/spring-modulith]) is another example of a framework that promotes the modular monolith approach.
 The framework, written for the Java programming language, allows developers to structure the code of the application in a modular way, so that the modules can easily be broken out into microservices in the future.
+_Light-hybrid-4j_#h(.2em)#footnote(link("https://networknt.github.io/light-hybrid-4j/")[https://networknt.github.io/light-hybrid-4j/]) goes a step further by allowing developers to build subsets of their applications, that can be deployed as microservices.
 
 The _Structural Quality_ or _S-Quality_ framework, introduced by #cite_full(<hasan_etal_2023>), is a tool that uses static analysis to identify microservice candidates in monolith applications.
 The tool uses structural design properties, alongside customizable architectural quality objectives, to generate recommendations for the decomposition of the monolith application.
@@ -41,6 +42,3 @@ The authors wrote the tool in multiple programming languages, exposing a web app
 In summary, several tools and frameworks have already been developed to assist in the (semi-)automated modularization of monolith applications into microservices or modular monolith architectures.
 These tools use a variety of approaches, and usually only support a specific programming language or framework.
 The level of automation varies between the tools, with some only providing recommendations or visualizations of the microservice candidates, and others implementing fully automated solutions that can deploy the microservices.
-
-// TODO: Light-hybrid-4j
-// TODO: several vendors with custom implementation (Shopyify, AppSmith, Gusto, PlayTech)
