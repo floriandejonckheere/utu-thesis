@@ -3,7 +3,7 @@
 = Conclusion <conclusion>
 
 This thesis discussed the problem of (semi-)automated modularization of monolith applications, with a focus on the automated identification of microservice candidates.
-In the first part of the thesis, we investigated the modular monolith architecture, and discussed the merits and demerits of the software architecture.
+In the first part of the thesis, we investigated the modular monolith architecture, and discussed the advantages and drawbacks of the software architecture.
 Then, we presented a comprehensive overview of the state of the art on (semi-)automated technologies for modularization of monolith applications.
 We identified and described the most frequently used approaches in the literature, and compared them against each other.
 

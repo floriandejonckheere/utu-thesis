@@ -43,9 +43,9 @@ This research is centered around three research questions:
 
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
-The motivation behind the first research question is to investigate the potential merits and demerits of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
+The motivation behind the first research question is to investigate the potential advantages and drawbacks of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
 To answer this question, we will first define the modular monolith architecture on the basis of existing literature, and examine what sets it apart from monolith and microservices architectures.
-Then, we will proceed to investigate the merits and demerits of the software architecture when migrating existing monolith codebases to a modular monolith architecture.
+Then, we will proceed to investigate the advantages and drawbacks of the software architecture when migrating existing monolith codebases to a modular monolith architecture.
 
 The second research question is motivated by the observed need for reducing the complexity and error-proneness of manual modularization efforts.
 We will explore the existing (semi-)automated technologies to assist in modularization of monolith codebases in the literature.
@@ -57,7 +57,7 @@ The results will be evaluated using a set of quality metrics, and its effectiven
 
 The goal of this research can be summarized as follows:
 
-+ Investigate the merits and demerits of the modular monolith architecture
++ Investigate the advantages and drawbacks of the modular monolith architecture
 + Investigate the use of (semi-)automated technologies to modularize a monolith architecture
 
 Although the proposed solution will be designed for a specific case study, the results can be generalized to other monolith codebases.
@@ -73,7 +73,7 @@ In @background the reader is introduced to the concepts and background necessary
 @relatedwork discusses the related work in the field of (semi-)automated modularization and microservice candidate identification.
 
 @modularmonolith is dedicated to answering the first research question.
-The modular monolith architecture is defined, and its merits and demerits are discussed.
+The modular monolith architecture is defined, and its advantages and drawbacks are discussed.
 The chapter also touches the concept of modularization and its relevance in software architecture.
 
 The next chapters aim to solve the remaining research questions.
