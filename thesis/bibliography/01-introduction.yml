@@ -1,1 +1,21 @@
 ---
+lenarduzzi_etal_2020:
+  type: article
+  title: Does Migrating a Monolithic System to Microservices Decrease the Technical Debt?
+  author:
+    - Lenarduzzi, Valentina
+    - Lomio, Francesco
+    - Saarimäki, Nyyti
+    - Taibi, Davide
+  date: 2020-11
+  page-range: 110710
+  url:
+    value: https://linkinghub.elsevier.com/retrieve/pii/S0164121220301539
+    date: 2024-04-29
+  serial-number:
+    doi: 10.1016/j.jss.2020.110710
+    issn: '01641212'
+  parent:
+    type: periodical
+    title: Journal of Systems and Software
+    volume: 169

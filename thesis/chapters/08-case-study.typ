@@ -63,7 +63,7 @@ When it is deployed at bigger sites with up to 400 dialysis machines, the throug
 Additionally, patient safety and information security would benefit from a more modular architecture, as it would allow for a more fine-grained access control to the data.
 
 For these reasons, the application would benefit from an architectural overhaul.
-While a microservices-based architecture would allow the application to scale efficiently, it also introduces a significant amount of complexity, and requires an upfront investment in development time.
+While a microservices architecture would allow the application to scale efficiently, it also introduces a significant amount of complexity, and requires an upfront investment in development time.
 Since the number of developers working on NephroFlow™ Link is limited, migrating to a microservices architecture would be challenging.
 Hence, we believe that migrating NephroFlow™ Link towards a modular monolith architecture would prove beneficial.
 
