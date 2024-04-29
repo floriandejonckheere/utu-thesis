@@ -2,7 +2,7 @@
 
 #set text(font: "Fira Sans", size: 7pt)
 
-#cetz.canvas(length: 0.5cm, {
+#cetz.canvas(length: 0.45cm, {
   import cetz.draw: *
 
   set-style(

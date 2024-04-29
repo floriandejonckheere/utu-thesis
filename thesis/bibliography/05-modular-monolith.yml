@@ -67,6 +67,32 @@ kucukoglu_2022:
     value: https://www.ahmetkucukoglu.com/en/what-is-modular-monolith
     date: 2024-04-22
 
+nunes_etal_2019:
+  type: anthos
+  title: 'From a Monolith to a Microservices Architecture: An Approach Based on Transactional Contexts'
+  author:
+    - Nunes, Luís
+    - Santos, Nuno
+    - Rito Silva, António
+  date: 2019
+  editor:
+    - Bures, Tomas
+    - Duchien, Laurence
+    - Inverardi, Paola
+  page-range: 37–52
+  url:
+    value: http://link.springer.com/10.1007/978-3-030-29983-5_3
+    date: 2024-03-01
+  serial-number:
+    doi: 10.1007/978-3-030-29983-5_3
+    isbn: 978-3-030-29982-8 978-3-030-29983-5
+  parent:
+    type: anthology
+    title: Software {Architecture}
+    publisher: Springer International Publishing
+    location: Cham
+    volume: 11681
+
 su_li_2024:
   type: web
   title: 'Modular Monolith: Is This the Trend in Software Architecture?'

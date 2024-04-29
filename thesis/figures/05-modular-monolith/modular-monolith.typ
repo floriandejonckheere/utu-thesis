@@ -10,127 +10,91 @@
     stroke: black
   )
 
+  // Monolith
   rect(
-    (-2, 1), (-0.75, -5),
+    (0, 0), (4, 3),
     radius: 0.1,
-    fill: gray.lighten(95%),
-    stroke: (paint: gray.lighten(60%), dash: "dashed"),
-    name: "broker")
-  content("broker", text: gray, angle: 90deg, align(center, [Shared components]))
+    fill: orange.lighten(90%),
+    stroke: (paint: orange.lighten(60%)),
+    name: "monolith")
+  content("monolith.south", text: gray, align(center, [#v(3em)Monolith]))
 
-  // Broker
+  // Modular monolith
   rect(
-    (-0.25, -4), (12.25, -5),
+    (4.5, 0), (8.5, 3),
     radius: 0.1,
-    fill: gray.lighten(95%),
-    stroke: (paint: gray.lighten(60%), dash: "dashed"),
-    name: "broker")
-  content("broker", text: gray, align(center, [Message broker]))
-
-  // Inventory
-  rect(
-    (-0.25, 1), (3.75, -3),
-    radius: 0.1,
-    fill: blue.lighten(90%),
-    stroke: (paint: blue.lighten(60%)),
-    name: "inventory")
-  content("inventory.north", text: gray, align(center, [#v(3em)Inventory]))
+    fill: orange.lighten(90%),
+    stroke: (paint: orange.lighten(60%)),
+    name: "modular_monolith")
+  content("modular_monolith.south", text: gray, align(center, [#v(5em)Modular\ monolith]))
 
   rect(
-    (0, 0), (3.5, -0.75),
+    (4.75, 0.25), (6, 1),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "modular_monolith_1")
+  rect(
+    (7, 0.25), (8.25, 1),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "modular_monolith_2")
+  rect(
+    (4.75, 2), (6, 2.75),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "modular_monolith_3")
+  rect(
+    (7, 2), (8.25, 2.75),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "modular_monolith_4")
+  line("modular_monolith_2.west", "modular_monolith_1.east", mark: (end: ">", fill: black))
+  line("modular_monolith_2.north", "modular_monolith_4.south", mark: (end: ">", fill: black))
+  line("modular_monolith_4.west", "modular_monolith_3.east", mark: (end: ">", fill: black))
+  line("modular_monolith_1.north", "modular_monolith_3.south", mark: (end: ">", fill: black))
+  line("modular_monolith_4.south-west", "modular_monolith_1.north-east", mark: (end: ">", fill: black))
+
+  // Microservices
+  rect(
+    (9, 0), (13, 4),
     radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "inventory_presentation")
-  content("inventory_presentation", align(center, [Presentation]))
+    stroke: none,
+    name: "microservices")
+  content("microservices.south", text: gray, align(center, [#v(3em)Microservices]))
 
   rect(
-    (0, -1), (3.5, -1.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "inventory_business")
-  content("inventory_business", align(center, [Business logic]))
-
+    (9.25, 0.25), (10.5, 1),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "microservices_1")
   rect(
-    (0, -2), (3.5, -2.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "inventory_data")
-  content("inventory_data", align(center, [Data access]))
-
-  line((1.75, -3), (1.75, -4), mark: (start: ">", end: ">", fill: black))
-
-  // Billing
+    (11.25, 0.25), (12.5, 1),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "microservices_2")
   rect(
-    (4, 1), (8, -3),
-    radius: 0.1,
-    fill: blue.lighten(90%),
-    stroke: (paint: blue.lighten(60%)),
-    name: "billing")
-  content("billing.north", text: gray, align(center, [#v(3em)Billing]))
-
+    (9.25, 2), (10.5, 2.75),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "microservices_3")
   rect(
-    (4.25, 0), (7.75, -0.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "billing_presentation")
-  content("billing_presentation", align(center, [Presentation]))
-
-  rect(
-    (4.25, -1), (7.75, -1.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "billing_business")
-  content("billing_business", align(center, [Business logic]))
-
-  rect(
-    (4.25, -2), (7.75, -2.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "billing_data")
-  content("billing_data", align(center, [Data access]))
-
-  line((6, -3), (6, -4), mark: (start: ">", end: ">", fill: black))
-
-  // Payment
-  rect(
-    (8.25, 1), (12.25, -3),
-    radius: 0.1,
-    fill: blue.lighten(90%),
-    stroke: (paint: blue.lighten(60%)),
-    name: "payment")
-  content("payment.north", text: gray, align(center, [#v(3em)payment]))
-
-  rect(
-    (8.5, 0), (12, -0.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "payment_presentation")
-  content("payment_presentation", align(center, [Presentation]))
-
-  rect(
-    (8.5, -1), (12, -1.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "payment_business")
-  content("payment_business", align(center, [Business logic]))
-
-  rect(
-    (8.5, -2), (12, -2.75),
-    radius: 0.1,
-    fill: yellow.lighten(60%),
-    stroke: 1pt + yellow.darken(20%),
-    name: "payment_data")
-  content("payment_data", align(center, [Data access]))
-
-  line((10, -3), (10, -4), mark: (start: ">", end: ">", fill: black))
+    (11.25, 2), (12.5, 2.75),
+    radius: 0.05,
+    fill: orange.lighten(70%),
+    stroke: (paint: orange.lighten(30%)),
+    name: "microservices_4")
+  line("microservices_2.west", "microservices_1.east", mark: (end: ">", fill: black))
+  line("microservices_2.north", "microservices_4.south", mark: (end: ">", fill: black))
+  line("microservices_4.west", "microservices_3.east", mark: (end: ">", fill: black))
+  line("microservices_1.north", "microservices_3.south", mark: (end: ">", fill: black))
+  line("microservices_4.south-west", "microservices_1.north-east", mark: (end: ">", fill: black))
 })
 
 #v(2em)

@@ -4,39 +4,40 @@
 
 = Modular monolith architecture <modularmonolith>
 
-In this chapter, we will discuss the modular monolith architecture.
-We will start by defining the architectural style, and then continue by discussing the advantages and drawbacks of this architecture.
-We aim to answer the following research question:
+In this chapter, we discuss the modular monolith architecture.
+We start by defining the architectural style, and then continue by discussing the advantages and drawbacks of the architecture.
+The following research question is answered:
 
 *Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
 
 == Definition
 
-While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules or components based on their functionality @kucukoglu_2022.
+While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules based on their functionality @kucukoglu_2022.
 
-The three layers are present in each module, but they are not directly accessible from outside of the module.
-Instead, modules expose a well-defined interface that describes the capabilities and limitations of the module.
+The three layers are present in each module, but are not directly accessible from outside of the module boundary.
+Instead, modules expose a well-defined interface that describes the capabilities and restrictions of the module.
 Hence, the modules of a modular monolith are loosely coupled.
 
 The architecture emphasizes interchangeability and potential reuse of modules, while maintaining an explicit interface between them @su_li_2024.
-Focusing on business domains rather then technical capabilities improves the organization of the code, and increases comprehensibility.
+Focusing on business domains rather than technical capabilities improves the organization of the code, and increases comprehensibility.
+@modular_monolith_architecture illustrates the difference between a traditional monolith, a modular monolith, and a microservices architecture.
 
 #figure(
-  include("/figures/05-modular-monolith/modular-monolith2.typ"),
+  include("/figures/05-modular-monolith/modular-monolith.typ"),
   caption: [Modular monolith architecture @tsechelidis_etal_2023]
 ) <modular_monolith_architecture>
 
-While traditional monolith architecture is not a bad choice for small applications, it becomes difficult to develop new functionality and maintain existing as the application grows.
+While a traditional monolith architecture is not a bad choice for smaller applications, it becomes difficult to develop new and maintain existing functionality as the application grows.
 Larger applications are likely to turn into a big ball of mud, where the code is tangled and difficult to understand.
-A big ball of mud, a term coined by #cite_author(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture @foote_yoder_1997.
+A big ball of mud, a term coined by #cite_full(<foote_yoder_1997>) in #cite(<foote_yoder_1997>, form: "year"), is a software system that lacks a perceivable architecture.
 
 Modular monolith architecture can also be used as a stepping stone towards a microservices architecture.
 Once the application is modularized and the interfaces are well-defined and stable, individual modules can be extracted and turned into external microservices.
 If the agreed upon interface is respected, the external microservice can be swapped out entirely by another implementation without affecting the rest of the application.
-When all modules have been extracted from the monolith, the application has effectively been transformed into a microservices architecture.
+When all modules have been extracted from the monolith, the application has effectively been transformed into a microservices application.
 
 #grid(
-  columns: (50%, 50%),
+  columns: (auto, auto),
   gutter: 1em,
   [
     #figure(
@@ -45,20 +46,20 @@ When all modules have been extracted from the monolith, the application has effe
     ) <distributedness>
   ],
   [
-    Contrary to microservices, modular monolith applications are built as a single deployable unit.
+    Contrary to microservices applications, modular monolith applications are built as a single deployable unit.
     The modules of the software system are separated logically (not physically), and are deployed together.
-    Horizontal scaling of a modular monolith architecture is more difficult than in a microservices architecture.
+    Horizontal scaling of a modular monolith architecture is more difficult than a microservices architecture.
   ]
 )
 
 #v(2em)
 
-#cite_full(<su_li_2024>) identified six characteristics of modular monolith architecture in the literature:
+#cite_full(<su_li_2024>) identified six characteristics of modular monolith architecture:
 
-+ *Segregation* of modules: each module is independent and includes all three application layers. Modules are autonomously developed, tested and deployed.
-+ *Modularity*: modules are highly internally cohesive and loosely externally coupled. Communication between modules is done using well-defined interfaces, preferably asynchronously.
++ *Segregation* of modules: each module is independent and includes all three application layers. Modules are autonomously developed, tested, and deployed.
++ *Modularity*: modules have high internal cohesion and low external coupling. Communication between modules is done using well-defined interfaces, preferably asynchronously.
 + *Unified database*: the database schema is shared by all modules, in contrast with microservices where each microservice has its own database and schema.
-+ *Monolith deployment*: the application is deployed as a single unit, and although modules can be distributed across multiple hosts.
++ *Monolith deployment*: the application is deployed as a single unit, although modules can be distributed across multiple hosts.
 + *Unified application process*: the application functions as a singular process, scaling uniformly depending on the requirements.
 + *Maintainability and scalability*: the architecture can efficiently manage increasing complexity, and facilitates growth.
 
@@ -67,13 +68,13 @@ While opting for a modular monolith architecture already improves flexibility an
 
 == Advantages and drawbacks
 
-In the #cite(<brown_2013>, form: "year") book "Software architecture for developers", #cite_author(<brown_2013>) defined architectural drivers as a set of requirements that have significant influence over software architecture @brown_2013.
+In the #cite(<brown_2013>, form: "year") book _Software architecture for developers_, #cite_full(<brown_2013>) defined architectural drivers as a set of requirements that have significant influence over software architecture.
 The author argues that architectural drivers are the most important requirements that shape the architecture of a software system.
-Architectural drivers are often classified in four categories: functional requirements, quality attributes, technical, and business constraints @grzybek_2019_architectural_drivers.
+#cite_full(<grzybek_2019_architectural_drivers>) classified architectural drivers in four categories: functional requirements, quality attributes, technical, and business constraints.
 Any realized software architecture is a trade-off between several architectural drivers.
-Hence, the choice of architecture depends on the context it is being designed in.
+Subsequently, the choice of architecture depends on the context of the application it is being used in.
 
-In this section, we qualitatively compare the architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
+We attempted to qualitatively compare the architectural drivers of modular monolith architecture with traditional monolith and microservices architectures.
 @modular_monolith_comparison provides an overview of the comparison.
 A star rating system is used to indicate the performance of each architecture with respect to the architectural driver, with one star indicating the lowest performance, and three stars indicating the highest performance.
 The ratings are based on several sources, including #cite_full(<grzybek_2019_architectural_drivers>), #cite_full(<fowler_2015>), #cite_full(<kodja_2023>), #cite_full(<kucukoglu_2022>), and #cite_full(<su_li_2024>).
@@ -88,9 +89,9 @@ The ratings are based on several sources, including #cite_full(<grzybek_2019_arc
     align: (left, center, center, center),
     [*Architectural driver*], [*Monolith*], [*Modular monolith*], [*Microservices*],
     [Complexity],             [#star(3)],   [#star(2)],           [#star(1)],
-    [Structure],              [#star(2)],   [#star(2)],           [#star(1)],
+    [Structure],              [#star(2)],   [#star(3)],           [#star(1)],
     [Testing],                [#star(1)],   [#star(2)],           [#star(2)],
-    [Productivity],           [#star(3)],   [#star(3)],           [#star(1)],
+    [Productivity],           [#star(3)],   [#star(2)],           [#star(1)],
     [Performance],            [#star(1)],   [#star(2)],           [#star(3)],
     [Fault tolerance],        [#star(1)],   [#star(3)],           [#star(3)],
   ),
@@ -112,6 +113,7 @@ The external #acr("API") calls can introduce additional complexity, although som
 The source code of monolith and modular monolith applications is stored in the same repository.
 This makes enacting changes to the codebase easier, as developers can modify multiple modules or layers at the same time.
 In contract, microservices are usually stored in separate repositories, due to the independent nature of the services @kucukoglu_2022.
+Monolith architecture makes modification across functional domains possible as well, although it introduces fragility due to the tight coupling of the code @su_li_2024.
 
 In #cite(<conway_1968>, form: "year"), #cite_author(<conway_1968>) observed that the structure of a software system is often influenced by the communication structure of the organization that develops it @conway_1968.
 The modular nature of modular monolith and microservices architectures makes it easier to align the architecture with the organization structure, while the inherent structure of a monolith architecture does not provide this ability.
@@ -127,16 +129,16 @@ To ensure that the application works as expected, integration tests can be perfo
 
 When designing a software system from scratch, a monolith architecture is often the most productive choice @fowler_2015.
 Developers can focus on the business logic of the application, without having to worry about the underlying infrastructure or deployment model.
-Using microservices architecture incurs additional complexity, as developers must define the interfaces between the microservices, and manage the communication between them.
+Using microservices architecture incurs additional investment of time and resources, as developers must define the interfaces between the microservices, and manage the communication.
 Modular monolith architecture compromises between the two, by allowing developers to focus on the business logic first, while still providing the benefits of a distributed architecture.
-The "Monolith First" approach proposed by #cite_author(<fowler_2015>) suggests initiating new software systems with a monolith architecture, and only moving to a microservices approach when the monolith architecture shows its limitations @fowler_2015.
+The _Monolith First_ approach proposed by #cite_full(<fowler_2015>) suggests initiating new software projects with a monolith architecture, and only breaking out into microservices when the monolith architecture is showing its limitations.
 
 ==== Performance
 
 Traditional monolith applications offer better performance than distributed architectures, due to the lower overhead incurred when processing requests @grzybek_2019_architectural_drivers.
-However, monolith applications can only handle a limited number of requests until the application becomes a bottleneck.
-Distributed architectures, such as microservices and modular monoliths, can offer a solution for this problem by allowing the application to scale horizontally with ease, at the cost of increased complexity and overhead.
-Care must be taken when designing the distributed application to ensure that the transactional context of a request is not spread across multiple modules or microservices, as this can lead to performance issues.
+However, monolith applications can only handle a limited number of requests until the application becomes slow and unresponsive.
+Distributed architectures, such as microservices and modular monoliths, offer a solution for this problem by allowing the application to scale horizontally, at the cost of increased complexity and overhead.
+Care must be taken when designing the distributed application to ensure that the transactional context of a request is not spread across multiple modules or microservices, as this can lead to performance issues @nunes_etal_2019.
 
 Additionally, a microservices architecture is truly distributed in that every microservice is bundled with its own external dependencies, such as databases and caches.
 This allows for better performance, as the dependencies can be scaled alongside the microservices @kodja_2023.
@@ -145,9 +147,9 @@ This allows for better performance, as the dependencies can be scaled alongside 
 
 The impact of a failure in a monolith application is greater than in modular architectures, as the entire application is affected @grzybek_2019_architectural_drivers.
 The risk of a system failure can be mitigated by replicating the application, but this comes with a significant cost.
-Distributed architectures are more tolerant to individual failures, as the failure of one module or microservice does not affect the entire application, and can be resolved quicker @grzybek_2019_primer.
+Distributed architectures are more tolerant to individual failures, as the failure of one service does not affect the entire application, and can be resolved quicker @grzybek_2019_primer.
 Communication between modules or microservices is done over a network, where failures and delays are expected.
-Hence, distributed architectures are designed to be fault-tolerant, and can handle failures more gracefully than monolith applications.
+Hence, distributed architectures fault-tolerant by design, and can handle unexpected failures more gracefully than monolith applications.
 
 In summary, the modular monolith architecture strikes a balance between the monolith and microservices architectures.
 It offers the simplicity of a monolith architecture, while providing the flexibility and scalability of a distributed architecture.
@@ -157,19 +159,19 @@ On the other hand, when the requirements for scaling become more stringent, or t
 == Modularization
 
 Modularization of monolith applications is not a new concept.
-In #cite(<parnas_1972>, form: "year"), #cite_author(<parnas_1972>) stated that modularization is a mechanism that can improve the flexibility and comprehensibility of software systems @parnas_1972.
-The author argued that modularization separates the system into smaller and more manageable parts, which can be developed concurrently by different teams.
+In #cite(<parnas_1972>, form: "year"), #cite_full(<parnas_1972>) stated that modularization is a mechanism that can improve the flexibility and comprehensibility of software systems.
+The author argued that modularization separates the system into smaller and more manageable parts, which can be developed concurrently by multiple teams.
 
-The process of modularization involves identifying the potential modules or microservices of the software system, defining the interfaces between them, and evaluating the impact of the modularization on the system.
+The process of modularization involves identifying the potential modules or services of the software system, defining the interfaces between them, and evaluating the impact of the modularization on the system.
 
 Modularization techniques can be classified into three categories @abdellatif_etal_2021:
 
-- *Top-down (forward) engineering*: starting from the domain artifacts of the application (e.g. requirements, use cases), and deriving the modules from them
+- *Top-down (forward) engineering*: starting from the domain artifacts of the application (e.g. requirements, use cases), and deriving the modules from these artifacts
 - *Bottom-up (reverse) engineering*: mining functionalities from the existing system (source code, documentation) and developing the modules based on this structure
-- *Hybrid/reuse approach*: mapping domain artifacts onto existing functionalities in the system, and identifying the modules based on this mapping
+- *Hybrid/reuse approach*: mapping domain artifacts onto existing functionalities in the system, and identifying the modules based on the mapping
 
-Top-down approaches are more suitable for new projects, where the requirements are known in advance and little or no existing code is available.
-For migration of legacy applications to a modular architecture, bottom-up approaches are more suitable, as they can leverage the existing codebase and domain artifacts.
+Top-down approaches are more suitable for new projects, where the requirements are known in advance, and little or no existing code is available.
+For migration of legacy applications to a modular architecture, bottom-up approaches are more suitable, as they can leverage the existing codebase and development artifacts.
 
 #cite_full(<abdellatif_etal_2021>) identified three main steps in the process of modularization of monolith applications:
 
@@ -185,4 +187,5 @@ Automated decomposition tools can help to identify the modules of the applicatio
 The process of identifying modules or microservices for a modular monolith application is similar to the process of identifying them for a microservices architecture @tsechelidis_etal_2023.
 However, the criteria for identifying modules are different, as the modules of a modular monolith application are not deployed as separate microservices.
 
-In light of the above, we see a clear need for automated tools to aid the modularization of monolith applications, and a gap in the market for automated microservice candidate identification.
+Given the inherent complexity of manual modularization, we see a clear need for the development and improvement of (semi-)automated tools to assist in the modularization of monolith applications.
+In particular, the information present in the codebase of the application is a prime candidate for automatic extraction and decomposition, as it contains valuable information about the structure and dependencies of the application.
