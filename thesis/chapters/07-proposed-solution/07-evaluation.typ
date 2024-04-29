@@ -5,7 +5,7 @@
 Several quality metrics were considered to evaluate the quality of the microservice decomposition.
 #cite_full(<carvalho_etal_2019>) conducted an analysis of the criteria used to evaluate the quality of microservices architectures and found that the most common metrics are cohesion and coupling, as does our literature review win @automatedmodularization.
 In addition to this, they conclude that in many cases the decomposition process is guided only by these two metrics.
-In other cases, the software architects use other metrics (e.g. network overhead, CPU usage), although coupling and cohesion remain the dominant ones.
+In other cases, the software architects use other metrics (e.g. network overhead, CPU usage), although cohesion and coupling remain the dominant ones.
 According to experts, using four quality metrics is a good balance between the number of metrics and the quality of the solution @carvalho_etal_2019.
 
 #cite_full(<candela_etal_2016>) studied a large number of metrics to evaluate the quality of microservices architectures, including network overhead, CPU, and memory.

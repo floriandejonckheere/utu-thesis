@@ -50,7 +50,7 @@
     It explores the concept of (semi-)automated modularization of software systems.
 
     // Method
-    Based on a literature review, a four-step approach to automated microservice candidate identification is designed, and a case study is conducted to evaluate its effectiveness using the coupling and cohesion quality metrics.
+    Based on a literature review, a four-step approach to automated microservice candidate identification is designed, and a case study is conducted to evaluate its effectiveness using the cohesion and coupling quality metrics.
     The results of the case study indicate that the approach is effective in identifying microservice candidates, and can be used to automate modularization of monolithic applications.
     // Results
     Reflecting upon the results of the evaluation, a number of optimizations are suggested to improve the effectiveness of the approach.
