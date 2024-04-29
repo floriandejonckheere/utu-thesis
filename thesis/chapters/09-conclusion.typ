@@ -23,7 +23,7 @@ In recent years, there has been a pickup in the number of publications on this t
 There are several areas where we see potential for improvement in our proposed solution.
 As many experts have already pointed out, the information extracted from the codebase can be improved by using additional techniques.
 For example, the structural coupling can be improved by dynamically collecting information during the runtime of the application, as static analysis is very limited in highly dynamic languages such as Ruby and Python.
-Furthermore, enhancing the extracted information with additional object-oriented relationships (e.g. inheritance and composition) can improve the accuracy of the microservice identification algorithm.
+Furthermore, enhancing the extracted information with additional object-oriented relationships (e.g. inheritance and composition) can improve the accuracy of the microservice candidate identification algorithm.
 Alternatively, supplementary heuristics, such as semantic coupling, can be utilized as well.
 
 Finally, the MOSAIK tool can be improved technically.

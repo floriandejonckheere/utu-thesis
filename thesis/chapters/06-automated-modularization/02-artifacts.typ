@@ -55,14 +55,14 @@ In the selected #total(artifacts) publications, the majority of the approaches u
 In software engineering, requirements documents and models are used to formally describe the requirements of a software system following the specification of the business or stakeholder requirements @software_requirements_specification.
 They include functional and non-functional requirements, use cases, user stories, and business process models.
 Approaches using requirements documents and models as input for the microservice candidate identification algorithm often times need to pre-process the documents to extract the relevant information, as they are not intended to be directly read by a machine. /* TODO: find reference */
-In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice identification.
+In many cases, requirements documents and models for legacy systems are no longer available or outdated, which makes this approach less suitable for automated microservice candidate identification.
 
 #cite_full(<amiri_2018>) and #cite_full(<daoud_etal_2020>) modeled a software system as a set of business process using the industry standard #acr("BPMN"), using the machine-readable XML representation as input for the algorithm.
 #cite_full(<yang_etal_2022>) tackled requirements engineering using problem frames @jackson_2000.
 Problem frames are a requirements engineering method, which emphasizes the integration of real-world elements into the software system @yang_etal_2022.
 
 Some approaches use schematic requirements documents in XML format as input for the algorithm, as described by #cite_full(<saidi_etal_2023>).
- The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice identification.
+ The latter use domain-driven design techniques to extract functional dependencies from the software design as starting point in microservice candidate identification.
 #cite_full(<li_etal_2023>) employed an intermediate format containing a precise definition of business functionality, generated from validated requirements documents.
 
 ==== Design documents
@@ -78,7 +78,7 @@ Similar to requirements documents and models, design documents for legacy system
 For example, #cite_full(<al_debagy_martinek_2020>) proposed a data-driven method based on the analysis of the external API exposed by the application, specified in the OpenAPI#footnote[#link("https://www.openapis.org/")[https://www.openapis.org/]] format.
 The method extracts the information from the specification and converts it into vector representation for further processing.
 
-#cite_full(<zhou_xiong_2022>) used readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice identification algorithm.
+#cite_full(<zhou_xiong_2022>) used readily available design documents as well, in the form of UML class diagrams, use cases, and object sequence diagrams as starting point for the microservice candidate identification algorithm.
 The decomposition tool proposed by #cite_full(<hasan_etal_2023>) uses design documents as well, although the specifications are inferred from the source code of the software system, and do not require pre-existing design documents.
 
 #cite_full(<quattrocchi_etal_2024>) took a different approach to the problem, using a data-driven approach combined with a domain-driven approach.

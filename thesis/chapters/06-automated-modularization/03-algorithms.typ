@@ -72,7 +72,7 @@ Hierarchical clustering approaches are used in various publications @selmadji_et
 #cite_full(<lourenco_silva_2023>) used similarity between domain entities accesses and development history of source code files as a guiding measure for the clustering algorithm, while #cite_full(<zaragoza_etal_2022>) uses structural and data cohesion of microservices.
 #cite_full(<daoud_etal_2020>) extended the hierarchical agglomerative clustering (HAC) algorithm @murtagh_legendre_2014 with a collaborative approach, where the clustering is performed by multiple homogenous clustering nodes, each responsible for a subset of the data.
 
-#cite_full(<selmadji_etal_2020>) proposed two possible algorithms for microservice identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
+#cite_full(<selmadji_etal_2020>) proposed two possible algorithms for microservice candidate identification: a hierarchical clustering algorithm, and a clustering algorithm based on gravity centers.
 
 #cite_full(<sellami_etal_2022>) used the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm @ester_etal_1996 to identify microservices.
 
