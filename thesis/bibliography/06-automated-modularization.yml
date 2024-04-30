@@ -252,6 +252,26 @@ software_requirements_specification:
   page-range: 1-26
   doi: 10.1109/IEEESTD.1984.119205
 
+wohlin_2014:
+  type: article
+  title: Guidelines for Snowballing in Systematic Literature Studies and a Replication in Software Engineering
+  author: Wohlin, Claes
+  date: 2014-05-13
+  page-range: 1–10
+  url:
+    value: https://dl.acm.org/doi/10.1145/2601248.2601268
+    date: 2024-04-30
+  serial-number:
+    doi: 10.1145/2601248.2601268
+    isbn: 978-1-4503-2476-2
+  parent:
+    - type: proceedings
+      title: Proceedings of the 18th {International Conference} on {Evaluation} and {Assessment} in {Software Engineering}
+      publisher: ACM
+      location: London England United Kingdom
+    - type: conference
+      title: 'EASE ''14: 18th International Conference on Evaluation and Assessment in Software Engineering'
+
 zhu_ghahramani_2003:
   type: article
   title: Learning from Labeled and Unlabeled Data with Label Propagation

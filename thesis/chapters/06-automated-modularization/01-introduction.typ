@@ -5,24 +5,26 @@
 
 = Automated modularization <automatedmodularization>
 
-In this chapter, we investigate the state of the art in automated technologies for modularization of monolith codebases.
-Using a systematic literature review, we identified and categorized existing literature on automated modularization of monolith codebases.
+In this chapter, we investigate the state of the art in (semi-)automated technologies for modularization of monolith codebases.
+Using a systematic literature review, we identify and categorize existing literature on (semi-)automated modularization of monolith codebases.
+We focus in particular on the identification of microservices candidates in monolith codebases, as this is a crucial step in the migration from monolith to microservices architecture.
 
 == Plan
 
-Using the systematic literature review, we answered the following research question:
+Using the systematic literature review, we answer the following research question:
 
-*Research Question 2*: What are the existing approaches and tools for automated microservice candidate identification in monolith codebases?
-The motivation for the research question is discussed in @introduction.
+*Research Question 2*: What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
 
-In current literature, several systematic mapping studies related to microservices architecture have been conducted @alshuqayran_etal_2016 @pahl_jamshidi_2016, as well as systematic literature reviews related to microservice decomposition /* TODO: systematic literature reviews */.
-However, the methods discussed in these studies are mostly aimed at aiding the software architect in identifying microservice candidates, rather than providing automated solutions.
-Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding automated and semi-automated methods for modularization of monolith codebases.
+The motivation behind the research question is discussed in @introduction.
 
-Automated methods for modularization are techniques that autonomously perform the entire decomposition process, without requiring intervention of a software architect.
-The resulting architecture is then presented to the software architect for validation and implementation.
+In the current literature, several systematic mapping studies related to microservices architecture have been conducted @alshuqayran_etal_2016 @pahl_jamshidi_2016, as well as systematic literature reviews related to microservice candidate identification @schmidt_thiry_2020, @abgaz_etal_2023.
+However, the methods discussed in these studies are mostly aimed at assisting the software architect in identifying microservice candidates, rather than providing automated processes.
+Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding (semi-)automated methods for modularization of monolith codebases.
+
+Automated methods for modularization are techniques that autonomously perform the decomposition process, without requiring intervention of a software architect.
+The resulting architecture can then be validated and implemented by the software architect.
 Semi-automated methods for modularization are techniques that assist the software architect in the decomposition process, but do not perform the entire process autonomously.
-The software architect is required to make decisions during the process, and is left with several final proposals to choose from.
+The software architect is required to make decisions during the process, and is often left with several final proposals to choose from.
 Automated methods are of particular interest, as they take away the manual effort required from the software architect to analyze and decompose the monolith codebase.
 
 As a search strategy, the following platforms were queried for relevant publications:
@@ -46,7 +48,8 @@ The topics relevant for the search query are:
   #linebreak()
   Keywords: _automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis_
 
-The resulting search query can be expressed as follows:
+We formulated the search query by combining the keywords related to the topics.
+It can be expressed as the following boolean query:
 
 #figure(
   code(
@@ -66,13 +69,13 @@ The resulting search query can be expressed as follows:
 The search query was adapted to the specific search syntax of the platform.
 
 In addition to search queries on the selected platforms, we used snowballing to identify additional relevant publications.
-Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications /* TODO: reference */.
+Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications @wohlin_2014.
 
 Based the inclusion/exclusion criteria in @slr_criteria, the results were filtered, and the relevant studies were selected for inclusion in the systematic literature review.
 
 #figure(
   table(
-    columns: (auto, auto),
+    columns: (14%, auto),
     inset: 10pt,
     stroke: (x: none),
     align: (center, left),
@@ -108,7 +111,7 @@ The quality of the publication was assessed based on the following criteria:
 
 This step is necessary to ensure that the selected publications are relevant to the research question and that the results are not biased by low-quality publications.
 
-Once a final selection of publications was made, the resulting publications were qualitatively reviewed and categorized based on the method or approach described.
+Once a final selection of publications was made, the resulting publications were reviewed, relevant information was extracted, and the publications were categorized based on the methods or approaches described.
 
 #pagebreak()
 
@@ -144,18 +147,18 @@ For a list of the selected publications, see @slr_publications.
 ) <slr_by_year>
 
 The selected publications range in publication date from 2014 to 2024, with a peak in 2022.
-Few publications were selected in the first part of the interval, picking up in the later years with a steady increase in the number of publications.
+Fewer publications were selected during the first part of the interval, but the number of publications selected increased significantly in the second part of the decade.
 
 From the selected publications, we extracted relevant information, such as:
 
-- The type of approach or technique described (automated, semi-automated)
+- The type of method or approach described (automated, semi-automated)
 - The input data used for the microservice candidate identification process
 - The algorithms used in the microservices candidate identification process
 - The quality metrics used in the evaluation of the decomposition
 
 #cite_full(<kitchenham_charters_2007>) suggest that the data extraction process should be performed by at least two researchers to ensure the quality and consistency of the extracted data.
-However, due to resource constraints, the data extraction was performed by a single researcher.
-To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performs a second extraction from a random selection of the publications to check the consistency of the extracted data.
+However, due to resource constraints, the data extraction was performed only by one researcher.
+To prevent bias and ensure the quality of the data extraction, the results were validated by a re-test procedure where the researcher performed a second extraction from a random selection of the publications to check the consistency of the extracted data.
 
 #pagebreak()
 
@@ -165,13 +168,13 @@ The publications selected for inclusion in the systematic literature review were
 The categorization was only performed on the primary studies, as the secondary studies already aggregate and categorize primary studies.
 The secondary studies were used to perform the snowballing process, which resulted in additional primary studies being included in the systematic literature review.
 
-First, we categorized the publications based on the #acr("SDLC") artifact used as input for the microservice candidate identification algorithm.
-Each artifact category has an associated collection type: either static, dynamic, or hybrid. @bajaj_etal_2021.
-Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. execution logs). /* TODO: reference */
+First, we categorized the publications based on the #acr("SDLC") artifact used as input for the microservice candidate identification process.
+Each artifact category has an associated collection type: either static, dynamic, or hybrid @bajaj_etal_2021.
+Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. call trace or execution logs). /* TODO: reference */
 /* TODO: elaborate more on the categories */
 Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
 
 Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.
 We based the classification of the algorithms on the work of #cite_full(<abdellatif_etal_2021>), who identified six types of microservice candidate identification algorithms.
 
-Third, the publications were also categorized by the quality metrics used for evaluation the proposed decompositions.
+Third, the publications were also categorized by the quality metrics used for evaluation of the proposed decompositions.
