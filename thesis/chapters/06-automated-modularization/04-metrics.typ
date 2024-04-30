@@ -6,7 +6,7 @@
 
 The quality metrics used in the publications are summarized in @slr_metrics.
 The metrics are used to quantitatively evaluate the quality of the generated microservice decomposition.
-Some of the algorithms require the use of a specific metric to guide the process, such as the fitness function in genetic algorithms.
+Some of the algorithms require the use of a specific metric to guide the process, such as the fitness function in genetic algorithms, or the modularity metric in the Louvain algorithm.
 
 #figure(
   table(
@@ -35,9 +35,9 @@ Some of the algorithms require the use of a specific metric to guide the process
       #metrics.at("complexity").map(p => ref(label(p))).join()
     ],
 
-    "CPU and memory usage",
+    "Resource usage",
     [
-      #metrics.at("cpu_memory").map(p => ref(label(p))).join()
+      #metrics.at("resource").map(p => ref(label(p))).join()
     ],
 
     "Modularity",
@@ -58,9 +58,9 @@ Some of the algorithms require the use of a specific metric to guide the process
   caption: [Quality metrics]
 ) <slr_metrics>
 
-We identified #total(metrics) metrics used in the publications, and categorized them in 6 categories.
+We identified #total(metrics) metrics used in the publications, and categorized them in six categories.
 Publications using undisclosed quality metrics, and publications using no metrics at all, are categorized into separate categories.
-Cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) and coupling (#count(metrics, "coupling")\; #percentage(metrics, "coupling")) are the most frequently used metrics, followed by modularity (#count(metrics, "modularity")\; #percentage(metrics, "modularity")), network overhead and complexity (#count(metrics, "complexity")\; #percentage(metrics, "complexity") each), and CPU and memory usage (#count(metrics, "cpu_memory")\; #percentage(metrics, "cpu_memory")).
+Cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) and coupling (#count(metrics, "coupling")\; #percentage(metrics, "coupling")) are the most frequently used metrics, followed by modularity (#count(metrics, "modularity")\; #percentage(metrics, "modularity")), network overhead and complexity (#count(metrics, "complexity")\; #percentage(metrics, "complexity") each), and resource usage (#count(metrics, "resource")\; #percentage(metrics, "resource")).
 Publications using other metrics (#count(metrics, "other")\; #percentage(metrics, "other")) account for the remaining metrics.
 Finally, the #count(metrics, "none") publications that do not mention any quality metrics account for #percentage(metrics, "none").
 
@@ -79,31 +79,31 @@ Throughout the years, many definitions of cohesion and coupling have been propos
 For example, #cite_full(<briand_etal_1996>) defined cohesion as the tightness with which related program features are grouped together, and coupling as the amount of relationships between the elements belonging to different modules of a system.
 
 The publications in this review use different definitions for cohesion and coupling, and different methods of calculating them.
-For example, #cite_full(<selmadji_etal_2020>) defined (internal) cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
-The authors then define internal coupling as the number of direct method calls between two classes over the total number of method calls in the application.
+For example, #cite_full(<selmadji_etal_2020>) defined cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
+The authors then define coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-Others @carvalho_etal_2020 @filippone_etal_2021 @zhou_xiong_2022 @zhang_etal_2020 @agarwal_etal_2021 @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the microservice boundary.
+Others @carvalho_etal_2020, @filippone_etal_2021, @zhou_xiong_2022, @zhang_etal_2020, @agarwal_etal_2021, @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the microservice boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #cite_full(<filippone_etal_2023>) defined average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
 #cite_full(<jin_etal_2021>) introduced the concept of inter-service cohesion and inter-call percentage (ICP) as coupling metrics.
-Several other publications used the metrics introduced by #cite_full(<jin_etal_2021>) in their research @wu_zhang_2022 @brito_etal_2021 @sellami_etal_2022 @nitin_etal_2022.
+Several other publications used the metrics introduced by #cite_author(<jin_etal_2021>) in their research @wu_zhang_2022, @brito_etal_2021, @sellami_etal_2022, @nitin_etal_2022.
 
 Another approach to cohesion and coupling is that of #cite_full(<santos_silva_2022>) and #cite_full(<lourenco_silva_2023>), who defined cohesion as the percentage of entities accessed by a functionality.
 If all entities belonging to a microservice candidate are accessed each time a microservice candidate is accessed, the microservice is strongly cohesive.
 Coupling is defined as the percentage of the entities exposed by a microservice candidate that are accessed by other microservice candidates.
 
-#cite_full(<al_debagy_martinek_2020>) used the inverse of cohesion as a metric, named lack of cohesion (LCOM).
+#cite_full(<al_debagy_martinek_2020>) used the inverse of cohesion as a metric, called lack of cohesion (LCOM).
 Lack of cohesion is calculated by the number of times a microservice uses a method from another microservice, divided by the number of operations multiplied by the number of unique parameters.
 This metric quantifies how the operations in a microservice are related to each other in terms of functionality.
 
 ==== Network overhead
 
 Microservices are distributed systems, and communication between microservices is done over a network.
-The network overhead is the extra cost of this communication, and many authors consider it an important metric to consider when designing a microservice architecture.
+The network overhead is the extra cost of this communication, and many authors consider it an important metric when designing a microservice architecture.
 
-#cite_full(<filippone_etal_2021>) and others @carvalho_etal_2020 @zhou_xiong_2022 calculated the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
-#cite_full(<carvalho_etal_2020>) also included the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between microservices (for example, TCP headers, HTTP headers, etc.).
+#cite_full(<filippone_etal_2021>) and others @carvalho_etal_2020, @zhou_xiong_2022 calculated the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
+#cite_full(<carvalho_etal_2020>) also included the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between microservices (for example, TCP and HTTP headers).
 
 #cite_full(<quattrocchi_etal_2024>) measured network overhead as part of their operational cost metric.
 The metric also includes data management costs (CPU and memory).
@@ -118,16 +118,15 @@ The metric is associated with the cognitive load of the software architect when 
 
 In another publication by the same co-author, #cite_full(<lourenco_silva_2023>) defined complexity as the effort required to perform the decomposition, and expanded the concept to uniform complexity, which is calculated by dividing the complexity of a decomposition by the maximum possible complexity.
 
-==== CPU and memory usage
-// TODO: should be "performance" instead?
+==== Resource usage
 
-A non-functional metric that is considered by some authors is the CPU and/or memory usage of the microservices.
+A non-functional metric that is considered by some authors is the resource usage of the microservices.
 #cite_full(<zhang_etal_2020>) used this metric to evaluate the quality of the microservice decomposition, by predicting the average CPU and memory usage of the microservices.
 The prediction is made based on performance logs collected by executing the monolith application.
 
-#cite_full(<quattrocchi_etal_2024>) defined operational costs as metric to minimize, which includes communication (network) and data management (CPU and memory) costs.
+#cite_full(<quattrocchi_etal_2024>) defined operational costs as the metric to minimize, including communication (network) and data management (CPU and memory) costs.
 
-#cite_full(<nitin_etal_2022>) did not utilize the CPU and memory usage directly as a metric, but instead assumed the latency and throughput as indicators of performance.
+#cite_full(<nitin_etal_2022>) did not utilize the resource usage directly as a metric, but instead assumed the latency and throughput as indicators of performance.
 
 ==== Modularity
 
@@ -141,10 +140,12 @@ The authors use Modularity Quality @mancoridis_etal_1998 and extend the concept 
 
 ==== Other metrics
 
-#cite_full(<lourenco_silva_2023>) introduced the concept of Team Size Reduction (TSR), which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.
+#cite_full(<mazlami_etal_2017>) introduced the concept of Team Size Reduction (TSR), which indicates if the average team size is shorter after the decomposition, by comparing the average number of authors per microservice to the total number of authors.
 A Team Size Reduction value of 1 indicates that the microservices architecture has the same number of authors as the monolith, while a value fewer than 1 indicates a reduction in the number of authors.
-#cite_full(<mazlami_etal_2017>) made use of the TSR metric, as well as the Average Domain Redundancy (ADR) metric, which represents the amount of domain-specific duplication or redundancy between the microservices.
+The authors made use of the TSR metric, as well as the Average Domain Redundancy (ADR) metric, which represents the amount of domain-specific duplication or redundancy between the microservices.
 The ADR metric uses a scale from 0 to 1, where 0 indicates no redundancy and 1 indicates that all microservices are redundant.
+
+#cite_full(<lourenco_silva_2023>) used the TSR metric in their solution as well.
 
 #cite_full(<carvalho_etal_2020>) proposed a metric called reuse, which measures the reusability of a microservice.
 Reuse is calculated as the number of times a microservice is called by the user, relying on dynamic analysis to collect this information.
@@ -163,10 +164,10 @@ The authors calculate the correlation in two ways: the number of co-occurrence o
 #cite_full(<ma_etal_2022>) used the Adjusted Rand Index (ARI) as clustering evaluation criterion.
 The metric measures the similarity between two clusters in a decomposition, and ranges from -1 to 1, with 0 being the optimal value.
 
-#cite_full(<hao_etal_2023>) used the Matching Degree metric as quality indicator.
+#cite_full(<hao_etal_2023>) used the matching degree metric as quality indicator.
 The metric is calculated by dividing the number of intersections of database tables in a given microservice and a given cluster by the total number of tables used in the microservice.
 
-#cite_full(<hasan_etal_2023>) and #cite_full(<kalia_etal_2021>) used the Size metric to evaluate the quality of the microservice decomposition.
+#cite_full(<hasan_etal_2023>) and #cite_full(<kalia_etal_2021>) used the size metric to evaluate the quality of the microservice decomposition.
 The metric measures how evenly the size of the proposed microservices is.
 The size metric was originallly proposed by #cite_full(<wu_etal_2005>).
 
@@ -177,6 +178,4 @@ The silhouette coefficient assesses clustering consistency by comparing the aver
 
 Some of the publications do not mention any quality metrics used in the evaluation of the proposed decomposition.
 These methods typically rely on the selection or approval of a software architect to choose the best decomposition, based on their experience and knowledge of the system.
-This is the case of #cite_full(<eyitemi_reiff_marganiec_2020>), #cite_full(<romani_etal_2022>), #cite_full(<amiri_2018>), and #cite_full(<escobar_etal_2016>).
-
-The evaluation method by #cite_full(<kinoshita_kanuka_2022>) also does not rely on quantifying the quality of the microservice decomposition using metrics, but rather relies on the judgement of the software architect to choose a qualitative decomposition.
+This is the case of #cite_full(<kinoshita_kanuka_2022>),  #cite_full(<amiri_2018>), #cite_full(<eyitemi_reiff_marganiec_2020>), #cite_full(<romani_etal_2022>), and #cite_full(<escobar_etal_2016>).

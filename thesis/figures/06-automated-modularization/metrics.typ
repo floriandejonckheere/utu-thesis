@@ -10,8 +10,8 @@
   ([#v(1em)#h(3em)Modularity], metrics.at("modularity").len()),
   ([#v(1em)#h(7em)Network overhead], metrics.at("overhead").len()),
   ([#v(2em)#h(4em)Complexity], metrics.at("complexity").len()),
-  ([#v(3em)#h(3em)None], metrics.at("none").len()),
-  ([#v(2em)#h(9em)CPU and memory usage], metrics.at("cpu_memory").len()),
+  ([#v(2.75em)#h(3em)None], metrics.at("none").len()),
+  ([#v(2em)#h(9em)Resource usage], metrics.at("resource").len()),
 )
 
 #cetz.canvas({

@@ -216,7 +216,7 @@ categories:
       - santos_silva_2022
       - lourenco_silva_2023
       - hasan_etal_2023
-    cpu_memory:
+    resource:
       - zhang_etal_2020
       - quattrocchi_etal_2024
       - nitin_etal_2022
