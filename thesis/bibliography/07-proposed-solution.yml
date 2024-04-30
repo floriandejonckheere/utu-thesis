@@ -113,6 +113,23 @@ fortunato_barthelemy_2007:
     issue: 1
     volume: 104
 
+girvan_newman_2002:
+  type: article
+  title: Community structure in social and biological networks
+  author:
+    - Girvan, M.
+    - Newman, M. E. J.
+  date: 2002
+  page-range: 7821–7826
+  url: https://www.pnas.org/doi/abs/10.1073/pnas.122653799
+  serial-number:
+    doi: 10.1073/pnas.122653799
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    issue: 12
+    volume: 99
+
 hairol_anuar_etal_2021:
   type: article
   title: 'Comparison between Louvain and Leiden Algorithm for Network Structure: A Review'
