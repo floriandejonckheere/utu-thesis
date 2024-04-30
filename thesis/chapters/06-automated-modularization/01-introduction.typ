@@ -17,7 +17,7 @@ Using the systematic literature review, we answer the following research questio
 
 The motivation behind the research question is discussed in @introduction.
 
-In the current literature, several systematic mapping studies related to microservices architecture have been conducted @alshuqayran_etal_2016 @pahl_jamshidi_2016, as well as systematic literature reviews related to microservice candidate identification @schmidt_thiry_2020, @abgaz_etal_2023.
+In the current literature, several systematic mapping studies related to microservices architecture have been conducted @pahl_jamshidi_2016, @alshuqayran_etal_2016, as well as systematic literature reviews related to microservice candidate identification @abgaz_etal_2023, @schmidt_thiry_2020.
 However, the methods discussed in these studies are mostly aimed at assisting the software architect in identifying microservice candidates, rather than providing automated processes.
 Therefore, we believe that there is a need for a systematic literature review aimed at summarizing existing literature regarding (semi-)automated methods for modularization of monolith codebases.
 
@@ -38,13 +38,13 @@ Based on a list of relevant topics, we used a combination of related keywords to
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
 The topics relevant for the search query are:
 
-- *Architecture*: the architectural styles being discussed in the publications.
+- *Architecture*: the architectural styles discussed in the publications
   #linebreak()
   Keywords: _microservice, monolith, modular monolith_
-- *Modularization*: the process of identifying and decomposing modules in a monolith architecture.
+- *Modularization*: the process of identifying and decomposing modules in a monolith architecture
   #linebreak()
   Keywords: _service identification, microservice decomposition, monolith modularization_
-- *Technology*: the technologies, algorithms, or methods for modularization.
+- *Technology*: the methods or technologies used for modularization
   #linebreak()
   Keywords: _automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis_
 

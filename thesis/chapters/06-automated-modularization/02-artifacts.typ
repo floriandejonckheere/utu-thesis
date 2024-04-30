@@ -105,7 +105,7 @@ Others have built upon this approach, using the revision history to identify the
 #cite_full(<escobar_etal_2016>) used the source code of the software system to construct an #acr("AST"), and mapped the dependencies between the business and data layer.
 #cite_full(<kamimura_etal_2018>) used a more data-driven approach, and statically traced data access calls in the source code.
 
-Many publications @selmadji_etal_2020, @agarwal_etal_2021, @wu_zhang_2022, @zaragoza_etal_2022, @santos_silva_2022, @kalia_etal_2021, @cao_zhang_2022, @santos_paula_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
+Many publications @selmadji_etal_2020, @wu_zhang_2022, @zaragoza_etal_2022, @santos_silva_2022, @agarwal_etal_2021, @cao_zhang_2022, @santos_paula_2021, @kalia_etal_2021 construct a dependency graph from Java source code, and use the graph as input for a clustering algorithm.
 #cite_full(<bandara_perera_2020>) mapped object-oriented classes in the source code to specific microservices, but required a list of microservices to be specified before the decomposition can be performed.
 
 #cite_full(<filippone_etal_2021>) concentrated on #acr("API") controllers as entrypoints into the software system.

@@ -82,7 +82,7 @@ The publications in this review use different definitions for cohesion and coupl
 For example, #cite_full(<selmadji_etal_2020>) defined cohesion as the number of direct connections between the methods of the classes belonging to a microservice over the number of possible connections between the methods of the classes.
 The authors then define coupling as the number of direct method calls between two classes over the total number of method calls in the application.
 
-Others @carvalho_etal_2020, @filippone_etal_2021, @zhou_xiong_2022, @zhang_etal_2020, @agarwal_etal_2021, @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the microservice boundary.
+Others @zhou_xiong_2022, @zhang_etal_2020, @filippone_etal_2021, @agarwal_etal_2021, @carvalho_etal_2020, @bandara_perera_2020 use a similar definition of cohesion, but they define (individual) coupling as the number of method calls from a microservice class to another class outside of the microservice boundary.
 The total coupling of the solution is the sum of the coupling of all microservices.
 Similarly, #cite_full(<filippone_etal_2023>) defined average cohesion and average coupling as ratio of the total cohesion and coupling respectively, to the number of microservices in the decomposition.
 
