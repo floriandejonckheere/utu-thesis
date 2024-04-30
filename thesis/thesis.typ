@@ -74,10 +74,12 @@
     DDD: ("Domain-Driven Design"),
     DSRM: ("Design Science Research Methodology"),
     DSRP: ("Design Science Research Process"),
+    ERD: ("Entity-Relationship Diagram"),
     SDLC: ("Software Development Life Cycle"),
     SLOC: ("Source Lines of Code"),
     SLR: ("Systematic Literature Review"),
     SOA: ("Service-Oriented Architecture"),
+    UML: ("Unified Modeling Language"),
   ),
 
   // Chapters

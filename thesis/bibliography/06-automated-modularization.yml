@@ -115,6 +115,29 @@ frey_dueck_2007:
     issue: 5814
     volume: 315
 
+gall_etal_2003:
+  type: article
+  title: 'CVS Release History Data for Detecting Logical Couplings'
+  author:
+    - Gall, H.
+    - Jazayeri, M.
+    - Krajewski, J.
+  date: 2003
+  page-range: 13–23
+  url:
+    value: http://ieeexplore.ieee.org/document/1231205/
+    date: 2024-03-01
+  serial-number:
+    doi: 10.1109/IWPSE.2003.1231205
+    isbn: 978-0-7695-1903-6
+  parent:
+    - type: proceedings
+      title: Sixth International Workshop on Principles of Software Evolution, 2003. Proceedings.
+      publisher: IEEE
+      location: Helsinki, Finland
+    - type: conference
+      title: Sixth International Workshop on Principles of Software Evolution, 2003.
+
 gupta_2011:
   type: book
   title: Project Management
@@ -266,7 +289,7 @@ wohlin_2014:
     isbn: 978-1-4503-2476-2
   parent:
     - type: proceedings
-      title: Proceedings of the 18th {International Conference} on {Evaluation} and {Assessment} in {Software Engineering}
+      title: Proceedings of the 18th International Conference on Evaluation and Assessment in Software Engineering
       publisher: ACM
       location: London England United Kingdom
     - type: conference
