@@ -11,7 +11,29 @@ According to experts, using four quality metrics is a good balance between the n
 #cite_full(<candela_etal_2016>) studied a large number of metrics to evaluate the quality of microservices architectures, including network overhead, CPU, and memory.
 They affirmed the need for more than two metrics to ensure the quality of the decomposition.
 
-// TODO: justify choice of metrics
+Four metrics were selected to evaluate the quality of the microservice decomposition: cohesion, coupling, size, and complexity.
+We chose cohesion and coupling as they are the most common metrics used to evaluate the quality of microservices architectures.
+Size and complexity were chosen as they are important metrics to assess the maintainability and comprehensibility of the microservices @parnas_1972.
+
+==== Cohesion
+
+Cohesion is a measure of the degree to which internal elements of a module in a software system are related to each other @software_engineering_vocabulary_2017.
+Cohesion of microservice candidates is defined as the number of static calls between methods within a microservice candidate $M_c$ in a solution $S$, divided by the total number of possible static method calls in $M_c$ @carvalho_etal_2020.
+The metric indicates how strongly related the methods internal to a microservice candidate are.
+
+To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one method call between methods $v_i$ and $v_j$ in $M_c$.
+
+$ italic("ref")(v_i, v_j) = cases(1 "if" italic("calls")(v_i, v_j) > 0, 0 "otherwise") $ <cohesion_formula>
+
+The cohesion of a microservice candidate $M_c$ is then calculated as described in @individual_cohesion_formula, where $|M_c|$ is the cardinality of all method calls in $M_c$.
+
+$ italic("coh")(M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref")( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
+
+The total cohesion of a solution is the sum of the individual cohesion of all microservice candidates $M_c$.
+
+$ italic("Cohesion") = sum_(M_c in S) italic("coh")(M_c) $ <total_cohesion_formula>
+
+A higher total cohesion indicates a better decomposition.
 
 ==== Coupling
 
@@ -27,26 +49,6 @@ The total coupling of a solution is the sum of the individual couplings of all m
 $ italic("Coupling") = sum_(M_c in S) italic("coup")(M_c) $ <total_coupling_formula>
 
 A lower total coupling indicates a better decomposition.
-
-==== Cohesion
-
-Cohesion is a measure of the degree to which internal elements of a module in a software system are related to each other @software_engineering_vocabulary_2017.
-Cohesion of microservice candidates is defined as the number of static calls between methods within a microservice candidate $M_c$ in a solution $S$, divided by the total number of possible static method calls in $M_c$ @carvalho_etal_2020.
-The metric indicates how strongly related the methods internal to a microservice candidate are.
-
-To compute the individual cohesion of a microservice candidate $M_c$, we first introduce the boolean function $italic("ref")$, which indicates the existence of at least one method call between methods $v_i$ and $v_j$ in $M_c$.
-
-$ italic("ref")(v_i, v_j) = cases(1 "if" italic("calls")(v_i, v_j) > 0, 0 "otherwise") $ <cohesion_formula>
-
-The cohesion of a microservice candidate $M_c$ is then calculated as described in @individual_cohesion_formula, where $|M_c|$ is the cardinality of method calls in $M_c$.
-
-$ italic("coh")(M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref")( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
-
-The total cohesion of a solution is the sum of the individual cohesion of all microservice candidates $M_c$.
-
-$ italic("Cohesion") = sum_(M_c in S) italic("coh")(M_c) $ <total_cohesion_formula>
-
-A higher total cohesion indicates a better decomposition.
 
 ==== Size
 
@@ -72,7 +74,7 @@ $ |"ABC"| = sqrt(A^2 + B^2 + C^2) $ <abc_formula>
 
 The ABC size of a method can vary between programming languages due to semantic differences in the language constructs.
 As such, the interpretation of ABC size values is language-dependent.
-For example, in Ruby an ABC value of $<= 17$ is considered satisfactory, a value between $18$ and $30$ unsatisfactory, and $> 30$ is considered dangerous#footnote[#link("https://docs.rubocop.org/rubocop/cops_metrics.html")[https://docs.rubocop.org/rubocop/cops_metrics.html]].
+For example, in the Ruby programming language an ABC value of $<= 17$ is considered satisfactory, a value between $18$ and $30$ unsatisfactory, and $> 30$ is considered dangerous#footnote[#link("https://docs.rubocop.org/rubocop/cops_metrics.html")[https://docs.rubocop.org/rubocop/cops_metrics.html]].
 In this study we do not intend to evaluate the quality of individual methods, but rather the quality of the decomposition as a whole.
 As such, we use the average of the ABC sizes of all methods in a microservice candidate to calculate the size of the microservice candidate.
 
