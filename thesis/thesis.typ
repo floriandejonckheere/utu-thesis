@@ -5,7 +5,7 @@
   title: "Automated Microservice Identification in Modular Monolith Architectures",
 
   // Document subtitle
-  subtitle: "Master of Science (Tech) Thesis",
+  subtitle: "Master of Science (Tech.) Thesis",
 
   // Institution
   institution: "University of Turku",
