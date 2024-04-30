@@ -24,6 +24,6 @@
     radius: 3,
     slice-style: colors,
     inner-radius: 1,
-    inner-label: (content: (value, label) => [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
+    inner-label: (content: (value, label) => [#text(size: 10pt, white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
     outer-label: (content: (value, label) => [#label], radius: 120%))
 })

@@ -5,12 +5,12 @@
 
 #let data = (
   ([Codebase#h(2em)], artifacts.at("codebase").len()),
-  ([#h(3em)Execution data], artifacts.at("execution").len()),
-  ([#h(14em)Requirements documents and models], artifacts.at("requirements").len()),
-  ([#v(1em)#h(4em)Design documents], artifacts.at("design").len()),
+  ([#h(4em)Execution data], artifacts.at("execution").len()),
+  ([#h(8em)Requirements documents\ #h(11em)and models], artifacts.at("requirements").len()),
+  ([#h(5em)Design documents], artifacts.at("design").len()),
 )
 
-#cetz.canvas({
+#cetz.canvas(length: .75cm, {
   import cetz.chart
   import cetz.draw: *
 
@@ -24,6 +24,6 @@
     radius: 3,
     slice-style: colors,
     inner-radius: 1,
-    inner-label: (content: (value, label) => [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
+    inner-label: (content: (value, label) => [#text(size: 10pt, white, str(calc.round(100 * value / total, digits: 0)) + "%")], radius: 110%),
     outer-label: (content: (value, label) => [#label], radius: 130%))
 })
