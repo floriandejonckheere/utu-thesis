@@ -4,13 +4,13 @@
 #let total = algorithms.values().sum().len()
 
 #let data = (
-  ([Clustering#linebreak()algorithms#h(4em)], algorithms.at("clustering").len()),
+  ([Clustering#linebreak()algorithms#v(8em)], algorithms.at("clustering").len()),
   ([Other algorithms], algorithms.at("other").len()),
-  ([#h(10em)Evolutionary algorithms#v(2em)], algorithms.at("evolutionary").len()),
+  ([#h(5em)Evolutionary\ #h(5em)algorithms#v(2em)], algorithms.at("evolutionary").len()),
   ([#h(6em)Graph algorithms], algorithms.at("graph").len()),
 )
 
-#cetz.canvas({
+#cetz.canvas(length: .75cm, {
   import cetz.chart
   import cetz.draw: *
 
