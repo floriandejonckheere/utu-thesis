@@ -11,19 +11,19 @@
 <!-- MOSAIK -->
 <g id="node2" class="node">
 <title>MOSAIK</title>
-<ellipse fill="lightblue" stroke="black" cx="535.54" cy="-660.04" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="535.54" cy="-660.04" rx="36" ry="36"/>
 <text text-anchor="middle" x="535.54" y="-655.77" font-family="Times,serif" font-size="12.00">MOSAIK</text>
 </g>
 <!-- MOSAIK::Commands::Identify -->
 <g id="node4" class="node">
 <title>MOSAIK::Commands::Identify</title>
-<ellipse fill="lightblue" stroke="black" cx="359.11" cy="-376.25" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="359.11" cy="-376.25" rx="36" ry="36"/>
 <text text-anchor="middle" x="359.11" y="-371.98" font-family="Times,serif" font-size="12.00">MOSAIK::Commands::Identify</text>
 </g>
 <!-- MOSAIK::Graph::Graph -->
 <g id="node9" class="node">
 <title>MOSAIK::Graph::Graph</title>
-<ellipse fill="lightblue" stroke="black" cx="342.44" cy="-561.16" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="342.44" cy="-561.16" rx="36" ry="36"/>
 <text text-anchor="middle" x="342.44" y="-556.89" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Graph</text>
 </g>
 <!-- MOSAIK::Commands::Identify&#45;&#45;MOSAIK::Graph::Graph -->
@@ -34,7 +34,7 @@
 <!-- MOSAIK::Extractors::Evolution -->
 <g id="node10" class="node">
 <title>MOSAIK::Extractors::Evolution</title>
-<ellipse fill="lightblue" stroke="black" cx="514.81" cy="-160.09" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="514.81" cy="-160.09" rx="36" ry="36"/>
 <text text-anchor="middle" x="514.81" y="-155.82" font-family="Times,serif" font-size="12.00">MOSAIK::Extractors::Evolution</text>
 </g>
 <!-- MOSAIK::Commands::Identify&#45;&#45;MOSAIK::Extractors::Evolution -->
@@ -45,7 +45,7 @@
 <!-- MOSAIK::Extractors::Structural -->
 <g id="node11" class="node">
 <title>MOSAIK::Extractors::Structural</title>
-<ellipse fill="lightblue" stroke="black" cx="532.18" cy="-372.62" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="532.18" cy="-372.62" rx="36" ry="36"/>
 <text text-anchor="middle" x="532.18" y="-368.35" font-family="Times,serif" font-size="12.00">MOSAIK::Extractors::Structural</text>
 </g>
 <!-- MOSAIK::Commands::Identify&#45;&#45;MOSAIK::Extractors::Structural -->
@@ -56,7 +56,7 @@
 <!-- MOSAIK::Graph::Preprocessor -->
 <g id="node12" class="node">
 <title>MOSAIK::Graph::Preprocessor</title>
-<ellipse fill="lightblue" stroke="black" cx="411.73" cy="-153.57" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="411.73" cy="-153.57" rx="36" ry="36"/>
 <text text-anchor="middle" x="411.73" y="-149.29" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Preprocessor</text>
 </g>
 <!-- MOSAIK::Commands::Identify&#45;&#45;MOSAIK::Graph::Preprocessor -->
@@ -67,13 +67,13 @@
 <!-- MOSAIK::CLI -->
 <g id="node5" class="node">
 <title>MOSAIK::CLI</title>
-<ellipse fill="lightblue" stroke="black" cx="36" cy="-202.51" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="36" cy="-202.51" rx="36" ry="36"/>
 <text text-anchor="middle" x="36" y="-198.24" font-family="Times,serif" font-size="12.00">MOSAIK::CLI</text>
 </g>
 <!-- MOSAIK::Command -->
 <g id="node6" class="node">
 <title>MOSAIK::Command</title>
-<ellipse fill="lightblue" stroke="black" cx="121.8" cy="-394.05" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="121.8" cy="-394.05" rx="36" ry="36"/>
 <text text-anchor="middle" x="121.8" y="-389.78" font-family="Times,serif" font-size="12.00">MOSAIK::Command</text>
 </g>
 <!-- MOSAIK::CLI&#45;&#45;MOSAIK::Command -->
@@ -84,7 +84,7 @@
 <!-- MOSAIK::Commands::Extract -->
 <g id="node7" class="node">
 <title>MOSAIK::Commands::Extract</title>
-<ellipse fill="lightblue" stroke="black" cx="281.16" cy="-296.25" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="281.16" cy="-296.25" rx="36" ry="36"/>
 <text text-anchor="middle" x="281.16" y="-291.98" font-family="Times,serif" font-size="12.00">MOSAIK::Commands::Extract</text>
 </g>
 <!-- MOSAIK::CLI&#45;&#45;MOSAIK::Commands::Extract -->
@@ -105,7 +105,7 @@
 <!-- MOSAIK::Commands::Evaluate -->
 <g id="node8" class="node">
 <title>MOSAIK::Commands::Evaluate</title>
-<ellipse fill="lightblue" stroke="black" cx="136.86" cy="-510.47" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="136.86" cy="-510.47" rx="36" ry="36"/>
 <text text-anchor="middle" x="136.86" y="-506.19" font-family="Times,serif" font-size="12.00">MOSAIK::Commands::Evaluate</text>
 </g>
 <!-- MOSAIK::Command&#45;&#45;MOSAIK::Commands::Evaluate -->
@@ -146,7 +146,7 @@
 <!-- MOSAIK::Resolver -->
 <g id="node13" class="node">
 <title>MOSAIK::Resolver</title>
-<ellipse fill="lightblue" stroke="black" cx="290.21" cy="-36" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="290.21" cy="-36" rx="36" ry="36"/>
 <text text-anchor="middle" x="290.21" y="-31.73" font-family="Times,serif" font-size="12.00">MOSAIK::Resolver</text>
 </g>
 <!-- MOSAIK::Commands::Extract&#45;&#45;MOSAIK::Resolver -->
@@ -177,7 +177,7 @@
 <!-- MOSAIK::Graph::Vertex -->
 <g id="node19" class="node">
 <title>MOSAIK::Graph::Vertex</title>
-<ellipse fill="lightblue" stroke="black" cx="504.31" cy="-782.39" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="504.31" cy="-782.39" rx="36" ry="36"/>
 <text text-anchor="middle" x="504.31" y="-778.12" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Vertex</text>
 </g>
 <!-- MOSAIK::Graph::Graph&#45;&#45;MOSAIK::Graph::Vertex -->
@@ -213,7 +213,7 @@
 <!-- MOSAIK::Extractors::Structural::Parser -->
 <g id="node14" class="node">
 <title>MOSAIK::Extractors::Structural::Parser</title>
-<ellipse fill="lightblue" stroke="black" cx="722.69" cy="-574.09" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="722.69" cy="-574.09" rx="36" ry="36"/>
 <text text-anchor="middle" x="722.69" y="-569.81" font-family="Times,serif" font-size="12.00">MOSAIK::Extractors::Structural::Parser</text>
 </g>
 <!-- MOSAIK::Extractors::Structural::Parser&#45;&#45;MOSAIK -->
@@ -229,7 +229,7 @@
 <!-- MOSAIK::Extractors::Structural::Processor -->
 <g id="node15" class="node">
 <title>MOSAIK::Extractors::Structural::Processor</title>
-<ellipse fill="lightblue" stroke="black" cx="728.69" cy="-449.17" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="728.69" cy="-449.17" rx="36" ry="36"/>
 <text text-anchor="middle" x="728.69" y="-444.89" font-family="Times,serif" font-size="12.00">MOSAIK::Extractors::Structural::Processor</text>
 </g>
 <!-- MOSAIK::Extractors::Structural::Parser&#45;&#45;MOSAIK::Extractors::Structural::Processor -->
@@ -250,7 +250,7 @@
 <!-- MOSAIK::Graph::Attributes -->
 <g id="node16" class="node">
 <title>MOSAIK::Graph::Attributes</title>
-<ellipse fill="lightblue" stroke="black" cx="414.41" cy="-831.98" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="414.41" cy="-831.98" rx="36" ry="36"/>
 <text text-anchor="middle" x="414.41" y="-827.7" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Attributes</text>
 </g>
 <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK -->
@@ -266,7 +266,7 @@
 <!-- MOSAIK::Graph::Cluster -->
 <g id="node17" class="node">
 <title>MOSAIK::Graph::Cluster</title>
-<ellipse fill="lightblue" stroke="black" cx="284.27" cy="-719.83" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="284.27" cy="-719.83" rx="36" ry="36"/>
 <text text-anchor="middle" x="284.27" y="-715.55" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Cluster</text>
 </g>
 <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK::Graph::Cluster -->
@@ -277,7 +277,7 @@
 <!-- MOSAIK::Graph::Edge -->
 <g id="node18" class="node">
 <title>MOSAIK::Graph::Edge</title>
-<ellipse fill="lightblue" stroke="black" cx="298.64" cy="-818.92" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="298.64" cy="-818.92" rx="36" ry="36"/>
 <text text-anchor="middle" x="298.64" y="-814.64" font-family="Times,serif" font-size="12.00">MOSAIK::Graph::Edge</text>
 </g>
 <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK::Graph::Edge -->
@@ -333,13 +333,13 @@
 <!-- MOSAIK::Metrics::ABCSize::Parser -->
 <g id="node22" class="node">
 <title>MOSAIK::Metrics::ABCSize::Parser</title>
-<ellipse fill="lightblue" stroke="black" cx="692" cy="-321" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="692" cy="-321" rx="36" ry="36"/>
 <text text-anchor="middle" x="692" y="-316.73" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::ABCSize::Parser</text>
 </g>
 <!-- MOSAIK::Metrics::ABCSize::Processor -->
 <g id="node23" class="node">
 <title>MOSAIK::Metrics::ABCSize::Processor</title>
-<ellipse fill="lightblue" stroke="black" cx="785.27" cy="-321.61" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="785.27" cy="-321.61" rx="36" ry="36"/>
 <text text-anchor="middle" x="785.27" y="-317.34" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::ABCSize::Processor</text>
 </g>
 <!-- MOSAIK::Metrics::ABCSize::Parser&#45;&#45;MOSAIK::Metrics::ABCSize::Processor -->
@@ -350,7 +350,7 @@
 <!-- MOSAIK::Metrics::ABCSize -->
 <g id="node24" class="node">
 <title>MOSAIK::Metrics::ABCSize</title>
-<ellipse fill="lightblue" stroke="black" cx="739.27" cy="-241" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="739.27" cy="-241" rx="36" ry="36"/>
 <text text-anchor="middle" x="739.27" y="-236.72" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::ABCSize</text>
 </g>
 <!-- MOSAIK::Metrics::ABCSize::Parser&#45;&#45;MOSAIK::Metrics::ABCSize -->
@@ -366,13 +366,13 @@
 <!-- MOSAIK::Metrics::Complexity::Parser -->
 <g id="node27" class="node">
 <title>MOSAIK::Metrics::Complexity::Parser</title>
-<ellipse fill="lightblue" stroke="black" cx="692" cy="-813" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="692" cy="-813" rx="36" ry="36"/>
 <text text-anchor="middle" x="692" y="-808.73" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::Complexity::Parser</text>
 </g>
 <!-- MOSAIK::Metrics::Complexity::Processor -->
 <g id="node28" class="node">
 <title>MOSAIK::Metrics::Complexity::Processor</title>
-<ellipse fill="lightblue" stroke="black" cx="785.27" cy="-813.61" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="785.27" cy="-813.61" rx="36" ry="36"/>
 <text text-anchor="middle" x="785.27" y="-809.34" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::Complexity::Processor</text>
 </g>
 <!-- MOSAIK::Metrics::Complexity::Parser&#45;&#45;MOSAIK::Metrics::Complexity::Processor -->
@@ -383,7 +383,7 @@
 <!-- MOSAIK::Metrics::Complexity -->
 <g id="node29" class="node">
 <title>MOSAIK::Metrics::Complexity</title>
-<ellipse fill="lightblue" stroke="black" cx="739.27" cy="-733" rx="36" ry="36"/>
+<ellipse fill="#CCE3F7" stroke="black" cx="739.27" cy="-733" rx="36" ry="36"/>
 <text text-anchor="middle" x="739.27" y="-728.73" font-family="Times,serif" font-size="12.00">MOSAIK::Metrics::Complexity</text>
 </g>
 <!-- MOSAIK::Metrics::Complexity::Parser&#45;&#45;MOSAIK::Metrics::Complexity -->
