@@ -25,10 +25,6 @@
 = Case study <casestudy>
 
 In this chapter, we present a case study to evaluate the effectiveness of the proposed solution using a real-world use case.
-We focus on answering the following research question:
-
-*Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
-
 We start by presenting the background information about the use case, followed by a description of the experimental setup.
 Next, we utilize MOSAIK on the use case application, evaluate the effectiveness, and present the results.
 Finally, we discuss the results and analyze the implications of the proposed solution in a broader context.

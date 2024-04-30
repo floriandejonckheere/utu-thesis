@@ -4,32 +4,30 @@
 
 == Extraction
 
-// - Static analysis of code base, because no requirements or design documents (@carvalho_etal_2020)
-Software development is typically done in multiple steps, either using the waterfall model, or using an iterative approach @royce_1970.
+Software development is typically done in sequential steps, either using the waterfall model, or using an iterative approach @royce_1970.
 Analysis and design are two steps of early software development which often yield software development lifecycle artifacts in the form of use cases, process models, and diagrams.
-However, after the completion of the development and the subsequent deployment, these documents are often not kept up to date, and sometimes even lost.
+After the completion of the development and the subsequent deployment, these documents are often not kept up to date, and sometimes even lost.
 Hence, it is not always possible to use design documents for the information extraction phase.
-A software development artifact that is usually available is the source code repository of the application.
-Hence, we chose the source code repository as the starting point of the information extraction.
+A software development artifact that is generally available for legacy applications is the source code repository of the application.
+For these reasons, we chose the source code repository as the starting point of the information extraction.
 
-// TODO: explain why we chose static analysis + evolutionary analysis
+Our solution uses multiple coupling strategies to extract information from the source code repository.
+The first strategy is the structural coupling strategy, which is based on the dependencies between software components.
+When two software components are dependent on each other, they are structurally coupled.
 
-// TODO: structural coupling + reference
-
-// Evolutionary analysis
 #cite_full(<mazlami_etal_2017>) proposed a microservice extraction model that includes three possible extraction strategies: _logical coupling_ strategy, _semantic coupling_ strategy, and _contributor coupling_ strategy.
-In this thesis, we concentrate on the logical coupling strategy, and the contributor coupling strategy.
+In this thesis, we concentrate on the logical coupling strategy, and the contributor coupling strategy as second and third strategies.
 The next sections describe in detail how these strategies are used for extracting information from the source code repository.
 
 === Structural coupling
 
 Structural coupling is a measure of the dependencies between software components.
-The dependencies can take the form of control dependencies, or data dependencies /* TODO: reference */.
+The dependencies can take the form of control dependencies, or data dependencies.
 Control dependencies are dependencies between software components that are related to the flow of control of the software system (e.g. interleaving method calls).
 Data dependencies relate to the flow of data between software components (e.g. passing parameters).
-MOSAIK extracts structural coupling information using static analysis of the source code /* TODO: reference */.
-As MOSAIK is intended to collect information from monolith applications written in the Ruby programming language, the static analysis is limited to the information that is embedded in the source code.
-Ruby is a dynamic language, which means that only incomplete type information can be extracted using static analysis.
+MOSAIK extracts structural coupling information using static analysis of the source code.
+As our solution is intended to collect information from monolith applications written in a dynamic programming language, the static analysis is limited to the information that is embedded in the source code.
+Dynamic languages such as Python and Ruby typically include only incomplete type information that can be extracted using static analysis.
 In particular, some techniques like meta-programming and dynamic class loading may affect the accuracy of the extracted information.
 
 Our solution analyzes the source code of the monolith application using the `parser` library#footnote[#link("https://github.com/whitequark/parser")[https://github.com/whitequark/parser]].
@@ -39,14 +37,14 @@ Iterating over the #acr("AST") of the monolith application, MOSAIK extracts the 
 Using this information, a call graph is constructed that represents the structural coupling of the monolith application. For each class in the monolith application $c_i in M_C$, a vertex is created in the call graph.
 References between classes are represented as directed edges between the vertices.
 
-A directed edge is created for each reference between two classes $c_i, c_j$.
-This edge describes three types of references: (i) static method calls between two methods $m_i$ and $m_j$ of the classes $c_i, c_j$ _(method-to-method)_, (ii) references from method $m_i$ to an object of class $c_j$ _(method-to-entity)_, and (iii) associations between entities of class $c_i$ and $c_j$ _(entity-to-entity)_ @filippone_etal_2021.
+A directed edge is created for each reference between two classes $c_i, c_j in M_C$.
+This edge describes one of three types of references: (i) static method calls between two methods $m_i$ and $m_j$ of the classes $c_i, c_j$ _(method-to-method)_, (ii) references from method $m_i$ to an object of class $c_j$ _(method-to-entity)_, and (iii) associations between entities of class $c_i$ and $c_j$ _(entity-to-entity)_ @filippone_etal_2021.
 
 Hence, the structural coupling $N_s$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the number of references between the classes, as described in @aggregated_structural_coupling_formula.
 
 $
   N_s (c_i, c_j) =
-    sum_(m_i in c_i, m_j in c_j)
+    sum_(m_i in c_i, m_j in c_j\ c_i, c_j in M_C)
       italic("ref")_italic("mm") (m_i, m_j) +
       italic("ref")_italic("mc") (m_i, c_j) +
       italic("ref")_italic("cc") (c_i, c_j)
@@ -61,40 +59,43 @@ A fine-grained granularity can lead to a much larger number of microservices, wh
 Hence, a trade-off between the two granularities must be made.
 MOSAIK uses a coarse-grained granular approach, using the classes of the monolith application as the starting point for the extraction of microservices.
 
-// TODO: Dynamic analysis, because inherent polymorphism and late binding
-//        -> not through execution, because always skewed towards a certain code path (e.g. one dialysis machine model)
-//        -> through integration tests (@carvalho_etal_2020): describe coverage and setup
-//        -> measure performance overhead
-
 Consider the extraction algorithm in pseudocode in @structural_coupling_algorithm.
-The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolith application.
-The algorithm iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
-All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
+#grid(
+  columns: (51%, auto),
+  gutter: 1em,
+  [
+    #figure(
+        table(
+          columns: (auto),
+          inset: 5pt,
+          stroke: (x: none),
+          align: (left),
+          [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
+          [
+            _calls_ $arrow.l$ _array_[][][] \
+            \
+            *for each* ( _class_ : _classes_ ) \
+              #h(1em) *for each* ( _method_ : _class_._methods_ ) \
+                #h(2em) *for each* ( _reference_ : _method_._references_ ) \
+                  #h(3em) _receiver_ $arrow.l$ _reference_._receiver_ \
+                  #h(3em) _type_ $arrow.l$ _reference_._type_ \
+                  #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
+            \
+            *return* _calls_;
+          ]
+      ),
+      kind: "algorithm",
+      supplement: "Algorithm",
+      caption: [Structural coupling extraction algorithm],
+    ) <structural_coupling_algorithm>
+  ],
+  [
+    The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolith application.
+    The algorithm then iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
 
-#figure(
-    table(
-      columns: (auto),
-      inset: 5pt,
-      stroke: (x: none),
-      align: (left),
-      [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
-      [
-        _calls_ $arrow.l$ _array_[][][] \
-        \
-        *for each* ( _class_ : _classes_ ) \
-          #h(1em) *for each* ( _method_ : _class_._methods_ ) \
-            #h(2em) *for each* ( _reference_ : _method_._references_ ) \
-              #h(3em) _receiver_ $arrow.l$ _reference_._receiver_ \
-              #h(3em) _type_ $arrow.l$ _reference_._type_ \
-              #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
-        \
-        *return* _calls_;
-      ]
-  ),
-  kind: "algorithm",
-  supplement: "Algorithm",
-  caption: [Structural coupling extraction algorithm],
-) <structural_coupling_algorithm>
+    All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
+    ]
+)
 
 === Logical coupling
 
@@ -109,14 +110,14 @@ $ h_i = { c_i, t_i } $ <logical_history_formula>
 
 If $c_1, c_2$ are two classes belonging to the same change event $h_i$, then the logical coupling is computed as follows in @logical_coupling_formula @mazlami_etal_2017.
 
-$ Delta(c_1, c_2) = sum_(h in M_H) delta_h(c_1, c_2) $ <logical_coupling_formula>
+$ Delta(c_1, c_2) = sum_(h_i in M_H) delta_h_i (c_1, c_2) $ <logical_coupling_formula>
 
-Where $delta$ is the change function.
+Where $delta$ is the change function in @change_function_formula.
 
-$ delta(c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <change_function_formula>
+$ delta_h_i (c_1, c_2) = cases(1 "if" c_1\, c_2 "changed in" h_i, 0 "otherwise") $ <change_function_formula>
 
-Then, @logical_coupling_formula is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event.
-Thus, the logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
+Then, the logical coupling is calculated for each change event $h_i in M_H$, and each pair of classes $c_1, c_2$ in the change event.
+The logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
 
 $ N_c (c_1, c_2) = Delta(c_1, c_2) $ <aggregated_logical_coupling_formula>
 
@@ -209,8 +210,8 @@ Finally, iterating over each file in the changelist, the algorithm adds the auth
 
 === Dependency graph
 
-As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolith application, and $E$ is the set of edges between classes that have an interdependency based on the discussed information extraction strategies.
-The weight for the edge $e_i$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
+As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolith application, and $E$ is the set of edges between classes that have an interdependency based on the discussed coupling strategies.
+The weight for the edge $e_i in E$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
 The weights $omega_s, omega_c, omega_d in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
 This makes the strategy adaptive and flexible @santos_paula_2021.
 
