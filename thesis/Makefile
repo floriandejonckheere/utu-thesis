@@ -2,7 +2,7 @@ all: thesis.pdf
 
 .PHONY:
 
-thesis.pdf: thesis.typ template.typ chapters/*.typ appendices.typ bibliography/*.yml
+thesis.pdf: thesis.typ template.typ chapters/*.typ appendices/*.typ bibliography/*.yml data/*.yml figures/**/*.typ
 	typst compile thesis.typ
 
 watch:
