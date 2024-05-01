@@ -11,13 +11,13 @@ In the third part, we presented our solution for the automated identification of
 We comprehensively described the architecture of our tool, and discussed the technical implementation details.
 
 Finally, we evaluated the effectiveness of our solution using a case study on a real-world monolith application.
-We conclude that our solution is able to identify microservice candidates with an acceptable level of quality, and that it can be used as a basis for further research and development in this area.
+We concluded that our solution is able to identify microservice candidates with an acceptable level of quality, and that it can be used as a basis for further research and development in this area.
 
 #pagebreak()
 
 == Future considerations
 
-The research field of automated modularization of monolith applications is still developing, and there are many opportunities for improvements.
+The research field of (semi-)automated modularization of monolith applications is still developing, and there are many opportunities for improvements.
 In recent years, there has been a pickup in the number of publications on this topic, and we expect to see more research papers published in the near future.
 
 There are several areas where we see potential for improvement in our proposed solution.
@@ -26,7 +26,7 @@ For example, the structural coupling can be improved by dynamically collecting i
 Furthermore, enhancing the extracted information with additional object-oriented relationships (e.g. inheritance and composition) can improve the accuracy of the microservice candidate identification algorithm.
 Alternatively, supplementary heuristics, such as semantic coupling, can be utilized as well.
 
-// TODO: top-down yield less granular microservices than bottom-up?
+A case can be made for considering alternative microservice candidate identification algorithms as well, such as clustering algorithms that work top-down instead of the bottom-up approach we opted for in our solution.
 
 Finally, the MOSAIK tool can be improved technically.
 For instance, rewriting critical parts of the identification algorithm in another, more performant language could yield large gains in runtime performance.
