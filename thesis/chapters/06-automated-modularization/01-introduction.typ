@@ -8,14 +8,13 @@
 In this chapter, we investigate the state of the art in (semi-)automated technologies for modularization of monolith codebases.
 Using a systematic literature review, we identify and categorize existing literature on (semi-)automated modularization of monolith codebases.
 We focus in particular on the identification of microservices candidates in monolith codebases, as this is a crucial step in the migration from monolith to microservices architecture.
-
-== Plan
-
 Using the systematic literature review, we answer the following research question:
 
 *Research Question 2*: What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
 
 The motivation behind the research question is discussed in @introduction.
+
+== Plan
 
 In the current literature, several systematic mapping studies related to microservices architecture have been conducted @pahl_jamshidi_2016, @alshuqayran_etal_2016, as well as systematic literature reviews related to microservice candidate identification @abgaz_etal_2023, @schmidt_thiry_2020.
 However, the methods discussed in these studies are mostly aimed at assisting the software architect in identifying microservice candidates, rather than providing automated processes.

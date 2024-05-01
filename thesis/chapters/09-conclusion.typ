@@ -26,6 +26,8 @@ For example, the structural coupling can be improved by dynamically collecting i
 Furthermore, enhancing the extracted information with additional object-oriented relationships (e.g. inheritance and composition) can improve the accuracy of the microservice candidate identification algorithm.
 Alternatively, supplementary heuristics, such as semantic coupling, can be utilized as well.
 
+// TODO: top-down yield less granular microservices than bottom-up?
+
 Finally, the MOSAIK tool can be improved technically.
 For instance, rewriting critical parts of the identification algorithm in another, more performant language could yield large gains in runtime performance.
 Moreover, the tool can be extended to support more programming languages, as the current implementation only supports Ruby.

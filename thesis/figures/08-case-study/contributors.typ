@@ -26,6 +26,6 @@
     radius: 3,
     slice-style: colors,
     inner-radius: 1,
-    inner-label: (content: (value, label) => if value > 12 [#text(white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 100%),
+    inner-label: (content: (value, label) => if value > 12 [#text(size: 10pt, white, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 100%),
     outer-label: (content: (value, label) => if value <= 12 and value > 1 [#text(size: 9pt, str(calc.round(100 * value / total, digits: 0)) + "%")] else [], radius: 120%))
 })
