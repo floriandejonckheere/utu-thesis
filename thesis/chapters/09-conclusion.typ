@@ -11,7 +11,8 @@ In the third part, we presented our solution for the automated identification of
 We comprehensively described the architecture of our tool, and discussed the technical implementation details.
 
 Finally, we evaluated the effectiveness of our solution using a case study on a real-world monolith application.
-We concluded that our solution is able to identify microservice candidates with an acceptable level of quality, and that it can be used as a basis for further research and development in this area.
+We concluded that our solution is able to meet the requirements we set for it, and that it generates a decomposition of suitable quality.
+The tool is flexible in use, and can be easily extended to support other programming languages, and clustering algorithms.
 
 #pagebreak()
 
