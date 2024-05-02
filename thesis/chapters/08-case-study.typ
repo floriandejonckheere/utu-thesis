@@ -39,14 +39,15 @@ NephroFlow™ Link is responsible for collecting data from the dialysis machines
 
 #figure(
   include("/figures/08-case-study/link.typ"),
-  caption: [NephroFlow™ Link architecture overview]
-) <link_architecture>
+  caption: [NephroFlow™ Link topological overview]
+) <link_topology>
 
 Dialysis machines measure and publish data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
 Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
 
 Nipro Group has rolled out NephroFlow™ Link in a number hospitals and dialysis centers across Europe, the Middle East, Central America, India, and Japan, collectively ensuring connection to hundreds of dialysis machines.
 To safeguard the privacy and information security of the patient, NephroFlow™ Link is deployed on a virtual server or hardware appliance within the physical and virtual premises of the hospital or dialysis center, and the data is sent to a secure cloud environment.
+An overview of the topology of the deployment is presented in @link_topology.
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
 The choice of Ruby as programming language was influenced by the Ruby on Rails framework#footnote[#link("https://rubyonrails.org")[https://rubyonrails.org]], which is used for the NephroFlow™ Platform.
