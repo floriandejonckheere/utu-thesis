@@ -383,6 +383,12 @@ Hence, we conclude that the performance requirement is only partially met, as th
 
 The results indicate that the transformation of NephroFlow™ Link into a modular monolith architecture is feasible and can provide numerous benefits, such as improved development velocity, as well as increasing the overall performance of the application.
 
-In order to validate the ability of MOSAIK to perform qualitative decompositions on other applications, more case studies need to be conducted.
-In the industry there are many applications written in Ruby that are open-source, and could be used for this purpose.
-Furthermore, as only the parsing of the source code is language-specific, the extraction part of the tool could be rewritten to support other dynamic languages (e.g. Python) as well.
+We expect that MOSAIK can be used to decompose other Ruby applications, as the tool is not dependent on the specific characteristics of the use case application.
+MOSAIK can decompose both applications written in plain Ruby, or developed using a framework such as Ruby on Rails or Sinatra, as the structural coupling does not rely on the specific implementation of any framework.
+The evolutionary coupling does however require the application to be versioned using a version control system to be able to extract the necessary information.
+In order to validate and improve the tool further, more case studies need to be conducted on other applications.
+
+Furthermore, only the structural coupling (which parses the #acr("AST") of the source code) is language-specific.
+The tool allows extending the extraction step to support other languages (e.g. Python or Java) by implementing a parser for the specific language.
+Parsers can be implemented using existing libraries, or by using a language-agnostic parser generator (e.g. ANTLR#footnote[#link("https://www.antlr.org")[https://www.antlr.org]]).
+Implementing support for an additional language should not be a significant effort, as the extraction step is decoupled from the other steps in the process.
