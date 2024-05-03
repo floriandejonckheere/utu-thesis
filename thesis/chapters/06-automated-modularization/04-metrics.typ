@@ -103,7 +103,7 @@ This metric quantifies how the operations in a microservice are related to each 
 Microservices are distributed systems, and communication between microservices is done over a network.
 The network overhead is the extra cost of this communication, and many authors consider it an important metric when designing a microservice architecture.
 
-#cite_full(<filippone_etal_2021>) and others @carvalho_etal_2020, @zhou_xiong_2022 calculated the value based using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
+#cite_full(<filippone_etal_2021>) and others @carvalho_etal_2020, @zhou_xiong_2022 calculated the value using a heuristic function that uses the size of primitive types of method call arguments to predict the total network overhead of a microservice decomposition.
 #cite_full(<carvalho_etal_2020>) also included the protocol overhead in the calculation, which is the cost of the communication protocol used to send messages between microservices (for example, TCP and HTTP headers).
 
 #cite_full(<quattrocchi_etal_2024>) measured network overhead as part of their operational cost metric.
