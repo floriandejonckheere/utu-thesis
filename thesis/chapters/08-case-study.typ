@@ -380,7 +380,7 @@ The various test scenarios provide insights into how modularization behaves, wit
 @scn_structural_logical_contributor, the scenario that considers all three types of coupling, performs well in terms of coupling, cohesion, and complexity, though the microservices end up with a tighter coupling than the scenario that only considers structural and logical coupling.
 Given the results, we can conclude that the quality requirement is met, as the proposed solution is able to identify module boundaries with sufficient quality.
 
-MOSAIK is able to automatically generate decompositions of the application's source code without intervention of the software architect, fulfilling the automation requirement.
+MOSAIK is able to automatically generate decompositions of the source code without intervention of the software architect, fulfilling the automation requirement.
 The tool is able to generate visualizations of the decompositions, which can be used to gain insight into the structure of the application, fulfilling the visual requirement.
 
 Finally, the runtime of the analysis is acceptable for the source code of NephroFlow™ Link, with the decomposition of the application taking less than three minutes to complete.
