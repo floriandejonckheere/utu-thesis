@@ -59,7 +59,6 @@ A fine-grained granularity can lead to a much larger number of microservices, wh
 Hence, a trade-off between the two granularities must be made.
 MOSAIK uses a coarse-grained granular approach, using the classes of the monolith application as the starting point for the extraction of microservices.
 
-Consider the extraction algorithm in pseudocode in @structural_coupling_algorithm.
 #grid(
   columns: (51%, auto),
   gutter: 1em,
@@ -94,6 +93,7 @@ Consider the extraction algorithm in pseudocode in @structural_coupling_algorith
     The algorithm then iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
 
     All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
+    @structural_coupling_algorithm describes the structural coupling extraction algorithm in pseudocode.
     ]
 )
 

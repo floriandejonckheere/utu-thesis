@@ -133,6 +133,7 @@ An overview of the source code repository is presented in @source_code_statistic
   [
     We identified #stats.at("contributors").len() software developers that have contributed to the software in the analyzed timespan, although only five developers have more than ten commits attributed to them.
     The top two contributors were responsible for #(calc.round(100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits"), digits: 0))% of the commits, while the other eight contributors accounted for the remaining #(calc.round(100 - (100 * (stats.at("contributors").at("A") + stats.at("contributors").at("B")) / stats.at("commits")), digits: 0))% of the commits.
+    @contributor_statistics shows the distribution of commits by contributor.
   ],
   [
     #figure(
@@ -264,7 +265,10 @@ ABC size and complexity are closely related, as they both measure the perceived 
   ]
 )
 
-#v(2em)
+#pagebreak()
+
+@structural_logical_microservice_size and @structural_contributor_microservice_size show the distribution of the microservices in @scn_structural_logical and @scn_structural_contributor.
+@logical_contributor_microservice_size and @structural_logical_contributor_microservice_size show the distribution of the microservices in @scn_logical_contributor and @scn_structural_logical_contributor.
 
 #import "/figures/08-case-study/microservice-size.typ": *
 #grid(

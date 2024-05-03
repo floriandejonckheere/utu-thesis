@@ -48,7 +48,7 @@ The topics relevant for the search query are:
   Keywords: _automated tool, machine learning, static analysis, dynamic analysis, hybrid analysis_
 
 We formulated the search query by combining the keywords related to the topics.
-It can be expressed as the following boolean query:
+@slr_search_query represents the search query as a boolean expression.
 
 #figure(
   code(
@@ -117,6 +117,7 @@ Once a final selection of publications was made, the resulting publications were
 == Conduct
 
 Using the search strategy outlined in the previous section, we queried the selected platforms and found a total of #slr.platforms.values().map(p => p.total).sum() publications.
+@slr_search_results gives an overview of the search results.
 
 #figure(
   table(

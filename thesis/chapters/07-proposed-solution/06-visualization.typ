@@ -14,7 +14,7 @@ As each coupling strategy can create one or more edges, the graph can contain si
 The graph visualization implementation accepts several parameters to control the layout and appearance of the graph, such as aggregating the edges between two vertices, filtering out edges with a low weight, and hiding vertices with no outgoing or incoming edges.
 The application offers multiple renderers to visualize the graph, using different layout algorithms and styles.
 
-@information_extraction_graph illustrates the visualization of the information extraction step applied to the source code of the application itself.
+@information_extraction_graph illustrates the visualization of the information extraction step applied to the source code of MOSAIK.
 
 The decomposition step does not modify the graph structure, but adds subgraphs to the visualization to indicate the microservice candidates.
 @decomposition_graph illustrates the visualization of the decomposition step.

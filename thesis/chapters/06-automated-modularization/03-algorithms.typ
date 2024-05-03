@@ -29,6 +29,8 @@ Other algorithms that do not fit into one of these categories, or custom algorit
   ]
 )
 
+@slr_algorithms_chart presents a visual representation of the distribution of the algorithms in the identified categories.
+
 #pagebreak()
 
 The identified classes of microservice candidate identification algorithms and the relevant publications are listed in @slr_algorithms_table.

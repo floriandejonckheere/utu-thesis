@@ -63,6 +63,7 @@ Publications using undisclosed quality metrics, and publications using no metric
 Cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) and coupling (#count(metrics, "coupling")\; #percentage(metrics, "coupling")) are the most frequently used metrics, followed by modularity (#count(metrics, "modularity")\; #percentage(metrics, "modularity")), network overhead and complexity (#count(metrics, "complexity")\; #percentage(metrics, "complexity") each), and resource usage (#count(metrics, "resource")\; #percentage(metrics, "resource")).
 Publications using other metrics (#count(metrics, "other")\; #percentage(metrics, "other")) account for the remaining metrics.
 Finally, the #count(metrics, "none") publications that do not mention any quality metrics account for #percentage(metrics, "none").
+@slr_metrics_chart breaks down the metrics distribution by category.
 
 #figure(
   include("/figures/06-automated-modularization/metrics.typ"),

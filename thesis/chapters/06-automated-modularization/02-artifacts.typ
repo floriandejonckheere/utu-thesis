@@ -43,7 +43,7 @@ The categories are adapted from a study by #cite_full(<bajaj_etal_2021>).
 
 Of the four categories, requirements documents and models, design documents, and codebase are static artifacts, while execution data is a dynamic artifact.
 Hybrid approaches using both static and dynamic analysis are categorized according to the artifact used in the respective analysis.
-The majority of the #total(artifacts) identified approaches use the codebase as input for the algorithm (#count(artifacts, "codebase")\; #percentage(artifacts, "codebase")), followed by execution data (#count(artifacts, "execution")\; #percentage(artifacts, "execution")).
+As @slr_artifacts_chart illustrates, the majority of the #total(artifacts) identified approaches use the codebase as input for the algorithm (#count(artifacts, "codebase")\; #percentage(artifacts, "codebase")), followed by execution data (#count(artifacts, "execution")\; #percentage(artifacts, "execution")).
 #count(artifacts, "requirements") publications (#percentage(artifacts, "requirements")) use requirements documents an models, and #count(artifacts, "design") (#percentage(artifacts, "design")) use design documents.
 
 #figure(

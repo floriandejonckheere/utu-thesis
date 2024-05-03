@@ -112,6 +112,7 @@ Where:
     Then, the algorithm aggregates each community in a single vertex, while preserving the network structure.
     The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
 
+    @louvain_algorithm represents a pseudocode implementation of the Louvain algorithm.
     A visualization of the intermediate steps of the Louvain algorithm is shown in @louvain.
   ]
 )
@@ -149,7 +150,7 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
     The refinement ensures that the algorithm does not get stuck in a local optimum using a probability distribution.
     The Leiden algorithm has been shown to outperform the Louvain algorithm in terms of quality and speed @traag_etal_2019.
   ],
-  text(size: 10pt)[
+  [
     #figure(
       table(
         columns: (auto),
@@ -157,7 +158,7 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
         stroke: (x: none),
         align: (left),
         [*@leiden_algorithm*: Leiden algorithm (refinement)],
-        [
+        text(size: 10pt)[
           #text(green.darken(40%), "// Phase 2: partition refinement") \
           *for each* ( _community_ : _graph_ ) \
           #h(1em) _partition_ $arrow.l$ _community_ \
@@ -173,6 +174,8 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
     ) <leiden_algorithm>
   ]
 )
+
+A pseudocode implementation of the Leiden algorithm is shown in @leiden_algorithm.
 
 Although the Leiden algorithm is more performant than the Louvain algorithm, it is more complex to implement due to the refinement phase.
 Because of this added complexity, we opted to use the Louvain algorithm as default clustering algorithm for our solution.

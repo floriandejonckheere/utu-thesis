@@ -49,8 +49,13 @@ When all modules have been extracted from the monolith, the application has effe
     Contrary to microservices applications, modular monolith applications are built as a single deployable unit.
     The modules of the software system are separated logically (not physically), and are deployed together.
     Horizontal scaling of a modular monolith architecture is more difficult than a microservices architecture.
+    @distributedness describes the software architectures in two dimensions: logical and physical.
   ]
 )
+
+The traditional monolith is both logically and physically monolithic, while a distributed monolith is only logically monolithic.
+A microservices architecture is physically distributed, and logically modular.
+The modular monolith architecture is logically modular, as the application is divided into modules, but physically monolithic, as the modules are deployed together.
 
 #v(2em)
 
