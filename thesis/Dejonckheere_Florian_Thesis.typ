@@ -41,17 +41,16 @@
   // Abstract
   abstract: [
     // Background
-    The modular monolith architecture has recently emerged as a harmonization of the monolith and microservices architectures.
-    It offers a balanced approach to modularity, scalability, and flexibility for software systems.
-    As simple applications evolve into complex and hard-to-maintain monoliths, many organizations are pivoting towards modular monoliths or full microservices architectures to meet the ever-increasing demands of modern business.
+    The modular monolith software architecture has recently emerged as a hybrid solution, combining the simplicity and development velocity of the traditional monolith, with the scalability and flexibility of the microservices architecture.
+    As simple software systems evolve into complex and tightly coupled monoliths, organizations are pivoting towards modular monoliths or full microservices architectures to address the challenges of web-scale software development.
 
     // Objective
-    This thesis investigates the benefits and drawbacks of modular monolith architectures, and the challenges faced during the migration process of monolith applications to modular monoliths.
-    It explores the concept of (semi-)automated modularization of software systems.
+    This thesis investigates the benefits and drawbacks of the modular monolith architecture, and the challenges faced when migrating monolith applications to a modular software architecture.
+    It explores the concept of (semi-)automated modularization of software systems, and proposes an approach to automated microservice candidate identification in modular monolith architectures.
 
     // Method
-    Based on a literature review, a four-step approach to automated microservice candidate identification is designed, and a case study is conducted to evaluate its effectiveness using the cohesion and coupling quality metrics.
-    The results of the case study indicate that the approach is effective in identifying microservice candidates, and can be used to automate modularization of monolithic applications.
+    Based on a literature review, a four-step approach is designed, and a case study is conducted to evaluate its effectiveness using the cohesion and coupling quality metrics.
+    The results indicate that the approach is effective in identifying microservice candidates, and can be used to assist in automating modularization of monolithic applications.
     // Results
     Reflecting upon the results of the evaluation, a number of optimizations are suggested to improve the effectiveness of the approach.
     The study concludes that using automated technologies to reduce the manual effort required for modularization can significantly improve the efficiency and accuracy of the process.
