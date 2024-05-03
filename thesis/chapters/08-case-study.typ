@@ -87,7 +87,6 @@ Strategies using a single coupling were not considered, as they extract limited 
     inset: 10pt,
     stroke: (x: none),
     align: (right, center, center, center, left),
-    // TODO: row span first three columns: Weights
     [*ID*], [$omega_s$], [$omega_c$], [$omega_d$], [*Scenario*],
     ..for (key, scenario) in scenarios.pairs() {
       (

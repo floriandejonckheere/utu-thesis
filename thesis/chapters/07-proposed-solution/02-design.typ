@@ -25,4 +25,3 @@ The next sections detail each of these steps, providing a comprehensive overview
 The process we describe is generic and not tied to any specific programming language or paradigm.
 We implemented a prototype in the Ruby programming language#footnote[#link("https://ruby-lang.org")[https://ruby-lang.org]].
 The source code of the implementation is available on Github#footnote[#link("https://github.com/floriandejonckheere/mosaik")[https://github.com/floriandejonckheere/mosaik]].
-// TODO: something about type checking

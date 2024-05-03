@@ -170,9 +170,8 @@ The secondary studies were used to perform the snowballing process, which result
 
 First, we categorized the publications based on the #acr("SDLC") artifact used as input for the microservice candidate identification process.
 Each artifact category has an associated collection type: either static, dynamic, or hybrid @bajaj_etal_2021.
-Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. call trace or execution logs). /* TODO: reference */
-/* TODO: elaborate more on the categories */
-Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid. /* TODO: is hybrid a separate category? */
+Static collection describes a #acr("SDLC") artifact that was collected without executing the software (e.g. source code or binary code), while dynamic collection describes a #acr("SDLC") artifact that was collected after or during execution of the software (e.g. call trace or execution logs).
+Some publications describe methods or algorithms that use a combination of #acr("SDLC") artifacts, which is categorized as hybrid.
 
 Second, we categorized the publications based on the class of algorithm(s) used for microservice candidate identification.
 We based the classification of the algorithms on the work of #cite_full(<abdellatif_etal_2021>), who identified six types of microservice candidate identification algorithms.
