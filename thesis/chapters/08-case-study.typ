@@ -350,11 +350,10 @@ Due to the restricted nature of the source code, precise information about the f
   gutter: 1em,
   [
      @runtime_statistics depicts the runtime of the analysis for each scenario.
+     The runtime statistics were gathered by running the analysis ten times for each scenario, and calculating the mean runtime.
+     Each scenario is executed multiple times to account for variations in the execution time due to external factors (e.g. system load, disk I/O, etc.).
      Each execution is divided into three phases: extraction, decomposition, and evaluation.
      The extraction step is equal for all scenarios, as it is based on the same input data.
-     This step takes around 8 seconds to complete.
-     The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the microservices.
-     Finally, the evaluation step executes in a similar time for all scenarios, ranging from 3.4 to 4.9 seconds.
   ],
   [
     #figure(
@@ -364,6 +363,9 @@ Due to the restricted nature of the source code, precise information about the f
   ]
 )
 
+This step takes around 8 seconds to complete.
+The second step, decomposition, is the most time-consuming step, as it involves the iterative process of identifying the microservices.
+Finally, the evaluation step executes in a similar time for all scenarios, ranging from 3.4 to 4.9 seconds.
 The decomposition in scenarios #ref(<scn_structural_logical>, supplement: none), #ref(<scn_logical_contributor>, supplement: none), and #ref(<scn_structural_logical_contributor>, supplement: none) had a similar runtime (157, 148, and 128 seconds respectively), while the scenario #ref(<scn_structural_contributor>, supplement: none) executed in less than half the time: 72 seconds.
 @scn_structural_contributor is the fastest scenario, as it does not consider the logical coupling, which contains a lot of information that needs to be processed.
 
