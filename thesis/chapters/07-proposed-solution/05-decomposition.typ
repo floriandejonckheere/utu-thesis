@@ -127,7 +127,7 @@ Where:
         [#include("/figures/07-proposed-solution/louvain-3.typ")],
         [#include("/figures/07-proposed-solution/louvain-4.typ")],
     ),
-    caption: [Visualization of the Louvain algorithm]
+    caption: [Visualization of the Louvain algorithm @blondel_etal_2008]
 ) <louvain>
 
 A major disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
