@@ -25,7 +25,7 @@
 = Case study <casestudy>
 
 In this chapter, we present a case study to evaluate the effectiveness of the proposed solution using a real-world use case.
-We start by presenting the background information about the use case, followed by a description of the experimental setup.
+We start by describing the background information about the use case, followed by a description of the experimental setup.
 Next, we decompose the use case application using MOSAIK, evaluate the quality of the decomposition, and present the results.
 Finally, we discuss the findings and analyze the implications of the proposed solution in a broader context.
 

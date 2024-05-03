@@ -11,6 +11,7 @@ We focus on answering the following research question:
 
 *Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
+The motivation behind the research question is discussed in @introduction.
 
 == Problem statement
 

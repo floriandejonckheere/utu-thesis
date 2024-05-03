@@ -10,6 +10,8 @@ We answer the following research question:
 
 *Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
 
+The motivation behind the research question is discussed in @introduction.
+
 == Definition
 
 While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules based on their functionality @kucukoglu_2022.

@@ -3,8 +3,8 @@
 = Related work <relatedwork>
 
 In this chapter, we present related work on the topic of (semi-)automated modularization and microservice candidate identification in monolith systems, with a focus on concrete implementations of these approaches.
-A number of tools have been developed to assist in the modularization of monolith applications into microservices or modular monolith architecture.
 
+A number of tools have been developed to assist in the modularization of monolith applications into microservices or modular monolith architecture.
 #cite_full(<gysel_etal_2016>) developed a tool called _ServiceCutter_.
 The tool, implemented as a web application#footnote(link("https://servicecutter.github.io/")[https://servicecutter.github.io/]), extracts information from the domain model of the application, and uses it to identify microservice candidates.
 The software architect can customize the process by changing the algorithm and several parameters used for the identification.
