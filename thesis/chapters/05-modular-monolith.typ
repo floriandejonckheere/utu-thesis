@@ -14,7 +14,7 @@ The motivation behind the research question is discussed in @introduction.
 
 == Definition
 
-While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules based on their functionality @kucukoglu_2022.
+While a traditional monolith architecture is a single-tiered software architecture that tightly couples the three layers (presentation, business logic, and data access), the modular monolith architecture focuses on separation of concerns by partitioning the application into modules based on their functionality @kucukoglu_2022.
 
 The three layers are present in each module, but are not directly accessible from outside of the module boundary.
 Instead, modules expose a well-defined interface that describes the capabilities and restrictions of the module.
