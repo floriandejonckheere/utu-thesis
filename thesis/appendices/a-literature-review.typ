@@ -50,7 +50,9 @@
       )
     }
   ),
-  caption: [Selected publications (primary studies)]
+  caption: [Selected publications (primary studies)],
+  kind: "appendix",
+  supplement: "Table"
 ) <slr_primary_publications>
 
 #pagebreak()
@@ -99,5 +101,7 @@
       )
     }
   ),
-  caption: [Selected publications (secondary studies)]
+  caption: [Selected publications (secondary studies)],
+  kind: "appendix",
+  supplement: "Table"
 ) <slr_secondary_publications>
