@@ -191,7 +191,7 @@
          x="482.69"
          y="-719.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text9">MOSAIK::Algorithms::Louvain</text>
     </g>
     <!-- MOSAIK::Commands::Identify -->
@@ -214,7 +214,7 @@
          x="432.69"
          y="-611.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text10">MOSAIK::Commands::Identify</text>
     </g>
     <!-- MOSAIK::Algorithms::Louvain&#45;&#45;MOSAIK::Commands::Identify -->
@@ -249,7 +249,7 @@
          x="322.69"
          y="-1043.47"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text11">MOSAIK::CLI</text>
     </g>
     <!-- MOSAIK::Command -->
@@ -272,7 +272,7 @@
          x="352.69"
          y="-935.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text12">MOSAIK::Command</text>
     </g>
     <!-- MOSAIK::CLI&#45;&#45;MOSAIK::Command -->
@@ -307,7 +307,7 @@
          x="352.69"
          y="-719.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text14">MOSAIK::Commands::Extract</text>
     </g>
     <!-- MOSAIK::CLI&#45;&#45;MOSAIK::Commands::Extract -->
@@ -342,7 +342,7 @@
          x="372.69"
          y="-827.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text16">MOSAIK::Commands::Evaluate</text>
     </g>
     <!-- MOSAIK::Command&#45;&#45;MOSAIK::Commands::Evaluate -->
@@ -401,7 +401,7 @@
          x="312.69"
          y="-263.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text20">MOSAIK::Graph::Graph</text>
     </g>
     <!-- MOSAIK::Command&#45;&#45;MOSAIK::Graph::Graph -->
@@ -436,7 +436,7 @@
          x="312.69"
          y="-155.72"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text22">MOSAIK::Graph::Visualizer</text>
     </g>
     <!-- MOSAIK::Command&#45;&#45;MOSAIK::Graph::Visualizer -->
@@ -519,7 +519,7 @@
          x="502.69"
          y="-498.23"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text28">MOSAIK::Extractors::Evolution</text>
     </g>
     <!-- MOSAIK::Commands::Extract&#45;&#45;MOSAIK::Extractors::Evolution -->
@@ -554,7 +554,7 @@
          x="482.69"
          y="-384.98"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text30">MOSAIK::Extractors::Structural</text>
     </g>
     <!-- MOSAIK::Commands::Extract&#45;&#45;MOSAIK::Extractors::Structural -->
@@ -601,7 +601,7 @@
          x="392.69"
          y="-384.98"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text33">MOSAIK::Resolver</text>
     </g>
     <!-- MOSAIK::Commands::Extract&#45;&#45;MOSAIK::Resolver -->
@@ -696,7 +696,7 @@
          x="991.69"
          y="-498.23"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text40">MOSAIK::Extractors::Structural::Parser</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK::Extractors::Structural::Parser -->
@@ -731,7 +731,7 @@
          x="216.69"
          y="-47.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text42">MOSAIK</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK -->
@@ -766,7 +766,7 @@
          x="815.69"
          y="-384.98"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text44">MOSAIK::Metrics::ABCSize::Parser</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK::Metrics::ABCSize::Parser -->
@@ -801,7 +801,7 @@
          x="731.69"
          y="-263.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text46">MOSAIK::Metrics::ABCSize::Processor</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK::Metrics::ABCSize::Processor -->
@@ -836,7 +836,7 @@
          x="993.69"
          y="-263.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text48">MOSAIK::Metrics::Complexity::Parser</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK::Metrics::Complexity::Parser -->
@@ -871,7 +871,7 @@
          x="1031.69"
          y="-155.72"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text50">MOSAIK::Metrics::Complexity::Processor</text>
     </g>
     <!-- MOSAIK::Extractors::Evolution&#45;&#45;MOSAIK::Metrics::Complexity::Processor -->
@@ -930,7 +930,7 @@
          x="106.69"
          y="-155.72"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text54">MOSAIK::Graph::Vertex</text>
     </g>
     <!-- MOSAIK::Graph::Graph&#45;&#45;MOSAIK::Graph::Vertex -->
@@ -989,7 +989,7 @@
          x="1031.69"
          y="-384.98"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text58">MOSAIK::Extractors::Structural::Processor</text>
     </g>
     <!-- MOSAIK::Extractors::Structural::Parser&#45;&#45;MOSAIK::Extractors::Structural::Processor -->
@@ -1108,7 +1108,7 @@
          x="196.69"
          y="-155.72"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text67">CoreExt::Object</text>
     </g>
     <!-- CoreExt::Object&#45;&#45;MOSAIK -->
@@ -1143,7 +1143,7 @@
          x="129.69"
          y="-498.23"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text69">MOSAIK::Graph::Attributes</text>
     </g>
     <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK::Graph::Graph -->
@@ -1178,7 +1178,7 @@
          x="184.69"
          y="-384.98"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text71">MOSAIK::Graph::Cluster</text>
     </g>
     <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK::Graph::Cluster -->
@@ -1213,7 +1213,7 @@
          x="129.69"
          y="-263.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text73">MOSAIK::Graph::Edge</text>
     </g>
     <!-- MOSAIK::Graph::Attributes&#45;&#45;MOSAIK::Graph::Edge -->
@@ -1392,7 +1392,7 @@
          x="690.69"
          y="-155.72"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text87">MOSAIK::Metrics::ABCSize</text>
     </g>
     <!-- MOSAIK::Metrics::ABCSize::Parser&#45;&#45;MOSAIK::Metrics::ABCSize -->
@@ -1523,7 +1523,7 @@
          x="1058.69"
          y="-47.73"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text97">MOSAIK::Metrics::Complexity</text>
     </g>
     <!-- MOSAIK::Metrics::Complexity::Parser&#45;&#45;MOSAIK::Metrics::Complexity -->
@@ -1582,7 +1582,7 @@
          x="793.69"
          y="-1043.47"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text101">MOSAIK::Metrics::Cohesion</text>
     </g>
     <!-- MOSAIK::Metrics::Coupling -->
@@ -1605,7 +1605,7 @@
          x="793.69"
          y="-935.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text102">MOSAIK::Metrics::Coupling</text>
     </g>
     <!-- MOSAIK::Metrics::Cohesion&#45;&#45;MOSAIK::Metrics::Coupling -->
@@ -1640,7 +1640,7 @@
          x="1089.69"
          y="-1043.47"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text104">MOSAIK::Metric</text>
     </g>
     <!-- MOSAIK::Metrics::Modularity -->
@@ -1663,7 +1663,7 @@
          x="1089.69"
          y="-935.48"
          font-family="Times,serif"
-         font-size="12.00"
+         font-size="25.00"
          id="text105">MOSAIK::Metrics::Modularity</text>
     </g>
     <!-- MOSAIK::Metric&#45;&#45;MOSAIK::Metrics::Modularity -->

@@ -62,6 +62,8 @@ The goal of this research can be summarized as follows:
 
 Although the proposed solution will be designed for a specific case study, the results can be generalized to other monolith codebases.
 
+#pagebreak()
+
 == Outline
 
 The thesis is structured as follows.

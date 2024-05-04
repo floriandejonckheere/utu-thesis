@@ -58,6 +58,8 @@ Some of the algorithms require the use of a specific metric to guide the process
   caption: [Quality metrics]
 ) <slr_metrics>
 
+#pagebreak()
+
 We identified #total(metrics) metrics used in the publications, and categorized them in six categories.
 Publications using undisclosed quality metrics, and publications using no metrics at all, are categorized into separate categories.
 Cohesion (#count(metrics, "cohesion")\; #percentage(metrics, "cohesion")) and coupling (#count(metrics, "coupling")\; #percentage(metrics, "coupling")) are the most frequently used metrics, followed by modularity (#count(metrics, "modularity")\; #percentage(metrics, "modularity")), network overhead and complexity (#count(metrics, "complexity")\; #percentage(metrics, "complexity") each), and resource usage (#count(metrics, "resource")\; #percentage(metrics, "resource")).

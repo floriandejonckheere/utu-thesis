@@ -30,10 +30,9 @@ The cohesion of a microservice candidate $M_c$ is then calculated as described i
 $ italic("coh")(M_c) = ( sum_(v_i in M_c, v_j in M_c) italic("ref")( v_i, v_j) ) / ( |M_c| ( |M_c| - 1) / 2 ) $ <individual_cohesion_formula>
 
 The total cohesion of a solution is the sum of the individual cohesion of all microservice candidates $M_c$.
+A higher total cohesion indicates a better decomposition.
 
 $ italic("Cohesion") = sum_(M_c in S) italic("coh")(M_c) $ <total_cohesion_formula>
-
-A higher total cohesion indicates a better decomposition.
 
 ==== Coupling
 
@@ -45,21 +44,21 @@ $ italic("coup")(M_c) = sum_(v_i in M_c, v_j in.not M_c) italic("calls")(v_i, v_
 Where $v_i$ and $v_j$ are methods belonging and not belonging to $M_c$ respectively, and $italic("calls")(v_i, v_j)$ returns the number of method calls present in the body of method $v_i$ made to method $v_j$.
 
 The total coupling of a solution is the sum of the individual couplings of all microservice candidates $M_c$.
+A lower total coupling indicates a better decomposition.
 
 $ italic("Coupling") = sum_(M_c in S) italic("coup")(M_c) $ <total_coupling_formula>
-
-A lower total coupling indicates a better decomposition.
 
 ==== Size
 
 // https://wiki.c2.com/?AbcMetric
 Size of a microservice candidate can be defined in several different ways.
-In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), who defined size as the number of source code files or classes in a microservice candidate.
+In @automatedmodularization, we identified several publications that use the size metric as introduced by #cite_full(<wu_etal_2005>), defined size as the number of source code files or classes in a service.
 Other definitions of size include the number of methods, or the number of lines of code.
-However, these definitions have the disadvantage that they only describe the size of a microservice candidate superficially, without considering the structure of the code.
+However, these definitions have the disadvantage that they
+  describe the size of a microservice candidate without considering the structure of the code.
 
 #cite_full(<fitzpatrick_1997>) developed the ABC size metric, which takes into account the number of assignments, branches, and conditions in a method.
-Using not only the number of lines of code, but also the complexity of the code, the ABC size metric describes the size of a method more accurately.
+Using the number of lines of code, as well as the structure, the ABC size metric describes the size of a method more accurately.
 Methods with a high ABC size are harder to understand, and more prone to errors and bugs.
 
 The ABC size of a method consists of a vector $angle.l A, B, C angle.r$, where:
@@ -72,9 +71,8 @@ To convert the ABC size vector into a scalar value, the magnitude of the vector 
 
 $ |"ABC"| = sqrt(A^2 + B^2 + C^2) $ <abc_formula>
 
-The ABC size of a method can vary between programming languages due to semantic differences in the language constructs.
-As such, the interpretation of ABC size values is language-dependent.
-For example, in the Ruby programming language an ABC value of $<= 17$ is considered satisfactory, a value between $18$ and $30$ unsatisfactory, and $> 30$ is considered dangerous#footnote[#link("https://docs.rubocop.org/rubocop/cops_metrics.html")[https://docs.rubocop.org/rubocop/cops_metrics.html]].
+The interpretation of the ABC size value is language-dependent, as some language constructs differ semantically between programming languages.
+For example, in the Ruby programming language an ABC value of $<= 17$ is considered satisfactory, a value between $18$ and $30$ unsatisfactory, and $>$~$30$ is considered dangerous#footnote[#link("https://docs.rubocop.org/rubocop/cops_metrics.html")[https://docs.rubocop.org/rubocop/cops_metrics.html]].
 In this study we do not intend to evaluate the quality of individual methods, but rather the quality of the decomposition as a whole.
 As such, we use the average of the ABC sizes of all methods in a microservice candidate to calculate the size of the microservice candidate.
 

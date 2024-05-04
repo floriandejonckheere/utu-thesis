@@ -77,6 +77,7 @@
     SDLC: ("Software Development Life Cycle"),
     SLOC: ("Source Lines of Code"),
     SLR: ("Systematic Literature Review"),
+    SRP: ("Single Responsibility Principle"),
     SOA: ("Service-Oriented Architecture"),
     UML: ("Unified Modeling Language"),
   ),

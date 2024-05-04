@@ -37,17 +37,17 @@ Nipro Group is a leading global manufacturer of medical devices, specialized in 
 NephroFlow™ Link, part of the NephroFlow™ Product Suite#footnote[#link("https://www.nipro-group.com/en/our-offer/products-services/NephroFlowtm-product-suite")[https://www.nipro-group.com/en/our-offer/products-services/NephroFlowtm-product-suite]], is an application that allows the NephroFlow™ Healthcare Platform to bidirectionally communicate with dialysis machines installed at hospitals and dialysis centers.
 NephroFlow™ Link is responsible for collecting data from the dialysis machines, processing and transforming it, and sending it to the NephroFlow™ Healthcare Platform for storage and visualization.
 
-#figure(
-  include("/figures/08-case-study/link.typ"),
-  caption: [NephroFlow™ Link topological overview]
-) <link_topology>
-
 Dialysis machines measure and publish data essential for the dialysis treatment, such as vital signs, blood flow rate, and dialyzer efficiency.
 Nurses and practitioners use this information to evaluate the condition of the patient, and the effectiveness of the treatment.
 
 Nipro Group has rolled out NephroFlow™ Link in a number hospitals and dialysis centers across Europe, the Middle East, Central America, India, and Japan, collectively ensuring connection to hundreds of dialysis machines.
 To safeguard the privacy and information security of the patient, NephroFlow™ Link is deployed on a virtual server or hardware appliance within the physical and virtual premises of the hospital or dialysis center, and the data is sent to a secure cloud environment.
 An overview of the topology of the deployment is presented in @link_topology.
+
+#figure(
+  include("/figures/08-case-study/link.typ"),
+  caption: [NephroFlow™ Link topological overview]
+) <link_topology>
 
 The application is written in the Ruby programming language#footnote[#link("https://www.ruby-lang.org")[https://www.ruby-lang.org]] as a single-threaded process, deployed as a single unit.
 The choice of Ruby as programming language was influenced by the Ruby on Rails framework#footnote[#link("https://rubyonrails.org")[https://rubyonrails.org]], which is used for the NephroFlow™ Platform.
@@ -102,7 +102,7 @@ Strategies using a single coupling were not considered, as they extract limited 
 ) <test_configurations>
 
 The repository contains a `main` branch with the latest code, and several branches for released versions.
-For the purpose of this study, we only considered the `main` branch, from the release of NephroFlow™ Link version 5.0 on October 27, 2023 up until the pre-release of NephroFlow™ Link version 5.2 on April 25, 2024, which was the most recent commit in the repository at the time of writing.
+For the purpose of this study, we only considered the `main` branch, from the release of NephroFlow™ Link version~5.0 on October 27, 2023 up until the pre-release of NephroFlow™ Link version 5.2 on April 25, 2024, which was the most recent commit in the repository at the time of writing.
 The static analysis was performed on the source code as it appears in the most recent commit.
 The source code of the application contained #stats.at("files") Ruby source code files, with a total of #stats.at("sloc") #acr("SLOC"), as measured by the `cloc` tool#footnote[#link("https://github.com/AlDanial/cloc")[https://github.com/AlDanial/cloc]].
 Only the application code was considered, excluding tests and configuration files.

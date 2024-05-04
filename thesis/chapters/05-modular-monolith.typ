@@ -59,7 +59,7 @@ The traditional monolith is both logically and physically monolithic, while a di
 A microservices architecture is physically distributed, and logically modular.
 The modular monolith architecture is logically modular, as the application is divided into modules, but physically monolithic, as the modules are deployed together.
 
-#v(2em)
+#pagebreak()
 
 #cite_full(<su_li_2024>) identified six characteristics of modular monolith architecture:
 
@@ -170,6 +170,8 @@ In #cite(<parnas_1972>, form: "year"), #cite_full(<parnas_1972>) stated that mod
 The author argued that modularization separates the system into smaller and more manageable parts, which can be developed concurrently by multiple teams.
 
 The process of modularization involves identifying the potential modules or services of the software system, defining the interfaces between them, and evaluating the impact of the modularization on the system.
+
+#pagebreak()
 
 Modularization techniques can be classified into three categories @abdellatif_etal_2021:
 

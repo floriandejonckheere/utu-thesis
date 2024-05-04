@@ -35,6 +35,9 @@ Furthermore, the platforms also contain only peer-reviewed publications, which e
 
 Based on a list of relevant topics, we used a combination of related keywords to formulate the search query.
 We refrained from using more generic keywords, such as "architecture" or "design", as they would yield too many irrelevant results.
+
+#pagebreak()
+
 The topics relevant for the search query are:
 
 - *Architecture*: the architectural styles discussed in the publications
@@ -69,6 +72,8 @@ The search query was adapted to the specific search syntax of the platform.
 
 In addition to search queries on the selected platforms, we used snowballing to identify additional relevant publications.
 Snowballing is a research technique used to find additional publications of interest by following the references of the selected publications @wohlin_2014.
+
+#pagebreak()
 
 Based the inclusion/exclusion criteria in @slr_criteria, the results were filtered, and the relevant studies were selected for inclusion in the systematic literature review.
 
@@ -141,13 +146,16 @@ Of these publications, #slr.platforms.values().map(p => p.primary.len()).sum() a
 The secondary studies were used as a starting point for the snowballing process, which resulted in #slr.snowballing.total additional publications being included in the systematic literature review.
 For a list of the selected publications, see @slr_publications.
 
+#pagebreak()
+
+The selected publications range in publication date from 2014 to 2024, with a peak in 2022.
+Fewer publications were selected during the first part of the interval, but the number of publications selected increased significantly in the second part of the decade.
+@slr_by_year gives an overview of the distribution of publications by year.
+
 #figure(
   include("/figures/06-automated-modularization/publications-by-year.typ"),
   caption: [Distribution of publications by year]
 ) <slr_by_year>
-
-The selected publications range in publication date from 2014 to 2024, with a peak in 2022.
-Fewer publications were selected during the first part of the interval, but the number of publications selected increased significantly in the second part of the decade.
 
 From the selected publications, we extracted relevant information, such as:
 

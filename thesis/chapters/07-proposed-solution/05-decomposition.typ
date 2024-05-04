@@ -103,17 +103,20 @@ Where:
     ) <louvain_algorithm>
   ],
   [
-    The Louvain algorithm operates in two phases.
+    @louvain_algorithm represents a pseudocode implementation of the Louvain algorithm.
+
+    The algorithm operates in two phases.
     In the first phase, the algorithm optimizes the modularity locally by moving each vertex into the community of their neighbour that yield the best modularity gain.
     This step is repeated for each vertex until a local maximum is reached.
 
     Then, the algorithm aggregates each community in a single vertex, while preserving the network structure.
     The algorithm can then be applied iteratively to the new network, until the modularity cannot be further increased.
-
-    @louvain_algorithm represents a pseudocode implementation of the Louvain algorithm.
-    A visualization of the intermediate steps of the Louvain algorithm is shown in @louvain.
   ]
 )
+
+#pagebreak()
+
+A visualization of the intermediate steps of the Louvain algorithm is shown in @louvain.
 
 #figure(
     grid(
@@ -127,6 +130,8 @@ Where:
     ),
     caption: [Visualization of the Louvain algorithm @blondel_etal_2008]
 ) <louvain>
+
+#pagebreak()
 
 A major disadvantage of the Louvain algorithm is that it can only detect non-overlapping communities @blondel_etal_2008.
 This means that a software component can only belong to one microservice, which is not in line with the principle of reuse in software engineering.
@@ -156,14 +161,15 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
         stroke: (x: none),
         align: (left),
         [*@leiden_algorithm*: Leiden algorithm (refinement)],
-        text(size: 10pt)[
+        text(size: 12pt)[
           #text(green.darken(40%), "// Phase 2: partition refinement") \
           *for each* ( _community_ : _graph_ ) \
           #h(1em) _partition_ $arrow.l$ _community_ \
-          #h(1em) *for each* ( well connected _vertex_ : _partition_ ) \
+          #h(1em) *for each* ( _vertex_ : _partition_ ) \
           #h(2em) *if* _vertex_ is a singleton \
-          #h(3em) assign _vertex_ to new community \
-          #h(3em) using probability distribution _P_ \
+          #h(3em) assign _vertex_ to new \
+          #h(3em) community using \
+          #h(3em) probability distribution _P_ \
         ]
       ),
       kind: "algorithm",
@@ -173,7 +179,7 @@ $ cal(H)(G,cal(P)) = sum_(C in cal(P)) |E(C, C)| - gamma binom(||C||, 2) $ <cons
   ]
 )
 
-A pseudocode implementation of the Leiden algorithm is shown in @leiden_algorithm.
+A pseudocode implementation of the refinement step in the Leiden algorithm is shown in @leiden_algorithm.
 
 Although the Leiden algorithm is more performant than the Louvain algorithm, it is more complex to implement due to the refinement phase.
 Because of this added complexity, we opted to use the Louvain algorithm as default clustering algorithm for our solution.

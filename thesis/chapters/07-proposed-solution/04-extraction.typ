@@ -59,48 +59,40 @@ A fine-grained granularity can lead to a much larger number of microservices, wh
 Hence, a trade-off between the two granularities must be made.
 MOSAIK uses a coarse-grained granular approach, using the classes of the monolith application as the starting point for the extraction of microservices.
 
-#grid(
-  columns: (51%, auto),
-  gutter: 1em,
-  [
-    #figure(
-        table(
-          columns: (auto),
-          inset: 5pt,
-          stroke: (x: none),
-          align: (left),
-          [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
-          [
-            _calls_ $arrow.l$ _array_[][][] \
-            \
-            *for each* ( _class_ : _classes_ ) \
-              #h(1em) *for each* ( _method_ : _class_._methods_ ) \
-                #h(2em) *for each* ( _reference_ : _method_._references_ ) \
-                  #h(3em) _receiver_ $arrow.l$ _reference_._receiver_ \
-                  #h(3em) _type_ $arrow.l$ _reference_._type_ \
-                  #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
-            \
-            *return* _calls_;
-          ]
-      ),
-      kind: "algorithm",
-      supplement: "Algorithm",
-      caption: [Structural coupling extraction algorithm],
-    ) <structural_coupling_algorithm>
-  ],
-  [
-    The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolith application.
-    The algorithm then iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
+#figure(
+    table(
+      columns: (auto),
+      inset: 5pt,
+      stroke: (x: none),
+      align: (left),
+      [*@structural_coupling_algorithm*: Structural coupling extraction algorithm],
+      [
+        _calls_ $arrow.l$ _array_[][][] \
+        \
+        *for each* ( _class_ : _classes_ ) \
+          #h(1em) *for each* ( _method_ : _class_._methods_ ) \
+            #h(2em) *for each* ( _reference_ : _method_._references_ ) \
+              #h(3em) _receiver_ $arrow.l$ _reference_._receiver_ \
+              #h(3em) _type_ $arrow.l$ _reference_._type_ \
+              #h(3em) _calls_[_class_][_receiver_][_type_] $arrow.l$ 1 \
+        \
+        *return* _calls_;
+      ]
+  ),
+  kind: "algorithm",
+  supplement: "Algorithm",
+  caption: [Structural coupling extraction algorithm],
+) <structural_coupling_algorithm>
 
-    All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
-    @structural_coupling_algorithm describes the structural coupling extraction algorithm in pseudocode.
-    ]
-)
+@structural_coupling_algorithm describes the structural coupling extraction algorithm in pseudocode.
+The algorithm first initializes an empty three-dimensional call matrix, which stores the number and type of references between classes in the monolith application.
+The algorithm then iterates over all classes in the monolith application, and for each method in the class, it parses the method body.
+All references from the method body are extracted, and the receiver and type of reference are stored in the call graph.
 
 === Logical coupling
 
-The logical coupling strategy is based on the Single Responsibility Principle @martin_2003, which states that a software component should only have one reason to change.
-Software design that follows the Single Responsibility Principle groups together software components that change together.
+The logical coupling strategy is based on the #acr("SRP") @martin_2003, which states that a software component should only have one reason to change.
+Software design that follows the #acr("SRP") groups together software components that change together.
 Hence, it is possible to identify appropriate microservice candidates by analyzing the history of modifications of the classes in the source code repository.
 Classes that change together, should belong in the same microservice.
 Let $M_H$ be the history of modifications of the source code files of the monolith application $M$.
@@ -120,11 +112,6 @@ Then, the logical coupling is calculated for each change event $h_i in M_H$, and
 The logical coupling $N_c$ for each pair of classes $c_i, c_j in M_C$ is defined as the sum of the logical coupling for each change event $h_i in M_H$.
 
 $ N_c (c_1, c_2) = Delta(c_1, c_2) $ <aggregated_logical_coupling_formula>
-
-Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
-First, a co-change matrix is initialized, which stores the number of times two files have changed together in a two-dimensional matrix.
-The algorithm then iterates over all commits in the source code repository, and for each commit, retrieves the changes between the commit and its parent.
-Then, it iterates over each pair of files in the changelist, and increments the co-change matrix for the pair of files.
 
 #figure(
     table(
@@ -152,6 +139,11 @@ Then, it iterates over each pair of files in the changelist, and increments the 
   caption: [Logical coupling extraction algorithm],
 ) <logical_coupling_algorithm>
 
+Consider the extraction algorithm in pseudocode in @logical_coupling_algorithm.
+First, a co-change matrix is initialized, which stores the number of times two files have changed together in a two-dimensional matrix.
+The algorithm then iterates over all commits in the source code repository, and for each commit, retrieves the changes between the commit and its parent.
+Then, it iterates over each pair of files in the changelist, and increments the co-change matrix for the pair of files.
+
 === Contributor coupling
 
 Conway's law states that the structure of a software system is a reflection of the communication structure of the organization that built it @conway_1968.
@@ -177,6 +169,8 @@ Then, @contributors_formula is calculated for each class $c_i in M_C$ in the mon
 Finally, the contributor coupling $N_d$ for each pair of classes $c_i, c_j in M_C$ is defined as the cardinality of the intersection of the sets of developers that have contributed to the classes $c_i, c_j$ @mazlami_etal_2017.
 
 $ N_d (c_1, c_2) = |D(c_i) sect D(c_j)| $ <aggregated_contributor_coupling_formula>
+
+#pagebreak()
 
 Consider the extraction algorithm in pseudocode in @contributor_coupling_algorithm.
 The algorithm first initializes the co-authorship matrix, which is a two-dimensional array that stores the (unique) authors of each file in the source code repository.
@@ -210,7 +204,7 @@ Finally, iterating over each file in the changelist, the algorithm adds the auth
 
 === Dependency graph
 
-As a final step in the information extraction phase, an edge-weighted graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolith application, and $E$ is the set of edges between classes that have an interdependency based on the discussed coupling strategies.
+As a final step in the information extraction phase, an edge-weighted undirected graph $G = (V, E)$ is constructed, where $V$ is the set of classes in the monolith application, and $E$ is the set of edges between classes that have an interdependency based on the discussed coupling strategies.
 The weight for the edge $e_i in E$ between classes $c_j, c_k in V$ is calculated as the weighted sum of the call graph $N_s$ representing the structural coupling, the co-change matrix $N_c$ representing the logical coupling, and the co-authorship matrix $N_d$ representing the contributor coupling.
 The weights $omega_s, omega_c, omega_d in [0, 1]$ are used to balance the contribution of the structural, logical, and contributor coupling respectively, as described in @weighted_edge_formula.
 This makes the strategy adaptive and flexible @santos_paula_2021.
