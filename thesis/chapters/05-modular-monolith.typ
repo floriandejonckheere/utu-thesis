@@ -171,7 +171,6 @@ The author argued that modularization separates the system into smaller and more
 
 The process of modularization involves identifying the potential modules or services of the software system, defining the interfaces between them, and evaluating the impact of the modularization on the system.
 
-#pagebreak()
 
 Modularization techniques can be classified into three categories @abdellatif_etal_2021:
 
@@ -201,7 +200,12 @@ In particular, the information present in the codebase of the application is a p
 
 == Conclusion
 
+In this chapter, we discussed the modular monolith architecture.
+We answered the following research question:
+
+#link(<research_question_1>)[*Research Question 1*]: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
+
 The modular monolith architecture arose as a response to the limitations of traditional monolith and microservices architectures.
 It combines the simplicity of the monolith architecture with the flexibility and scalability of a microservices architecture.
 Modular monolith applications retain a single codebase and deployment unit, but are segregated into loosely coupled modules that communicate through well-defined interfaces.
-The software architecture allowing small teams to develop applications quickly and efficiently, and allows the application to break out into microservices whenever the need arises.
+The software architecture allows small teams to develop applications quickly and efficiently, and allows the application to break out into microservices whenever the need arises.
