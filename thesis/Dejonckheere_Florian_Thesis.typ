@@ -93,6 +93,7 @@
     "06-automated-modularization/02-artifacts",
     "06-automated-modularization/03-algorithms",
     "06-automated-modularization/04-metrics",
+    "06-automated-modularization/05-conclusion",
     "07-proposed-solution/01-introduction",
     "07-proposed-solution/02-design",
     "07-proposed-solution/03-requirements",
