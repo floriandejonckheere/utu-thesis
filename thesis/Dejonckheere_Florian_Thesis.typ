@@ -101,6 +101,7 @@
     "07-proposed-solution/05-decomposition",
     "07-proposed-solution/06-visualization",
     "07-proposed-solution/07-evaluation",
+    "07-proposed-solution/08-conclusion",
     "08-case-study",
     "09-conclusion",
   ),
