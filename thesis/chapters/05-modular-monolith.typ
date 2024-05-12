@@ -198,3 +198,10 @@ However, the criteria for identifying modules are different, as the modules of a
 
 Given the inherent complexity of manual modularization, we see a clear need for the development and improvement of (semi-)automated tools to assist in the modularization of monolith applications.
 In particular, the information present in the codebase of the application is a prime candidate for automatic extraction and decomposition, as it contains valuable information about the structure and dependencies of the application.
+
+== Conclusion
+
+The modular monolith architecture arose as a response to the limitations of traditional monolith and microservices architectures.
+It combines the simplicity of the monolith architecture with the flexibility and scalability of a microservices architecture.
+Modular monolith applications retain a single codebase and deployment unit, but are segregated into loosely coupled modules that communicate through well-defined interfaces.
+The software architecture allowing small teams to develop applications quickly and efficiently, and allows the application to break out into microservices whenever the need arises.
