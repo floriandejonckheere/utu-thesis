@@ -10,7 +10,7 @@ Using a systematic literature review, we identify and categorize existing litera
 We focus in particular on the identification of microservices candidates in monolith codebases, as this is a crucial step in the migration from monolith to microservices architecture.
 Using the systematic literature review, we answer the following research question:
 
-*Research Question 2*: What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
+#link(<research_question_2>)[*Research Question 2*]: What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
 
 The motivation behind the research question is discussed in @introduction.
 

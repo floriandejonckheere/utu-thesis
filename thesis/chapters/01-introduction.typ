@@ -37,11 +37,11 @@ It is the aim of this thesis to investigate the viability of applying (semi-)aut
 
 This research is centered around three research questions:
 
-*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
+*Research Question 1*: <research_question_1> What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
 
-*Research Question 2*: What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
+*Research Question 2*: <research_question_2> What are the existing approaches and tools for (semi-)automated microservice candidate identification in monolith codebases?
 
-*Research Question 3*: How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
+*Research Question 3*: <research_question_3> How can static analysis of source code identify module boundaries in a modular monolith architecture that maximize internal cohesion and minimize external coupling?
 
 The motivation behind the first research question is to investigate the potential advantages and drawbacks of the modular monolith architecture with a particular focus on its application to migrating existing monolith codebases.
 To answer this question, we will first define the modular monolith architecture on the basis of existing literature, and examine what sets it apart from monolith and microservices architectures.

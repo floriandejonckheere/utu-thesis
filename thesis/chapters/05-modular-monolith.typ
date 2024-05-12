@@ -8,7 +8,7 @@ In this chapter, we discuss the modular monolith architecture.
 We start by defining the architectural style, and then continue by discussing the advantages and drawbacks of the architecture.
 We answer the following research question:
 
-*Research Question 1*: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
+#link(<research_question_1>)[*Research Question 1*]: What is the modular monolith architecture, and what sets it apart from monolith and microservices architectures?
 
 The motivation behind the research question is discussed in @introduction.
 
