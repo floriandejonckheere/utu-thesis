@@ -14,7 +14,12 @@
   import cetz.chart
   import cetz.draw: *
 
-  let colors = gradient.linear(red, blue, green, yellow)
+  let colors = (
+    cmyk(0%, 75%, 79%, 0%),
+    cmyk(23%, 26%, 0%, 28%),
+    cmyk(65%, 0%, 2%, 35%),
+    cmyk(34%, 0%, 60%, 18%),
+  )
 
   chart.piechart(
     data,

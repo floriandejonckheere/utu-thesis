@@ -16,7 +16,16 @@
 #let total = data.map(p => p.at(1)).sum()
 
 #canvas(length: .75cm, {
-  let colors = gradient.linear(red, blue, green, yellow)
+  let colors = (
+    cmyk(0%, 75%, 79%, 0%),
+    cmyk(0%, 32%, 23%, 26%),
+    cmyk(29%, 26%, 0%, 28%),
+    cmyk(80%, 29%, 0%, 20%),
+    cmyk(65%, 0%, 2%, 35%),
+    cmyk(64%, 0%, 38%, 24%),
+    cmyk(34%, 0%, 60%, 18%),
+    cmyk(8%, 0%, 68%, 15%),
+  )
 
   chart.piechart(
     data,
